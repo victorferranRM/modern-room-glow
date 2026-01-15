@@ -17,6 +17,8 @@ import {
   ArrowRight
 } from "lucide-react";
 
+import managerDevices from "@/assets/manager-devices.png";
+
 interface ManagerTab {
   id: string;
   icon: React.ComponentType<{ className?: string }>;
@@ -392,17 +394,31 @@ export function ManagerSection() {
     <section className="py-20 lg:py-28 bg-secondary/50 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <AnimatedSection className="text-center mb-12 lg:mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              The control layer
-            </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">
-              Meet Manager — your operational control center
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Manager gives you real-time visibility, structured control and the tools needed to run both monitoring and operations from a single place.
-            </p>
+          {/* Header with Image */}
+          <AnimatedSection className="mb-12 lg:mb-16">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left: Text */}
+              <div className="text-center lg:text-left">
+                <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+                  The control layer
+                </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">
+                  Meet Manager — your operational control center
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Manager gives you real-time visibility, structured control and the tools needed to run both monitoring and operations from a single place.
+                </p>
+              </div>
+              
+              {/* Right: Devices Image */}
+              <div className="flex justify-center lg:justify-end">
+                <img 
+                  src={managerDevices} 
+                  alt="Manager platform on laptop and mobile" 
+                  className="max-w-full h-auto max-h-[400px] object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
+                />
+              </div>
+            </div>
           </AnimatedSection>
 
           {/* Tab Navigation */}
