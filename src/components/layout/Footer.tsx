@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import roomonitorLogo from "@/assets/roomonitor-logo.png";
 
 const footerLinks = {
   services: [
@@ -29,11 +30,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-white font-bold text-lg">R</span>
-              </div>
-              <span className="text-xl font-semibold">Roomonitor</span>
+            <Link to="/" className="flex items-center mb-6">
+              <img 
+                src={roomonitorLogo} 
+                alt="Roomonitor" 
+                className="h-6 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm opacity-70 leading-relaxed mb-6">
               Premium noise monitoring and guest management solutions for short-term rental properties.
