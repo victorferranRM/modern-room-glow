@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquare } from "lucide-react";
-
 export function HeroSection() {
-  return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 lg:pt-32 pb-20">
+  return <section className="relative min-h-[90vh] flex items-center pt-24 lg:pt-32 pb-20">
       {/* Clean minimal background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
 
@@ -14,19 +12,23 @@ export function HeroSection() {
           <div className="space-y-6 animate-fade-in-up">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
               Emergencies don't follow office hours.
-              <span className="block mt-2 text-muted-foreground">
+              <span className="block mt-2 text-muted-foreground text-4xl">
                 Your operations shouldn't depend on them.
               </span>
             </h1>
           </div>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{
+          animationDelay: "0.1s"
+        }}>
             Roomonitor becomes your operational team outside office hours, managing guests, incidents and assets with real decision-making and real action.
           </p>
 
           {/* Supporting bullets */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm sm:text-base text-foreground/80 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm sm:text-base text-foreground/80 animate-fade-in-up" style={{
+          animationDelay: "0.2s"
+        }}>
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-primary" />
               <span>24/7 guest and incident management</span>
@@ -42,7 +44,9 @@ export function HeroSection() {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-in-up" style={{
+          animationDelay: "0.3s"
+        }}>
             <Button size="lg" className="text-base px-8 py-6 shadow-soft-lg" asChild>
               <Link to="/how-it-works">
                 How Roomonitor works
@@ -58,6 +62,5 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
