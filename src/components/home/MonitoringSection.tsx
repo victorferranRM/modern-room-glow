@@ -3,12 +3,19 @@ import { Volume2, Users, Wind, Thermometer } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { cn } from "@/lib/utils";
 
+// Import images
+import monitoringNoise from "@/assets/monitoring-noise.jpg";
+import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
+import monitoringAir from "@/assets/monitoring-air.jpg";
+import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
+
 interface MonitoringDimension {
   id: string;
   icon: React.ComponentType<{ className?: string }>;
   label: string;
   shortDesc: string;
   description: string;
+  image: string;
   visual: {
     title: string;
     value: string;
@@ -24,7 +31,8 @@ const monitoringDimensions: MonitoringDimension[] = [
     icon: Volume2,
     label: "Noise levels",
     shortDesc: "Prevent disturbances before they escalate",
-    description: "Real-time sound level tracking helps identify potential party situations or disturbances, allowing intervention before complaints arise.",
+    description: "Real-time sound level tracking helps identify potential party situations or disturbances.",
+    image: monitoringNoise,
     visual: {
       title: "Sound Level",
       value: "42 dB",
@@ -38,7 +46,8 @@ const monitoringDimensions: MonitoringDimension[] = [
     icon: Users,
     label: "Occupancy",
     shortDesc: "Detect overcrowding and guest limit breaches",
-    description: "Identify when properties exceed expected guest counts, helping enforce house rules and prevent unauthorized gatherings.",
+    description: "Identify when properties exceed expected guest counts, helping enforce house rules.",
+    image: monitoringOccupancy,
     visual: {
       title: "Guest Activity",
       value: "4 guests",
@@ -51,8 +60,9 @@ const monitoringDimensions: MonitoringDimension[] = [
     id: "smoking",
     icon: Wind,
     label: "Smoking activity",
-    shortDesc: "Identify tobacco smoke incidents and protect the asset",
-    description: "Detect cigarette or tobacco smoke presence to enforce non-smoking policies and prevent damage to furnishings and air quality.",
+    shortDesc: "Identify tobacco smoke and protect the asset",
+    description: "Detect cigarette or tobacco smoke presence to enforce non-smoking policies.",
+    image: monitoringAir,
     visual: {
       title: "Air Particles",
       value: "Clean",
@@ -66,7 +76,8 @@ const monitoringDimensions: MonitoringDimension[] = [
     icon: Thermometer,
     label: "Indoor conditions",
     shortDesc: "Monitor temperature, humidity and air quality",
-    description: "Track environmental factors that could lead to property damage like mold, frozen pipes, or HVAC issues before they become costly problems.",
+    description: "Track environmental factors that could lead to property damage before they become costly.",
+    image: monitoringEnvironment,
     visual: {
       title: "Environment",
       value: "22°C / 45%",
@@ -79,16 +90,26 @@ const monitoringDimensions: MonitoringDimension[] = [
 
 export function MonitoringSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const activeDimension = monitoringDimensions[activeIndex];
+
+  const handleTabChange = (index: number) => {
+    if (index === activeIndex) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setTimeout(() => setIsTransitioning(false), 50);
+    }, 200);
+  };
 
   const getStatusColor = (status: "normal" | "alert" | "good") => {
     switch (status) {
       case "good":
-        return "bg-success/10 text-success border-success/20";
+        return "bg-success/20 text-success border-success/30";
       case "alert":
-        return "bg-destructive/10 text-destructive border-destructive/20";
+        return "bg-destructive/20 text-destructive border-destructive/30";
       default:
-        return "bg-primary/10 text-primary border-primary/20";
+        return "bg-primary/20 text-primary border-primary/30";
     }
   };
 
@@ -120,11 +141,11 @@ export function MonitoringSection() {
             </p>
           </AnimatedSection>
 
-          {/* Interactive Content */}
+          {/* Interactive Content - 1/3 + 2/3 Layout */}
           <AnimatedSection delay={200}>
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Left: Tabs/Selectors */}
-              <div className="space-y-3">
+            <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+              {/* Left: Compact Tabs (1/3) */}
+              <div className="space-y-2">
                 {monitoringDimensions.map((dimension, index) => {
                   const Icon = dimension.icon;
                   const isActive = activeIndex === index;
@@ -132,39 +153,39 @@ export function MonitoringSection() {
                   return (
                     <button
                       key={dimension.id}
-                      onClick={() => setActiveIndex(index)}
+                      onClick={() => handleTabChange(index)}
                       className={cn(
-                        "w-full text-left p-5 rounded-xl border transition-all duration-300 group",
+                        "w-full text-left p-4 rounded-xl border transition-all duration-300 group",
                         isActive 
                           ? "bg-card border-primary/30 shadow-soft" 
-                          : "bg-card/50 border-border hover:bg-card hover:border-primary/20 hover:shadow-sm"
+                          : "bg-card/50 border-border hover:bg-card hover:border-primary/20"
                       )}
                     >
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-center gap-3">
                         <div className={cn(
-                          "w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300",
+                          "w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300",
                           isActive 
                             ? "bg-primary text-primary-foreground" 
                             : "bg-secondary text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
                         )}>
-                          <Icon className="w-6 h-6" />
+                          <Icon className="w-5 h-5" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className={cn(
-                            "font-semibold text-lg mb-1 transition-colors duration-300",
+                            "font-semibold text-sm mb-0.5 transition-colors duration-300",
                             isActive ? "text-foreground" : "text-foreground/80"
                           )}>
                             {dimension.label}
                           </h3>
                           <p className={cn(
-                            "text-sm transition-colors duration-300",
+                            "text-xs transition-colors duration-300 line-clamp-1",
                             isActive ? "text-muted-foreground" : "text-muted-foreground/70"
                           )}>
                             {dimension.shortDesc}
                           </p>
                         </div>
                         <div className={cn(
-                          "w-2 h-2 rounded-full shrink-0 mt-2 transition-all duration-300",
+                          "w-1.5 h-1.5 rounded-full shrink-0 transition-all duration-300",
                           isActive 
                             ? "bg-primary scale-100" 
                             : "bg-border scale-75 group-hover:bg-primary/40"
@@ -173,80 +194,114 @@ export function MonitoringSection() {
                     </button>
                   );
                 })}
+
+                {/* Operations connection - mobile */}
+                <div className="lg:hidden mt-4 bg-foreground/5 rounded-xl p-4 border border-foreground/5">
+                  <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                    <span className="text-foreground font-medium">Integrated with operations:</span>{" "}
+                    Monitoring data feeds our Control Center for faster decisions.
+                  </p>
+                </div>
               </div>
 
-              {/* Right: Dynamic Visual */}
-              <div className="lg:sticky lg:top-24">
-                <div className="relative">
-                  {/* Background glow */}
-                  <div className="absolute inset-0 bg-primary/5 rounded-3xl blur-2xl scale-95" />
-                  
-                  {/* Main Card */}
-                  <div className="relative bg-card rounded-2xl border shadow-soft-lg overflow-hidden">
-                    {/* Card Header */}
-                    <div className="p-6 border-b bg-secondary/30">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                            {(() => {
-                              const Icon = activeDimension.icon;
-                              return <Icon className="w-5 h-5 text-primary" />;
-                            })()}
-                          </div>
-                          <div>
-                            <div className="text-xs text-muted-foreground uppercase tracking-wider">
-                              Live Monitoring
+              {/* Right: Visual Area with Background Image (2/3) */}
+              <div className="lg:col-span-2">
+                <div className="relative rounded-2xl overflow-hidden aspect-[16/10] lg:aspect-[16/9]">
+                  {/* Background Image with fade transition */}
+                  {monitoringDimensions.map((dimension, index) => (
+                    <div
+                      key={dimension.id}
+                      className={cn(
+                        "absolute inset-0 transition-opacity duration-500",
+                        activeIndex === index ? "opacity-100" : "opacity-0"
+                      )}
+                    >
+                      <img
+                        src={dimension.image}
+                        alt={dimension.label}
+                        className="w-full h-full object-cover"
+                      />
+                      {/* Dark overlay for readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-slate-900/30" />
+                    </div>
+                  ))}
+
+                  {/* Floating Card - Compact */}
+                  <div className="absolute inset-0 flex items-end justify-center p-4 sm:p-6 lg:p-8">
+                    <div 
+                      className={cn(
+                        "w-full max-w-sm bg-card/95 backdrop-blur-md rounded-xl border shadow-soft-lg overflow-hidden transition-all duration-300",
+                        isTransitioning ? "opacity-0 translate-y-2 scale-95" : "opacity-100 translate-y-0 scale-100"
+                      )}
+                    >
+                      {/* Card Header */}
+                      <div className="p-4 border-b bg-secondary/30">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                              {(() => {
+                                const Icon = activeDimension.icon;
+                                return <Icon className="w-4 h-4 text-primary" />;
+                              })()}
                             </div>
-                            <div className="font-semibold">{activeDimension.visual.title}</div>
+                            <div>
+                              <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                                Live
+                              </div>
+                              <div className="font-semibold text-sm">{activeDimension.visual.title}</div>
+                            </div>
+                          </div>
+                          <div className={cn(
+                            "px-2.5 py-1 rounded-full text-[10px] font-medium border flex items-center gap-1.5",
+                            getStatusColor(activeDimension.visual.status)
+                          )}>
+                            <span className={cn(
+                              "w-1.5 h-1.5 rounded-full animate-pulse",
+                              getStatusDotColor(activeDimension.visual.status)
+                            )} />
+                            {activeDimension.visual.statusLabel}
                           </div>
                         </div>
-                        <div className={cn(
-                          "px-3 py-1.5 rounded-full text-xs font-medium border flex items-center gap-2",
-                          getStatusColor(activeDimension.visual.status)
-                        )}>
-                          <span className={cn(
-                            "w-1.5 h-1.5 rounded-full animate-pulse",
-                            getStatusDotColor(activeDimension.visual.status)
-                          )} />
-                          {activeDimension.visual.statusLabel}
+                      </div>
+
+                      {/* Main Value */}
+                      <div className="p-4 text-center">
+                        <div className="text-3xl sm:text-4xl font-bold text-foreground mb-1">
+                          {activeDimension.visual.value}
                         </div>
-                      </div>
-                    </div>
-
-                    {/* Main Value Display */}
-                    <div className="p-8 text-center">
-                      <div className="text-5xl sm:text-6xl font-bold text-foreground mb-2 transition-all duration-500">
-                        {activeDimension.visual.value}
-                      </div>
-                      <p className="text-muted-foreground text-sm max-w-sm mx-auto leading-relaxed">
-                        {activeDimension.description}
-                      </p>
-                    </div>
-
-                    {/* Details Grid */}
-                    <div className="px-6 pb-6">
-                      <div className="grid grid-cols-3 gap-3">
-                        {activeDimension.visual.details.map((detail, idx) => (
-                          <div 
-                            key={idx}
-                            className="bg-secondary/50 rounded-lg px-3 py-2.5 text-center"
-                          >
-                            <div className="text-xs text-muted-foreground">{detail}</div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Footer connection */}
-                    <div className="px-6 pb-6">
-                      <div className="bg-foreground/5 rounded-xl p-4 border border-foreground/5">
-                        <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                          <span className="text-foreground font-medium">Integrated with operations:</span>{" "}
-                          Monitoring data feeds our Control Center and Field Service teams, enabling faster and more informed decisions.
+                        <p className="text-muted-foreground text-xs leading-relaxed">
+                          {activeDimension.description}
                         </p>
+                      </div>
+
+                      {/* Details */}
+                      <div className="px-4 pb-4">
+                        <div className="grid grid-cols-3 gap-2">
+                          {activeDimension.visual.details.map((detail, idx) => (
+                            <div 
+                              key={idx}
+                              className="bg-secondary/50 rounded-lg px-2 py-1.5 text-center"
+                            >
+                              <div className="text-[10px] text-muted-foreground truncate">{detail}</div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
+
+                  {/* Operations footer - desktop */}
+                  <div className="hidden lg:block absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 lg:bottom-8 lg:left-8 lg:right-8 max-w-sm">
+                    {/* This space is taken by the card, the footer will be below on desktop */}
+                  </div>
+                </div>
+
+                {/* Operations connection - desktop */}
+                <div className="hidden lg:block mt-4 bg-foreground/5 rounded-xl p-4 border border-foreground/5">
+                  <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                    <span className="text-foreground font-medium">Integrated with operations:</span>{" "}
+                    Monitoring data feeds our Control Center and Field Service teams, enabling faster and more informed decisions.
+                  </p>
                 </div>
               </div>
             </div>
