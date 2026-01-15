@@ -22,16 +22,16 @@ export function MegaMenuServices() {
                 <li key={item.title}>
                   <Link
                     to={item.href}
-                    className="group flex items-start gap-3"
+                    className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
                   >
-                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5">
-                      <Icon className="w-4 h-4 text-primary" />
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
+                      <Icon className="w-4 h-4 text-primary transition-transform duration-200 group-hover:scale-110" />
                     </div>
                     <div>
-                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-200">
                         {item.title}
                       </span>
-                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
                         {item.description}
                       </span>
                     </div>
@@ -54,16 +54,16 @@ export function MegaMenuServices() {
                 <li key={item.title}>
                   <Link
                     to={item.href}
-                    className="group flex items-start gap-3"
+                    className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
                   >
-                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5">
-                      <Icon className="w-4 h-4 text-primary" />
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
+                      <Icon className="w-4 h-4 text-primary transition-transform duration-200 group-hover:scale-110" />
                     </div>
                     <div>
-                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-200">
                         {item.title}
                       </span>
-                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
                         {item.description}
                       </span>
                     </div>
@@ -86,16 +86,16 @@ export function MegaMenuServices() {
                 <li key={item.title}>
                   <Link
                     to={item.href}
-                    className="group flex items-start gap-3"
+                    className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
                   >
-                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5">
-                      <Icon className="w-4 h-4 text-primary" />
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
+                      <Icon className="w-4 h-4 text-primary transition-transform duration-200 group-hover:scale-110" />
                     </div>
                     <div>
-                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-200">
                         {item.title}
                       </span>
-                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
                         {item.description}
                       </span>
                     </div>
