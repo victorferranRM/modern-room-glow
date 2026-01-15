@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 
 const stats = [
-  { number: "11M+", description: "Stays protected across our platform" },
-  { number: "99.9%", description: "Uptime backed by 24/7 support" },
-  { number: "<5 min", description: "Setup time per room" },
-  { number: "250+", description: "Hotels trust Roomonitor worldwide" },
+  { number: 11, suffix: "M+", description: "Stays protected across our platform" },
+  { number: 99.9, suffix: "%", description: "Uptime backed by 24/7 support" },
+  { number: 5, prefix: "<", suffix: " min", description: "Setup time per room" },
+  { number: 250, suffix: "+", description: "Hotels trust Roomonitor worldwide" },
 ];
 
 const caseStudies = [
@@ -52,21 +52,111 @@ const caseStudies = [
   },
 ];
 
+// Animated counter hook
+const useCountUp = (end: number, duration: number = 2000, startOnView: boolean = true) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!startOnView) {
+      setHasStarted(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasStarted, startOnView]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Easing function for smooth deceleration
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      setCount(easeOut * end);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, hasStarted]);
+
+  return { count, ref };
+};
+
+const AnimatedStat = ({ stat }: { stat: typeof stats[0] }) => {
+  const { count, ref } = useCountUp(stat.number, 2000);
+  
+  const formatNumber = (num: number) => {
+    if (stat.number === 99.9) {
+      return num.toFixed(1);
+    }
+    return Math.round(num).toString();
+  };
+
+  return (
+    <div ref={ref} className="space-y-2">
+      <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary">
+        {stat.prefix}{formatNumber(count)}{stat.suffix}
+      </p>
+      <p className="text-muted-foreground text-base md:text-lg">
+        {stat.description}
+      </p>
+    </div>
+  );
+};
+
 export const WhyRoomonitorSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % caseStudies.length);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % caseStudies.length);
+        setIsTransitioning(false);
+      }, 300);
     }, 8000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const handleDotClick = (index: number) => {
+    if (index === activeIndex) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
   const activeStudy = caseStudies[activeIndex];
 
   return (
-    <section className="py-20 md:py-28 bg-primary/5">
+    <section className="py-20 md:py-28 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="mb-12">
@@ -79,43 +169,41 @@ export const WhyRoomonitorSection = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left Side - Stats */}
-          <div className="space-y-8">
-            <div className="grid grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+          {/* Left Side - Stats (3/5 width) */}
+          <div className="lg:col-span-3 space-y-10">
+            <div className="grid grid-cols-2 gap-x-12 gap-y-10">
               {stats.map((stat, index) => (
-                <div key={index} className="space-y-2">
-                  <p className="text-4xl md:text-5xl font-bold text-primary">
-                    {stat.number}
-                  </p>
-                  <p className="text-muted-foreground text-sm md:text-base">
-                    {stat.description}
-                  </p>
-                </div>
+                <AnimatedStat key={index} stat={stat} />
               ))}
             </div>
-
-            <Button size="lg" className="mt-8">
-              Get a Demo
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
           </div>
 
-          {/* Right Side - Case Studies Carousel */}
-          <div className="relative">
+          {/* Right Side - Case Studies Carousel (2/5 width) */}
+          <div className="lg:col-span-2 relative">
             {/* Background Image */}
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-[3/4]">
-              <img
-                src={activeStudy.image}
-                alt={activeStudy.name}
-                className="w-full h-full object-cover transition-opacity duration-500"
-              />
+            <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+              <div
+                className={`absolute inset-0 transition-all duration-300 ease-in-out ${
+                  isTransitioning ? "opacity-0 scale-105" : "opacity-100 scale-100"
+                }`}
+              >
+                <img
+                  src={activeStudy.image}
+                  alt={activeStudy.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* Quote Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+              <div
+                className={`absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-sm rounded-xl p-5 shadow-lg transition-all duration-300 ease-in-out ${
+                  isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
+                }`}
+              >
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(activeStudy.rating)].map((_, i) => (
@@ -127,19 +215,19 @@ export const WhyRoomonitorSection = () => {
                 </div>
 
                 {/* Quote */}
-                <p className="text-foreground text-sm md:text-base mb-4 line-clamp-4">
+                <p className="text-foreground text-sm leading-relaxed mb-4 line-clamp-3">
                   "{activeStudy.quote}"
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="font-semibold text-foreground">{activeStudy.name}</p>
-                    <p className="text-sm text-muted-foreground">{activeStudy.position}</p>
+                    <p className="text-xs text-muted-foreground">{activeStudy.position}</p>
                   </div>
-                  <Button variant="link" className="text-primary p-0">
+                  <Button size="sm" variant="default">
                     Read case study
-                    <ArrowRight className="ml-1 h-4 w-4" />
+                    <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>
                 </div>
               </div>
@@ -150,7 +238,7 @@ export const WhyRoomonitorSection = () => {
               {caseStudies.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => handleDotClick(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === activeIndex
                       ? "w-8 bg-primary"
