@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import { servicesData } from "./navigation-data";
-import { Headphones, ShieldCheck, Settings } from "lucide-react";
+import { Headphones, Eye, Truck, AlertTriangle, Siren, Settings, FileText } from "lucide-react";
 
-const categoryIcons = {
-  operations: Headphones,
-  incidentRisk: ShieldCheck,
-  enablement: Settings,
-};
+const operationsIcons = [Headphones, Eye, Truck];
+const incidentIcons = [AlertTriangle, Siren];
+const enablementIcons = [Settings, FileText];
 
 export function MegaMenuServices() {
   return (
@@ -17,22 +15,30 @@ export function MegaMenuServices() {
           <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-6">
             {servicesData.operations.title}
           </h3>
-          <ul className="space-y-5">
-            {servicesData.operations.items.map((item) => (
-              <li key={item.title}>
-                <Link
-                  to={item.href}
-                  className="group block"
-                >
-                  <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    {item.title}
-                  </span>
-                  <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
-                    {item.description}
-                  </span>
-                </Link>
-              </li>
-            ))}
+          <ul className="space-y-4">
+            {servicesData.operations.items.map((item, index) => {
+              const Icon = operationsIcons[index];
+              return (
+                <li key={item.title}>
+                  <Link
+                    to={item.href}
+                    className="group flex items-start gap-3"
+                  >
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5">
+                      <Icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <div>
+                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                        {item.title}
+                      </span>
+                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                        {item.description}
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -41,22 +47,30 @@ export function MegaMenuServices() {
           <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-6">
             {servicesData.incidentRisk.title}
           </h3>
-          <ul className="space-y-5">
-            {servicesData.incidentRisk.items.map((item) => (
-              <li key={item.title}>
-                <Link
-                  to={item.href}
-                  className="group block"
-                >
-                  <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    {item.title}
-                  </span>
-                  <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
-                    {item.description}
-                  </span>
-                </Link>
-              </li>
-            ))}
+          <ul className="space-y-4">
+            {servicesData.incidentRisk.items.map((item, index) => {
+              const Icon = incidentIcons[index];
+              return (
+                <li key={item.title}>
+                  <Link
+                    to={item.href}
+                    className="group flex items-start gap-3"
+                  >
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5">
+                      <Icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <div>
+                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                        {item.title}
+                      </span>
+                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                        {item.description}
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -65,22 +79,30 @@ export function MegaMenuServices() {
           <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-6">
             {servicesData.enablement.title}
           </h3>
-          <ul className="space-y-5">
-            {servicesData.enablement.items.map((item) => (
-              <li key={item.title}>
-                <Link
-                  to={item.href}
-                  className="group block"
-                >
-                  <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    {item.title}
-                  </span>
-                  <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
-                    {item.description}
-                  </span>
-                </Link>
-              </li>
-            ))}
+          <ul className="space-y-4">
+            {servicesData.enablement.items.map((item, index) => {
+              const Icon = enablementIcons[index];
+              return (
+                <li key={item.title}>
+                  <Link
+                    to={item.href}
+                    className="group flex items-start gap-3"
+                  >
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5">
+                      <Icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <div>
+                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                        {item.title}
+                      </span>
+                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                        {item.description}
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
