@@ -253,8 +253,9 @@ export function MonitoringSection() {
           <AnimatedSection delay={200}>
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Left: Compact Tabs (1/3) - Same height as image */}
-              <div className="flex flex-col h-full">
-                <div className="flex-1 flex flex-col justify-between space-y-2 lg:space-y-0">
+              <div className="flex flex-col">
+                {/* Tabs container - matches image aspect ratio */}
+                <div className="aspect-[4/3] flex flex-col gap-3">
                   {monitoringDimensions.map((dimension, index) => {
                     const Icon = dimension.icon;
                     const isActive = activeIndex === index;
@@ -305,18 +306,18 @@ export function MonitoringSection() {
                   })}
                 </div>
 
-                {/* Operations connection - mobile */}
-                <div className="lg:hidden mt-4 bg-foreground/5 rounded-xl p-4 border border-foreground/5">
-                  <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                {/* Operations connection - below tabs */}
+                <div className="mt-4 bg-foreground/5 rounded-xl p-4 border border-foreground/5">
+                  <p className="text-xs lg:text-sm text-muted-foreground text-center leading-relaxed">
                     <span className="text-foreground font-medium">Integrated with operations:</span>{" "}
-                    Monitoring data feeds our Control Center for faster decisions.
+                    Monitoring data feeds our Control Center and Field Service teams, enabling faster and more informed decisions.
                   </p>
                 </div>
               </div>
 
               {/* Right: Visual Area with Background Image (2/3) */}
               <div className="lg:col-span-2">
-                <div className="relative rounded-2xl overflow-hidden aspect-[16/10] lg:aspect-[4/3]">
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                   {/* Background Image with fade transition */}
                   {monitoringDimensions.map((dimension, index) => (
                     <div
@@ -340,35 +341,35 @@ export function MonitoringSection() {
                   <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-8">
                     <div 
                       className={cn(
-                        "w-full max-w-xs bg-card/95 backdrop-blur-md rounded-xl border shadow-soft-lg overflow-hidden transition-all duration-500 animate-in fade-in slide-in-from-bottom-8 duration-700",
+                        "w-full max-w-sm bg-card/95 backdrop-blur-md rounded-xl border shadow-soft-lg overflow-hidden transition-all duration-500 animate-in fade-in slide-in-from-bottom-8 duration-700",
                         isTransitioning 
                           ? "opacity-0 translate-y-4 scale-95" 
                           : "opacity-100 translate-y-0 scale-100"
                       )}
                     >
                       {/* Card Header */}
-                      <div className="p-3 border-b bg-secondary/30">
+                      <div className="p-4 border-b bg-secondary/30">
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <div className="flex items-center gap-3">
+                            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
                               {(() => {
                                 const Icon = activeDimension.icon;
-                                return <Icon className="w-3.5 h-3.5 text-primary" />;
+                                return <Icon className="w-4 h-4 text-primary" />;
                               })()}
                             </div>
                             <div>
-                              <div className="text-[9px] text-muted-foreground uppercase tracking-wider">
+                              <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
                                 Live
                               </div>
-                              <div className="font-semibold text-xs">{activeDimension.visual.title}</div>
+                              <div className="font-semibold text-sm">{activeDimension.visual.title}</div>
                             </div>
                           </div>
                           <div className={cn(
-                            "px-2 py-0.5 rounded-full text-[9px] font-medium border flex items-center gap-1",
+                            "px-2.5 py-1 rounded-full text-[10px] font-medium border flex items-center gap-1.5",
                             getStatusColor(activeDimension.visual.status)
                           )}>
                             <span className={cn(
-                              "w-1 h-1 rounded-full animate-pulse",
+                              "w-1.5 h-1.5 rounded-full animate-pulse",
                               getStatusDotColor(activeDimension.visual.status)
                             )} />
                             {activeDimension.visual.statusLabel}
@@ -377,24 +378,24 @@ export function MonitoringSection() {
                       </div>
 
                       {/* Main Value */}
-                      <div className="p-3 text-center">
-                        <div className="text-2xl sm:text-3xl font-bold text-foreground mb-1">
+                      <div className="p-4 text-center">
+                        <div className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
                           {activeDimension.visual.value}
                         </div>
-                        <p className="text-muted-foreground text-[10px] leading-relaxed">
+                        <p className="text-muted-foreground text-xs leading-relaxed">
                           {activeDimension.description}
                         </p>
                       </div>
 
                       {/* Details */}
-                      <div className="px-3 pb-3">
-                        <div className="grid grid-cols-3 gap-1.5">
+                      <div className="px-4 pb-4">
+                        <div className="grid grid-cols-3 gap-2">
                           {activeDimension.visual.details.map((detail, idx) => (
                             <div 
                               key={idx}
-                              className="bg-secondary/50 rounded-lg px-1.5 py-1 text-center"
+                              className="bg-secondary/50 rounded-lg px-2 py-1.5 text-center"
                             >
-                              <div className="text-[8px] text-muted-foreground truncate">{detail}</div>
+                              <div className="text-[10px] text-muted-foreground">{detail}</div>
                             </div>
                           ))}
                         </div>
@@ -402,14 +403,14 @@ export function MonitoringSection() {
 
                       {/* Calculator Button - Only for smoking */}
                       {activeDimension.hasCalculator && (
-                        <div className="px-3 pb-3">
+                        <div className="px-4 pb-4">
                           <Button
                             variant="outline"
                             size="sm"
                             onClick={() => setShowCalculator(!showCalculator)}
-                            className="w-full text-xs h-8 gap-1.5"
+                            className="w-full text-sm h-9 gap-2"
                           >
-                            <Calculator className="w-3.5 h-3.5" />
+                            <Calculator className="w-4 h-4" />
                             {showCalculator ? "Hide Calculator" : "Calculate Savings"}
                           </Button>
                         </div>
@@ -423,14 +424,6 @@ export function MonitoringSection() {
                       </div>
                     )}
                   </div>
-                </div>
-
-                {/* Operations connection - desktop */}
-                <div className="hidden lg:block mt-4 bg-foreground/5 rounded-xl p-4 border border-foreground/5">
-                  <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                    <span className="text-foreground font-medium">Integrated with operations:</span>{" "}
-                    Monitoring data feeds our Control Center and Field Service teams, enabling faster and more informed decisions.
-                  </p>
                 </div>
               </div>
             </div>
