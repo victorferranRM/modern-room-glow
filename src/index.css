@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,7 +22,7 @@
     --popover-foreground: 20 14% 15%;
 
     /* Primary coral/salmon - Roomonitor brand */
-    --primary: 12 76% 61%;
+    --primary: 8 81% 66%;
     --primary-foreground: 0 0% 100%;
 
     /* Soft warm secondary */
@@ -33,7 +34,7 @@
     --muted-foreground: 20 10% 45%;
 
     /* Accent - slightly deeper coral */
-    --accent: 15 85% 57%;
+    --accent: 8 81% 66%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
