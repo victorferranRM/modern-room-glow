@@ -33,10 +33,10 @@ const Index = () => {
           <WhyRoomonitorSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
-          <ManagerSection />
+          <IntegrationsSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
-          <IntegrationsSection />
+          <ManagerSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
           <ClosingSection />
