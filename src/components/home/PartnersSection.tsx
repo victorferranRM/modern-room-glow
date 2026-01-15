@@ -1,17 +1,50 @@
 import { AnimatedSection } from "@/components/ui/animated-section";
 
+const partners = [
+  "ALEP", "Fevitur", "APARTUR", "ACAVE", "ASOTUR", "Madrid Aloja",
+  "AVVA", "APTUR", "AVAL", "HostnFly", "GuestReady", "Alterhome",
+  "Luckey", "TheKey", "Joivy", "Ukio", "Limehome", "Casai",
+  "Hostmaker", "City Relay", "Lavanda", "Pillow"
+];
+
+function LogoCard({ name }: { name: string }) {
+  return (
+    <div className="flex-shrink-0 w-32 h-16 sm:w-36 sm:h-20 bg-card/50 rounded-xl border flex items-center justify-center mx-3 hover:bg-card hover:border-primary/20 transition-all duration-300">
+      <span className="text-sm font-semibold text-muted-foreground">{name}</span>
+    </div>
+  );
+}
+
+function MarqueeRow({ items, direction = "left", speed = 40 }: { items: string[]; direction?: "left" | "right"; speed?: number }) {
+  // Triple the items for seamless loop
+  const duplicatedItems = [...items, ...items, ...items];
+  
+  return (
+    <div className="relative overflow-hidden">
+      {/* Gradient masks */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-secondary/50 to-transparent z-10 pointer-events-none" />
+      
+      <div 
+        className="flex"
+        style={{
+          animation: `marquee-${direction} ${speed}s linear infinite`,
+        }}
+      >
+        {duplicatedItems.map((name, index) => (
+          <LogoCard key={`${name}-${index}`} name={name} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function PartnersSection() {
-  const partners = [
-    { name: "ALEP", logo: "ALEP" },
-    { name: "Fevitur", logo: "Fevitur" },
-    { name: "APARTUR", logo: "APARTUR" },
-    { name: "ACAVE", logo: "ACAVE" },
-    { name: "ASOTUR", logo: "ASOTUR" },
-    { name: "Madrid", logo: "MAD" },
-  ];
+  const firstRow = partners.slice(0, 11);
+  const secondRow = partners.slice(11, 22);
 
   return (
-    <section className="py-16 border-y bg-secondary/30">
+    <section className="py-16 bg-secondary/50 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-10">
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
@@ -20,20 +53,33 @@ export function PartnersSection() {
         </AnimatedSection>
         
         <AnimatedSection delay={150}>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-            {partners.map((partner) => (
-              <div
-                key={partner.name}
-                className="flex items-center justify-center px-6 py-3 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
-              >
-                <span className="text-lg font-semibold text-muted-foreground">
-                  {partner.logo}
-                </span>
-              </div>
-            ))}
+          <div className="space-y-4">
+            <MarqueeRow items={firstRow} direction="left" speed={45} />
+            <MarqueeRow items={secondRow} direction="right" speed={50} />
           </div>
         </AnimatedSection>
       </div>
+      
+      {/* CSS for marquee animation */}
+      <style>{`
+        @keyframes marquee-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.333%);
+          }
+        }
+        
+        @keyframes marquee-right {
+          0% {
+            transform: translateX(-33.333%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </section>
   );
 }

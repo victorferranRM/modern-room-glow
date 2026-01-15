@@ -249,70 +249,59 @@ export function MonitoringSection() {
             </p>
           </AnimatedSection>
 
-          {/* Interactive Content - 1/3 + 2/3 Layout */}
+          {/* Interactive Content - Tabs (1/3) + Image (2/3) side by side */}
           <AnimatedSection delay={200}>
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
-              {/* Left: Compact Tabs (1/3) - Same height as image */}
-              <div className="flex flex-col">
-                {/* Tabs container - matches image aspect ratio */}
-                <div className="aspect-[4/3] flex flex-col gap-3">
-                  {monitoringDimensions.map((dimension, index) => {
-                    const Icon = dimension.icon;
-                    const isActive = activeIndex === index;
-                    
-                    return (
-                      <button
-                        key={dimension.id}
-                        onClick={() => handleTabChange(index)}
-                        className={cn(
-                          "w-full text-left p-4 lg:p-5 rounded-xl border transition-all duration-300 group flex-1 flex flex-col justify-center",
+              {/* Left: Compact Tabs (1/3) */}
+              <div className="flex flex-col gap-3">
+                {monitoringDimensions.map((dimension, index) => {
+                  const Icon = dimension.icon;
+                  const isActive = activeIndex === index;
+                  
+                  return (
+                    <button
+                      key={dimension.id}
+                      onClick={() => handleTabChange(index)}
+                      className={cn(
+                        "w-full text-left p-4 lg:p-5 rounded-xl border transition-all duration-300 group",
+                        isActive 
+                          ? "bg-card border-primary/30 shadow-soft" 
+                          : "bg-card/50 border-border hover:bg-card hover:border-primary/20"
+                      )}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className={cn(
+                          "w-10 h-10 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300",
                           isActive 
-                            ? "bg-card border-primary/30 shadow-soft" 
-                            : "bg-card/50 border-border hover:bg-card hover:border-primary/20"
-                        )}
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className={cn(
-                            "w-10 h-10 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300",
-                            isActive 
-                              ? "bg-primary text-primary-foreground" 
-                              : "bg-secondary text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
-                          )}>
-                            <Icon className="w-5 h-5 lg:w-6 lg:h-6" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h3 className={cn(
-                              "font-semibold text-sm lg:text-base mb-0.5 transition-colors duration-300",
-                              isActive ? "text-foreground" : "text-foreground/80"
-                            )}>
-                              {dimension.label}
-                            </h3>
-                            <p className={cn(
-                              "text-xs lg:text-sm transition-colors duration-300 line-clamp-2",
-                              isActive ? "text-muted-foreground" : "text-muted-foreground/70"
-                            )}>
-                              {dimension.shortDesc}
-                            </p>
-                          </div>
-                          <div className={cn(
-                            "w-1.5 h-1.5 rounded-full shrink-0 transition-all duration-300",
-                            isActive 
-                              ? "bg-primary scale-100" 
-                              : "bg-border scale-75 group-hover:bg-primary/40"
-                          )} />
+                            ? "bg-primary text-primary-foreground" 
+                            : "bg-secondary text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
+                        )}>
+                          <Icon className="w-5 h-5 lg:w-6 lg:h-6" />
                         </div>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Operations connection - below tabs */}
-                <div className="mt-4 bg-foreground/5 rounded-xl p-4 border border-foreground/5">
-                  <p className="text-xs lg:text-sm text-muted-foreground text-center leading-relaxed">
-                    <span className="text-foreground font-medium">Integrated with operations:</span>{" "}
-                    Monitoring data feeds our Control Center and Field Service teams, enabling faster and more informed decisions.
-                  </p>
-                </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className={cn(
+                            "font-semibold text-sm lg:text-base mb-0.5 transition-colors duration-300",
+                            isActive ? "text-foreground" : "text-foreground/80"
+                          )}>
+                            {dimension.label}
+                          </h3>
+                          <p className={cn(
+                            "text-xs lg:text-sm transition-colors duration-300 line-clamp-2",
+                            isActive ? "text-muted-foreground" : "text-muted-foreground/70"
+                          )}>
+                            {dimension.shortDesc}
+                          </p>
+                        </div>
+                        <div className={cn(
+                          "w-1.5 h-1.5 rounded-full shrink-0 transition-all duration-300",
+                          isActive 
+                            ? "bg-primary scale-100" 
+                            : "bg-border scale-75 group-hover:bg-primary/40"
+                        )} />
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Right: Visual Area with Background Image (2/3) */}
@@ -426,6 +415,16 @@ export function MonitoringSection() {
                   </div>
                 </div>
               </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Operations connection - Full width below */}
+          <AnimatedSection delay={400} className="mt-8">
+            <div className="bg-foreground/5 rounded-2xl p-6 lg:p-8 border border-foreground/5">
+              <p className="text-base lg:text-lg text-muted-foreground text-center leading-relaxed max-w-3xl mx-auto">
+                <span className="text-foreground font-semibold">Integrated with operations:</span>{" "}
+                Monitoring data feeds our Control Center and Field Service teams, enabling faster and more informed decisions.
+              </p>
             </div>
           </AnimatedSection>
         </div>
