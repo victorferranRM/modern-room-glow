@@ -18,7 +18,7 @@ export function HeroSection() {
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-foreground">
               Emergencies don't follow office hours.
-              <span className="block mt-3 text-muted-foreground">
+              <span className="block mt-3 text-muted-foreground whitespace-nowrap">
                 Your operations shouldn't depend on them.
               </span>
             </h1>
@@ -26,10 +26,12 @@ export function HeroSection() {
 
           {/* Subheadline */}
           <p 
-            className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in"
+            className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
-            Roomonitor becomes your operational team outside office hours, managing guests, incidents and assets with real decision-making and real action.
+            Roomonitor becomes your operational team outside office hours, managing guests,
+            <br className="hidden sm:block" />
+            incidents and assets with real decision-making and real action.
           </p>
 
           {/* Value proposition cards */}

@@ -118,7 +118,7 @@ const AnimatedStat = ({ stat }: { stat: typeof stats[0] }) => {
 
   return (
     <div ref={ref} className="space-y-2 group cursor-default">
-      <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary transition-all duration-300 group-hover:scale-110 group-hover:text-primary/80 origin-left">
+      <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary transition-all duration-300 group-hover:scale-110 group-hover:text-primary/80 origin-left group-hover:drop-shadow-[0_0_25px_hsl(var(--primary)/0.4)]">
         {stat.prefix}{formatNumber(count)}{stat.suffix}
       </p>
       <p className="text-muted-foreground text-base md:text-lg transition-colors duration-300 group-hover:text-foreground">

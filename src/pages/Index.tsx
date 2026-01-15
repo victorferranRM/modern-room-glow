@@ -9,6 +9,7 @@ import { IntegrationsSection } from "@/components/home/IntegrationsSection";
 import { ClosingSection } from "@/components/home/ClosingSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { WhyRoomonitorSection } from "@/components/home/WhyRoomonitorSection";
+import { AnimatedSection } from "@/components/ui/animated-section";
 
 const Index = () => {
   return (
@@ -16,14 +17,30 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <PartnersSection />
-        <TakeoverSection />
-        <HowItWorksSection />
-        <MonitoringSection />
-        <WhyRoomonitorSection />
-        <ManagerSection />
-        <IntegrationsSection />
-        <ClosingSection />
+        <AnimatedSection animation="fade-up">
+          <PartnersSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <TakeoverSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <HowItWorksSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <MonitoringSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <WhyRoomonitorSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <ManagerSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <IntegrationsSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
+          <ClosingSection />
+        </AnimatedSection>
       </main>
       <Footer />
     </div>
