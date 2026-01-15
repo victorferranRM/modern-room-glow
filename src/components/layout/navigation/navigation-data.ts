@@ -34,6 +34,11 @@ export const servicesData = {
         description: "Critical situations managed with protocols and real action",
         href: "/services/emergency-handling",
       },
+      {
+        title: "Night Watch",
+        description: "Dedicated agents monitoring your properties to prevent parties before they escalate",
+        href: "/services/night-watch",
+      },
     ],
   },
   enablement: {

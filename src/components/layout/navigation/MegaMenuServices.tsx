@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { servicesData } from "./navigation-data";
-import { Headphones, Eye, Truck, AlertTriangle, Siren, Settings, FileText } from "lucide-react";
+import { Headphones, Eye, Truck, AlertTriangle, Siren, Moon, Settings, FileText } from "lucide-react";
 
 const operationsIcons = [Headphones, Eye, Truck];
-const incidentIcons = [AlertTriangle, Siren];
+const incidentIcons = [AlertTriangle, Siren, Moon];
 const enablementIcons = [Settings, FileText];
 
 export function MegaMenuServices() {
