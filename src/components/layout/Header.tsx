@@ -115,16 +115,23 @@ export function Header() {
       {/* Mega Menu Dropdown */}
       <div
         className={cn(
-          "hidden lg:block absolute left-0 right-0 bg-background border-b shadow-lg transition-all duration-200",
-          activeMenu ? "opacity-100 visible" : "opacity-0 invisible"
+          "hidden lg:block absolute left-0 right-0 bg-background border-b shadow-lg transition-all duration-300 ease-out origin-top",
+          activeMenu 
+            ? "opacity-100 visible translate-y-0 scale-y-100" 
+            : "opacity-0 invisible -translate-y-2 scale-y-95"
         )}
         onMouseEnter={() => activeMenu && setActiveMenu(activeMenu)}
         onMouseLeave={handleMenuLeave}
       >
-        {activeMenu === "services" && <MegaMenuServices />}
-        {activeMenu === "solutions" && <MegaMenuSolutions />}
-        {activeMenu === "monitoring" && <MegaMenuMonitoring />}
-        {activeMenu === "resources" && <MegaMenuResources />}
+        <div className={cn(
+          "transition-all duration-300 delay-75",
+          activeMenu ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
+        )}>
+          {activeMenu === "services" && <MegaMenuServices />}
+          {activeMenu === "solutions" && <MegaMenuSolutions />}
+          {activeMenu === "monitoring" && <MegaMenuMonitoring />}
+          {activeMenu === "resources" && <MegaMenuResources />}
+        </div>
       </div>
 
       {/* Mobile Menu */}
