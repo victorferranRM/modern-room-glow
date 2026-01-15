@@ -117,11 +117,11 @@ const AnimatedStat = ({ stat }: { stat: typeof stats[0] }) => {
   };
 
   return (
-    <div ref={ref} className="space-y-2">
-      <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary">
+    <div ref={ref} className="space-y-2 group cursor-default">
+      <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary transition-all duration-300 group-hover:scale-110 group-hover:text-primary/80 origin-left">
         {stat.prefix}{formatNumber(count)}{stat.suffix}
       </p>
-      <p className="text-muted-foreground text-base md:text-lg">
+      <p className="text-muted-foreground text-base md:text-lg transition-colors duration-300 group-hover:text-foreground">
         {stat.description}
       </p>
     </div>
@@ -169,10 +169,10 @@ export const WhyRoomonitorSection = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-stretch">
           {/* Left Side - Stats (3/5 width) */}
-          <div className="lg:col-span-3 space-y-10">
-            <div className="grid grid-cols-2 gap-x-12 gap-y-10">
+          <div className="lg:col-span-3 flex flex-col justify-center">
+            <div className="grid grid-cols-2 gap-x-12 gap-y-12">
               {stats.map((stat, index) => (
                 <AnimatedStat key={index} stat={stat} />
               ))}
@@ -180,9 +180,9 @@ export const WhyRoomonitorSection = () => {
           </div>
 
           {/* Right Side - Case Studies Carousel (2/5 width) */}
-          <div className="lg:col-span-2 relative">
+          <div className="lg:col-span-2 relative flex flex-col">
             {/* Background Image */}
-            <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+            <div className="relative rounded-2xl overflow-hidden flex-1 min-h-[400px]">
               <div
                 className={`absolute inset-0 transition-all duration-300 ease-in-out ${
                   isTransitioning ? "opacity-0 scale-105" : "opacity-100 scale-100"
