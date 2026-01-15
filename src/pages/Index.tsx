@@ -3,8 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TakeoverSection } from "@/components/home/TakeoverSection";
 import { HowItWorksSection } from "@/components/home/HowItWorksSection";
-import { ActingAsYouSection } from "@/components/home/ActingAsYouSection";
-import { DeviceSection } from "@/components/home/DeviceSection";
+import { MonitoringSection } from "@/components/home/MonitoringSection";
 import { ClosingSection } from "@/components/home/ClosingSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 
@@ -17,8 +16,7 @@ const Index = () => {
         <PartnersSection />
         <TakeoverSection />
         <HowItWorksSection />
-        <ActingAsYouSection />
-        <DeviceSection />
+        <MonitoringSection />
         <ClosingSection />
       </main>
       <Footer />
