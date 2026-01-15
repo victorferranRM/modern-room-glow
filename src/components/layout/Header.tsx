@@ -53,7 +53,7 @@ export function Header() {
             <img 
               src={roomonitorLogo} 
               alt="Roomonitor" 
-              className="h-6 sm:h-7 w-auto"
+              className="h-8 sm:h-9 w-auto"
             />
           </Link>
 
