@@ -113,6 +113,7 @@ export const resourcesData = {
     items: [
       { title: "Integrations", href: "/integrations" },
       { title: "Case Studies", href: "/resources/case-studies" },
+      { title: "Savings Calculator", href: "/resources/savings-calculator" },
     ],
   },
   company: {

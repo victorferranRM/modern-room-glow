@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
 import { MegaMenuServices } from "./navigation/MegaMenuServices";
@@ -80,6 +80,15 @@ export function Header() {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
+            {/* Language Selector */}
+            <button
+              className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+              aria-label="Select language"
+            >
+              <Globe className="h-4 w-4" />
+              <ChevronDown className="h-3 w-3" />
+            </button>
+            
             <Button variant="ghost" asChild>
               <Link to="/login">Log in</Link>
             </Button>
