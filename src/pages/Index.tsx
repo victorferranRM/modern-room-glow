@@ -1,11 +1,13 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
+import { TakeoverSection } from "@/components/home/TakeoverSection";
+import { ResponsibilitiesSection } from "@/components/home/ResponsibilitiesSection";
+import { HowItWorksSection } from "@/components/home/HowItWorksSection";
+import { ActingAsYouSection } from "@/components/home/ActingAsYouSection";
+import { DeviceSection } from "@/components/home/DeviceSection";
+import { ClosingSection } from "@/components/home/ClosingSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
-import { StatsSection } from "@/components/home/StatsSection";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { CTASection } from "@/components/home/CTASection";
 
 const Index = () => {
   return (
@@ -13,11 +15,13 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <TakeoverSection />
+        <ResponsibilitiesSection />
+        <HowItWorksSection />
+        <ActingAsYouSection />
+        <DeviceSection />
         <PartnersSection />
-        <ServicesSection />
-        <StatsSection />
-        <TestimonialsSection />
-        <CTASection />
+        <ClosingSection />
       </main>
       <Footer />
     </div>
