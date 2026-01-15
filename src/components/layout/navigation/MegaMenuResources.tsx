@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { resourcesData } from "./navigation-data";
-import { BookOpen, FileText, HelpCircle, Puzzle, Award, Building, Mail } from "lucide-react";
+import { BookOpen, FileText, HelpCircle, Puzzle, Award, Building, Mail, Calculator } from "lucide-react";
 
 const learnIcons = [BookOpen, FileText, HelpCircle];
-const ecosystemIcons = [Puzzle, Award];
+const ecosystemIcons = [Puzzle, Award, Calculator];
 const companyIcons = [Building, Mail];
 
 const learnDescriptions = [
@@ -15,6 +15,7 @@ const learnDescriptions = [
 const ecosystemDescriptions = [
   "PMS and operational ecosystem connections",
   "Success stories from our partners",
+  "See how much you could save with Roomonitor",
 ];
 
 const companyDescriptions = [
@@ -24,7 +25,7 @@ const companyDescriptions = [
 
 export function MegaMenuResources() {
   return (
-    <div className="w-full max-w-4xl mx-auto p-8">
+    <div className="w-full max-w-5xl mx-auto p-8">
       <div className="grid grid-cols-3 gap-12">
         {/* Learn Column */}
         <div>
@@ -121,6 +122,29 @@ export function MegaMenuResources() {
             })}
           </ul>
         </div>
+      </div>
+
+      {/* Featured CTA - Savings Calculator */}
+      <div className="mt-8 pt-6 border-t">
+        <Link
+          to="/resources/savings-calculator"
+          className="group flex items-center gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
+        >
+          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <Calculator className="w-6 h-6 text-primary" />
+          </div>
+          <div className="flex-1">
+            <span className="block text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+              How much could Roomonitor save you?
+            </span>
+            <span className="block text-sm text-muted-foreground mt-0.5">
+              Calculate your potential savings with our smoke detection and monitoring solutions
+            </span>
+          </div>
+          <span className="text-primary text-sm font-medium">
+            Try Calculator →
+          </span>
+        </Link>
       </div>
     </div>
   );
