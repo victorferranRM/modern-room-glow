@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Clock, Users, Headphones, Shield, AlertTriangle, Wrench, Cpu, Heart } from "lucide-react";
 
-import solutionRest from "@/assets/solution-rest.jpg";
+import solutionRest from "@/assets/solution-rest-new.jpg";
 import solutionControl from "@/assets/solution-control.jpg";
 import solutionManage from "@/assets/solution-manage.jpg";
 
@@ -75,7 +75,7 @@ export function TakeoverSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 bg-background overflow-hidden">
+    <section ref={sectionRef} className="py-16 lg:py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section header */}
