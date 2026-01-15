@@ -8,6 +8,7 @@ import { ManagerSection } from "@/components/home/ManagerSection";
 import { IntegrationsSection } from "@/components/home/IntegrationsSection";
 import { ClosingSection } from "@/components/home/ClosingSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
+import { WhyRoomonitorSection } from "@/components/home/WhyRoomonitorSection";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         <TakeoverSection />
         <HowItWorksSection />
         <MonitoringSection />
+        <WhyRoomonitorSection />
         <ManagerSection />
         <IntegrationsSection />
         <ClosingSection />
