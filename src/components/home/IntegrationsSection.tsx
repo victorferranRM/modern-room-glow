@@ -136,7 +136,7 @@ export function IntegrationsSection() {
                   <p className="text-white/70 mb-6 leading-relaxed">
                     Use our public API to integrate Roomonitor capabilities into any system you already use, maintaining your brand identity.
                   </p>
-                  <Button variant="outline" className="w-full sm:w-auto gap-2 group/btn border-white/30 text-white hover:bg-white/10 hover:text-white">
+                  <Button variant="outline" className="w-full sm:w-auto gap-2 group/btn border-2 border-white bg-transparent text-white font-semibold hover:bg-white hover:text-slate-900 transition-colors">
                     Explore API
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                   </Button>
