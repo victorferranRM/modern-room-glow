@@ -15,13 +15,13 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           {/* Main headline */}
-          <div className="space-y-6 animate-fade-in">
+          <div className="space-y-4 animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-foreground">
               Emergencies don't follow office hours.
-              <span className="block mt-3 text-muted-foreground whitespace-nowrap">
-                Your operations shouldn't depend on them.
-              </span>
             </h1>
+            <p className="text-2xl sm:text-3xl lg:text-4xl text-muted-foreground">
+              Your operations shouldn't depend on them.
+            </p>
           </div>
 
           {/* Subheadline */}
