@@ -26,7 +26,7 @@ export function ClosingSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button 
               size="lg" 
-              className="text-base px-8 py-6 bg-white text-foreground hover:bg-white/90 shadow-lg" 
+              className="text-base px-8 py-6 bg-white text-black font-semibold hover:bg-gray-100 shadow-lg" 
               asChild
             >
               <Link to="/pricing">
@@ -36,7 +36,7 @@ export function ClosingSection() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-base px-8 py-6 border-white text-white hover:bg-white/10 hover:text-white" 
+              className="text-base px-8 py-6 border-2 border-white bg-transparent text-white font-semibold hover:bg-white hover:text-black transition-colors" 
               asChild
             >
               <Link to="/contact">
