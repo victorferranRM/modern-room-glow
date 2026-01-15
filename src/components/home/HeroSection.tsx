@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageSquare, Shield, Clock, Users } from "lucide-react";
+import { ArrowRight, MessageSquare, Shield, Clock, Users, BadgeCheck } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -14,8 +14,16 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-12">
+          {/* Eyebrow badge */}
+          <div className="animate-fade-in flex justify-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              <BadgeCheck className="w-4 h-4" />
+              <span>Trusted by 5,000+ hospitality operators</span>
+            </div>
+          </div>
+
           {/* Main headline */}
-          <div className="space-y-2 animate-fade-in">
+          <div className="space-y-2 animate-fade-in" style={{ animationDelay: "0.05s" }}>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight text-foreground whitespace-nowrap">
               Emergencies don't follow office hours.
             </h1>
