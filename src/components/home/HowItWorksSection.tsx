@@ -1,6 +1,4 @@
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Radio, Shield, Users, Bell, AlertTriangle, CheckCircle, Phone } from "lucide-react";
 
 const steps = [
@@ -42,7 +40,7 @@ export function HowItWorksSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section header */}
-          <AnimatedSection className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+          <AnimatedSection className="mb-16">
             <div>
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 How it works
@@ -52,9 +50,6 @@ export function HowItWorksSection() {
                 Every incident. <em className="font-serif not-italic">One</em> solution.
               </h2>
             </div>
-            <Button asChild size="lg" className="w-fit shadow-soft">
-              <Link to="/demo">Get started</Link>
-            </Button>
           </AnimatedSection>
 
           {/* Steps Cards */}
