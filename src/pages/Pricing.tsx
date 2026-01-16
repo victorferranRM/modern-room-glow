@@ -14,40 +14,22 @@ import {
   Users,
   Headphones,
   Zap,
-  BadgeCheck
+  BadgeCheck,
+  Bell,
+  Smartphone,
+  Mail,
+  PhoneCall,
+  Home
 } from "lucide-react";
-import { cn } from "@/lib/utils";
-
-// Pricing configuration
-const PRICING = {
-  device: 99, // One-time device cost
-  core: {
-    basePrice: 29, // Per property/month for first property
-    additionalPrice: 25, // Per additional property/month
-  },
-  coreServices: {
-    basePrice: 79, // Per property/month for first property
-    additionalPrice: 69, // Per additional property/month
-  },
-};
-
-const calculatePrice = (plan: "core" | "coreServices", properties: number) => {
-  const pricing = PRICING[plan];
-  if (properties <= 1) return pricing.basePrice;
-  return pricing.basePrice + (properties - 1) * pricing.additionalPrice;
-};
-
-const calculateDeviceCost = (properties: number) => {
-  return PRICING.device * properties;
-};
 
 export default function Pricing() {
   const [properties, setProperties] = useState(3);
   const isEnterprise = properties > 10;
 
-  const coreMonthly = calculatePrice("core", Math.min(properties, 10));
-  const coreServicesMonthly = calculatePrice("coreServices", Math.min(properties, 10));
-  const deviceCost = calculateDeviceCost(Math.min(properties, 10));
+  // Calculate totals for display
+  const basicDeviceTotal = 45 * properties;
+  const basicMonthlyTotal = 13 * properties;
+  const proMonthlyTotal = 29.90 * properties;
 
   return (
     <div className="min-h-screen bg-background">
@@ -59,17 +41,18 @@ export default function Pricing() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               <BadgeCheck className="w-4 h-4" />
-              <span>Transparent pricing, no hidden fees</span>
+              <span>Technology + People — Full operational coverage</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
               One device. One subscription.
               <br />
-              <span className="gradient-text">Full operational coverage.</span>
+              <span className="gradient-text">Your operations, handled.</span>
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose the plan that fits your operation. Scale up anytime with volume discounts.
+              Choose the plan that fits your portfolio. Self-service for up to 10 properties, 
+              or talk to a specialist for full operational coverage.
             </p>
           </div>
         </section>
@@ -109,8 +92,8 @@ export default function Pricing() {
               {isEnterprise && (
                 <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-xl">
                   <p className="text-sm text-foreground">
-                    <span className="font-semibold">Enterprise pricing available.</span>{" "}
-                    For 11+ properties, we offer custom volume pricing and dedicated support.
+                    <span className="font-semibold">Larger portfolio?</span>{" "}
+                    For 11+ properties, talk to a specialist for custom pricing and full operational support.
                   </p>
                 </div>
               )}
@@ -122,51 +105,67 @@ export default function Pricing() {
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
-              {/* Core Plan */}
+              {/* Basic Plan */}
               <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-shadow duration-300">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Core</h3>
+                    <h3 className="text-xl font-bold text-foreground">Basic</h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Device + monitoring subscription
                     </p>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {!isEnterprise ? (
                       <>
-                        <div className="flex items-baseline gap-1">
-                          <span className="text-4xl font-bold text-foreground">€{coreMonthly}</span>
-                          <span className="text-muted-foreground">/month</span>
+                        {/* Device pricing */}
+                        <div className="space-y-1">
+                          <div className="flex items-baseline gap-2">
+                            <span className="text-lg text-muted-foreground line-through">€90</span>
+                            <span className="text-3xl font-bold text-foreground">€45</span>
+                            <span className="text-sm text-muted-foreground">one-time</span>
+                          </div>
+                          <div className="inline-block bg-green-500/10 text-green-600 text-xs font-medium px-2 py-0.5 rounded">
+                            Web-exclusive price
+                          </div>
                         </div>
-                        <p className="text-sm text-muted-foreground">
-                          + €{deviceCost} one-time for {properties} device{properties > 1 ? "s" : ""}
-                        </p>
+                        
+                        {/* Monthly subscription */}
+                        <div className="pt-2 border-t border-border">
+                          <div className="flex items-baseline gap-1">
+                            <span className="text-2xl font-bold text-foreground">€13</span>
+                            <span className="text-muted-foreground">/ month per property</span>
+                          </div>
+                        </div>
+
+                        {properties > 1 && (
+                          <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
+                            {properties} properties: €{basicDeviceTotal} one-time + €{basicMonthlyTotal}/month
+                          </p>
+                        )}
                       </>
                     ) : (
-                      <div className="text-2xl font-bold text-foreground">Custom pricing</div>
+                      <div className="text-2xl font-bold text-foreground">Contact sales</div>
                     )}
                   </div>
 
                   <ul className="space-y-3">
                     {[
-                      "Roomonitor monitoring device",
-                      "Real-time noise detection",
-                      "Occupancy tracking",
-                      "Smoke & air quality alerts",
-                      "Mobile app & dashboard",
-                      "Email & push notifications",
+                      { icon: Bell, text: "Roomonitor monitoring device" },
+                      { icon: Zap, text: "Real-time alerts" },
+                      { icon: Smartphone, text: "Dashboard & mobile app" },
+                      { icon: Mail, text: "Email & push notifications" },
                     ].map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{feature}</span>
+                      <li key={feature.text} className="flex items-start gap-3">
+                        <feature.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
 
                   {!isEnterprise ? (
                     <Button className="w-full" size="lg" asChild>
-                      <Link to={`/checkout?plan=core&properties=${properties}`}>
+                      <Link to={`/checkout?plan=basic&properties=${properties}`}>
                         Buy now
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
@@ -182,7 +181,7 @@ export default function Pricing() {
                 </div>
               </div>
 
-              {/* Core + Services Plan */}
+              {/* Pro Plan */}
               <div className="relative bg-card border-2 border-primary rounded-2xl p-6 lg:p-8 shadow-soft-lg">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">
@@ -192,48 +191,51 @@ export default function Pricing() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Core + Services</h3>
+                    <h3 className="text-xl font-bold text-foreground">Pro</h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Full operational coverage included
+                      Everything in Basic + Alarm Assistant
                     </p>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {!isEnterprise ? (
                       <>
                         <div className="flex items-baseline gap-1">
-                          <span className="text-4xl font-bold text-foreground">€{coreServicesMonthly}</span>
-                          <span className="text-muted-foreground">/month</span>
+                          <span className="text-3xl font-bold text-foreground">€29.90</span>
+                          <span className="text-muted-foreground">/ month per property</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                          + €{deviceCost} one-time for {properties} device{properties > 1 ? "s" : ""}
+                          + €45 one-time per device (web-exclusive)
                         </p>
+
+                        {properties > 1 && (
+                          <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
+                            {properties} properties: €{basicDeviceTotal} one-time + €{(proMonthlyTotal).toFixed(2).replace('.00', '')}/month
+                          </p>
+                        )}
                       </>
                     ) : (
-                      <div className="text-2xl font-bold text-foreground">Custom pricing</div>
+                      <div className="text-2xl font-bold text-foreground">Contact sales</div>
                     )}
                   </div>
 
                   <ul className="space-y-3">
                     {[
-                      "Everything in Core",
-                      "24/7 Control Center monitoring",
-                      "Guest Assist™ incident handling",
-                      "Human verification & escalation",
-                      "Field Service Network access",
-                      "Operational protocols execution",
-                      "Priority support",
+                      { icon: Check, text: "Everything in Basic" },
+                      { icon: PhoneCall, text: "Alarm Assistant" },
+                      { icon: Headphones, text: "Human agents monitoring alarms" },
+                      { icon: Clock, text: "24/7 alarm handling" },
                     ].map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{feature}</span>
+                      <li key={feature.text} className="flex items-start gap-3">
+                        <feature.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
 
                   {!isEnterprise ? (
                     <Button className="w-full shadow-soft" size="lg" asChild>
-                      <Link to={`/checkout?plan=core-services&properties=${properties}`}>
+                      <Link to={`/checkout?plan=pro&properties=${properties}`}>
                         Buy now
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
@@ -255,30 +257,32 @@ export default function Pricing() {
                   <div>
                     <h3 className="text-xl font-bold text-foreground">Enterprise</h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Custom pricing & dedicated operations
+                      Full operational management
                     </p>
                   </div>
 
                   <div className="space-y-2">
-                    <div className="text-2xl font-bold text-foreground">Let's talk</div>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-sm text-muted-foreground">From</span>
+                      <span className="text-3xl font-bold text-foreground">€79.90</span>
+                      <span className="text-muted-foreground">/ property</span>
+                    </div>
                     <p className="text-sm text-muted-foreground">
-                      Volume pricing for large portfolios
+                      Variable pricing by portfolio size
                     </p>
                   </div>
 
                   <ul className="space-y-3">
                     {[
-                      "Everything in Core + Services",
-                      "Dedicated account manager",
-                      "Custom SLA agreements",
-                      "API access & integrations",
-                      "White-label options",
-                      "Multi-region support",
-                      "On-site training",
+                      { icon: Check, text: "Everything in Pro" },
+                      { icon: Home, text: "Guest & Property Services" },
+                      { icon: Users, text: "Full operational management" },
+                      { icon: Shield, text: "Custom SLA agreements" },
+                      { icon: Zap, text: "Dedicated account manager" },
                     ].map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{feature}</span>
+                      <li key={feature.text} className="flex items-start gap-3">
+                        <feature.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
@@ -304,7 +308,9 @@ export default function Pricing() {
                   What's included in Services?
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Our operational services are activated after purchase and priced based on your number of properties. Here's what you get:
+                  This is the operational coverage you can activate when working with a Roomonitor specialist. 
+                  Services are not automatically included — they are activated after purchase, with pricing 
+                  based on your number of properties and operational needs.
                 </p>
               </div>
 
@@ -318,7 +324,7 @@ export default function Pricing() {
                   {
                     icon: Shield,
                     title: "Guest Assist™",
-                    description: "Professional guest and incident handling in your name",
+                    description: "Professional guest communication and incident handling in your name",
                   },
                   {
                     icon: Users,
@@ -344,13 +350,17 @@ export default function Pricing() {
                 ))}
               </div>
 
-              <div className="mt-12 text-center">
+              <div className="mt-12 p-6 bg-card border rounded-xl text-center">
+                <p className="text-foreground mb-2">
+                  <span className="font-semibold">Roomonitor = Technology + People</span>
+                </p>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Service pricing is customized based on your portfolio size and operational needs.
+                  Service pricing is customized based on your portfolio size and operational needs. 
+                  Small portfolios can self-purchase Basic or Pro plans. For full operational coverage, talk to our team.
                 </p>
                 <Button variant="outline" asChild>
-                  <Link to="/services">
-                    Learn more about our services
+                  <Link to="/contact?inquiry=services">
+                    Talk to a specialist
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
@@ -369,20 +379,24 @@ export default function Pricing() {
             <div className="space-y-6">
               {[
                 {
-                  question: "What's included in the device cost?",
-                  answer: "Each Roomonitor device includes the hardware, shipping, and installation guide. The device monitors noise levels, occupancy, smoke, temperature, humidity, and air quality in real-time.",
+                  question: "What's included in the device?",
+                  answer: "Each Roomonitor device monitors noise levels, occupancy, smoke, temperature, humidity, and air quality in real-time. The one-time price includes the hardware and shipping.",
                 },
                 {
-                  question: "Can I start with Core and upgrade later?",
-                  answer: "Absolutely. You can upgrade from Core to Core + Services at any time. Your devices and data will seamlessly transition to the enhanced service level.",
+                  question: "Can I start with Basic and upgrade later?",
+                  answer: "Absolutely. You can upgrade from Basic to Pro at any time. Your devices and data will seamlessly transition to the enhanced service level with Alarm Assistant.",
                 },
                 {
-                  question: "How does the Field Service Network work?",
-                  answer: "When our Control Center determines that on-site intervention is needed, we dispatch a trained field agent to your property. This is included in the Core + Services plan.",
+                  question: "What is the Alarm Assistant?",
+                  answer: "The Alarm Assistant is our team of human agents who monitor and handle alarms on your behalf 24/7. When an alert is triggered, our team takes action so you don't have to.",
                 },
                 {
-                  question: "What happens after 10 properties?",
-                  answer: "For portfolios with 11+ properties, we offer custom enterprise pricing with volume discounts, dedicated account management, and tailored SLAs. Contact our sales team to discuss your needs.",
+                  question: "What happens if I have more than 10 properties?",
+                  answer: "For portfolios with 11+ properties, we offer custom enterprise pricing with volume discounts and full operational services including Guest & Property management. Contact our sales team to discuss your needs.",
+                },
+                {
+                  question: "How are services priced?",
+                  answer: "Services (like Guest Assist™ and Field Service) are activated after purchase and priced based on your portfolio size and specific operational requirements. Talk to a specialist for a custom quote.",
                 },
                 {
                   question: "Is there a contract or commitment?",
@@ -409,7 +423,7 @@ export default function Pricing() {
                 Ready to take control of your operations?
               </h2>
               <p className="text-primary-foreground/90 text-lg">
-                Start with a demo to see how Roomonitor works for your properties.
+                Start with a demo to see how Roomonitor combines technology and people to manage your properties.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button 
