@@ -48,7 +48,7 @@ export function CTASection() {
                 className="bg-white text-primary hover:bg-white/90 shadow-lg"
                 asChild
               >
-                <Link to="/demo">
+                <Link to="/contact">
                   Book a Demo
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>

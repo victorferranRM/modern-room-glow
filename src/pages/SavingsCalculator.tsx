@@ -302,7 +302,7 @@ export default function SavingsCalculator() {
                       </p>
                       <div className="space-y-3">
                         <Button size="lg" className="w-full shadow-lg" asChild>
-                          <Link to="/demo">
+                          <Link to="/contact">
                             Book a Demo
                             <ArrowRight className="w-4 h-4 ml-2" />
                           </Link>
