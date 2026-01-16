@@ -9,6 +9,7 @@ import {
   User,
   LogOut,
   Building2,
+  ExternalLink,
 } from "lucide-react";
 import {
   Sidebar,
@@ -111,6 +112,33 @@ export function PortalSidebar() {
       </SidebarHeader>
 
       <SidebarContent className="px-2">
+        {/* Highlighted Manager Link */}
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  asChild
+                  tooltip="Manager Portal"
+                  className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 font-medium"
+                >
+                  <a 
+                    href="https://manager.roomonitor.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Building2 className="h-4 w-4" />
+                    <span>Manager Portal</span>
+                    <ExternalLink className="h-3 w-3 ml-auto opacity-60" />
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <Separator className="my-2" />
+        
         <NavGroup label="Overview" items={mainNavItems} />
         <Separator className="my-2" />
         <NavGroup label="Services" items={serviceNavItems} />
