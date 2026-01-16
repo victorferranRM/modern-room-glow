@@ -50,12 +50,13 @@ export default function Checkout() {
   const planParam = searchParams.get("plan") as PlanType | null;
   const propertiesParam = searchParams.get("properties");
   
-  const plan = planParam && PLANS[planParam] ? planParam : "basic";
+  const initialPlan = planParam && PLANS[planParam] ? planParam : "basic";
   const initialProperties = propertiesParam ? Math.min(Math.max(parseInt(propertiesParam) || 1, 1), 10) : 1;
   
+  const [currentPlan, setCurrentPlan] = useState<PlanType>(initialPlan);
   const [properties, setProperties] = useState(initialProperties);
   
-  const selectedPlan = PLANS[plan];
+  const selectedPlan = PLANS[currentPlan];
   const deviceTotal = selectedPlan.devicePrice * properties;
   const originalDeviceTotal = selectedPlan.originalDevicePrice * properties;
   const monthlyTotal = selectedPlan.monthlyPrice * properties;
@@ -76,7 +77,7 @@ export default function Checkout() {
   const handleCheckout = () => {
     // TODO: Integrate with Stripe or Shopify
     // This will redirect to the payment provider with the selected plan and properties
-    console.log("Checkout:", { plan, properties, deviceTotal, monthlyTotal });
+    console.log("Checkout:", { plan: currentPlan, properties, deviceTotal, monthlyTotal });
     alert("Payment integration coming soon! This will connect to Stripe or Shopify.");
   };
 
@@ -108,18 +109,48 @@ export default function Checkout() {
                   </p>
                 </div>
 
-                {/* Plan Card */}
+                {/* Plan Switcher */}
                 <div className="bg-card border rounded-2xl p-6 shadow-soft">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <h2 className="text-xl font-bold text-foreground">{selectedPlan.name} Plan</h2>
-                      <p className="text-sm text-muted-foreground">{selectedPlan.description}</p>
+                  <div className="mb-6">
+                    <p className="text-sm font-medium text-muted-foreground mb-3">Select your plan</p>
+                    <div className="grid grid-cols-2 gap-3">
+                      {(Object.keys(PLANS) as PlanType[]).map((planKey) => {
+                        const planData = PLANS[planKey];
+                        const isSelected = currentPlan === planKey;
+                        return (
+                          <button
+                            key={planKey}
+                            onClick={() => setCurrentPlan(planKey)}
+                            className={`relative p-4 rounded-xl border-2 transition-all text-left ${
+                              isSelected 
+                                ? "border-primary bg-primary/5" 
+                                : "border-border hover:border-muted-foreground/50"
+                            }`}
+                          >
+                            {planKey === "pro" && (
+                              <span className="absolute -top-2.5 left-3 bg-primary text-primary-foreground text-[10px] font-medium px-2 py-0.5 rounded-full">
+                                Most popular
+                              </span>
+                            )}
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                                isSelected ? "border-primary" : "border-muted-foreground/40"
+                              }`}>
+                                {isSelected && (
+                                  <div className="w-2 h-2 rounded-full bg-primary" />
+                                )}
+                              </div>
+                              <span className="font-semibold text-foreground">{planData.name}</span>
+                            </div>
+                            <p className="text-lg font-bold text-foreground">
+                              €{planData.monthlyPrice.toFixed(2).replace('.00', '')}
+                              <span className="text-sm font-normal text-muted-foreground">/mo</span>
+                            </p>
+                            <p className="text-xs text-muted-foreground mt-1">{planData.description}</p>
+                          </button>
+                        );
+                      })}
                     </div>
-                    {plan === "pro" && (
-                      <span className="bg-primary text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">
-                        Most popular
-                      </span>
-                    )}
                   </div>
 
                   {/* Properties Selector */}
