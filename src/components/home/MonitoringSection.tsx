@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Volume2, Users, Wind, Thermometer, Calculator, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Volume2, Users, Wind, Thermometer, Calculator } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
 
 // Import images
 import monitoringNoise from "@/assets/monitoring-noise.jpg";
@@ -92,118 +92,15 @@ const monitoringDimensions: MonitoringDimension[] = [
   },
 ];
 
-// Savings Calculator Component
-function SavingsCalculator({ onClose }: { onClose: () => void }) {
-  const [units, setUnits] = useState([50]);
-  const [incidentRate, setIncidentRate] = useState([8]); // % of units with incidents per year
-  const [avgDamageCost, setAvgDamageCost] = useState([350]); // € per incident
-
-  const annualIncidents = Math.round((units[0] * incidentRate[0]) / 100);
-  const annualDamageCost = annualIncidents * avgDamageCost[0];
-  const preventionRate = 0.75; // 75% prevention with early detection
-  const annualSavings = Math.round(annualDamageCost * preventionRate);
-
-  return (
-    <div className="bg-card rounded-xl border shadow-soft-lg overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
-      {/* Header */}
-      <div className="p-4 border-b bg-primary/5 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-            <Calculator className="w-4 h-4 text-primary" />
-          </div>
-          <div>
-            <div className="font-semibold text-sm">Smoke Detection Savings</div>
-            <div className="text-[10px] text-muted-foreground">Estimate your annual savings</div>
-          </div>
-        </div>
-        <button
-          onClick={onClose}
-          className="w-7 h-7 rounded-lg bg-secondary/50 hover:bg-secondary flex items-center justify-center transition-colors"
-        >
-          <X className="w-4 h-4 text-muted-foreground" />
-        </button>
-      </div>
-
-      {/* Content */}
-      <div className="p-4 space-y-4">
-        {/* Units slider */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <label className="text-xs font-medium text-muted-foreground">Properties</label>
-            <span className="text-sm font-semibold">{units[0]} units</span>
-          </div>
-          <Slider
-            value={units}
-            onValueChange={setUnits}
-            min={10}
-            max={500}
-            step={10}
-            className="w-full"
-          />
-        </div>
-
-        {/* Incident rate slider */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <label className="text-xs font-medium text-muted-foreground">Incident rate</label>
-            <span className="text-sm font-semibold">{incidentRate[0]}%/year</span>
-          </div>
-          <Slider
-            value={incidentRate}
-            onValueChange={setIncidentRate}
-            min={1}
-            max={20}
-            step={1}
-            className="w-full"
-          />
-        </div>
-
-        {/* Damage cost slider */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <label className="text-xs font-medium text-muted-foreground">Avg. damage cost</label>
-            <span className="text-sm font-semibold">€{avgDamageCost[0]}</span>
-          </div>
-          <Slider
-            value={avgDamageCost}
-            onValueChange={setAvgDamageCost}
-            min={100}
-            max={1000}
-            step={50}
-            className="w-full"
-          />
-        </div>
-
-        {/* Results */}
-        <div className="pt-3 border-t space-y-2">
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-muted-foreground">Est. incidents/year</span>
-            <span className="font-medium">{annualIncidents}</span>
-          </div>
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-muted-foreground">Prevention rate</span>
-            <span className="font-medium text-success">75%</span>
-          </div>
-          <div className="flex items-center justify-between pt-2 border-t">
-            <span className="text-sm font-medium">Annual savings</span>
-            <span className="text-xl font-bold text-primary">€{annualSavings.toLocaleString()}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function MonitoringSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [showCalculator, setShowCalculator] = useState(false);
   const activeDimension = monitoringDimensions[activeIndex];
 
   const handleTabChange = (index: number) => {
     if (index === activeIndex) return;
     setIsTransitioning(true);
-    setShowCalculator(false);
     setTimeout(() => {
       setActiveIndex(index);
       setTimeout(() => setIsTransitioning(false), 50);
@@ -396,22 +293,17 @@ export function MonitoringSection() {
                           <Button
                             variant="outline"
                             size="sm"
-                            onClick={() => setShowCalculator(!showCalculator)}
                             className="w-full text-sm h-9 gap-2"
+                            asChild
                           >
-                            <Calculator className="w-4 h-4" />
-                            {showCalculator ? "Hide Calculator" : "Calculate Savings"}
+                            <Link to="/resources/savings-calculator">
+                              <Calculator className="w-4 h-4" />
+                              Calculate Savings
+                            </Link>
                           </Button>
                         </div>
                       )}
                     </div>
-
-                    {/* Calculator Overlay - Positioned to the right of the card */}
-                    {showCalculator && activeDimension.hasCalculator && (
-                      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 w-full max-w-xs">
-                        <SavingsCalculator onClose={() => setShowCalculator(false)} />
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
