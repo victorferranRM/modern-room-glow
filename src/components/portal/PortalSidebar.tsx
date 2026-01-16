@@ -1,4 +1,4 @@
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
   CreditCard,
@@ -9,7 +9,6 @@ import {
   User,
   LogOut,
   Building2,
-  Menu,
 } from "lucide-react";
 import {
   Sidebar,
@@ -22,11 +21,11 @@ import {
   SidebarMenuItem,
   SidebarHeader,
   SidebarFooter,
-  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { useAuth } from "@/hooks/useAuth";
+import { useSubscription } from "@/hooks/usePortalData";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
 
 const mainNavItems = [
@@ -47,7 +46,10 @@ const accountNavItems = [
 
 export function PortalSidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { state } = useSidebar();
+  const { company, signOut } = useAuth();
+  const { subscription } = useSubscription();
   const isCollapsed = state === "collapsed";
 
   const isActive = (path: string) => {
@@ -55,6 +57,11 @@ export function PortalSidebar() {
       return location.pathname === "/portal";
     }
     return location.pathname.startsWith(path);
+  };
+
+  const handleLogout = async () => {
+    await signOut();
+    navigate("/");
   };
 
   const NavGroup = ({
@@ -114,14 +121,13 @@ export function PortalSidebar() {
       <SidebarFooter className="p-4">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild tooltip="Logout">
-              <Link
-                to="/"
-                className="text-muted-foreground hover:text-destructive"
-              >
-                <LogOut className="h-4 w-4" />
-                <span>Logout</span>
-              </Link>
+            <SidebarMenuButton
+              onClick={handleLogout}
+              tooltip="Logout"
+              className="text-muted-foreground hover:text-destructive"
+            >
+              <LogOut className="h-4 w-4" />
+              <span>Logout</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -130,8 +136,12 @@ export function PortalSidebar() {
             <div className="flex items-center gap-2">
               <Building2 className="h-4 w-4 text-muted-foreground" />
               <div className="text-xs">
-                <p className="font-medium text-foreground">Acme Properties</p>
-                <p className="text-muted-foreground">Pro Plan</p>
+                <p className="font-medium text-foreground">
+                  {company?.name || "My Company"}
+                </p>
+                <p className="text-muted-foreground">
+                  {subscription?.plan_name || "Basic"} Plan
+                </p>
               </div>
             </div>
           </div>

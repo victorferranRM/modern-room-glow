@@ -1,11 +1,34 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
 import { PortalSidebar } from "./PortalSidebar";
 import { Bell, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useAuth } from "@/hooks/useAuth";
 
 export function PortalLayout() {
+  const { profile, user } = useAuth();
+  
+  const getInitials = () => {
+    if (profile?.first_name && profile?.last_name) {
+      return `${profile.first_name[0]}${profile.last_name[0]}`.toUpperCase();
+    }
+    if (user?.email) {
+      return user.email[0].toUpperCase();
+    }
+    return "U";
+  };
+
+  const getDisplayName = () => {
+    if (profile?.first_name && profile?.last_name) {
+      return `${profile.first_name} ${profile.last_name}`;
+    }
+    if (profile?.first_name) {
+      return profile.first_name;
+    }
+    return user?.email || "User";
+  };
+
   return (
     <SidebarProvider defaultOpen={true}>
       <div className="min-h-screen flex w-full bg-background">
@@ -32,10 +55,10 @@ export function PortalLayout() {
               </Button>
               <div className="hidden sm:flex items-center gap-2 pl-2 border-l">
                 <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-sm font-medium text-primary">JD</span>
+                  <span className="text-sm font-medium text-primary">{getInitials()}</span>
                 </div>
                 <div className="text-sm">
-                  <p className="font-medium">John Doe</p>
+                  <p className="font-medium">{getDisplayName()}</p>
                 </div>
               </div>
             </div>
