@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, User, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
 import { MegaMenuServices } from "./navigation/MegaMenuServices";
@@ -9,12 +9,31 @@ import { MegaMenuSolutions } from "./navigation/MegaMenuSolutions";
 import { MegaMenuMonitoring } from "./navigation/MegaMenuMonitoring";
 import { MegaMenuResources } from "./navigation/MegaMenuResources";
 import { MobileMenu } from "./navigation/MobileMenu";
+import { useAuth } from "@/hooks/useAuth";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 type MenuType = "services" | "solutions" | "monitoring" | "resources" | null;
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<MenuType>(null);
+  const { user, profile, signOut, loading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/");
+  };
+
+  const displayName = profile?.first_name 
+    ? `${profile.first_name}${profile.last_name ? ` ${profile.last_name}` : ""}`
+    : user?.email;
 
   const handleMenuEnter = (menu: MenuType) => {
     setActiveMenu(menu);
@@ -89,12 +108,42 @@ export function Header() {
               <ChevronDown className="h-3 w-3" />
             </button>
             
-            <Button variant="ghost" asChild>
-              <Link to="/auth">Customer Portal</Link>
-            </Button>
-            <Button asChild className="shadow-soft">
-              <Link to="/demo">Book a Demo</Link>
-            </Button>
+            {!loading && user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="flex items-center gap-2">
+                    <User className="h-4 w-4" />
+                    <span className="max-w-[150px] truncate">{displayName}</span>
+                    <ChevronDown className="h-3 w-3" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <DropdownMenuItem asChild>
+                    <Link to="/portal" className="flex items-center gap-2 cursor-pointer">
+                      <User className="h-4 w-4" />
+                      Customer Portal
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem 
+                    onClick={handleSignOut}
+                    className="flex items-center gap-2 cursor-pointer text-destructive focus:text-destructive"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Log out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <>
+                <Button variant="ghost" asChild>
+                  <Link to="/auth">Customer Portal</Link>
+                </Button>
+                <Button asChild className="shadow-soft">
+                  <Link to="/demo">Book a Demo</Link>
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
