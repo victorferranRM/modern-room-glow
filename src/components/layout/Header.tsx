@@ -90,7 +90,7 @@ export function Header() {
             </button>
             
             <Button variant="ghost" asChild>
-              <Link to="/login">Log in</Link>
+              <Link to="/auth">Customer Portal</Link>
             </Button>
             <Button asChild className="shadow-soft">
               <Link to="/demo">Book a Demo</Link>
