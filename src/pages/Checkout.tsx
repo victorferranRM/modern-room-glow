@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,12 +9,8 @@ import {
   Shield, 
   Lock,
   Building2,
-  Bell,
-  Smartphone,
-  Mail,
-  PhoneCall,
-  Headphones,
-  Clock
+  Minus,
+  Plus
 } from "lucide-react";
 
 // Plan configuration
@@ -54,13 +51,27 @@ export default function Checkout() {
   const propertiesParam = searchParams.get("properties");
   
   const plan = planParam && PLANS[planParam] ? planParam : "basic";
-  const properties = propertiesParam ? Math.min(Math.max(parseInt(propertiesParam) || 1, 1), 10) : 1;
+  const initialProperties = propertiesParam ? Math.min(Math.max(parseInt(propertiesParam) || 1, 1), 10) : 1;
+  
+  const [properties, setProperties] = useState(initialProperties);
   
   const selectedPlan = PLANS[plan];
   const deviceTotal = selectedPlan.devicePrice * properties;
   const originalDeviceTotal = selectedPlan.originalDevicePrice * properties;
   const monthlyTotal = selectedPlan.monthlyPrice * properties;
   const savings = originalDeviceTotal - deviceTotal;
+
+  const incrementProperties = () => {
+    if (properties < 10) {
+      setProperties(properties + 1);
+    }
+  };
+
+  const decrementProperties = () => {
+    if (properties > 1) {
+      setProperties(properties - 1);
+    }
+  };
 
   const handleCheckout = () => {
     // TODO: Integrate with Stripe or Shopify
@@ -111,12 +122,33 @@ export default function Checkout() {
                     )}
                   </div>
 
-                  {/* Properties */}
-                  <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl mb-6">
-                    <Building2 className="w-5 h-5 text-primary" />
-                    <div>
-                      <p className="font-medium text-foreground">{properties} {properties === 1 ? "Property" : "Properties"}</p>
-                      <p className="text-sm text-muted-foreground">{properties} monitoring {properties === 1 ? "device" : "devices"} included</p>
+                  {/* Properties Selector */}
+                  <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl mb-6">
+                    <div className="flex items-center gap-3">
+                      <Building2 className="w-5 h-5 text-primary" />
+                      <div>
+                        <p className="font-medium text-foreground">Properties</p>
+                        <p className="text-sm text-muted-foreground">{properties} monitoring {properties === 1 ? "device" : "devices"} included</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={decrementProperties}
+                        disabled={properties <= 1}
+                        className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-background hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                        aria-label="Decrease properties"
+                      >
+                        <Minus className="w-4 h-4 text-foreground" />
+                      </button>
+                      <span className="w-8 text-center font-semibold text-lg text-foreground">{properties}</span>
+                      <button
+                        onClick={incrementProperties}
+                        disabled={properties >= 10}
+                        className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-background hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                        aria-label="Increase properties"
+                      >
+                        <Plus className="w-4 h-4 text-foreground" />
+                      </button>
                     </div>
                   </div>
 
