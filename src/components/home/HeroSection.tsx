@@ -16,7 +16,7 @@ export function HeroSection() {
         <div className="max-w-5xl mx-auto text-center space-y-12">
           {/* Eyebrow badge */}
           <div className="animate-fade-in flex justify-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-float">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-float shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_25px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
               <BadgeCheck className="w-4 h-4" />
               <span>Trusted by 5,000+ hospitality operators</span>
             </div>
