@@ -4,9 +4,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
+import { ComparisonTable } from "@/components/pricing/ComparisonTable";
 import { 
   Check, 
-  X,
   ArrowRight, 
   MessageSquare, 
   Building2, 
@@ -20,12 +20,7 @@ import {
   Smartphone,
   Mail,
   PhoneCall,
-  Home,
-  Gauge,
-  Thermometer,
-  Volume2,
-  Wind,
-  Flame
+  Home
 } from "lucide-react";
 
 export default function Pricing() {
@@ -306,223 +301,7 @@ export default function Pricing() {
         </section>
 
         {/* Comparison Table */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Compare plans in detail
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                See exactly what's included in each plan to make the right choice for your property management needs.
-              </p>
-            </div>
-
-            <div className="bg-card border rounded-2xl shadow-soft overflow-hidden">
-              {/* Table Header */}
-              <div className="grid grid-cols-4 bg-muted/50 border-b">
-                <div className="p-4 lg:p-6">
-                  <span className="text-sm font-medium text-muted-foreground">Features</span>
-                </div>
-                <div className="p-4 lg:p-6 text-center border-l border-border">
-                  <span className="font-semibold text-foreground">Basic</span>
-                  <p className="text-sm text-muted-foreground mt-1">€13/mo</p>
-                </div>
-                <div className="p-4 lg:p-6 text-center border-l border-border bg-primary/5">
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="font-semibold text-foreground">Pro</span>
-                    <span className="bg-primary text-primary-foreground text-[10px] font-medium px-2 py-0.5 rounded-full">
-                      Popular
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">€29.90/mo</p>
-                </div>
-                <div className="p-4 lg:p-6 text-center border-l border-border">
-                  <span className="font-semibold text-foreground">Enterprise</span>
-                  <p className="text-sm text-muted-foreground mt-1">From €79.90</p>
-                </div>
-              </div>
-
-              {/* Monitoring Section */}
-              <div className="border-b border-border">
-                <div className="grid grid-cols-4 bg-muted/30">
-                  <div className="col-span-4 p-4 lg:px-6">
-                    <div className="flex items-center gap-2">
-                      <Gauge className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-semibold text-foreground">Monitoring & Hardware</span>
-                    </div>
-                  </div>
-                </div>
-                {[
-                  { feature: "Roomonitor monitoring device", basic: true, pro: true, enterprise: true },
-                  { feature: "Noise level monitoring", basic: true, pro: true, enterprise: true, icon: Volume2 },
-                  { feature: "Occupancy detection", basic: true, pro: true, enterprise: true, icon: Users },
-                  { feature: "Temperature & humidity", basic: true, pro: true, enterprise: true, icon: Thermometer },
-                  { feature: "Air quality (CO₂, VOC)", basic: true, pro: true, enterprise: true, icon: Wind },
-                  { feature: "Smoke detection", basic: true, pro: true, enterprise: true, icon: Flame },
-                ].map((row, idx) => (
-                  <div key={idx} className="grid grid-cols-4 border-t border-border/50 hover:bg-muted/20 transition-colors">
-                    <div className="p-4 lg:px-6 flex items-center gap-2">
-                      {row.icon && <row.icon className="w-4 h-4 text-muted-foreground shrink-0" />}
-                      <span className="text-sm text-foreground">{row.feature}</span>
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {row.basic ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50 bg-primary/5">
-                      {row.pro ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {row.enterprise ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Alerts & Notifications Section */}
-              <div className="border-b border-border">
-                <div className="grid grid-cols-4 bg-muted/30">
-                  <div className="col-span-4 p-4 lg:px-6">
-                    <div className="flex items-center gap-2">
-                      <Bell className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-semibold text-foreground">Alerts & Notifications</span>
-                    </div>
-                  </div>
-                </div>
-                {[
-                  { feature: "Real-time alerts", basic: true, pro: true, enterprise: true },
-                  { feature: "Email notifications", basic: true, pro: true, enterprise: true },
-                  { feature: "Push notifications (mobile)", basic: true, pro: true, enterprise: true },
-                  { feature: "SMS alerts", basic: false, pro: true, enterprise: true },
-                  { feature: "Custom alert thresholds", basic: false, pro: true, enterprise: true },
-                ].map((row, idx) => (
-                  <div key={idx} className="grid grid-cols-4 border-t border-border/50 hover:bg-muted/20 transition-colors">
-                    <div className="p-4 lg:px-6">
-                      <span className="text-sm text-foreground">{row.feature}</span>
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {row.basic ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50 bg-primary/5">
-                      {row.pro ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {row.enterprise ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Platform & Access Section */}
-              <div className="border-b border-border">
-                <div className="grid grid-cols-4 bg-muted/30">
-                  <div className="col-span-4 p-4 lg:px-6">
-                    <div className="flex items-center gap-2">
-                      <Smartphone className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-semibold text-foreground">Platform & Access</span>
-                    </div>
-                  </div>
-                </div>
-                {[
-                  { feature: "Web dashboard", basic: true, pro: true, enterprise: true },
-                  { feature: "Mobile app (iOS & Android)", basic: true, pro: true, enterprise: true },
-                  { feature: "Historical data & reports", basic: "30 days", pro: "1 year", enterprise: "Unlimited" },
-                  { feature: "API access", basic: false, pro: false, enterprise: true },
-                  { feature: "Multi-user accounts", basic: false, pro: true, enterprise: true },
-                ].map((row, idx) => (
-                  <div key={idx} className="grid grid-cols-4 border-t border-border/50 hover:bg-muted/20 transition-colors">
-                    <div className="p-4 lg:px-6">
-                      <span className="text-sm text-foreground">{row.feature}</span>
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {typeof row.basic === "string" ? (
-                        <span className="text-sm text-muted-foreground">{row.basic}</span>
-                      ) : row.basic ? (
-                        <Check className="w-5 h-5 text-green-500" />
-                      ) : (
-                        <X className="w-5 h-5 text-muted-foreground/40" />
-                      )}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50 bg-primary/5">
-                      {typeof row.pro === "string" ? (
-                        <span className="text-sm font-medium text-foreground">{row.pro}</span>
-                      ) : row.pro ? (
-                        <Check className="w-5 h-5 text-green-500" />
-                      ) : (
-                        <X className="w-5 h-5 text-muted-foreground/40" />
-                      )}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {typeof row.enterprise === "string" ? (
-                        <span className="text-sm text-muted-foreground">{row.enterprise}</span>
-                      ) : row.enterprise ? (
-                        <Check className="w-5 h-5 text-green-500" />
-                      ) : (
-                        <X className="w-5 h-5 text-muted-foreground/40" />
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Support & Services Section */}
-              <div className="border-b border-border">
-                <div className="grid grid-cols-4 bg-muted/30">
-                  <div className="col-span-4 p-4 lg:px-6">
-                    <div className="flex items-center gap-2">
-                      <Headphones className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-semibold text-foreground">Support & Services</span>
-                    </div>
-                  </div>
-                </div>
-                {[
-                  { feature: "Email support", basic: true, pro: true, enterprise: true },
-                  { feature: "Priority support", basic: false, pro: true, enterprise: true },
-                  { feature: "Alarm Assistant (24/7)", basic: false, pro: true, enterprise: true },
-                  { feature: "Human alarm monitoring", basic: false, pro: true, enterprise: true },
-                  { feature: "Guest Assist™", basic: false, pro: false, enterprise: true },
-                  { feature: "Field Service (on-site)", basic: false, pro: false, enterprise: true },
-                  { feature: "Dedicated account manager", basic: false, pro: false, enterprise: true },
-                  { feature: "Custom SLA", basic: false, pro: false, enterprise: true },
-                ].map((row, idx) => (
-                  <div key={idx} className="grid grid-cols-4 border-t border-border/50 hover:bg-muted/20 transition-colors">
-                    <div className="p-4 lg:px-6">
-                      <span className="text-sm text-foreground">{row.feature}</span>
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {row.basic ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50 bg-primary/5">
-                      {row.pro ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                    <div className="p-4 lg:px-6 flex items-center justify-center border-l border-border/50">
-                      {row.enterprise ? <Check className="w-5 h-5 text-green-500" /> : <X className="w-5 h-5 text-muted-foreground/40" />}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA Row */}
-              <div className="grid grid-cols-4">
-                <div className="p-4 lg:p-6"></div>
-                <div className="p-4 lg:p-6 flex items-center justify-center border-l border-border">
-                  <Button size="sm" variant="outline" asChild>
-                    <Link to={`/checkout?plan=basic&properties=${properties}`}>Get Basic</Link>
-                  </Button>
-                </div>
-                <div className="p-4 lg:p-6 flex items-center justify-center border-l border-border bg-primary/5">
-                  <Button size="sm" asChild>
-                    <Link to={`/checkout?plan=pro&properties=${properties}`}>Get Pro</Link>
-                  </Button>
-                </div>
-                <div className="p-4 lg:p-6 flex items-center justify-center border-l border-border">
-                  <Button size="sm" variant="outline" asChild>
-                    <Link to="/contact?inquiry=enterprise">Contact</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ComparisonTable properties={properties} />
 
         {/* Services Explainer */}
         <section className="bg-secondary/50 py-16 lg:py-24">
