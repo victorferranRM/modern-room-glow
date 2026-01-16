@@ -151,7 +151,7 @@ export default function Profile() {
             </div>
             <div>
               <p className="font-semibold">{formData.firstName} {formData.lastName}</p>
-              <p className="text-sm text-muted-foreground">{userData.role}</p>
+              <p className="text-sm text-muted-foreground">Property Manager</p>
             </div>
           </div>
 
@@ -353,12 +353,7 @@ export default function Profile() {
           {/* Account Info */}
           <div className="p-4 rounded-lg bg-muted/50">
             <p className="text-sm text-muted-foreground">
-              Account created on{" "}
-              {new Date(userData.createdAt).toLocaleDateString("en-GB", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
+              Account email: {user?.email || "Not available"}
             </p>
           </div>
         </CardContent>
