@@ -106,11 +106,35 @@ export default function Profile() {
       });
       return;
     }
+
+    if (passwordData.newPassword.length < 6) {
+      toast({
+        title: "Password too short",
+        description: "Password must be at least 6 characters.",
+        variant: "destructive",
+      });
+      return;
+    }
     
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setIsSaving(true);
+    
+    const { error } = await supabase.auth.updateUser({
+      password: passwordData.newPassword,
+    });
+
+    if (error) {
+      toast({
+        title: "Error changing password",
+        description: error.message,
+        variant: "destructive",
+      });
+      setIsSaving(false);
+      return;
+    }
+
     setPasswordDialogOpen(false);
     setPasswordData({ currentPassword: "", newPassword: "", confirmPassword: "" });
+    setIsSaving(false);
     toast({
       title: "Password changed",
       description: "Your password has been updated successfully.",
