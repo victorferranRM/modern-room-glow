@@ -350,20 +350,43 @@ export default function Pricing() {
                 ))}
               </div>
 
-              <div className="mt-12 p-6 bg-card border rounded-xl text-center">
-                <p className="text-foreground mb-2">
-                  <span className="font-semibold">Roomonitor = Technology + People</span>
-                </p>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Service pricing is customized based on your portfolio size and operational needs. 
-                  Small portfolios can self-purchase Basic or Pro plans. For full operational coverage, talk to our team.
-                </p>
-                <Button variant="outline" asChild>
-                  <Link to="/contact?inquiry=services">
-                    Talk to a specialist
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
+              <div className="mt-12 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl" />
+                <div className="relative bg-card/80 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 lg:p-10">
+                  <div className="flex flex-col lg:flex-row items-center gap-8">
+                    {/* Left side - Brand statement */}
+                    <div className="flex-1 text-center lg:text-left">
+                      <div className="inline-flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Zap className="w-5 h-5 text-primary" />
+                        </div>
+                        <span className="text-xs font-medium uppercase tracking-wider text-primary">Our Approach</span>
+                      </div>
+                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
+                        Roomonitor = <span className="gradient-text">Technology + People</span>
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        We combine smart monitoring devices with real human operators who take action on your behalf. 
+                        It's not just alerts — it's resolution.
+                      </p>
+                    </div>
+                    
+                    {/* Right side - CTA */}
+                    <div className="flex-shrink-0 w-full lg:w-auto">
+                      <div className="bg-card border rounded-xl p-6 text-center shadow-soft">
+                        <p className="text-sm text-muted-foreground mb-4">
+                          Service pricing based on portfolio size
+                        </p>
+                        <Button size="lg" className="w-full lg:w-auto" asChild>
+                          <Link to="/contact?inquiry=services">
+                            Talk to a specialist
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
