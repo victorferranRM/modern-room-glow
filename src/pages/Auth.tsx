@@ -14,6 +14,9 @@ import { z } from "zod";
 const emailSchema = z.string().email("Please enter a valid email address");
 const passwordSchema = z.string().min(6, "Password must be at least 6 characters");
 
+const DEMO_EMAIL = "demo@roomonitor.com";
+const DEMO_PASSWORD = "demo1234";
+
 export default function Auth() {
   const navigate = useNavigate();
   const { user, signIn, signUp, loading: authLoading } = useAuth();
@@ -21,6 +24,7 @@ export default function Auth() {
   const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isDemoLoading, setIsDemoLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   
@@ -35,6 +39,43 @@ export default function Auth() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
+
+  const handleDemoLogin = async () => {
+    setError(null);
+    setIsDemoLoading(true);
+
+    // Try to sign in first
+    const { error: signInError } = await signIn(DEMO_EMAIL, DEMO_PASSWORD);
+    
+    if (signInError) {
+      // If login fails, try to create the demo account
+      const { error: signUpError } = await signUp(DEMO_EMAIL, DEMO_PASSWORD, {
+        first_name: "Demo",
+        last_name: "User",
+        company_name: "Demo Properties Inc.",
+      });
+
+      if (signUpError) {
+        // Account might already exist but with different password, or other error
+        setError("Demo account unavailable. Please create a new account to explore the portal.");
+        setIsDemoLoading(false);
+        return;
+      }
+
+      // Now try to sign in again
+      const { error: retryError } = await signIn(DEMO_EMAIL, DEMO_PASSWORD);
+      if (retryError) {
+        setError("Demo account created! Please click 'Sign In' to log in.");
+        setLoginEmail(DEMO_EMAIL);
+        setLoginPassword(DEMO_PASSWORD);
+        setIsDemoLoading(false);
+        return;
+      }
+    }
+
+    setIsDemoLoading(false);
+    navigate("/portal");
+  };
 
   // Redirect if already logged in
   useEffect(() => {
@@ -224,6 +265,35 @@ export default function Auth() {
                         "Sign In"
                       )}
                     </Button>
+
+                    {/* Demo Login */}
+                    <div className="relative my-4">
+                      <div className="absolute inset-0 flex items-center">
+                        <span className="w-full border-t" />
+                      </div>
+                      <div className="relative flex justify-center text-xs uppercase">
+                        <span className="bg-card px-2 text-muted-foreground">Or</span>
+                      </div>
+                    </div>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="w-full"
+                      disabled={isDemoLoading}
+                      onClick={handleDemoLogin}
+                    >
+                      {isDemoLoading ? (
+                        <>
+                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                          Loading demo...
+                        </>
+                      ) : (
+                        "Try Demo Account"
+                      )}
+                    </Button>
+                    <p className="text-xs text-center text-muted-foreground">
+                      Explore the portal with sample data
+                    </p>
                   </form>
                 </TabsContent>
 
