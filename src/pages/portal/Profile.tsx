@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,6 @@ import {
   Save,
   LogOut,
   Shield,
-  AlertTriangle,
 } from "lucide-react";
 import {
   Dialog,
@@ -38,29 +37,33 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
-
-// Mock user data
-const userData = {
-  firstName: "John",
-  lastName: "Doe",
-  email: "john.doe@acmeproperties.com",
-  phone: "+34 612 345 678",
-  company: "Acme Properties Ltd.",
-  role: "Property Manager",
-  createdAt: "2025-06-15",
-};
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function Profile() {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { profile, company, user, signOut } = useAuth();
   
   const [formData, setFormData] = useState({
-    firstName: userData.firstName,
-    lastName: userData.lastName,
-    email: userData.email,
-    phone: userData.phone,
-    company: userData.company,
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
   });
+
+  useEffect(() => {
+    if (profile) {
+      setFormData({
+        firstName: profile.first_name || "",
+        lastName: profile.last_name || "",
+        email: profile.email || user?.email || "",
+        phone: profile.phone || "",
+        company: company?.name || "",
+      });
+    }
+  }, [profile, company, user]);
   
   const [passwordData, setPasswordData] = useState({
     currentPassword: "",

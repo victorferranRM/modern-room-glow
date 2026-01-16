@@ -2,39 +2,76 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Building2,
   Cpu,
   CreditCard,
-  Calendar,
   ShoppingCart,
   ArrowUpRight,
   Headphones,
   TrendingUp,
   AlertCircle,
-  CheckCircle2,
 } from "lucide-react";
-
-// Mock data - will be connected to backend later
-const dashboardData = {
-  company: "Acme Properties Ltd.",
-  plan: "Pro",
-  planStatus: "active",
-  properties: 8,
-  maxProperties: 10,
-  totalDevices: 24,
-  activeDevices: 22,
-  offlineDevices: 2,
-  nextBillingDate: "February 15, 2026",
-  monthlyAmount: "€239.20",
-};
+import { useAuth } from "@/hooks/useAuth";
+import { useDashboardStats } from "@/hooks/usePortalData";
 
 export default function Dashboard() {
+  const { profile, company } = useAuth();
+  const { stats, loading } = useDashboardStats();
+
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat("en-EU", {
+      style: "currency",
+      currency: "EUR",
+    }).format(amount);
+  };
+
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return "N/A";
+    return new Date(dateString).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
+
+  const getWelcomeMessage = () => {
+    if (profile?.first_name) {
+      return `Welcome back, ${profile.first_name}!`;
+    }
+    return "Welcome back!";
+  };
+
+  if (loading) {
+    return (
+      <div className="space-y-6">
+        <div>
+          <Skeleton className="h-8 w-48 mb-2" />
+          <Skeleton className="h-4 w-72" />
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {[1, 2, 3, 4].map((i) => (
+            <Card key={i}>
+              <CardHeader className="pb-2">
+                <Skeleton className="h-4 w-24" />
+              </CardHeader>
+              <CardContent>
+                <Skeleton className="h-8 w-16 mb-1" />
+                <Skeleton className="h-3 w-32" />
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       {/* Page Header */}
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Welcome back!</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">{getWelcomeMessage()}</h1>
         <p className="text-muted-foreground">
           Here's an overview of your Roomonitor account.
         </p>
@@ -51,13 +88,15 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold">{dashboardData.plan}</span>
+              <span className="text-2xl font-bold">
+                {stats.subscription?.plan_name || "Basic"}
+              </span>
               <Badge variant="secondary" className="bg-success/10 text-success">
-                Active
+                {stats.subscription?.status === "active" ? "Active" : "Inactive"}
               </Badge>
             </div>
             <p className="text-xs text-muted-foreground mt-1">
-              Next billing: {dashboardData.nextBillingDate}
+              Next billing: {formatDate(stats.subscription?.next_billing_date || null)}
             </p>
           </CardContent>
         </Card>
@@ -71,13 +110,10 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold">{dashboardData.properties}</span>
-              <span className="text-sm text-muted-foreground">
-                / {dashboardData.maxProperties}
-              </span>
+              <span className="text-2xl font-bold">{stats.propertiesCount}</span>
             </div>
             <p className="text-xs text-muted-foreground mt-1">
-              {dashboardData.maxProperties - dashboardData.properties} slots available
+              Active properties
             </p>
           </CardContent>
         </Card>
@@ -91,15 +127,25 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold">{dashboardData.activeDevices}</span>
+              <span className="text-2xl font-bold">{stats.activeDevices}</span>
               <span className="text-sm text-muted-foreground">
-                / {dashboardData.totalDevices}
+                / {stats.totalDevices}
               </span>
             </div>
-            {dashboardData.offlineDevices > 0 && (
+            {stats.offlineDevices > 0 && (
               <p className="text-xs text-warning mt-1 flex items-center gap-1">
                 <AlertCircle className="h-3 w-3" />
-                {dashboardData.offlineDevices} device(s) offline
+                {stats.offlineDevices} device(s) offline
+              </p>
+            )}
+            {stats.offlineDevices === 0 && stats.totalDevices > 0 && (
+              <p className="text-xs text-muted-foreground mt-1">
+                All devices online
+              </p>
+            )}
+            {stats.totalDevices === 0 && (
+              <p className="text-xs text-muted-foreground mt-1">
+                No devices yet
               </p>
             )}
           </CardContent>
@@ -113,9 +159,11 @@ export default function Dashboard() {
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{dashboardData.monthlyAmount}</div>
+            <div className="text-2xl font-bold">
+              {formatCurrency(stats.subscription?.monthly_cost || 0)}
+            </div>
             <p className="text-xs text-muted-foreground mt-1">
-              Billed monthly
+              Billed {stats.subscription?.billing_frequency || "monthly"}
             </p>
           </CardContent>
         </Card>
@@ -188,21 +236,21 @@ export default function Dashboard() {
                 <div className="h-2 w-2 rounded-full bg-success" />
                 <span className="text-sm font-medium">Online & Healthy</span>
               </div>
-              <span className="text-sm font-semibold">{dashboardData.activeDevices}</span>
+              <span className="text-sm font-semibold">{stats.activeDevices}</span>
             </div>
             <div className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
               <div className="flex items-center gap-3">
                 <div className="h-2 w-2 rounded-full bg-warning" />
                 <span className="text-sm font-medium">Needs Attention</span>
               </div>
-              <span className="text-sm font-semibold">0</span>
+              <span className="text-sm font-semibold">{stats.attentionDevices}</span>
             </div>
             <div className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
               <div className="flex items-center gap-3">
                 <div className="h-2 w-2 rounded-full bg-destructive" />
                 <span className="text-sm font-medium">Offline</span>
               </div>
-              <span className="text-sm font-semibold">{dashboardData.offlineDevices}</span>
+              <span className="text-sm font-semibold">{stats.offlineDevices}</span>
             </div>
             <Button variant="outline" className="w-full mt-2" asChild>
               <Link to="/portal/devices">View All Devices</Link>
@@ -218,19 +266,23 @@ export default function Dashboard() {
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Company</span>
-              <span className="text-sm font-medium">{dashboardData.company}</span>
+              <span className="text-sm font-medium">{company?.name || "My Company"}</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Current Plan</span>
-              <Badge>{dashboardData.plan}</Badge>
+              <Badge>{stats.subscription?.plan_name || "Basic"}</Badge>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Next Invoice</span>
-              <span className="text-sm font-medium">{dashboardData.nextBillingDate}</span>
+              <span className="text-sm font-medium">
+                {formatDate(stats.subscription?.next_billing_date || null)}
+              </span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Monthly Amount</span>
-              <span className="text-sm font-medium">{dashboardData.monthlyAmount}</span>
+              <span className="text-sm font-medium">
+                {formatCurrency(stats.subscription?.monthly_cost || 0)}
+              </span>
             </div>
             <Button variant="outline" className="w-full mt-2" asChild>
               <Link to="/portal/subscription">Manage Subscription</Link>
