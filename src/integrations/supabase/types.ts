@@ -47,6 +47,51 @@ export type Database = {
         }
         Relationships: []
       }
+      contact_inquiries: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          inquiry_type: string
+          last_name: string
+          message: string | null
+          phone: string | null
+          property_size: string | null
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          inquiry_type: string
+          last_name: string
+          message?: string | null
+          phone?: string | null
+          property_size?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          inquiry_type?: string
+          last_name?: string
+          message?: string | null
+          phone?: string | null
+          property_size?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       devices: {
         Row: {
           company_id: string
