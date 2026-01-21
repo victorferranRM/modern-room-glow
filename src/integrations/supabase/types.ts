@@ -50,6 +50,7 @@ export type Database = {
       contact_inquiries: {
         Row: {
           company: string
+          country: string | null
           created_at: string
           email: string
           first_name: string
@@ -64,6 +65,7 @@ export type Database = {
         }
         Insert: {
           company: string
+          country?: string | null
           created_at?: string
           email: string
           first_name: string
@@ -78,6 +80,7 @@ export type Database = {
         }
         Update: {
           company?: string
+          country?: string | null
           created_at?: string
           email?: string
           first_name?: string

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Globe, User, LogOut } from "lucide-react";
+import { Menu, X, ChevronDown, User, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
 import { MegaMenuServices } from "./navigation/MegaMenuServices";
@@ -9,6 +9,7 @@ import { MegaMenuSolutions } from "./navigation/MegaMenuSolutions";
 import { MegaMenuMonitoring } from "./navigation/MegaMenuMonitoring";
 import { MegaMenuResources } from "./navigation/MegaMenuResources";
 import { MobileMenu } from "./navigation/MobileMenu";
+import { LanguageSelector } from "./LanguageSelector";
 import { useAuth } from "@/hooks/useAuth";
 import {
   DropdownMenu,
@@ -100,13 +101,7 @@ export function Header() {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             {/* Language Selector */}
-            <button
-              className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-              aria-label="Select language"
-            >
-              <Globe className="h-4 w-4" />
-              <ChevronDown className="h-3 w-3" />
-            </button>
+            <LanguageSelector />
             
             {!loading && user ? (
               <DropdownMenu>
