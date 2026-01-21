@@ -9,13 +9,14 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
+  CommandSeparator,
 } from "@/components/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { countries, Country } from "@/lib/countries";
+import { getSortedCountries, Country } from "@/lib/countries";
 
 interface CountrySelectProps {
   value?: string;
@@ -31,8 +32,31 @@ export function CountrySelect({
   disabled = false,
 }: CountrySelectProps) {
   const [open, setOpen] = React.useState(false);
+  const { priority, others } = getSortedCountries();
+  const allCountries = [...priority, ...others];
 
-  const selectedCountry = countries.find((country) => country.code === value);
+  const selectedCountry = allCountries.find((country) => country.code === value);
+
+  const renderCountryItem = (country: Country) => (
+    <CommandItem
+      key={country.code}
+      value={country.name}
+      onSelect={() => {
+        onValueChange?.(country.code);
+        setOpen(false);
+      }}
+      className="flex items-center gap-2 cursor-pointer"
+    >
+      <span className="text-lg leading-none">{country.flag}</span>
+      <span className="flex-1 truncate">{country.name}</span>
+      <Check
+        className={cn(
+          "h-4 w-4",
+          value === country.code ? "opacity-100" : "opacity-0"
+        )}
+      />
+    </CommandItem>
+  );
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -60,27 +84,15 @@ export function CountrySelect({
           <CommandInput placeholder="Search country..." />
           <CommandList>
             <CommandEmpty>No country found.</CommandEmpty>
-            <CommandGroup className="max-h-64 overflow-auto">
-              {countries.map((country) => (
-                <CommandItem
-                  key={country.code}
-                  value={country.name}
-                  onSelect={() => {
-                    onValueChange?.(country.code);
-                    setOpen(false);
-                  }}
-                  className="flex items-center gap-2 cursor-pointer"
-                >
-                  <span className="text-lg leading-none">{country.flag}</span>
-                  <span className="flex-1 truncate">{country.name}</span>
-                  <Check
-                    className={cn(
-                      "h-4 w-4",
-                      value === country.code ? "opacity-100" : "opacity-0"
-                    )}
-                  />
-                </CommandItem>
-              ))}
+            {/* Priority countries */}
+            <CommandGroup>
+              {priority.map(renderCountryItem)}
+            </CommandGroup>
+            {/* Separator */}
+            <CommandSeparator />
+            {/* All other countries */}
+            <CommandGroup className="max-h-48 overflow-auto">
+              {others.map(renderCountryItem)}
             </CommandGroup>
           </CommandList>
         </Command>

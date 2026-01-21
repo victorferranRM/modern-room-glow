@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { Language, languages, getLanguageByCode } from "@/lib/languages";
+import { Language, languages, getLanguageByCode, defaultLanguageCode } from "@/lib/languages";
 
 interface LanguageContextType {
   currentLanguage: Language;
@@ -10,7 +10,9 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(languages[0]);
+  // Default to English
+  const defaultLanguage = getLanguageByCode(defaultLanguageCode) || languages[0];
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLanguage);
 
   useEffect(() => {
     // Try to get saved language from localStorage
@@ -20,14 +22,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (lang) {
         setCurrentLanguage(lang);
       }
-    } else {
-      // Try to detect browser language
-      const browserLang = navigator.language.split("-")[0];
-      const matchedLang = getLanguageByCode(browserLang);
-      if (matchedLang) {
-        setCurrentLanguage(matchedLang);
-      }
     }
+    // Don't auto-detect browser language - default to English since it's the only published version
   }, []);
 
   const setLanguage = (code: string) => {
