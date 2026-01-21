@@ -2,19 +2,23 @@ import { Link } from "react-router-dom";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
 
 const footerLinks = {
-  services: [
-    { name: "Noise Monitoring", href: "/services/noise-monitoring" },
-    { name: "24/7 Emergency Support", href: "/services/emergency-support" },
-    { name: "Guest Phone Support", href: "/services/guest-support" },
-    { name: "Check-in & Access", href: "/services/check-in" },
-    { name: "Party Prevention", href: "/services/party-prevention" },
+  solutions: [
+    { name: "Noise Monitoring", href: "/monitoring/noise" },
+    { name: "Occupancy Tracking", href: "/monitoring/occupancy" },
+    { name: "Air Quality", href: "/monitoring/air-quality" },
+    { name: "24/7 Support Services", href: "/services/support" },
+    { name: "Guest Management", href: "/services/guest-management" },
   ],
   company: [
-    { name: "About Us", href: "/about" },
+    { name: "How It Works", href: "/how-it-works" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Resources", href: "/resources" },
-    { name: "Contact", href: "/contact" },
-    { name: "Careers", href: "/careers" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Savings Calculator", href: "/savings-calculator" },
+  ],
+  resources: [
+    { name: "Help Center", href: "/help" },
+    { name: "Customer Portal", href: "/portal/dashboard" },
+    { name: "API Documentation", href: "/docs/api" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -66,11 +70,11 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Solutions */}
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
+            <h3 className="font-semibold mb-4">Solutions</h3>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
@@ -100,10 +104,23 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal & Contact */}
+          {/* Resources */}
           <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
+            <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-3 mb-8">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="font-semibold mb-4">Legal</h3>
+            <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -115,13 +132,6 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <a
-              href="mailto:info@roomonitor.com"
-              className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all"
-            >
-              info@roomonitor.com
-            </a>
           </div>
         </div>
 
