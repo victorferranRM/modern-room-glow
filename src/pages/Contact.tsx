@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,7 @@ import {
   Headphones
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const inquiryTypes = [
   { value: "demo", label: "Book a Demo" },
@@ -54,6 +55,7 @@ const benefits = [
 
 export default function Contact() {
   const { toast } = useToast();
+  const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -66,39 +68,73 @@ export default function Contact() {
     message: "",
   });
 
-  // Get inquiry type from URL params
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialInquiry = urlParams.get("inquiry") || "";
-
-  useState(() => {
+  // Get inquiry type from URL params on mount
+  useEffect(() => {
+    const initialInquiry = searchParams.get("inquiry") || "";
     if (initialInquiry && inquiryTypes.some(t => t.value === initialInquiry)) {
       setFormData(prev => ({ ...prev, inquiryType: initialInquiry }));
     }
-  });
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // Save to database
+      const { error: dbError } = await supabase
+        .from("contact_inquiries")
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone || null,
+          company: formData.company,
+          property_size: formData.propertySize || null,
+          inquiry_type: formData.inquiryType,
+          message: formData.message || null,
+        });
 
-    toast({
-      title: "Message sent successfully!",
-      description: "Our team will get back to you within 24 hours.",
-    });
+      if (dbError) throw dbError;
 
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      company: "",
-      propertySize: "",
-      inquiryType: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      // Send email notifications
+      const { error: emailError } = await supabase.functions.invoke(
+        "send-contact-notification",
+        {
+          body: formData,
+        }
+      );
+
+      if (emailError) {
+        console.error("Email notification failed:", emailError);
+        // Don't throw - form was still saved successfully
+      }
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Our team will get back to you within 24 hours.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        propertySize: "",
+        inquiryType: "",
+        message: "",
+      });
+    } catch (error: any) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly at info@roomonitor.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -226,7 +262,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <Label htmlFor="inquiryType">What can we help you with? *</Label>
                       <Select
-                        value={formData.inquiryType || initialInquiry}
+                        value={formData.inquiryType}
                         onValueChange={(value) => handleChange("inquiryType", value)}
                         required
                       >

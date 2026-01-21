@@ -11,6 +11,7 @@ import Checkout from "./pages/Checkout";
 import Auth from "./pages/Auth";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Contact from "./pages/Contact";
+import HowItWorks from "./pages/HowItWorks";
 import NotFound from "./pages/NotFound";
 
 // Portal Pages
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/resources/savings-calculator" element={<SavingsCalculator />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/login" element={<Auth />} />
             
