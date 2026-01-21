@@ -13,6 +13,8 @@ import Auth from "./pages/Auth";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Contact from "./pages/Contact";
 import HowItWorks from "./pages/HowItWorks";
+import CaseStudies from "./pages/CaseStudies";
+import Integrations from "./pages/Integrations";
 import NotFound from "./pages/NotFound";
 
 // Portal Pages
@@ -42,6 +44,8 @@ const App = () => (
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/resources/savings-calculator" element={<SavingsCalculator />} />
+              <Route path="/resources/case-studies" element={<CaseStudies />} />
+              <Route path="/resources/integrations" element={<Integrations />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/auth" element={<Auth />} />
