@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +16,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { 
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { CountrySelect } from "@/components/ui/country-select";
 import { 
   ArrowRight, 
   Building2, 
@@ -32,10 +44,9 @@ import { supabase } from "@/integrations/supabase/client";
 const inquiryTypes = [
   { value: "demo", label: "Book a Demo" },
   { value: "sales", label: "Sales Inquiry" },
-  { value: "enterprise", label: "Enterprise Solutions" },
-  { value: "services", label: "Services Information" },
-  { value: "support", label: "Customer Support" },
-  { value: "partnership", label: "Partnership Opportunity" },
+  { value: "enterprise", label: "Enterprise" },
+  { value: "support", label: "Support" },
+  { value: "partnership", label: "Partnership" },
   { value: "other", label: "Other" },
 ];
 
@@ -53,31 +64,77 @@ const benefits = [
   "Expert guidance from our team",
 ];
 
+// Zod validation schema
+const contactFormSchema = z.object({
+  firstName: z
+    .string()
+    .min(1, "First name is required")
+    .max(50, "First name must be less than 50 characters")
+    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "First name contains invalid characters"),
+  lastName: z
+    .string()
+    .min(1, "Last name is required")
+    .max(50, "Last name must be less than 50 characters")
+    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "Last name contains invalid characters"),
+  email: z
+    .string()
+    .min(1, "Email is required")
+    .email("Please enter a valid email address")
+    .max(255, "Email must be less than 255 characters"),
+  phone: z
+    .string()
+    .max(30, "Phone number must be less than 30 characters")
+    .optional()
+    .or(z.literal("")),
+  company: z
+    .string()
+    .min(1, "Company name is required")
+    .max(100, "Company name must be less than 100 characters"),
+  country: z
+    .string()
+    .min(1, "Country is required"),
+  propertySize: z.string().optional(),
+  inquiryType: z
+    .string()
+    .min(1, "Please select an inquiry type"),
+  message: z
+    .string()
+    .max(2000, "Message must be less than 2000 characters")
+    .optional()
+    .or(z.literal("")),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
+
 export default function Contact() {
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    company: "",
-    propertySize: "",
-    inquiryType: "",
-    message: "",
+
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      company: "",
+      country: "",
+      propertySize: "",
+      inquiryType: "",
+      message: "",
+    },
   });
 
   // Get inquiry type from URL params on mount
   useEffect(() => {
     const initialInquiry = searchParams.get("inquiry") || "";
     if (initialInquiry && inquiryTypes.some(t => t.value === initialInquiry)) {
-      setFormData(prev => ({ ...prev, inquiryType: initialInquiry }));
+      form.setValue("inquiryType", initialInquiry);
     }
-  }, [searchParams]);
+  }, [searchParams, form]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
 
     try {
@@ -85,14 +142,15 @@ export default function Contact() {
       const { error: dbError } = await supabase
         .from("contact_inquiries")
         .insert({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.phone || null,
-          company: formData.company,
-          property_size: formData.propertySize || null,
-          inquiry_type: formData.inquiryType,
-          message: formData.message || null,
+          first_name: data.firstName,
+          last_name: data.lastName,
+          email: data.email,
+          phone: data.phone || null,
+          company: data.company,
+          country: data.country,
+          property_size: data.propertySize || null,
+          inquiry_type: data.inquiryType,
+          message: data.message || null,
         });
 
       if (dbError) throw dbError;
@@ -101,7 +159,7 @@ export default function Contact() {
       const { error: emailError } = await supabase.functions.invoke(
         "send-contact-notification",
         {
-          body: formData,
+          body: data,
         }
       );
 
@@ -115,16 +173,7 @@ export default function Contact() {
         description: "Our team will get back to you within 24 hours.",
       });
 
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        company: "",
-        propertySize: "",
-        inquiryType: "",
-        message: "",
-      });
+      form.reset();
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({
@@ -135,10 +184,6 @@ export default function Contact() {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   return (
@@ -180,131 +225,190 @@ export default function Contact() {
                     Fill out the form below and we'll get back to you within 24 hours.
                   </p>
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="firstName">First name *</Label>
-                        <Input
-                          id="firstName"
-                          placeholder="John"
-                          value={formData.firstName}
-                          onChange={(e) => handleChange("firstName", e.target.value)}
-                          required
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="firstName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>First name *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="John" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="lastName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Last name *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Doe" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="lastName">Last name *</Label>
-                        <Input
-                          id="lastName"
-                          placeholder="Doe"
-                          value={formData.lastName}
-                          onChange={(e) => handleChange("lastName", e.target.value)}
-                          required
-                        />
-                      </div>
-                    </div>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Work email *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="john@company.com"
-                          value={formData.email}
-                          onChange={(e) => handleChange("email", e.target.value)}
-                          required
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Work email *</FormLabel>
+                              <FormControl>
+                                <Input type="email" placeholder="john@company.com" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Phone number</FormLabel>
+                              <FormControl>
+                                <Input type="tel" placeholder="+1 (555) 000-0000" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone number</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="+1 (555) 000-0000"
-                          value={formData.phone}
-                          onChange={(e) => handleChange("phone", e.target.value)}
+
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="company"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Company name *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your company" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="country"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Country *</FormLabel>
+                              <FormControl>
+                                <CountrySelect
+                                  value={field.value}
+                                  onValueChange={field.onChange}
+                                  placeholder="Select country"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
-                    </div>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="company">Company name *</Label>
-                        <Input
-                          id="company"
-                          placeholder="Your company"
-                          value={formData.company}
-                          onChange={(e) => handleChange("company", e.target.value)}
-                          required
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="inquiryType"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Inquiry type *</FormLabel>
+                              <Select
+                                value={field.value}
+                                onValueChange={field.onChange}
+                              >
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select type" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {inquiryTypes.map((type) => (
+                                    <SelectItem key={type.value} value={type.value}>
+                                      {type.label}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="propertySize"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Portfolio size</FormLabel>
+                              <Select
+                                value={field.value}
+                                onValueChange={field.onChange}
+                              >
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select range" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {propertySizes.map((size) => (
+                                    <SelectItem key={size.value} value={size.value}>
+                                      {size.label}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="propertySize">Portfolio size</Label>
-                        <Select
-                          value={formData.propertySize}
-                          onValueChange={(value) => handleChange("propertySize", value)}
-                        >
-                          <SelectTrigger id="propertySize">
-                            <SelectValue placeholder="Select range" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {propertySizes.map((size) => (
-                              <SelectItem key={size.value} value={size.value}>
-                                {size.label}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="inquiryType">What can we help you with? *</Label>
-                      <Select
-                        value={formData.inquiryType}
-                        onValueChange={(value) => handleChange("inquiryType", value)}
-                        required
-                      >
-                        <SelectTrigger id="inquiryType">
-                          <SelectValue placeholder="Select inquiry type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {inquiryTypes.map((type) => (
-                            <SelectItem key={type.value} value={type.value}>
-                              {type.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Tell us about your properties and what you're looking for..."
-                        rows={4}
-                        value={formData.message}
-                        onChange={(e) => handleChange("message", e.target.value)}
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Message</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder="Tell us about your properties and what you're looking for..."
+                                rows={4}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
 
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? "Sending..." : "Send message"}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                      <Button 
+                        type="submit" 
+                        size="lg" 
+                        className="w-full"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Sending..." : "Send message"}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
 
-                    <p className="text-xs text-muted-foreground text-center">
-                      By submitting this form, you agree to our{" "}
-                      <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link>.
-                    </p>
-                  </form>
+                      <p className="text-xs text-muted-foreground text-center">
+                        By submitting this form, you agree to our{" "}
+                        <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link>.
+                      </p>
+                    </form>
+                  </Form>
                 </div>
               </div>
 
