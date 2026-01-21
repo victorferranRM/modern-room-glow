@@ -83,9 +83,8 @@ const contactFormSchema = z.object({
     .max(255, "Email must be less than 255 characters"),
   phone: z
     .string()
-    .max(30, "Phone number must be less than 30 characters")
-    .optional()
-    .or(z.literal("")),
+    .min(1, "Phone number is required")
+    .max(30, "Phone number must be less than 30 characters"),
   company: z
     .string()
     .min(1, "Company name is required")
@@ -93,15 +92,16 @@ const contactFormSchema = z.object({
   country: z
     .string()
     .min(1, "Country is required"),
-  propertySize: z.string().optional(),
+  propertySize: z
+    .string()
+    .min(1, "Please select portfolio size"),
   inquiryType: z
     .string()
     .min(1, "Please select an inquiry type"),
   message: z
     .string()
-    .max(2000, "Message must be less than 2000 characters")
-    .optional()
-    .or(z.literal("")),
+    .min(1, "Message is required")
+    .max(2000, "Message must be less than 2000 characters"),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -260,20 +260,35 @@ export default function Contact() {
                         />
                       </div>
 
-                      {/* Email - Full width */}
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-sm">Work email *</FormLabel>
-                            <FormControl>
-                              <Input type="email" placeholder="john@company.com" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                      {/* Email and Company - Stack on mobile */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm">Work email *</FormLabel>
+                              <FormControl>
+                                <Input type="email" placeholder="john@company.com" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="company"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm">Company name *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your company" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
 
                       {/* Country and Phone - Stack on mobile */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -314,21 +329,6 @@ export default function Contact() {
                         />
                       </div>
 
-                      {/* Company - Full width */}
-                      <FormField
-                        control={form.control}
-                        name="company"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-sm">Company name *</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your company" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
                       {/* Inquiry type and Property size - Stack on mobile */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
@@ -363,7 +363,7 @@ export default function Contact() {
                           name="propertySize"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Portfolio size</FormLabel>
+                              <FormLabel className="text-sm">Portfolio size *</FormLabel>
                               <Select
                                 value={field.value}
                                 onValueChange={field.onChange}
@@ -392,7 +392,7 @@ export default function Contact() {
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-sm">Message</FormLabel>
+                            <FormLabel className="text-sm">Message *</FormLabel>
                             <FormControl>
                               <Textarea
                                 placeholder="Tell us about your properties and what you're looking for..."
