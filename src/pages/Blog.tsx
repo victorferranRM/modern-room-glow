@@ -4,7 +4,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Input } from "@/components/ui/input";
-import { Search, Calendar, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Search, Calendar, Clock, ArrowRight } from "lucide-react";
 import {
   blogPosts,
   categories,
@@ -44,46 +45,16 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        {/* Decorative dots pattern */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-0 w-64 h-64 opacity-20">
-            {[...Array(80)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1.5 h-1.5 bg-foreground rounded-full"
-                style={{
-                  left: `${(i % 10) * 24}px`,
-                  top: `${Math.floor(i / 10) * 24}px`,
-                  opacity: Math.random() * 0.5 + 0.3,
-                }}
-              />
-            ))}
-          </div>
-          <div className="absolute top-20 right-0 w-64 h-64 opacity-20">
-            {[...Array(80)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1.5 h-1.5 bg-foreground rounded-full"
-                style={{
-                  right: `${(i % 10) * 24}px`,
-                  top: `${Math.floor(i / 10) * 24}px`,
-                  opacity: Math.random() * 0.5 + 0.3,
-                }}
-              />
-            ))}
-          </div>
-        </div>
-
+      {/* Hero Section - Clean gradient background */}
+      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
               Good reads for great
               <br />
               property operators
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
               Everything we know about staying ahead of issues, guests, and the
               market.
             </p>
@@ -92,8 +63,8 @@ const Blog = () => {
           {/* Featured Post */}
           {featuredPost && (
             <AnimatedSection animation="fade-up" delay={0.1}>
-              <div className="relative bg-foreground rounded-2xl overflow-hidden max-w-5xl mx-auto">
-                <div className="absolute top-6 left-6 bg-muted-foreground/30 text-background text-sm px-4 py-2 rounded-lg font-medium z-10">
+              <div className="relative bg-foreground rounded-2xl overflow-hidden max-w-5xl mx-auto shadow-xl">
+                <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-lg font-medium z-10">
                   Featured
                 </div>
                 <div className="grid md:grid-cols-2 gap-0">
@@ -107,10 +78,10 @@ const Blog = () => {
                     </div>
                   </Link>
                   <div className="p-8 md:p-10 flex flex-col justify-center">
-                    <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-4 w-fit">
+                    <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-4 w-fit font-medium">
                       {featuredPost.category}
                     </span>
-                    <div className="flex items-center gap-6 text-muted-foreground text-sm mb-4">
+                    <div className="flex items-center gap-6 text-white/60 text-sm mb-4">
                       <span className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
                         {formatDate(featuredPost.date)}
@@ -120,28 +91,21 @@ const Blog = () => {
                         {featuredPost.readTime} min read
                       </span>
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-semibold text-background mb-4 leading-tight">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight tracking-tight">
                       {featuredPost.title}
                     </h2>
-                    <p className="text-muted mb-6 line-clamp-3">
+                    <p className="text-white/70 mb-6 line-clamp-3 font-light">
                       {featuredPost.excerpt}
                     </p>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      By{" "}
-                      <span className="text-background font-medium">
-                        {featuredPost.author}
-                      </span>{" "}
-                      in{" "}
-                      <span className="text-background">
-                        {featuredPost.category}
-                      </span>
-                    </p>
-                    <Link
-                      to={`/blog/${featuredPost.slug}`}
-                      className="text-background font-medium underline underline-offset-4 hover:text-primary transition-colors w-fit"
+                    <Button
+                      asChild
+                      className="w-fit bg-primary hover:bg-primary/90 text-white"
                     >
-                      Read post
-                    </Link>
+                      <Link to={`/blog/${featuredPost.slug}`}>
+                        Read more
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -155,8 +119,8 @@ const Blog = () => {
         <div className="container mx-auto px-4">
           {/* Section Title */}
           <AnimatedSection animation="fade-up" className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground">
-              Blogs
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+              Latest Articles
             </h2>
           </AnimatedSection>
 
@@ -172,7 +136,7 @@ const Blog = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-foreground text-background"
+                    ? "bg-primary text-white"
                     : "bg-transparent border border-muted-foreground/30 text-foreground hover:border-primary hover:text-primary"
                 }`}
               >
@@ -208,8 +172,8 @@ const Blog = () => {
                 delay={0.1 * (index % 3)}
               >
                 <article className="group">
-                  <Link to={`/blog/${post.slug}`} className="block mb-4">
-                    <div className="aspect-[16/10] rounded-xl overflow-hidden">
+                  <Link to={`/blog/${post.slug}`} className="block mb-5">
+                    <div className="aspect-[16/10] rounded-xl overflow-hidden bg-muted">
                       <img
                         src={post.image}
                         alt={post.title}
@@ -218,42 +182,19 @@ const Blog = () => {
                     </div>
                   </Link>
 
-                  <span className="inline-block border border-primary/50 text-primary text-xs px-3 py-1 rounded-full mb-3">
-                    {post.category}
-                  </span>
-
-                  <div className="flex items-center gap-4 text-muted-foreground text-sm mb-3">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="w-4 h-4" />
-                      {formatDate(post.date)}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime} min read
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-foreground mb-3 leading-tight tracking-tight group-hover:text-primary transition-colors">
                     <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
 
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3 font-light leading-relaxed">
                     {post.excerpt}
-                  </p>
-
-                  <p className="text-muted-foreground text-sm mb-3">
-                    By{" "}
-                    <span className="text-foreground font-medium">
-                      {post.author}
-                    </span>{" "}
-                    in <span className="text-primary">{post.category}</span>
                   </p>
 
                   <Link
                     to={`/blog/${post.slug}`}
-                    className="text-foreground font-medium underline underline-offset-4 hover:text-primary transition-colors text-sm"
+                    className="inline-flex items-center text-primary font-medium text-sm hover:underline"
                   >
-                    Read post
+                    Read more
                   </Link>
                 </article>
               </AnimatedSection>
