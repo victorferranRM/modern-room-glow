@@ -55,12 +55,12 @@ const whatWeAreNot = [
 ];
 
 const useCases = [
-  { title: "WiFi not working", icon: "📶" },
-  { title: "Guest locked out at 2 AM", icon: "🔐" },
-  { title: "Property not cleaned upon arrival", icon: "🧹" },
-  { title: "Guest wants refund cancellation", icon: "💳" },
-  { title: "Guest wants to extend stay", icon: "🏠" },
-  { title: "Noise complaint from neighbors", icon: "🔊" },
+  { title: "WiFi not working", icon: Phone },
+  { title: "Guest locked out at 2 AM", icon: Shield },
+  { title: "Property not cleaned upon arrival", icon: FileText },
+  { title: "Guest wants refund cancellation", icon: MessageSquare },
+  { title: "Guest wants to extend stay", icon: Users },
+  { title: "Noise complaint from neighbors", icon: Headphones },
 ];
 
 const howItWorks = [
@@ -86,27 +86,21 @@ export default function GuestAssist() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${serviceImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
+      {/* Hero Section - Keynest Style */}
+      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 <Headphones className="w-4 h-4" />
                 Guest Assist™
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
                 24/7 Phone support
                 <br />
                 <span className="text-primary">for your guests</span>
               </h1>
-              <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 Our guest service for vacation rental managers offers the best phone support on the market. 
                 Your team can finally rest every night and weekend.
               </p>
@@ -117,9 +111,20 @@ export default function GuestAssist() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
+                <Button size="lg" variant="outline" asChild>
                   <Link to="/pricing">View Pricing</Link>
                 </Button>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
+                <img
+                  src={serviceImage}
+                  alt="Guest Assist Service"
+                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                />
               </div>
             </AnimatedSection>
           </div>
@@ -188,9 +193,13 @@ export default function GuestAssist() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {useCases.map((useCase, i) => (
               <AnimatedSection key={useCase.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border hover:shadow-lg hover:border-primary/30 transition-all duration-300 text-center">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
-                  <h3 className="font-semibold">{useCase.title}</h3>
+                <div className="p-6 rounded-2xl bg-card border hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <useCase.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold">{useCase.title}</h3>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -258,7 +267,7 @@ export default function GuestAssist() {
               </ul>
               <Button asChild>
                 <Link to="/contact">
-                  Download Sample Protocol
+                  See a Demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

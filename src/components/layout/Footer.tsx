@@ -22,12 +22,12 @@ const footerLinks = {
     { name: "Customer Portal", href: "/portal/dashboard" },
   ],
   legal: [
-    { name: "Terms of Use", href: "/legal/terms-of-use" },
-    { name: "Legal Notice", href: "/legal/legal-notice" },
-    { name: "Privacy Policy", href: "/legal/privacy-policy" },
-    { name: "Cookie Policy", href: "/legal/cookie-policy" },
-    { name: "Terms of Service", href: "/legal/terms-of-service" },
-    { name: "Shipping & Returns", href: "/legal/shipping-returns" },
+    { name: "Terms of Use", href: "/legal#terms-of-use" },
+    { name: "Legal Notice", href: "/legal#legal-notice" },
+    { name: "Privacy Policy", href: "/legal#privacy-policy" },
+    { name: "Cookie Policy", href: "/legal#cookie-policy" },
+    { name: "Terms of Service", href: "/legal#terms-of-service" },
+    { name: "Shipping & Returns", href: "/legal#shipping-returns" },
   ],
 };
 
@@ -42,11 +42,11 @@ export function Footer() {
               <img 
                 src={roomonitorLogo} 
                 alt="Roomonitor" 
-                className="h-6 w-auto brightness-0 invert"
+                className="h-10 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-sm opacity-70 leading-relaxed mb-6">
-              Roomonitor is your 24/7 operational partner for short-term rentals and vacation properties. We combine advanced monitoring technology with human-powered services to detect noise, occupancy, and smoke in real time—while our dedicated team handles emergencies, guest support, and incident response outside your office hours. Protect your properties, ensure guest satisfaction, and keep your operations running around the clock.
+              24/7 monitoring and operational support for vacation rentals. Technology + human expertise to protect your properties around the clock.
             </p>
             <div className="flex gap-4">
               <a

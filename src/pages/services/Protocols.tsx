@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { 
   FileText, Clock, ArrowRight, Check, 
-  Shield, Settings, ListChecks, Workflow, Edit, Book
+  Shield, Settings, ListChecks, Workflow, Edit, Book, Monitor
 } from "lucide-react";
 import serviceImage from "@/assets/service-protocols.jpg";
 import managerDevices from "@/assets/manager-devices.png";
@@ -113,40 +113,60 @@ export default function Protocols() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${serviceImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
-          <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <FileText className="w-4 h-4" />
-              Operational Protocols
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-              Your rules,
-              <br />
-              <span className="text-primary">executed 24/7</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Define exactly how every situation should be handled. Our team executes your 
-              protocols consistently, around the clock, ensuring your standards are always met.
+      {/* Hero Section - Keynest Style */}
+      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <FileText className="w-4 h-4" />
+                Operational Protocols
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
+                Your rules,
+                <br />
+                <span className="text-primary">executed 24/7</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+                Define exactly how every situation should be handled. Our team executes your 
+                protocols consistently, around the clock, ensuring your standards are always met.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <Link to="/contact">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/pricing">View Pricing</Link>
+                </Button>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
+                <img
+                  src={serviceImage}
+                  alt="Protocols Service"
+                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Manager Software Notice */}
+      <section className="py-12 bg-primary/5 border-y">
+        <div className="container mx-auto px-4">
+          <AnimatedSection className="flex items-center justify-center gap-4 text-center">
+            <Monitor className="w-8 h-8 text-primary shrink-0" />
+            <p className="text-lg">
+              <strong>No Excel spreadsheets.</strong> We use our proprietary Manager software for standardized, 
+              real-time protocol management and execution.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
-            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -277,7 +297,7 @@ export default function Protocols() {
               </ul>
               <Button asChild>
                 <Link to="/contact">
-                  Download Sample Protocol
+                  See a Demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
