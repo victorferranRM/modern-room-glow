@@ -87,58 +87,65 @@ export default function PMSAccess() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${serviceImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
-          <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <Settings className="w-4 h-4" />
-              PMS & Tool Access
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-              We work in
-              <br />
-              <span className="text-primary">your ecosystem</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              No separate dashboards, no duplicate data. We operate directly from your Property 
-              Management System, working as a true extension of your team.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/integrations">View Integrations</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
+      {/* Hero Section - Keynest Style */}
+      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <Settings className="w-4 h-4" />
+                PMS & Tool Access
+              </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6">
+                We work in
+                <br />
+                <span className="text-primary">your ecosystem</span>
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                No separate dashboards, no duplicate data. We operate directly from your Property 
+                Management System, working as a true extension of your team.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <Link to="/contact">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/integrations">View Integrations</Link>
+                </Button>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
+                <img
+                  src={serviceImage}
+                  alt="PMS Integration"
+                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* Supported Platforms */}
-      <section className="py-12 bg-secondary/30 border-y">
+      <section className="py-12 bg-card border-y">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-8">
             <p className="text-sm text-muted-foreground">We integrate with your favorite PMS</p>
           </AnimatedSection>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {supportedPlatforms.map((platform, i) => (
               <AnimatedSection key={platform.name} delay={i * 50}>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border">
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center font-semibold text-primary">
+                <div className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-secondary/50 border">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">
                     {platform.logo}
                   </div>
-                  <span className="font-medium">{platform.name}</span>
+                  <span className="font-medium text-sm sm:text-base">{platform.name}</span>
                 </div>
               </AnimatedSection>
             ))}
@@ -153,7 +160,7 @@ export default function PMSAccess() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Capabilities
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               Secure, seamless access
             </h2>
           </AnimatedSection>
@@ -181,7 +188,7 @@ export default function PMSAccess() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Setup Process
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
               How it works
             </h2>
           </AnimatedSection>
@@ -212,10 +219,10 @@ export default function PMSAccess() {
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 Our Actions
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
                 What we can do in your PMS
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-base lg:text-lg text-muted-foreground mb-8">
                 With secure access to your system, we can handle guest communications 
                 and incident management without you lifting a finger.
               </p>
@@ -230,7 +237,7 @@ export default function PMSAccess() {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <div className="relative p-8 rounded-3xl bg-card border">
+              <div className="relative p-6 sm:p-8 rounded-3xl bg-card border">
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-secondary/50">
                     <div className="flex items-center gap-3 mb-2">
@@ -270,10 +277,10 @@ export default function PMSAccess() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               Ready to integrate?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base lg:text-lg text-muted-foreground mb-8">
               Connect your PMS and let us work as an extension of your team. 
               Setup takes just a few minutes.
             </p>

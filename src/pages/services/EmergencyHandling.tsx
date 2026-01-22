@@ -5,7 +5,8 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { 
   Siren, Clock, Shield, ArrowRight, Check, 
-  Phone, AlertTriangle, Users, Flame, Droplets
+  Phone, AlertTriangle, Users, Flame, Droplets,
+  HeartPulse, Lock
 } from "lucide-react";
 import serviceImage from "@/assets/service-emergency.jpg";
 import managerDevices from "@/assets/manager-devices.png";
@@ -57,13 +58,13 @@ const emergencyTypes = [
     response: "< 2 min"
   },
   {
-    icon: Siren,
+    icon: Lock,
     title: "Security Threats",
     description: "Coordination with local authorities for break-ins, threats, or suspicious activity.",
     response: "< 2 min"
   },
   {
-    icon: AlertTriangle,
+    icon: HeartPulse,
     title: "Medical Emergencies",
     description: "Assistance coordinating medical help and emergency services for guests.",
     response: "< 1 min"
@@ -103,48 +104,55 @@ export default function EmergencyHandling() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${serviceImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
-          <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <Siren className="w-4 h-4" />
-              Emergency Handling
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-              Critical situations
-              <br />
-              <span className="text-primary">managed with real action</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              When emergencies happen, every second counts. Our emergency handling team 
-              responds instantly with protocols and real action — not just notifications.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
+      {/* Hero Section - Keynest Style */}
+      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-6">
+                <Siren className="w-4 h-4" />
+                Emergency Handling
+              </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6">
+                Critical situations
+                <br />
+                <span className="text-primary">managed with real action</span>
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                When emergencies happen, every second counts. Our emergency handling team 
+                responds instantly with protocols and real action — not just notifications.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <Link to="/contact">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/pricing">View Pricing</Link>
+                </Button>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-destructive/20 to-transparent rounded-3xl blur-2xl" />
+                <img
+                  src={serviceImage}
+                  alt="Emergency Handling Service"
+                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* Key Stats */}
-      <section className="py-12 bg-destructive/5 border-y">
+      <section className="py-12 bg-card border-y">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { value: "<60s", label: "Response time" },
               { value: "24/7", label: "Emergency team" },
@@ -152,8 +160,8 @@ export default function EmergencyHandling() {
               { value: "Real", label: "Action taken" },
             ].map((stat, i) => (
               <AnimatedSection key={i} delay={i * 100} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
               </AnimatedSection>
             ))}
           </div>
@@ -167,7 +175,7 @@ export default function EmergencyHandling() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Emergency Types
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               What we handle
             </h2>
           </AnimatedSection>
@@ -204,7 +212,7 @@ export default function EmergencyHandling() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Capabilities
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               Professional emergency response
             </h2>
           </AnimatedSection>
@@ -232,13 +240,13 @@ export default function EmergencyHandling() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Our Protocol
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
               Emergency response process
             </h2>
           </AnimatedSection>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
               {responseProtocol.map((step, i) => (
                 <AnimatedSection key={step.step} delay={i * 100}>
                   <div className="text-center p-4 rounded-2xl bg-card border">
@@ -255,14 +263,64 @@ export default function EmergencyHandling() {
         </div>
       </section>
 
+      {/* Manager Preview */}
+      <section className="py-20 lg:py-28 bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+                Roomonitor Manager
+              </p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+                Complete emergency visibility
+              </h2>
+              <p className="text-base lg:text-lg text-muted-foreground mb-6">
+                Track all emergency responses in real-time, view complete timelines, 
+                and access detailed reports — all from your dashboard.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Real-time emergency timeline",
+                  "Multi-party communication logs",
+                  "Exportable reports for insurance",
+                  "Post-incident analysis",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-primary shrink-0" />
+                    <span className="text-sm sm:text-base">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild>
+                <Link to="/how-it-works">
+                  Explore Manager
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
+                <img
+                  src={managerDevices}
+                  alt="Emergency Dashboard"
+                  className="relative w-full rounded-2xl shadow-2xl"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               Be prepared for any emergency
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base lg:text-lg text-muted-foreground mb-8">
               Our emergency handling team is ready 24/7. 
               Talk to us about protecting your properties.
             </p>

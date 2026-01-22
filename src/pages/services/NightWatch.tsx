@@ -87,48 +87,55 @@ export default function NightWatch() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${serviceImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
-          <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <Moon className="w-4 h-4" />
-              Night Watch
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-              Party prevention
-              <br />
-              <span className="text-primary">before it starts</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Dedicated agents monitoring your properties during peak risk hours. 
-              We prevent parties before they escalate, protecting your reputation and neighbors.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
+      {/* Hero Section - Keynest Style */}
+      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <Moon className="w-4 h-4" />
+                Night Watch
+              </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6">
+                Party prevention
+                <br />
+                <span className="text-primary">before it starts</span>
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                Dedicated agents monitoring your properties during peak risk hours. 
+                We prevent parties before they escalate, protecting your reputation and neighbors.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <Link to="/contact">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/pricing">View Pricing</Link>
+                </Button>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
+                <img
+                  src={serviceImage}
+                  alt="Night Watch Service"
+                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* Key Stats */}
-      <section className="py-12 bg-secondary/30 border-y">
+      <section className="py-12 bg-card border-y">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { value: "90%", label: "Parties prevented" },
               { value: "Night+", label: "Weekend coverage" },
@@ -136,8 +143,8 @@ export default function NightWatch() {
               { value: "Early", label: "Intervention" },
             ].map((stat, i) => (
               <AnimatedSection key={i} delay={i * 100} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
               </AnimatedSection>
             ))}
           </div>
@@ -151,10 +158,10 @@ export default function NightWatch() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Coverage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               When we're watching
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               Night Watch covers the highest-risk hours when parties are most likely to occur.
             </p>
           </AnimatedSection>
@@ -163,7 +170,7 @@ export default function NightWatch() {
             {coverageHours.map((item, i) => (
               <AnimatedSection key={item.day} delay={i * 100}>
                 <div className="p-6 rounded-2xl bg-card border text-center hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                  <h3 className="font-semibold mb-2">{item.day}</h3>
+                  <h3 className="font-semibold mb-2 text-sm sm:text-base">{item.day}</h3>
                   <p className="text-primary font-medium">{item.hours}</p>
                 </div>
               </AnimatedSection>
@@ -179,7 +186,7 @@ export default function NightWatch() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Capabilities
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               Proactive party prevention
             </h2>
           </AnimatedSection>
@@ -207,13 +214,13 @@ export default function NightWatch() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Our Approach
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
               Prevention-first process
             </h2>
           </AnimatedSection>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {preventionProcess.map((step, i) => (
                 <AnimatedSection key={step.step} delay={i * 100}>
                   <div className="text-center p-6 rounded-2xl bg-card border">
@@ -238,14 +245,14 @@ export default function NightWatch() {
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 Benefits
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
                 What Night Watch prevents
               </h2>
               <ul className="space-y-3 mb-8">
                 {partyPrevention.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-primary shrink-0" />
-                    <span>{item}</span>
+                    <span className="text-sm sm:text-base">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -275,10 +282,10 @@ export default function NightWatch() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
               Sleep soundly while we watch
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base lg:text-lg text-muted-foreground mb-8">
               Our Night Watch team is ready to protect your properties during high-risk hours. 
               Talk to us about coverage for your portfolio.
             </p>
