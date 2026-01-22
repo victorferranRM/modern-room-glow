@@ -14,6 +14,7 @@ import SavingsCalculator from "./pages/SavingsCalculator";
 import Contact from "./pages/Contact";
 import HowItWorks from "./pages/HowItWorks";
 import CaseStudies from "./pages/CaseStudies";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Integrations from "./pages/Integrations";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -47,6 +48,7 @@ const App = () => (
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/resources/savings-calculator" element={<SavingsCalculator />} />
               <Route path="/resources/case-studies" element={<CaseStudies />} />
+              <Route path="/resources/case-studies/:slug" element={<CaseStudyDetail />} />
               <Route path="/resources/integrations" element={<Integrations />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
