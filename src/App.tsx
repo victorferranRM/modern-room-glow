@@ -25,6 +25,24 @@ import SmokeDetection from "./pages/monitoring/SmokeDetection";
 import EnvironmentMonitoring from "./pages/monitoring/EnvironmentMonitoring";
 import NotFound from "./pages/NotFound";
 
+// Service Pages
+import GuestAssist from "./pages/services/GuestAssist";
+import ControlCenter from "./pages/services/ControlCenter";
+import FieldService from "./pages/services/FieldService";
+import IncidentResponse from "./pages/services/IncidentResponse";
+import EmergencyHandling from "./pages/services/EmergencyHandling";
+import NightWatch from "./pages/services/NightWatch";
+import PMSAccess from "./pages/services/PMSAccess";
+import Protocols from "./pages/services/Protocols";
+
+// Legal Pages
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsOfService from "./pages/legal/TermsOfService";
+import CookiePolicy from "./pages/legal/CookiePolicy";
+import LegalNotice from "./pages/legal/LegalNotice";
+import ShippingReturns from "./pages/legal/ShippingReturns";
+import TermsOfUse from "./pages/legal/TermsOfUse";
+
 // Portal Pages
 import { PortalLayout } from "./components/portal/PortalLayout";
 import { ProtectedRoute } from "./components/portal/ProtectedRoute";
@@ -54,7 +72,7 @@ const App = () => (
               <Route path="/resources/savings-calculator" element={<SavingsCalculator />} />
               <Route path="/resources/case-studies" element={<CaseStudies />} />
               <Route path="/resources/case-studies/:slug" element={<CaseStudyDetail />} />
-              <Route path="/resources/integrations" element={<Integrations />} />
+              <Route path="/integrations" element={<Integrations />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/monitoring" element={<Monitoring />} />
@@ -66,6 +84,24 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Auth />} />
+
+              {/* Service Routes */}
+              <Route path="/services/guest-assist" element={<GuestAssist />} />
+              <Route path="/services/control-center" element={<ControlCenter />} />
+              <Route path="/services/field-service" element={<FieldService />} />
+              <Route path="/services/incident-response" element={<IncidentResponse />} />
+              <Route path="/services/emergency-handling" element={<EmergencyHandling />} />
+              <Route path="/services/night-watch" element={<NightWatch />} />
+              <Route path="/services/pms-access" element={<PMSAccess />} />
+              <Route path="/services/protocols" element={<Protocols />} />
+
+              {/* Legal Routes */}
+              <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/legal/terms-of-service" element={<TermsOfService />} />
+              <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
+              <Route path="/legal/legal-notice" element={<LegalNotice />} />
+              <Route path="/legal/shipping-returns" element={<ShippingReturns />} />
+              <Route path="/legal/terms-of-use" element={<TermsOfUse />} />
               
               {/* Customer Portal Routes - Protected */}
               <Route
