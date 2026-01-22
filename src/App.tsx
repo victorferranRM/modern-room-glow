@@ -35,13 +35,8 @@ import NightWatch from "./pages/services/NightWatch";
 import PMSAccess from "./pages/services/PMSAccess";
 import Protocols from "./pages/services/Protocols";
 
-// Legal Pages
-import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
-import TermsOfService from "./pages/legal/TermsOfService";
-import CookiePolicy from "./pages/legal/CookiePolicy";
-import LegalNotice from "./pages/legal/LegalNotice";
-import ShippingReturns from "./pages/legal/ShippingReturns";
-import TermsOfUse from "./pages/legal/TermsOfUse";
+// Legal Page
+import Legal from "./pages/Legal";
 
 // Portal Pages
 import { PortalLayout } from "./components/portal/PortalLayout";
@@ -95,13 +90,8 @@ const App = () => (
               <Route path="/services/pms-access" element={<PMSAccess />} />
               <Route path="/services/protocols" element={<Protocols />} />
 
-              {/* Legal Routes */}
-              <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/legal/terms-of-service" element={<TermsOfService />} />
-              <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
-              <Route path="/legal/legal-notice" element={<LegalNotice />} />
-              <Route path="/legal/shipping-returns" element={<ShippingReturns />} />
-              <Route path="/legal/terms-of-use" element={<TermsOfUse />} />
+              {/* Legal Route */}
+              <Route path="/legal" element={<Legal />} />
               
               {/* Customer Portal Routes - Protected */}
               <Route
