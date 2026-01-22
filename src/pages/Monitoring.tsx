@@ -9,35 +9,41 @@ import {
 } from "lucide-react";
 import roomonitorDevice from "@/assets/roomonitor-device-placeholder.jpg";
 
-// Monitoring capabilities with links
+// Import monitoring background images
+import monitoringNoise from "@/assets/monitoring-noise.jpg";
+import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
+import monitoringAir from "@/assets/monitoring-air.jpg";
+import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
+
+// Monitoring capabilities with links and background images
 const monitoringCapabilities = [
   {
     icon: Volume2,
     title: "Noise Monitoring",
     description: "Real-time acoustic detection and instant alerts when noise levels exceed your thresholds.",
     href: "/monitoring/noise",
-    color: "from-blue-500/20 to-primary/20",
+    image: monitoringNoise,
   },
   {
     icon: Users,
     title: "Occupancy Detection",
     description: "Track guest presence and identify potential overcrowding situations.",
     href: "/monitoring/occupancy",
-    color: "from-green-500/20 to-primary/20",
+    image: monitoringOccupancy,
   },
   {
     icon: Flame,
     title: "Smoke Detection",
     description: "Immediate smoke alerts to protect your assets and enforce non-smoking policies.",
     href: "/monitoring/smoke",
-    color: "from-orange-500/20 to-primary/20",
+    image: monitoringAir,
   },
   {
     icon: Thermometer,
     title: "Environment Monitoring",
     description: "Track temperature, humidity and air quality for guest comfort and property protection.",
     href: "/monitoring/environment",
-    color: "from-purple-500/20 to-primary/20",
+    image: monitoringEnvironment,
   },
 ];
 
@@ -185,20 +191,28 @@ export default function Monitoring() {
               <AnimatedSection key={capability.title} delay={index * 100}>
                 <Link
                   to={capability.href}
-                  className="group block relative p-6 rounded-2xl border bg-card hover:shadow-lg transition-all duration-300 overflow-hidden"
+                  className="group block relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${capability.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <capability.icon className="w-6 h-6 text-primary" />
+                  {/* Background Image */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${capability.image})` }}
+                  />
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 transition-colors duration-300" />
+                  
+                  {/* Content */}
+                  <div className="relative h-full flex flex-col justify-end p-6 text-white">
+                    <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <capability.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-semibold mb-2">
                       {capability.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-white/80 mb-4 text-sm">
                       {capability.description}
                     </p>
-                    <span className="inline-flex items-center text-sm font-medium text-primary">
+                    <span className="inline-flex items-center text-sm font-medium text-white">
                       Learn more
                       <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </span>
