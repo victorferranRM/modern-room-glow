@@ -19,6 +19,10 @@ import Integrations from "./pages/Integrations";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Monitoring from "./pages/Monitoring";
+import NoiseMonitoring from "./pages/monitoring/NoiseMonitoring";
+import OccupancyDetection from "./pages/monitoring/OccupancyDetection";
+import SmokeDetection from "./pages/monitoring/SmokeDetection";
+import EnvironmentMonitoring from "./pages/monitoring/EnvironmentMonitoring";
 import NotFound from "./pages/NotFound";
 
 // Portal Pages
@@ -54,6 +58,10 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/monitoring" element={<Monitoring />} />
+              <Route path="/monitoring/noise" element={<NoiseMonitoring />} />
+              <Route path="/monitoring/occupancy" element={<OccupancyDetection />} />
+              <Route path="/monitoring/smoke" element={<SmokeDetection />} />
+              <Route path="/monitoring/environment" element={<EnvironmentMonitoring />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/auth" element={<Auth />} />
