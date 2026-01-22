@@ -68,7 +68,7 @@ export default function Legal() {
       {/* Navigation Tabs */}
       <section className="sticky top-16 lg:top-20 z-40 bg-background border-b">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex overflow-x-auto gap-1 py-3 scrollbar-hide">
+          <nav className="flex overflow-x-auto justify-center gap-1 py-3 scrollbar-hide">
             {sections.map((section) => (
               <button
                 key={section.id}

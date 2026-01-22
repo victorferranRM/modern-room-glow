@@ -24,10 +24,10 @@ export function HeroSection() {
 
           {/* Main headline */}
           <div className="space-y-2 animate-fade-in" style={{ animationDelay: "0.05s" }}>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight text-foreground whitespace-nowrap">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight text-foreground">
               Emergencies don't follow office hours.
             </h1>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground">
               Your operations shouldn't depend on them.
             </p>
           </div>
