@@ -7,6 +7,7 @@ interface AnimatedSectionProps {
   className?: string;
   delay?: number;
   animation?: "fade-up" | "fade" | "fade-left" | "fade-right";
+  id?: string;
 }
 
 export function AnimatedSection({
@@ -14,6 +15,7 @@ export function AnimatedSection({
   className,
   delay = 0,
   animation = "fade-up",
+  id,
 }: AnimatedSectionProps) {
   const { ref, isVisible } = useScrollAnimation();
 
@@ -27,6 +29,7 @@ export function AnimatedSection({
   return (
     <div
       ref={ref}
+      id={id}
       className={cn(
         "transition-all duration-700 ease-out",
         isVisible
