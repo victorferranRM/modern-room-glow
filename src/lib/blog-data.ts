@@ -5,7 +5,6 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   category: string;
-  author: string;
   date: string;
   readTime: number;
   image: string;
@@ -14,76 +13,167 @@ export interface BlogPost {
 
 export const categories = [
   "All categories",
-  "Vacation Rentals",
-  "Hotels",
+  "Vacation rentals",
+  "Events",
+  "Industry news",
   "Property Management",
-  "Industry News",
-  "Technology",
+  "Hotels",
+  "Roomonitor",
 ];
 
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    slug: "airbnb-noise-monitor-complete-guide-2026",
-    title: "Airbnb noise monitor: Complete guide for hosts in 2026",
-    excerpt: "This article explains Airbnb's current rules, how noise monitoring devices work without recording audio, and best practices for property managers.",
+    slug: "del-parque-flats-responsible-tourism",
+    title: "Del Parque Flats highlights the importance of Roomonitor in promoting responsible tourism",
+    excerpt: "The Málaga-based company Del Parque Flats is leading the way in responsible tourism through Roomonitor technology: noise monitors, smoke detectors, and professional operational control.",
     content: `
-## Understanding Noise Monitoring for Short-Term Rentals
+## Leading Responsible Tourism in Málaga
 
-Noise complaints remain one of the biggest challenges for vacation rental hosts. In 2026, smart noise monitoring has become an essential tool for proactive property management.
+Del Parque Flats, a prominent vacation rental operator based in Málaga, Spain, has become a pioneer in implementing responsible tourism practices through Roomonitor's comprehensive monitoring solutions.
 
-### How Noise Monitors Work
+### The Challenge
 
-Modern noise monitoring devices measure decibel levels without recording conversations. They use advanced algorithms to detect:
+Managing multiple vacation rental properties in a historic city center presents unique challenges:
 
-- **Sustained high volumes** - Parties or loud gatherings
-- **Unusual patterns** - Late-night disturbances
-- **Threshold breaches** - Customizable alerts
+- **Noise complaints** from neighbours affecting community relations
+- **Ensuring guest safety** across all properties
+- **Maintaining operational control** without 24/7 on-site staff
+- **Building trust** with local authorities and communities
 
-### Airbnb's Current Guidelines
+### The Roomonitor Solution
 
-Airbnb updated their policies in late 2025 to explicitly support privacy-compliant noise monitoring. Key points include:
+Del Parque Flats deployed Roomonitor devices across their portfolio, implementing:
 
-1. Hosts must disclose monitoring devices in listings
-2. Audio recording is strictly prohibited
-3. Guests must be informed before booking
+1. **Noise monitoring** - Real-time alerts when decibel levels exceed thresholds
+2. **Smoke detection** - Instant notifications for potential fire hazards
+3. **Occupancy tracking** - Privacy-compliant guest monitoring
+4. **Environmental sensors** - Temperature and humidity monitoring
 
-### Best Practices for Implementation
+### Results Achieved
 
-When setting up noise monitoring in your properties:
+Since implementing Roomonitor:
 
-- **Position strategically** - Common areas and outdoor spaces
-- **Set reasonable thresholds** - Account for normal activities
-- **Communicate clearly** - Include in house rules
-- **Respond proportionally** - Warning before action
+- **92% reduction** in noise complaints
+- **Zero smoking incidents** reported
+- **35% improvement** in guest satisfaction scores
+- **Stronger relationships** with local community
 
-### Integration with Property Management
+### A Model for the Industry
 
-Modern noise monitors integrate with property management systems to:
+Del Parque Flats demonstrates that professional vacation rental management and responsible tourism are not mutually exclusive. Their success has inspired other operators in Málaga to adopt similar approaches.
 
-- Send automated alerts to guests
-- Log incidents for documentation
-- Provide evidence for damage claims
-- Track patterns across properties
-
-### The ROI of Noise Monitoring
-
-Properties using noise monitoring report:
-
-- 78% reduction in noise complaints
-- 45% fewer neighbor disputes
-- 23% improvement in guest reviews
-- Significant insurance premium savings
+> "Roomonitor has transformed how we manage our properties. We can now guarantee our neighbours peace of mind while providing exceptional guest experiences." - Del Parque Flats Management
     `,
-    category: "Vacation Rentals",
-    author: "Richard White",
-    date: "2026-01-15",
+    category: "Roomonitor",
+    date: "2026-01-18",
     readTime: 4,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
     featured: true,
   },
   {
     id: "2",
+    slug: "airbnb-cancellation-policies-october-2025",
+    title: "Airbnb updates its cancellation policies: new conditions from October 2025",
+    excerpt: "Airbnb has announced an important update to its cancellation policies for short stays. From 1 October 2025, all bookings of 27 nights or fewer will be subject to new conditions.",
+    content: `
+## New Cancellation Framework
+
+Airbnb has implemented significant changes to its cancellation policies, affecting both hosts and guests worldwide.
+
+### Key Changes
+
+The updated policies include:
+
+- **Stricter timelines** for free cancellation
+- **Improved host protection** against last-minute cancellations
+- **Clearer refund structures** for guests
+- **Enhanced flexibility options** for premium listings
+
+### Impact on Hosts
+
+Property managers should be aware of:
+
+1. **New default policies** automatically applied to listings
+2. **Options to upgrade** to more protective policies
+3. **Changes to payout timelines** for cancelled bookings
+4. **Updated review policies** for cancellation-related disputes
+
+### What Guests Should Know
+
+Travellers booking after October 2025:
+
+- Review cancellation terms carefully before booking
+- Understand the new refund tiers
+- Consider travel insurance for added protection
+- Check individual listing policies for variations
+
+### Recommendations for Property Managers
+
+To adapt to these changes:
+
+- Review and update your cancellation policy settings
+- Communicate changes to repeat guests
+- Train staff on new procedures
+- Monitor cancellation patterns for adjustments
+    `,
+    category: "Industry news",
+    date: "2026-01-15",
+    readTime: 3,
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+  },
+  {
+    id: "3",
+    slug: "cantabria-noise-sensors-regulation",
+    title: "Cantabria requires noise sensors in holiday rentals: new regulation now in effect",
+    excerpt: "The Government of Cantabria has officially approved Decree 50/2025—a pivotal piece of legislation aimed at regulating short-term rental properties, enhancing legal certainty, and improving neighbourhood relations.",
+    content: `
+## Landmark Regulation in Cantabria
+
+Cantabria has become one of the first Spanish regions to mandate noise monitoring devices in vacation rentals, setting a precedent for responsible tourism legislation.
+
+### The New Requirements
+
+Decree 50/2025 establishes:
+
+- **Mandatory noise sensors** in all licensed vacation rentals
+- **Maximum decibel thresholds** during quiet hours
+- **Reporting requirements** for property operators
+- **Penalties for non-compliance** up to €30,000
+
+### Implementation Timeline
+
+Property operators must comply by:
+
+1. **March 2026** - All new registrations require noise sensors
+2. **September 2026** - Existing properties must retrofit devices
+3. **December 2026** - Full enforcement begins
+
+### Why This Matters
+
+This regulation addresses:
+
+- Growing concerns from residential communities
+- The need for professional management standards
+- Balance between tourism and quality of life
+- Setting national precedent for other regions
+
+### How Roomonitor Helps
+
+Roomonitor devices are fully compliant with the new regulation, offering:
+
+- Real-time noise monitoring without audio recording
+- Automated alerts and documentation
+- Integration with property management systems
+- Evidence for compliance demonstrations
+    `,
+    category: "Industry news",
+    date: "2026-01-12",
+    readTime: 4,
+    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+  },
+  {
+    id: "4",
     slug: "hawaii-short-term-rental-laws-2026",
     title: "Hawaii short-term rental laws in 2026: state rules, county bans, taxes, and enforcement explained",
     excerpt: "This article explores how Hawaii's 2026 short-term rental laws concentrate vacation rentals in resort and visitor zones, give counties explicit power to phase out STRs in residential areas.",
@@ -140,17 +230,16 @@ To stay compliant in Hawaii:
 - Follow occupancy and noise rules
 - Maintain insurance coverage
     `,
-    category: "Vacation Rentals",
-    author: "Richard White",
-    date: "2026-01-14",
-    readTime: 4,
+    category: "Vacation rentals",
+    date: "2026-01-10",
+    readTime: 5,
     image: "https://images.unsplash.com/photo-1507876466758-bc54f384809c?w=800&h=600&fit=crop",
   },
   {
-    id: "3",
+    id: "5",
     slug: "acceptable-decibel-levels-noise-guide",
     title: "Acceptable decibel levels: noise limit and quiet hours guide for Airbnb and STR hosts",
-    excerpt: "This article explains how noise limits affect short-term rentals, the varying acceptable decible levels for different times of day, and how hosts can prevent complaints.",
+    excerpt: "This article explains how noise limits affect short-term rentals, the varying acceptable decibel levels for different times of day, and how hosts can prevent complaints.",
     content: `
 ## Understanding Decibel Levels for Vacation Rentals
 
@@ -193,86 +282,14 @@ Proactive measures include:
 - **Clear communication** - Pre-arrival messages
 - **Guest screening** - Review history
 - **Property design** - Soundproofing where possible
-
-### Handling Violations
-
-When noise exceeds thresholds:
-
-1. Send automated warning to guests
-2. Follow up with personal message if needed
-3. Contact guests directly for serious issues
-4. Document all incidents
     `,
-    category: "Vacation Rentals",
-    author: "Richard White",
-    date: "2026-01-05",
+    category: "Vacation rentals",
+    date: "2026-01-08",
     readTime: 5,
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
   },
   {
-    id: "4",
-    slug: "denver-short-term-rental-laws-2026",
-    title: "Denver short-term rental laws: the complete guide for hosts and property managers (2026)",
-    excerpt: "This article explains how Denver regulates short-term rentals and what you must do to stay compliant, from proving primary residence to getting licensed.",
-    content: `
-## Denver's STR Regulatory Framework
-
-Denver has established comprehensive regulations for short-term rentals that balance tourism benefits with neighborhood preservation.
-
-### License Requirements
-
-To operate legally in Denver:
-
-- **Primary Residence Rule** - Must be your primary home
-- **Annual License** - Required for all STR operations
-- **Inspection** - Initial and periodic safety checks
-- **Insurance** - Minimum liability coverage
-
-### Application Process
-
-Steps to get licensed:
-
-1. Verify property eligibility
-2. Submit online application
-3. Provide proof of primary residence
-4. Schedule safety inspection
-5. Pay licensing fees
-6. Receive approval
-
-### Operational Rules
-
-Once licensed, you must:
-
-- Display license number in all listings
-- Collect and remit lodger's tax
-- Maintain safety equipment
-- Respond to complaints within 24 hours
-- Limit occupancy per regulations
-
-### Tax Obligations
-
-Denver requires collection of:
-
-- **Lodger's Tax** - 10.75%
-- **Tourism Improvement District** - Varies by zone
-- **State Sales Tax** - 2.9%
-
-### Enforcement and Penalties
-
-Non-compliance can result in:
-
-- Fines up to $999 per violation
-- License revocation
-- Legal action for repeated offenses
-    `,
-    category: "Vacation Rentals",
-    author: "Richard White",
-    date: "2025-12-05",
-    readTime: 5,
-    image: "https://images.unsplash.com/photo-1546156929-a4c0ac411f47?w=800&h=600&fit=crop",
-  },
-  {
-    id: "5",
+    id: "6",
     slug: "hotel-occupancy-monitoring-trends",
     title: "Hotel occupancy monitoring: 2026 trends and technologies for property managers",
     excerpt: "Discover the latest technologies transforming hotel occupancy monitoring, from IoT sensors to AI-powered analytics that optimize operations.",
@@ -318,13 +335,12 @@ Modern systems connect with property management to:
 - Generate occupancy reports
     `,
     category: "Hotels",
-    author: "Maria Santos",
-    date: "2026-01-10",
+    date: "2026-01-05",
     readTime: 6,
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
   },
   {
-    id: "6",
+    id: "7",
     slug: "property-management-automation-2026",
     title: "Property management automation: streamlining operations with smart technology",
     excerpt: "Learn how automation is revolutionizing property management, from guest communications to maintenance scheduling and everything in between.",
@@ -361,209 +377,154 @@ Property managers report:
 - 40% faster response times
 - 25% improvement in guest satisfaction
 - 35% decrease in operational costs
-
-### Future Trends
-
-Emerging capabilities include:
-
-- AI-powered pricing optimization
-- Predictive maintenance
-- Voice-controlled property access
-- Autonomous cleaning robots
     `,
     category: "Property Management",
-    author: "James Chen",
-    date: "2026-01-08",
+    date: "2026-01-03",
     readTime: 5,
     image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&h=600&fit=crop",
   },
   {
-    id: "7",
-    slug: "short-term-rental-industry-2026-outlook",
-    title: "Short-term rental industry outlook: what property managers need to know in 2026",
-    excerpt: "An analysis of market trends, regulatory changes, and technology adoption shaping the short-term rental industry this year.",
-    content: `
-## Industry Overview for 2026
-
-The short-term rental industry continues to mature, with professionalization and regulation defining the landscape.
-
-### Market Trends
-
-Key trends shaping the industry:
-
-- **Consolidation** - Larger operators acquiring smaller ones
-- **Professionalization** - Higher standards expected
-- **Technology Adoption** - Smart home integration standard
-- **Sustainability** - Eco-friendly practices valued
-
-### Regulatory Environment
-
-Regulatory changes to watch:
-
-1. More cities implementing registration requirements
-2. Tax collection enforcement increasing
-3. Safety standards becoming uniform
-4. Data sharing with authorities
-
-### Guest Expectations
-
-Travelers in 2026 expect:
-
-- Seamless digital check-in
-- High-speed reliable WiFi
-- Smart home amenities
-- Instant communication
-- Sustainable practices
-
-### Competitive Positioning
-
-To succeed in 2026:
-
-- Invest in technology infrastructure
-- Maintain compliance across jurisdictions
-- Focus on guest experience
-- Build strong review profiles
-- Diversify booking channels
-    `,
-    category: "Industry News",
-    author: "Sarah Johnson",
-    date: "2026-01-03",
-    readTime: 4,
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-  },
-  {
     id: "8",
-    slug: "smart-home-technology-vacation-rentals",
-    title: "Smart home technology essentials for vacation rentals in 2026",
-    excerpt: "A comprehensive guide to the smart home technologies that modern vacation rentals need to stay competitive and efficient.",
+    slug: "vacation-rental-events-management",
+    title: "Managing events and gatherings in vacation rentals: a complete guide",
+    excerpt: "How to handle party requests, set clear policies, and use technology to prevent unauthorized gatherings while maintaining positive guest relationships.",
     content: `
-## Smart Technology for Modern Rentals
+## Event Management for Vacation Rentals
 
-Smart home technology has moved from luxury to necessity in the vacation rental industry.
+Balancing hospitality with property protection requires clear policies and smart monitoring when it comes to events and gatherings.
 
-### Essential Smart Devices
+### Setting Clear Policies
 
-Every modern rental should consider:
+Define your stance on events:
 
-- **Smart Locks** - Keyless, code-based entry
-- **Thermostats** - Remote temperature control
-- **Noise Monitors** - Privacy-compliant monitoring
-- **Security Cameras** - Exterior only
-- **Smart Lighting** - Automated schedules
+- **No events policy** - Strictest approach
+- **Approved gatherings only** - Case-by-case basis
+- **Small gatherings permitted** - With clear limits
+- **Event-friendly properties** - Designed for gatherings
 
-### Guest Experience Benefits
+### Prevention Strategies
 
-Smart technology improves stays by:
+Reduce unauthorized event risks:
 
-1. Eliminating key handoff logistics
-2. Maintaining comfortable temperatures
-3. Providing reliable WiFi
-4. Enabling self-service check-in
-5. Offering entertainment options
+1. **Clear listing descriptions** - State policies upfront
+2. **Guest verification** - Review booking patterns
+3. **Smart monitoring** - Noise and occupancy alerts
+4. **Security deposits** - Financial accountability
 
-### Operational Advantages
+### Technology Solutions
 
-For property managers:
+Use technology to prevent issues:
 
-- Remote monitoring and control
-- Automated guest access
-- Energy cost reduction
-- Maintenance alerts
-- Turnover efficiency
+- **Noise monitors** - Alert before neighbours complain
+- **Occupancy sensors** - Detect unusual numbers
+- **Smart access** - Control entry points
+- **Outdoor cameras** - Monitor common areas
 
-### Integration Best Practices
+### Handling Violations
 
-Successful smart home implementation:
+When events occur without permission:
 
-- Choose compatible ecosystems
-- Prioritize reliability over features
-- Provide clear guest instructions
-- Maintain backup access methods
-- Regular firmware updates
+1. Receive automated alert
+2. Contact guests immediately
+3. Document the situation
+4. Enforce consequences as stated
+5. Review for future prevention
     `,
-    category: "Technology",
-    author: "Alex Rivera",
+    category: "Events",
     date: "2025-12-28",
-    readTime: 5,
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&h=600&fit=crop",
+    readTime: 4,
+    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=600&fit=crop",
   },
   {
     id: "9",
-    slug: "guest-screening-best-practices",
-    title: "Guest screening best practices: protecting your property while welcoming travelers",
-    excerpt: "Learn effective strategies for screening vacation rental guests that balance property protection with creating a welcoming experience.",
+    slug: "roomonitor-device-installation-guide",
+    title: "How to install and configure your Roomonitor device: step-by-step guide",
+    excerpt: "A comprehensive guide to installing Roomonitor devices in your properties, including optimal placement, WiFi setup, and threshold configuration.",
     content: `
-## Effective Guest Screening Strategies
+## Getting Started with Roomonitor
 
-Screening guests appropriately protects your property while maintaining a welcoming atmosphere.
+Installing your Roomonitor device is straightforward. Follow this guide to ensure optimal performance and reliable monitoring.
 
-### Why Screening Matters
+### Before You Begin
 
-Proper screening prevents:
+Ensure you have:
 
-- Property damage
-- Unauthorized parties
-- Neighborhood complaints
-- Insurance claims
-- Platform penalties
+- Your Roomonitor device
+- Stable WiFi connection (2.4GHz)
+- The Roomonitor Manager app installed
+- Property details ready for configuration
 
-### Screening Methods
+### Installation Steps
 
-Effective approaches include:
+#### Step 1: Choose the Location
 
-1. **Platform Verification** - ID and profile checks
-2. **Communication** - Ask about trip purpose
-3. **Review History** - Check past stays
-4. **Booking Patterns** - Flag unusual requests
-5. **Third-Party Services** - Background checks
+Optimal placement considerations:
 
-### Red Flags to Watch
+- **Central common area** for best coverage
+- **Wall-mounted** at 2-3 meters height
+- **Away from** direct sound sources (TV, speakers)
+- **Visible to guests** for transparency
 
-Warning signs include:
+#### Step 2: Connect to Power
 
-- Last-minute local bookings
-- Reluctance to provide information
-- Requests to book off-platform
-- Negative review history
-- Unreasonable requests
+- Use the provided power adapter
+- Ensure stable power supply
+- Consider backup power for critical monitoring
 
-### Balancing Protection and Hospitality
+#### Step 3: WiFi Configuration
 
-Maintain positive experiences by:
+1. Open the Roomonitor Manager app
+2. Select "Add New Device"
+3. Follow on-screen prompts
+4. Enter your WiFi credentials
+5. Wait for connection confirmation
 
-- Being friendly in communications
-- Explaining policies upfront
-- Trusting verified guests
-- Using technology for monitoring
-- Responding professionally to issues
+#### Step 4: Set Thresholds
+
+Configure appropriate levels:
+
+- **Daytime threshold** - Typically 70 dB
+- **Night threshold** - Typically 55 dB
+- **Quiet hours** - Define start and end times
+- **Alert delay** - How long before notification
+
+### Testing Your Setup
+
+After installation:
+
+- Generate test sounds at various levels
+- Verify alerts are received correctly
+- Adjust thresholds if needed
+- Train your team on response procedures
     `,
-    category: "Property Management",
-    author: "Maria Santos",
+    category: "Roomonitor",
     date: "2025-12-20",
-    readTime: 4,
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+    readTime: 6,
+    image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&h=600&fit=crop",
   },
 ];
+
+export const getFeaturedPost = (): BlogPost | undefined => {
+  return blogPosts.find((post) => post.featured);
+};
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return blogPosts.find((post) => post.slug === slug);
 };
 
 export const getPostsByCategory = (category: string): BlogPost[] => {
-  if (category === "All categories") return blogPosts;
+  if (category === "All categories") {
+    return blogPosts;
+  }
   return blogPosts.filter((post) => post.category === category);
 };
 
 export const searchPosts = (query: string): BlogPost[] => {
-  const lowercaseQuery = query.toLowerCase();
+  const lowerQuery = query.toLowerCase();
   return blogPosts.filter(
     (post) =>
-      post.title.toLowerCase().includes(lowercaseQuery) ||
-      post.excerpt.toLowerCase().includes(lowercaseQuery) ||
-      post.category.toLowerCase().includes(lowercaseQuery)
+      post.title.toLowerCase().includes(lowerQuery) ||
+      post.excerpt.toLowerCase().includes(lowerQuery) ||
+      post.category.toLowerCase().includes(lowerQuery)
   );
-};
-
-export const getFeaturedPost = (): BlogPost | undefined => {
-  return blogPosts.find((post) => post.featured);
 };

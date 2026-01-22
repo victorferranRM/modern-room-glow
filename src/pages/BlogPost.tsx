@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Calendar, Clock, ArrowLeft, User, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getPostBySlug, blogPosts } from "@/lib/blog-data";
 
@@ -54,33 +54,29 @@ const BlogPost = () => {
             {/* Back Link */}
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
             </Link>
 
             {/* Category */}
-            <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-6">
+            <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
               {post.category}
             </span>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight tracking-tight">
               {post.title}
             </h1>
 
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                {post.author}
-              </span>
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 font-medium">
                 <Calendar className="w-4 h-4" />
                 {formatDate(post.date)}
               </span>
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 font-medium">
                 <Clock className="w-4 h-4" />
                 {post.readTime} min read
               </span>
@@ -88,7 +84,7 @@ const BlogPost = () => {
                 variant="ghost"
                 size="sm"
                 onClick={handleShare}
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 font-medium"
               >
                 <Share2 className="w-4 h-4" />
                 Share
@@ -96,7 +92,7 @@ const BlogPost = () => {
             </div>
 
             {/* Excerpt */}
-            <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6 mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6 mb-8 font-light">
               {post.excerpt}
             </p>
           </AnimatedSection>
@@ -111,7 +107,7 @@ const BlogPost = () => {
             delay={0.1}
             className="max-w-5xl mx-auto"
           >
-            <div className="aspect-[21/9] rounded-2xl overflow-hidden">
+            <div className="aspect-[21/9] rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={post.image}
                 alt={post.title}
@@ -130,17 +126,17 @@ const BlogPost = () => {
             delay={0.2}
             className="max-w-3xl mx-auto"
           >
-            <article className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-serif prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-li:text-muted-foreground">
+            <article className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-muted-foreground prose-p:font-light prose-p:leading-relaxed prose-a:text-primary prose-strong:text-foreground prose-li:text-muted-foreground prose-li:font-light">
               <div
                 dangerouslySetInnerHTML={{
                   __html: post.content
-                    .replace(/^## (.+)$/gm, '<h2 class="text-2xl font-serif mt-12 mb-6">$1</h2>')
-                    .replace(/^### (.+)$/gm, '<h3 class="text-xl font-semibold mt-8 mb-4">$1</h3>')
-                    .replace(/^#### (.+)$/gm, '<h4 class="text-lg font-semibold mt-6 mb-3">$1</h4>')
+                    .replace(/^## (.+)$/gm, '<h2 class="text-2xl font-bold mt-12 mb-6 tracking-tight">$1</h2>')
+                    .replace(/^### (.+)$/gm, '<h3 class="text-xl font-semibold mt-8 mb-4 tracking-tight">$1</h3>')
+                    .replace(/^#### (.+)$/gm, '<h4 class="text-lg font-semibold mt-6 mb-3 tracking-tight">$1</h4>')
                     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                    .replace(/^- (.+)$/gm, '<li class="ml-6 list-disc">$1</li>')
-                    .replace(/^(\d+)\. (.+)$/gm, '<li class="ml-6 list-decimal">$2</li>')
-                    .replace(/\n\n/g, '</p><p class="mb-6 leading-relaxed">')
+                    .replace(/^- (.+)$/gm, '<li class="ml-6 list-disc font-light">$1</li>')
+                    .replace(/^(\d+)\. (.+)$/gm, '<li class="ml-6 list-decimal font-light">$2</li>')
+                    .replace(/\n\n/g, '</p><p class="mb-6 leading-relaxed font-light">')
                     .replace(/\|(.+)\|/g, (match) => {
                       const cells = match.split('|').filter(Boolean);
                       return `<tr>${cells.map(cell => `<td class="border border-muted px-4 py-2">${cell.trim()}</td>`).join('')}</tr>`;
@@ -148,29 +144,21 @@ const BlogPost = () => {
                 }}
               />
             </article>
-          </AnimatedSection>
-        </div>
-      </section>
 
-      {/* Author Box */}
-      <section className="pb-16">
-        <div className="container mx-auto px-4">
-          <AnimatedSection
-            animation="fade-up"
-            className="max-w-3xl mx-auto"
-          >
-            <div className="bg-muted/50 rounded-2xl p-8 flex items-center gap-6">
-              <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <User className="w-10 h-10 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  {post.author}
+            {/* CTA Button */}
+            <div className="mt-12 pt-8 border-t border-border">
+              <div className="bg-muted/50 rounded-2xl p-8 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">
+                  Ready to protect your properties?
                 </h3>
-                <p className="text-muted-foreground">
-                  Contributing writer specializing in property management,
-                  vacation rentals, and hospitality technology.
+                <p className="text-muted-foreground mb-6 font-light">
+                  Get started with Roomonitor and ensure peace of mind for you and your neighbours.
                 </p>
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                  <Link to="/contact">
+                    Get in touch
+                  </Link>
+                </Button>
               </div>
             </div>
           </AnimatedSection>
@@ -182,7 +170,7 @@ const BlogPost = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <AnimatedSection animation="fade-up" className="text-center mb-12">
-              <h2 className="text-3xl font-serif text-foreground">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground">
                 Related Articles
               </h2>
             </AnimatedSection>
@@ -199,7 +187,7 @@ const BlogPost = () => {
                       to={`/blog/${relatedPost.slug}`}
                       className="block mb-4"
                     >
-                      <div className="aspect-[16/10] rounded-xl overflow-hidden">
+                      <div className="aspect-[16/10] rounded-xl overflow-hidden bg-muted">
                         <img
                           src={relatedPost.image}
                           alt={relatedPost.title}
@@ -208,17 +196,17 @@ const BlogPost = () => {
                       </div>
                     </Link>
 
-                    <span className="inline-block border border-primary/50 text-primary text-xs px-3 py-1 rounded-full mb-3">
+                    <span className="inline-block border border-primary/50 text-primary text-xs px-3 py-1 rounded-full mb-3 font-medium">
                       {relatedPost.category}
                     </span>
 
-                    <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold text-foreground mb-2 leading-tight tracking-tight group-hover:text-primary transition-colors line-clamp-2">
                       <Link to={`/blog/${relatedPost.slug}`}>
                         {relatedPost.title}
                       </Link>
                     </h3>
 
-                    <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                    <div className="flex items-center gap-3 text-muted-foreground text-sm font-medium">
                       <span className="flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5" />
                         {relatedPost.readTime} min
