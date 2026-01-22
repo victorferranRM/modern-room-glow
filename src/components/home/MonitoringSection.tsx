@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Volume2, Users, Wind, Thermometer, Calculator } from "lucide-react";
+import { Volume2, Users, Wind, Thermometer, Calculator, ArrowRight, ChevronRight } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,7 @@ interface MonitoringDimension {
   shortDesc: string;
   description: string;
   image: string;
+  href: string;
   hasCalculator?: boolean;
   visual: {
     title: string;
@@ -36,6 +37,7 @@ const monitoringDimensions: MonitoringDimension[] = [
     shortDesc: "Prevent disturbances before they escalate",
     description: "Real-time sound level tracking helps identify potential party situations or disturbances.",
     image: monitoringNoise,
+    href: "/monitoring/noise",
     visual: {
       title: "Sound Level",
       value: "42 dB",
@@ -51,6 +53,7 @@ const monitoringDimensions: MonitoringDimension[] = [
     shortDesc: "Detect overcrowding and guest limit breaches",
     description: "Identify when properties exceed expected guest counts, helping enforce house rules.",
     image: monitoringOccupancy,
+    href: "/monitoring/occupancy",
     visual: {
       title: "Guest Activity",
       value: "4 guests",
@@ -66,6 +69,7 @@ const monitoringDimensions: MonitoringDimension[] = [
     shortDesc: "Identify tobacco smoke and protect the asset",
     description: "Detect cigarette or tobacco smoke presence to enforce non-smoking policies.",
     image: monitoringAir,
+    href: "/monitoring/smoke",
     hasCalculator: true,
     visual: {
       title: "Air Particles",
@@ -82,6 +86,7 @@ const monitoringDimensions: MonitoringDimension[] = [
     shortDesc: "Monitor temperature, humidity and air quality",
     description: "Track environmental factors that could lead to property damage before they become costly.",
     image: monitoringEnvironment,
+    href: "/monitoring/environment",
     visual: {
       title: "Environment",
       value: "22°C / 45%",
@@ -148,9 +153,9 @@ export function MonitoringSection() {
 
           {/* Interactive Content - Tabs (1/3) + Image (2/3) side by side */}
           <AnimatedSection delay={200}>
-            <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
-              {/* Left: Compact Tabs (1/3) */}
-              <div className="flex flex-col gap-3">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+              {/* Left: Compact Tabs */}
+              <div className="flex flex-col gap-2">
                 {monitoringDimensions.map((dimension, index) => {
                   const Icon = dimension.icon;
                   const isActive = activeIndex === index;
@@ -160,7 +165,7 @@ export function MonitoringSection() {
                       key={dimension.id}
                       onClick={() => handleTabChange(index)}
                       className={cn(
-                        "w-full text-left p-4 lg:p-5 rounded-xl border transition-all duration-300 group",
+                        "w-full text-left p-3 lg:p-4 rounded-xl border transition-all duration-300 group",
                         isActive 
                           ? "bg-card border-primary/30 shadow-soft" 
                           : "bg-card/50 border-border hover:bg-card hover:border-primary/20"
@@ -168,22 +173,22 @@ export function MonitoringSection() {
                     >
                       <div className="flex items-center gap-3">
                         <div className={cn(
-                          "w-10 h-10 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300",
+                          "w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300",
                           isActive 
                             ? "bg-primary text-primary-foreground" 
                             : "bg-secondary text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
                         )}>
-                          <Icon className="w-5 h-5 lg:w-6 lg:h-6" />
+                          <Icon className="w-5 h-5" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className={cn(
-                            "font-semibold text-sm lg:text-base mb-0.5 transition-colors duration-300",
+                            "font-semibold text-sm mb-0.5 transition-colors duration-300",
                             isActive ? "text-foreground" : "text-foreground/80"
                           )}>
                             {dimension.label}
                           </h3>
                           <p className={cn(
-                            "text-xs lg:text-sm transition-colors duration-300 line-clamp-2",
+                            "text-xs transition-colors duration-300 line-clamp-1",
                             isActive ? "text-muted-foreground" : "text-muted-foreground/70"
                           )}>
                             {dimension.shortDesc}
@@ -201,122 +206,140 @@ export function MonitoringSection() {
                 })}
               </div>
 
-              {/* Right: Visual Area with Background Image (2/3) */}
-              <div className="lg:col-span-2">
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-                  {/* Background Image with fade transition */}
-                  {monitoringDimensions.map((dimension, index) => (
-                    <div
-                      key={dimension.id}
-                      className={cn(
-                        "absolute inset-0 transition-opacity duration-500",
-                        activeIndex === index ? "opacity-100" : "opacity-0"
-                      )}
-                    >
-                      <img
-                        src={dimension.image}
-                        alt={dimension.label}
-                        className="w-full h-full object-cover"
-                      />
-                      {/* Dark overlay for readability */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20" />
+              {/* Right: Visual Area with Background Image */}
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto">
+                {/* Background Image with fade transition */}
+                {monitoringDimensions.map((dimension, index) => (
+                  <div
+                    key={dimension.id}
+                    className={cn(
+                      "absolute inset-0 transition-opacity duration-500",
+                      activeIndex === index ? "opacity-100" : "opacity-0"
+                    )}
+                  >
+                    <img
+                      src={dimension.image}
+                      alt={dimension.label}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Dark overlay for readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20" />
+                  </div>
+                ))}
+
+                {/* CTA Button overlaid on image */}
+                <Link
+                  to={activeDimension.href}
+                  className={cn(
+                    "absolute top-4 right-4 z-20 flex items-center gap-2 px-4 py-2 rounded-full bg-card backdrop-blur-sm text-foreground text-sm font-medium hover:bg-secondary transition-all duration-300 shadow-lg",
+                    isTransitioning ? "opacity-0" : "opacity-100"
+                  )}
+                >
+                  Learn more
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+
+                {/* Floating Card - Centered with entrance animation */}
+                <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
+                  <div 
+                    className={cn(
+                      "w-full max-w-xs bg-card/95 backdrop-blur-md rounded-xl border shadow-soft-lg overflow-hidden transition-all duration-500",
+                      isTransitioning 
+                        ? "opacity-0 translate-y-4 scale-95" 
+                        : "opacity-100 translate-y-0 scale-100"
+                    )}
+                  >
+                    {/* Card Header */}
+                    <div className="p-3 border-b bg-secondary/30">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                            {(() => {
+                              const Icon = activeDimension.icon;
+                              return <Icon className="w-4 h-4 text-primary" />;
+                            })()}
+                          </div>
+                          <div>
+                            <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                              Live
+                            </div>
+                            <div className="font-semibold text-xs">{activeDimension.visual.title}</div>
+                          </div>
+                        </div>
+                        <div className={cn(
+                          "px-2 py-0.5 rounded-full text-[10px] font-medium border flex items-center gap-1",
+                          getStatusColor(activeDimension.visual.status)
+                        )}>
+                          <span className={cn(
+                            "w-1.5 h-1.5 rounded-full animate-pulse",
+                            getStatusDotColor(activeDimension.visual.status)
+                          )} />
+                          {activeDimension.visual.statusLabel}
+                        </div>
+                      </div>
                     </div>
-                  ))}
 
-                  {/* Floating Card - Centered with entrance animation */}
-                  <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-                    <div 
-                      className={cn(
-                        "w-full max-w-sm bg-card/95 backdrop-blur-md rounded-xl border shadow-soft-lg overflow-hidden transition-all duration-500 animate-in fade-in slide-in-from-bottom-8 duration-700",
-                        isTransitioning 
-                          ? "opacity-0 translate-y-4 scale-95" 
-                          : "opacity-100 translate-y-0 scale-100"
-                      )}
-                    >
-                      {/* Card Header */}
-                      <div className="p-4 border-b bg-secondary/30">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                              {(() => {
-                                const Icon = activeDimension.icon;
-                                return <Icon className="w-4 h-4 text-primary" />;
-                              })()}
-                            </div>
-                            <div>
-                              <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
-                                Live
-                              </div>
-                              <div className="font-semibold text-sm">{activeDimension.visual.title}</div>
-                            </div>
-                          </div>
-                          <div className={cn(
-                            "px-2.5 py-1 rounded-full text-[10px] font-medium border flex items-center gap-1.5",
-                            getStatusColor(activeDimension.visual.status)
-                          )}>
-                            <span className={cn(
-                              "w-1.5 h-1.5 rounded-full animate-pulse",
-                              getStatusDotColor(activeDimension.visual.status)
-                            )} />
-                            {activeDimension.visual.statusLabel}
-                          </div>
-                        </div>
+                    {/* Main Value */}
+                    <div className="p-3 text-center">
+                      <div className="text-2xl font-bold text-foreground mb-1">
+                        {activeDimension.visual.value}
                       </div>
+                      <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">
+                        {activeDimension.description}
+                      </p>
+                    </div>
 
-                      {/* Main Value */}
-                      <div className="p-4 text-center">
-                        <div className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
-                          {activeDimension.visual.value}
-                        </div>
-                        <p className="text-muted-foreground text-xs leading-relaxed">
-                          {activeDimension.description}
-                        </p>
-                      </div>
-
-                      {/* Details */}
-                      <div className="px-4 pb-4">
-                        <div className="grid grid-cols-3 gap-2">
-                          {activeDimension.visual.details.map((detail, idx) => (
-                            <div 
-                              key={idx}
-                              className="bg-secondary/50 rounded-lg px-2 py-1.5 text-center"
-                            >
-                              <div className="text-[10px] text-muted-foreground">{detail}</div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Calculator Button - Only for smoking */}
-                      {activeDimension.hasCalculator && (
-                        <div className="px-4 pb-4">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="w-full text-sm h-9 gap-2"
-                            asChild
+                    {/* Details */}
+                    <div className="px-3 pb-3">
+                      <div className="grid grid-cols-3 gap-1">
+                        {activeDimension.visual.details.map((detail, idx) => (
+                          <div 
+                            key={idx}
+                            className="bg-secondary/50 rounded-lg px-1.5 py-1 text-center"
                           >
-                            <Link to="/resources/savings-calculator">
-                              <Calculator className="w-4 h-4" />
-                              Calculate Savings
-                            </Link>
-                          </Button>
-                        </div>
-                      )}
+                            <div className="text-[9px] text-muted-foreground">{detail}</div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
+
+                    {/* Calculator Button - Only for smoking */}
+                    {activeDimension.hasCalculator && (
+                      <div className="px-3 pb-3">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full text-xs h-8 gap-1"
+                          asChild
+                        >
+                          <Link to="/resources/savings-calculator">
+                            <Calculator className="w-3 h-3" />
+                            Calculate Savings
+                          </Link>
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Operations connection - Full width below */}
+          {/* Operations connection + CTA - Full width below */}
           <AnimatedSection delay={400} className="mt-8">
             <div className="bg-foreground/5 rounded-2xl p-6 lg:p-8 border border-foreground/5">
-              <p className="text-base lg:text-lg text-muted-foreground text-center leading-relaxed max-w-3xl mx-auto">
+              <p className="text-base lg:text-lg text-muted-foreground text-center leading-relaxed max-w-3xl mx-auto mb-6">
                 <span className="text-foreground font-semibold">Integrated with operations:</span>{" "}
                 Monitoring data feeds our Control Center and Field Service teams, enabling faster and more informed decisions.
               </p>
+              <div className="flex justify-center">
+                <Button asChild className="gap-2">
+                  <Link to="/monitoring">
+                    Discover the Roomonitor Device
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </AnimatedSection>
         </div>

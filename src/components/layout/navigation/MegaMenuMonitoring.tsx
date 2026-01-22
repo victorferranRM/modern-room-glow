@@ -10,31 +10,19 @@ export function MegaMenuMonitoring() {
   return (
     <div className="w-full max-w-5xl mx-auto p-8">
       <div className="grid grid-cols-5 gap-8">
-        {/* Left - Device showcase */}
-        <div className="col-span-2 relative rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-muted/50 p-6">
-          <div className="relative z-10">
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              Roomonitor Device
-            </h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              All-in-one monitoring for noise, occupancy, air quality, and more.
-            </p>
-            <Button size="sm" variant="default" asChild className="group">
-              <Link to="/monitoring">
-                Discover the device
-                <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-          </div>
-          
-          {/* Device Image */}
-          <div className="mt-6">
-            <img 
-              src={roomonitorDevice}
-              alt="Roomonitor Device"
-              className="w-full max-w-[200px] mx-auto rounded-xl shadow-lg object-cover"
-            />
-          </div>
+        {/* Left - Device showcase (simplified) */}
+        <div className="col-span-2 flex flex-col items-center justify-center">
+          <img 
+            src={roomonitorDevice}
+            alt="Roomonitor Device"
+            className="w-full max-w-[220px] rounded-2xl shadow-lg object-cover mb-6"
+          />
+          <Button size="default" variant="default" asChild className="group">
+            <Link to="/monitoring">
+              Discover the device
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </div>
 
         {/* Right - Monitoring options */}
