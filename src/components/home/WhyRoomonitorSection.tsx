@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
+import { caseStudies } from "@/lib/case-studies-data";
 
 const stats = [
   { number: 11, suffix: "M+", description: "Stays protected across our platform" },
@@ -9,48 +11,17 @@ const stats = [
   { number: 250, suffix: "+", description: "Hotels trust Roomonitor worldwide" },
 ];
 
-const caseStudies = [
-  {
-    id: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    name: "María García",
-    position: "Operations Director, Barcelona Hotels",
-    quote: "Since implementing Roomonitor, we've reduced noise complaints by 80% and our guest satisfaction scores have never been higher. The real-time alerts allow our team to act before issues escalate.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    name: "Urs Möller",
-    position: "CEO, Berlin Apartments",
-    quote: "Sometimes guests leave a day early, and before Roomonitor, we wouldn't know until check-out time. Now, we can detect the lack of activity and start cleaning early, which speeds up turnovers.",
-    rating: 5,
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
-    name: "James Wilson",
-    position: "Property Manager, London Stays",
-    quote: "The integration with our PMS was seamless. Roomonitor's team operates as if they were part of our staff—guests don't even know there's a third party involved.",
-    rating: 5,
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
-    name: "Sophie Martin",
-    position: "GM, Paris Boutique Hotels",
-    quote: "We've seen a 60% reduction in unauthorized gatherings since installing the sensors. The ROI was evident within the first quarter.",
-    rating: 5,
-  },
-  {
-    id: 5,
-    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-    name: "Carlos Ruiz",
-    position: "Director, Madrid Vacation Rentals",
-    quote: "Roomonitor gives us peace of mind. We can manage 50+ properties remotely knowing that any issue will be flagged immediately to our team.",
-    rating: 5,
-  },
-];
+// Map case studies to display format with testimonials
+const caseStudyTestimonials = caseStudies.slice(0, 5).map((study, index) => ({
+  id: index + 1,
+  slug: study.slug,
+  image: study.heroImage,
+  name: study.quote?.author || study.company,
+  position: study.quote?.role || `${study.industry}, ${study.location}`,
+  quote: study.quote?.text || study.summary,
+  company: study.company,
+  rating: 5,
+}));
 
 // Animated counter hook
 const useCountUp = (end: number, duration: number = 2000, startOnView: boolean = true) => {
@@ -136,7 +107,7 @@ export const WhyRoomonitorSection = () => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % caseStudies.length);
+        setActiveIndex((prev) => (prev + 1) % caseStudyTestimonials.length);
         setIsTransitioning(false);
       }, 300);
     }, 8000);
@@ -153,7 +124,7 @@ export const WhyRoomonitorSection = () => {
     }, 300);
   };
 
-  const activeStudy = caseStudies[activeIndex];
+  const activeStudy = caseStudyTestimonials[activeIndex];
 
   return (
     <section className="py-20 md:py-28 bg-secondary/50">
@@ -190,9 +161,14 @@ export const WhyRoomonitorSection = () => {
               >
                 <img
                   src={activeStudy.image}
-                  alt={activeStudy.name}
+                  alt={activeStudy.company}
                   className="w-full h-full object-cover"
                 />
+              </div>
+              
+              {/* Logo overlay */}
+              <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
+                <span className="text-lg font-bold text-foreground">{activeStudy.company.charAt(0)}</span>
               </div>
               
               {/* Overlay gradient */}
@@ -225,9 +201,11 @@ export const WhyRoomonitorSection = () => {
                     <p className="font-semibold text-foreground">{activeStudy.name}</p>
                     <p className="text-xs text-muted-foreground">{activeStudy.position}</p>
                   </div>
-                  <Button size="sm" variant="default">
-                    Read case study
-                    <ArrowRight className="ml-1 h-3 w-3" />
+                  <Button size="sm" variant="default" asChild>
+                    <Link to={`/resources/case-studies/${activeStudy.slug}`}>
+                      Read case study
+                      <ArrowRight className="ml-1 h-3 w-3" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -235,7 +213,7 @@ export const WhyRoomonitorSection = () => {
 
             {/* Navigation Dots */}
             <div className="flex justify-center gap-2 mt-6">
-              {caseStudies.map((_, index) => (
+              {caseStudyTestimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => handleDotClick(index)}
