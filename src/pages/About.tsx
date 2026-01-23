@@ -7,16 +7,11 @@ import {
   Heart, Target, Eye, Users, Globe, Sparkles, 
   ArrowRight, MapPin, ExternalLink, Building2,
   MessageCircle, Phone, Clock, AlertTriangle, Volume2, 
-  ShieldAlert, Moon, Wrench, X, Check, Ban
+  Moon, Wrench, Check
 } from "lucide-react";
 import solutionRest from "@/assets/solution-rest-new.jpg";
 import solutionManage from "@/assets/solution-manage.jpg";
 import solutionControl from "@/assets/solution-control.jpg";
-import serviceEmergency from "@/assets/service-emergency.jpg";
-import serviceNightWatch from "@/assets/service-night-watch.jpg";
-import serviceFieldService from "@/assets/service-field-service.jpg";
-import serviceGuestAssist from "@/assets/service-guest-assist.jpg";
-import serviceIncidentResponse from "@/assets/service-incident-response.jpg";
 
 const values = [
   {
@@ -44,8 +39,6 @@ const situations = [
     id: "noise",
     title: "Noise Complaint at 2 AM",
     icon: Volume2,
-    image: serviceNightWatch,
-    color: "from-orange-500/20 to-red-500/20",
     messages: [
       { type: "system", text: "🔔 Noise alert detected at Apartment 3B - 78dB for 15 minutes" },
       { type: "agent", text: "Hi, this is Maria from Roomonitor. We've detected elevated noise levels at your property. I'm reaching out to your guests now." },
@@ -58,8 +51,6 @@ const situations = [
     id: "emergency",
     title: "Guest Medical Emergency",
     icon: AlertTriangle,
-    image: serviceEmergency,
-    color: "from-red-500/20 to-pink-500/20",
     messages: [
       { type: "guest", text: "Help! My father is having chest pains. We don't know what to do!" },
       { type: "agent", text: "Stay calm. I'm Carlos from Roomonitor. I'm calling emergency services to your address right now. Is he conscious?" },
@@ -72,8 +63,6 @@ const situations = [
     id: "lockout",
     title: "Guest Locked Out at Midnight",
     icon: Moon,
-    image: serviceFieldService,
-    color: "from-indigo-500/20 to-purple-500/20",
     messages: [
       { type: "guest", text: "Hi, I'm locked out of my apartment. The smart lock isn't working and it's midnight!" },
       { type: "agent", text: "Hello! I'm Ana from Roomonitor. I see you're at Calle Mayor 42. Let me check the lock status..." },
@@ -86,8 +75,6 @@ const situations = [
     id: "maintenance",
     title: "Hot Water Not Working",
     icon: Wrench,
-    image: serviceGuestAssist,
-    color: "from-blue-500/20 to-cyan-500/20",
     messages: [
       { type: "guest", text: "There's no hot water in the apartment. We have a baby with us and need warm water for a bath." },
       { type: "agent", text: "I understand the urgency. This is Pedro from Roomonitor. I'm contacting the property's maintenance team immediately." },
@@ -100,8 +87,6 @@ const situations = [
     id: "checkin",
     title: "Early Check-in Request",
     icon: Clock,
-    image: serviceIncidentResponse,
-    color: "from-emerald-500/20 to-teal-500/20",
     messages: [
       { type: "guest", text: "Hi! Our flight arrived early. Is there any way we can check in at 11 AM instead of 3 PM?" },
       { type: "agent", text: "Welcome! I'm Sofia from Roomonitor. Let me check with the cleaning team and see if the apartment is ready." },
@@ -112,26 +97,14 @@ const situations = [
   },
 ];
 
-const whatWeAreNot = [
-  {
-    icon: Ban,
-    title: "We're not just software",
-    description: "We're real people working 24/7. When a guest calls at 3 AM, a trained agent answers—not a chatbot or voicemail.",
-    image: serviceNightWatch,
-  },
-  {
-    icon: X,
-    title: "We're not surveillance",
-    description: "Our sensors detect noise levels and occupancy—never conversations or images. Guest privacy is fundamental to our approach.",
-    image: solutionRest,
-  },
-  {
-    icon: ShieldAlert,
-    title: "We don't replace you",
-    description: "We're an extension of your team, not a replacement. You define the protocols, we execute them perfectly every time.",
-    image: solutionManage,
-  },
-];
+// Icon color classes for each situation
+const situationStyles = {
+  noise: { iconBg: "bg-orange-100", iconColor: "text-orange-600", border: "border-orange-200" },
+  emergency: { iconBg: "bg-red-100", iconColor: "text-red-600", border: "border-red-200" },
+  lockout: { iconBg: "bg-indigo-100", iconColor: "text-indigo-600", border: "border-indigo-200" },
+  maintenance: { iconBg: "bg-blue-100", iconColor: "text-blue-600", border: "border-blue-200" },
+  checkin: { iconBg: "bg-emerald-100", iconColor: "text-emerald-600", border: "border-emerald-200" },
+};
 
 const timelineEvents = [
   {
@@ -229,8 +202,13 @@ function ConversationSimulator({ messages }: { messages: typeof situations[0]["m
           className={`flex ${msg.type === "guest" ? "justify-end" : msg.type === "system" ? "justify-center" : "justify-start"} animate-fade-in`}
         >
           {msg.type === "system" ? (
-            <div className="bg-muted/50 text-muted-foreground text-xs px-3 py-2 rounded-full text-center max-w-[90%]">
-              {msg.text}
+            <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 text-emerald-800 text-sm px-4 py-3 rounded-xl text-center max-w-[95%] shadow-sm">
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-3 h-3 text-white" />
+                </div>
+                <span className="font-medium">{msg.text.replace(/^[✅🔔]\s*/, '')}</span>
+              </div>
             </div>
           ) : (
             <div
@@ -280,12 +258,12 @@ export default function About() {
                 <Building2 className="w-4 h-4" />
                 <span>About Roomonitor</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-tight">
                 Born in Barcelona,
                 <span className="gradient-text block">thinking globally</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                We're on a mission to transform how vacation rentals operate. With our smart monitoring technology and dedicated team, we help property managers focus on what matters most—their guests.
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                With over <span className="font-semibold text-foreground">10 years of experience</span> in the vacation rental industry, we're sector experts on a mission to transform how properties operate. Our smart monitoring technology and dedicated team help property managers focus on what matters most—their guests.
               </p>
             </div>
           </div>
@@ -412,62 +390,63 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-8 items-start">
               {/* Scenario Tabs */}
               <div className="space-y-3">
-                {situations.map((situation, idx) => (
-                  <button
-                    key={situation.id}
-                    onClick={() => setActiveSituation(idx)}
-                    className={`w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 text-left ${
-                      activeSituation === idx
-                        ? "bg-card border-2 border-primary shadow-lg"
-                        : "bg-card/50 border border-transparent hover:bg-card hover:border-border"
-                    }`}
-                  >
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-gradient-to-br ${situation.color}`}>
-                      <situation.icon className={`w-6 h-6 ${activeSituation === idx ? "text-primary" : "text-foreground/70"}`} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className={`font-semibold truncate ${activeSituation === idx ? "text-foreground" : "text-muted-foreground"}`}>
-                        {situation.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground">Click to see how we handle it</p>
-                    </div>
-                    <ArrowRight className={`w-5 h-5 transition-transform ${activeSituation === idx ? "text-primary translate-x-1" : "text-muted-foreground"}`} />
-                  </button>
-                ))}
+                {situations.map((situation, idx) => {
+                  const style = situationStyles[situation.id as keyof typeof situationStyles];
+                  return (
+                    <button
+                      key={situation.id}
+                      onClick={() => setActiveSituation(idx)}
+                      className={`w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 text-left ${
+                        activeSituation === idx
+                          ? `bg-card border-2 shadow-lg ${style.border}`
+                          : "bg-card/50 border border-transparent hover:bg-card hover:border-border"
+                      }`}
+                    >
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${style.iconBg}`}>
+                        <situation.icon className={`w-6 h-6 ${style.iconColor}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className={`font-semibold ${activeSituation === idx ? "text-foreground" : "text-muted-foreground"}`}>
+                          {situation.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground">Click to see how we handle it</p>
+                      </div>
+                      <ArrowRight className={`w-5 h-5 flex-shrink-0 transition-transform ${activeSituation === idx ? "text-primary translate-x-1" : "text-muted-foreground"}`} />
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Conversation Simulator */}
               <div className="lg:sticky lg:top-24">
                 <div className="bg-card border rounded-2xl overflow-hidden shadow-lg">
-                  {/* Header with image */}
-                  <div className="relative h-40 overflow-hidden">
-                    <img
-                      src={situations[activeSituation].image}
-                      alt={situations[activeSituation].title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br ${situations[activeSituation].color}`}>
-                          {(() => {
-                            const Icon = situations[activeSituation].icon;
-                            return <Icon className="w-5 h-5 text-foreground" />;
-                          })()}
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-foreground">{situations[activeSituation].title}</h4>
-                          <p className="text-xs text-muted-foreground flex items-center gap-1">
-                            <MessageCircle className="w-3 h-3" />
-                            Live conversation simulation
-                          </p>
-                        </div>
-                      </div>
+                  {/* Compact Header */}
+                  <div className="p-4 border-b bg-muted/30">
+                    <div className="flex items-center gap-3">
+                      {(() => {
+                        const situation = situations[activeSituation];
+                        const style = situationStyles[situation.id as keyof typeof situationStyles];
+                        const Icon = situation.icon;
+                        return (
+                          <>
+                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${style.iconBg}`}>
+                              <Icon className={`w-5 h-5 ${style.iconColor}`} />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground">{situation.title}</h4>
+                              <p className="text-xs text-muted-foreground flex items-center gap-1">
+                                <MessageCircle className="w-3 h-3" />
+                                Live conversation simulation
+                              </p>
+                            </div>
+                          </>
+                        );
+                      })()}
                     </div>
                   </div>
                   
                   {/* Chat area */}
-                  <div className="p-4 bg-muted/30 min-h-[320px]">
+                  <div className="p-4 min-h-[360px]">
                     <ConversationSimulator 
                       key={activeSituation} 
                       messages={situations[activeSituation].messages} 
@@ -479,50 +458,6 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        {/* What We Are Not Section - Enhanced */}
-        <AnimatedSection className="py-16 md:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">Setting expectations</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-                What we are <span className="line-through opacity-50">not</span>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Understanding what we don't do is just as important as knowing what we do
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {whatWeAreNot.map((item, idx) => (
-                <div 
-                  key={idx}
-                  className="group relative overflow-hidden rounded-2xl bg-card border hover:border-primary/50 transition-all duration-300"
-                >
-                  {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-                    <div className="absolute top-4 right-4">
-                      <div className="w-10 h-10 rounded-full bg-destructive/10 border border-destructive/20 flex items-center justify-center">
-                        <item.icon className="w-5 h-5 text-destructive" />
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
 
         {/* Interactive Timeline Section */}
         <AnimatedSection className="py-16 md:py-24 bg-muted/30">
