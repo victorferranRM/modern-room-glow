@@ -417,7 +417,7 @@ export default function Contact() {
 
                       <p className="text-xs text-muted-foreground text-center">
                         By submitting this form, you agree to our{" "}
-                        <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link>.
+                        <Link to="/legal#privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
                       </p>
                     </form>
                   </Form>
