@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { 
   Heart, Target, Eye, Users, Globe, Sparkles, 
-  ArrowRight, MapPin, ExternalLink, Building2
+  ArrowRight, MapPin, ExternalLink, Building2,
+  MessageCircle, Phone, Clock, AlertTriangle, Volume2, 
+  ShieldAlert, Moon, Wrench, X, Check, Ban
 } from "lucide-react";
 import solutionRest from "@/assets/solution-rest-new.jpg";
 import solutionManage from "@/assets/solution-manage.jpg";
 import solutionControl from "@/assets/solution-control.jpg";
+import serviceEmergency from "@/assets/service-emergency.jpg";
+import serviceNightWatch from "@/assets/service-night-watch.jpg";
+import serviceFieldService from "@/assets/service-field-service.jpg";
+import serviceGuestAssist from "@/assets/service-guest-assist.jpg";
+import serviceIncidentResponse from "@/assets/service-incident-response.jpg";
 
 const values = [
   {
@@ -29,6 +36,100 @@ const values = [
     title: "Team Excellence",
     description: "Our diverse team brings together expertise from hospitality, technology, and customer service to deliver exceptional results.",
     image: solutionControl,
+  },
+];
+
+const situations = [
+  {
+    id: "noise",
+    title: "Noise Complaint at 2 AM",
+    icon: Volume2,
+    image: serviceNightWatch,
+    color: "from-orange-500/20 to-red-500/20",
+    messages: [
+      { type: "system", text: "🔔 Noise alert detected at Apartment 3B - 78dB for 15 minutes" },
+      { type: "agent", text: "Hi, this is Maria from Roomonitor. We've detected elevated noise levels at your property. I'm reaching out to your guests now." },
+      { type: "guest", text: "Oh sorry! We didn't realize the music was so loud. We'll turn it down right away." },
+      { type: "agent", text: "Thank you for understanding. The neighbors appreciate your cooperation. Enjoy your stay!" },
+      { type: "system", text: "✅ Issue resolved in 4 minutes. No neighbor complaint filed." },
+    ]
+  },
+  {
+    id: "emergency",
+    title: "Guest Medical Emergency",
+    icon: AlertTriangle,
+    image: serviceEmergency,
+    color: "from-red-500/20 to-pink-500/20",
+    messages: [
+      { type: "guest", text: "Help! My father is having chest pains. We don't know what to do!" },
+      { type: "agent", text: "Stay calm. I'm Carlos from Roomonitor. I'm calling emergency services to your address right now. Is he conscious?" },
+      { type: "guest", text: "Yes, he's sitting down. He's sweating a lot." },
+      { type: "agent", text: "Good. Keep him seated and comfortable. Ambulance is dispatched - ETA 6 minutes. I'm staying on the line with you." },
+      { type: "system", text: "✅ Emergency services arrived. Guest transported safely. Property owner notified." },
+    ]
+  },
+  {
+    id: "lockout",
+    title: "Guest Locked Out at Midnight",
+    icon: Moon,
+    image: serviceFieldService,
+    color: "from-indigo-500/20 to-purple-500/20",
+    messages: [
+      { type: "guest", text: "Hi, I'm locked out of my apartment. The smart lock isn't working and it's midnight!" },
+      { type: "agent", text: "Hello! I'm Ana from Roomonitor. I see you're at Calle Mayor 42. Let me check the lock status..." },
+      { type: "agent", text: "I've reset the lock remotely. Can you try the code 847291 now?" },
+      { type: "guest", text: "It worked! Thank you so much, you saved my night!" },
+      { type: "system", text: "✅ Access restored in 3 minutes. No field service dispatch needed." },
+    ]
+  },
+  {
+    id: "maintenance",
+    title: "Hot Water Not Working",
+    icon: Wrench,
+    image: serviceGuestAssist,
+    color: "from-blue-500/20 to-cyan-500/20",
+    messages: [
+      { type: "guest", text: "There's no hot water in the apartment. We have a baby with us and need warm water for a bath." },
+      { type: "agent", text: "I understand the urgency. This is Pedro from Roomonitor. I'm contacting the property's maintenance team immediately." },
+      { type: "agent", text: "Good news - the boiler was accidentally turned off. Our field agent Juan will be there in 20 minutes to fix it." },
+      { type: "guest", text: "That's amazing service! Thank you for being so quick." },
+      { type: "system", text: "✅ Issue resolved by field agent. Guest left 5-star review mentioning quick response." },
+    ]
+  },
+  {
+    id: "checkin",
+    title: "Early Check-in Request",
+    icon: Clock,
+    image: serviceIncidentResponse,
+    color: "from-emerald-500/20 to-teal-500/20",
+    messages: [
+      { type: "guest", text: "Hi! Our flight arrived early. Is there any way we can check in at 11 AM instead of 3 PM?" },
+      { type: "agent", text: "Welcome! I'm Sofia from Roomonitor. Let me check with the cleaning team and see if the apartment is ready." },
+      { type: "agent", text: "Great news! The previous guests checked out early and cleaning is almost done. You can check in at 12 PM." },
+      { type: "guest", text: "That's perfect! We'll grab lunch nearby. Thank you!" },
+      { type: "system", text: "✅ Early check-in arranged. Cleaning team notified. Guest started trip on a positive note." },
+    ]
+  },
+];
+
+const whatWeAreNot = [
+  {
+    icon: Ban,
+    title: "We're not just software",
+    description: "We're real people working 24/7. When a guest calls at 3 AM, a trained agent answers—not a chatbot or voicemail.",
+    image: serviceNightWatch,
+  },
+  {
+    icon: X,
+    title: "We're not surveillance",
+    description: "Our sensors detect noise levels and occupancy—never conversations or images. Guest privacy is fundamental to our approach.",
+    image: solutionRest,
+  },
+  {
+    icon: ShieldAlert,
+    title: "We don't replace you",
+    description: "We're an extension of your team, not a replacement. You define the protocols, we execute them perfectly every time.",
+    image: solutionManage,
   },
 ];
 
@@ -95,8 +196,76 @@ const mapCities = [
   { name: "Milan", top: "48%", left: "27%" },
 ];
 
+// Chat conversation component with typing animation
+function ConversationSimulator({ messages }: { messages: typeof situations[0]["messages"] }) {
+  const [visibleMessages, setVisibleMessages] = useState<number>(0);
+  const [isTyping, setIsTyping] = useState(false);
+
+  useEffect(() => {
+    setVisibleMessages(0);
+    setIsTyping(true);
+    
+    const showNextMessage = (index: number) => {
+      if (index < messages.length) {
+        setTimeout(() => {
+          setIsTyping(false);
+          setVisibleMessages(index + 1);
+          if (index + 1 < messages.length) {
+            setTimeout(() => setIsTyping(true), 300);
+            showNextMessage(index + 1);
+          }
+        }, 1200 + Math.random() * 800);
+      }
+    };
+    
+    showNextMessage(0);
+  }, [messages]);
+
+  return (
+    <div className="space-y-3 max-h-[320px] overflow-y-auto p-1">
+      {messages.slice(0, visibleMessages).map((msg, idx) => (
+        <div
+          key={idx}
+          className={`flex ${msg.type === "guest" ? "justify-end" : msg.type === "system" ? "justify-center" : "justify-start"} animate-fade-in`}
+        >
+          {msg.type === "system" ? (
+            <div className="bg-muted/50 text-muted-foreground text-xs px-3 py-2 rounded-full text-center max-w-[90%]">
+              {msg.text}
+            </div>
+          ) : (
+            <div
+              className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm ${
+                msg.type === "guest"
+                  ? "bg-primary text-primary-foreground rounded-br-md"
+                  : "bg-card border shadow-sm rounded-bl-md"
+              }`}
+            >
+              <p className="text-xs font-medium mb-1 opacity-70">
+                {msg.type === "guest" ? "Guest" : "Roomonitor Agent"}
+              </p>
+              {msg.text}
+            </div>
+          )}
+        </div>
+      ))}
+      {isTyping && visibleMessages < messages.length && (
+        <div className="flex justify-start animate-fade-in">
+          <div className="bg-card border shadow-sm px-4 py-3 rounded-2xl rounded-bl-md">
+            <div className="flex gap-1">
+              <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+              <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+              <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function About() {
   const [activeTimeline, setActiveTimeline] = useState(0);
+  const [activeSituation, setActiveSituation] = useState(0);
 
   return (
     <div className="min-h-screen bg-background">
@@ -154,34 +323,209 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        {/* Mission & Vision Section */}
-        <AnimatedSection className="py-16 md:py-24 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="bg-card border rounded-2xl p-8 md:p-10 shadow-soft">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-primary" />
+        {/* Mission & Vision Section - Enhanced */}
+        <AnimatedSection className="py-16 md:py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              {/* Mission */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative bg-card/80 backdrop-blur-sm border rounded-3xl p-8 md:p-10 shadow-soft hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg">
+                      <Target className="w-8 h-8 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-medium text-primary uppercase tracking-wider">What drives us</span>
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">Our Mission</h3>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                      To empower property managers with intelligent monitoring technology and professional services that ensure peace of mind.
+                    </p>
+                    <ul className="space-y-3">
+                      {["Protect assets 24/7", "Deliver exceptional guest experiences", "Provide real human support"].map((item, idx) => (
+                        <li key={idx} className="flex items-center gap-3 text-foreground">
+                          <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3.5 h-3.5 text-primary" />
+                          </div>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  To empower property managers with intelligent monitoring technology and professional services that ensure peace of mind, protect their assets, and deliver exceptional guest experiences—24 hours a day, 7 days a week.
-                </p>
               </div>
-              <div className="bg-card border rounded-2xl p-8 md:p-10 shadow-soft">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                  <Eye className="w-7 h-7 text-primary" />
+
+              {/* Vision */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative bg-card/80 backdrop-blur-sm border rounded-3xl p-8 md:p-10 shadow-soft hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg">
+                      <Eye className="w-8 h-8 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-medium text-primary uppercase tracking-wider">Where we're going</span>
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">Our Vision</h3>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                      To become the global standard in smart property monitoring, creating a world where every vacation rental operates with 5-star professionalism.
+                    </p>
+                    <div className="grid grid-cols-2 gap-4 pt-2">
+                      {[
+                        { value: "10K+", label: "Properties Protected" },
+                        { value: "24/7", label: "Human Support" },
+                        { value: "4+", label: "Countries" },
+                        { value: "98%", label: "Resolution Rate" },
+                      ].map((stat, idx) => (
+                        <div key={idx} className="text-center p-3 rounded-xl bg-muted/50">
+                          <div className="text-xl font-bold text-primary">{stat.value}</div>
+                          <div className="text-xs text-muted-foreground">{stat.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  To become the global standard in smart property monitoring, creating a world where every vacation rental operates with the professionalism of a five-star hotel, while preserving the unique character that makes each property special.
-                </p>
               </div>
             </div>
           </div>
         </AnimatedSection>
 
-        {/* Interactive Timeline Section */}
+        {/* Situations We Handle - Dynamic Conversations */}
+        <AnimatedSection className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-sm font-medium text-primary uppercase tracking-wider">Real scenarios, real solutions</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
+                Situations we handle every day
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                See how our team responds to real guest situations—click any scenario to watch the conversation unfold
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 items-start">
+              {/* Scenario Tabs */}
+              <div className="space-y-3">
+                {situations.map((situation, idx) => (
+                  <button
+                    key={situation.id}
+                    onClick={() => setActiveSituation(idx)}
+                    className={`w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 text-left ${
+                      activeSituation === idx
+                        ? "bg-card border-2 border-primary shadow-lg"
+                        : "bg-card/50 border border-transparent hover:bg-card hover:border-border"
+                    }`}
+                  >
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-gradient-to-br ${situation.color}`}>
+                      <situation.icon className={`w-6 h-6 ${activeSituation === idx ? "text-primary" : "text-foreground/70"}`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className={`font-semibold truncate ${activeSituation === idx ? "text-foreground" : "text-muted-foreground"}`}>
+                        {situation.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">Click to see how we handle it</p>
+                    </div>
+                    <ArrowRight className={`w-5 h-5 transition-transform ${activeSituation === idx ? "text-primary translate-x-1" : "text-muted-foreground"}`} />
+                  </button>
+                ))}
+              </div>
+
+              {/* Conversation Simulator */}
+              <div className="lg:sticky lg:top-24">
+                <div className="bg-card border rounded-2xl overflow-hidden shadow-lg">
+                  {/* Header with image */}
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={situations[activeSituation].image}
+                      alt={situations[activeSituation].title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br ${situations[activeSituation].color}`}>
+                          {(() => {
+                            const Icon = situations[activeSituation].icon;
+                            return <Icon className="w-5 h-5 text-foreground" />;
+                          })()}
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-foreground">{situations[activeSituation].title}</h4>
+                          <p className="text-xs text-muted-foreground flex items-center gap-1">
+                            <MessageCircle className="w-3 h-3" />
+                            Live conversation simulation
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Chat area */}
+                  <div className="p-4 bg-muted/30 min-h-[320px]">
+                    <ConversationSimulator 
+                      key={activeSituation} 
+                      messages={situations[activeSituation].messages} 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* What We Are Not Section - Enhanced */}
         <AnimatedSection className="py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-sm font-medium text-primary uppercase tracking-wider">Setting expectations</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
+                What we are <span className="line-through opacity-50">not</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Understanding what we don't do is just as important as knowing what we do
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {whatWeAreNot.map((item, idx) => (
+                <div 
+                  key={idx}
+                  className="group relative overflow-hidden rounded-2xl bg-card border hover:border-primary/50 transition-all duration-300"
+                >
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+                    <div className="absolute top-4 right-4">
+                      <div className="w-10 h-10 rounded-full bg-destructive/10 border border-destructive/20 flex items-center justify-center">
+                        <item.icon className="w-5 h-5 text-destructive" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Interactive Timeline Section */}
+        <AnimatedSection className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Journey</h2>
