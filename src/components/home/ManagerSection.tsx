@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -609,9 +610,11 @@ export function ManagerSection() {
               <p className="text-muted-foreground text-sm lg:text-base max-w-2xl mx-auto">
                 Manager connects monitoring with our Control Center and Field Service teams, enabling faster, structured and consistent operations.
               </p>
-              <Button size="lg" className="gap-2 group">
-                Request a Demo
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <Button size="lg" className="gap-2 group" asChild>
+                <Link to="/contact">
+                  Request a Demo
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </AnimatedSection>

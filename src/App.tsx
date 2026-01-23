@@ -38,6 +38,11 @@ import Protocols from "./pages/services/Protocols";
 // Legal Page
 import Legal from "./pages/Legal";
 
+// Solution Pages
+import VacationRentals from "./pages/solutions/VacationRentals";
+import Hotels from "./pages/solutions/Hotels";
+import PropertyOwners from "./pages/solutions/PropertyOwners";
+
 // Portal Pages
 import { PortalLayout } from "./components/portal/PortalLayout";
 import { ProtectedRoute } from "./components/portal/ProtectedRoute";
@@ -92,6 +97,11 @@ const App = () => (
 
               {/* Legal Route */}
               <Route path="/legal" element={<Legal />} />
+
+              {/* Solution Routes */}
+              <Route path="/solutions/vacation-rentals" element={<VacationRentals />} />
+              <Route path="/solutions/hotels" element={<Hotels />} />
+              <Route path="/solutions/property-owners" element={<PropertyOwners />} />
               
               {/* Customer Portal Routes - Protected */}
               <Route

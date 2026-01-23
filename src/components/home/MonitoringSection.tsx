@@ -151,11 +151,11 @@ export function MonitoringSection() {
             </p>
           </AnimatedSection>
 
-          {/* Interactive Content - Tabs (1/3) + Image (2/3) side by side */}
+          {/* Interactive Content - Tabs + Image side by side */}
           <AnimatedSection delay={200}>
-            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-              {/* Left: Compact Tabs */}
-              <div className="flex flex-col gap-2">
+            <div className="grid lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
+              {/* Left: Compact Tabs (2/5 width) */}
+              <div className="lg:col-span-2 flex flex-col gap-2">
                 {monitoringDimensions.map((dimension, index) => {
                   const Icon = dimension.icon;
                   const isActive = activeIndex === index;
@@ -165,7 +165,7 @@ export function MonitoringSection() {
                       key={dimension.id}
                       onClick={() => handleTabChange(index)}
                       className={cn(
-                        "w-full text-left p-3 lg:p-4 rounded-xl border transition-all duration-300 group",
+                        "w-full text-left p-3 rounded-xl border transition-all duration-300 group",
                         isActive 
                           ? "bg-card border-primary/30 shadow-soft" 
                           : "bg-card/50 border-border hover:bg-card hover:border-primary/20"
@@ -173,12 +173,12 @@ export function MonitoringSection() {
                     >
                       <div className="flex items-center gap-3">
                         <div className={cn(
-                          "w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300",
+                          "w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300",
                           isActive 
                             ? "bg-primary text-primary-foreground" 
                             : "bg-secondary text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
                         )}>
-                          <Icon className="w-5 h-5" />
+                          <Icon className="w-4 h-4" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className={cn(
@@ -204,10 +204,20 @@ export function MonitoringSection() {
                     </button>
                   );
                 })}
+                
+                {/* Learn more button below tabs */}
+                <div className="mt-4">
+                  <Button asChild variant="outline" className="w-full gap-2">
+                    <Link to={activeDimension.href}>
+                      Learn more about {activeDimension.label}
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
 
-              {/* Right: Visual Area with Background Image */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto">
+              {/* Right: Visual Area with Background Image (3/5 width) */}
+              <div className="lg:col-span-3 relative rounded-2xl overflow-hidden min-h-[350px] lg:min-h-[400px]">
                 {/* Background Image with fade transition */}
                 {monitoringDimensions.map((dimension, index) => (
                   <div
@@ -226,18 +236,6 @@ export function MonitoringSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20" />
                   </div>
                 ))}
-
-                {/* CTA Button overlaid on image */}
-                <Link
-                  to={activeDimension.href}
-                  className={cn(
-                    "absolute top-4 right-4 z-20 flex items-center gap-2 px-4 py-2 rounded-full bg-card backdrop-blur-sm text-foreground text-sm font-medium hover:bg-secondary transition-all duration-300 shadow-lg",
-                    isTransitioning ? "opacity-0" : "opacity-100"
-                  )}
-                >
-                  Learn more
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
 
                 {/* Floating Card - Centered with entrance animation */}
                 <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">

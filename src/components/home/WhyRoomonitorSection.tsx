@@ -140,20 +140,20 @@ export const WhyRoomonitorSection = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-stretch">
-          {/* Left Side - Stats (3/5 width) */}
-          <div className="lg:col-span-3 flex flex-col justify-center">
-            <div className="grid grid-cols-2 gap-x-12 gap-y-12">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+          {/* Left Side - Stats (1/2 width) */}
+          <div className="flex flex-col justify-center">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-10">
               {stats.map((stat, index) => (
                 <AnimatedStat key={index} stat={stat} />
               ))}
             </div>
           </div>
 
-          {/* Right Side - Case Studies Carousel (2/5 width) */}
-          <div className="lg:col-span-2 relative flex flex-col">
+          {/* Right Side - Case Studies Carousel (1/2 width) */}
+          <div className="relative flex flex-col">
             {/* Background Image */}
-            <div className="relative rounded-2xl overflow-hidden flex-1 min-h-[400px]">
+            <div className="relative rounded-2xl overflow-hidden flex-1 min-h-[450px]">
               <div
                 className={`absolute inset-0 transition-all duration-300 ease-in-out ${
                   isTransitioning ? "opacity-0 scale-105" : "opacity-100 scale-100"
