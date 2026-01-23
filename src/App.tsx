@@ -43,6 +43,9 @@ import VacationRentals from "./pages/solutions/VacationRentals";
 import Hotels from "./pages/solutions/Hotels";
 import PropertyOwners from "./pages/solutions/PropertyOwners";
 
+// About Page
+import About from "./pages/About";
+
 // Portal Pages
 import { PortalLayout } from "./components/portal/PortalLayout";
 import { ProtectedRoute } from "./components/portal/ProtectedRoute";
@@ -102,6 +105,9 @@ const App = () => (
               <Route path="/solutions/vacation-rentals" element={<VacationRentals />} />
               <Route path="/solutions/hotels" element={<Hotels />} />
               <Route path="/solutions/property-owners" element={<PropertyOwners />} />
+
+              {/* About Route */}
+              <Route path="/about" element={<About />} />
               
               {/* Customer Portal Routes - Protected */}
               <Route

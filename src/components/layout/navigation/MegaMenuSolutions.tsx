@@ -9,7 +9,7 @@ const solutionCards = [
     title: "Vacation Rentals",
     description: "Full operational coverage outside office hours",
     image: solutionVacation,
-    href: "/solutions/hospitality-operators",
+    href: "/solutions/vacation-rentals",
   },
   {
     title: "Hotels",
@@ -21,7 +21,7 @@ const solutionCards = [
     title: "Property Owners",
     description: "Noise monitoring and issue prevention",
     image: solutionOwners,
-    href: "/solutions/independent-owners",
+    href: "/solutions/property-owners",
   },
 ];
 
