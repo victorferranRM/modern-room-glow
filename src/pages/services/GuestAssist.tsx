@@ -46,11 +46,15 @@ const commitments = [
 const whatWeAreNot = [
   {
     title: "Not Virtual Assistants",
-    description: "We are vacation rental specialists with over 10 years in the industry. Each team member works exclusively for us with 1,000+ hours of guest experience."
+    description: "We are vacation rental specialists with over 10 years in the industry. Each team member works exclusively for us with 1,000+ hours of guest experience.",
+    image: serviceImage,
+    icon: Users,
   },
   {
     title: "No AI Chatbots",
-    description: "We don't use messaging software with artificial intelligence. We speak personally with your guests and contact any responsible party, ensuring every action aligns with your protocol."
+    description: "We don't use messaging software with artificial intelligence. We speak personally with your guests and contact any responsible party, ensuring every action aligns with your protocol.",
+    image: managerDevices,
+    icon: MessageSquare,
   },
 ];
 
@@ -156,21 +160,49 @@ export default function GuestAssist() {
         </div>
       </section>
 
-      {/* What We're NOT */}
+      {/* What We're NOT - Enhanced with Images */}
       <section className="py-20 lg:py-28 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
+            <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">Setting expectations</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
               What we're <span className="text-destructive">NOT</span>
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Real people, real expertise—that's what sets us apart
+            </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {whatWeAreNot.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 100}>
-                <div className="p-8 rounded-2xl bg-card border">
-                  <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                <div className="group relative overflow-hidden rounded-2xl bg-card border hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+                  {/* Image Header */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+                    <div className="absolute top-4 right-4">
+                      <div className="w-12 h-12 rounded-xl bg-destructive/10 border border-destructive/20 flex items-center justify-center backdrop-blur-sm">
+                        <item.icon className="w-6 h-6 text-destructive" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-sm font-medium text-destructive border border-destructive/20">
+                        <span className="w-2 h-2 rounded-full bg-destructive" />
+                        NOT
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
