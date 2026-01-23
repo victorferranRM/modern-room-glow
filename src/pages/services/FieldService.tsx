@@ -201,37 +201,113 @@ export default function FieldService() {
             {/* Interactive Map */}
             <AnimatedSection delay={100}>
               <div className="relative bg-gradient-to-br from-secondary/50 to-muted/30 rounded-3xl p-6 lg:p-8 border">
-                {/* Simplified Europe Map SVG */}
-                <div className="relative aspect-[16/10] w-full">
-                  <svg viewBox="0 0 400 250" className="w-full h-full opacity-20">
-                    <path
-                      d="M50,120 Q60,80 100,70 L140,60 Q180,50 220,55 L260,60 Q300,70 340,90 L360,110 Q380,140 370,170 L350,190 Q320,210 280,200 L240,195 Q200,190 160,180 L120,170 Q80,160 60,140 Z"
-                      fill="currentColor"
-                      className="text-primary"
-                    />
+                {/* Europe Map SVG */}
+                <div className="relative aspect-[16/9] w-full">
+                  <svg viewBox="0 0 800 500" className="w-full h-full">
+                    {/* Europe Map Outline */}
+                    <defs>
+                      <linearGradient id="europeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                        <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
+                      </linearGradient>
+                    </defs>
+                    
+                    {/* Portugal */}
+                    <path d="M85,280 L85,340 Q90,360 95,370 L100,380 L85,385 L75,375 L70,350 L70,290 L80,275 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* Spain */}
+                    <path d="M95,250 L180,240 L200,250 L220,260 L230,290 L220,330 L200,360 L150,380 L100,380 L85,340 L85,280 L95,265 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* France */}
+                    <path d="M200,200 L280,180 L340,190 L360,230 L350,280 L300,300 L260,290 L220,260 L200,250 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* Italy */}
+                    <path d="M360,230 L400,220 L420,250 L410,300 L420,340 L400,380 L380,400 L370,390 L380,350 L370,300 L350,280 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* Germany */}
+                    <path d="M320,140 L380,130 L420,150 L430,200 L400,220 L360,230 L340,190 L320,160 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* UK */}
+                    <path d="M200,120 L230,100 L250,110 L260,140 L250,170 L220,180 L200,160 L190,140 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* Switzerland */}
+                    <path d="M320,220 L350,210 L360,230 L340,250 L310,240 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* Poland */}
+                    <path d="M420,130 L500,120 L520,160 L500,200 L450,210 L420,180 L420,150 Z" 
+                          fill="url(#europeGradient)" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" />
+                    
+                    {/* City markers with labels */}
+                    {/* Barcelona */}
+                    <g className="cursor-pointer group">
+                      <circle cx="195" cy="305" r="8" className="fill-primary animate-pulse" />
+                      <circle cx="195" cy="305" r="14" className="fill-primary/20" />
+                      <text x="208" y="310" className="fill-foreground text-[11px] font-medium">Barcelona</text>
+                    </g>
+                    
+                    {/* Madrid */}
+                    <g className="cursor-pointer group">
+                      <circle cx="130" cy="300" r="8" className="fill-primary animate-pulse" />
+                      <circle cx="130" cy="300" r="14" className="fill-primary/20" />
+                      <text x="143" y="305" className="fill-foreground text-[11px] font-medium">Madrid</text>
+                    </g>
+                    
+                    {/* Valencia */}
+                    <g className="cursor-pointer group">
+                      <circle cx="175" cy="330" r="6" className="fill-primary animate-pulse" />
+                      <circle cx="175" cy="330" r="11" className="fill-primary/20" />
+                      <text x="185" y="335" className="fill-foreground text-[10px] font-medium">Valencia</text>
+                    </g>
+                    
+                    {/* Málaga */}
+                    <g className="cursor-pointer group">
+                      <circle cx="135" cy="375" r="6" className="fill-primary animate-pulse" />
+                      <circle cx="135" cy="375" r="11" className="fill-primary/20" />
+                      <text x="148" y="380" className="fill-foreground text-[10px] font-medium">Málaga</text>
+                    </g>
+                    
+                    {/* Seville */}
+                    <g className="cursor-pointer group">
+                      <circle cx="105" cy="360" r="6" className="fill-primary animate-pulse" />
+                      <circle cx="105" cy="360" r="11" className="fill-primary/20" />
+                      <text x="60" y="365" className="fill-foreground text-[10px] font-medium">Seville</text>
+                    </g>
+                    
+                    {/* Granada */}
+                    <g className="cursor-pointer group">
+                      <circle cx="145" cy="360" r="5" className="fill-primary animate-pulse" />
+                      <circle cx="145" cy="360" r="10" className="fill-primary/20" />
+                      <text x="155" y="355" className="fill-foreground text-[9px] font-medium">Granada</text>
+                    </g>
+                    
+                    {/* Lisbon */}
+                    <g className="cursor-pointer group">
+                      <circle cx="75" cy="335" r="7" className="fill-primary animate-pulse" />
+                      <circle cx="75" cy="335" r="12" className="fill-primary/20" />
+                      <text x="45" y="325" className="fill-foreground text-[11px] font-medium">Lisbon</text>
+                    </g>
+                    
+                    {/* Paris */}
+                    <g className="cursor-pointer group">
+                      <circle cx="270" cy="210" r="8" className="fill-primary animate-pulse" />
+                      <circle cx="270" cy="210" r="14" className="fill-primary/20" />
+                      <text x="283" y="215" className="fill-foreground text-[11px] font-medium">Paris</text>
+                    </g>
+                    
+                    {/* Milan */}
+                    <g className="cursor-pointer group">
+                      <circle cx="370" cy="245" r="7" className="fill-primary animate-pulse" />
+                      <circle cx="370" cy="245" r="12" className="fill-primary/20" />
+                      <text x="383" y="250" className="fill-foreground text-[11px] font-medium">Milan</text>
+                    </g>
                   </svg>
-                  
-                  {/* City Markers */}
-                  {coverageCities.map((city, i) => (
-                    <div
-                      key={city.name}
-                      className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-                      style={{ top: city.top, left: city.left }}
-                    >
-                      <div className="relative">
-                        <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-primary animate-pulse shadow-lg shadow-primary/50" />
-                        <div className="absolute -top-1 -left-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 animate-ping" />
-                        
-                        {/* Tooltip */}
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
-                          <div className="bg-card border rounded-lg px-3 py-2 shadow-lg whitespace-nowrap">
-                            <p className="font-semibold text-foreground text-sm">{city.name}</p>
-                            <p className="text-xs text-muted-foreground">{city.country}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
                 </div>
 
                 {/* City List */}

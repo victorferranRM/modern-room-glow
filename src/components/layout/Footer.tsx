@@ -35,18 +35,18 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center mb-6">
+            <Link to="/" className="inline-block mb-6">
               <img 
                 src={roomonitorLogo} 
                 alt="Roomonitor" 
                 className="h-10 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-sm opacity-70 leading-relaxed mb-6">
-              24/7 monitoring and operational support for vacation rentals. Technology + human expertise to protect your properties around the clock.
+            <p className="text-sm opacity-70 leading-relaxed mb-6 max-w-[280px]">
+              24/7 monitoring and operational support for vacation rentals.
             </p>
             <div className="flex gap-4">
               <a
@@ -128,7 +128,11 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <h3 className="font-semibold mb-4 mt-8">Resources</h3>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
