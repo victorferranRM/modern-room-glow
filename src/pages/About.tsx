@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
+import { PartnersSection } from "@/components/home/PartnersSection";
 import { 
-  Heart, Target, Eye, Users, Globe, Sparkles, 
+  Heart, Target, Eye, Users, Sparkles, 
   ArrowRight, MapPin, ExternalLink, Building2,
-  MessageCircle, Phone, Clock, AlertTriangle, Volume2, 
-  Moon, Wrench, Check
+  Check, Play, Pause, Newspaper, Video, Mic, FileText
 } from "lucide-react";
 import solutionRest from "@/assets/solution-rest-new.jpg";
 import solutionManage from "@/assets/solution-manage.jpg";
@@ -33,78 +34,6 @@ const values = [
     image: solutionControl,
   },
 ];
-
-const situations = [
-  {
-    id: "noise",
-    title: "Noise Complaint at 2 AM",
-    icon: Volume2,
-    messages: [
-      { type: "system", text: "🔔 Noise alert detected at Apartment 3B - 78dB for 15 minutes" },
-      { type: "agent", text: "Hi, this is Maria from Roomonitor. We've detected elevated noise levels at your property. I'm reaching out to your guests now." },
-      { type: "guest", text: "Oh sorry! We didn't realize the music was so loud. We'll turn it down right away." },
-      { type: "agent", text: "Thank you for understanding. The neighbors appreciate your cooperation. Enjoy your stay!" },
-      { type: "system", text: "✅ Issue resolved in 4 minutes. No neighbor complaint filed." },
-    ]
-  },
-  {
-    id: "emergency",
-    title: "Guest Medical Emergency",
-    icon: AlertTriangle,
-    messages: [
-      { type: "guest", text: "Help! My father is having chest pains. We don't know what to do!" },
-      { type: "agent", text: "Stay calm. I'm Carlos from Roomonitor. I'm calling emergency services to your address right now. Is he conscious?" },
-      { type: "guest", text: "Yes, he's sitting down. He's sweating a lot." },
-      { type: "agent", text: "Good. Keep him seated and comfortable. Ambulance is dispatched - ETA 6 minutes. I'm staying on the line with you." },
-      { type: "system", text: "✅ Emergency services arrived. Guest transported safely. Property owner notified." },
-    ]
-  },
-  {
-    id: "lockout",
-    title: "Guest Locked Out at Midnight",
-    icon: Moon,
-    messages: [
-      { type: "guest", text: "Hi, I'm locked out of my apartment. The smart lock isn't working and it's midnight!" },
-      { type: "agent", text: "Hello! I'm Ana from Roomonitor. I see you're at Calle Mayor 42. Let me check the lock status..." },
-      { type: "agent", text: "I've reset the lock remotely. Can you try the code 847291 now?" },
-      { type: "guest", text: "It worked! Thank you so much, you saved my night!" },
-      { type: "system", text: "✅ Access restored in 3 minutes. No field service dispatch needed." },
-    ]
-  },
-  {
-    id: "maintenance",
-    title: "Hot Water Not Working",
-    icon: Wrench,
-    messages: [
-      { type: "guest", text: "There's no hot water in the apartment. We have a baby with us and need warm water for a bath." },
-      { type: "agent", text: "I understand the urgency. This is Pedro from Roomonitor. I'm contacting the property's maintenance team immediately." },
-      { type: "agent", text: "Good news - the boiler was accidentally turned off. Our field agent Juan will be there in 20 minutes to fix it." },
-      { type: "guest", text: "That's amazing service! Thank you for being so quick." },
-      { type: "system", text: "✅ Issue resolved by field agent. Guest left 5-star review mentioning quick response." },
-    ]
-  },
-  {
-    id: "checkin",
-    title: "Early Check-in Request",
-    icon: Clock,
-    messages: [
-      { type: "guest", text: "Hi! Our flight arrived early. Is there any way we can check in at 11 AM instead of 3 PM?" },
-      { type: "agent", text: "Welcome! I'm Sofia from Roomonitor. Let me check with the cleaning team and see if the apartment is ready." },
-      { type: "agent", text: "Great news! The previous guests checked out early and cleaning is almost done. You can check in at 12 PM." },
-      { type: "guest", text: "That's perfect! We'll grab lunch nearby. Thank you!" },
-      { type: "system", text: "✅ Early check-in arranged. Cleaning team notified. Guest started trip on a positive note." },
-    ]
-  },
-];
-
-// Icon color classes for each situation
-const situationStyles = {
-  noise: { iconBg: "bg-orange-100", iconColor: "text-orange-600", border: "border-orange-200" },
-  emergency: { iconBg: "bg-red-100", iconColor: "text-red-600", border: "border-red-200" },
-  lockout: { iconBg: "bg-indigo-100", iconColor: "text-indigo-600", border: "border-indigo-200" },
-  maintenance: { iconBg: "bg-blue-100", iconColor: "text-blue-600", border: "border-blue-200" },
-  checkin: { iconBg: "bg-emerald-100", iconColor: "text-emerald-600", border: "border-emerald-200" },
-};
 
 const timelineEvents = [
   {
@@ -169,81 +98,85 @@ const mapCities = [
   { name: "Milan", top: "48%", left: "27%" },
 ];
 
-// Chat conversation component with typing animation
-function ConversationSimulator({ messages }: { messages: typeof situations[0]["messages"] }) {
-  const [visibleMessages, setVisibleMessages] = useState<number>(0);
-  const [isTyping, setIsTyping] = useState(false);
-
-  useEffect(() => {
-    setVisibleMessages(0);
-    setIsTyping(true);
-    
-    const showNextMessage = (index: number) => {
-      if (index < messages.length) {
-        setTimeout(() => {
-          setIsTyping(false);
-          setVisibleMessages(index + 1);
-          if (index + 1 < messages.length) {
-            setTimeout(() => setIsTyping(true), 300);
-            showNextMessage(index + 1);
-          }
-        }, 1200 + Math.random() * 800);
-      }
-    };
-    
-    showNextMessage(0);
-  }, [messages]);
-
-  return (
-    <div className="space-y-3 max-h-[320px] overflow-y-auto p-1">
-      {messages.slice(0, visibleMessages).map((msg, idx) => (
-        <div
-          key={idx}
-          className={`flex ${msg.type === "guest" ? "justify-end" : msg.type === "system" ? "justify-center" : "justify-start"} animate-fade-in`}
-        >
-          {msg.type === "system" ? (
-            <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 text-emerald-800 text-sm px-4 py-3 rounded-xl text-center max-w-[95%] shadow-sm">
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-3 h-3 text-white" />
-                </div>
-                <span className="font-medium">{msg.text.replace(/^[✅🔔]\s*/, '')}</span>
-              </div>
-            </div>
-          ) : (
-            <div
-              className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm ${
-                msg.type === "guest"
-                  ? "bg-primary text-primary-foreground rounded-br-md"
-                  : "bg-card border shadow-sm rounded-bl-md"
-              }`}
-            >
-              <p className="text-xs font-medium mb-1 opacity-70">
-                {msg.type === "guest" ? "Guest" : "Roomonitor Agent"}
-              </p>
-              {msg.text}
-            </div>
-          )}
-        </div>
-      ))}
-      {isTyping && visibleMessages < messages.length && (
-        <div className="flex justify-start animate-fade-in">
-          <div className="bg-card border shadow-sm px-4 py-3 rounded-2xl rounded-bl-md">
-            <div className="flex gap-1">
-              <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-              <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-              <span className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+// Media mentions data
+const mediaItems = [
+  {
+    id: "phocuswire",
+    type: "article",
+    outlet: "PhocusWire",
+    title: "How Roomonitor is changing vacation rental management",
+    description: "An in-depth look at smart monitoring technology in the hospitality industry.",
+    icon: Newspaper,
+    link: "/blog",
+    color: "from-blue-500 to-blue-600",
+  },
+  {
+    id: "hosteltur",
+    type: "article",
+    outlet: "Hosteltur",
+    title: "The future of short-term rental compliance",
+    description: "Interview with Roomonitor's CEO on regulatory challenges and solutions.",
+    icon: FileText,
+    link: "/blog",
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    id: "podcast",
+    type: "podcast",
+    outlet: "Rental Scale-Up",
+    title: "Episode 45: Building a 24/7 monitoring operation",
+    description: "Behind the scenes of Roomonitor's control center operations.",
+    icon: Mic,
+    link: "/blog",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    id: "video",
+    type: "video",
+    outlet: "Property Tech Weekly",
+    title: "Roomonitor Product Demo & Interview",
+    description: "A comprehensive walkthrough of the monitoring platform.",
+    icon: Video,
+    link: "/blog",
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+    id: "expansion",
+    type: "article",
+    outlet: "Expansión",
+    title: "Spanish PropTech leading European market",
+    description: "How Barcelona-based startups are shaping the property tech landscape.",
+    icon: Newspaper,
+    link: "/blog",
+    color: "from-slate-600 to-slate-700",
+  },
+  {
+    id: "lavanguardia",
+    type: "article",
+    outlet: "La Vanguardia",
+    title: "Tecnología para el turismo responsable",
+    description: "Roomonitor's role in sustainable tourism management.",
+    icon: FileText,
+    link: "/blog",
+    color: "from-red-500 to-rose-600",
+  },
+];
 
 export default function About() {
   const [activeTimeline, setActiveTimeline] = useState(0);
-  const [activeSituation, setActiveSituation] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto-play timeline
+  const advanceTimeline = useCallback(() => {
+    setActiveTimeline((prev) => (prev + 1) % timelineEvents.length);
+  }, []);
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(advanceTimeline, 4000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, advanceTimeline]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -258,7 +191,7 @@ export default function About() {
                 <Building2 className="w-4 h-4" />
                 <span>About Roomonitor</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.15] pb-2">
                 Born in Barcelona,
                 <span className="gradient-text block">thinking globally</span>
               </h1>
@@ -268,6 +201,9 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* Partners Carousel - Same as homepage */}
+        <PartnersSection />
 
         {/* Values Section */}
         <AnimatedSection className="py-16 md:py-24">
@@ -374,100 +310,131 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        {/* Situations We Handle - Dynamic Conversations */}
+        {/* Media & Press Section */}
         <AnimatedSection className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">Real scenarios, real solutions</span>
+              <span className="text-sm font-medium text-primary uppercase tracking-wider">In the press</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-                Situations we handle every day
+                Featured Media & Coverage
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                See how our team responds to real guest situations—click any scenario to watch the conversation unfold
+                Read, watch and listen to our latest appearances in industry publications and podcasts
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
-              {/* Scenario Tabs */}
-              <div className="space-y-3">
-                {situations.map((situation, idx) => {
-                  const style = situationStyles[situation.id as keyof typeof situationStyles];
-                  return (
-                    <button
-                      key={situation.id}
-                      onClick={() => setActiveSituation(idx)}
-                      className={`w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 text-left ${
-                        activeSituation === idx
-                          ? `bg-card border-2 shadow-lg ${style.border}`
-                          : "bg-card/50 border border-transparent hover:bg-card hover:border-border"
-                      }`}
-                    >
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${style.iconBg}`}>
-                        <situation.icon className={`w-6 h-6 ${style.iconColor}`} />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {mediaItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.id}
+                    to={item.link}
+                    className="group relative bg-card border rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  >
+                    {/* Gradient Header */}
+                    <div className={`h-2 bg-gradient-to-r ${item.color}`} />
+                    
+                    <div className="p-6">
+                      {/* Type Badge & Icon */}
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                          {item.type}
+                        </span>
+                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-md`}>
+                          <Icon className="w-5 h-5 text-white" />
+                        </div>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className={`font-semibold ${activeSituation === idx ? "text-foreground" : "text-muted-foreground"}`}>
-                          {situation.title}
-                        </h4>
-                        <p className="text-sm text-muted-foreground">Click to see how we handle it</p>
+                      
+                      {/* Outlet Name */}
+                      <p className="text-sm font-semibold text-primary mb-2">{item.outlet}</p>
+                      
+                      {/* Title */}
+                      <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {item.title}
+                      </h3>
+                      
+                      {/* Description */}
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                        {item.description}
+                      </p>
+                      
+                      {/* CTA */}
+                      <div className="flex items-center gap-2 text-sm font-medium text-primary">
+                        <span>{item.type === "video" ? "Watch now" : item.type === "podcast" ? "Listen now" : "Read article"}</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </div>
-                      <ArrowRight className={`w-5 h-5 flex-shrink-0 transition-transform ${activeSituation === idx ? "text-primary translate-x-1" : "text-muted-foreground"}`} />
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Conversation Simulator */}
-              <div className="lg:sticky lg:top-24">
-                <div className="bg-card border rounded-2xl overflow-hidden shadow-lg">
-                  {/* Compact Header */}
-                  <div className="p-4 border-b bg-muted/30">
-                    <div className="flex items-center gap-3">
-                      {(() => {
-                        const situation = situations[activeSituation];
-                        const style = situationStyles[situation.id as keyof typeof situationStyles];
-                        const Icon = situation.icon;
-                        return (
-                          <>
-                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${style.iconBg}`}>
-                              <Icon className={`w-5 h-5 ${style.iconColor}`} />
-                            </div>
-                            <div>
-                              <h4 className="font-semibold text-foreground">{situation.title}</h4>
-                              <p className="text-xs text-muted-foreground flex items-center gap-1">
-                                <MessageCircle className="w-3 h-3" />
-                                Live conversation simulation
-                              </p>
-                            </div>
-                          </>
-                        );
-                      })()}
                     </div>
-                  </div>
-                  
-                  {/* Chat area */}
-                  <div className="p-4 min-h-[360px]">
-                    <ConversationSimulator 
-                      key={activeSituation} 
-                      messages={situations[activeSituation].messages} 
-                    />
-                  </div>
-                </div>
-              </div>
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div className="text-center mt-10">
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/blog">
+                  View All Articles
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
             </div>
           </div>
         </AnimatedSection>
 
-
-        {/* Interactive Timeline Section */}
-        <AnimatedSection className="py-16 md:py-24 bg-muted/30">
+        {/* Interactive Timeline Section with Auto-play */}
+        <AnimatedSection className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Journey</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
                 From a Barcelona startup to an international property monitoring leader
               </p>
+              {/* Auto-play controls */}
+              <button
+                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted hover:bg-muted/80 transition-colors text-sm font-medium"
+              >
+                {isAutoPlaying ? (
+                  <>
+                    <Pause className="w-4 h-4" />
+                    Pause auto-play
+                  </>
+                ) : (
+                  <>
+                    <Play className="w-4 h-4" />
+                    Resume auto-play
+                  </>
+                )}
+              </button>
             </div>
+
+            {/* Progress Bar */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <div className="flex gap-2">
+                {timelineEvents.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setActiveTimeline(index);
+                      setIsAutoPlaying(false);
+                    }}
+                    className="flex-1 h-1.5 rounded-full overflow-hidden bg-muted cursor-pointer"
+                  >
+                    <div 
+                      className={`h-full bg-primary transition-all duration-300 ${
+                        index < activeTimeline 
+                          ? "w-full" 
+                          : index === activeTimeline 
+                            ? isAutoPlaying ? "animate-progress" : "w-full"
+                            : "w-0"
+                      }`}
+                      style={index === activeTimeline && isAutoPlaying ? { animation: "progress 4s linear" } : {}}
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               {/* Timeline Navigation */}
               <div className="relative">
@@ -478,7 +445,10 @@ export default function About() {
                   {timelineEvents.map((event, index) => (
                     <button
                       key={event.year}
-                      onClick={() => setActiveTimeline(index)}
+                      onClick={() => {
+                        setActiveTimeline(index);
+                        setIsAutoPlaying(false);
+                      }}
                       className={`relative flex items-center gap-6 w-full text-left p-4 rounded-xl transition-all duration-300 ${
                         activeTimeline === index 
                           ? "bg-primary/10" 
@@ -488,12 +458,14 @@ export default function About() {
                       {/* Timeline Dot */}
                       <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         activeTimeline === index 
-                          ? "bg-primary text-primary-foreground" 
-                          : "bg-muted border-2 border-border"
+                          ? "bg-primary text-primary-foreground scale-110" 
+                          : index < activeTimeline
+                            ? "bg-primary/50"
+                            : "bg-muted border-2 border-border"
                       }`}>
-                        <span className="text-xs font-bold">
-                          {activeTimeline === index ? "●" : ""}
-                        </span>
+                        {activeTimeline === index && (
+                          <span className="w-2 h-2 bg-primary-foreground rounded-full" />
+                        )}
                       </div>
                       
                       <div className="flex-1">
@@ -516,16 +488,21 @@ export default function About() {
               {/* Timeline Content */}
               <div className="lg:sticky lg:top-32">
                 <div className="bg-card border rounded-2xl overflow-hidden shadow-soft">
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-video overflow-hidden relative">
                     <img 
                       src={timelineEvents[activeTimeline].image}
                       alt={timelineEvents[activeTimeline].title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-all duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-sm font-bold">
+                        {timelineEvents[activeTimeline].year}
+                      </span>
+                    </div>
                   </div>
                   <div className="p-6 md:p-8">
-                    <span className="text-primary font-semibold text-lg">{timelineEvents[activeTimeline].year}</span>
-                    <h3 className="text-2xl font-bold text-foreground mt-2 mb-4">
+                    <h3 className="text-2xl font-bold text-foreground mb-4">
                       {timelineEvents[activeTimeline].title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
@@ -616,7 +593,7 @@ export default function About() {
                   />
                   
                   {/* City Markers */}
-                  {mapCities.map((city, index) => {
+                  {mapCities.map((city) => {
                     const x = parseFloat(city.left);
                     const y = parseFloat(city.top);
                     return (
@@ -707,6 +684,17 @@ export default function About() {
         </AnimatedSection>
       </main>
       <Footer />
+
+      {/* Progress bar animation */}
+      <style>{`
+        @keyframes progress {
+          from { width: 0%; }
+          to { width: 100%; }
+        }
+        .animate-progress {
+          animation: progress 4s linear;
+        }
+      `}</style>
     </div>
   );
 }
