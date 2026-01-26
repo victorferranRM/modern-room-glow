@@ -67,14 +67,19 @@ const Blog = () => {
                 <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-lg font-medium z-10">
                   Featured
                 </div>
-                <div className="grid md:grid-cols-2 gap-0">
-                  <Link to={`/blog/${featuredPost.slug}`} className="block">
+              <div className="grid md:grid-cols-2 gap-0">
+                  <Link to={`/blog/${featuredPost.slug}`} className="block relative">
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={featuredPost.image}
                         alt={featuredPost.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
+                    </div>
+                    {/* Read Time Badge on Featured */}
+                    <div className="absolute bottom-4 right-4 flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-3 py-1.5 rounded-full">
+                      <Clock className="w-4 h-4" />
+                      <span>{featuredPost.readTime} min read</span>
                     </div>
                   </Link>
                   <div className="p-8 md:p-10 flex flex-col justify-center">
@@ -173,12 +178,17 @@ const Blog = () => {
               >
                 <article className="group">
                   <Link to={`/blog/${post.slug}`} className="block mb-5">
-                    <div className="aspect-[16/10] rounded-xl overflow-hidden bg-muted">
+                    <div className="aspect-[16/10] rounded-xl overflow-hidden bg-muted relative">
                       <img
                         src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
+                      {/* Read Time Badge */}
+                      <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-foreground/80 backdrop-blur-sm text-background text-xs font-medium px-2.5 py-1.5 rounded-full">
+                        <Clock className="w-3.5 h-3.5" />
+                        <span>{post.readTime} min</span>
+                      </div>
                     </div>
                   </Link>
 
