@@ -431,7 +431,7 @@ export default function About() {
               {/* Timeline Navigation */}
               <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border" />
+                
                 
                 <div className="space-y-2">
                   {timelineEvents.map((event, index) => <button key={event.year} onClick={() => {
