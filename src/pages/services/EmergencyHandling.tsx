@@ -8,8 +8,21 @@ import {
   Phone, AlertTriangle, Users, Flame, Droplets,
   HeartPulse, Lock
 } from "lucide-react";
+import { ServiceHero } from "@/components/services/ServiceHero";
+import { ServiceStats } from "@/components/services/ServiceStats";
+import { ServiceFeatures } from "@/components/services/ServiceFeatures";
+import { ServiceProcess } from "@/components/services/ServiceProcess";
+import { ServiceImageSection } from "@/components/services/ServiceImageSection";
+import { ServiceCTA } from "@/components/services/ServiceCTA";
 import serviceImage from "@/assets/service-emergency.jpg";
 import managerDevices from "@/assets/manager-devices.png";
+
+const stats = [
+  { value: "<60s", label: "Response time" },
+  { value: "24/7", label: "Emergency team" },
+  { value: "100%", label: "Protocols executed" },
+  { value: "Real", label: "Action taken" },
+];
 
 const features = [
   {
@@ -99,78 +112,35 @@ const responseProtocol = [
   },
 ];
 
+const managerFeatures = [
+  "Real-time emergency timeline",
+  "Multi-party communication logs",
+  "Exportable reports for insurance",
+  "Post-incident analysis",
+];
+
 export default function EmergencyHandling() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Keynest Style */}
-      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-6">
-                <Siren className="w-4 h-4" />
-                Emergency Handling
-              </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Critical situations
-                <br />
-                <span className="text-primary">managed with real action</span>
-              </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                When emergencies happen, every second counts. Our emergency handling team 
-                responds instantly with protocols and real action — not just notifications.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <Link to="/contact">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/pricing">View Pricing</Link>
-                </Button>
-              </div>
-            </AnimatedSection>
+      <ServiceHero
+        icon={Siren}
+        badge="Emergency Handling"
+        title="Critical situations"
+        titleHighlight="managed with real action"
+        description="When emergencies happen, every second counts. Our emergency handling team responds instantly with protocols and real action — not just notifications."
+        image={serviceImage}
+        imageAlt="Emergency Handling Service"
+        variant="destructive"
+      />
 
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-destructive/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={serviceImage}
-                  alt="Emergency Handling Service"
-                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Stats */}
-      <section className="py-12 bg-card border-y">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {[
-              { value: "<60s", label: "Response time" },
-              { value: "24/7", label: "Emergency team" },
-              { value: "100%", label: "Protocols executed" },
-              { value: "Real", label: "Action taken" },
-            ].map((stat, i) => (
-              <AnimatedSection key={i} delay={i * 100} className="text-center">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceStats stats={stats} />
 
       {/* Emergency Types */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 relative overflow-hidden">
+        <div className="absolute top-1/4 left-0 w-80 h-80 bg-destructive/5 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Emergency Types
@@ -183,15 +153,15 @@ export default function EmergencyHandling() {
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {emergencyTypes.map((type, i) => (
               <AnimatedSection key={type.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border hover:shadow-lg hover:border-destructive/30 transition-all duration-300">
+                <div className="group p-6 rounded-2xl bg-card border hover:shadow-xl hover:border-destructive/30 transition-all duration-500 hover:-translate-y-1">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-destructive/20">
                       <type.icon className="w-6 h-6 text-destructive" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold">{type.title}</h3>
-                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-destructive/10 text-destructive">
+                        <h3 className="text-lg font-semibold transition-colors group-hover:text-destructive">{type.title}</h3>
+                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-destructive/10 text-destructive border border-destructive/20">
                           {type.response}
                         </span>
                       </div>
@@ -205,139 +175,37 @@ export default function EmergencyHandling() {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Capabilities
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-              Professional emergency response
-            </h2>
-          </AnimatedSection>
+      <ServiceFeatures
+        eyebrow="Capabilities"
+        title="Professional emergency response"
+        features={features}
+        background="secondary"
+      />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, i) => (
-              <AnimatedSection key={feature.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border h-full hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceProcess
+        eyebrow="Our Protocol"
+        title="Emergency response process"
+        steps={responseProtocol}
+        columns={5}
+      />
 
-      {/* Response Protocol */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Our Protocol
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
-              Emergency response process
-            </h2>
-          </AnimatedSection>
+      <ServiceImageSection
+        eyebrow="Roomonitor Manager"
+        title="Complete emergency visibility"
+        description="Track all emergency responses in real-time, view complete timelines, and access detailed reports — all from your dashboard."
+        features={managerFeatures}
+        image={managerDevices}
+        imageAlt="Emergency Dashboard"
+        ctaText="Explore Manager"
+        ctaLink="/how-it-works"
+        background="secondary"
+        reversed
+      />
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-              {responseProtocol.map((step, i) => (
-                <AnimatedSection key={step.step} delay={i * 100}>
-                  <div className="text-center p-4 rounded-2xl bg-card border">
-                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold mx-auto mb-3">
-                      {step.step}
-                    </div>
-                    <h3 className="font-semibold mb-2 text-sm">{step.title}</h3>
-                    <p className="text-muted-foreground text-xs">{step.description}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Manager Preview */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Roomonitor Manager
-              </p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-                Complete emergency visibility
-              </h2>
-              <p className="text-base lg:text-lg text-muted-foreground mb-6">
-                Track all emergency responses in real-time, view complete timelines, 
-                and access detailed reports — all from your dashboard.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Real-time emergency timeline",
-                  "Multi-party communication logs",
-                  "Exportable reports for insurance",
-                  "Post-incident analysis",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary shrink-0" />
-                    <span className="text-sm sm:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild>
-                <Link to="/how-it-works">
-                  Explore Manager
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={managerDevices}
-                  alt="Emergency Dashboard"
-                  className="relative w-full rounded-2xl shadow-2xl"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-              Be prepared for any emergency
-            </h2>
-            <p className="text-base lg:text-lg text-muted-foreground mb-8">
-              Our emergency handling team is ready 24/7. 
-              Talk to us about protecting your properties.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Talk to an Expert
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <ServiceCTA
+        title="Be prepared for any emergency"
+        description="Our emergency handling team is ready 24/7. Talk to us about protecting your properties."
+      />
 
       <Footer />
     </div>
