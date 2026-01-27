@@ -103,7 +103,7 @@ export const resourcesData = {
   learn: {
     title: "LEARN",
     items: [
-      { title: "Blog", href: "/blog" },
+      { title: "Blog", href: "/resources/blog" },
       { title: "Guides", href: "/resources/guides" },
       { title: "Knowledge Base", href: "/resources/knowledge-base" },
     ],
