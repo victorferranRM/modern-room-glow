@@ -7,27 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { ComparisonTable } from "@/components/pricing/ComparisonTable";
 import { SectionDivider } from "@/components/services/SectionDivider";
-import { 
-  Check, 
-  ArrowRight, 
-  MessageSquare, 
-  Building2, 
-  Shield, 
-  Clock, 
-  Users,
-  Headphones,
-  Zap,
-  BadgeCheck,
-  Bell,
-  Smartphone,
-  Mail,
-  PhoneCall,
-  Home,
-  Sparkles,
-  ChevronRight,
-  HelpCircle
-} from "lucide-react";
-
+import { Check, ArrowRight, MessageSquare, Building2, Shield, Clock, Users, Headphones, Zap, BadgeCheck, Bell, Smartphone, Mail, PhoneCall, Home, Sparkles, ChevronRight, HelpCircle } from "lucide-react";
 export default function Pricing() {
   const [properties, setProperties] = useState(3);
   const isEnterprise = properties > 10;
@@ -36,59 +16,43 @@ export default function Pricing() {
   const basicDeviceTotal = 45 * properties;
   const basicMonthlyTotal = 13 * properties;
   const proMonthlyTotal = 29.90 * properties;
-
-  const services = [
-    {
-      icon: Headphones,
-      title: "24/7 Control Center",
-      description: "Human operators monitoring your properties around the clock",
-    },
-    {
-      icon: Shield,
-      title: "Guest Assist™",
-      description: "Professional guest communication and incident handling in your name",
-    },
-    {
-      icon: Users,
-      title: "Field Service",
-      description: "On-site intervention when remote resolution isn't enough",
-    },
-    {
-      icon: Zap,
-      title: "Instant Response",
-      description: "Real action within minutes, not hours",
-    },
-  ];
-
-  const faqs = [
-    {
-      question: "What's included in the device?",
-      answer: "Each Roomonitor device monitors noise levels, occupancy, smoke, temperature, humidity, and air quality in real-time. The one-time price includes the hardware and shipping.",
-    },
-    {
-      question: "Can I start with Basic and upgrade later?",
-      answer: "Absolutely. You can upgrade from Basic to Pro at any time. Your devices and data will seamlessly transition to the enhanced service level with Alarm Assistant.",
-    },
-    {
-      question: "What is the Alarm Assistant?",
-      answer: "The Alarm Assistant is our team of human agents who monitor and handle alarms on your behalf 24/7. When an alert is triggered, our team takes action so you don't have to.",
-    },
-    {
-      question: "What happens if I have more than 10 properties?",
-      answer: "For portfolios with 11+ properties, we offer custom enterprise pricing with volume discounts and full operational services including Guest & Property management. Contact our sales team to discuss your needs.",
-    },
-    {
-      question: "How are services priced?",
-      answer: "Services (like Guest Assist™ and Field Service) are activated after purchase and priced based on your portfolio size and specific operational requirements. Talk to a specialist for a custom quote.",
-    },
-    {
-      question: "Is there a contract or commitment?",
-      answer: "Our subscriptions are billed monthly with no long-term commitment required. Enterprise customers may opt for annual billing with additional discounts.",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const services = [{
+    icon: Headphones,
+    title: "24/7 Control Center",
+    description: "Human operators monitoring your properties around the clock"
+  }, {
+    icon: Shield,
+    title: "Guest Assist™",
+    description: "Professional guest communication and incident handling in your name"
+  }, {
+    icon: Users,
+    title: "Field Service",
+    description: "On-site intervention when remote resolution isn't enough"
+  }, {
+    icon: Zap,
+    title: "Instant Response",
+    description: "Real action within minutes, not hours"
+  }];
+  const faqs = [{
+    question: "What's included in the device?",
+    answer: "Each Roomonitor device monitors noise levels, occupancy, smoke, temperature, humidity, and air quality in real-time. The one-time price includes the hardware and shipping."
+  }, {
+    question: "Can I start with Basic and upgrade later?",
+    answer: "Absolutely. You can upgrade from Basic to Pro at any time. Your devices and data will seamlessly transition to the enhanced service level with Alarm Assistant."
+  }, {
+    question: "What is the Alarm Assistant?",
+    answer: "The Alarm Assistant is our team of human agents who monitor and handle alarms on your behalf 24/7. When an alert is triggered, our team takes action so you don't have to."
+  }, {
+    question: "What happens if I have more than 10 properties?",
+    answer: "For portfolios with 11+ properties, we offer custom enterprise pricing with volume discounts and full operational services including Guest & Property management. Contact our sales team to discuss your needs."
+  }, {
+    question: "How are services priced?",
+    answer: "Services (like Guest Assist™ and Field Service) are activated after purchase and priced based on your portfolio size and specific operational requirements. Talk to a specialist for a custom quote."
+  }, {
+    question: "Is there a contract or commitment?",
+    answer: "Our subscriptions are billed monthly with no long-term commitment required. Enterprise customers may opt for annual billing with additional discounts."
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       <main className="pt-24 lg:pt-32">
@@ -140,14 +104,7 @@ export default function Pricing() {
                   </div>
                   
                   <div className="space-y-4">
-                    <Slider
-                      value={[properties]}
-                      onValueChange={(value) => setProperties(value[0])}
-                      min={1}
-                      max={15}
-                      step={1}
-                      className="w-full"
-                    />
+                    <Slider value={[properties]} onValueChange={value => setProperties(value[0])} min={1} max={15} step={1} className="w-full" />
                     <div className="flex justify-between text-sm text-muted-foreground">
                       <span>1</span>
                       <span className="text-primary font-medium">Self-service up to 10</span>
@@ -155,14 +112,12 @@ export default function Pricing() {
                     </div>
                   </div>
 
-                  {isEnterprise && (
-                    <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-xl">
+                  {isEnterprise && <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-xl">
                       <p className="text-sm text-foreground">
                         <span className="font-semibold">Larger portfolio?</span>{" "}
                         For 11+ properties, talk to a specialist for custom pricing and full operational support.
                       </p>
-                    </div>
-                  )}
+                    </div>}
                 </div>
               </div>
             </div>
@@ -170,7 +125,7 @@ export default function Pricing() {
         </section>
 
         {/* Pricing Cards */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 mt-[50px]">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Basic Plan */}
@@ -186,8 +141,7 @@ export default function Pricing() {
                     </div>
 
                     <div className="space-y-3">
-                      {!isEnterprise ? (
-                        <>
+                      {!isEnterprise ? <>
                           {/* Device pricing */}
                           <div className="space-y-1">
                             <div className="flex items-baseline gap-2">
@@ -208,48 +162,44 @@ export default function Pricing() {
                             </div>
                           </div>
 
-                          {properties > 1 && (
-                            <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
+                          {properties > 1 && <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
                               {properties} properties: €{basicDeviceTotal} one-time + €{basicMonthlyTotal}/month
-                            </p>
-                          )}
-                        </>
-                      ) : (
-                        <div className="text-2xl font-bold text-foreground">Contact sales</div>
-                      )}
+                            </p>}
+                        </> : <div className="text-2xl font-bold text-foreground">Contact sales</div>}
                     </div>
 
                     <ul className="space-y-3">
-                      {[
-                        { icon: Bell, text: "Roomonitor monitoring device" },
-                        { icon: Zap, text: "Real-time alerts" },
-                        { icon: Smartphone, text: "Dashboard & mobile app" },
-                        { icon: Mail, text: "Email & push notifications" },
-                      ].map((feature) => (
-                        <li key={feature.text} className="flex items-start gap-3 group/item">
+                      {[{
+                      icon: Bell,
+                      text: "Roomonitor monitoring device"
+                    }, {
+                      icon: Zap,
+                      text: "Real-time alerts"
+                    }, {
+                      icon: Smartphone,
+                      text: "Dashboard & mobile app"
+                    }, {
+                      icon: Mail,
+                      text: "Email & push notifications"
+                    }].map(feature => <li key={feature.text} className="flex items-start gap-3 group/item">
                           <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300">
                             <feature.icon className="w-4 h-4 text-primary" />
                           </div>
                           <span className="text-sm text-foreground">{feature.text}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
 
-                    {!isEnterprise ? (
-                      <Button className="w-full group shadow-lg shadow-primary/10" size="lg" asChild>
+                    {!isEnterprise ? <Button className="w-full group shadow-lg shadow-primary/10" size="lg" asChild>
                         <Link to={`/checkout?plan=basic&properties=${properties}`}>
                           Buy now
                           <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                         </Link>
-                      </Button>
-                    ) : (
-                      <Button className="w-full group" size="lg" variant="outline" asChild>
+                      </Button> : <Button className="w-full group" size="lg" variant="outline" asChild>
                         <Link to="/contact?inquiry=enterprise">
                           <MessageSquare className="w-4 h-4 mr-2" />
                           Talk to a specialist
                         </Link>
-                      </Button>
-                    )}
+                      </Button>}
                   </div>
                 </div>
               </AnimatedSection>
@@ -273,8 +223,7 @@ export default function Pricing() {
                     </div>
 
                     <div className="space-y-3">
-                      {!isEnterprise ? (
-                        <>
+                      {!isEnterprise ? <>
                           <div className="flex items-baseline gap-1">
                             <span className="text-3xl font-bold text-foreground">€29.90</span>
                             <span className="text-muted-foreground">/ month per property</span>
@@ -283,48 +232,44 @@ export default function Pricing() {
                             + €45 one-time per device (web-exclusive)
                           </p>
 
-                          {properties > 1 && (
-                            <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
-                              {properties} properties: €{basicDeviceTotal} one-time + €{(proMonthlyTotal).toFixed(2).replace('.00', '')}/month
-                            </p>
-                          )}
-                        </>
-                      ) : (
-                        <div className="text-2xl font-bold text-foreground">Contact sales</div>
-                      )}
+                          {properties > 1 && <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
+                              {properties} properties: €{basicDeviceTotal} one-time + €{proMonthlyTotal.toFixed(2).replace('.00', '')}/month
+                            </p>}
+                        </> : <div className="text-2xl font-bold text-foreground">Contact sales</div>}
                     </div>
 
                     <ul className="space-y-3">
-                      {[
-                        { icon: Check, text: "Everything in Basic" },
-                        { icon: PhoneCall, text: "Alarm Assistant" },
-                        { icon: Headphones, text: "Human agents monitoring alarms" },
-                        { icon: Clock, text: "24/7 alarm handling" },
-                      ].map((feature) => (
-                        <li key={feature.text} className="flex items-start gap-3 group/item">
+                      {[{
+                      icon: Check,
+                      text: "Everything in Basic"
+                    }, {
+                      icon: PhoneCall,
+                      text: "Alarm Assistant"
+                    }, {
+                      icon: Headphones,
+                      text: "Human agents monitoring alarms"
+                    }, {
+                      icon: Clock,
+                      text: "24/7 alarm handling"
+                    }].map(feature => <li key={feature.text} className="flex items-start gap-3 group/item">
                           <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300">
                             <feature.icon className="w-4 h-4 text-primary" />
                           </div>
                           <span className="text-sm text-foreground">{feature.text}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
 
-                    {!isEnterprise ? (
-                      <Button className="w-full shadow-lg shadow-primary/20 group" size="lg" asChild>
+                    {!isEnterprise ? <Button className="w-full shadow-lg shadow-primary/20 group" size="lg" asChild>
                         <Link to={`/checkout?plan=pro&properties=${properties}`}>
                           Buy now
                           <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                         </Link>
-                      </Button>
-                    ) : (
-                      <Button className="w-full group" size="lg" variant="outline" asChild>
+                      </Button> : <Button className="w-full group" size="lg" variant="outline" asChild>
                         <Link to="/contact?inquiry=enterprise">
                           <MessageSquare className="w-4 h-4 mr-2" />
                           Talk to a specialist
                         </Link>
-                      </Button>
-                    )}
+                      </Button>}
                   </div>
                 </div>
               </AnimatedSection>
@@ -353,20 +298,27 @@ export default function Pricing() {
                     </div>
 
                     <ul className="space-y-3">
-                      {[
-                        { icon: Check, text: "Everything in Pro" },
-                        { icon: Home, text: "Guest & Property Services" },
-                        { icon: Users, text: "Full operational management" },
-                        { icon: Shield, text: "Custom SLA agreements" },
-                        { icon: Zap, text: "Dedicated account manager" },
-                      ].map((feature) => (
-                        <li key={feature.text} className="flex items-start gap-3 group/item">
+                      {[{
+                      icon: Check,
+                      text: "Everything in Pro"
+                    }, {
+                      icon: Home,
+                      text: "Guest & Property Services"
+                    }, {
+                      icon: Users,
+                      text: "Full operational management"
+                    }, {
+                      icon: Shield,
+                      text: "Custom SLA agreements"
+                    }, {
+                      icon: Zap,
+                      text: "Dedicated account manager"
+                    }].map(feature => <li key={feature.text} className="flex items-start gap-3 group/item">
                           <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300">
                             <feature.icon className="w-4 h-4 text-primary" />
                           </div>
                           <span className="text-sm text-foreground">{feature.text}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
 
                     <Button className="w-full group" size="lg" variant="outline" asChild>
@@ -409,8 +361,7 @@ export default function Pricing() {
               </AnimatedSection>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {services.map((service, i) => (
-                  <AnimatedSection key={service.title} delay={i * 100}>
+                {services.map((service, i) => <AnimatedSection key={service.title} delay={i * 100}>
                     <div className="bg-card border rounded-xl p-6 text-center hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group h-full relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative">
@@ -421,8 +372,7 @@ export default function Pricing() {
                         <p className="text-sm text-muted-foreground">{service.description}</p>
                       </div>
                     </div>
-                  </AnimatedSection>
-                ))}
+                  </AnimatedSection>)}
               </div>
 
               <AnimatedSection delay={400} className="mt-12">
@@ -485,8 +435,7 @@ export default function Pricing() {
             </AnimatedSection>
 
             <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AnimatedSection key={index} delay={index * 75}>
+              {faqs.map((faq, index) => <AnimatedSection key={index} delay={index * 75}>
                   <div className="bg-card border rounded-xl p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 group relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="relative">
@@ -494,8 +443,7 @@ export default function Pricing() {
                       <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
-                </AnimatedSection>
-              ))}
+                </AnimatedSection>)}
             </div>
           </div>
         </section>
@@ -514,23 +462,13 @@ export default function Pricing() {
                 Start with a demo to see how Roomonitor combines technology and people to manage your properties.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button 
-                  size="lg" 
-                  variant="secondary" 
-                  className="text-base px-8 shadow-lg group"
-                  asChild
-                >
+                <Button size="lg" variant="secondary" className="text-base px-8 shadow-lg group" asChild>
                   <Link to="/demo">
                     Book a demo
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 group"
-                  asChild
-                >
+                <Button size="lg" variant="outline" className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 group" asChild>
                   <Link to="/contact">
                     <MessageSquare className="w-4 h-4 mr-2" />
                     Contact sales
@@ -543,6 +481,5 @@ export default function Pricing() {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 }
