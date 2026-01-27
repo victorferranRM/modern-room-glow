@@ -60,9 +60,9 @@ export const servicesData = {
 
 export const solutionsData = [
   {
-    title: "For Hospitality Operators",
+    title: "For Vacation Rentals",
     description: "Full operational coverage outside office hours",
-    href: "/solutions/hospitality-operators",
+    href: "/solutions/vacation-rentals",
   },
   {
     title: "For Hotels",
@@ -70,9 +70,9 @@ export const solutionsData = [
     href: "/solutions/hotels",
   },
   {
-    title: "For Independent Owners",
+    title: "For Property Owners",
     description: "Noise monitoring and issue prevention",
-    href: "/solutions/independent-owners",
+    href: "/solutions/property-owners",
   },
 ];
 
@@ -103,7 +103,7 @@ export const resourcesData = {
   learn: {
     title: "LEARN",
     items: [
-      { title: "Blog", href: "/resources/blog" },
+      { title: "Blog", href: "/blog" },
       { title: "Guides", href: "/resources/guides" },
       { title: "Knowledge Base", href: "/resources/knowledge-base" },
     ],

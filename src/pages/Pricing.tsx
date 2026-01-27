@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { ComparisonTable } from "@/components/pricing/ComparisonTable";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import { 
   Check, 
   ArrowRight, 
@@ -39,7 +40,7 @@ export default function Pricing() {
       <main className="pt-24 lg:pt-32">
         {/* Hero Section */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+          <AnimatedSection className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               <BadgeCheck className="w-4 h-4" />
               <span>Technology + People — Full operational coverage</span>
@@ -55,12 +56,12 @@ export default function Pricing() {
               Choose the plan that fits your portfolio. Self-service for up to 10 properties, 
               or talk to a specialist for full operational coverage.
             </p>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* Property Selector */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-          <div className="max-w-2xl mx-auto">
+          <AnimatedSection delay={100} className="max-w-2xl mx-auto">
             <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <div>
@@ -99,7 +100,7 @@ export default function Pricing() {
                 </div>
               )}
             </div>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* Pricing Cards */}
@@ -107,7 +108,8 @@ export default function Pricing() {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Basic Plan */}
-              <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-shadow duration-300">
+              <AnimatedSection delay={150} animation="fade-up">
+              <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-bold text-foreground">Basic</h3>
@@ -181,9 +183,11 @@ export default function Pricing() {
                   )}
                 </div>
               </div>
+              </AnimatedSection>
 
               {/* Pro Plan */}
-              <div className="relative bg-card border-2 border-primary rounded-2xl p-6 lg:p-8 shadow-soft-lg">
+              <AnimatedSection delay={250} animation="fade-up">
+              <div className="relative bg-card border-2 border-primary rounded-2xl p-6 lg:p-8 shadow-soft-lg hover:-translate-y-1 transition-all duration-300 h-full">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">
                     Most popular
@@ -251,9 +255,11 @@ export default function Pricing() {
                   )}
                 </div>
               </div>
+              </AnimatedSection>
 
               {/* Enterprise Plan */}
-              <div className="bg-gradient-to-br from-secondary to-muted border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-shadow duration-300">
+              <AnimatedSection delay={350} animation="fade-up">
+              <div className="bg-gradient-to-br from-secondary to-muted border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-bold text-foreground">Enterprise</h3>
@@ -296,18 +302,21 @@ export default function Pricing() {
                   </Button>
                 </div>
               </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
 
         {/* Comparison Table */}
+        <AnimatedSection delay={200}>
         <ComparisonTable properties={properties} />
+        </AnimatedSection>
 
         {/* Services Explainer */}
         <section className="bg-secondary/50 py-16 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
+              <AnimatedSection className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
                   What's included in Services?
                 </h2>
@@ -316,7 +325,7 @@ export default function Pricing() {
                   Services are not automatically included — they are activated after purchase, with pricing 
                   based on your number of properties and operational needs.
                 </p>
-              </div>
+              </AnimatedSection>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
@@ -340,58 +349,61 @@ export default function Pricing() {
                     title: "Instant Response",
                     description: "Real action within minutes, not hours",
                   },
-                ].map((service) => (
-                  <div 
-                    key={service.title}
-                    className="bg-card border rounded-xl p-5 text-center hover:shadow-soft transition-shadow"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <service.icon className="w-6 h-6 text-primary" />
+                ].map((service, i) => (
+                  <AnimatedSection key={service.title} delay={i * 100}>
+                    <div 
+                      className="bg-card border rounded-xl p-5 text-center hover:shadow-soft hover:-translate-y-1 transition-all duration-300 h-full"
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <service.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
+                      <p className="text-sm text-muted-foreground">{service.description}</p>
                     </div>
-                    <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground">{service.description}</p>
-                  </div>
+                  </AnimatedSection>
                 ))}
               </div>
 
-              <div className="mt-12 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl" />
-                <div className="relative bg-card/80 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 lg:p-10">
-                  <div className="flex flex-col lg:flex-row items-center gap-8">
-                    {/* Left side - Brand statement */}
-                    <div className="flex-1 text-center lg:text-left">
-                      <div className="inline-flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Zap className="w-5 h-5 text-primary" />
+              <AnimatedSection delay={200}>
+                <div className="mt-12 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 lg:p-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-8">
+                      {/* Left side - Brand statement */}
+                      <div className="flex-1 text-center lg:text-left">
+                        <div className="inline-flex items-center gap-3 mb-4">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <Zap className="w-5 h-5 text-primary" />
+                          </div>
+                          <span className="text-xs font-medium uppercase tracking-wider text-primary">Our Approach</span>
                         </div>
-                        <span className="text-xs font-medium uppercase tracking-wider text-primary">Our Approach</span>
-                      </div>
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
-                        Roomonitor = <span className="gradient-text">Technology + People</span>
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        We combine smart monitoring devices with real human operators who take action on your behalf. 
-                        It's not just alerts — it's resolution.
-                      </p>
-                    </div>
-                    
-                    {/* Right side - CTA */}
-                    <div className="flex-shrink-0 w-full lg:w-auto">
-                      <div className="bg-card border rounded-xl p-6 text-center shadow-soft">
-                        <p className="text-sm text-muted-foreground mb-4">
-                          Service pricing based on portfolio size
+                        <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
+                          Roomonitor = <span className="gradient-text">Technology + People</span>
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                          We combine smart monitoring devices with real human operators who take action on your behalf. 
+                          It's not just alerts — it's resolution.
                         </p>
-                        <Button size="lg" className="w-full lg:w-auto" asChild>
-                          <Link to="/contact?inquiry=services">
-                            Talk to a specialist
-                            <ArrowRight className="w-4 h-4 ml-2" />
-                          </Link>
-                        </Button>
+                      </div>
+                      
+                      {/* Right side - CTA */}
+                      <div className="flex-shrink-0 w-full lg:w-auto">
+                        <div className="bg-card border rounded-xl p-6 text-center shadow-soft">
+                          <p className="text-sm text-muted-foreground mb-4">
+                            Service pricing based on portfolio size
+                          </p>
+                          <Button size="lg" className="w-full lg:w-auto" asChild>
+                            <Link to="/contact?inquiry=services">
+                              Talk to a specialist
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </Link>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -399,9 +411,11 @@ export default function Pricing() {
         {/* FAQ Section */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-12">
-              Frequently asked questions
-            </h2>
+            <AnimatedSection>
+              <h2 className="text-3xl font-bold text-foreground text-center mb-12">
+                Frequently asked questions
+              </h2>
+            </AnimatedSection>
 
             <div className="space-y-6">
               {[
@@ -430,13 +444,14 @@ export default function Pricing() {
                   answer: "Our subscriptions are billed monthly with no long-term commitment required. Enterprise customers may opt for annual billing with additional discounts.",
                 },
               ].map((faq, index) => (
-                <div 
-                  key={index}
-                  className="bg-card border rounded-xl p-6 hover:shadow-soft transition-shadow"
-                >
-                  <h3 className="font-semibold text-foreground mb-2">{faq.question}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
-                </div>
+                <AnimatedSection key={index} delay={index * 50}>
+                  <div 
+                    className="bg-card border rounded-xl p-6 hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    <h3 className="font-semibold text-foreground mb-2">{faq.question}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                  </div>
+                </AnimatedSection>
               ))}
             </div>
           </div>
@@ -445,7 +460,7 @@ export default function Pricing() {
         {/* Final CTA */}
         <section className="bg-primary py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
+            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground">
                 Ready to take control of your operations?
               </h2>
@@ -476,7 +491,7 @@ export default function Pricing() {
                   </Link>
                 </Button>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
       </main>
