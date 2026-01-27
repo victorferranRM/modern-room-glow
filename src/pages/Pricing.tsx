@@ -46,10 +46,9 @@ export default function Pricing() {
               <span>Technology + People — Full operational coverage</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-              One device. One subscription.
-              <br />
-              <span className="gradient-text">Your operations, handled.</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground text-balance">
+              One device. One subscription.{" "}
+              <span className="gradient-text block sm:inline">Your operations, handled.</span>
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -316,11 +315,11 @@ export default function Pricing() {
         <section className="bg-secondary/50 py-16 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              <AnimatedSection className="text-center mb-10 sm:mb-12">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
                   What's included in Services?
                 </h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                   This is the operational coverage you can activate when working with a Roomonitor specialist. 
                   Services are not automatically included — they are activated after purchase, with pricing 
                   based on your number of properties and operational needs.
@@ -412,7 +411,7 @@ export default function Pricing() {
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl mx-auto">
             <AnimatedSection>
-              <h2 className="text-3xl font-bold text-foreground text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-10 sm:mb-12 text-balance">
                 Frequently asked questions
               </h2>
             </AnimatedSection>
@@ -460,11 +459,11 @@ export default function Pricing() {
         {/* Final CTA */}
         <section className="bg-primary py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground">
+            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground text-balance">
                 Ready to take control of your operations?
               </h2>
-              <p className="text-primary-foreground/90 text-lg">
+              <p className="text-primary-foreground/90 text-base sm:text-lg">
                 Start with a demo to see how Roomonitor combines technology and people to manage your properties.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

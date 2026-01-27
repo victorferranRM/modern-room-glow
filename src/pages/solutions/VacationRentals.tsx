@@ -128,10 +128,9 @@ export default function VacationRentals() {
                 <Building2 className="w-4 h-4" />
                 Vacation Rentals
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Complete protection for your
-                <br />
-                <span className="text-primary">vacation rental portfolio</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6 leading-[1.15]">
+                <span className="block sm:inline">Complete protection for your</span>{" "}
+                <span className="text-primary block">vacation rental portfolio</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 From noise monitoring to guest support, Roomonitor provides the technology and 
@@ -190,7 +189,7 @@ export default function VacationRentals() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Complete Solution
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Everything you need to manage your rentals
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -225,7 +224,7 @@ export default function VacationRentals() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Pricing
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Choose the plan that fits your needs
             </h2>
           </AnimatedSection>
@@ -276,7 +275,7 @@ export default function VacationRentals() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Ready to protect your vacation rentals?
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground mb-8">

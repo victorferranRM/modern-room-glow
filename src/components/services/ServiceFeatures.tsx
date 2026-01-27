@@ -31,11 +31,11 @@ export function ServiceFeatures({
       <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-secondary/50 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <AnimatedSection className="text-center mb-16">
-          <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+        <AnimatedSection className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3 sm:mb-4">
             {eyebrow}
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-balance">
             {title}
           </h2>
         </AnimatedSection>
