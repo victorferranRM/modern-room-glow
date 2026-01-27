@@ -7,8 +7,21 @@ import {
   Headphones, Clock, Globe, Shield, ArrowRight, Check, 
   Phone, MessageSquare, Users, Zap, FileText, Heart
 } from "lucide-react";
+import { ServiceHero } from "@/components/services/ServiceHero";
+import { ServiceStats } from "@/components/services/ServiceStats";
+import { ServiceFeatures } from "@/components/services/ServiceFeatures";
+import { ServiceProcess } from "@/components/services/ServiceProcess";
+import { ServiceImageSection } from "@/components/services/ServiceImageSection";
+import { ServiceCTA } from "@/components/services/ServiceCTA";
 import serviceImage from "@/assets/service-guest-assist.jpg";
 import managerDevices from "@/assets/manager-devices.png";
+
+const stats = [
+  { value: "<30s", label: "Average response" },
+  { value: "24/7", label: "Availability" },
+  { value: "5+", label: "Languages spoken" },
+  { value: "100%", label: "Logged interactions" },
+];
 
 const commitments = [
   {
@@ -85,84 +98,41 @@ const howItWorks = [
   },
 ];
 
+const protocolFeatures = [
+  "Define escalation rules and priorities",
+  "Set response templates for common issues",
+  "Specify emergency contacts and procedures",
+  "Configure notification preferences",
+];
+
 export default function GuestAssist() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Keynest Style */}
-      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                <Headphones className="w-4 h-4" />
-                Guest Assist™
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-                24/7 Phone support
-                <br />
-                <span className="text-primary">for your guests</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                Our guest service for vacation rental managers offers the best phone support on the market. 
-                Your team can finally rest every night and weekend.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <Link to="/contact">
-                    Contact Us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/pricing">View Pricing</Link>
-                </Button>
-              </div>
-            </AnimatedSection>
+      <ServiceHero
+        icon={Headphones}
+        badge="Guest Assist™"
+        title="24/7 Phone support"
+        titleHighlight="for your guests"
+        description="Our guest service for vacation rental managers offers the best phone support on the market. Your team can finally rest every night and weekend."
+        image={serviceImage}
+        imageAlt="Guest Assist Service"
+        primaryCTA={{ text: "Contact Us", link: "/contact" }}
+      />
 
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={serviceImage}
-                  alt="Guest Assist Service"
-                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <ServiceStats stats={stats} />
 
-      {/* Our Commitment Section */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Our commitment is <span className="gradient-text">total</span>
-            </h2>
-          </AnimatedSection>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {commitments.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border h-full hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceFeatures
+        eyebrow="Our Commitment"
+        title="Our commitment is total"
+        features={commitments}
+      />
 
       {/* What We're NOT - Enhanced with Images */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">Setting expectations</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
@@ -175,24 +145,24 @@ export default function GuestAssist() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {whatWeAreNot.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 100}>
-                <div className="group relative overflow-hidden rounded-2xl bg-card border hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+              <AnimatedSection key={item.title} delay={i * 150} animation={i === 0 ? "fade-right" : "fade-left"}>
+                <div className="group relative overflow-hidden rounded-2xl bg-card border hover:border-destructive/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                   {/* Image Header */}
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
                     <div className="absolute top-4 right-4">
-                      <div className="w-12 h-12 rounded-xl bg-destructive/10 border border-destructive/20 flex items-center justify-center backdrop-blur-sm">
+                      <div className="w-12 h-12 rounded-xl bg-destructive/10 border border-destructive/20 flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                         <item.icon className="w-6 h-6 text-destructive" />
                       </div>
                     </div>
                     <div className="absolute bottom-4 left-4">
                       <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-sm font-medium text-destructive border border-destructive/20">
-                        <span className="w-2 h-2 rounded-full bg-destructive" />
+                        <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
                         NOT
                       </div>
                     </div>
@@ -200,7 +170,7 @@ export default function GuestAssist() {
                   
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors group-hover:text-destructive">{item.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>
@@ -211,8 +181,9 @@ export default function GuestAssist() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 relative overflow-hidden">
+        <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Examples
@@ -225,12 +196,12 @@ export default function GuestAssist() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {useCases.map((useCase, i) => (
               <AnimatedSection key={useCase.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                <div className="group p-6 rounded-2xl bg-card border hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/20">
                       <useCase.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="font-semibold">{useCase.title}</h3>
+                    <h3 className="font-semibold transition-colors group-hover:text-primary">{useCase.title}</h3>
                   </div>
                 </div>
               </AnimatedSection>
@@ -239,111 +210,31 @@ export default function GuestAssist() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              How It Works
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Get started in 3 simple steps
-            </h2>
-          </AnimatedSection>
+      <ServiceProcess
+        eyebrow="How It Works"
+        title="Get started in 3 simple steps"
+        steps={howItWorks}
+        background="secondary"
+        columns={3}
+      />
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              {howItWorks.map((step, i) => (
-                <AnimatedSection key={step.step} delay={i * 100}>
-                  <div className="text-center">
-                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl mx-auto mb-6">
-                      {step.step}
-                    </div>
-                    <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm">{step.description}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceImageSection
+        eyebrow="Your Rules, Our Execution"
+        title="Protocol"
+        description="To get started, we provide a sample protocol template with the most common issues and resolution steps. Customize it to match your exact requirements."
+        features={protocolFeatures}
+        image={managerDevices}
+        imageAlt="Roomonitor Manager Dashboard"
+        ctaText="See a Demo"
+        ctaLink="/contact"
+        reversed
+      />
 
-      {/* Protocol Section */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Your Rules, Our Execution
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-                Protocol
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                To get started, we provide a sample protocol template with the most common issues and resolution steps. 
-                Customize it to match your exact requirements.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Define escalation rules and priorities",
-                  "Set response templates for common issues",
-                  "Specify emergency contacts and procedures",
-                  "Configure notification preferences",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild>
-                <Link to="/contact">
-                  See a Demo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={managerDevices}
-                  alt="Roomonitor Manager Dashboard"
-                  className="relative w-full rounded-2xl shadow-2xl"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Ready to give your team a break?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Let us handle guest calls while you focus on growing your business. 
-              Schedule a quick orientation call to learn more.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Schedule a Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <ServiceCTA
+        title="Ready to give your team a break?"
+        description="Let us handle guest calls while you focus on growing your business. Schedule a quick orientation call to learn more."
+        primaryCTA={{ text: "Schedule a Call", link: "/contact" }}
+      />
 
       <Footer />
     </div>

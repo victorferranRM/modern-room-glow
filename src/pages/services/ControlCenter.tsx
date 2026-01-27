@@ -7,8 +7,21 @@ import {
   Eye, Clock, Shield, ArrowRight, Check, 
   AlertTriangle, Users, Zap, Monitor, Bell, Brain
 } from "lucide-react";
+import { ServiceHero } from "@/components/services/ServiceHero";
+import { ServiceStats } from "@/components/services/ServiceStats";
+import { ServiceFeatures } from "@/components/services/ServiceFeatures";
+import { ServiceProcess } from "@/components/services/ServiceProcess";
+import { ServiceImageSection } from "@/components/services/ServiceImageSection";
+import { ServiceCTA } from "@/components/services/ServiceCTA";
 import serviceImage from "@/assets/service-control-center.jpg";
 import managerDevices from "@/assets/manager-devices.png";
+
+const stats = [
+  { value: "24/7", label: "Monitoring coverage" },
+  { value: "<2min", label: "Average response" },
+  { value: "100%", label: "Human verified" },
+  { value: "5,000+", label: "Properties monitored" },
+];
 
 const features = [
   {
@@ -82,192 +95,46 @@ export default function ControlCenter() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Keynest Style */}
-      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                <Eye className="w-4 h-4" />
-                Control Center 24/7
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Human verification,
-                <br />
-                <span className="text-primary">real decisions</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-                Our Control Center combines advanced sensor technology with human expertise. 
-                Every alert is verified, every decision is informed, every action is documented.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <Link to="/contact">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/pricing">View Pricing</Link>
-                </Button>
-              </div>
-            </AnimatedSection>
+      <ServiceHero
+        icon={Eye}
+        badge="Control Center 24/7"
+        title="Human verification,"
+        titleHighlight="real decisions"
+        description="Our Control Center combines advanced sensor technology with human expertise. Every alert is verified, every decision is informed, every action is documented."
+        image={serviceImage}
+        imageAlt="Control Center Service"
+      />
 
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={serviceImage}
-                  alt="Control Center Service"
-                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <ServiceStats stats={stats} />
 
-      {/* Key Stats */}
-      <section className="py-12 bg-background border-y">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "24/7", label: "Monitoring coverage" },
-              { value: "<2min", label: "Average response" },
-              { value: "100%", label: "Human verified" },
-              { value: "5,000+", label: "Properties monitored" },
-            ].map((stat, i) => (
-              <AnimatedSection key={i} delay={i * 100} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceFeatures
+        eyebrow="Capabilities"
+        title="Technology meets human expertise"
+        features={features}
+      />
 
-      {/* Features Grid */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Capabilities
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Technology meets human expertise
-            </h2>
-          </AnimatedSection>
+      <ServiceImageSection
+        eyebrow="Our Role"
+        title="What our Control Center does"
+        description="We're the bridge between your sensors and real-world action. When something happens, we verify, decide, and act — all according to your rules."
+        features={capabilities}
+        image={managerDevices}
+        imageAlt="Control Center Dashboard"
+        ctaText="Learn More"
+        ctaLink="/contact"
+        background="secondary"
+      />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, i) => (
-              <AnimatedSection key={feature.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border h-full hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceProcess
+        eyebrow="Process"
+        title="From detection to resolution"
+        steps={howItWorks}
+      />
 
-      {/* What We Do */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Our Role
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-                What our Control Center does
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                We're the bridge between your sensors and real-world action. When something happens, 
-                we verify, decide, and act — all according to your rules.
-              </p>
-              <ul className="space-y-3">
-                {capabilities.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={managerDevices}
-                  alt="Control Center Dashboard"
-                  className="relative w-full rounded-2xl shadow-2xl"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Process
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              From detection to resolution
-            </h2>
-          </AnimatedSection>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {howItWorks.map((step, i) => (
-                <AnimatedSection key={step.step} delay={i * 100}>
-                  <div className="text-center p-6 rounded-2xl bg-card border">
-                    <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg mx-auto mb-4">
-                      {step.step}
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm">{step.description}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Ready for professional monitoring?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Our Control Center is ready to protect your properties 24/7. 
-              Talk to an expert to learn how we can help.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Talk to an Expert
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <ServiceCTA
+        title="Ready for professional monitoring?"
+        description="Our Control Center is ready to protect your properties 24/7. Talk to an expert to learn how we can help."
+      />
 
       <Footer />
     </div>

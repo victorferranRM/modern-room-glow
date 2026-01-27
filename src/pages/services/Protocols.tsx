@@ -7,6 +7,11 @@ import {
   FileText, Clock, ArrowRight, Check, 
   Shield, Settings, ListChecks, Workflow, Edit, Book, Monitor
 } from "lucide-react";
+import { ServiceHero } from "@/components/services/ServiceHero";
+import { ServiceFeatures } from "@/components/services/ServiceFeatures";
+import { ServiceProcess } from "@/components/services/ServiceProcess";
+import { ServiceImageSection } from "@/components/services/ServiceImageSection";
+import { ServiceCTA } from "@/components/services/ServiceCTA";
 import serviceImage from "@/assets/service-protocols.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
@@ -113,56 +118,24 @@ export default function Protocols() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Keynest Style */}
-      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                <FileText className="w-4 h-4" />
-                Operational Protocols
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Your rules,
-                <br />
-                <span className="text-primary">executed 24/7</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-                Define exactly how every situation should be handled. Our team executes your 
-                protocols consistently, around the clock, ensuring your standards are always met.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <Link to="/contact">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/pricing">View Pricing</Link>
-                </Button>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={serviceImage}
-                  alt="Protocols Service"
-                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        icon={FileText}
+        badge="Operational Protocols"
+        title="Your rules,"
+        titleHighlight="executed 24/7"
+        description="Define exactly how every situation should be handled. Our team executes your protocols consistently, around the clock, ensuring your standards are always met."
+        image={serviceImage}
+        imageAlt="Protocols Service"
+      />
 
       {/* Manager Software Notice */}
-      <section className="py-12 bg-primary/5 border-y">
-        <div className="container mx-auto px-4">
+      <section className="py-12 bg-primary/5 border-y relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="container mx-auto px-4 relative">
           <AnimatedSection className="flex items-center justify-center gap-4 text-center">
-            <Monitor className="w-8 h-8 text-primary shrink-0" />
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center transition-transform duration-300 hover:scale-110">
+              <Monitor className="w-6 h-6 text-primary" />
+            </div>
             <p className="text-lg">
               <strong>No Excel spreadsheets.</strong> We use our proprietary Manager software for standardized, 
               real-time protocol management and execution.
@@ -171,37 +144,16 @@ export default function Protocols() {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Capabilities
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Complete protocol management
-            </h2>
-          </AnimatedSection>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, i) => (
-              <AnimatedSection key={feature.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border h-full hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceFeatures
+        eyebrow="Capabilities"
+        title="Complete protocol management"
+        features={features}
+      />
 
       {/* Protocol Examples */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Examples
@@ -218,20 +170,20 @@ export default function Protocols() {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {protocolExamples.map((protocol, i) => (
               <AnimatedSection key={protocol.title} delay={i * 100}>
-                <div className="p-6 rounded-2xl bg-card border h-full">
+                <div className="group p-6 rounded-2xl bg-card border h-full hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/20">
                       <Book className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="font-semibold">{protocol.title}</h3>
+                    <h3 className="font-semibold transition-colors group-hover:text-primary">{protocol.title}</h3>
                   </div>
                   <ol className="space-y-3">
                     {protocol.steps.map((step, j) => (
-                      <li key={j} className="flex items-start gap-3">
-                        <span className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-xs font-medium shrink-0">
+                      <li key={j} className="flex items-start gap-3 group/step">
+                        <span className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-xs font-medium shrink-0 transition-all duration-300 group-hover/step:bg-primary/20 group-hover/step:text-primary">
                           {j + 1}
                         </span>
-                        <span className="text-sm text-muted-foreground">{step}</span>
+                        <span className="text-sm text-muted-foreground transition-colors group-hover/step:text-foreground">{step}</span>
                       </li>
                     ))}
                   </ol>
@@ -242,106 +194,28 @@ export default function Protocols() {
         </div>
       </section>
 
-      {/* Setup Process */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Getting Started
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Setup your protocols
-            </h2>
-          </AnimatedSection>
+      <ServiceProcess
+        eyebrow="Getting Started"
+        title="Setup your protocols"
+        steps={setupProcess}
+      />
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {setupProcess.map((step, i) => (
-                <AnimatedSection key={step.step} delay={i * 100}>
-                  <div className="text-center p-6 rounded-2xl bg-card border">
-                    <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg mx-auto mb-4">
-                      {step.step}
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm">{step.description}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceImageSection
+        eyebrow="Benefits"
+        title="Why protocols matter"
+        description="Well-defined protocols ensure consistency, reduce errors, and give you peace of mind knowing exactly how every situation will be handled."
+        features={protocolBenefits}
+        image={managerDevices}
+        imageAlt="Protocol Management"
+        ctaText="See a Demo"
+        ctaLink="/contact"
+        background="secondary"
+      />
 
-      {/* Benefits */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Benefits
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-                Why protocols matter
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Well-defined protocols ensure consistency, reduce errors, and give you 
-                peace of mind knowing exactly how every situation will be handled.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {protocolBenefits.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild>
-                <Link to="/contact">
-                  See a Demo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={managerDevices}
-                  alt="Protocol Management"
-                  className="relative w-full rounded-2xl shadow-2xl"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Ready to define your protocols?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Let's work together to create protocols that match your exact needs. 
-              Our team will help you get started.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Talk to an Expert
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <ServiceCTA
+        title="Ready to define your protocols?"
+        description="Let's work together to create protocols that match your exact needs. Our team will help you get started."
+      />
 
       <Footer />
     </div>
