@@ -61,10 +61,9 @@ export default function Hotels() {
                 <Building className="w-4 h-4" />
                 Hotels
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Stop smoking damage
-                <br />
-                <span className="text-primary">before it costs you</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6 leading-[1.15]">
+                <span className="block sm:inline">Stop smoking damage</span>{" "}
+                <span className="text-primary block">before it costs you</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 Roomonitor's smoke detection technology protects your rooms, provides proof for 
@@ -104,7 +103,7 @@ export default function Hotels() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               The Problem
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Smoking in non-smoking rooms is expensive
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -137,7 +136,7 @@ export default function Hotels() {
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 The Solution
               </p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
                 Detect, document, and deter
               </h2>
               <p className="text-base lg:text-lg text-muted-foreground mb-8">
@@ -204,7 +203,7 @@ export default function Hotels() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               ROI Calculator
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               See your potential savings
             </h2>
           </AnimatedSection>
@@ -243,7 +242,7 @@ export default function Hotels() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Protect your hotel investment
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground mb-8">

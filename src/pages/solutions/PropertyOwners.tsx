@@ -99,10 +99,9 @@ export default function PropertyOwners() {
                 <Home className="w-4 h-4" />
                 Property Owners
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Peace of mind for your
-                <br />
-                <span className="text-primary">rental property</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6 leading-[1.15]">
+                <span className="block sm:inline">Peace of mind for your</span>{" "}
+                <span className="text-primary block">rental property</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 Know what's happening in your property when you're not there. Our smart 
@@ -154,7 +153,7 @@ export default function PropertyOwners() {
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 The Roomonitor Device
               </p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
                 Your eyes and ears in the property
               </h2>
               <p className="text-base lg:text-lg text-muted-foreground mb-8">
@@ -190,7 +189,7 @@ export default function PropertyOwners() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Monitoring Capabilities
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Complete property visibility
             </h2>
           </AnimatedSection>
@@ -219,7 +218,7 @@ export default function PropertyOwners() {
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 Guest Assist Service
               </p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
                 Professional guest support, on your behalf
               </h2>
               <p className="text-base lg:text-lg text-muted-foreground mb-8">
@@ -279,7 +278,7 @@ export default function PropertyOwners() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               Simple Pricing
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Choose what works for you
             </h2>
           </AnimatedSection>
@@ -331,7 +330,7 @@ export default function PropertyOwners() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               Protect what matters most
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground mb-8">

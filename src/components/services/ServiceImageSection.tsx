@@ -40,13 +40,13 @@ export function ServiceImageSection({
           reversed && "lg:[&>*:first-child]:order-2"
         )}>
           <AnimatedSection animation={reversed ? "fade-left" : "fade-right"}>
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3 sm:mb-4">
               {eyebrow}
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
               {title}
             </h2>
-            <p className="text-base lg:text-lg text-muted-foreground mb-6">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6">
               {description}
             </p>
             <ul className="space-y-3 mb-8">

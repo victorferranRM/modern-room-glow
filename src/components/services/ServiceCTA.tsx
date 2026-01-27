@@ -33,10 +33,10 @@ export function ServiceCTA({
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <AnimatedSection className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">
             {title}
           </h2>
-          <p className="text-base lg:text-lg text-muted-foreground mb-8">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8">
             {description}
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -17,10 +17,8 @@ export function ClosingSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-10">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif italic font-normal tracking-tight text-white leading-tight">
-            Everything you need to protect
-            <br />
-            and scale your rental business
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal tracking-tight text-white leading-tight text-balance">
+            Everything you need to protect and scale your rental business
           </h2>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
