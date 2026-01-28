@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
 import { 
   ArrowRight, Check, Volume2, Users, Wind, Thermometer, 
@@ -152,10 +153,12 @@ export default function VacationRentals() {
             <AnimatedSection delay={200}>
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
-                <img
+                <OptimizedImage
                   src={solutionRest}
                   alt="Vacation Rental Protection"
-                  className="relative w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                  className="relative w-full rounded-2xl shadow-2xl object-cover"
+                  containerClassName="relative w-full rounded-2xl shadow-2xl overflow-hidden aspect-[4/3]"
+                  priority
                 />
               </div>
             </AnimatedSection>

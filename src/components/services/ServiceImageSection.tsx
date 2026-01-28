@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -73,10 +74,11 @@ export function ServiceImageSection({
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:blur-3xl" />
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
+                <OptimizedImage
                   src={image}
                   alt={imageAlt}
                   className="w-full transition-transform duration-700 group-hover:scale-105"
+                  containerClassName="w-full aspect-[4/3]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>

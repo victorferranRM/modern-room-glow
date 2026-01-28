@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Volume2, Users, Wind, Thermometer, Calculator, ArrowRight, ChevronRight } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-
 // Import images
 import monitoringNoise from "@/assets/monitoring-noise.jpg";
 import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
@@ -180,7 +180,13 @@ export function MonitoringSection() {
               <div className="lg:col-span-3 relative rounded-2xl overflow-hidden min-h-[350px] lg:min-h-[400px]">
                 {/* Background Image with fade transition */}
                 {monitoringDimensions.map((dimension, index) => <div key={dimension.id} className={cn("absolute inset-0 transition-opacity duration-500", activeIndex === index ? "opacity-100" : "opacity-0")}>
-                    <img src={dimension.image} alt={dimension.label} className="w-full h-full object-cover" />
+                    <OptimizedImage 
+                      src={dimension.image} 
+                      alt={dimension.label} 
+                      className="w-full h-full object-cover" 
+                      containerClassName="w-full h-full"
+                      priority={index === 0}
+                    />
                     {/* Dark overlay for readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20" />
                   </div>)}
