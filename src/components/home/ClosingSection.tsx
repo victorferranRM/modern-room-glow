@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export function ClosingSection() {
   return (
     <section className="relative py-32 lg:py-40 overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with lazy loading */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{

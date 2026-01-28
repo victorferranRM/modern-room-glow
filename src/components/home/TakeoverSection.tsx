@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Clock, Users, Headphones, Shield, AlertTriangle, Wrench, Cpu, Heart } from "lucide-react";
@@ -111,10 +112,12 @@ export function TakeoverSection() {
                         transform: `scale(1.1) translateY(${scrollProgress * 20 - 10}px)`,
                       }}
                     >
-                      <img 
+                      <OptimizedImage 
                         src={solution.image} 
                         alt={solution.title}
                         className="w-full h-full object-cover"
+                        containerClassName="w-full h-full"
+                        priority={index === 0}
                       />
                     </div>
 
