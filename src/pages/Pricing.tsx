@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { ComparisonTable } from "@/components/pricing/ComparisonTable";
+import { PricingCarousel } from "@/components/pricing/PricingCarousel";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { 
   Check, 
@@ -104,7 +105,17 @@ export default function Pricing() {
 
         {/* Pricing Cards */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="max-w-6xl mx-auto">
+          {/* Mobile Carousel */}
+          <PricingCarousel 
+            properties={properties}
+            isEnterprise={isEnterprise}
+            basicDeviceTotal={basicDeviceTotal}
+            basicMonthlyTotal={basicMonthlyTotal}
+            proMonthlyTotal={proMonthlyTotal}
+          />
+
+          {/* Desktop Grid */}
+          <div className="hidden lg:block max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Basic Plan */}
               <AnimatedSection delay={150} animation="fade-up">
@@ -127,7 +138,7 @@ export default function Pricing() {
                             <span className="text-3xl font-bold text-foreground">€45</span>
                             <span className="text-sm text-muted-foreground">one-time</span>
                           </div>
-                          <div className="inline-block bg-green-500/10 text-green-600 text-xs font-medium px-2 py-0.5 rounded">
+                          <div className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-0.5 rounded">
                             Web-exclusive price
                           </div>
                         </div>

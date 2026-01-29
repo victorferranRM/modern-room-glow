@@ -1,11 +1,43 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { servicesData, solutionsData, monitoringData, resourcesData } from "./navigation-data";
 
 interface MobileMenuProps {
   onClose: () => void;
+}
+
+// Animated collapsible section component
+function AnimatedCollapsible({ 
+  isOpen, 
+  children 
+}: { 
+  isOpen: boolean; 
+  children: React.ReactNode;
+}) {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState<number | undefined>(0);
+
+  useEffect(() => {
+    if (isOpen) {
+      const contentHeight = contentRef.current?.scrollHeight;
+      setHeight(contentHeight);
+    } else {
+      setHeight(0);
+    }
+  }, [isOpen]);
+
+  return (
+    <div 
+      className="overflow-hidden transition-all duration-300 ease-out"
+      style={{ height: height ? `${height}px` : '0px' }}
+    >
+      <div ref={contentRef}>
+        {children}
+      </div>
+    </div>
+  );
 }
 
 export function MobileMenu({ onClose }: MobileMenuProps) {
@@ -16,7 +48,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
   };
 
   return (
-    <div className="lg:hidden border-t bg-background max-h-[calc(100vh-4rem)] overflow-y-auto">
+    <div className="lg:hidden border-t bg-background max-h-[calc(100vh-4rem)] overflow-y-auto animate-fade-in">
       <div className="container mx-auto px-4 py-6 space-y-2">
         {/* Services */}
         <div className="border-b border-border/50 pb-2">
@@ -29,7 +61,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
               className={`h-4 w-4 transition-transform ${expandedSection === "services" ? "rotate-180" : ""}`} 
             />
           </button>
-          {expandedSection === "services" && (
+          <AnimatedCollapsible isOpen={expandedSection === "services"}>
             <div className="pt-4 pb-4 space-y-6">
               {/* Operations */}
               <div>
@@ -80,7 +112,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
                 ))}
               </div>
             </div>
-          )}
+          </AnimatedCollapsible>
         </div>
 
         {/* Solutions */}
@@ -94,7 +126,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
               className={`h-4 w-4 transition-transform ${expandedSection === "solutions" ? "rotate-180" : ""}`} 
             />
           </button>
-          {expandedSection === "solutions" && (
+          <AnimatedCollapsible isOpen={expandedSection === "solutions"}>
             <div className="pt-4 pb-4">
               {solutionsData.map((item) => (
                 <Link
@@ -107,7 +139,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
                 </Link>
               ))}
             </div>
-          )}
+          </AnimatedCollapsible>
         </div>
 
         {/* Monitoring */}
@@ -121,7 +153,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
               className={`h-4 w-4 transition-transform ${expandedSection === "monitoring" ? "rotate-180" : ""}`} 
             />
           </button>
-          {expandedSection === "monitoring" && (
+          <AnimatedCollapsible isOpen={expandedSection === "monitoring"}>
             <div className="pt-4 pb-4">
               {monitoringData.map((item) => (
                 <Link
@@ -134,7 +166,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
                 </Link>
               ))}
             </div>
-          )}
+          </AnimatedCollapsible>
         </div>
 
         {/* Resources */}
@@ -148,7 +180,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
               className={`h-4 w-4 transition-transform ${expandedSection === "resources" ? "rotate-180" : ""}`} 
             />
           </button>
-          {expandedSection === "resources" && (
+          <AnimatedCollapsible isOpen={expandedSection === "resources"}>
             <div className="pt-4 pb-4 space-y-5">
               {[resourcesData.learn, resourcesData.ecosystem, resourcesData.company].map((section) => (
                 <div key={section.title}>
@@ -168,7 +200,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
                 </div>
               ))}
             </div>
-          )}
+          </AnimatedCollapsible>
         </div>
 
         {/* Pricing */}
