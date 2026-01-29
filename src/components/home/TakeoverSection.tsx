@@ -155,8 +155,8 @@ export function TakeoverSection() {
                         </Button>
                       </div>
 
-                      {/* Floating Icons - positioned at bottom right corner */}
-                      <div className="absolute bottom-8 right-8 lg:bottom-12 lg:right-12 flex gap-3">
+                      {/* Floating Icons - hidden on mobile, positioned at top right on desktop */}
+                      <div className="hidden lg:flex absolute top-12 right-12 gap-3">
                         {icons.map((Icon, iconIndex) => (
                           <div
                             key={iconIndex}
@@ -166,8 +166,8 @@ export function TakeoverSection() {
                               animationDuration: '3s',
                             }}
                           >
-                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center shadow-lg bg-white/10 backdrop-blur-md border border-white/20">
-                              <Icon className="w-4 h-4 lg:w-5 lg:h-5 text-white" />
+                            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg bg-white/10 backdrop-blur-md border border-white/20">
+                              <Icon className="w-5 h-5 text-white" />
                             </div>
                           </div>
                         ))}
