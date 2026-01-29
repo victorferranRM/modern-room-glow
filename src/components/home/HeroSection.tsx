@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageSquare, Shield, Clock, Users, BadgeCheck } from "lucide-react";
-
+import { ArrowRight, MessageSquare, Clock, Users, BadgeCheck, Send } from "lucide-react";
 export function HeroSection() {
-  return (
-    <section className="relative min-h-[95vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden">
+  return <section className="relative min-h-[95vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden">
       {/* Light gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
       
@@ -23,7 +21,9 @@ export function HeroSection() {
           </div>
 
           {/* Main headline */}
-          <div className="space-y-2 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+          <div className="space-y-2 animate-fade-in" style={{
+          animationDelay: "0.05s"
+        }}>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight text-foreground text-balance">
               Emergencies don't follow office hours.
             </h1>
@@ -33,18 +33,16 @@ export function HeroSection() {
           </div>
 
           {/* Subheadline */}
-          <p 
-            className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in"
-            style={{ animationDelay: "0.1s" }}
-          >
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
+          animationDelay: "0.1s"
+        }}>
             Roomonitor becomes your operational team outside office hours, managing guests, incidents and assets with real decision-making and real action.
           </p>
 
           {/* Value proposition cards */}
-          <div 
-            className="grid sm:grid-cols-3 gap-4 lg:gap-6 max-w-4xl mx-auto animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <div className="grid sm:grid-cols-3 gap-4 lg:gap-6 max-w-4xl mx-auto animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
             <div className="bg-card border rounded-2xl p-5 lg:p-6 text-left hover:shadow-soft hover:border-primary/20 transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Clock className="w-5 h-5 text-primary" />
@@ -67,7 +65,7 @@ export function HeroSection() {
             
             <div className="bg-card border rounded-2xl p-5 lg:p-6 text-left hover:shadow-soft hover:border-primary/20 transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Shield className="w-5 h-5 text-primary" />
+                <Send className="w-5 h-5 text-primary" />
               </div>
               <h3 className="text-foreground font-semibold mb-2">Your Brand, Our Execution</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -77,22 +75,16 @@ export function HeroSection() {
           </div>
 
           {/* CTAs */}
-          <div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-in"
-            style={{ animationDelay: "0.3s" }}
-          >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-in" style={{
+          animationDelay: "0.3s"
+        }}>
             <Button size="lg" className="text-base px-8 py-6 shadow-soft-lg" asChild>
               <Link to="/how-it-works">
                 How Roomonitor works
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-base px-8 py-6" 
-              asChild
-            >
+            <Button size="lg" variant="outline" className="text-base px-8 py-6" asChild>
               <Link to="/contact">
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Talk to an expert
@@ -101,6 +93,5 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
