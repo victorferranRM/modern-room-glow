@@ -30,17 +30,17 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             />
           </button>
           {expandedSection === "services" && (
-            <div className="pb-4 space-y-6">
+            <div className="pt-4 pb-4 space-y-6">
               {/* Operations */}
               <div>
-                <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-3 px-2">
+                <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-2 px-2">
                   {servicesData.operations.title}
                 </h4>
                 {servicesData.operations.items.map((item) => (
                   <Link
                     key={item.title}
                     to={item.href}
-                    className="block px-2 py-2 text-sm text-foreground hover:text-primary"
+                    className="block px-2 py-2.5 text-sm text-foreground hover:text-primary"
                     onClick={onClose}
                   >
                     {item.title}
@@ -49,14 +49,14 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
               </div>
               {/* Incident & Risk */}
               <div>
-                <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-3 px-2">
+                <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-2 px-2">
                   {servicesData.incidentRisk.title}
                 </h4>
                 {servicesData.incidentRisk.items.map((item) => (
                   <Link
                     key={item.title}
                     to={item.href}
-                    className="block px-2 py-2 text-sm text-foreground hover:text-primary"
+                    className="block px-2 py-2.5 text-sm text-foreground hover:text-primary"
                     onClick={onClose}
                   >
                     {item.title}
@@ -65,14 +65,14 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
               </div>
               {/* Enablement */}
               <div>
-                <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-3 px-2">
+                <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-2 px-2">
                   {servicesData.enablement.title}
                 </h4>
                 {servicesData.enablement.items.map((item) => (
                   <Link
                     key={item.title}
                     to={item.href}
-                    className="block px-2 py-2 text-sm text-foreground hover:text-primary"
+                    className="block px-2 py-2.5 text-sm text-foreground hover:text-primary"
                     onClick={onClose}
                   >
                     {item.title}
@@ -95,12 +95,12 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             />
           </button>
           {expandedSection === "solutions" && (
-            <div className="pb-4">
+            <div className="pt-4 pb-4">
               {solutionsData.map((item) => (
                 <Link
                   key={item.title}
                   to={item.href}
-                  className="block px-2 py-2 text-sm text-foreground hover:text-primary"
+                  className="block px-2 py-2.5 text-sm text-foreground hover:text-primary"
                   onClick={onClose}
                 >
                   {item.title}
@@ -122,12 +122,12 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             />
           </button>
           {expandedSection === "monitoring" && (
-            <div className="pb-4">
+            <div className="pt-4 pb-4">
               {monitoringData.map((item) => (
                 <Link
                   key={item.title}
                   to={item.href}
-                  className="block px-2 py-2 text-sm text-foreground hover:text-primary"
+                  className="block px-2 py-2.5 text-sm text-foreground hover:text-primary"
                   onClick={onClose}
                 >
                   {item.title}
@@ -149,7 +149,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             />
           </button>
           {expandedSection === "resources" && (
-            <div className="pb-4 space-y-4">
+            <div className="pt-4 pb-4 space-y-5">
               {[resourcesData.learn, resourcesData.ecosystem, resourcesData.company].map((section) => (
                 <div key={section.title}>
                   <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-2 px-2">
@@ -159,7 +159,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
                     <Link
                       key={item.title}
                       to={item.href}
-                      className="block px-2 py-2 text-sm text-foreground hover:text-primary"
+                      className="block px-2 py-2.5 text-sm text-foreground hover:text-primary"
                       onClick={onClose}
                     >
                       {item.title}
