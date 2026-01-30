@@ -19,6 +19,7 @@ import Integrations from "./pages/Integrations";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Guides from "./pages/Guides";
+import GuideDetail from "./pages/GuideDetail";
 import Monitoring from "./pages/Monitoring";
 import NoiseMonitoring from "./pages/monitoring/NoiseMonitoring";
 import OccupancyDetection from "./pages/monitoring/OccupancyDetection";
@@ -87,6 +88,7 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/resources/guides" element={<Guides />} />
+              <Route path="/resources/guides/guide/:guideId" element={<GuideDetail />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Auth />} />
 
