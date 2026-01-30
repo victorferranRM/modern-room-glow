@@ -18,6 +18,7 @@ import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Integrations from "./pages/Integrations";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Guides from "./pages/Guides";
 import Monitoring from "./pages/Monitoring";
 import NoiseMonitoring from "./pages/monitoring/NoiseMonitoring";
 import OccupancyDetection from "./pages/monitoring/OccupancyDetection";
@@ -85,6 +86,7 @@ const App = () => (
               <Route path="/monitoring/environment" element={<EnvironmentMonitoring />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/resources/guides" element={<Guides />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Auth />} />
 
