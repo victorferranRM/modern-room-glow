@@ -21,7 +21,7 @@ export function CategorySection({
 }: CategorySectionProps) {
   const Icon = iconMap[category.icon] || BookOpen;
   return <AnimatedSection className="mb-12 last:mb-0">
-      <div className="flex items-center gap-3 mb-6 mt-[20px]">
+      <div className="flex items-center gap-3 mb-6 mt-[20px] my-[30px]">
         <Icon className="w-5 h-5 text-primary" />
         <h2 className="text-xl font-semibold text-foreground">{category.title}</h2>
         <span className="text-sm text-muted-foreground">
