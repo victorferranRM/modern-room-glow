@@ -35,10 +35,10 @@ function SearchResults({
 
   return (
     <AnimatedSection>
-      <p className="text-sm text-muted-foreground mb-4">
+      <p className="text-base text-muted-foreground mb-6">
         {guides.length} result{guides.length !== 1 ? "s" : ""} for "{query}"
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {guides.map((guide) => (
           <GuideCard
             key={guide.id}
@@ -78,12 +78,12 @@ function BookmarkedGuides({
 
   return (
     <AnimatedSection>
-      <div className="flex items-center gap-2 mb-4">
-        <Bookmark className="w-4 h-4 text-muted-foreground" />
-        <h2 className="text-base font-semibold text-foreground">Saved Guides</h2>
-        <span className="text-xs text-muted-foreground">{bookmarkedGuides.length}</span>
+      <div className="flex items-center gap-3 mb-6">
+        <Bookmark className="w-5 h-5 text-primary" />
+        <h2 className="text-xl font-semibold text-foreground">Saved Guides</h2>
+        <span className="text-sm text-muted-foreground">{bookmarkedGuides.length}</span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {bookmarkedGuides.map((guide) => (
           <GuideCard
             key={guide.id}
@@ -142,32 +142,35 @@ export default function Guides() {
 
       <main className="pt-24 pb-16">
         {/* Header Section */}
-        <section className="py-10 md:py-12 border-b border-border/50">
+        <section className="py-12 md:py-16 border-b border-border/50">
           <div className="container max-w-6xl mx-auto px-4">
             <AnimatedSection className="max-w-2xl">
-              <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground mb-2">
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-3">
                 Guides & Documentation
               </h1>
-              <p className="text-muted-foreground">
+              <p className="text-lg text-muted-foreground">
                 Step-by-step guides to install, configure, and get the most out of the platform
               </p>
             </AnimatedSection>
 
             {/* Search */}
-            <AnimatedSection delay={0.05} className="mt-6 max-w-md">
+            <AnimatedSection delay={0.05} className="mt-8 max-w-lg">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Search guides..."
+                  placeholder="Search guides by title or topic..."
                   value={searchQuery}
                   onChange={(e) => {
                     setSearchQuery(e.target.value);
                     setShowBookmarksOnly(false);
                   }}
-                  className="pl-9 h-10 bg-card border-border/60"
+                  className="pl-12 h-12 text-base bg-card border-border shadow-sm focus:shadow-md transition-shadow"
                 />
               </div>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Search or browse by category to find the right guide
+              </p>
             </AnimatedSection>
           </div>
         </section>
