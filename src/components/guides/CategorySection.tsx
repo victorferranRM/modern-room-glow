@@ -32,16 +32,16 @@ export function CategorySection({
   const Icon = iconMap[category.icon] || BookOpen;
 
   return (
-    <AnimatedSection className="mb-8 last:mb-0">
-      <div className="flex items-center gap-2 mb-4">
-        <Icon className="w-4 h-4 text-muted-foreground" />
-        <h2 className="text-base font-semibold text-foreground">{category.title}</h2>
-        <span className="text-xs text-muted-foreground">
+    <AnimatedSection className="mb-12 last:mb-0">
+      <div className="flex items-center gap-3 mb-6">
+        <Icon className="w-5 h-5 text-primary" />
+        <h2 className="text-xl font-semibold text-foreground">{category.title}</h2>
+        <span className="text-sm text-muted-foreground">
           {category.guides.length} guides
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {category.guides.map((guide) => (
           <GuideCard
             key={guide.id}

@@ -1,4 +1,4 @@
-import { BookOpen, Bookmark } from "lucide-react";
+import { BookOpen, Bookmark, Rocket, Wrench, Settings, Target, HelpCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { GuideCategory } from "@/lib/guides-data";
 
@@ -10,12 +10,12 @@ interface GuideTOCProps {
   onToggleBookmarks?: () => void;
 }
 
-const iconMap: Record<string, string> = {
-  Rocket: "🚀",
-  Wrench: "🔧",
-  Settings: "⚙️",
-  Target: "🎯",
-  HelpCircle: "❓",
+const iconComponents: Record<string, React.ElementType> = {
+  Rocket,
+  Wrench,
+  Settings,
+  Target,
+  HelpCircle,
 };
 
 export function GuideTOC({
@@ -53,24 +53,27 @@ export function GuideTOC({
 
       <div className="border-t border-border/50 my-2" />
 
-      {categories.map((category) => (
-        <a
-          key={category.id}
-          href={`#${category.id}`}
-          className={cn(
-            "flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors",
-            activeCategory === category.id
-              ? "bg-muted text-foreground font-medium"
-              : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-          )}
-        >
-          <span className="text-xs">{iconMap[category.icon] || "📄"}</span>
-          <span className="truncate">{category.title}</span>
-          <span className="ml-auto text-xs text-muted-foreground">
-            {category.guides.length}
-          </span>
-        </a>
-      ))}
+      {categories.map((category) => {
+        const IconComponent = iconComponents[category.icon] || BookOpen;
+        return (
+          <a
+            key={category.id}
+            href={`#${category.id}`}
+            className={cn(
+              "flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors",
+              activeCategory === category.id
+                ? "bg-muted text-foreground font-medium"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+            )}
+          >
+            <IconComponent className="w-3.5 h-3.5 shrink-0" />
+            <span className="truncate">{category.title}</span>
+            <span className="ml-auto text-xs text-muted-foreground">
+              {category.guides.length}
+            </span>
+          </a>
+        );
+      })}
     </nav>
   );
 }
