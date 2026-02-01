@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
 import { Button } from "@/components/ui/button";
 import { 
-  Flame, Bell, Shield, Zap, ArrowRight, Check, Ban,
-  AlertTriangle, FileCheck, Smartphone
+  Flame, Shield, ArrowRight, Check, Ban,
+  AlertTriangle, FileCheck
 } from "lucide-react";
 import { caseStudies } from "@/lib/case-studies-data";
 import monitoringSmoke from "@/assets/monitoring-air.jpg";
@@ -67,45 +68,16 @@ export default function SmokeDetection() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${monitoringSmoke})` }}
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
-          <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <Flame className="w-4 h-4" />
-              Smoke Detection
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-              Protect your property
-              <br />
-              <span className="text-primary">from smoke damage</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Detect smoking violations instantly, enforce non-smoking policies, 
-              and protect your property from costly damage and deep cleaning.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/pricing">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/contact">Request a Demo</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <MonitoringHero
+        icon={Flame}
+        badge="Smoke Detection"
+        title="Protect your property"
+        titleHighlight="from smoke damage"
+        description="Detect smoking violations instantly, enforce non-smoking policies, and protect your property from costly damage and deep cleaning."
+        image={monitoringSmoke}
+        imageAlt="Smoke detection visualization"
+      />
 
       {/* Key Stats */}
       <section className="py-12 bg-secondary/30 border-y">

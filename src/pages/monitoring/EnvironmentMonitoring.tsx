@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
 import { Button } from "@/components/ui/button";
 import { 
-  Thermometer, Bell, Shield, Droplets, ArrowRight, Check, Wind,
-  Sun, Gauge, Smartphone
+  Thermometer, Droplets, ArrowRight, Check, Wind, Gauge
 } from "lucide-react";
 import { caseStudies } from "@/lib/case-studies-data";
 import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
@@ -67,45 +67,16 @@ export default function EnvironmentMonitoring() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${monitoringEnvironment})` }}
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
-          <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <Thermometer className="w-4 h-4" />
-              Environment Monitoring
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-              Perfect conditions,
-              <br />
-              <span className="text-primary">protected property</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Monitor temperature, humidity, and air quality to ensure guest comfort 
-              and protect your property from environmental damage.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/pricing">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/contact">Request a Demo</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <MonitoringHero
+        icon={Thermometer}
+        badge="Environment Monitoring"
+        title="Perfect conditions,"
+        titleHighlight="protected property"
+        description="Monitor temperature, humidity, and air quality to ensure guest comfort and protect your property from environmental damage."
+        image={monitoringEnvironment}
+        imageAlt="Environment monitoring visualization"
+      />
 
       {/* Key Stats */}
       <section className="py-12 bg-secondary/30 border-y">

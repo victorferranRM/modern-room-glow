@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
 import { Button } from "@/components/ui/button";
 import { 
-  Volume2, Bell, Shield, Clock, ArrowRight, Check, BarChart3,
-  Settings, Users, Smartphone
+  Volume2, Bell, Shield, Clock, ArrowRight, Check, BarChart3
 } from "lucide-react";
 import { caseStudies } from "@/lib/case-studies-data";
 import monitoringNoise from "@/assets/monitoring-noise.jpg";
@@ -67,45 +67,16 @@ export default function NoiseMonitoring() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${monitoringNoise})` }}
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32">
-          <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <Volume2 className="w-4 h-4" />
-              Noise Monitoring
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-              Prevent noise complaints
-              <br />
-              <span className="text-primary">before they happen</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Real-time noise detection that protects your reputation with neighbors 
-              and ensures guests respect house rules — without recording any audio.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/pricing">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/contact">Request a Demo</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <MonitoringHero
+        icon={Volume2}
+        badge="Noise Monitoring"
+        title="Prevent noise complaints"
+        titleHighlight="before they happen"
+        description="Real-time noise detection that protects your reputation with neighbors and ensures guests respect house rules — without recording any audio."
+        image={monitoringNoise}
+        imageAlt="Noise monitoring visualization"
+      />
 
       {/* Key Stats */}
       <section className="py-12 bg-secondary/30 border-y">
