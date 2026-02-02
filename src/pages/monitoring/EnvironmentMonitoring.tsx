@@ -76,6 +76,7 @@ export default function EnvironmentMonitoring() {
         description="Monitor temperature, humidity, and air quality to ensure guest comfort and protect your property from environmental damage."
         image={monitoringEnvironment}
         imageAlt="Environment monitoring visualization"
+        breadcrumbLabel="Environment Monitoring"
       />
 
       {/* Key Stats */}

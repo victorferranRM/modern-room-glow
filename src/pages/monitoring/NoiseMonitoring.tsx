@@ -76,6 +76,7 @@ export default function NoiseMonitoring() {
         description="Real-time noise detection that protects your reputation with neighbors and ensures guests respect house rules — without recording any audio."
         image={monitoringNoise}
         imageAlt="Noise monitoring visualization"
+        breadcrumbLabel="Noise Monitoring"
       />
 
       {/* Key Stats */}

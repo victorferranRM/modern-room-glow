@@ -77,6 +77,7 @@ export default function SmokeDetection() {
         description="Detect smoking violations instantly, enforce non-smoking policies, and protect your property from costly damage and deep cleaning."
         image={monitoringSmoke}
         imageAlt="Smoke detection visualization"
+        breadcrumbLabel="Smoke Detection"
       />
 
       {/* Key Stats */}
