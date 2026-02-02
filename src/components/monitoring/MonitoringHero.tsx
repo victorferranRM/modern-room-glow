@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { ArrowRight, LucideIcon } from "lucide-react";
 
 interface MonitoringHeroProps {
@@ -12,6 +20,7 @@ interface MonitoringHeroProps {
   description: string;
   image: string;
   imageAlt: string;
+  breadcrumbLabel: string;
   primaryCTA?: {
     text: string;
     link: string;
@@ -30,6 +39,7 @@ export function MonitoringHero({
   description,
   image,
   imageAlt,
+  breadcrumbLabel,
   primaryCTA = { text: "Get Started", link: "/pricing" },
   secondaryCTA = { text: "Request a Demo", link: "/contact" },
 }: MonitoringHeroProps) {
@@ -42,6 +52,33 @@ export function MonitoringHero({
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Breadcrumb Navigation */}
+        <AnimatedSection className="mb-6">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/" className="text-muted-foreground hover:text-foreground">
+                    Home
+                  </Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/monitoring" className="text-muted-foreground hover:text-foreground">
+                    Monitoring
+                  </Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{breadcrumbLabel}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </AnimatedSection>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <AnimatedSection>

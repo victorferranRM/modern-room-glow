@@ -77,6 +77,7 @@ export default function OccupancyDetection() {
         description="Detect unauthorized parties, verify guest counts, and prevent overcrowding — all while respecting guest privacy completely."
         image={monitoringOccupancy}
         imageAlt="Occupancy detection visualization"
+        breadcrumbLabel="Occupancy Detection"
       />
 
       {/* Key Stats */}
