@@ -6,6 +6,8 @@ export const guideContent: Record<string, string> = {
 
 Roomonitor is your all-in-one platform for property monitoring and guest management. This guide will help you understand the core features and how to get started.
 
+> Tip: Bookmark this page for quick reference as you get started with the platform.
+
 ### What You Can Do
 
 - **Monitor Properties**: Track noise levels, occupancy, and environmental conditions in real-time
@@ -16,6 +18,8 @@ Roomonitor is your all-in-one platform for property monitoring and guest managem
 ### Getting Help
 
 If you need assistance at any time, our support team is available 24/7. You can reach us through the Control Center or by contacting support directly.
+
+> Note: Our support team typically responds within 15 minutes during business hours.
 
 ### Next Steps
 
@@ -29,6 +33,8 @@ If you need assistance at any time, our support team is available 24/7. You can 
 ## Quick Start Guide
 
 Get up and running with Roomonitor in under 10 minutes. This guide covers the essential steps to start monitoring your properties.
+
+> Tip: Have your WiFi credentials ready before starting the device setup process.
 
 ### Step 1: Verify Your Account
 
@@ -48,12 +54,16 @@ After signing up, check your email for a verification link. Click it to activate
 3. Connect to WiFi using the mobile app
 4. Assign the device to your property
 
+> Note: The device LED will flash blue during setup and turn solid green when connected successfully.
+
 ### Step 4: Configure Alerts
 
 1. Go to **Settings > Alerts**
 2. Set your preferred noise thresholds
 3. Choose notification methods (email, SMS, app)
 4. Save your preferences
+
+> Warning: Ensure your alert thresholds are set before leaving the property to avoid missing important notifications.
 
 ### You're Ready!
 
