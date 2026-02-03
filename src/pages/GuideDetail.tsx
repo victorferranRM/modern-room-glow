@@ -15,14 +15,69 @@ import { getGuideContent } from "@/lib/guide-content";
 import { useGuideBookmarks } from "@/hooks/useGuideBookmarks";
 import { cn } from "@/lib/utils";
 
+function CalloutBlock({ type, children }: { type: "tip" | "note" | "warning"; children: React.ReactNode }) {
+  const colors = {
+    tip: "border-l-[#8B9A7D]",
+    note: "border-l-[#5C8A8A]", 
+    warning: "border-l-amber-500",
+  };
+  
+  const labels = {
+    tip: "Tip:",
+    note: "Note:",
+    warning: "Warning:",
+  };
+  
+  const labelColors = {
+    tip: "text-[#8B9A7D]",
+    note: "text-[#5C8A8A]",
+    warning: "text-amber-600",
+  };
+
+  return (
+    <div className={cn("border-l-4 pl-4 py-2 my-4", colors[type])}>
+      <p className={cn("text-sm font-medium mb-1", labelColors[type])}>{labels[type]}</p>
+      <div className="text-sm text-muted-foreground">{children}</div>
+    </div>
+  );
+}
+
 function MarkdownRenderer({ content }: { content: string }) {
-  // Simple markdown parsing for headings, lists, tables, and code
+  // Simple markdown parsing for headings, lists, tables, callouts, and code
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
   let i = 0;
 
   while (i < lines.length) {
     const line = lines[i];
+
+    // Callout blocks (> Tip: or > Note: or > Warning:)
+    if (line.startsWith("> Tip:") || line.startsWith("> Note:") || line.startsWith("> Warning:")) {
+      const calloutMatch = line.match(/^> (Tip|Note|Warning):\s*(.*)/i);
+      if (calloutMatch) {
+        const type = calloutMatch[1].toLowerCase() as "tip" | "note" | "warning";
+        const calloutLines: string[] = [];
+        
+        // Get first line content
+        if (calloutMatch[2]) {
+          calloutLines.push(calloutMatch[2]);
+        }
+        i++;
+        
+        // Continue reading lines that start with > 
+        while (i < lines.length && lines[i].startsWith("> ")) {
+          calloutLines.push(lines[i].slice(2));
+          i++;
+        }
+        
+        elements.push(
+          <CalloutBlock key={`callout-${i}`} type={type}>
+            <span dangerouslySetInnerHTML={{ __html: parseInline(calloutLines.join(" ")) }} />
+          </CalloutBlock>
+        );
+        continue;
+      }
+    }
 
     // Headers
     if (line.startsWith("## ")) {
@@ -161,7 +216,8 @@ function MarkdownRenderer({ content }: { content: string }) {
 function parseInline(text: string): string {
   return text
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground font-medium">$1</strong>')
-    .replace(/`(.+?)`/g, '<code class="bg-muted px-1.5 py-0.5 rounded text-xs font-mono">$1</code>');
+    .replace(/`(.+?)`/g, '<code class="bg-muted px-1.5 py-0.5 rounded text-xs font-mono">$1</code>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:underline">$1</a>');
 }
 
 export default function GuideDetail() {
