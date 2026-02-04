@@ -55,20 +55,21 @@ export function GuideTOC({
 
       {categories.map((category) => {
         const IconComponent = iconComponents[category.icon] || BookOpen;
+        const isActive = activeCategory === category.id;
         return (
           <a
             key={category.id}
             href={`#${category.id}`}
             className={cn(
               "flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors",
-              activeCategory === category.id
+              isActive
                 ? "bg-primary text-primary-foreground font-medium"
                 : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
             )}
           >
-            <IconComponent className="w-3.5 h-3.5 shrink-0" />
+            <IconComponent className={cn("w-3.5 h-3.5 shrink-0", isActive && "text-primary-foreground")} />
             <span className="truncate">{category.title}</span>
-            <span className="ml-auto text-xs text-muted-foreground">
+            <span className={cn("ml-auto text-xs", isActive ? "text-primary-foreground/80" : "text-muted-foreground")}>
               {category.guides.length}
             </span>
           </a>
