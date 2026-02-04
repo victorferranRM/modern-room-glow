@@ -4,9 +4,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Input } from "@/components/ui/input";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Search, HelpCircle, ChevronRight, Bookmark } from "lucide-react";
-import { guideCategories, searchGuides, getAllGuides, type Guide } from "@/lib/guides-data";
-import { useGuideBookmarks } from "@/hooks/useGuideBookmarks";
+import { Search, HelpCircle, ChevronRight } from "lucide-react";
+import { guideCategories, searchGuides, type Guide } from "@/lib/guides-data";
 import { GuideCard } from "@/components/guides/GuideCard";
 import { GuideTOC } from "@/components/guides/GuideTOC";
 import { CategorySection } from "@/components/guides/CategorySection";
@@ -14,13 +13,9 @@ import { CategorySection } from "@/components/guides/CategorySection";
 function SearchResults({
   guides,
   query,
-  isBookmarked,
-  onToggleBookmark,
 }: {
   guides: Guide[];
   query: string;
-  isBookmarked: (id: string) => boolean;
-  onToggleBookmark: (id: string) => void;
 }) {
   if (guides.length === 0) {
     return (
@@ -40,57 +35,7 @@ function SearchResults({
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {guides.map((guide) => (
-          <GuideCard
-            key={guide.id}
-            guide={guide}
-            isBookmarked={isBookmarked(guide.id)}
-            onToggleBookmark={onToggleBookmark}
-          />
-        ))}
-      </div>
-    </AnimatedSection>
-  );
-}
-
-function BookmarkedGuides({
-  bookmarks,
-  isBookmarked,
-  onToggleBookmark,
-}: {
-  bookmarks: string[];
-  isBookmarked: (id: string) => boolean;
-  onToggleBookmark: (id: string) => void;
-}) {
-  const allGuides = getAllGuides();
-  const bookmarkedGuides = allGuides.filter((g) => bookmarks.includes(g.id));
-
-  if (bookmarkedGuides.length === 0) {
-    return (
-      <div className="text-center py-12">
-        <Bookmark className="w-8 h-8 text-muted-foreground/50 mx-auto mb-3" />
-        <p className="text-sm text-muted-foreground">No saved guides yet</p>
-        <p className="text-xs text-muted-foreground mt-1">
-          Click the bookmark icon on any guide to save it
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <AnimatedSection>
-      <div className="flex items-center gap-3 mb-6">
-        <Bookmark className="w-5 h-5 text-primary" />
-        <h2 className="text-xl font-semibold text-foreground">Saved Guides</h2>
-        <span className="text-sm text-muted-foreground">{bookmarkedGuides.length}</span>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        {bookmarkedGuides.map((guide) => (
-          <GuideCard
-            key={guide.id}
-            guide={guide}
-            isBookmarked={isBookmarked(guide.id)}
-            onToggleBookmark={onToggleBookmark}
-          />
+          <GuideCard key={guide.id} guide={guide} />
         ))}
       </div>
     </AnimatedSection>
@@ -99,9 +44,7 @@ function BookmarkedGuides({
 
 export default function Guides() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [showBookmarksOnly, setShowBookmarksOnly] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | undefined>();
-  const { bookmarks, isBookmarked, toggleBookmark } = useGuideBookmarks();
 
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return null;
@@ -131,11 +74,6 @@ export default function Guides() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleToggleBookmarks = () => {
-    setShowBookmarksOnly(!showBookmarksOnly);
-    setSearchQuery("");
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -161,10 +99,7 @@ export default function Guides() {
                   type="search"
                   placeholder="Search guides by title or topic..."
                   value={searchQuery}
-                  onChange={(e) => {
-                    setSearchQuery(e.target.value);
-                    setShowBookmarksOnly(false);
-                  }}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-12 h-12 text-base bg-card border-border shadow-sm focus:shadow-md transition-shadow"
                 />
               </div>
@@ -184,9 +119,6 @@ export default function Guides() {
                 <GuideTOC
                   categories={guideCategories}
                   activeCategory={activeCategory}
-                  bookmarkCount={bookmarks.length}
-                  showBookmarksOnly={showBookmarksOnly}
-                  onToggleBookmarks={handleToggleBookmarks}
                 />
               </aside>
 
@@ -196,23 +128,11 @@ export default function Guides() {
                   <SearchResults
                     guides={searchResults}
                     query={searchQuery}
-                    isBookmarked={isBookmarked}
-                    onToggleBookmark={toggleBookmark}
-                  />
-                ) : showBookmarksOnly ? (
-                  <BookmarkedGuides
-                    bookmarks={bookmarks}
-                    isBookmarked={isBookmarked}
-                    onToggleBookmark={toggleBookmark}
                   />
                 ) : (
                   guideCategories.map((category) => (
                     <div key={category.id} id={category.id}>
-                      <CategorySection
-                        category={category}
-                        isBookmarked={isBookmarked}
-                        onToggleBookmark={toggleBookmark}
-                      />
+                      <CategorySection category={category} />
                     </div>
                   ))
                 )}

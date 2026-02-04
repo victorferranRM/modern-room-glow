@@ -7,12 +7,10 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import {
   ChevronLeft,
   Clock,
-  Bookmark,
   ChevronRight,
 } from "lucide-react";
-import { getAllGuides, guideCategories, type Guide } from "@/lib/guides-data";
+import { getAllGuides, guideCategories } from "@/lib/guides-data";
 import { getGuideContent } from "@/lib/guide-content";
-import { useGuideBookmarks } from "@/hooks/useGuideBookmarks";
 import { cn } from "@/lib/utils";
 
 function CalloutBlock({ type, children }: { type: "tip" | "note" | "warning"; children: React.ReactNode }) {
@@ -223,7 +221,6 @@ function parseInline(text: string): string {
 export default function GuideDetail() {
   const { guideId } = useParams();
   const navigate = useNavigate();
-  const { isBookmarked, toggleBookmark } = useGuideBookmarks();
 
   const allGuides = getAllGuides();
   const guide = allGuides.find((g) => g.id === guideId);
@@ -288,35 +285,19 @@ export default function GuideDetail() {
 
           {/* Header */}
           <AnimatedSection delay={0.05} className="mb-8">
-            <div className="flex items-start justify-between gap-4 mb-4">
-              <div className="flex items-center gap-2 flex-wrap">
-                <Badge variant="secondary" className="text-xs">
-                  {guide.type}
-                </Badge>
-                <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                  <Clock className="w-3 h-3" />
-                  {guide.readTime}
+            <div className="flex items-center gap-2 flex-wrap mb-4">
+              <Badge variant="secondary" className="text-xs">
+                {guide.type}
+              </Badge>
+              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                <Clock className="w-3 h-3" />
+                {guide.readTime}
+              </span>
+              {guide.difficulty && (
+                <span className="text-xs text-muted-foreground">
+                  • {guide.difficulty}
                 </span>
-                {guide.difficulty && (
-                  <span className="text-xs text-muted-foreground">
-                    • {guide.difficulty}
-                  </span>
-                )}
-              </div>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => toggleBookmark(guide.id)}
-                className="shrink-0"
-              >
-                <Bookmark
-                  className={cn(
-                    "w-4 h-4 mr-1",
-                    isBookmarked(guide.id) ? "fill-primary text-primary" : ""
-                  )}
-                />
-                {isBookmarked(guide.id) ? "Saved" : "Save"}
-              </Button>
+              )}
             </div>
 
             <h1 className="text-2xl font-semibold text-foreground mb-2">
