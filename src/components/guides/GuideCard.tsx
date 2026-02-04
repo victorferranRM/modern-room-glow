@@ -13,11 +13,11 @@ interface GuideCardProps {
 }
 
 const typeStyles: Record<string, string> = {
-  Setup: "bg-muted text-muted-foreground",
-  Installation: "bg-muted text-muted-foreground",
-  "How-to": "bg-muted text-muted-foreground",
-  FAQ: "bg-muted text-muted-foreground",
-  "Best Practice": "bg-muted text-muted-foreground",
+  Setup: "bg-primary/15 text-primary",
+  Installation: "bg-primary/15 text-primary",
+  "How-to": "bg-primary/15 text-primary",
+  FAQ: "bg-primary/15 text-primary",
+  "Best Practice": "bg-primary/15 text-primary",
 };
 
 const difficultyStyles: Record<string, string> = {
