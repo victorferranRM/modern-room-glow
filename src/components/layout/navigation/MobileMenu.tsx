@@ -222,7 +222,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
             </Link>
           </Button>
           <Button asChild className="w-full">
-            <Link to="/demo" onClick={onClose}>
+            <Link to="/contact" onClick={onClose}>
               Book a Demo
             </Link>
           </Button>
