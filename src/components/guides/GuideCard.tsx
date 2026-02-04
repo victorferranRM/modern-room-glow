@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
-import { Clock, ChevronRight, Bookmark } from "lucide-react";
+import { Clock, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { Guide } from "@/lib/guides-data";
 
 interface GuideCardProps {
   guide: Guide;
-  isBookmarked?: boolean;
-  onToggleBookmark?: (guideId: string) => void;
 }
 
 const typeStyles: Record<string, string> = {
@@ -26,7 +23,7 @@ const difficultyStyles: Record<string, string> = {
   Advanced: "text-muted-foreground",
 };
 
-export function GuideCard({ guide, isBookmarked, onToggleBookmark }: GuideCardProps) {
+export function GuideCard({ guide }: GuideCardProps) {
   return (
     <Card className="group relative border-border/50 bg-card hover:border-border hover:shadow-sm transition-all duration-200">
       <CardContent className="p-5">
@@ -37,30 +34,10 @@ export function GuideCard({ guide, isBookmarked, onToggleBookmark }: GuideCardPr
           >
             {guide.type}
           </Badge>
-          <div className="flex items-center gap-2">
-            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-              <Clock className="w-3.5 h-3.5" />
-              {guide.readTime}
-            </span>
-            {onToggleBookmark && (
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-7 w-7 -mr-1"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onToggleBookmark(guide.id);
-                }}
-              >
-                <Bookmark
-                  className={cn(
-                    "w-4 h-4 transition-colors",
-                    isBookmarked ? "fill-primary text-primary" : "text-muted-foreground"
-                  )}
-                />
-              </Button>
-            )}
-          </div>
+          <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+            <Clock className="w-3.5 h-3.5" />
+            {guide.readTime}
+          </span>
         </div>
 
         <Link to={guide.href} className="block">
