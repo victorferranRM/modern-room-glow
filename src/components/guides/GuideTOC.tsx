@@ -62,7 +62,7 @@ export function GuideTOC({
             className={cn(
               "flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors",
               activeCategory === category.id
-                ? "bg-muted text-foreground font-medium"
+                ? "bg-primary text-primary-foreground font-medium"
                 : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
             )}
           >
