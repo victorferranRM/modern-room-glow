@@ -20,8 +20,8 @@ export function CategorySection({
   onToggleBookmark
 }: CategorySectionProps) {
   const Icon = iconMap[category.icon] || BookOpen;
-  return <AnimatedSection className="mb-12 last:mb-0 scroll-mt-24 first:pt-0 pt-8">
-      <div className="flex items-center gap-3 mb-6">
+  return <AnimatedSection className="mb-12 last:mb-0 scroll-mt-28">
+      <div className="flex items-center gap-3 mb-6 pt-2 mt-[20px]">
         <Icon className="w-5 h-5 text-primary" />
         <h2 className="text-xl font-semibold text-foreground">{category.title}</h2>
         <span className="text-sm text-muted-foreground">
