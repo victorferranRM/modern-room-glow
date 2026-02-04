@@ -111,6 +111,8 @@ We recommend enabling two-factor authentication for added security. Go to **Sett
 
 This comprehensive guide walks you through installing Roomonitor devices in your property.
 
+> Tip: Complete this installation during daytime hours for better visibility and easier troubleshooting.
+
 ### Before You Begin
 
 Ensure you have:
@@ -120,6 +122,8 @@ Ensure you have:
 - Mobile app installed on your phone
 - Property already added in the dashboard
 
+> Note: You can download the Roomonitor app from the App Store or Google Play before starting.
+
 ### Physical Installation
 
 #### Choosing a Location
@@ -128,6 +132,8 @@ Ensure you have:
 - Avoid direct sunlight or heat sources
 - Keep away from loud appliances
 - Ensure WiFi signal strength is adequate
+
+> Tip: Use your phone's WiFi signal indicator at the intended location—aim for at least 3 bars for reliable connectivity.
 
 #### Mounting Options
 
@@ -144,6 +150,8 @@ Ensure you have:
 5. Enter the password
 6. Wait for confirmation (LED turns solid green)
 
+> Note: If the LED continues flashing blue after 2 minutes, move the device closer to your WiFi router and try again.
+
 ### Verification
 
 After installation, verify the device is working:
@@ -151,6 +159,8 @@ After installation, verify the device is working:
 1. Check the dashboard for the device status
 2. Confirm data is being received
 3. Test an alert by creating noise briefly
+
+> Tip: Take a photo of the installed device location for your records—helpful for future maintenance or support calls.
 `,
 
   "sensor-placement": `
@@ -306,6 +316,8 @@ Suppress non-critical notifications during specified hours to avoid disturbances
 
 Connect Roomonitor with your Property Management System for seamless operations.
 
+> Tip: Have your PMS admin credentials ready before starting—you'll need to authorize the connection.
+
 ### Supported Systems
 
 We integrate with major PMS platforms:
@@ -316,6 +328,8 @@ We integrate with major PMS platforms:
 - Hostfully
 - And many more
 
+> Note: Don't see your PMS listed? Contact us—we're constantly adding new integrations.
+
 ### Setting Up Integration
 
 1. Navigate to **Settings > Integrations**
@@ -323,6 +337,8 @@ We integrate with major PMS platforms:
 3. Click **Connect**
 4. Authorize access in the popup window
 5. Map your properties
+
+> Tip: Map properties by address or name to ensure reservations sync correctly with the right devices.
 
 ### Data Synchronization
 
@@ -332,6 +348,8 @@ Once connected, Roomonitor automatically syncs:
 - Guest information
 - Property details
 
+> Note: Initial sync may take up to 15 minutes depending on your portfolio size.
+
 ### Automation Features
 
 With PMS integration, you can:
@@ -340,9 +358,13 @@ With PMS integration, you can:
 - Send automated guest messages
 - Generate booking-specific reports
 
+> Tip: Enable "quiet hours automation" to automatically adjust noise thresholds based on check-in times.
+
 ### Troubleshooting
 
 If sync issues occur, try disconnecting and reconnecting. For persistent problems, contact support.
+
+> Warning: Disconnecting the integration will pause all automated workflows—ensure you have manual monitoring in place.
 `,
 
   "user-permissions": `

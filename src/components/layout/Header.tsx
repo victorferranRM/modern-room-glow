@@ -135,7 +135,7 @@ export function Header() {
                   <Link to="/auth">Customer Portal</Link>
                 </Button>
                 <Button asChild className="shadow-soft">
-                  <Link to="/demo">Book a Demo</Link>
+                  <Link to="/contact">Book a Demo</Link>
                 </Button>
               </>
             )}
