@@ -11,7 +11,7 @@ import { Calculator, ArrowRight, Shield, TrendingUp, Flame, CheckCircle2, AlertT
 function SmokeParticle({ delay, size, left, duration }: { delay: number; size: number; left: number; duration: number }) {
   return (
     <div
-      className="absolute bottom-0 rounded-full bg-gradient-to-t from-muted-foreground/20 to-transparent blur-xl animate-float-up"
+      className="absolute bottom-0 rounded-full bg-gradient-to-t from-primary/10 to-transparent blur-xl animate-float-up"
       style={{
         width: `${size}px`,
         height: `${size * 1.5}px`,
@@ -92,13 +92,13 @@ export default function SavingsCalculator() {
       <Header />
       <main>
         {/* Hero Section with Smoke Effect */}
-        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-b from-background via-secondary/40 to-background">
           {/* Smoke Effect */}
           <SmokeEffect />
           
-          {/* Gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10" />
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+          {/* Decorative gradient overlays */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
@@ -108,11 +108,11 @@ export default function SavingsCalculator() {
                 <span>Smoking incidents cost the hospitality industry millions annually</span>
               </div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
                 Calculate Your <span className="text-primary">Smoke Detection</span> Savings
               </h1>
               
-              <p className="text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
                 See how Roomonitor's early smoke detection can protect your assets, 
                 prevent costly damages, and deliver measurable ROI for your portfolio.
               </p>
@@ -120,16 +120,16 @@ export default function SavingsCalculator() {
               {/* Trust indicators */}
               <div className="flex flex-wrap justify-center gap-8 mt-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white">75%</div>
-                  <div className="text-sm text-slate-400">Incident Prevention</div>
+                  <div className="text-3xl font-bold text-foreground">75%</div>
+                  <div className="text-sm text-muted-foreground">Incident Prevention</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white">5,000+</div>
-                  <div className="text-sm text-slate-400">Properties Protected</div>
+                  <div className="text-3xl font-bold text-foreground">5,000+</div>
+                  <div className="text-sm text-muted-foreground">Properties Protected</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white">&lt;30s</div>
-                  <div className="text-sm text-slate-400">Detection Time</div>
+                  <div className="text-3xl font-bold text-foreground">&lt;30s</div>
+                  <div className="text-sm text-muted-foreground">Detection Time</div>
                 </div>
               </div>
             </div>
