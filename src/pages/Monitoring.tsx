@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { 
   Volume2, Users, Flame, Thermometer, Wifi, Battery, 
-  Shield, ArrowRight, Check, X, Zap, Settings, Download
+  Shield, ArrowRight, Check, X, Zap, Settings, Download, Clock
 } from "lucide-react";
 import roomonitorDevice from "@/assets/roomonitor-device-placeholder.jpg";
 
@@ -427,6 +427,106 @@ export default function Monitoring() {
             <Button variant="outline" size="lg" className="gap-2">
               <Download className="w-4 h-4" />
               Download Installation Manual
+            </Button>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Related Guides */}
+      <section className="py-20 lg:py-28 bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+              Knowledge Base
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+              Helpful guides & resources
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Learn how to get the most out of your Roomonitor device with our step-by-step guides.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Device Installation Manual",
+                description: "Complete guide to installing monitoring devices",
+                type: "Installation",
+                readTime: "12 min",
+                href: "/resources/guides/guide/device-installation",
+              },
+              {
+                title: "Optimal Sensor Placement",
+                description: "Best practices for positioning sensors in your property",
+                type: "Best Practice",
+                readTime: "6 min",
+                href: "/resources/guides/guide/sensor-placement",
+              },
+              {
+                title: "Configuring Alert Thresholds",
+                description: "Set custom noise and occupancy alert levels",
+                type: "Setup",
+                readTime: "7 min",
+                href: "/resources/guides/guide/alert-thresholds",
+              },
+              {
+                title: "Network Requirements",
+                description: "WiFi and connectivity setup for devices",
+                type: "Installation",
+                readTime: "4 min",
+                href: "/resources/guides/guide/network-requirements",
+              },
+              {
+                title: "Device Shows Offline",
+                description: "Steps to troubleshoot connectivity issues",
+                type: "FAQ",
+                readTime: "4 min",
+                href: "/resources/guides/guide/device-offline",
+              },
+              {
+                title: "Reducing False Alerts",
+                description: "Fine-tune sensitivity to minimize false positives",
+                type: "FAQ",
+                readTime: "5 min",
+                href: "/resources/guides/guide/false-alerts",
+              },
+            ].map((guide, index) => (
+              <AnimatedSection key={guide.title} delay={index * 80}>
+                <Link
+                  to={guide.href}
+                  className="group block bg-card border rounded-2xl p-6 hover:shadow-soft hover:-translate-y-1 transition-all duration-300 h-full"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-primary/15 text-primary">
+                      {guide.type}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                      <Clock className="w-3.5 h-3.5" />
+                      {guide.readTime}
+                    </span>
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {guide.description}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-medium text-primary mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Read guide
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection delay={500} className="text-center mt-12">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/resources/guides">
+                Browse all guides
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </Button>
           </AnimatedSection>
         </div>

@@ -24,6 +24,7 @@ import {
   PhoneCall,
   Home
 } from "lucide-react";
+import serviceControlCenter from "@/assets/service-control-center.jpg";
 
 export default function Pricing() {
   const [properties, setProperties] = useState(3);
@@ -379,7 +380,19 @@ export default function Pricing() {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 lg:p-10">
                     <div className="flex flex-col lg:flex-row items-center gap-8">
-                      {/* Left side - Brand statement */}
+                      {/* Left side - Image */}
+                      <div className="flex-shrink-0 w-full lg:w-[280px]">
+                        <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                          <img 
+                            src={serviceControlCenter} 
+                            alt="Roomonitor Control Center — Technology and People" 
+                            className="w-full h-48 lg:h-56 object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                        </div>
+                      </div>
+
+                      {/* Center - Brand statement */}
                       <div className="flex-1 text-center lg:text-left">
                         <div className="inline-flex items-center gap-3 mb-4">
                           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
