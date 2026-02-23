@@ -5,10 +5,10 @@ import { ArrowRight, Star } from "lucide-react";
 import { caseStudies } from "@/lib/case-studies-data";
 
 const stats = [
-  { number: 11, suffix: "M+", description: "Stays protected across our platform" },
-  { number: 99.9, suffix: "%", description: "Uptime backed by 24/7 support" },
-  { number: 5, prefix: "<", suffix: " min", description: "Setup time per room" },
-  { number: 250, suffix: "+", description: "Hotels trust Roomonitor worldwide" },
+  { number: 30500, suffix: "+", description: "Properties monitored" },
+  { number: 97.2, suffix: "%", description: "Satisfaction rate" },
+  { number: 45, prefix: "<", suffix: " min", description: "Average resolution time" },
+  { number: 1.5, suffix: "M", description: "Guests protected (2024)" },
 ];
 
 // Map case studies to display format with testimonials
@@ -81,10 +81,10 @@ const AnimatedStat = ({ stat }: { stat: typeof stats[0] }) => {
   const { count, ref } = useCountUp(stat.number, 2000);
   
   const formatNumber = (num: number) => {
-    if (stat.number === 99.9) {
+    if (stat.number === 97.2 || stat.number === 1.5) {
       return num.toFixed(1);
     }
-    return Math.round(num).toString();
+    return Math.round(num).toLocaleString();
   };
 
   return (
@@ -135,8 +135,8 @@ export const WhyRoomonitorSection = () => {
             Why Roomonitor?
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2">
-            Built for hospitality,{" "}
-            <span className="italic text-primary">trusted</span> by industry leaders
+            What scaling operators{" "}
+            <span className="italic text-primary">say</span> about us
           </h2>
         </div>
 

@@ -72,10 +72,10 @@ export function IntegrationsSection() {
               Integrations
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
-              Connect with your favorite tools
+              Connects with the tools you already use
             </h2>
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
-              Roomonitor integrates seamlessly with the leading property management systems and booking platforms in the industry.
+              Synchronize reservations automatically. Roomonitor integrates seamlessly with leading PMS and channel managers.
             </p>
           </AnimatedSection>
 
