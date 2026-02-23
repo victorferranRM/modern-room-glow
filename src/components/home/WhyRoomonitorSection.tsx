@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, X, CheckCircle2 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { caseStudies } from "@/lib/case-studies-data";
 
 const beforeItems = [
@@ -11,12 +12,48 @@ const beforeItems = [
   "Reactive incident management",
 ];
 
+const afterMetrics = [
+  { value: 96, suffix: "%", label: "of incidents resolved remotely" },
+  { value: 0, suffix: "", label: "unmanaged night emergencies" },
+];
+
 const afterItems = [
-  "96% of incidents resolved remotely",
-  "0 unmanaged night emergencies",
-  "24/7 operational coverage",
+  "Night operational coverage",
   "On-site intervention when escalation is required",
 ];
+
+// Animated counter hook
+function useCountUp(target: number, duration = 1800, shouldStart = false) {
+  const [count, setCount] = useState(0);
+  const hasStarted = useRef(false);
+
+  useEffect(() => {
+    if (!shouldStart || hasStarted.current) return;
+    hasStarted.current = true;
+
+    if (target === 0) {
+      setCount(0);
+      return;
+    }
+
+    const steps = 40;
+    const increment = target / steps;
+    const stepDuration = duration / steps;
+    let current = 0;
+    let step = 0;
+
+    const timer = setInterval(() => {
+      step++;
+      current = Math.min(Math.round(increment * step), target);
+      setCount(current);
+      if (step >= steps) clearInterval(timer);
+    }, stepDuration);
+
+    return () => clearInterval(timer);
+  }, [target, duration, shouldStart]);
+
+  return count;
+}
 
 // Map case studies to display format with testimonials
 const caseStudyTestimonials = caseStudies.slice(0, 5).map((study, index) => ({
@@ -30,10 +67,30 @@ const caseStudyTestimonials = caseStudies.slice(0, 5).map((study, index) => ({
   rating: 5,
 }));
 
+const MetricCard = ({ value, suffix, label, delay, isVisible }: { value: number; suffix: string; label: string; delay: number; isVisible: boolean }) => {
+  const count = useCountUp(value, 1800, isVisible);
+
+  return (
+    <div
+      className="transition-all duration-700 ease-out"
+      style={{
+        transitionDelay: `${delay}ms`,
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(12px)",
+      }}
+    >
+      <span className="text-5xl md:text-6xl font-bold text-primary tracking-tight leading-none">
+        {count}{suffix}
+      </span>
+      <p className="text-muted-foreground text-sm md:text-base mt-2 leading-snug">{label}</p>
+    </div>
+  );
+};
 
 export const WhyRoomonitorSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.15 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,7 +119,7 @@ export const WhyRoomonitorSection = () => {
     <section className="py-20 md:py-28 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="mb-12">
+        <div className="mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">
             Why Roomonitor?
           </span>
@@ -73,35 +130,90 @@ export const WhyRoomonitorSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-          {/* Left Side - Stats (1/2 width) */}
-          <div className="flex flex-col justify-center gap-6">
-            {/* Before */}
-            <div className="rounded-xl border border-border/60 bg-muted/30 p-6">
-              <h3 className="text-xs font-semibold text-destructive/70 uppercase tracking-widest mb-5">Before Roomonitor</h3>
-              <ul className="space-y-4">
+          {/* Left Side - Transformation Story */}
+          <div ref={sectionRef} className="flex flex-col justify-center gap-10">
+            {/* Before - Muted & Subtle */}
+            <div
+              className="transition-all duration-700 ease-out"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? "translateY(0)" : "translateY(16px)",
+              }}
+            >
+              <p className="text-xs font-semibold text-muted-foreground/60 uppercase tracking-widest mb-5">
+                Before Roomonitor
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
                 {beforeItems.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-muted-foreground">
-                    <span className="flex items-center justify-center h-6 w-6 rounded-full bg-destructive/10 shrink-0">
-                      <X className="h-3.5 w-3.5 text-destructive/60" />
-                    </span>
-                    <span className="text-base md:text-lg">{item}</span>
-                  </li>
+                  <div
+                    key={i}
+                    className="flex items-center gap-2.5 text-muted-foreground/70 transition-all duration-500"
+                    style={{
+                      transitionDelay: `${150 + i * 80}ms`,
+                      opacity: isVisible ? 1 : 0,
+                      transform: isVisible ? "translateX(0)" : "translateX(-8px)",
+                    }}
+                  >
+                    <X className="h-3.5 w-3.5 text-muted-foreground/40 shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
-            {/* After */}
-            <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 shadow-sm">
-              <h3 className="text-xs font-semibold text-primary uppercase tracking-widest mb-5">After Roomonitor</h3>
-              <ul className="space-y-4">
-                {afterItems.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-foreground">
-                    <span className="flex items-center justify-center h-6 w-6 rounded-full bg-primary/10 shrink-0">
-                      <CheckCircle2 className="h-4 w-4 text-primary" />
-                    </span>
-                    <span className="text-base md:text-lg font-semibold">{item}</span>
-                  </li>
+
+            {/* Divider */}
+            <div
+              className="h-px bg-border/60 transition-all duration-700 ease-out origin-left"
+              style={{
+                transitionDelay: "400ms",
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? "scaleX(1)" : "scaleX(0)",
+              }}
+            />
+
+            {/* After - Strong & Outcome-Driven */}
+            <div>
+              <p
+                className="text-xs font-semibold text-primary uppercase tracking-widest mb-6 transition-all duration-700"
+                style={{
+                  transitionDelay: "500ms",
+                  opacity: isVisible ? 1 : 0,
+                }}
+              >
+                After Roomonitor
+              </p>
+
+              {/* Big Metrics */}
+              <div className="grid grid-cols-2 gap-8 mb-8">
+                {afterMetrics.map((metric, i) => (
+                  <MetricCard
+                    key={i}
+                    value={metric.value}
+                    suffix={metric.suffix}
+                    label={metric.label}
+                    delay={600 + i * 150}
+                    isVisible={isVisible}
+                  />
                 ))}
-              </ul>
+              </div>
+
+              {/* Supporting outcomes */}
+              <div className="space-y-3">
+                {afterItems.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 transition-all duration-600 ease-out"
+                    style={{
+                      transitionDelay: `${900 + i * 100}ms`,
+                      opacity: isVisible ? 1 : 0,
+                      transform: isVisible ? "translateY(0)" : "translateY(8px)",
+                    }}
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
+                    <span className="text-base md:text-lg font-medium text-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
