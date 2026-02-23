@@ -1,14 +1,21 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import { caseStudies } from "@/lib/case-studies-data";
 
-const stats = [
-  { number: 30500, suffix: "+", description: "Properties monitored" },
-  { number: 97.2, suffix: "%", description: "Satisfaction rate" },
-  { number: 45, prefix: "<", suffix: " min", description: "Average resolution time" },
-  { number: 1.5, suffix: "M", description: "Guests protected (2024)" },
+const beforeItems = [
+  "Night calls handled internally",
+  "High neighbor complaints",
+  "No on-site coverage",
+  "Reactive incident management",
+];
+
+const afterItems = [
+  "96% of incidents resolved remotely",
+  "0 unmanaged night emergencies",
+  "24/7 operational coverage",
+  "On-site intervention when escalation is required",
 ];
 
 // Map case studies to display format with testimonials
@@ -23,81 +30,6 @@ const caseStudyTestimonials = caseStudies.slice(0, 5).map((study, index) => ({
   rating: 5,
 }));
 
-// Animated counter hook
-const useCountUp = (end: number, duration: number = 2000, startOnView: boolean = true) => {
-  const [count, setCount] = useState(0);
-  const [hasStarted, setHasStarted] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!startOnView) {
-      setHasStarted(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasStarted) {
-          setHasStarted(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [hasStarted, startOnView]);
-
-  useEffect(() => {
-    if (!hasStarted) return;
-
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Easing function for smooth deceleration
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      setCount(easeOut * end);
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [end, duration, hasStarted]);
-
-  return { count, ref };
-};
-
-const AnimatedStat = ({ stat }: { stat: typeof stats[0] }) => {
-  const { count, ref } = useCountUp(stat.number, 2000);
-  
-  const formatNumber = (num: number) => {
-    if (stat.number === 97.2 || stat.number === 1.5) {
-      return num.toFixed(1);
-    }
-    return Math.round(num).toLocaleString();
-  };
-
-  return (
-    <div ref={ref} className="space-y-2 group cursor-default">
-      <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary transition-all duration-300 group-hover:scale-110 group-hover:text-primary/80 origin-left group-hover:drop-shadow-[0_0_25px_hsl(var(--primary)/0.4)]">
-        {stat.prefix}{formatNumber(count)}{stat.suffix}
-      </p>
-      <p className="text-muted-foreground text-base md:text-lg transition-colors duration-300 group-hover:text-foreground">
-        {stat.description}
-      </p>
-    </div>
-  );
-};
 
 export const WhyRoomonitorSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -135,18 +67,37 @@ export const WhyRoomonitorSection = () => {
             Why Roomonitor?
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2">
-            What scaling operators{" "}
-            <span className="italic text-primary">say</span> about us
+            Real impact for{" "}
+            <span className="italic text-primary">scaling operators</span>
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Side - Stats (1/2 width) */}
-          <div className="flex flex-col justify-center">
-            <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-              {stats.map((stat, index) => (
-                <AnimatedStat key={index} stat={stat} />
-              ))}
+          <div className="flex flex-col justify-center space-y-8">
+            {/* Before */}
+            <div>
+              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Before Roomonitor</h3>
+              <ul className="space-y-3">
+                {beforeItems.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-destructive/60 shrink-0" />
+                    <span className="text-base md:text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* After */}
+            <div>
+              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">After Roomonitor</h3>
+              <ul className="space-y-3">
+                {afterItems.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-foreground">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                    <span className="text-base md:text-lg font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
