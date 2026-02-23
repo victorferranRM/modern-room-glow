@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, X, CheckCircle2 } from "lucide-react";
 import { caseStudies } from "@/lib/case-studies-data";
 
 const beforeItems = [
@@ -74,27 +74,31 @@ export const WhyRoomonitorSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Side - Stats (1/2 width) */}
-          <div className="flex flex-col justify-center space-y-8">
+          <div className="flex flex-col justify-center gap-6">
             {/* Before */}
-            <div>
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Before Roomonitor</h3>
-              <ul className="space-y-3">
+            <div className="rounded-xl border border-border/60 bg-muted/30 p-6">
+              <h3 className="text-xs font-semibold text-destructive/70 uppercase tracking-widest mb-5">Before Roomonitor</h3>
+              <ul className="space-y-4">
                 {beforeItems.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="mt-1.5 h-2 w-2 rounded-full bg-destructive/60 shrink-0" />
+                  <li key={i} className="flex items-center gap-3 text-muted-foreground">
+                    <span className="flex items-center justify-center h-6 w-6 rounded-full bg-destructive/10 shrink-0">
+                      <X className="h-3.5 w-3.5 text-destructive/60" />
+                    </span>
                     <span className="text-base md:text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             {/* After */}
-            <div>
-              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">After Roomonitor</h3>
-              <ul className="space-y-3">
+            <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 shadow-sm">
+              <h3 className="text-xs font-semibold text-primary uppercase tracking-widest mb-5">After Roomonitor</h3>
+              <ul className="space-y-4">
                 {afterItems.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-foreground">
-                    <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
-                    <span className="text-base md:text-lg font-medium">{item}</span>
+                  <li key={i} className="flex items-center gap-3 text-foreground">
+                    <span className="flex items-center justify-center h-6 w-6 rounded-full bg-primary/10 shrink-0">
+                      <CheckCircle2 className="h-4 w-4 text-primary" />
+                    </span>
+                    <span className="text-base md:text-lg font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
