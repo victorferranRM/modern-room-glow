@@ -7,6 +7,13 @@ const partners = [
   "Hostmaker", "City Relay", "Lavanda", "Pillow"
 ];
 
+const stats = [
+  { value: "30,500+", label: "Properties monitored" },
+  { value: "1.5M", label: "Guests protected (2024)" },
+  { value: "97.2%", label: "Satisfaction rate" },
+  { value: "< 45 min", label: "Average resolution time" },
+];
+
 function LogoCard({ name }: { name: string }) {
   return (
     <div className="flex-shrink-0 w-32 h-14 sm:w-36 sm:h-16 bg-card/50 rounded-xl border flex items-center justify-center mx-3 hover:bg-card hover:border-primary/20 transition-all duration-300">
@@ -33,12 +40,28 @@ export function PartnersSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center mb-8">
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-            Trusted by industry leaders across Europe
+            Trusted by leading hospitality operators worldwide
           </p>
+        </AnimatedSection>
+
+        {/* Big Numbers */}
+        <AnimatedSection delay={100} className="mb-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </AnimatedSection>
       </div>
       
-      <AnimatedSection delay={150}>
+      <AnimatedSection delay={200}>
         <div className="relative overflow-hidden">
           {/* Gradient masks */}
           <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-muted/80 to-transparent z-10 pointer-events-none" />

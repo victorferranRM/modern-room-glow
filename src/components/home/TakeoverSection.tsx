@@ -3,7 +3,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Clock, Users, Headphones, Shield, AlertTriangle, Wrench, Cpu, Heart } from "lucide-react";
+import { ShieldAlert, TrendingDown, TrendingUp, Shield, Wrench, Heart } from "lucide-react";
 
 import solutionRest from "@/assets/solution-rest-new.jpg";
 import solutionControl from "@/assets/solution-control.jpg";
@@ -11,41 +11,41 @@ import solutionManage from "@/assets/solution-manage.jpg";
 
 const solutions = [
   {
-    tagLabel: "OUTSIDE OFFICE HOURS",
-    tagProduct: "24/7 COVERAGE",
-    title: "Rest while we work",
-    description: "When your team is offline, Roomonitor acts as a direct extension of your operations. We handle guests, incidents and emergencies with full access to your tools, workflows and protocols.",
-    ctaText: "Discover Guest Assist™",
-    ctaLink: "/services/guest-assist",
+    tagLabel: "COMPLIANCE",
+    tagProduct: "PREVENTION",
+    title: "Prevent conflicts",
+    description: "Say goodbye to neighbor complaints, uncontrolled parties and municipal fines.",
+    ctaText: "Learn about monitoring",
+    ctaLink: "/monitoring",
     image: solutionRest,
     overlayColor: "from-slate-900/80 via-slate-900/60 to-transparent",
   },
   {
-    tagLabel: "KEY DIFFERENTIATOR",
-    tagProduct: "HUMAN-FIRST APPROACH",
-    title: "People first",
-    description: "We combine smart monitoring devices with a 24/7 Control Center staffed by trained agents. Real humans verify, decide and act — technology alone can't replace judgment.",
-    ctaText: "Explore Control Center",
+    tagLabel: "EFFICIENCY",
+    tagProduct: "COST REDUCTION",
+    title: "Reduce operational costs",
+    description: "No need to hire night-shift staff. We become your out-of-hours team.",
+    ctaText: "Explore our services",
     ctaLink: "/services/control-center",
     image: solutionControl,
     overlayColor: "from-slate-900/80 via-slate-900/60 to-transparent",
   },
   {
-    tagLabel: "KEY DIFFERENTIATOR",
-    tagProduct: "HUMAN-FIRST APPROACH",
-    title: "We operate as if we were you",
-    description: "We work directly from your PMS and operational tools, applying your rules and priorities. Your guests never know the difference — they experience your brand, your standards, your commitment to excellence.",
-    ctaText: "Learn How We Work",
-    ctaLink: "/about",
+    tagLabel: "GROWTH",
+    tagProduct: "SCALABILITY",
+    title: "Scale without limits",
+    description: "Add more properties to your portfolio without multiplying workload or stress.",
+    ctaText: "See how it works",
+    ctaLink: "/how-it-works",
     image: solutionManage,
     overlayColor: "from-slate-900/80 via-slate-900/60 to-transparent",
   },
 ];
 
 const floatingIcons = [
-  [Clock, Users, Headphones],
-  [Shield, Cpu, Heart],
-  [Wrench, AlertTriangle, Shield],
+  [ShieldAlert, Shield, Heart],
+  [TrendingDown, Shield, Heart],
+  [TrendingUp, Wrench, Shield],
 ];
 
 export function TakeoverSection() {
@@ -60,9 +60,6 @@ export function TakeoverSection() {
       const windowHeight = window.innerHeight;
       const sectionHeight = sectionRef.current.offsetHeight;
       
-      // Calculate how far through the section we've scrolled
-      const start = rect.top + windowHeight;
-      const end = rect.bottom;
       const total = sectionHeight + windowHeight;
       const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / total));
       
@@ -82,12 +79,14 @@ export function TakeoverSection() {
           {/* Section header */}
           <AnimatedSection className="mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              From solo to scale
+              Problem vs Solution
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-              Your operations have <em className="font-serif not-italic">no limits</em>.<br />
-              Neither do we.
+              Technology alone is <em className="font-serif not-italic">not enough</em>.
             </h2>
+            <p className="text-lg text-muted-foreground mt-4 max-w-3xl leading-relaxed">
+              A noise sensor is a passive tool. When there's a real party, you need an active response. At Roomonitor, we close the loop:
+            </p>
           </AnimatedSection>
 
           {/* Stacked Solution Cards */}
@@ -155,7 +154,7 @@ export function TakeoverSection() {
                         </Button>
                       </div>
 
-                      {/* Floating Icons - hidden on mobile, positioned at top right on desktop */}
+                      {/* Floating Icons */}
                       <div className="hidden lg:flex absolute top-12 right-12 gap-3">
                         {icons.map((Icon, iconIndex) => (
                           <div
