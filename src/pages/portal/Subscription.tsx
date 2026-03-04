@@ -48,7 +48,7 @@ const invoices = [
 
 const plans = [
   {
-    name: "Basic",
+    name: "Noise Alarm",
     price: "€14.90",
     period: "/device/month",
     features: ["Noise monitoring", "Basic alerts", "Email support", "Up to 5 properties"],
