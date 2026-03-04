@@ -18,8 +18,6 @@ import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Integrations from "./pages/Integrations";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import Guides from "./pages/Guides";
-import GuideDetail from "./pages/GuideDetail";
 import Monitoring from "./pages/Monitoring";
 import NoiseMonitoring from "./pages/monitoring/NoiseMonitoring";
 import OccupancyDetection from "./pages/monitoring/OccupancyDetection";
