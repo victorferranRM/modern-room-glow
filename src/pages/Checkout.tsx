@@ -28,8 +28,8 @@ const PLANS = {
     ],
   },
   pro: {
-    name: "Pro",
-    description: "Todo lo de Basic + Alarm Assistant",
+    name: "Alarm Assistant",
+    description: "Todo lo de Noise Alarm + monitorización 24/7",
     devicePrice: 45,
     originalDevicePrice: 90,
     monthlyPrice: 29.90,
