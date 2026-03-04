@@ -329,121 +329,86 @@ export default function Monitoring() {
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-              {/* Basic Plan */}
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+              {/* Noise Alarm Plan */}
               <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground">Basic</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Dispositivo + suscripción de monitorización</p>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="space-y-1">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-lg text-muted-foreground line-through">€90</span>
-                        <span className="text-3xl font-bold text-foreground">€45</span>
-                        <span className="text-sm text-muted-foreground">pago único</span>
-                      </div>
-                      <div className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-0.5 rounded">
-                        Precio exclusivo web
-                      </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Volume2 className="w-5 h-5 text-primary" />
                     </div>
-                    <div className="pt-2 border-t border-border">
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-bold text-foreground">€13</span>
-                        <span className="text-muted-foreground">/ mes por propiedad</span>
-                      </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground">Noise Alarm</h3>
+                      <p className="text-sm text-muted-foreground">Tú gestionas las alertas</p>
                     </div>
                   </div>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Dispositivo de monitorización Roomonitor</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Alertas en tiempo real</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Dashboard y app móvil</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Notificaciones email y push</span>
-                    </li>
+                    {[
+                      "Dispositivo V5 incluido",
+                      "Dashboard Manager completo",
+                      "Alertas en tiempo real",
+                      "Umbrales configurables por propiedad",
+                      "Histórico de datos y tendencias",
+                      "Notificaciones push, email, SMS",
+                      "Monitorización de ruido, humo, clima",
+                      "Tú gestionas las alertas",
+                    ].map((text) => (
+                      <li key={text} className="flex items-start gap-3">
+                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm">{text}</span>
+                      </li>
+                    ))}
                   </ul>
                   <Button className="w-full" size="lg" asChild>
-                    <Link to="/checkout?plan=basic&properties=1">
-                      Comprar ahora
+                    <Link to="/pricing">
+                      Ver precios
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
                 </div>
               </div>
 
-              {/* Pro Plan */}
+              {/* Alarm Assistant Plan */}
               <div className="relative bg-card border-2 border-primary rounded-2xl p-6 lg:p-8 shadow-soft-lg hover:-translate-y-1 transition-all duration-300">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">
-                    Más popular
+                    Recomendado
                   </span>
                 </div>
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground">Pro</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Todo lo de Basic + Alarm Assistant</p>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-foreground">€29,90</span>
-                      <span className="text-muted-foreground">/ mes por propiedad</span>
+                  <div className="flex items-center gap-3 pt-2">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Headphones className="w-5 h-5 text-primary" />
                     </div>
-                    <p className="text-sm text-muted-foreground">+ €45 pago único por dispositivo (exclusivo web)</p>
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground">Alarm Assistant</h3>
+                      <p className="text-sm text-muted-foreground">Nosotros gestionamos por ti</p>
+                    </div>
                   </div>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Todo lo de Basic</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Alarm Assistant</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Agentes humanos monitorizando alarmas</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">Gestión de alarmas 24/7</span>
-                    </li>
+                    {[
+                      "Todo lo de Noise Alarm, más:",
+                      "Roomonitor monitoriza por ti 24/7",
+                      "Centro de Control recibe tus alertas",
+                      "Agente contacta al huésped en tu nombre",
+                      "Mediación y resolución remota",
+                      "Informe de incidencia en tu dashboard",
+                      "96% de incidencias resueltas sin tu intervención",
+                      "Protocolo personalizado por propiedad",
+                    ].map((text) => (
+                      <li key={text} className="flex items-start gap-3">
+                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm">{text}</span>
+                      </li>
+                    ))}
                   </ul>
-                  <Button className="w-full shadow-soft" size="lg" asChild>
-                    <Link to="/checkout?plan=pro&properties=1">
-                      Comprar ahora
+                  <Button className="w-full" size="lg" variant="outline" asChild>
+                    <Link to="/pricing">
+                      Ver precios
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
                 </div>
-              </div>
-            </div>
-
-            {/* Enterprise CTA */}
-            <div className="max-w-4xl mx-auto mt-6">
-              <div className="bg-gradient-to-br from-secondary to-muted border rounded-2xl p-6 lg:p-8 text-center">
-                <h3 className="text-xl font-bold text-foreground mb-2">Enterprise</h3>
-                <p className="text-sm text-muted-foreground mb-1">Gestión operativa completa</p>
-                <div className="flex items-baseline justify-center gap-1 mb-4">
-                  <span className="text-sm text-muted-foreground">Desde</span>
-                  <span className="text-2xl font-bold text-foreground">€79,90</span>
-                  <span className="text-muted-foreground">/ propiedad</span>
-                </div>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact?inquiry=enterprise">
-                    Hablar con un especialista
-                  </Link>
-                </Button>
               </div>
             </div>
           </AnimatedSection>
