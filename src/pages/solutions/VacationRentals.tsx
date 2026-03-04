@@ -63,7 +63,7 @@ const services = [
 
 const pricingPlans = [
   {
-    name: "Basic",
+    name: "Noise Alarm",
     price: "13",
     period: "/property/month",
     devicePrice: "45",
