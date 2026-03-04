@@ -282,7 +282,7 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
             <div className="p-6 flex items-center justify-center border-l border-border">
               <Button variant="outline" asChild>
                 <Link to={`/checkout?plan=basic&properties=${properties}`}>
-                  Elegir Basic
+                  Elegir Noise Alarm
                 </Link>
               </Button>
             </div>
