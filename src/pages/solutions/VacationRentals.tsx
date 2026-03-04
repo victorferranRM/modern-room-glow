@@ -93,7 +93,7 @@ const pricingPlans = [
       "Incident documentation",
       "Priority support",
     ],
-    cta: "Start with Pro",
+    cta: "Start with Alarm Assistant",
     popular: true,
   },
   {
