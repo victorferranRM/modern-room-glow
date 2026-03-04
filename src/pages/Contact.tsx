@@ -203,15 +203,10 @@ export default function Contact() {
             <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-medium">
                 <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span>Contacta con nosotros</span>
+                <span>Contacto</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">Hablemos de tu
-operativa
-                <span className="gradient-text block">necesidades operativas</span>
-              </h1>
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">Tanto si gestionas 10 propiedades como 10.000, nuestro equipo está listo para mostrarte cómo podemos transformar tus operaciones
-
-              </p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">Hablemos de tu <span className="gradient-text">operativa.</span></h1>
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">Cuéntanos cuántas propiedades gestionas, qué retos tienes fuera de horario, y te explicamos cómo podemos ayudarte. Sin compromiso.</p>
             </div>
           </div>
         </section>
