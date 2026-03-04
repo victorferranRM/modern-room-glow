@@ -534,7 +534,7 @@ export default function Monitoring() {
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/pricing">Ver precios</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-background/20 text-background hover:bg-background/10" asChild>
+              <Button size="lg" variant="outline" className="border-background/20 bg-transparent text-background hover:bg-background/10" asChild>
                 <Link to="/contact">Hablar con ventas</Link>
               </Button>
             </div>

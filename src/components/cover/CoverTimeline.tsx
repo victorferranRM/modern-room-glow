@@ -27,10 +27,10 @@ export function CoverTimeline() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Central line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border hidden lg:block" />
+          {/* Central line - desktop only */}
+          <div className="absolute left-6 lg:left-1/2 top-0 bottom-0 w-px bg-border hidden md:block" />
 
-          <div className="space-y-8 lg:space-y-0">
+          <div className="space-y-0">
             {steps.map((step, i) => {
               const Icon = step.icon;
               const isLeft = i % 2 === 0;
@@ -39,21 +39,18 @@ export function CoverTimeline() {
                 <AnimatedSection
                   key={i}
                   animation={isLeft ? "fade-right" : "fade-left"}
-                  delay={i * 100}
-                  className="relative lg:py-8"
+                  delay={i * 80}
+                  className="relative"
                 >
                   {/* Mobile layout */}
-                  <div className="lg:hidden flex gap-4">
-                    <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center shrink-0">
+                  <div className="md:hidden flex gap-4 pb-8">
+                    <div className="flex flex-col items-center shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center z-10 relative">
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
                       {i < steps.length - 1 && <div className="w-px flex-1 bg-border mt-2" />}
                     </div>
-                    <div className="pb-8">
-                      <span className="text-5xl font-black text-muted-foreground/10 absolute right-0 top-0 leading-none select-none">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
+                    <div className="pt-1">
                       <Badge variant="secondary" className="text-xs mb-2">{step.role}</Badge>
                       <h3 className="font-bold text-lg text-foreground mb-1">{step.title}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-2">{step.desc}</p>
@@ -69,47 +66,17 @@ export function CoverTimeline() {
                   </div>
 
                   {/* Desktop layout */}
-                  <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-8 lg:items-center">
-                    {/* Left content or spacer */}
-                    <div className={cn("text-right", !isLeft && "order-1")}>
+                  <div className="hidden md:grid md:grid-cols-[1fr_48px_1fr] lg:grid-cols-[1fr_56px_1fr] items-start py-6">
+                    {/* Left column */}
+                    <div className={cn("flex", isLeft ? "justify-end pr-8" : "")}>
                       {isLeft ? (
-                        <div className="bg-card border rounded-2xl p-6 ml-auto max-w-md shadow-soft hover:shadow-soft-lg transition-shadow duration-300 relative overflow-hidden group">
-                          <span className="absolute -top-2 -right-2 text-7xl font-black text-muted-foreground/5 leading-none select-none">
-                            {String(i + 1).padStart(2, "0")}
-                          </span>
-                          <Badge variant="secondary" className="text-xs mb-3">{step.role}</Badge>
+                        <div className="bg-card border rounded-2xl p-6 max-w-md shadow-soft hover:shadow-soft-lg transition-shadow duration-300 group relative overflow-hidden">
+                          <div className="flex items-center gap-2 mb-3">
+                            <span className="text-xs font-bold text-muted-foreground/30 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                            <Badge variant="secondary" className="text-xs">{step.role}</Badge>
+                          </div>
                           <h3 className="font-bold text-lg text-foreground mb-2">{step.title}</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed mb-2 text-left">{step.desc}</p>
-                          {step.highlight && (
-                            <Badge className="mb-2 bg-primary/10 text-primary border-primary/20">{step.highlight}</Badge>
-                          )}
-                          {step.link && (
-                            <Link to={step.link.href} className="text-sm text-primary font-medium hover:underline block text-left">
-                              {step.link.text}
-                            </Link>
-                          )}
-                          <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary transition-all duration-500 group-hover:w-full" />
-                        </div>
-                      ) : <div />}
-                    </div>
-
-                    {/* Center node */}
-                    <div className="relative z-10">
-                      <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center shadow-[0_0_20px_hsl(var(--primary)/0.15)]">
-                        <Icon className="w-6 h-6 text-primary" />
-                      </div>
-                    </div>
-
-                    {/* Right content or spacer */}
-                    <div className={cn(!isLeft ? "order-3" : "")}>
-                      {!isLeft ? (
-                        <div className="bg-card border rounded-2xl p-6 mr-auto max-w-md shadow-soft hover:shadow-soft-lg transition-shadow duration-300 relative overflow-hidden group">
-                          <span className="absolute -top-2 -left-2 text-7xl font-black text-muted-foreground/5 leading-none select-none">
-                            {String(i + 1).padStart(2, "0")}
-                          </span>
-                          <Badge variant="secondary" className="text-xs mb-3">{step.role}</Badge>
-                          <h3 className="font-bold text-lg text-foreground mb-2">{step.title}</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed mb-2">{step.desc}</p>
+                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">{step.desc}</p>
                           {step.highlight && (
                             <Badge className="mb-2 bg-primary/10 text-primary border-primary/20">{step.highlight}</Badge>
                           )}
@@ -118,7 +85,37 @@ export function CoverTimeline() {
                               {step.link.text}
                             </Link>
                           )}
-                          <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary transition-all duration-500 group-hover:w-full" />
+                          <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary/60 transition-all duration-500 group-hover:w-full" />
+                        </div>
+                      ) : <div />}
+                    </div>
+
+                    {/* Center node */}
+                    <div className="flex justify-center relative z-10">
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-card border-2 border-primary/30 flex items-center justify-center shadow-[0_0_15px_hsl(var(--primary)/0.1)]">
+                        <Icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
+                      </div>
+                    </div>
+
+                    {/* Right column */}
+                    <div className={cn("flex", !isLeft ? "pl-8" : "")}>
+                      {!isLeft ? (
+                        <div className="bg-card border rounded-2xl p-6 max-w-md shadow-soft hover:shadow-soft-lg transition-shadow duration-300 group relative overflow-hidden">
+                          <div className="flex items-center gap-2 mb-3">
+                            <span className="text-xs font-bold text-muted-foreground/30 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                            <Badge variant="secondary" className="text-xs">{step.role}</Badge>
+                          </div>
+                          <h3 className="font-bold text-lg text-foreground mb-2">{step.title}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">{step.desc}</p>
+                          {step.highlight && (
+                            <Badge className="mb-2 bg-primary/10 text-primary border-primary/20">{step.highlight}</Badge>
+                          )}
+                          {step.link && (
+                            <Link to={step.link.href} className="text-sm text-primary font-medium hover:underline block">
+                              {step.link.text}
+                            </Link>
+                          )}
+                          <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary/60 transition-all duration-500 group-hover:w-full" />
                         </div>
                       ) : <div />}
                     </div>
