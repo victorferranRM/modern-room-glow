@@ -97,7 +97,7 @@ const pricingPlans = [
     popular: true,
   },
   {
-    name: "Enterprise",
+    name: "Guest & Property Services",
     price: "79.90",
     period: "/property/month",
     devicePrice: "Included",
