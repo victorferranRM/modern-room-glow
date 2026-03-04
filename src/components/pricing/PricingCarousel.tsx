@@ -58,7 +58,7 @@ export function PricingCarousel({
   const plans = [
     {
       key: "basic",
-      name: "Basic",
+      name: "Noise Alarm",
       subtitle: "Dispositivo + suscripción de monitorización",
       features: [
         { icon: Bell, text: "Dispositivo de monitorización Roomonitor" },
@@ -70,10 +70,10 @@ export function PricingCarousel({
     },
     {
       key: "pro",
-      name: "Pro",
-      subtitle: "Todo lo de Basic + Alarm Assistant",
+      name: "Alarm Assistant",
+      subtitle: "Todo lo de Noise Alarm + monitorización 24/7",
       features: [
-        { icon: Check, text: "Todo lo de Basic" },
+        { icon: Check, text: "Todo lo de Noise Alarm" },
         { icon: PhoneCall, text: "Alarm Assistant" },
         { icon: Headphones, text: "Agentes humanos monitorizando alarmas" },
         { icon: Clock, text: "Gestión de alarmas 24/7" },
@@ -82,10 +82,10 @@ export function PricingCarousel({
     },
     {
       key: "enterprise",
-      name: "Enterprise",
+      name: "Guest & Property Services",
       subtitle: "Gestión operativa completa",
       features: [
-        { icon: Check, text: "Todo lo de Pro" },
+        { icon: Check, text: "Todo lo de Alarm Assistant" },
         { icon: Home, text: "Servicios de huésped y propiedad" },
         { icon: Users, text: "Gestión operativa completa" },
         { icon: Shield, text: "Acuerdos SLA personalizados" },

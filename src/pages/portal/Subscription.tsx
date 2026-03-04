@@ -24,7 +24,7 @@ import {
 
 // Mock data
 const subscriptionData = {
-  plan: "Pro",
+  plan: "Alarm Assistant",
   status: "active",
   billingFrequency: "Monthly",
   nextInvoiceDate: "February 15, 2026",
@@ -48,25 +48,25 @@ const invoices = [
 
 const plans = [
   {
-    name: "Basic",
+    name: "Noise Alarm",
     price: "€14.90",
     period: "/device/month",
     features: ["Noise monitoring", "Basic alerts", "Email support", "Up to 5 properties"],
     current: false,
   },
   {
-    name: "Pro",
+    name: "Alarm Assistant",
     price: "€19.90",
     period: "/device/month",
-    features: ["All Basic features", "Advanced analytics", "Priority support", "Up to 10 properties", "API access"],
+    features: ["All Noise Alarm features", "Advanced analytics", "Priority support", "Up to 10 properties", "API access"],
     current: true,
     popular: true,
   },
   {
-    name: "Enterprise",
+    name: "Guest & Property Services",
     price: "Custom",
     period: "",
-    features: ["All Pro features", "Unlimited properties", "Dedicated account manager", "Custom integrations", "SLA guarantee"],
+    features: ["All Alarm Assistant features", "Unlimited properties", "Dedicated account manager", "Custom integrations", "SLA guarantee"],
     current: false,
     enterprise: true,
   },

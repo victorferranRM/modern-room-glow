@@ -15,7 +15,7 @@ import {
 
 const PLANS = {
   basic: {
-    name: "Basic",
+    name: "Noise Alarm",
     description: "Dispositivo + suscripción de monitorización",
     devicePrice: 45,
     originalDevicePrice: 90,
@@ -28,13 +28,13 @@ const PLANS = {
     ],
   },
   pro: {
-    name: "Pro",
-    description: "Todo lo de Basic + Alarm Assistant",
+    name: "Alarm Assistant",
+    description: "Todo lo de Noise Alarm + monitorización 24/7",
     devicePrice: 45,
     originalDevicePrice: 90,
     monthlyPrice: 29.90,
     features: [
-      "Todo lo de Basic",
+      "Todo lo de Noise Alarm",
       "Alarm Assistant",
       "Agentes humanos monitorizando alarmas",
       "Gestión de alarmas 24/7",

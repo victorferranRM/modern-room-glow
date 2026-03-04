@@ -120,7 +120,7 @@ export default function Pricing() {
               <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Basic</h3>
+                    <h3 className="text-xl font-bold text-foreground">Noise Alarm</h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Dispositivo + suscripción de monitorización
                     </p>
@@ -202,9 +202,9 @@ export default function Pricing() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Pro</h3>
+                    <h3 className="text-xl font-bold text-foreground">Alarm Assistant</h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Todo lo de Basic + Alarm Assistant
+                      Todo lo de Noise Alarm + monitorización 24/7
                     </p>
                   </div>
 
@@ -232,7 +232,7 @@ export default function Pricing() {
 
                   <ul className="space-y-3">
                     {[
-                      { icon: Check, text: "Todo lo de Basic" },
+                      { icon: Check, text: "Todo lo de Noise Alarm" },
                       { icon: PhoneCall, text: "Alarm Assistant" },
                       { icon: Headphones, text: "Agentes humanos monitorizando alarmas" },
                       { icon: Clock, text: "Gestión de alarmas 24/7" },
@@ -268,7 +268,7 @@ export default function Pricing() {
               <div className="bg-gradient-to-br from-secondary to-muted border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Enterprise</h3>
+                    <h3 className="text-xl font-bold text-foreground">Guest & Property Services</h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Gestión operativa completa
                     </p>
@@ -287,7 +287,7 @@ export default function Pricing() {
 
                   <ul className="space-y-3">
                     {[
-                      { icon: Check, text: "Todo lo de Pro" },
+                      { icon: Check, text: "Todo lo de Alarm Assistant" },
                       { icon: Home, text: "Servicios de huésped y propiedad" },
                       { icon: Users, text: "Gestión operativa completa" },
                       { icon: Shield, text: "Acuerdos SLA personalizados" },

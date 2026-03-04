@@ -90,9 +90,9 @@ const COMPARISON_DATA: FeatureCategory[] = [
 ];
 
 const PLANS = [
-  { key: "basic", name: "Basic", price: "€13/mes", popular: false },
-  { key: "pro", name: "Pro", price: "€29,90/mes", popular: true },
-  { key: "enterprise", name: "Enterprise", price: "Desde €79,90", popular: false },
+  { key: "basic", name: "Noise Alarm", price: "€13/mes", popular: false },
+  { key: "pro", name: "Alarm Assistant", price: "€29,90/mes", popular: true },
+  { key: "enterprise", name: "Guest & Property Services", price: "Desde €79,90", popular: false },
 ];
 
 interface ComparisonTableProps {
@@ -206,7 +206,7 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
               ) : (
                 <Button className="w-full" size="lg" asChild>
                   <Link to={`/checkout?plan=${selectedPlan}&properties=${properties}`}>
-                    Elegir {PLANS.find((p) => p.key === selectedPlan)?.name}
+                    Elegir plan
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
@@ -282,14 +282,14 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
             <div className="p-6 flex items-center justify-center border-l border-border">
               <Button variant="outline" asChild>
                 <Link to={`/checkout?plan=basic&properties=${properties}`}>
-                  Elegir Basic
+                  Elegir Noise Alarm
                 </Link>
               </Button>
             </div>
             <div className="p-6 flex items-center justify-center border-l border-border bg-primary/5">
               <Button asChild>
                 <Link to={`/checkout?plan=pro&properties=${properties}`}>
-                  Elegir Pro
+                  Elegir Alarm Assistant
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Link>
               </Button>
