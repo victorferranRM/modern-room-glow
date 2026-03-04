@@ -55,7 +55,7 @@ const plans = [
     current: false,
   },
   {
-    name: "Pro",
+    name: "Alarm Assistant",
     price: "€19.90",
     period: "/device/month",
     features: ["All Basic features", "Advanced analytics", "Priority support", "Up to 10 properties", "API access"],
