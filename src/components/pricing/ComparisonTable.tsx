@@ -90,9 +90,9 @@ const COMPARISON_DATA: FeatureCategory[] = [
 ];
 
 const PLANS = [
-  { key: "basic", name: "Basic", price: "€13/mes", popular: false },
-  { key: "pro", name: "Pro", price: "€29,90/mes", popular: true },
-  { key: "enterprise", name: "Enterprise", price: "Desde €79,90", popular: false },
+  { key: "basic", name: "Noise Alarm", price: "€13/mes", popular: false },
+  { key: "pro", name: "Alarm Assistant", price: "€29,90/mes", popular: true },
+  { key: "enterprise", name: "Guest & Property Services", price: "Desde €79,90", popular: false },
 ];
 
 interface ComparisonTableProps {
