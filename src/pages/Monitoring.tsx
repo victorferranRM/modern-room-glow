@@ -7,7 +7,7 @@ import {
   Volume2, Users, Flame, Thermometer, Wifi, Battery, 
   Shield, ArrowRight, Check, X, Zap, Settings, Download, Clock
 } from "lucide-react";
-import roomonitorDevice from "@/assets/roomonitor-device-placeholder.jpg";
+import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 
 import monitoringNoise from "@/assets/monitoring-noise.jpg";
 import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
