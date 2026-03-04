@@ -496,10 +496,10 @@ export default function Contact() {
                       <div>
                         <p className="font-medium text-sm md:text-base text-foreground">Teléfono</p>
                         <a 
-                          href="tel:+34900123456" 
+                          href="tel:+34930180130" 
                           className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +34 900 123 456
+                          +34 930 180 130
                         </a>
                       </div>
                     </div>
@@ -535,16 +535,17 @@ export default function Contact() {
                     <h3 className="text-base md:text-lg font-semibold">¿Necesitas ayuda inmediata?</h3>
                   </div>
                   <p className="text-background/70 mb-4 text-xs md:text-sm">
-                    Los clientes existentes pueden contactar con nuestro equipo de soporte 24/7 directamente desde el portal de cliente.
+                    Los clientes existentes pueden contactar con nuestro equipo de soporte 24/7 directamente.
                   </p>
                   <Button 
                     variant="secondary" 
                     className="w-full bg-background text-foreground hover:bg-background/90"
                     asChild
                   >
-                    <Link to="/portal/dashboard">
-                      Ir al Portal de Cliente
-                    </Link>
+                    <a href="tel:+34930180130">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Llámanos
+                    </a>
                   </Button>
                 </div>
               </div>
