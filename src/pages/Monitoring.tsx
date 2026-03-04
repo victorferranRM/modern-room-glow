@@ -318,13 +318,13 @@ export default function Monitoring() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Precios sencillos
+              Planes
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Empieza hoy
+              Elige cómo quieres <span className="gradient-text italic">gestionar tus alertas</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Autoservicio para hasta 10 propiedades, o habla con un especialista para portfolios más grandes.
+              Ambos planes incluyen el dispositivo V5. La diferencia es quién gestiona las incidencias.
             </p>
           </AnimatedSection>
 
