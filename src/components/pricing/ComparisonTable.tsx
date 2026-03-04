@@ -38,59 +38,59 @@ interface FeatureCategory {
 
 const COMPARISON_DATA: FeatureCategory[] = [
   {
-    name: "Monitoring & Hardware",
+    name: "Monitorización y hardware",
     icon: Gauge,
     features: [
-      { feature: "Roomonitor monitoring device", basic: true, pro: true, enterprise: true },
-      { feature: "Noise level monitoring", basic: true, pro: true, enterprise: true, icon: Volume2 },
-      { feature: "Occupancy detection", basic: true, pro: true, enterprise: true, icon: Users },
-      { feature: "Temperature & humidity", basic: true, pro: true, enterprise: true, icon: Thermometer },
-      { feature: "Air quality (CO₂, VOC)", basic: true, pro: true, enterprise: true, icon: Wind },
-      { feature: "Smoke detection", basic: true, pro: true, enterprise: true, icon: Flame },
+      { feature: "Dispositivo de monitorización Roomonitor", basic: true, pro: true, enterprise: true },
+      { feature: "Monitorización de nivel de ruido", basic: true, pro: true, enterprise: true, icon: Volume2 },
+      { feature: "Detección de ocupación", basic: true, pro: true, enterprise: true, icon: Users },
+      { feature: "Temperatura y humedad", basic: true, pro: true, enterprise: true, icon: Thermometer },
+      { feature: "Calidad del aire (CO₂, VOC)", basic: true, pro: true, enterprise: true, icon: Wind },
+      { feature: "Detección de humo", basic: true, pro: true, enterprise: true, icon: Flame },
     ],
   },
   {
-    name: "Alerts & Notifications",
+    name: "Alertas y notificaciones",
     icon: Bell,
     features: [
-      { feature: "Real-time alerts", basic: true, pro: true, enterprise: true },
-      { feature: "Email notifications", basic: true, pro: true, enterprise: true },
-      { feature: "Push notifications (mobile)", basic: true, pro: true, enterprise: true },
-      { feature: "SMS alerts", basic: false, pro: true, enterprise: true },
-      { feature: "Custom alert thresholds", basic: false, pro: true, enterprise: true },
+      { feature: "Alertas en tiempo real", basic: true, pro: true, enterprise: true },
+      { feature: "Notificaciones por email", basic: true, pro: true, enterprise: true },
+      { feature: "Notificaciones push (móvil)", basic: true, pro: true, enterprise: true },
+      { feature: "Alertas por SMS", basic: false, pro: true, enterprise: true },
+      { feature: "Umbrales de alerta personalizados", basic: false, pro: true, enterprise: true },
     ],
   },
   {
-    name: "Platform & Access",
+    name: "Plataforma y acceso",
     icon: Smartphone,
     features: [
-      { feature: "Web dashboard", basic: true, pro: true, enterprise: true },
-      { feature: "Mobile app (iOS & Android)", basic: true, pro: true, enterprise: true },
-      { feature: "Historical data & reports", basic: "30 days", pro: "1 year", enterprise: "Unlimited" },
-      { feature: "API access", basic: false, pro: false, enterprise: true },
-      { feature: "Multi-user accounts", basic: false, pro: true, enterprise: true },
+      { feature: "Dashboard web", basic: true, pro: true, enterprise: true },
+      { feature: "App móvil (iOS y Android)", basic: true, pro: true, enterprise: true },
+      { feature: "Datos históricos e informes", basic: "30 días", pro: "1 año", enterprise: "Ilimitado" },
+      { feature: "Acceso API", basic: false, pro: false, enterprise: true },
+      { feature: "Cuentas multiusuario", basic: false, pro: true, enterprise: true },
     ],
   },
   {
-    name: "Support & Services",
+    name: "Soporte y servicios",
     icon: Headphones,
     features: [
-      { feature: "Email support", basic: true, pro: true, enterprise: true },
-      { feature: "Priority support", basic: false, pro: true, enterprise: true },
+      { feature: "Soporte por email", basic: true, pro: true, enterprise: true },
+      { feature: "Soporte prioritario", basic: false, pro: true, enterprise: true },
       { feature: "Alarm Assistant (24/7)", basic: false, pro: true, enterprise: true },
-      { feature: "Human alarm monitoring", basic: false, pro: true, enterprise: true },
+      { feature: "Monitorización humana de alarmas", basic: false, pro: true, enterprise: true },
       { feature: "Guest Assist™", basic: false, pro: false, enterprise: true },
-      { feature: "Field Service (on-site)", basic: false, pro: false, enterprise: true },
-      { feature: "Dedicated account manager", basic: false, pro: false, enterprise: true },
-      { feature: "Custom SLA", basic: false, pro: false, enterprise: true },
+      { feature: "Field Service (presencial)", basic: false, pro: false, enterprise: true },
+      { feature: "Account manager dedicado", basic: false, pro: false, enterprise: true },
+      { feature: "SLA personalizado", basic: false, pro: false, enterprise: true },
     ],
   },
 ];
 
 const PLANS = [
-  { key: "basic", name: "Basic", price: "€13/mo", popular: false },
-  { key: "pro", name: "Pro", price: "€29.90/mo", popular: true },
-  { key: "enterprise", name: "Enterprise", price: "From €79.90", popular: false },
+  { key: "basic", name: "Basic", price: "€13/mes", popular: false },
+  { key: "pro", name: "Pro", price: "€29,90/mes", popular: true },
+  { key: "enterprise", name: "Enterprise", price: "Desde €79,90", popular: false },
 ];
 
 interface ComparisonTableProps {
@@ -124,18 +124,17 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10 lg:mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Compare plans in detail
+            Compara los planes en detalle
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            See exactly what's included in each plan to make the right choice for your property management needs.
+            Consulta exactamente qué incluye cada plan para tomar la mejor decisión para la gestión de tus propiedades.
           </p>
         </div>
 
-        {/* Mobile View - Plan Selector + Accordion */}
+        {/* Mobile View */}
         <div className="lg:hidden space-y-6">
-          {/* Mobile Plan Selector */}
           <div className="bg-card border rounded-2xl p-4 shadow-soft">
-            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3">Select plan to compare</p>
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3">Selecciona plan para comparar</p>
             <div className="grid grid-cols-3 gap-2">
               {PLANS.map((plan) => (
                 <button
@@ -159,9 +158,8 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
             </div>
           </div>
 
-          {/* Mobile Feature Accordion */}
           <div className="bg-card border rounded-2xl shadow-soft overflow-hidden">
-            <Accordion type="multiple" defaultValue={["Monitoring & Hardware"]} className="w-full">
+            <Accordion type="multiple" defaultValue={["Monitorización y hardware"]} className="w-full">
               {COMPARISON_DATA.map((category) => (
                 <AccordionItem key={category.name} value={category.name} className="border-b last:border-b-0">
                   <AccordionTrigger className="px-4 py-4 hover:no-underline hover:bg-muted/30 transition-colors">
@@ -195,19 +193,18 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
               ))}
             </Accordion>
 
-            {/* Mobile CTA */}
             <div className="p-4 bg-muted/30 border-t">
               {selectedPlan === "enterprise" ? (
                 <Button className="w-full" size="lg" variant="outline" asChild>
                   <Link to="/contact?inquiry=enterprise">
-                    Talk to sales
+                    Contactar ventas
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
               ) : (
                 <Button className="w-full" size="lg" asChild>
                   <Link to={`/checkout?plan=${selectedPlan}&properties=${properties}`}>
-                    Get {PLANS.find((p) => p.key === selectedPlan)?.name}
+                    Elegir {PLANS.find((p) => p.key === selectedPlan)?.name}
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
@@ -216,12 +213,11 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
           </div>
         </div>
 
-        {/* Desktop View - Full Table */}
+        {/* Desktop View */}
         <div className="hidden lg:block bg-card border rounded-2xl shadow-soft overflow-hidden">
-          {/* Sticky Header */}
           <div className="grid grid-cols-[1.5fr,1fr,1fr,1fr] bg-muted/50 border-b sticky top-0 z-10">
             <div className="p-6">
-              <span className="text-sm font-medium text-muted-foreground">Features</span>
+              <span className="text-sm font-medium text-muted-foreground">Características</span>
             </div>
             {PLANS.map((plan) => (
               <div
@@ -241,10 +237,8 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
             ))}
           </div>
 
-          {/* Feature Categories */}
           {COMPARISON_DATA.map((category) => (
             <div key={category.name} className="border-b border-border last:border-b-0">
-              {/* Category Header */}
               <div className="grid grid-cols-[1.5fr,1fr,1fr,1fr] bg-gradient-to-r from-muted/50 to-muted/20">
                 <div className="col-span-4 p-4 px-6">
                   <div className="flex items-center gap-3">
@@ -256,7 +250,6 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
                 </div>
               </div>
 
-              {/* Feature Rows */}
               {category.features.map((row, idx) => (
                 <div
                   key={idx}
@@ -280,29 +273,28 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
             </div>
           ))}
 
-          {/* CTA Row */}
           <div className="grid grid-cols-[1.5fr,1fr,1fr,1fr] bg-muted/30 border-t">
             <div className="p-6 flex items-center">
-              <span className="text-sm text-muted-foreground">Ready to start?</span>
+              <span className="text-sm text-muted-foreground">¿Listo para empezar?</span>
             </div>
             <div className="p-6 flex items-center justify-center border-l border-border">
               <Button variant="outline" asChild>
                 <Link to={`/checkout?plan=basic&properties=${properties}`}>
-                  Get Basic
+                  Elegir Basic
                 </Link>
               </Button>
             </div>
             <div className="p-6 flex items-center justify-center border-l border-border bg-primary/5">
               <Button asChild>
                 <Link to={`/checkout?plan=pro&properties=${properties}`}>
-                  Get Pro
+                  Elegir Pro
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Link>
               </Button>
             </div>
             <div className="p-6 flex items-center justify-center border-l border-border">
               <Button variant="outline" asChild>
-                <Link to="/contact?inquiry=enterprise">Contact sales</Link>
+                <Link to="/contact?inquiry=enterprise">Contactar ventas</Link>
               </Button>
             </div>
           </div>

@@ -42,66 +42,65 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const inquiryTypes = [
-  { value: "demo", label: "Book a Demo" },
-  { value: "sales", label: "Sales Inquiry" },
+  { value: "demo", label: "Solicitar una demo" },
+  { value: "sales", label: "Consulta comercial" },
   { value: "enterprise", label: "Enterprise" },
-  { value: "support", label: "Support" },
-  { value: "partnership", label: "Partnership" },
-  { value: "other", label: "Other" },
+  { value: "support", label: "Soporte" },
+  { value: "partnership", label: "Colaboración" },
+  { value: "other", label: "Otro" },
 ];
 
 const propertySizes = [
-  { value: "1-10", label: "1-10 properties" },
-  { value: "11-50", label: "11-50 properties" },
-  { value: "51-200", label: "51-200 properties" },
-  { value: "200+", label: "200+ properties" },
+  { value: "1-10", label: "1-10 propiedades" },
+  { value: "11-50", label: "11-50 propiedades" },
+  { value: "51-200", label: "51-200 propiedades" },
+  { value: "200+", label: "200+ propiedades" },
 ];
 
 const benefits = [
-  "Personalized demo of our platform",
-  "Custom pricing for your portfolio",
-  "No-obligation consultation",
-  "Expert guidance from our team",
+  "Demo personalizada de nuestra plataforma",
+  "Precios adaptados a tu portfolio",
+  "Consulta sin compromiso",
+  "Asesoramiento experto de nuestro equipo",
 ];
 
-// Zod validation schema
 const contactFormSchema = z.object({
   firstName: z
     .string()
-    .min(1, "First name is required")
-    .max(50, "First name must be less than 50 characters")
-    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "First name contains invalid characters"),
+    .min(1, "El nombre es obligatorio")
+    .max(50, "El nombre debe tener menos de 50 caracteres")
+    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "El nombre contiene caracteres no válidos"),
   lastName: z
     .string()
-    .min(1, "Last name is required")
-    .max(50, "Last name must be less than 50 characters")
-    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "Last name contains invalid characters"),
+    .min(1, "Los apellidos son obligatorios")
+    .max(50, "Los apellidos deben tener menos de 50 caracteres")
+    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "Los apellidos contienen caracteres no válidos"),
   email: z
     .string()
-    .min(1, "Email is required")
-    .email("Please enter a valid email address")
-    .max(255, "Email must be less than 255 characters"),
+    .min(1, "El email es obligatorio")
+    .email("Introduce un email válido")
+    .max(255, "El email debe tener menos de 255 caracteres"),
   phone: z
     .string()
-    .min(1, "Phone number is required")
-    .max(30, "Phone number must be less than 30 characters"),
+    .min(1, "El teléfono es obligatorio")
+    .max(30, "El teléfono debe tener menos de 30 caracteres"),
   company: z
     .string()
-    .min(1, "Company name is required")
-    .max(100, "Company name must be less than 100 characters"),
+    .min(1, "El nombre de la empresa es obligatorio")
+    .max(100, "El nombre de la empresa debe tener menos de 100 caracteres"),
   country: z
     .string()
-    .min(1, "Country is required"),
+    .min(1, "El país es obligatorio"),
   propertySize: z
     .string()
-    .min(1, "Please select portfolio size"),
+    .min(1, "Selecciona el tamaño del portfolio"),
   inquiryType: z
     .string()
-    .min(1, "Please select an inquiry type"),
+    .min(1, "Selecciona un tipo de consulta"),
   message: z
     .string()
-    .min(1, "Message is required")
-    .max(2000, "Message must be less than 2000 characters"),
+    .min(1, "El mensaje es obligatorio")
+    .max(2000, "El mensaje debe tener menos de 2000 caracteres"),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -126,10 +125,8 @@ export default function Contact() {
     },
   });
 
-  // Watch country for phone input
   const selectedCountry = form.watch("country");
 
-  // Get inquiry type from URL params on mount
   useEffect(() => {
     const initialInquiry = searchParams.get("inquiry") || "";
     if (initialInquiry && inquiryTypes.some(t => t.value === initialInquiry)) {
@@ -141,7 +138,6 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Save to database
       const { error: dbError } = await supabase
         .from("contact_inquiries")
         .insert({
@@ -158,30 +154,26 @@ export default function Contact() {
 
       if (dbError) throw dbError;
 
-      // Send email notifications
       const { error: emailError } = await supabase.functions.invoke(
         "send-contact-notification",
-        {
-          body: data,
-        }
+        { body: data }
       );
 
       if (emailError) {
         console.error("Email notification failed:", emailError);
-        // Don't throw - form was still saved successfully
       }
 
       toast({
-        title: "Message sent successfully!",
-        description: "Our team will get back to you within 24 hours.",
+        title: "¡Mensaje enviado correctamente!",
+        description: "Nuestro equipo te responderá en menos de 24 horas.",
       });
 
       form.reset();
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({
-        title: "Something went wrong",
-        description: "Please try again or email us directly at info@roomonitor.com",
+        title: "Algo ha ido mal",
+        description: "Inténtalo de nuevo o escríbenos directamente a info@roomonitor.com",
         variant: "destructive",
       });
     } finally {
@@ -193,7 +185,7 @@ export default function Contact() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section - Mobile first */}
+        {/* Hero Section */}
         <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
           <div className="absolute top-1/4 -left-32 w-64 md:w-96 h-64 md:h-96 bg-primary/10 rounded-full blur-[128px]" />
@@ -203,43 +195,42 @@ export default function Contact() {
             <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-medium">
                 <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span>Get in touch</span>
+                <span>Contacta con nosotros</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-                Let's talk about your
-                <span className="gradient-text block">operational needs</span>
+                Hablemos de tus
+                <span className="gradient-text block">necesidades operativas</span>
               </h1>
               <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-                Whether you're managing 10 properties or 10,000, our team is ready to show you how Roomonitor can transform your operations.
+                Tanto si gestionas 10 propiedades como 10.000, nuestro equipo está listo para mostrarte cómo Roomonitor puede transformar tu operativa.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Main Content - Mobile first grid */}
+        {/* Main Content */}
         <section className="py-8 md:py-16 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
               {/* Contact Form */}
               <div className="lg:col-span-3 order-1">
                 <div className="bg-card border rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 shadow-soft">
-                  <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1 md:mb-2">Send us a message</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1 md:mb-2">Envíanos un mensaje</h2>
                   <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8">
-                    Fill out the form below and we'll get back to you within 24 hours.
+                    Rellena el formulario y te responderemos en menos de 24 horas.
                   </p>
 
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
-                      {/* Names - Stack on mobile, side by side on larger */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="firstName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">First name *</FormLabel>
+                              <FormLabel className="text-sm">Nombre *</FormLabel>
                               <FormControl>
-                                <Input placeholder="John" {...field} />
+                                <Input placeholder="Juan" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -250,9 +241,9 @@ export default function Contact() {
                           name="lastName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Last name *</FormLabel>
+                              <FormLabel className="text-sm">Apellidos *</FormLabel>
                               <FormControl>
-                                <Input placeholder="Doe" {...field} />
+                                <Input placeholder="García" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -260,16 +251,15 @@ export default function Contact() {
                         />
                       </div>
 
-                      {/* Email and Company - Stack on mobile */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Work email *</FormLabel>
+                              <FormLabel className="text-sm">Email profesional *</FormLabel>
                               <FormControl>
-                                <Input type="email" placeholder="john@company.com" {...field} />
+                                <Input type="email" placeholder="juan@empresa.com" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -280,9 +270,9 @@ export default function Contact() {
                           name="company"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Company name *</FormLabel>
+                              <FormLabel className="text-sm">Empresa *</FormLabel>
                               <FormControl>
-                                <Input placeholder="Your company" {...field} />
+                                <Input placeholder="Tu empresa" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -290,19 +280,18 @@ export default function Contact() {
                         />
                       </div>
 
-                      {/* Country and Phone - Stack on mobile */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="country"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Country *</FormLabel>
+                              <FormLabel className="text-sm">País *</FormLabel>
                               <FormControl>
                                 <CountrySelect
                                   value={field.value}
                                   onValueChange={field.onChange}
-                                  placeholder="Select country"
+                                  placeholder="Selecciona país"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -314,13 +303,13 @@ export default function Contact() {
                           name="phone"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Phone number</FormLabel>
+                              <FormLabel className="text-sm">Teléfono</FormLabel>
                               <FormControl>
                                 <PhoneInput
                                   value={field.value}
                                   onChange={field.onChange}
                                   countryCode={selectedCountry}
-                                  placeholder="Phone number"
+                                  placeholder="Número de teléfono"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -329,21 +318,20 @@ export default function Contact() {
                         />
                       </div>
 
-                      {/* Inquiry type and Property size - Stack on mobile */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="inquiryType"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Inquiry type *</FormLabel>
+                              <FormLabel className="text-sm">Tipo de consulta *</FormLabel>
                               <Select
                                 value={field.value}
                                 onValueChange={field.onChange}
                               >
                                 <FormControl>
                                   <SelectTrigger>
-                                    <SelectValue placeholder="Select type" />
+                                    <SelectValue placeholder="Selecciona tipo" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
@@ -363,14 +351,14 @@ export default function Contact() {
                           name="propertySize"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm">Portfolio size *</FormLabel>
+                              <FormLabel className="text-sm">Tamaño del portfolio *</FormLabel>
                               <Select
                                 value={field.value}
                                 onValueChange={field.onChange}
                               >
                                 <FormControl>
                                   <SelectTrigger>
-                                    <SelectValue placeholder="Select range" />
+                                    <SelectValue placeholder="Selecciona rango" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
@@ -392,10 +380,10 @@ export default function Contact() {
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-sm">Message *</FormLabel>
+                            <FormLabel className="text-sm">Mensaje *</FormLabel>
                             <FormControl>
                               <Textarea
-                                placeholder="Tell us about your properties and what you're looking for..."
+                                placeholder="Cuéntanos sobre tus propiedades y qué necesitas..."
                                 rows={4}
                                 {...field}
                               />
@@ -411,24 +399,24 @@ export default function Contact() {
                         className="w-full"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Sending..." : "Send message"}
+                        {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
 
                       <p className="text-xs text-muted-foreground text-center">
-                        By submitting this form, you agree to our{" "}
-                        <Link to="/legal#privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
+                        Al enviar este formulario, aceptas nuestra{" "}
+                        <Link to="/legal#privacy-policy" className="text-primary hover:underline">Política de Privacidad</Link>.
                       </p>
                     </form>
                   </Form>
                 </div>
               </div>
 
-              {/* Sidebar - Shows after form on mobile */}
+              {/* Sidebar */}
               <div className="lg:col-span-2 space-y-6 md:space-y-8 order-2">
                 {/* Benefits Card */}
                 <div className="bg-primary/5 border border-primary/10 rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8">
-                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">What to expect</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">Qué puedes esperar</h3>
                   <ul className="space-y-2 md:space-y-3">
                     {benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-2 md:gap-3">
@@ -441,7 +429,7 @@ export default function Contact() {
 
                 {/* Contact Info */}
                 <div className="bg-card border rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 space-y-4 md:space-y-6">
-                  <h3 className="text-base md:text-lg font-semibold text-foreground">Contact information</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-foreground">Información de contacto</h3>
                   
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 md:gap-4">
@@ -464,7 +452,7 @@ export default function Contact() {
                         <Phone className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium text-sm md:text-base text-foreground">Phone</p>
+                        <p className="font-medium text-sm md:text-base text-foreground">Teléfono</p>
                         <a 
                           href="tel:+34900123456" 
                           className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors"
@@ -479,9 +467,9 @@ export default function Contact() {
                         <MapPin className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium text-sm md:text-base text-foreground">Headquarters</p>
+                        <p className="font-medium text-sm md:text-base text-foreground">Sede central</p>
                         <p className="text-sm md:text-base text-muted-foreground">
-                          Barcelona, Spain
+                          Barcelona, España
                         </p>
                       </div>
                     </div>
@@ -491,8 +479,8 @@ export default function Contact() {
                         <Clock className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium text-sm md:text-base text-foreground">Response time</p>
-                        <p className="text-sm md:text-base text-muted-foreground">Within 24 hours</p>
+                        <p className="font-medium text-sm md:text-base text-foreground">Tiempo de respuesta</p>
+                        <p className="text-sm md:text-base text-muted-foreground">Menos de 24 horas</p>
                       </div>
                     </div>
                   </div>
@@ -502,10 +490,10 @@ export default function Contact() {
                 <div className="bg-foreground text-background rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8">
                   <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
                     <Headphones className="w-5 h-5 md:w-6 md:h-6" />
-                    <h3 className="text-base md:text-lg font-semibold">Need immediate help?</h3>
+                    <h3 className="text-base md:text-lg font-semibold">¿Necesitas ayuda inmediata?</h3>
                   </div>
                   <p className="text-background/70 mb-4 text-xs md:text-sm">
-                    Existing customers can reach our 24/7 support team directly through the customer portal.
+                    Los clientes existentes pueden contactar con nuestro equipo de soporte 24/7 directamente desde el portal de cliente.
                   </p>
                   <Button 
                     variant="secondary" 
@@ -513,7 +501,7 @@ export default function Contact() {
                     asChild
                   >
                     <Link to="/portal/dashboard">
-                      Go to Customer Portal
+                      Ir al Portal de Cliente
                     </Link>
                   </Button>
                 </div>
@@ -522,7 +510,7 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Trust Section - Responsive */}
+        {/* Trust Section */}
         <section className="py-12 md:py-16 border-t">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto text-center">
@@ -530,22 +518,22 @@ export default function Contact() {
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Building2 className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-sm md:text-base text-foreground">5,000+ Properties</h3>
-                <p className="text-xs md:text-sm text-muted-foreground">Protected worldwide</p>
+                <h3 className="font-semibold text-sm md:text-base text-foreground">+5.000 propiedades</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Protegidas en todo el mundo</p>
               </div>
               <div className="space-y-2">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-sm md:text-base text-foreground">500+ Operators</h3>
-                <p className="text-xs md:text-sm text-muted-foreground">Trust Roomonitor</p>
+                <h3 className="font-semibold text-sm md:text-base text-foreground">+500 gestores</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Confían en Roomonitor</p>
               </div>
               <div className="space-y-2">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Shield className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-sm md:text-base text-foreground">24/7 Coverage</h3>
-                <p className="text-xs md:text-sm text-muted-foreground">Around the clock</p>
+                <h3 className="font-semibold text-sm md:text-base text-foreground">Cobertura 24/7</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Las 24 horas del día</p>
               </div>
             </div>
           </div>

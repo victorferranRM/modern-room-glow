@@ -9,88 +9,83 @@ import {
 } from "lucide-react";
 import roomonitorDevice from "@/assets/roomonitor-device-placeholder.jpg";
 
-// Import monitoring background images
 import monitoringNoise from "@/assets/monitoring-noise.jpg";
 import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
 import monitoringAir from "@/assets/monitoring-air.jpg";
 import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
 
-// Monitoring capabilities with links and background images
 const monitoringCapabilities = [
   {
     icon: Volume2,
-    title: "Noise Monitoring",
-    description: "Real-time acoustic detection and instant alerts when noise levels exceed your thresholds.",
+    title: "Monitorización de Ruido",
+    description: "Detección acústica en tiempo real y alertas instantáneas cuando se superan tus umbrales.",
     href: "/monitoring/noise",
     image: monitoringNoise,
   },
   {
     icon: Users,
-    title: "Occupancy Detection",
-    description: "Track guest presence and identify potential overcrowding situations.",
+    title: "Detección de Ocupación",
+    description: "Seguimiento de presencia de huéspedes e identificación de situaciones de sobreocupación.",
     href: "/monitoring/occupancy",
     image: monitoringOccupancy,
   },
   {
     icon: Flame,
-    title: "Smoke Detection",
-    description: "Immediate smoke alerts to protect your assets and enforce non-smoking policies.",
+    title: "Detección de Humo",
+    description: "Alertas inmediatas de humo para proteger tus activos y aplicar políticas de no fumadores.",
     href: "/monitoring/smoke",
     image: monitoringAir,
   },
   {
     icon: Thermometer,
-    title: "Environment Monitoring",
-    description: "Track temperature, humidity and air quality for guest comfort and property protection.",
+    title: "Monitorización Ambiental",
+    description: "Control de temperatura, humedad y calidad del aire para el confort del huésped y la protección de la propiedad.",
     href: "/monitoring/environment",
     image: monitoringEnvironment,
   },
 ];
 
-// Device specifications
 const deviceSpecs = [
-  { label: "Dimensions", value: "85 × 85 × 28 mm" },
-  { label: "Weight", value: "120g" },
-  { label: "Power", value: "USB-C (5V/1A)" },
-  { label: "Connectivity", value: "Wi-Fi 2.4GHz" },
-  { label: "Battery Backup", value: "Up to 4 hours" },
-  { label: "Operating Range", value: "-10°C to 45°C" },
+  { label: "Dimensiones", value: "85 × 85 × 28 mm" },
+  { label: "Peso", value: "120g" },
+  { label: "Alimentación", value: "USB-C (5V/1A)" },
+  { label: "Conectividad", value: "Wi-Fi 2.4GHz" },
+  { label: "Batería de respaldo", value: "Hasta 4 horas" },
+  { label: "Rango operativo", value: "-10°C a 45°C" },
 ];
 
-// Comparison data
 const comparisonFeatures = [
-  { feature: "All-in-one device (noise, occupancy, smoke, environment)", roomonitor: true, competitor: false },
-  { feature: "Real-time cloud monitoring", roomonitor: true, competitor: true },
-  { feature: "24/7 human verification available", roomonitor: true, competitor: false },
-  { feature: "Privacy-safe (no audio recording)", roomonitor: true, competitor: true },
-  { feature: "Integrated incident response", roomonitor: true, competitor: false },
-  { feature: "PMS integrations included", roomonitor: true, competitor: false },
-  { feature: "On-site field service network", roomonitor: true, competitor: false },
-  { feature: "Battery backup included", roomonitor: true, competitor: false },
-  { feature: "Multi-sensor calibration", roomonitor: true, competitor: false },
+  { feature: "Dispositivo todo-en-uno (ruido, ocupación, humo, ambiente)", roomonitor: true, competitor: false },
+  { feature: "Monitorización en la nube en tiempo real", roomonitor: true, competitor: true },
+  { feature: "Verificación humana 24/7 disponible", roomonitor: true, competitor: false },
+  { feature: "Respetuoso con la privacidad (sin grabación de audio)", roomonitor: true, competitor: true },
+  { feature: "Respuesta a incidencias integrada", roomonitor: true, competitor: false },
+  { feature: "Integraciones PMS incluidas", roomonitor: true, competitor: false },
+  { feature: "Red de servicio de campo presencial", roomonitor: true, competitor: false },
+  { feature: "Batería de respaldo incluida", roomonitor: true, competitor: false },
+  { feature: "Calibración multi-sensor", roomonitor: true, competitor: false },
 ];
 
-// Installation steps
 const installationSteps = [
   {
     step: 1,
-    title: "Unbox & Power On",
-    description: "Connect the device to power using the included USB-C cable. The LED will pulse blue indicating it's ready for setup.",
+    title: "Desembala y enciende",
+    description: "Conecta el dispositivo a la corriente con el cable USB-C incluido. El LED parpadeará en azul indicando que está listo para configurar.",
   },
   {
     step: 2,
-    title: "Download the App",
-    description: "Download the Roomonitor app from the App Store or Google Play, then create your account or log in.",
+    title: "Descarga la app",
+    description: "Descarga la app de Roomonitor desde App Store o Google Play y crea tu cuenta o inicia sesión.",
   },
   {
     step: 3,
-    title: "Connect to Wi-Fi",
-    description: "Follow the in-app instructions to connect your device to your property's Wi-Fi network.",
+    title: "Conecta al Wi-Fi",
+    description: "Sigue las instrucciones de la app para conectar tu dispositivo a la red Wi-Fi de la propiedad.",
   },
   {
     step: 4,
-    title: "Mount & Configure",
-    description: "Use the included mounting kit to install the device, then set your alert thresholds and notification preferences.",
+    title: "Instala y configura",
+    description: "Usa el kit de montaje incluido para instalar el dispositivo y configura tus umbrales de alerta y preferencias de notificación.",
   },
 ];
 
@@ -106,39 +101,37 @@ export default function Monitoring() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left - Content */}
             <AnimatedSection>
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                The Roomonitor Device
+                El Dispositivo Roomonitor
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                One device.
+                Un dispositivo.
                 <br />
-                <span className="text-primary">Complete protection.</span>
+                <span className="text-primary">Protección completa.</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                The Roomonitor sensor combines noise monitoring, occupancy detection, smoke detection, and environmental tracking in a single, privacy-safe device.
+                El sensor Roomonitor combina monitorización de ruido, detección de ocupación, detección de humo y seguimiento ambiental en un único dispositivo respetuoso con la privacidad.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
                   <Link to="/pricing">
-                    View Pricing
+                    Ver precios
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact">Request a Demo</Link>
+                  <Link to="/contact">Solicitar una demo</Link>
                 </Button>
               </div>
             </AnimatedSection>
 
-            {/* Right - Device Image */}
             <AnimatedSection delay={200} className="relative">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-3xl" />
                 <img
                   src={roomonitorDevice}
-                  alt="Roomonitor Device"
+                  alt="Dispositivo Roomonitor"
                   className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl"
                 />
               </div>
@@ -153,19 +146,19 @@ export default function Monitoring() {
           <div className="flex flex-wrap justify-center gap-8 lg:gap-16">
             <div className="flex items-center gap-2">
               <Wifi className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Wi-Fi Connected</span>
+              <span className="text-sm font-medium">Conectado por Wi-Fi</span>
             </div>
             <div className="flex items-center gap-2">
               <Battery className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Battery Backup</span>
+              <span className="text-sm font-medium">Batería de respaldo</span>
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Privacy-Safe</span>
+              <span className="text-sm font-medium">Respetuoso con la privacidad</span>
             </div>
             <div className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Real-Time Alerts</span>
+              <span className="text-sm font-medium">Alertas en tiempo real</span>
             </div>
           </div>
         </div>
@@ -176,13 +169,13 @@ export default function Monitoring() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Monitoring Capabilities
+              Capacidades de monitorización
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Everything you need in one device
+              Todo lo que necesitas en un dispositivo
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Track noise, occupancy, smoke, and environmental conditions — all without compromising guest privacy.
+              Controla ruido, ocupación, humo y condiciones ambientales — todo sin comprometer la privacidad del huésped.
             </p>
           </AnimatedSection>
 
@@ -193,15 +186,12 @@ export default function Monitoring() {
                   to={capability.href}
                   className="group block relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  {/* Background Image */}
                   <div 
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                     style={{ backgroundImage: `url(${capability.image})` }}
                   />
-                  {/* Dark Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 transition-colors duration-300" />
                   
-                  {/* Content */}
                   <div className="relative h-full flex flex-col justify-end p-6 text-white">
                     <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <capability.icon className="w-6 h-6 text-white" />
@@ -213,7 +203,7 @@ export default function Monitoring() {
                       {capability.description}
                     </p>
                     <span className="inline-flex items-center text-sm font-medium text-white">
-                      Learn more
+                      Saber más
                       <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>
@@ -230,13 +220,13 @@ export default function Monitoring() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <AnimatedSection>
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Technical Specifications
+                Especificaciones técnicas
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-                Built for reliability
+                Diseñado para la fiabilidad
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                The Roomonitor device is engineered for 24/7 operation in hospitality environments, with robust connectivity and backup power.
+                El dispositivo Roomonitor está diseñado para operar 24/7 en entornos de hospitalidad, con conectividad robusta y alimentación de respaldo.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
@@ -254,7 +244,7 @@ export default function Monitoring() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl blur-2xl" />
                 <img
                   src={roomonitorDevice}
-                  alt="Roomonitor Device Specifications"
+                  alt="Especificaciones del Dispositivo Roomonitor"
                   className="relative w-full max-w-sm mx-auto rounded-2xl shadow-xl"
                 />
               </div>
@@ -268,26 +258,24 @@ export default function Monitoring() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Why Choose Roomonitor
+              Por qué elegir Roomonitor
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              The complete solution
+              La solución completa
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              See how Roomonitor compares to standard monitoring devices in the market.
+              Descubre cómo Roomonitor se compara con los dispositivos de monitorización estándar del mercado.
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
             <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border bg-card">
-              {/* Table Header */}
               <div className="grid grid-cols-3 bg-secondary/50 p-4 border-b">
-                <div className="font-semibold">Feature</div>
+                <div className="font-semibold">Característica</div>
                 <div className="text-center font-semibold text-primary">Roomonitor</div>
-                <div className="text-center font-semibold text-muted-foreground">Others</div>
+                <div className="text-center font-semibold text-muted-foreground">Otros</div>
               </div>
               
-              {/* Table Rows */}
               {comparisonFeatures.map((item, index) => (
                 <div 
                   key={item.feature} 
@@ -328,10 +316,10 @@ export default function Monitoring() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Simple Pricing
+              Precios sencillos
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Get started today
+              Empieza hoy
             </h2>
           </AnimatedSection>
 
@@ -340,50 +328,50 @@ export default function Monitoring() {
               <div className="relative p-8 rounded-3xl border-2 border-primary bg-card shadow-xl">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="px-4 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded-full">
-                    Most Popular
+                    Más popular
                   </span>
                 </div>
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">Roomonitor Device</h3>
-                  <p className="text-muted-foreground">All-in-one monitoring solution</p>
+                  <h3 className="text-2xl font-bold mb-2">Dispositivo Roomonitor</h3>
+                  <p className="text-muted-foreground">Solución de monitorización todo-en-uno</p>
                 </div>
 
                 <div className="text-center mb-8">
                   <div className="flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-bold">€149</span>
-                    <span className="text-muted-foreground">/device</span>
+                    <span className="text-muted-foreground">/dispositivo</span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">
-                    + €5.99/month subscription
+                    + €5,99/mes de suscripción
                   </p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">All monitoring capabilities included</span>
+                    <span className="text-sm">Todas las capacidades de monitorización incluidas</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">Real-time alerts & dashboard</span>
+                    <span className="text-sm">Alertas en tiempo real y dashboard</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">Free shipping & 30-day returns</span>
+                    <span className="text-sm">Envío gratis y devolución en 30 días</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">2-year warranty</span>
+                    <span className="text-sm">Garantía de 2 años</span>
                   </li>
                 </ul>
 
                 <div className="space-y-3">
                   <Button size="lg" className="w-full" asChild>
-                    <Link to="/checkout">Order Now</Link>
+                    <Link to="/checkout">Comprar ahora</Link>
                   </Button>
                   <Button size="lg" variant="outline" className="w-full" asChild>
-                    <Link to="/contact">Request Demo</Link>
+                    <Link to="/contact">Solicitar demo</Link>
                   </Button>
                 </div>
               </div>
@@ -397,13 +385,13 @@ export default function Monitoring() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Installation Guide
+              Guía de instalación
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Up and running in minutes
+              Funcionando en minutos
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Setting up your Roomonitor device is simple — no technical expertise required.
+              Configurar tu dispositivo Roomonitor es sencillo — no se necesita experiencia técnica.
             </p>
           </AnimatedSection>
 
@@ -426,7 +414,7 @@ export default function Monitoring() {
           <AnimatedSection delay={400} className="text-center mt-12">
             <Button variant="outline" size="lg" className="gap-2">
               <Download className="w-4 h-4" />
-              Download Installation Manual
+              Descargar manual de instalación
             </Button>
           </AnimatedSection>
         </div>
@@ -437,56 +425,56 @@ export default function Monitoring() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Knowledge Base
+              Base de conocimiento
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Helpful guides & resources
+              Guías y recursos útiles
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Learn how to get the most out of your Roomonitor device with our step-by-step guides.
+              Aprende a sacar el máximo partido a tu dispositivo Roomonitor con nuestras guías paso a paso.
             </p>
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                title: "Device Installation Manual",
-                description: "Complete guide to installing monitoring devices",
-                type: "Installation",
+                title: "Manual de instalación del dispositivo",
+                description: "Guía completa para instalar dispositivos de monitorización",
+                type: "Instalación",
                 readTime: "12 min",
                 href: "/resources/guides/guide/device-installation",
               },
               {
-                title: "Optimal Sensor Placement",
-                description: "Best practices for positioning sensors in your property",
-                type: "Best Practice",
+                title: "Ubicación óptima del sensor",
+                description: "Mejores prácticas para posicionar sensores en tu propiedad",
+                type: "Buenas prácticas",
                 readTime: "6 min",
                 href: "/resources/guides/guide/sensor-placement",
               },
               {
-                title: "Configuring Alert Thresholds",
-                description: "Set custom noise and occupancy alert levels",
-                type: "Setup",
+                title: "Configurar umbrales de alerta",
+                description: "Establece niveles personalizados de alerta de ruido y ocupación",
+                type: "Configuración",
                 readTime: "7 min",
                 href: "/resources/guides/guide/alert-thresholds",
               },
               {
-                title: "Network Requirements",
-                description: "WiFi and connectivity setup for devices",
-                type: "Installation",
+                title: "Requisitos de red",
+                description: "Configuración de WiFi y conectividad para dispositivos",
+                type: "Instalación",
                 readTime: "4 min",
                 href: "/resources/guides/guide/network-requirements",
               },
               {
-                title: "Device Shows Offline",
-                description: "Steps to troubleshoot connectivity issues",
+                title: "El dispositivo aparece offline",
+                description: "Pasos para solucionar problemas de conectividad",
                 type: "FAQ",
                 readTime: "4 min",
                 href: "/resources/guides/guide/device-offline",
               },
               {
-                title: "Reducing False Alerts",
-                description: "Fine-tune sensitivity to minimize false positives",
+                title: "Reducir alertas falsas",
+                description: "Ajusta la sensibilidad para minimizar falsos positivos",
                 type: "FAQ",
                 readTime: "5 min",
                 href: "/resources/guides/guide/false-alerts",
@@ -513,7 +501,7 @@ export default function Monitoring() {
                     {guide.description}
                   </p>
                   <span className="inline-flex items-center text-sm font-medium text-primary mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Read guide
+                    Leer guía
                     <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
@@ -524,7 +512,7 @@ export default function Monitoring() {
           <AnimatedSection delay={500} className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
               <Link to="/resources/guides">
-                Browse all guides
+                Ver todas las guías
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
@@ -537,17 +525,17 @@ export default function Monitoring() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Ready to protect your properties?
+              ¿Listo para proteger tus propiedades?
             </h2>
             <p className="text-lg text-background/70 mb-8">
-              Join thousands of property managers who trust Roomonitor for 24/7 monitoring and incident prevention.
+              Únete a miles de gestores de propiedades que confían en Roomonitor para la monitorización 24/7 y la prevención de incidencias.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <Link to="/pricing">View Pricing</Link>
+                <Link to="/pricing">Ver precios</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-background/20 text-background hover:bg-background/10" asChild>
-                <Link to="/contact">Talk to Sales</Link>
+                <Link to="/contact">Hablar con ventas</Link>
               </Button>
             </div>
           </AnimatedSection>

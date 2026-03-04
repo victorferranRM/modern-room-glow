@@ -13,32 +13,31 @@ import {
   Plus
 } from "lucide-react";
 
-// Plan configuration
 const PLANS = {
   basic: {
     name: "Basic",
-    description: "Device + monitoring subscription",
+    description: "Dispositivo + suscripción de monitorización",
     devicePrice: 45,
     originalDevicePrice: 90,
     monthlyPrice: 13,
     features: [
-      "Roomonitor monitoring device",
-      "Real-time alerts",
-      "Dashboard & mobile app",
-      "Email & push notifications",
+      "Dispositivo de monitorización Roomonitor",
+      "Alertas en tiempo real",
+      "Dashboard y app móvil",
+      "Notificaciones email y push",
     ],
   },
   pro: {
     name: "Pro",
-    description: "Everything in Basic + Alarm Assistant",
+    description: "Todo lo de Basic + Alarm Assistant",
     devicePrice: 45,
     originalDevicePrice: 90,
     monthlyPrice: 29.90,
     features: [
-      "Everything in Basic",
+      "Todo lo de Basic",
       "Alarm Assistant",
-      "Human agents monitoring alarms",
-      "24/7 alarm handling",
+      "Agentes humanos monitorizando alarmas",
+      "Gestión de alarmas 24/7",
     ],
   },
 };
@@ -63,22 +62,16 @@ export default function Checkout() {
   const savings = originalDeviceTotal - deviceTotal;
 
   const incrementProperties = () => {
-    if (properties < 10) {
-      setProperties(properties + 1);
-    }
+    if (properties < 10) setProperties(properties + 1);
   };
 
   const decrementProperties = () => {
-    if (properties > 1) {
-      setProperties(properties - 1);
-    }
+    if (properties > 1) setProperties(properties - 1);
   };
 
   const handleCheckout = () => {
-    // TODO: Integrate with Stripe or Shopify
-    // This will redirect to the payment provider with the selected plan and properties
     console.log("Checkout:", { plan: currentPlan, properties, deviceTotal, monthlyTotal });
-    alert("Payment integration coming soon! This will connect to Stripe or Shopify.");
+    alert("Integración de pago próximamente. Se conectará con Stripe o Shopify.");
   };
 
   return (
@@ -88,31 +81,29 @@ export default function Checkout() {
       <main className="pt-24 lg:pt-32 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {/* Back link */}
             <Link 
               to="/pricing" 
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to pricing
+              Volver a precios
             </Link>
 
             <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-              {/* Order Summary */}
               <div className="lg:col-span-3 space-y-6">
                 <div>
                   <h1 className="text-3xl font-bold text-foreground mb-2">
-                    Complete your order
+                    Completa tu pedido
                   </h1>
                   <p className="text-muted-foreground">
-                    You're purchasing the {selectedPlan.name} plan for {properties} {properties === 1 ? "property" : "properties"}
+                    Estás comprando el plan {selectedPlan.name} para {properties} {properties === 1 ? "propiedad" : "propiedades"}
                   </p>
                 </div>
 
                 {/* Plan Switcher */}
                 <div className="bg-card border rounded-2xl p-6 shadow-soft">
                   <div className="mb-6">
-                    <p className="text-sm font-medium text-muted-foreground mb-3">Select your plan</p>
+                    <p className="text-sm font-medium text-muted-foreground mb-3">Selecciona tu plan</p>
                     <div className="grid grid-cols-2 gap-3">
                       {(Object.keys(PLANS) as PlanType[]).map((planKey) => {
                         const planData = PLANS[planKey];
@@ -129,7 +120,7 @@ export default function Checkout() {
                           >
                             {planKey === "pro" && (
                               <span className="absolute -top-2.5 left-3 bg-primary text-primary-foreground text-[10px] font-medium px-2 py-0.5 rounded-full">
-                                Most popular
+                                Más popular
                               </span>
                             )}
                             <div className="flex items-center gap-2 mb-2">
@@ -144,7 +135,7 @@ export default function Checkout() {
                             </div>
                             <p className="text-lg font-bold text-foreground">
                               €{planData.monthlyPrice.toFixed(2).replace('.00', '')}
-                              <span className="text-sm font-normal text-muted-foreground">/mo</span>
+                              <span className="text-sm font-normal text-muted-foreground">/mes</span>
                             </p>
                             <p className="text-xs text-muted-foreground mt-1">{planData.description}</p>
                           </button>
@@ -158,8 +149,8 @@ export default function Checkout() {
                     <div className="flex items-center gap-3">
                       <Building2 className="w-5 h-5 text-primary" />
                       <div>
-                        <p className="font-medium text-foreground">Properties</p>
-                        <p className="text-sm text-muted-foreground">{properties} monitoring {properties === 1 ? "device" : "devices"} included</p>
+                        <p className="font-medium text-foreground">Propiedades</p>
+                        <p className="text-sm text-muted-foreground">{properties} {properties === 1 ? "dispositivo" : "dispositivos"} de monitorización incluidos</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -167,7 +158,7 @@ export default function Checkout() {
                         onClick={decrementProperties}
                         disabled={properties <= 1}
                         className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-background hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                        aria-label="Decrease properties"
+                        aria-label="Reducir propiedades"
                       >
                         <Minus className="w-4 h-4 text-foreground" />
                       </button>
@@ -176,7 +167,7 @@ export default function Checkout() {
                         onClick={incrementProperties}
                         disabled={properties >= 10}
                         className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-background hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                        aria-label="Increase properties"
+                        aria-label="Aumentar propiedades"
                       >
                         <Plus className="w-4 h-4 text-foreground" />
                       </button>
@@ -185,7 +176,7 @@ export default function Checkout() {
 
                   {/* Features */}
                   <div className="space-y-3">
-                    <p className="text-sm font-medium text-foreground">What's included:</p>
+                    <p className="text-sm font-medium text-foreground">Qué incluye:</p>
                     <ul className="grid sm:grid-cols-2 gap-2">
                       {selectedPlan.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
@@ -199,14 +190,13 @@ export default function Checkout() {
 
                 {/* Pricing Breakdown */}
                 <div className="bg-card border rounded-2xl p-6 shadow-soft">
-                  <h3 className="font-semibold text-foreground mb-4">Pricing breakdown</h3>
+                  <h3 className="font-semibold text-foreground mb-4">Desglose de precios</h3>
                   
                   <div className="space-y-4">
-                    {/* Device cost */}
                     <div className="flex items-center justify-between py-3 border-b border-border">
                       <div>
-                        <p className="font-medium text-foreground">Monitoring devices ({properties}x)</p>
-                        <p className="text-sm text-muted-foreground">One-time purchase</p>
+                        <p className="font-medium text-foreground">Dispositivos de monitorización ({properties}x)</p>
+                        <p className="text-sm text-muted-foreground">Compra única</p>
                       </div>
                       <div className="text-right">
                         <p className="text-muted-foreground line-through text-sm">€{originalDeviceTotal}</p>
@@ -214,35 +204,32 @@ export default function Checkout() {
                       </div>
                     </div>
 
-                    {/* Monthly subscription */}
                     <div className="flex items-center justify-between py-3 border-b border-border">
                       <div>
-                        <p className="font-medium text-foreground">{selectedPlan.name} subscription ({properties}x)</p>
-                        <p className="text-sm text-muted-foreground">Billed monthly</p>
+                        <p className="font-medium text-foreground">Suscripción {selectedPlan.name} ({properties}x)</p>
+                        <p className="text-sm text-muted-foreground">Facturación mensual</p>
                       </div>
                       <div className="text-right">
-                        <p className="font-semibold text-foreground">€{monthlyTotal.toFixed(2).replace('.00', '')}/mo</p>
+                        <p className="font-semibold text-foreground">€{monthlyTotal.toFixed(2).replace('.00', '')}/mes</p>
                       </div>
                     </div>
 
-                    {/* Today's charge */}
                     <div className="pt-2">
                       <div className="flex items-center justify-between mb-2">
-                        <p className="text-lg font-semibold text-foreground">Due today</p>
+                        <p className="text-lg font-semibold text-foreground">Total hoy</p>
                         <p className="text-2xl font-bold text-foreground">
                           €{(deviceTotal + monthlyTotal).toFixed(2).replace('.00', '')}
                         </p>
                       </div>
                       <p className="text-sm text-muted-foreground text-right">
-                        Then €{monthlyTotal.toFixed(2).replace('.00', '')}/month
+                        Después €{monthlyTotal.toFixed(2).replace('.00', '')}/mes
                       </p>
                     </div>
 
-                    {/* Savings badge */}
                     {savings > 0 && (
                       <div className="bg-green-500/10 text-green-600 rounded-lg p-3 text-center">
                         <p className="text-sm font-medium">
-                          You're saving €{savings} with web-exclusive pricing!
+                          ¡Ahorras €{savings} con el precio exclusivo web!
                         </p>
                       </div>
                     )}
@@ -253,7 +240,6 @@ export default function Checkout() {
               {/* Checkout Sidebar */}
               <div className="lg:col-span-2">
                 <div className="sticky top-32 space-y-6">
-                  {/* Checkout CTA */}
                   <div className="bg-card border rounded-2xl p-6 shadow-soft">
                     <Button 
                       size="lg" 
@@ -261,50 +247,48 @@ export default function Checkout() {
                       onClick={handleCheckout}
                     >
                       <Lock className="w-4 h-4 mr-2" />
-                      Complete purchase
+                      Completar compra
                     </Button>
                     
                     <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-6">
                       <Shield className="w-4 h-4" />
-                      <span>Secure checkout powered by Stripe</span>
+                      <span>Pago seguro con Stripe</span>
                     </div>
 
                     <div className="space-y-3 pt-4 border-t border-border">
                       <div className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">Free shipping on all devices</p>
+                        <p className="text-sm text-muted-foreground">Envío gratis en todos los dispositivos</p>
                       </div>
                       <div className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">Cancel subscription anytime</p>
+                        <p className="text-sm text-muted-foreground">Cancela tu suscripción en cualquier momento</p>
                       </div>
                       <div className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">30-day money-back guarantee</p>
+                        <p className="text-sm text-muted-foreground">Garantía de devolución de 30 días</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Need help */}
                   <div className="bg-secondary/50 rounded-xl p-5 text-center">
-                    <p className="text-sm text-foreground font-medium mb-2">Need help?</p>
+                    <p className="text-sm text-foreground font-medium mb-2">¿Necesitas ayuda?</p>
                     <p className="text-sm text-muted-foreground mb-3">
-                      Our team is here to answer your questions
+                      Nuestro equipo está aquí para responder tus preguntas
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/contact">Contact sales</Link>
+                      <Link to="/contact">Contactar con ventas</Link>
                     </Button>
                   </div>
 
-                  {/* Trust badges */}
                   <div className="flex items-center justify-center gap-4 pt-4">
                     <div className="flex items-center gap-1.5 text-muted-foreground">
                       <Lock className="w-4 h-4" />
-                      <span className="text-xs">SSL Secure</span>
+                      <span className="text-xs">SSL Seguro</span>
                     </div>
                     <div className="flex items-center gap-1.5 text-muted-foreground">
                       <Shield className="w-4 h-4" />
-                      <span className="text-xs">GDPR Compliant</span>
+                      <span className="text-xs">Cumple RGPD</span>
                     </div>
                   </div>
                 </div>
