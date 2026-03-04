@@ -8,7 +8,7 @@ import {
   Flame, Shield, ArrowRight, Check, Ban,
   AlertTriangle, FileCheck
 } from "lucide-react";
-import { caseStudies } from "@/lib/case-studies-data";
+
 import monitoringSmoke from "@/assets/monitoring-air.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
@@ -26,7 +26,7 @@ const howItWorks = [
   { step: "04", title: "Respuesta inmediata", description: "Recibe alertas instantáneas y mensajería automática al huésped para abordar las infracciones." },
 ];
 
-const relatedCaseStudy = caseStudies.find(cs => cs.slug === "del-parque-flats");
+
 
 function ManagerCheckItem({ text }: { text: string }) {
   return (
@@ -160,37 +160,6 @@ export default function SmokeDetection() {
           </div>
         </div>
       </section>
-
-      {relatedCaseStudy && (
-        <section className="py-20 lg:py-28 bg-secondary/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection className="text-center mb-12">
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Caso de éxito</p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Cómo otros aplican políticas libres de humo</h2>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <Link to={`/resources/case-studies/${relatedCaseStudy.slug}`} className="block max-w-4xl mx-auto group">
-                <div className="grid md:grid-cols-2 gap-8 p-8 rounded-3xl bg-card border hover:shadow-xl transition-all duration-300">
-                  <div className="aspect-video rounded-xl bg-cover bg-center" style={{ backgroundImage: `url(${relatedCaseStudy.heroImage})` }} />
-                  <div className="flex flex-col justify-center">
-                    <p className="text-sm text-muted-foreground mb-2">{relatedCaseStudy.industry} • {relatedCaseStudy.location}</p>
-                    <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">{relatedCaseStudy.headline}</h3>
-                    {relatedCaseStudy.quote && <blockquote className="text-muted-foreground italic mb-4">"{relatedCaseStudy.quote.text.slice(0, 120)}..."</blockquote>}
-                    <div className="flex items-center gap-4">
-                      {relatedCaseStudy.stats.slice(0, 2).map((stat, i) => (
-                        <div key={i}>
-                          <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                          <div className="text-xs text-muted-foreground">{stat.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </AnimatedSection>
-          </div>
-        </section>
-      )}
 
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
