@@ -241,11 +241,14 @@ export default function Monitoring() {
 
             <AnimatedSection delay={200}>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl blur-2xl" />
-                <img
-                  src={roomonitorDevice}
-                  alt="Especificaciones del Dispositivo Roomonitor"
-                  className="relative w-full max-w-sm mx-auto rounded-2xl shadow-xl"
+                <div className="absolute -inset-4 bg-gradient-to-br from-foreground/5 to-muted/40 rounded-3xl blur-2xl" />
+                <video
+                  src="/videos/roomonitor-floating.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="relative w-full max-w-sm mx-auto rounded-2xl"
                 />
               </div>
             </AnimatedSection>

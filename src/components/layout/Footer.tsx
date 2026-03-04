@@ -161,8 +161,12 @@ export function Footer() {
           <p className="text-sm opacity-60">
             © {new Date().getFullYear()} Roomonitor. Todos los derechos reservados. Smart Things & Friends SL.
           </p>
-          <div className="flex items-center gap-6">
-            <span className="text-sm opacity-60">Barcelona, España</span>
+          <div className="flex items-center gap-1.5 text-sm opacity-60 flex-wrap justify-center">
+            {["Barcelona", "Madrid", "Málaga", "Valencia", "Sevilla", "Granada", "Lisboa", "París"].map((city, i, arr) => (
+              <span key={city}>
+                {city}{i < arr.length - 1 && <span className="mx-1">·</span>}
+              </span>
+            ))}
           </div>
         </div>
       </div>
