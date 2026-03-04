@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Button } from "@/components/ui/button";
-import { 
-  Settings, Key, ArrowRight, Check, 
-  Shield, Link2, Database, Lock, Workflow
+import { Check,
+  Settings, Key, Shield, Link2, Database, Lock, Workflow
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
@@ -14,36 +11,12 @@ import { ServiceCTA } from "@/components/services/ServiceCTA";
 import serviceImage from "@/assets/service-pms-access.jpg";
 
 const features = [
-  {
-    icon: Key,
-    title: "Secure Access",
-    description: "We operate directly from your PMS with secure, limited access credentials."
-  },
-  {
-    icon: Database,
-    title: "Real-Time Data",
-    description: "Access to reservations, guest info, and property details when we need them."
-  },
-  {
-    icon: Workflow,
-    title: "Direct Actions",
-    description: "Send messages, update notes, and manage situations directly in your system."
-  },
-  {
-    icon: Link2,
-    title: "System Integration",
-    description: "Seamless connection with your existing operational tools and workflows."
-  },
-  {
-    icon: Lock,
-    title: "Privacy Focused",
-    description: "Access only what's needed. Full audit trails of all actions."
-  },
-  {
-    icon: Shield,
-    title: "Compliance Ready",
-    description: "GDPR compliant data handling and secure credential management."
-  },
+  { icon: Key, title: "Acceso Seguro", description: "Operamos directamente desde tu PMS con credenciales de acceso seguro y limitado." },
+  { icon: Database, title: "Datos en Tiempo Real", description: "Acceso a reservas, información de huéspedes y detalles de propiedades cuando los necesitamos." },
+  { icon: Workflow, title: "Acciones Directas", description: "Enviar mensajes, actualizar notas y gestionar situaciones directamente en tu sistema." },
+  { icon: Link2, title: "Integración de Sistemas", description: "Conexión fluida con tus herramientas operativas y flujos de trabajo existentes." },
+  { icon: Lock, title: "Enfocado en Privacidad", description: "Acceso solo a lo necesario. Registro completo de auditoría de todas las acciones." },
+  { icon: Shield, title: "Listo para Cumplimiento", description: "Manejo de datos conforme al RGPD y gestión segura de credenciales." },
 ];
 
 const supportedPlatforms = [
@@ -58,32 +31,20 @@ const supportedPlatforms = [
 ];
 
 const howWeWork = [
-  {
-    step: "01",
-    title: "Secure Setup",
-    description: "You provide limited access credentials to your PMS."
-  },
-  {
-    step: "02",
-    title: "Team Training",
-    description: "Our operators learn your system and workflows."
-  },
-  {
-    step: "03",
-    title: "Seamless Operations",
-    description: "We work directly in your tools, as an extension of your team."
-  },
+  { step: "01", title: "Configuración Segura", description: "Nos proporcionas credenciales de acceso limitado a tu PMS." },
+  { step: "02", title: "Formación del Equipo", description: "Nuestros operadores aprenden tu sistema y flujos de trabajo." },
+  { step: "03", title: "Operaciones Fluidas", description: "Trabajamos directamente en tus herramientas, como una extensión de tu equipo." },
 ];
 
 const capabilities = [
-  "Access reservation details in real-time",
-  "View guest contact information securely",
-  "Send messages through your PMS",
-  "Add notes and incident logs",
-  "Check property-specific instructions",
-  "Update reservation notes",
-  "Coordinate with your team seamlessly",
-  "Follow your established workflows",
+  "Acceder a detalles de reservas en tiempo real",
+  "Ver información de contacto de huéspedes de forma segura",
+  "Enviar mensajes a través de tu PMS",
+  "Añadir notas y registros de incidencias",
+  "Consultar instrucciones específicas de cada propiedad",
+  "Actualizar notas de reservas",
+  "Coordinarse con tu equipo de forma fluida",
+  "Seguir tus flujos de trabajo establecidos",
 ];
 
 export default function PMSAccess() {
@@ -93,13 +54,13 @@ export default function PMSAccess() {
       
       <ServiceHero
         icon={Settings}
-        badge="PMS & Tool Access"
-        title="We work in"
-        titleHighlight="your ecosystem"
-        description="No separate dashboards, no duplicate data. We operate directly from your Property Management System, working as a true extension of your team."
+        badge="Acceso PMS y Herramientas"
+        title="Trabajamos en"
+        titleHighlight="tu ecosistema"
+        description="Sin paneles separados, sin datos duplicados. Operamos directamente desde tu Sistema de Gestión de Propiedades, trabajando como una verdadera extensión de tu equipo."
         image={serviceImage}
-        imageAlt="PMS Integration"
-        secondaryCTA={{ text: "View Integrations", link: "/integrations" }}
+        imageAlt="Integración PMS"
+        secondaryCTA={{ text: "Ver Integraciones", link: "/integrations" }}
       />
 
       {/* Supported Platforms */}
@@ -107,7 +68,7 @@ export default function PMSAccess() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="container mx-auto px-4 relative">
           <AnimatedSection className="text-center mb-8">
-            <p className="text-sm text-muted-foreground">We integrate with your favorite PMS</p>
+            <p className="text-sm text-muted-foreground">Nos integramos con tu PMS favorito</p>
           </AnimatedSection>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {supportedPlatforms.map((platform, i) => (
@@ -124,19 +85,8 @@ export default function PMSAccess() {
         </div>
       </section>
 
-      <ServiceFeatures
-        eyebrow="Capabilities"
-        title="Secure, seamless access"
-        features={features}
-      />
-
-      <ServiceProcess
-        eyebrow="Setup Process"
-        title="How it works"
-        steps={howWeWork}
-        background="secondary"
-        columns={3}
-      />
+      <ServiceFeatures eyebrow="Capacidades" title="Acceso seguro y fluido" features={features} />
+      <ServiceProcess eyebrow="Proceso de Configuración" title="Cómo funciona" steps={howWeWork} background="secondary" columns={3} />
 
       {/* What We Can Do */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
@@ -144,15 +94,12 @@ export default function PMSAccess() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="fade-right">
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Our Actions
-              </p>
+              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Nuestras Acciones</p>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-                What we can do in your PMS
+                Qué podemos hacer en tu PMS
               </h2>
               <p className="text-base lg:text-lg text-muted-foreground mb-8">
-                With secure access to your system, we can handle guest communications 
-                and incident management without you lifting a finger.
+                Con acceso seguro a tu sistema, podemos gestionar comunicaciones con huéspedes y gestión de incidencias sin que tengas que mover un dedo.
               </p>
               <ul className="grid grid-cols-1 gap-3">
                 {capabilities.map((item, i) => (
@@ -170,9 +117,9 @@ export default function PMSAccess() {
               <div className="relative p-6 sm:p-8 rounded-3xl bg-card border hover:shadow-xl transition-all duration-500">
                 <div className="space-y-4">
                   {[
-                    { icon: Key, title: "Secure Credentials", desc: "Limited access, encrypted storage" },
-                    { icon: Shield, title: "Audit Trail", desc: "Every action logged and traceable" },
-                    { icon: Lock, title: "GDPR Compliant", desc: "Full data protection compliance" },
+                    { icon: Key, title: "Credenciales Seguras", desc: "Acceso limitado, almacenamiento encriptado" },
+                    { icon: Shield, title: "Registro de Auditoría", desc: "Cada acción registrada y rastreable" },
+                    { icon: Lock, title: "Conforme al RGPD", desc: "Cumplimiento total de protección de datos" },
                   ].map((item, i) => (
                     <div key={i} className="group p-4 rounded-xl bg-secondary/50 hover:bg-secondary/70 transition-all duration-300">
                       <div className="flex items-center gap-3 mb-2">
@@ -192,10 +139,10 @@ export default function PMSAccess() {
       </section>
 
       <ServiceCTA
-        title="Ready to integrate?"
-        description="Connect your PMS and let us work as an extension of your team. Setup takes just a few minutes."
-        primaryCTA={{ text: "Get Started", link: "/contact" }}
-        secondaryCTA={{ text: "View All Integrations", link: "/integrations" }}
+        title="¿Listo para integrarte?"
+        description="Conecta tu PMS y déjanos trabajar como una extensión de tu equipo. La configuración solo toma unos minutos."
+        primaryCTA={{ text: "Empezar", link: "/contact" }}
+        secondaryCTA={{ text: "Ver Todas las Integraciones", link: "/integrations" }}
       />
 
       <Footer />

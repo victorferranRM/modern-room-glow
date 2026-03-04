@@ -10,16 +10,16 @@ export function MegaMenuMonitoring() {
   return (
     <div className="w-full max-w-5xl mx-auto p-8">
       <div className="grid grid-cols-5 gap-8">
-        {/* Left - Device showcase (simplified) */}
+        {/* Left - Device showcase */}
         <div className="col-span-2 flex flex-col items-center justify-center">
           <img 
             src={roomonitorDevice}
-            alt="Roomonitor Device"
+            alt="Dispositivo Roomonitor"
             className="w-full max-w-[220px] rounded-2xl shadow-lg object-cover mb-6"
           />
           <Button size="default" variant="default" asChild className="group">
             <Link to="/monitoring">
-              Discover the device
+              Descubre el dispositivo
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -28,7 +28,7 @@ export function MegaMenuMonitoring() {
         {/* Right - Monitoring options */}
         <div className="col-span-3">
           <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-6">
-            MONITORING CAPABILITIES
+            CAPACIDADES DE MONITORIZACIÓN
           </h3>
           <ul className="grid grid-cols-2 gap-3">
             {monitoringData.map((item, index) => {

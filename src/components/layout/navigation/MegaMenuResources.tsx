@@ -7,20 +7,20 @@ const ecosystemIcons = [Puzzle, Award, Calculator];
 const companyIcons = [Building, Mail];
 
 const learnDescriptions = [
-  "Insights and trends in hospitality operations",
-  "In-depth resources for operational excellence",
-  "Find answers to common questions",
+  "Insights y tendencias en operaciones de hospitalidad",
+  "Recursos en profundidad para la excelencia operativa",
+  "Encuentra respuestas a preguntas frecuentes",
 ];
 
 const ecosystemDescriptions = [
-  "PMS and operational ecosystem connections",
-  "Success stories from our partners",
-  "See how much you could save with Roomonitor",
+  "Conexiones con PMS y ecosistema operativo",
+  "Historias de éxito de nuestros partners",
+  "Descubre cuánto podrías ahorrar con Roomonitor",
 ];
 
 const companyDescriptions = [
-  "Our mission and the team behind Roomonitor",
-  "Get in touch with our team",
+  "Nuestra misión y el equipo detrás de Roomonitor",
+  "Ponte en contacto con nuestro equipo",
 ];
 
 export function MegaMenuResources() {
@@ -135,14 +135,14 @@ export function MegaMenuResources() {
           </div>
           <div className="flex-1">
             <span className="block text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
-              How much could Roomonitor save you?
+              ¿Cuánto podrías ahorrar con Roomonitor?
             </span>
             <span className="block text-sm text-muted-foreground mt-0.5">
-              Calculate your potential savings with our smoke detection and monitoring solutions
+              Calcula tu ahorro potencial con nuestras soluciones de detección de humo y monitorización
             </span>
           </div>
           <span className="text-primary text-sm font-medium">
-            Try Calculator →
+            Probar Calculadora →
           </span>
         </Link>
       </div>

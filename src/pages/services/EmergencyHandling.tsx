@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Button } from "@/components/ui/button";
 import { 
-  Siren, Clock, Shield, ArrowRight, Check, 
-  Phone, AlertTriangle, Users, Flame, Droplets,
+  Siren, Clock, Shield, Phone, AlertTriangle, Users, Flame, Droplets,
   HeartPulse, Lock
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
@@ -18,105 +15,41 @@ import serviceImage from "@/assets/service-emergency.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
 const stats = [
-  { value: "<60s", label: "Response time" },
-  { value: "24/7", label: "Emergency team" },
-  { value: "100%", label: "Protocols executed" },
-  { value: "Real", label: "Action taken" },
+  { value: "<60s", label: "Tiempo de respuesta" },
+  { value: "24/7", label: "Equipo de emergencias" },
+  { value: "100%", label: "Protocolos ejecutados" },
+  { value: "Real", label: "Acción tomada" },
 ];
 
 const features = [
-  {
-    icon: Siren,
-    title: "24/7 Emergency Line",
-    description: "Dedicated emergency response team available around the clock for critical situations."
-  },
-  {
-    icon: Clock,
-    title: "Instant Escalation",
-    description: "Critical alerts trigger immediate response protocols — no delays, no queues."
-  },
-  {
-    icon: Phone,
-    title: "Direct Coordination",
-    description: "We coordinate with emergency services, property managers, and guests simultaneously."
-  },
-  {
-    icon: Users,
-    title: "Trained Specialists",
-    description: "Emergency response specialists trained in crisis management and de-escalation."
-  },
-  {
-    icon: Shield,
-    title: "Protocol-Driven",
-    description: "Every emergency type has predefined response procedures for consistent handling."
-  },
-  {
-    icon: AlertTriangle,
-    title: "Real Action",
-    description: "Not just notifications — we take real action to resolve emergencies."
-  },
+  { icon: Siren, title: "Línea de Emergencias 24/7", description: "Equipo dedicado de respuesta a emergencias disponible las 24 horas para situaciones críticas." },
+  { icon: Clock, title: "Escalado Instantáneo", description: "Las alertas críticas activan protocolos de respuesta inmediata — sin retrasos, sin colas." },
+  { icon: Phone, title: "Coordinación Directa", description: "Coordinamos con servicios de emergencia, gestores de propiedades y huéspedes simultáneamente." },
+  { icon: Users, title: "Especialistas Formados", description: "Especialistas en respuesta a emergencias formados en gestión de crisis y desescalada." },
+  { icon: Shield, title: "Basado en Protocolos", description: "Cada tipo de emergencia tiene procedimientos de respuesta predefinidos para un manejo consistente." },
+  { icon: AlertTriangle, title: "Acción Real", description: "No solo notificaciones — tomamos acción real para resolver emergencias." },
 ];
 
 const emergencyTypes = [
-  {
-    icon: Flame,
-    title: "Fire & Smoke",
-    description: "Immediate response to smoke detection, coordinating with fire services and guest evacuation.",
-    response: "< 1 min"
-  },
-  {
-    icon: Droplets,
-    title: "Water Damage",
-    description: "Rapid response to flooding or water leaks, minimizing property damage.",
-    response: "< 2 min"
-  },
-  {
-    icon: Lock,
-    title: "Security Threats",
-    description: "Coordination with local authorities for break-ins, threats, or suspicious activity.",
-    response: "< 2 min"
-  },
-  {
-    icon: HeartPulse,
-    title: "Medical Emergencies",
-    description: "Assistance coordinating medical help and emergency services for guests.",
-    response: "< 1 min"
-  },
+  { icon: Flame, title: "Fuego y Humo", description: "Respuesta inmediata a detección de humo, coordinando con bomberos y evacuación de huéspedes.", response: "< 1 min" },
+  { icon: Droplets, title: "Daños por Agua", description: "Respuesta rápida a inundaciones o fugas de agua, minimizando daños en la propiedad.", response: "< 2 min" },
+  { icon: Lock, title: "Amenazas de Seguridad", description: "Coordinación con autoridades locales para robos, amenazas o actividad sospechosa.", response: "< 2 min" },
+  { icon: HeartPulse, title: "Emergencias Médicas", description: "Asistencia coordinando ayuda médica y servicios de emergencia para huéspedes.", response: "< 1 min" },
 ];
 
 const responseProtocol = [
-  {
-    step: "01",
-    title: "Alert Triggered",
-    description: "Critical sensor alert or emergency call received."
-  },
-  {
-    step: "02",
-    title: "Immediate Assessment",
-    description: "Emergency team assesses situation severity within seconds."
-  },
-  {
-    step: "03",
-    title: "Multi-Channel Response",
-    description: "Simultaneous contact with guests, owners, and emergency services."
-  },
-  {
-    step: "04",
-    title: "On-Site Support",
-    description: "Field agents dispatched if physical intervention needed."
-  },
-  {
-    step: "05",
-    title: "Resolution & Report",
-    description: "Complete documentation and follow-up support."
-  },
+  { step: "01", title: "Alerta Activada", description: "Alerta crítica del sensor o llamada de emergencia recibida." },
+  { step: "02", title: "Evaluación Inmediata", description: "El equipo de emergencias evalúa la gravedad de la situación en segundos." },
+  { step: "03", title: "Respuesta Multicanal", description: "Contacto simultáneo con huéspedes, propietarios y servicios de emergencia." },
+  { step: "04", title: "Soporte In Situ", description: "Agentes de campo desplegados si se necesita intervención física." },
+  { step: "05", title: "Resolución e Informe", description: "Documentación completa y soporte de seguimiento." },
 ];
 
 const managerFeatures = [
-  "Real-time emergency timeline",
-  "Multi-party communication logs",
-  "Exportable reports for insurance",
-  "Post-incident analysis",
+  "Línea temporal de emergencias en tiempo real",
+  "Registros de comunicación multipartita",
+  "Informes exportables para seguros",
+  "Análisis post-incidencia",
 ];
 
 export default function EmergencyHandling() {
@@ -126,12 +59,12 @@ export default function EmergencyHandling() {
       
       <ServiceHero
         icon={Siren}
-        badge="Emergency Handling"
-        title="Critical situations"
-        titleHighlight="managed with real action"
-        description="When emergencies happen, every second counts. Our emergency handling team responds instantly with protocols and real action — not just notifications."
+        badge="Gestión de Emergencias"
+        title="Situaciones críticas"
+        titleHighlight="gestionadas con acción real"
+        description="Cuando surgen emergencias, cada segundo cuenta. Nuestro equipo de gestión de emergencias responde al instante con protocolos y acción real — no solo notificaciones."
         image={serviceImage}
-        imageAlt="Emergency Handling Service"
+        imageAlt="Servicio de Gestión de Emergencias"
         variant="destructive"
       />
 
@@ -142,12 +75,8 @@ export default function EmergencyHandling() {
         <div className="absolute top-1/4 left-0 w-80 h-80 bg-destructive/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Emergency Types
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-              What we handle
-            </h2>
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Tipos de Emergencia</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Qué gestionamos</h2>
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -161,9 +90,7 @@ export default function EmergencyHandling() {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-lg font-semibold transition-colors group-hover:text-destructive">{type.title}</h3>
-                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-destructive/10 text-destructive border border-destructive/20">
-                          {type.response}
-                        </span>
+                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-destructive/10 text-destructive border border-destructive/20">{type.response}</span>
                       </div>
                       <p className="text-muted-foreground text-sm">{type.description}</p>
                     </div>
@@ -175,36 +102,25 @@ export default function EmergencyHandling() {
         </div>
       </section>
 
-      <ServiceFeatures
-        eyebrow="Capabilities"
-        title="Professional emergency response"
-        features={features}
-        background="secondary"
-      />
-
-      <ServiceProcess
-        eyebrow="Our Protocol"
-        title="Emergency response process"
-        steps={responseProtocol}
-        columns={5}
-      />
+      <ServiceFeatures eyebrow="Capacidades" title="Respuesta profesional a emergencias" features={features} background="secondary" />
+      <ServiceProcess eyebrow="Nuestro Protocolo" title="Proceso de respuesta a emergencias" steps={responseProtocol} columns={5} />
 
       <ServiceImageSection
         eyebrow="Roomonitor Manager"
-        title="Complete emergency visibility"
-        description="Track all emergency responses in real-time, view complete timelines, and access detailed reports — all from your dashboard."
+        title="Visibilidad completa de emergencias"
+        description="Sigue todas las respuestas a emergencias en tiempo real, visualiza líneas temporales completas y accede a informes detallados — todo desde tu panel."
         features={managerFeatures}
         image={managerDevices}
-        imageAlt="Emergency Dashboard"
-        ctaText="Explore Manager"
+        imageAlt="Panel de Emergencias"
+        ctaText="Explorar Manager"
         ctaLink="/how-it-works"
         background="secondary"
         reversed
       />
 
       <ServiceCTA
-        title="Be prepared for any emergency"
-        description="Our emergency handling team is ready 24/7. Talk to us about protecting your properties."
+        title="Prepárate para cualquier emergencia"
+        description="Nuestro equipo de gestión de emergencias está preparado 24/7. Habla con nosotros sobre la protección de tus propiedades."
       />
 
       <Footer />

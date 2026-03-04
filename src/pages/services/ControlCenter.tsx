@@ -1,11 +1,7 @@
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { AnimatedSection } from "@/components/ui/animated-section";
-import { Button } from "@/components/ui/button";
 import { 
-  Eye, Clock, Shield, ArrowRight, Check, 
-  AlertTriangle, Users, Zap, Monitor, Bell, Brain
+  Eye, Clock, Shield, AlertTriangle, Users, Zap, Brain
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceStats } from "@/components/services/ServiceStats";
@@ -17,77 +13,37 @@ import serviceImage from "@/assets/service-control-center.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
 const stats = [
-  { value: "24/7", label: "Monitoring coverage" },
-  { value: "<2min", label: "Average response" },
-  { value: "100%", label: "Human verified" },
-  { value: "5,000+", label: "Properties monitored" },
+  { value: "24/7", label: "Cobertura de monitorización" },
+  { value: "<2min", label: "Respuesta media" },
+  { value: "100%", label: "Verificación humana" },
+  { value: "5.000+", label: "Propiedades monitorizadas" },
 ];
 
 const features = [
-  {
-    icon: Eye,
-    title: "Real-Time Monitoring",
-    description: "24/7 surveillance of all sensor data across your entire portfolio from a single control room."
-  },
-  {
-    icon: Brain,
-    title: "Human Verification",
-    description: "Every alert is reviewed by trained professionals before any action is taken. No false alarms."
-  },
-  {
-    icon: AlertTriangle,
-    title: "Smart Escalation",
-    description: "Intelligent decision-making based on your protocols. We know when to act and when to escalate."
-  },
-  {
-    icon: Zap,
-    title: "Immediate Response",
-    description: "Average response time under 2 minutes from alert detection to first action."
-  },
-  {
-    icon: Users,
-    title: "Dedicated Team",
-    description: "Trained hospitality specialists who understand vacation rental operations inside out."
-  },
-  {
-    icon: Shield,
-    title: "Full Documentation",
-    description: "Every incident is logged, tracked, and documented for your records and insurance."
-  },
+  { icon: Eye, title: "Monitorización en Tiempo Real", description: "Vigilancia 24/7 de todos los datos de sensores en todo tu portfolio desde un único centro de control." },
+  { icon: Brain, title: "Verificación Humana", description: "Cada alerta es revisada por profesionales formados antes de tomar cualquier acción. Sin falsas alarmas." },
+  { icon: AlertTriangle, title: "Escalado Inteligente", description: "Toma de decisiones inteligente basada en tus protocolos. Sabemos cuándo actuar y cuándo escalar." },
+  { icon: Zap, title: "Respuesta Inmediata", description: "Tiempo de respuesta medio inferior a 2 minutos desde la detección hasta la primera acción." },
+  { icon: Users, title: "Equipo Dedicado", description: "Especialistas formados en hospitalidad que entienden las operaciones de alquiler vacacional a la perfección." },
+  { icon: Shield, title: "Documentación Completa", description: "Cada incidencia es registrada, seguida y documentada para tus registros y seguros." },
 ];
 
 const capabilities = [
-  "Monitor noise levels and detect potential parties",
-  "Track occupancy and identify unauthorized guests",
-  "Receive and verify sensor alerts in real-time",
-  "Make informed decisions based on live data",
-  "Contact guests directly when intervention is needed",
-  "Escalate to field service when remote resolution fails",
-  "Coordinate with local authorities if necessary",
-  "Document all incidents with timestamps and actions",
+  "Monitorizar niveles de ruido y detectar posibles fiestas",
+  "Seguir la ocupación e identificar huéspedes no autorizados",
+  "Recibir y verificar alertas de sensores en tiempo real",
+  "Tomar decisiones informadas basadas en datos en vivo",
+  "Contactar directamente con los huéspedes cuando se necesita intervención",
+  "Escalar al servicio de campo cuando la resolución remota falla",
+  "Coordinar con las autoridades locales si es necesario",
+  "Documentar todas las incidencias con marcas de tiempo y acciones",
 ];
 
 const howItWorks = [
-  {
-    step: "01",
-    title: "Alert Detection",
-    description: "Our sensors detect anomalies and send alerts to the Control Center instantly."
-  },
-  {
-    step: "02",
-    title: "Human Verification",
-    description: "Trained operators analyze the data to confirm if intervention is needed."
-  },
-  {
-    step: "03",
-    title: "Intelligent Decision",
-    description: "Based on your protocol, we decide the best course of action."
-  },
-  {
-    step: "04",
-    title: "Swift Resolution",
-    description: "We take action, document everything, and keep you informed."
-  },
+  { step: "01", title: "Detección de Alerta", description: "Nuestros sensores detectan anomalías y envían alertas al Centro de Control al instante." },
+  { step: "02", title: "Verificación Humana", description: "Operadores formados analizan los datos para confirmar si se necesita intervención." },
+  { step: "03", title: "Decisión Inteligente", description: "Según tu protocolo, decidimos el mejor curso de acción." },
+  { step: "04", title: "Resolución Rápida", description: "Actuamos, documentamos todo y te mantenemos informado." },
 ];
 
 export default function ControlCenter() {
@@ -97,43 +53,43 @@ export default function ControlCenter() {
       
       <ServiceHero
         icon={Eye}
-        badge="Control Center 24/7"
-        title="Human verification,"
-        titleHighlight="real decisions"
-        description="Our Control Center combines advanced sensor technology with human expertise. Every alert is verified, every decision is informed, every action is documented."
+        badge="Centro de Control 24/7"
+        title="Verificación humana,"
+        titleHighlight="decisiones reales"
+        description="Nuestro Centro de Control combina tecnología avanzada de sensores con experiencia humana. Cada alerta es verificada, cada decisión es informada, cada acción es documentada."
         image={serviceImage}
-        imageAlt="Control Center Service"
+        imageAlt="Servicio de Centro de Control"
       />
 
       <ServiceStats stats={stats} />
 
       <ServiceFeatures
-        eyebrow="Capabilities"
-        title="Technology meets human expertise"
+        eyebrow="Capacidades"
+        title="Tecnología y experiencia humana"
         features={features}
       />
 
       <ServiceImageSection
-        eyebrow="Our Role"
-        title="What our Control Center does"
-        description="We're the bridge between your sensors and real-world action. When something happens, we verify, decide, and act — all according to your rules."
+        eyebrow="Nuestro Rol"
+        title="Qué hace nuestro Centro de Control"
+        description="Somos el puente entre tus sensores y la acción real. Cuando algo sucede, verificamos, decidimos y actuamos — todo según tus reglas."
         features={capabilities}
         image={managerDevices}
-        imageAlt="Control Center Dashboard"
-        ctaText="Learn More"
+        imageAlt="Panel del Centro de Control"
+        ctaText="Más Información"
         ctaLink="/contact"
         background="secondary"
       />
 
       <ServiceProcess
-        eyebrow="Process"
-        title="From detection to resolution"
+        eyebrow="Proceso"
+        title="De la detección a la resolución"
         steps={howItWorks}
       />
 
       <ServiceCTA
-        title="Ready for professional monitoring?"
-        description="Our Control Center is ready to protect your properties 24/7. Talk to an expert to learn how we can help."
+        title="¿Listo para monitorización profesional?"
+        description="Nuestro Centro de Control está preparado para proteger tus propiedades 24/7. Habla con un experto para saber cómo podemos ayudarte."
       />
 
       <Footer />

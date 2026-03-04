@@ -32,8 +32,8 @@ export function ServiceHero({
   description,
   image,
   imageAlt,
-  primaryCTA = { text: "Learn More", link: "/contact" },
-  secondaryCTA = { text: "View Pricing", link: "/pricing" },
+  primaryCTA = { text: "Más Información", link: "/contact" },
+  secondaryCTA = { text: "Ver Precios", link: "/pricing" },
   variant = "primary",
 }: ServiceHeroProps) {
   const badgeStyles = variant === "destructive" 
@@ -46,7 +46,6 @@ export function ServiceHero({
 
   return (
     <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-primary/5 to-transparent blur-3xl" />
         <div className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-secondary/50 to-transparent blur-3xl" />

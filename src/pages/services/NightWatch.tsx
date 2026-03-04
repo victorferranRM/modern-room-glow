@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Button } from "@/components/ui/button";
 import { 
-  Moon, Clock, Shield, ArrowRight, Check, 
-  Eye, Bell, Users, Volume2, UserCheck
+  Moon, Eye, Bell, Shield, Users, Volume2, UserCheck
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceStats } from "@/components/services/ServiceStats";
@@ -17,82 +14,42 @@ import serviceImage from "@/assets/service-night-watch.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
 const stats = [
-  { value: "90%", label: "Parties prevented" },
-  { value: "Night+", label: "Weekend coverage" },
-  { value: "Proactive", label: "Monitoring approach" },
-  { value: "Early", label: "Intervention" },
+  { value: "90%", label: "Fiestas prevenidas" },
+  { value: "Noche+", label: "Cobertura fin de semana" },
+  { value: "Proactivo", label: "Enfoque de monitorización" },
+  { value: "Temprana", label: "Intervención" },
 ];
 
 const features = [
-  {
-    icon: Moon,
-    title: "Dedicated Night Team",
-    description: "Specialized agents monitoring your properties during peak risk hours: evenings and weekends."
-  },
-  {
-    icon: Eye,
-    title: "Proactive Monitoring",
-    description: "We don't wait for alerts — we actively watch for early warning signs of problems."
-  },
-  {
-    icon: Volume2,
-    title: "Noise Pattern Analysis",
-    description: "Identify rising noise trends before they become complaints."
-  },
-  {
-    icon: UserCheck,
-    title: "Occupancy Tracking",
-    description: "Monitor guest numbers to catch unauthorized parties early."
-  },
-  {
-    icon: Bell,
-    title: "Early Intervention",
-    description: "Friendly guest reminders before situations escalate."
-  },
-  {
-    icon: Shield,
-    title: "Escalation Ready",
-    description: "Full escalation protocols if early intervention isn't enough."
-  },
+  { icon: Moon, title: "Equipo Nocturno Dedicado", description: "Agentes especializados monitorizando tus propiedades durante las horas de mayor riesgo: noches y fines de semana." },
+  { icon: Eye, title: "Monitorización Proactiva", description: "No esperamos a las alertas — vigilamos activamente señales tempranas de problemas." },
+  { icon: Volume2, title: "Análisis de Patrones de Ruido", description: "Identificamos tendencias de ruido creciente antes de que se conviertan en quejas." },
+  { icon: UserCheck, title: "Seguimiento de Ocupación", description: "Monitorizamos el número de huéspedes para detectar fiestas no autorizadas a tiempo." },
+  { icon: Bell, title: "Intervención Temprana", description: "Recordatorios amables a los huéspedes antes de que las situaciones escalen." },
+  { icon: Shield, title: "Listo para Escalar", description: "Protocolos completos de escalado si la intervención temprana no es suficiente." },
 ];
 
 const coverageHours = [
-  { day: "Monday - Thursday", hours: "6 PM - 9 AM" },
-  { day: "Friday", hours: "6 PM - 12 AM (Sat)" },
-  { day: "Saturday", hours: "All day" },
-  { day: "Sunday", hours: "All day until 9 AM (Mon)" },
+  { day: "Lunes - Jueves", hours: "18:00 - 9:00" },
+  { day: "Viernes", hours: "18:00 - 00:00 (Sáb)" },
+  { day: "Sábado", hours: "Todo el día" },
+  { day: "Domingo", hours: "Todo el día hasta 9:00 (Lun)" },
 ];
 
 const preventionProcess = [
-  {
-    step: "01",
-    title: "Continuous Watch",
-    description: "Agents monitor all properties during night hours."
-  },
-  {
-    step: "02",
-    title: "Pattern Detection",
-    description: "AI-assisted analysis identifies concerning trends."
-  },
-  {
-    step: "03",
-    title: "Friendly Reminder",
-    description: "Polite guest contact when activity increases."
-  },
-  {
-    step: "04",
-    title: "Escalation if Needed",
-    description: "Full incident response if reminders don't work."
-  },
+  { step: "01", title: "Vigilancia Continua", description: "Agentes monitorizan todas las propiedades durante horario nocturno." },
+  { step: "02", title: "Detección de Patrones", description: "Análisis asistido por IA identifica tendencias preocupantes." },
+  { step: "03", title: "Recordatorio Amable", description: "Contacto educado con el huésped cuando la actividad aumenta." },
+  { step: "04", title: "Escalado si es Necesario", description: "Respuesta completa a incidencias si los recordatorios no funcionan." },
 ];
 
 const partyPrevention = [
-  "Rising noise levels detected early",
-  "Unusual occupancy patterns flagged",
-  "Guest messaging before problems escalate",
-  "Neighbor complaint prevention",
-  "Property protection during high-risk hours",
-  "Weekend and holiday coverage",
+  "Niveles de ruido crecientes detectados a tiempo",
+  "Patrones de ocupación inusuales marcados",
+  "Mensajes a huéspedes antes de que los problemas escalen",
+  "Prevención de quejas de vecinos",
+  "Protección de propiedades durante horas de alto riesgo",
+  "Cobertura de fines de semana y festivos",
 ];
 
 export default function NightWatch() {
@@ -103,11 +60,11 @@ export default function NightWatch() {
       <ServiceHero
         icon={Moon}
         badge="Night Watch"
-        title="Party prevention"
-        titleHighlight="before it starts"
-        description="Dedicated agents monitoring your properties during peak risk hours. We prevent parties before they escalate, protecting your reputation and neighbors."
+        title="Prevención de fiestas"
+        titleHighlight="antes de que empiecen"
+        description="Agentes dedicados monitorizando tus propiedades durante las horas de mayor riesgo. Prevenimos fiestas antes de que escalen, protegiendo tu reputación y vecinos."
         image={serviceImage}
-        imageAlt="Night Watch Service"
+        imageAlt="Servicio Night Watch"
       />
 
       <ServiceStats stats={stats} />
@@ -117,14 +74,10 @@ export default function NightWatch() {
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Coverage
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-              When we're watching
-            </h2>
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Cobertura</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Cuándo vigilamos</h2>
             <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Night Watch covers the highest-risk hours when parties are most likely to occur.
+              Night Watch cubre las horas de mayor riesgo cuando es más probable que ocurran fiestas.
             </p>
           </AnimatedSection>
 
@@ -144,34 +97,24 @@ export default function NightWatch() {
         </div>
       </section>
 
-      <ServiceFeatures
-        eyebrow="Capabilities"
-        title="Proactive party prevention"
-        features={features}
-        background="secondary"
-      />
-
-      <ServiceProcess
-        eyebrow="Our Approach"
-        title="Prevention-first process"
-        steps={preventionProcess}
-      />
+      <ServiceFeatures eyebrow="Capacidades" title="Prevención proactiva de fiestas" features={features} background="secondary" />
+      <ServiceProcess eyebrow="Nuestro Enfoque" title="Proceso de prevención primero" steps={preventionProcess} />
 
       <ServiceImageSection
-        eyebrow="Benefits"
-        title="What Night Watch prevents"
-        description="Our proactive monitoring approach catches issues before they become problems, protecting your property and relationships with neighbors."
+        eyebrow="Beneficios"
+        title="Qué previene Night Watch"
+        description="Nuestro enfoque de monitorización proactiva detecta problemas antes de que se conviertan en incidencias, protegiendo tu propiedad y relación con los vecinos."
         features={partyPrevention}
         image={managerDevices}
-        imageAlt="Night Watch Dashboard"
-        ctaText="Get Night Watch"
+        imageAlt="Panel Night Watch"
+        ctaText="Activar Night Watch"
         ctaLink="/contact"
         background="secondary"
       />
 
       <ServiceCTA
-        title="Sleep soundly while we watch"
-        description="Our Night Watch team is ready to protect your properties during high-risk hours. Talk to us about coverage for your portfolio."
+        title="Duerme tranquilo mientras vigilamos"
+        description="Nuestro equipo Night Watch está preparado para proteger tus propiedades durante las horas de mayor riesgo. Habla con nosotros sobre la cobertura para tu portfolio."
       />
 
       <Footer />
