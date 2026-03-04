@@ -213,106 +213,6 @@ export default function Monitoring() {
         </div>
       </section>
 
-      {/* Device Specifications */}
-      <section className="py-20 lg:py-28 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <AnimatedSection>
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Especificaciones técnicas
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-                Diseñado para la fiabilidad
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                El dispositivo Roomonitor está diseñado para operar 24/7 en entornos de hospitalidad, con conectividad robusta y alimentación de respaldo.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {deviceSpecs.map((spec) => (
-                  <div key={spec.label} className="p-4 rounded-xl bg-card border">
-                    <div className="text-sm text-muted-foreground mb-1">{spec.label}</div>
-                    <div className="font-semibold">{spec.value}</div>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-foreground/5 to-muted/40 rounded-3xl blur-2xl" />
-                <video
-                  src="/videos/roomonitor-floating.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="relative w-full max-w-sm mx-auto rounded-2xl"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Table */}
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Por qué elegir Roomonitor
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              La solución completa
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Descubre cómo Roomonitor se compara con los dispositivos de monitorización estándar del mercado.
-            </p>
-          </AnimatedSection>
-
-          <AnimatedSection delay={200}>
-            <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border bg-card">
-              <div className="grid grid-cols-3 bg-secondary/50 p-4 border-b">
-                <div className="font-semibold">Característica</div>
-                <div className="text-center font-semibold text-primary">Roomonitor</div>
-                <div className="text-center font-semibold text-muted-foreground">Otros</div>
-              </div>
-              
-              {comparisonFeatures.map((item, index) => (
-                <div 
-                  key={item.feature} 
-                  className={`grid grid-cols-3 p-4 items-center ${index !== comparisonFeatures.length - 1 ? 'border-b' : ''}`}
-                >
-                  <div className="text-sm">{item.feature}</div>
-                  <div className="flex justify-center">
-                    {item.roomonitor ? (
-                      <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
-                        <Check className="w-4 h-4 text-success" />
-                      </div>
-                    ) : (
-                      <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
-                        <X className="w-4 h-4 text-destructive" />
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex justify-center">
-                    {item.competitor ? (
-                      <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
-                        <Check className="w-4 h-4 text-success" />
-                      </div>
-                    ) : (
-                      <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
-                        <X className="w-4 h-4 text-destructive" />
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -415,8 +315,66 @@ export default function Monitoring() {
         </div>
       </section>
 
-      {/* Installation Guide */}
+      {/* Comparison Table */}
       <section className="py-20 lg:py-28">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+              Por qué elegir Roomonitor
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+              La solución completa
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Descubre cómo Roomonitor se compara con los dispositivos de monitorización estándar del mercado.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={200}>
+            <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border bg-card">
+              <div className="grid grid-cols-3 bg-secondary/50 p-4 border-b">
+                <div className="font-semibold">Característica</div>
+                <div className="text-center font-semibold text-primary">Roomonitor</div>
+                <div className="text-center font-semibold text-muted-foreground">Otros</div>
+              </div>
+              
+              {comparisonFeatures.map((item, index) => (
+                <div 
+                  key={item.feature} 
+                  className={`grid grid-cols-3 p-4 items-center ${index !== comparisonFeatures.length - 1 ? 'border-b' : ''}`}
+                >
+                  <div className="text-sm">{item.feature}</div>
+                  <div className="flex justify-center">
+                    {item.roomonitor ? (
+                      <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
+                        <Check className="w-4 h-4 text-success" />
+                      </div>
+                    ) : (
+                      <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
+                        <X className="w-4 h-4 text-destructive" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex justify-center">
+                    {item.competitor ? (
+                      <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
+                        <Check className="w-4 h-4 text-success" />
+                      </div>
+                    ) : (
+                      <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
+                        <X className="w-4 h-4 text-destructive" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Installation Guide */}
+      <section className="py-20 lg:py-28 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
@@ -455,26 +413,45 @@ export default function Monitoring() {
         </div>
       </section>
 
-
-      {/* Final CTA */}
-      <section className="py-20 lg:py-28 bg-foreground text-background">
+      {/* Device Specifications */}
+      <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              ¿Listo para proteger tus propiedades?
-            </h2>
-            <p className="text-lg text-background/70 mb-8">
-              Únete a miles de gestores de propiedades que confían en Roomonitor para la monitorización 24/7 y la prevención de incidencias.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/pricing">Ver precios</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-background/20 bg-transparent text-background hover:bg-background/10" asChild>
-                <Link to="/contact">Hablar con ventas</Link>
-              </Button>
-            </div>
-          </AnimatedSection>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <AnimatedSection>
+              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+                Especificaciones técnicas
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+                Diseñado para la fiabilidad
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                El dispositivo Roomonitor está diseñado para operar 24/7 en entornos de hospitalidad, con conectividad robusta y alimentación de respaldo.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {deviceSpecs.map((spec) => (
+                  <div key={spec.label} className="p-4 rounded-xl bg-card border">
+                    <div className="text-sm text-muted-foreground mb-1">{spec.label}</div>
+                    <div className="font-semibold">{spec.value}</div>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-foreground/5 to-muted/40 rounded-3xl blur-2xl" />
+                <video
+                  src="/videos/roomonitor-floating.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="relative w-full max-w-sm mx-auto rounded-2xl"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
