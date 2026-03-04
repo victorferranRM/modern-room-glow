@@ -38,7 +38,7 @@ export function PricingCarousel({
     containScroll: "trimSnaps",
     loop: false
   });
-  const [selectedIndex, setSelectedIndex] = useState(1); // Start on Pro (middle)
+  const [selectedIndex, setSelectedIndex] = useState(1);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -49,7 +49,6 @@ export function PricingCarousel({
     if (!emblaApi) return;
     onSelect();
     emblaApi.on("select", onSelect);
-    // Start on Pro plan (index 1)
     emblaApi.scrollTo(1, false);
     return () => {
       emblaApi.off("select", onSelect);
@@ -60,37 +59,37 @@ export function PricingCarousel({
     {
       key: "basic",
       name: "Basic",
-      subtitle: "Device + monitoring subscription",
+      subtitle: "Dispositivo + suscripción de monitorización",
       features: [
-        { icon: Bell, text: "Roomonitor monitoring device" },
-        { icon: Zap, text: "Real-time alerts" },
-        { icon: Smartphone, text: "Dashboard & mobile app" },
-        { icon: Mail, text: "Email & push notifications" },
+        { icon: Bell, text: "Dispositivo de monitorización Roomonitor" },
+        { icon: Zap, text: "Alertas en tiempo real" },
+        { icon: Smartphone, text: "Dashboard y app móvil" },
+        { icon: Mail, text: "Notificaciones email y push" },
       ],
       popular: false,
     },
     {
       key: "pro",
       name: "Pro",
-      subtitle: "Everything in Basic + Alarm Assistant",
+      subtitle: "Todo lo de Basic + Alarm Assistant",
       features: [
-        { icon: Check, text: "Everything in Basic" },
+        { icon: Check, text: "Todo lo de Basic" },
         { icon: PhoneCall, text: "Alarm Assistant" },
-        { icon: Headphones, text: "Human agents monitoring alarms" },
-        { icon: Clock, text: "24/7 alarm handling" },
+        { icon: Headphones, text: "Agentes humanos monitorizando alarmas" },
+        { icon: Clock, text: "Gestión de alarmas 24/7" },
       ],
       popular: true,
     },
     {
       key: "enterprise",
       name: "Enterprise",
-      subtitle: "Full operational management",
+      subtitle: "Gestión operativa completa",
       features: [
-        { icon: Check, text: "Everything in Pro" },
-        { icon: Home, text: "Guest & Property Services" },
-        { icon: Users, text: "Full operational management" },
-        { icon: Shield, text: "Custom SLA agreements" },
-        { icon: Zap, text: "Dedicated account manager" },
+        { icon: Check, text: "Todo lo de Pro" },
+        { icon: Home, text: "Servicios de huésped y propiedad" },
+        { icon: Users, text: "Gestión operativa completa" },
+        { icon: Shield, text: "Acuerdos SLA personalizados" },
+        { icon: Zap, text: "Account manager dedicado" },
       ],
       popular: false,
     },
@@ -99,7 +98,7 @@ export function PricingCarousel({
   const renderPrice = (planKey: string) => {
     if (planKey === "basic") {
       if (isEnterprise) {
-        return <div className="text-2xl font-bold text-foreground">Contact sales</div>;
+        return <div className="text-2xl font-bold text-foreground">Contactar ventas</div>;
       }
       return (
         <div className="space-y-3">
@@ -107,21 +106,21 @@ export function PricingCarousel({
             <div className="flex items-baseline gap-2">
               <span className="text-lg text-muted-foreground line-through">€90</span>
               <span className="text-3xl font-bold text-foreground">€45</span>
-              <span className="text-sm text-muted-foreground">one-time</span>
+              <span className="text-sm text-muted-foreground">pago único</span>
             </div>
             <div className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-0.5 rounded">
-              Web-exclusive price
+              Precio exclusivo web
             </div>
           </div>
           <div className="pt-2 border-t border-border">
             <div className="flex items-baseline gap-1">
               <span className="text-2xl font-bold text-foreground">€13</span>
-              <span className="text-muted-foreground text-sm">/ month per property</span>
+              <span className="text-muted-foreground text-sm">/ mes por propiedad</span>
             </div>
           </div>
           {properties > 1 && (
             <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
-              {properties} properties: €{basicDeviceTotal} one-time + €{basicMonthlyTotal}/month
+              {properties} propiedades: €{basicDeviceTotal} pago único + €{basicMonthlyTotal}/mes
             </p>
           )}
         </div>
@@ -130,36 +129,35 @@ export function PricingCarousel({
     
     if (planKey === "pro") {
       if (isEnterprise) {
-        return <div className="text-2xl font-bold text-foreground">Contact sales</div>;
+        return <div className="text-2xl font-bold text-foreground">Contactar ventas</div>;
       }
       return (
         <div className="space-y-3">
           <div className="flex items-baseline gap-1">
-            <span className="text-3xl font-bold text-foreground">€29.90</span>
-            <span className="text-muted-foreground text-sm">/ month per property</span>
+            <span className="text-3xl font-bold text-foreground">€29,90</span>
+            <span className="text-muted-foreground text-sm">/ mes por propiedad</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            + €45 one-time per device (web-exclusive)
+            + €45 pago único por dispositivo (exclusivo web)
           </p>
           {properties > 1 && (
             <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
-              {properties} properties: €{basicDeviceTotal} one-time + €{proMonthlyTotal.toFixed(2).replace('.00', '')}/month
+              {properties} propiedades: €{basicDeviceTotal} pago único + €{proMonthlyTotal.toFixed(2).replace('.00', '')}/mes
             </p>
           )}
         </div>
       );
     }
     
-    // Enterprise
     return (
       <div className="space-y-2">
         <div className="flex items-baseline gap-1">
-          <span className="text-sm text-muted-foreground">From</span>
-          <span className="text-3xl font-bold text-foreground">€79.90</span>
-          <span className="text-muted-foreground text-sm">/ property</span>
+          <span className="text-sm text-muted-foreground">Desde</span>
+          <span className="text-3xl font-bold text-foreground">€79,90</span>
+          <span className="text-muted-foreground text-sm">/ propiedad</span>
         </div>
         <p className="text-sm text-muted-foreground">
-          Variable pricing by portfolio size
+          Precio variable según tamaño del portfolio
         </p>
       </div>
     );
@@ -171,7 +169,7 @@ export function PricingCarousel({
         <Button className="w-full" size="lg" variant="outline" asChild>
           <Link to="/contact?inquiry=enterprise">
             <MessageSquare className="w-4 h-4 mr-2" />
-            Talk to a specialist
+            Hablar con un especialista
           </Link>
         </Button>
       );
@@ -179,7 +177,7 @@ export function PricingCarousel({
     return (
       <Button className={`w-full ${planKey === "pro" ? "shadow-soft" : ""}`} size="lg" asChild>
         <Link to={`/checkout?plan=${planKey}&properties=${properties}`}>
-          Buy now
+          Comprar ahora
           <ArrowRight className="w-4 h-4 ml-2" />
         </Link>
       </Button>
@@ -188,7 +186,6 @@ export function PricingCarousel({
 
   return (
     <div className="lg:hidden">
-      {/* Carousel */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {plans.map((plan, index) => (
@@ -207,7 +204,7 @@ export function PricingCarousel({
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">
-                      Most popular
+                      Más popular
                     </span>
                   </div>
                 )}
@@ -237,7 +234,6 @@ export function PricingCarousel({
         </div>
       </div>
 
-      {/* Dot indicators */}
       <div className="flex justify-center gap-2 mt-6">
         {plans.map((plan, index) => (
           <button
@@ -250,14 +246,13 @@ export function PricingCarousel({
                 : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
               }
             `}
-            aria-label={`Go to ${plan.name} plan`}
+            aria-label={`Ir al plan ${plan.name}`}
           />
         ))}
       </div>
 
-      {/* Swipe hint */}
       <p className="text-center text-xs text-muted-foreground mt-3">
-        Swipe to compare plans
+        Desliza para comparar planes
       </p>
     </div>
   );
