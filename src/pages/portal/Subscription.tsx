@@ -66,7 +66,7 @@ const plans = [
     name: "Guest & Property Services",
     price: "Custom",
     period: "",
-    features: ["All Pro features", "Unlimited properties", "Dedicated account manager", "Custom integrations", "SLA guarantee"],
+    features: ["All Alarm Assistant features", "Unlimited properties", "Dedicated account manager", "Custom integrations", "SLA guarantee"],
     current: false,
     enterprise: true,
   },
