@@ -61,9 +61,42 @@ export function Header() {
               />
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation — Dispositivo ▾ · Cover™ · Servicios ▾ · Cómo funciona · Recursos ▾ */}
             <nav className="hidden lg:flex items-center gap-1">
-              {/* Cómo funciona - simple link */}
+              {/* Dispositivo (mega menu) */}
+              <button
+                onMouseEnter={() => handleMenuEnter("dispositivo")}
+                className={cn(
+                  "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors",
+                  activeMenu === "dispositivo" ? "text-primary" : "text-foreground hover:text-primary"
+                )}
+              >
+                Dispositivo
+                <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeMenu === "dispositivo" && "rotate-180")} />
+              </button>
+
+              {/* Cover™ */}
+              <Link
+                to="/cover"
+                className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                onMouseEnter={() => setActiveMenu(null)}
+              >
+                Cover<sup className="text-[9px] ml-0.5">™</sup>
+              </Link>
+
+              {/* Servicios (mega menu) */}
+              <button
+                onMouseEnter={() => handleMenuEnter("services")}
+                className={cn(
+                  "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors",
+                  activeMenu === "services" ? "text-primary" : "text-foreground hover:text-primary"
+                )}
+              >
+                Servicios
+                <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeMenu === "services" && "rotate-180")} />
+              </button>
+
+              {/* Cómo funciona */}
               <Link
                 to="/how-it-works"
                 className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
@@ -72,36 +105,17 @@ export function Header() {
                 Cómo funciona
               </Link>
 
-              {/* Mega menu items */}
-              {megaMenuItems.map((item) => (
-                <button
-                  key={item.menu}
-                  onMouseEnter={() => handleMenuEnter(item.menu)}
-                  className={cn(
-                    "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors",
-                    activeMenu === item.menu 
-                      ? "text-primary" 
-                      : "text-foreground hover:text-primary"
-                  )}
-                >
-                  {item.label}
-                  <ChevronDown 
-                    className={cn(
-                      "h-3.5 w-3.5 transition-transform",
-                      activeMenu === item.menu && "rotate-180"
-                    )} 
-                  />
-                </button>
-              ))}
-
-              {/* Cover™ - simple link */}
-              <Link
-                to="/cover"
-                className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-                onMouseEnter={() => setActiveMenu(null)}
+              {/* Recursos (mega menu) */}
+              <button
+                onMouseEnter={() => handleMenuEnter("resources")}
+                className={cn(
+                  "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors",
+                  activeMenu === "resources" ? "text-primary" : "text-foreground hover:text-primary"
+                )}
               >
-                Cover<sup className="text-[9px] ml-0.5">™</sup>
-              </Link>
+                Recursos
+                <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeMenu === "resources" && "rotate-180")} />
+              </button>
             </nav>
 
             {/* Desktop Right Side */}

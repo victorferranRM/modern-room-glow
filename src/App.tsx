@@ -47,6 +47,7 @@ import PropertyOwners from "./pages/solutions/PropertyOwners";
 
 // About Page
 import About from "./pages/About";
+import Cover from "./pages/Cover";
 
 // Portal Pages
 import { PortalLayout } from "./components/portal/PortalLayout";
@@ -112,6 +113,7 @@ const App = () => (
 
               {/* About Route */}
               <Route path="/about" element={<About />} />
+              <Route path="/cover" element={<Cover />} />
               
               {/* Customer Portal Routes - Protected */}
               <Route
