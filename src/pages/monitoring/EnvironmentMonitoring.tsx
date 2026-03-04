@@ -11,55 +11,52 @@ import { caseStudies } from "@/lib/case-studies-data";
 import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
-// Features specific to environment monitoring
 const environmentFeatures = [
   {
     icon: Thermometer,
-    title: "Temperature Tracking",
-    description: "Monitor indoor temperatures to ensure guest comfort and prevent pipe freezing."
+    title: "Control de temperatura",
+    description: "Monitoriza la temperatura interior para garantizar el confort del huésped y prevenir la congelación de tuberías."
   },
   {
     icon: Droplets,
-    title: "Humidity Detection",
-    description: "Track humidity levels to prevent mold, condensation, and moisture damage."
+    title: "Detección de humedad",
+    description: "Controla los niveles de humedad para prevenir moho, condensación y daños por humedad."
   },
   {
     icon: Wind,
-    title: "Air Quality Index",
-    description: "Monitor CO2 levels and overall air quality for healthy indoor environments."
+    title: "Índice de calidad del aire",
+    description: "Monitoriza niveles de CO2 y calidad del aire general para ambientes interiores saludables."
   },
   {
     icon: Gauge,
-    title: "Pressure Monitoring",
-    description: "Track atmospheric pressure changes that could affect HVAC systems."
+    title: "Monitorización de presión",
+    description: "Sigue los cambios de presión atmosférica que podrían afectar a los sistemas de climatización."
   },
 ];
 
-// How it works steps
 const howItWorks = [
   {
     step: "01",
-    title: "Set Comfort Ranges",
-    description: "Define ideal temperature and humidity ranges for your property type."
+    title: "Establece rangos de confort",
+    description: "Define rangos ideales de temperatura y humedad según el tipo de propiedad."
   },
   {
     step: "02",
-    title: "Continuous Monitoring",
-    description: "Sensors track environmental conditions 24/7 with minimal power consumption."
+    title: "Monitorización continua",
+    description: "Los sensores monitorizan las condiciones ambientales 24/7 con un consumo mínimo de energía."
   },
   {
     step: "03",
-    title: "Pattern Analysis",
-    description: "Our system learns your property's patterns to detect anomalies early."
+    title: "Análisis de patrones",
+    description: "Nuestro sistema aprende los patrones de tu propiedad para detectar anomalías de forma temprana."
   },
   {
     step: "04",
-    title: "Preventive Alerts",
-    description: "Get notified before conditions become problematic, preventing damage."
+    title: "Alertas preventivas",
+    description: "Recibe notificaciones antes de que las condiciones se conviertan en problemáticas, previniendo daños."
   },
 ];
 
-// Find a relevant case study
 const relatedCaseStudy = caseStudies.find(cs => cs.slug === "mun-stays");
 
 export default function EnvironmentMonitoring() {
@@ -67,27 +64,25 @@ export default function EnvironmentMonitoring() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
       <MonitoringHero
         icon={Thermometer}
-        badge="Environment Monitoring"
-        title="Perfect conditions,"
-        titleHighlight="protected property"
-        description="Monitor temperature, humidity, and air quality to ensure guest comfort and protect your property from environmental damage."
+        badge="Monitorización Ambiental"
+        title="Condiciones perfectas,"
+        titleHighlight="propiedad protegida"
+        description="Monitoriza temperatura, humedad y calidad del aire para garantizar el confort del huésped y proteger tu propiedad de daños ambientales."
         image={monitoringEnvironment}
-        imageAlt="Environment monitoring visualization"
-        breadcrumbLabel="Environment Monitoring"
+        imageAlt="Monitorización ambiental"
+        breadcrumbLabel="Monitorización Ambiental"
       />
 
-      {/* Key Stats */}
       <section className="py-12 bg-secondary/30 border-y">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "±0.5°C", label: "Temperature accuracy" },
-              { value: "±3%", label: "Humidity precision" },
-              { value: "5min", label: "Update interval" },
-              { value: "100%", label: "Cloud synced" },
+              { value: "±0,5°C", label: "Precisión de temperatura" },
+              { value: "±3%", label: "Precisión de humedad" },
+              { value: "5min", label: "Intervalo de actualización" },
+              { value: "100%", label: "Sincronizado en la nube" },
             ].map((stat, i) => (
               <AnimatedSection key={i} delay={i * 100} className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.value}</div>
@@ -98,19 +93,18 @@ export default function EnvironmentMonitoring() {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Key Features
+              Características principales
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Complete environmental awareness
+              Control ambiental completo
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From temperature to air quality, monitor everything that affects 
-              guest comfort and property health in one place.
+              Desde la temperatura hasta la calidad del aire, monitoriza todo lo que afecta 
+              al confort del huésped y la salud de la propiedad en un solo lugar.
             </p>
           </AnimatedSection>
 
@@ -130,15 +124,14 @@ export default function EnvironmentMonitoring() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-20 lg:py-28 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              How It Works
+              Cómo funciona
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Proactive property protection
+              Protección proactiva de la propiedad
             </h2>
           </AnimatedSection>
 
@@ -162,7 +155,6 @@ export default function EnvironmentMonitoring() {
         </div>
       </section>
 
-      {/* Manager Dashboard Preview */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -171,18 +163,18 @@ export default function EnvironmentMonitoring() {
                 Roomonitor Manager
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-                Environmental insights at a glance
+                Información ambiental de un vistazo
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                View real-time environmental data across all properties, set custom 
-                alerts, and track historical trends to optimize guest comfort.
+                Visualiza datos ambientales en tiempo real en todas tus propiedades, configura alertas 
+                personalizadas y analiza tendencias históricas para optimizar el confort del huésped.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Live temperature and humidity readings",
-                  "Custom alert thresholds by season",
-                  "Historical trend analysis",
-                  "HVAC optimization recommendations",
+                  "Lecturas de temperatura y humedad en tiempo real",
+                  "Umbrales de alerta personalizados por temporada",
+                  "Análisis de tendencias históricas",
+                  "Recomendaciones de optimización de climatización",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-primary shrink-0" />
@@ -192,7 +184,7 @@ export default function EnvironmentMonitoring() {
               </ul>
               <Button asChild>
                 <Link to="/how-it-works">
-                  Explore Manager
+                  Explorar Manager
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -203,7 +195,7 @@ export default function EnvironmentMonitoring() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
                 <img
                   src={managerDevices}
-                  alt="Roomonitor Manager Dashboard"
+                  alt="Panel de Roomonitor Manager"
                   className="relative w-full rounded-2xl shadow-2xl"
                 />
               </div>
@@ -212,16 +204,15 @@ export default function EnvironmentMonitoring() {
         </div>
       </section>
 
-      {/* Case Study */}
       {relatedCaseStudy && (
         <section className="py-20 lg:py-28 bg-secondary/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection className="text-center mb-12">
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Success Story
+                Caso de éxito
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                Environmental monitoring in action
+                Monitorización ambiental en acción
               </h2>
             </AnimatedSection>
 
@@ -261,26 +252,25 @@ export default function EnvironmentMonitoring() {
         </section>
       )}
 
-      {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Ready to protect your property?
+              ¿Listo para proteger tu propiedad?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Monitor environmental conditions 24/7 and prevent costly damage 
-              from temperature extremes, humidity, and poor air quality.
+              Monitoriza las condiciones ambientales 24/7 y prevén daños costosos 
+              por temperaturas extremas, humedad y mala calidad del aire.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
                 <Link to="/pricing">
-                  View Pricing
+                  Ver precios
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/contact">Request a Demo</Link>
+                <Link to="/contact">Solicitar una demo</Link>
               </Button>
             </div>
           </AnimatedSection>

@@ -12,55 +12,52 @@ import { caseStudies } from "@/lib/case-studies-data";
 import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
-// Features specific to occupancy detection
 const occupancyFeatures = [
   {
     icon: Eye,
-    title: "Guest Count Detection",
-    description: "Know how many people are in your property without cameras or intrusive monitoring."
+    title: "Detección de huéspedes",
+    description: "Conoce cuántas personas hay en tu propiedad sin cámaras ni monitorización intrusiva."
   },
   {
     icon: AlertTriangle,
-    title: "Overcrowding Alerts",
-    description: "Get notified immediately when guest count exceeds your booking limits."
+    title: "Alertas de sobreocupación",
+    description: "Recibe notificaciones inmediatas cuando el número de huéspedes supera los límites de tu reserva."
   },
   {
     icon: UserCheck,
-    title: "Booking Verification",
-    description: "Ensure the number of guests matches what was declared during booking."
+    title: "Verificación de reservas",
+    description: "Asegura que el número de huéspedes coincide con lo declarado durante la reserva."
   },
   {
     icon: TrendingUp,
-    title: "Occupancy Analytics",
-    description: "Track patterns and optimize your property management strategies."
+    title: "Analítica de ocupación",
+    description: "Sigue patrones y optimiza tus estrategias de gestión de propiedades."
   },
 ];
 
-// How it works steps
 const howItWorks = [
   {
     step: "01",
-    title: "Set Guest Limits",
-    description: "Define maximum occupancy based on your property's capacity and local regulations."
+    title: "Establece límites de huéspedes",
+    description: "Define la ocupación máxima según la capacidad de tu propiedad y la normativa local."
   },
   {
     step: "02",
-    title: "Presence Detection",
-    description: "Advanced sensors detect human presence without capturing images or audio."
+    title: "Detección de presencia",
+    description: "Sensores avanzados detectan presencia humana sin capturar imágenes ni audio."
   },
   {
     step: "03",
-    title: "Smart Analysis",
-    description: "Our system analyzes patterns to estimate the number of guests present."
+    title: "Análisis inteligente",
+    description: "Nuestro sistema analiza patrones para estimar el número de huéspedes presentes."
   },
   {
     step: "04",
-    title: "Proactive Alerts",
-    description: "Receive notifications when occupancy exceeds thresholds, enabling quick action."
+    title: "Alertas proactivas",
+    description: "Recibe notificaciones cuando la ocupación supera los umbrales, permitiendo una acción rápida."
   },
 ];
 
-// Find a relevant case study
 const relatedCaseStudy = caseStudies.find(cs => cs.slug === "you-stylish-apartments");
 
 export default function OccupancyDetection() {
@@ -68,27 +65,25 @@ export default function OccupancyDetection() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
       <MonitoringHero
         icon={Users}
-        badge="Occupancy Detection"
-        title="Know who's in your"
-        titleHighlight="property at all times"
-        description="Detect unauthorized parties, verify guest counts, and prevent overcrowding — all while respecting guest privacy completely."
+        badge="Detección de Ocupación"
+        title="Conoce quién está en tu"
+        titleHighlight="propiedad en todo momento"
+        description="Detecta fiestas no autorizadas, verifica el número de huéspedes y previene la sobreocupación — respetando completamente la privacidad."
         image={monitoringOccupancy}
-        imageAlt="Occupancy detection visualization"
-        breadcrumbLabel="Occupancy Detection"
+        imageAlt="Detección de ocupación"
+        breadcrumbLabel="Detección de Ocupación"
       />
 
-      {/* Key Stats */}
       <section className="py-12 bg-secondary/30 border-y">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "99%", label: "Detection accuracy" },
-              { value: "0", label: "Cameras required" },
-              { value: "Real-time", label: "Guest count updates" },
-              { value: "100%", label: "Privacy protected" },
+              { value: "99%", label: "Precisión de detección" },
+              { value: "0", label: "Cámaras necesarias" },
+              { value: "Tiempo real", label: "Actualización de huéspedes" },
+              { value: "100%", label: "Privacidad protegida" },
             ].map((stat, i) => (
               <AnimatedSection key={i} delay={i * 100} className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.value}</div>
@@ -99,19 +94,18 @@ export default function OccupancyDetection() {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Key Features
+              Características principales
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Guest verification without intrusion
+              Verificación de huéspedes sin intrusión
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our occupancy detection uses advanced sensing technology to estimate 
-              guest presence without cameras or audio recording.
+              Nuestra detección de ocupación utiliza tecnología avanzada de sensores para estimar 
+              la presencia de huéspedes sin cámaras ni grabación de audio.
             </p>
           </AnimatedSection>
 
@@ -131,15 +125,14 @@ export default function OccupancyDetection() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-20 lg:py-28 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              How It Works
+              Cómo funciona
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Smart detection, simple management
+              Detección inteligente, gestión sencilla
             </h2>
           </AnimatedSection>
 
@@ -163,7 +156,6 @@ export default function OccupancyDetection() {
         </div>
       </section>
 
-      {/* Manager Dashboard Preview */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -172,18 +164,18 @@ export default function OccupancyDetection() {
                 Roomonitor Manager
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-                Track occupancy across all properties
+                Controla la ocupación en todas tus propiedades
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Monitor guest presence, set custom limits per property, and receive 
-                instant alerts when something looks off.
+                Monitoriza la presencia de huéspedes, establece límites personalizados por propiedad y recibe 
+                alertas instantáneas cuando algo no cuadra.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Real-time occupancy status per unit",
-                  "Custom guest limits by property type",
-                  "Historical occupancy patterns",
-                  "Integration with booking platforms",
+                  "Estado de ocupación en tiempo real por unidad",
+                  "Límites de huéspedes personalizados por tipo de propiedad",
+                  "Patrones históricos de ocupación",
+                  "Integración con plataformas de reservas",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-primary shrink-0" />
@@ -193,7 +185,7 @@ export default function OccupancyDetection() {
               </ul>
               <Button asChild>
                 <Link to="/how-it-works">
-                  Explore Manager
+                  Explorar Manager
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -204,7 +196,7 @@ export default function OccupancyDetection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
                 <img
                   src={managerDevices}
-                  alt="Roomonitor Manager Dashboard"
+                  alt="Panel de Roomonitor Manager"
                   className="relative w-full rounded-2xl shadow-2xl"
                 />
               </div>
@@ -213,16 +205,15 @@ export default function OccupancyDetection() {
         </div>
       </section>
 
-      {/* Case Study */}
       {relatedCaseStudy && (
         <section className="py-20 lg:py-28 bg-secondary/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection className="text-center mb-12">
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Success Story
+                Caso de éxito
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                See occupancy detection in action
+                Detección de ocupación en acción
               </h2>
             </AnimatedSection>
 
@@ -262,26 +253,25 @@ export default function OccupancyDetection() {
         </section>
       )}
 
-      {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Ready to prevent unauthorized parties?
+              ¿Listo para prevenir fiestas no autorizadas?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Protect your property from overcrowding and verify guest counts 
-              automatically with Roomonitor's smart occupancy detection.
+              Protege tu propiedad de la sobreocupación y verifica automáticamente el número de huéspedes 
+              con la detección inteligente de ocupación de Roomonitor.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
                 <Link to="/pricing">
-                  View Pricing
+                  Ver precios
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/contact">Request a Demo</Link>
+                <Link to="/contact">Solicitar una demo</Link>
               </Button>
             </div>
           </AnimatedSection>
