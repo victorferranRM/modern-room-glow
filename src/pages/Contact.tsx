@@ -305,7 +305,7 @@ export default function Contact() {
                           name="phone"
                           render={({ field }) =>
                           <FormItem>
-                              <FormLabel className="text-sm">Teléfono</FormLabel>
+                              <FormLabel className="text-sm">Teléfono *</FormLabel>
                               <FormControl>
                                 <PhoneInput
                                 value={field.value}
