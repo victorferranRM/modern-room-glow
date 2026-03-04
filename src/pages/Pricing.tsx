@@ -232,7 +232,7 @@ export default function Pricing() {
 
                   <ul className="space-y-3">
                     {[
-                      { icon: Check, text: "Todo lo de Basic" },
+                      { icon: Check, text: "Todo lo de Noise Alarm" },
                       { icon: PhoneCall, text: "Alarm Assistant" },
                       { icon: Headphones, text: "Agentes humanos monitorizando alarmas" },
                       { icon: Clock, text: "Gestión de alarmas 24/7" },
