@@ -115,12 +115,12 @@ export default function Monitoring() {
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
                   <Link to="/pricing">
-                    Ver precios
+                    Ver planes y precios
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact">Solicitar una demo</Link>
+                  <Link to="/how-it-works">Cómo funciona</Link>
                 </Button>
               </div>
             </AnimatedSection>
