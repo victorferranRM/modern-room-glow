@@ -70,8 +70,8 @@ export function PricingCarousel({
     },
     {
       key: "pro",
-      name: "Pro",
-      subtitle: "Todo lo de Basic + Alarm Assistant",
+      name: "Alarm Assistant",
+      subtitle: "Todo lo de Noise Alarm + monitorización 24/7",
       features: [
         { icon: Check, text: "Todo lo de Basic" },
         { icon: PhoneCall, text: "Alarm Assistant" },
