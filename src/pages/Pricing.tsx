@@ -321,19 +321,17 @@ export default function Pricing() {
         {/* Services Explainer */}
         <section className="bg-secondary/50 py-16 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               <AnimatedSection className="text-center mb-10 sm:mb-12">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
                   ¿Qué incluyen los Servicios?
                 </h2>
                 <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                  Esta es la cobertura operativa que puedes activar cuando trabajas con un especialista de Roomonitor. 
-                  Los servicios no se incluyen automáticamente — se activan después de la compra, con precios 
-                  basados en tu número de propiedades y necesidades operativas.
+                  Los servicios se activan tras la compra con un especialista. El precio depende de tu portfolio y necesidades operativas.
                 </p>
               </AnimatedSection>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 {[
                   {
                     icon: Headphones,
@@ -341,9 +339,9 @@ export default function Pricing() {
                     description: "Operadores humanos monitorizando tus propiedades las 24 horas",
                   },
                   {
-                    icon: Shield,
-                    title: "Guest Assist™",
-                    description: "Comunicación profesional con huéspedes y gestión de incidencias en tu nombre",
+                    icon: PhoneCall,
+                    title: "Atención telefónica",
+                    description: "Comunicación profesional con huéspedes y gestión de incidencias",
                   },
                   {
                     icon: Users,
@@ -357,10 +355,8 @@ export default function Pricing() {
                   },
                 ].map((service, i) => (
                   <AnimatedSection key={service.title} delay={i * 100}>
-                    <div 
-                      className="bg-card border rounded-xl p-5 text-center hover:shadow-soft hover:-translate-y-1 transition-all duration-300 h-full"
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <div className="bg-card border rounded-xl p-5 text-center hover:shadow-soft hover:-translate-y-1 transition-all duration-300 h-full">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <service.icon className="w-6 h-6 text-primary" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
@@ -371,142 +367,43 @@ export default function Pricing() {
               </div>
 
               <AnimatedSection delay={200}>
-                <div className="mt-12 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 lg:p-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-8">
-                      <div className="flex-shrink-0 w-full lg:w-[280px]">
-                        <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                          <img 
-                            src={serviceControlCenter} 
-                            alt="Centro de Control Roomonitor — Tecnología y Personas" 
-                            className="w-full h-48 lg:h-56 object-cover"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                  <div className="flex flex-col lg:flex-row">
+                    <div className="lg:w-2/5 relative">
+                      <img 
+                        src={serviceControlCenter} 
+                        alt="Centro de Control Roomonitor" 
+                        className="w-full h-56 lg:h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/30 to-transparent" />
+                    </div>
+                    <div className="lg:w-3/5 p-6 lg:p-10 flex flex-col justify-center">
+                      <div className="inline-flex items-center gap-2 mb-3">
+                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Zap className="w-4 h-4 text-primary" />
                         </div>
+                        <span className="text-xs font-medium uppercase tracking-wider text-primary">Nuestro enfoque</span>
                       </div>
-
-                      <div className="flex-1 text-center lg:text-left">
-                        <div className="inline-flex items-center gap-3 mb-4">
-                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                            <Zap className="w-5 h-5 text-primary" />
-                          </div>
-                          <span className="text-xs font-medium uppercase tracking-wider text-primary">Nuestro enfoque</span>
-                        </div>
-                        <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
-                          Roomonitor = <span className="gradient-text">Tecnología + Personas</span>
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Combinamos dispositivos de monitorización inteligentes con operadores humanos reales que actúan en tu nombre. 
-                          No son solo alertas — es resolución.
-                        </p>
-                      </div>
-                      
-                      <div className="flex-shrink-0 w-full lg:w-auto">
-                        <div className="bg-card border rounded-xl p-6 text-center shadow-soft">
-                          <p className="text-sm text-muted-foreground mb-4">
-                            Precio de servicios según tamaño del portfolio
-                          </p>
-                          <Button size="lg" className="w-full lg:w-auto" asChild>
-                            <Link to="/contact?inquiry=services">
-                              Hablar con un especialista
-                              <ArrowRight className="w-4 h-4 ml-2" />
-                            </Link>
-                          </Button>
-                        </div>
+                      <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
+                        Roomonitor = <span className="gradient-text">Tecnología + Personas</span>
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                        Combinamos dispositivos de monitorización inteligentes con operadores humanos reales que actúan en tu nombre. 
+                        No son solo alertas — es resolución.
+                      </p>
+                      <div>
+                        <Button size="lg" asChild>
+                          <Link to="/contact?inquiry=services">
+                            Hablar con un especialista
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Link>
+                        </Button>
                       </div>
                     </div>
                   </div>
                 </div>
               </AnimatedSection>
             </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="max-w-3xl mx-auto">
-            <AnimatedSection>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-10 sm:mb-12 text-balance">
-                Preguntas frecuentes
-              </h2>
-            </AnimatedSection>
-
-            <div className="space-y-6">
-              {[
-                {
-                  question: "¿Qué incluye el dispositivo?",
-                  answer: "Cada dispositivo Roomonitor monitoriza niveles de ruido, ocupación, humo, temperatura, humedad y calidad del aire en tiempo real. El precio único incluye el hardware y el envío.",
-                },
-                {
-                  question: "¿Puedo empezar con Basic y actualizar después?",
-                  answer: "Por supuesto. Puedes actualizar de Basic a Pro en cualquier momento. Tus dispositivos y datos se migrarán sin problemas al nivel de servicio mejorado con Alarm Assistant.",
-                },
-                {
-                  question: "¿Qué es el Alarm Assistant?",
-                  answer: "El Alarm Assistant es nuestro equipo de agentes humanos que monitorizan y gestionan alarmas en tu nombre 24/7. Cuando se activa una alerta, nuestro equipo actúa para que tú no tengas que hacerlo.",
-                },
-                {
-                  question: "¿Qué pasa si tengo más de 10 propiedades?",
-                  answer: "Para portfolios de más de 10 propiedades, ofrecemos precios enterprise personalizados con descuentos por volumen y servicios operativos completos incluyendo gestión de huéspedes y propiedades. Contacta con nuestro equipo de ventas.",
-                },
-                {
-                  question: "¿Cómo se cobran los servicios?",
-                  answer: "Los servicios (como Guest Assist™ y Field Service) se activan después de la compra y su precio se basa en el tamaño de tu portfolio y tus necesidades operativas específicas. Habla con un especialista para un presupuesto personalizado.",
-                },
-                {
-                  question: "¿Hay contrato o compromiso de permanencia?",
-                  answer: "Nuestras suscripciones se facturan mensualmente sin compromiso de permanencia. Los clientes Enterprise pueden optar por facturación anual con descuentos adicionales.",
-                },
-              ].map((faq, index) => (
-                <AnimatedSection key={index} delay={index * 50}>
-                  <div 
-                    className="bg-card border rounded-xl p-6 hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    <h3 className="font-semibold text-foreground mb-2">{faq.question}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="bg-primary py-16 lg:py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground text-balance">
-                ¿Listo para tomar el control de tu operativa?
-              </h2>
-              <p className="text-primary-foreground/90 text-base sm:text-lg">
-                Empieza con una demo para ver cómo Roomonitor combina tecnología y personas para gestionar tus propiedades.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button 
-                  size="lg" 
-                  variant="secondary" 
-                  className="text-base px-8"
-                  asChild
-                >
-                  <Link to="/demo">
-                    Reservar una demo
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                  asChild
-                >
-                  <Link to="/contact">
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    Contactar ventas
-                  </Link>
-                </Button>
-              </div>
-            </AnimatedSection>
           </div>
         </section>
       </main>
