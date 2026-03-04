@@ -15,7 +15,7 @@ import {
 
 const PLANS = {
   basic: {
-    name: "Basic",
+    name: "Noise Alarm",
     description: "Dispositivo + suscripción de monitorización",
     devicePrice: 45,
     originalDevicePrice: 90,
