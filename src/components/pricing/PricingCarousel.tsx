@@ -73,7 +73,7 @@ export function PricingCarousel({
       name: "Alarm Assistant",
       subtitle: "Todo lo de Noise Alarm + monitorización 24/7",
       features: [
-        { icon: Check, text: "Todo lo de Basic" },
+        { icon: Check, text: "Todo lo de Noise Alarm" },
         { icon: PhoneCall, text: "Alarm Assistant" },
         { icon: Headphones, text: "Agentes humanos monitorizando alarmas" },
         { icon: Clock, text: "Gestión de alarmas 24/7" },
