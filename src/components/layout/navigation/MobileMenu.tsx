@@ -94,7 +94,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           </button>
           <AnimatedCollapsible isOpen={expandedSection === "resources"}>
             <div className="pt-4 pb-4 space-y-5">
-              {[resourcesData.learn, resourcesData.ecosystem, resourcesData.company].map((section) => (
+              {[resourcesData.learn, resourcesData.company].map((section) => (
                 <div key={section.title}>
                   <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-2 px-2">{section.title}</h4>
                   {section.items.map((item) => (
