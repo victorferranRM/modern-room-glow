@@ -82,7 +82,7 @@ export function PricingCarousel({
     },
     {
       key: "enterprise",
-      name: "Enterprise",
+      name: "Guest & Property Services",
       subtitle: "Gestión operativa completa",
       features: [
         { icon: Check, text: "Todo lo de Pro" },
