@@ -153,7 +153,7 @@ export default function Contact() {
         company: data.company,
         country: data.country,
         city: data.city || null,
-        province: data.province || null,
+        province: data.province,
         property_size: data.propertySize || null,
         inquiry_type: data.inquiryType,
         message: data.message || null
