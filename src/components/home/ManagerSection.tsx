@@ -31,32 +31,32 @@ const managerTabs: ManagerTab[] = [
   {
     id: "monitoring",
     icon: Activity,
-    title: "Real-time monitoring",
-    description: "Monitor the status of your properties and on-site signals in real time, with clear visibility across your portfolio.",
+    title: "Monitorización en tiempo real",
+    description: "Monitoriza el estado de tus propiedades y señales in situ en tiempo real, con visibilidad clara en todo tu portfolio.",
   },
   {
     id: "protocols",
     icon: GitBranch,
-    title: "Operational protocols",
-    description: "Define how incidents are handled, who acts and when — ensuring consistent decision-making across your operations.",
+    title: "Protocolos operativos",
+    description: "Define cómo se gestionan las incidencias, quién actúa y cuándo — asegurando decisiones consistentes en todas tus operaciones.",
   },
   {
     id: "hierarchy",
     icon: Building2,
-    title: "Asset hierarchy",
-    description: "Organize your assets by buildings, units or portfolios, and manage operations at scale with clear structure.",
+    title: "Jerarquía de activos",
+    description: "Organiza tus activos por edificios, unidades o portfolios, y gestiona operaciones a escala con una estructura clara.",
   },
   {
     id: "history",
     icon: Clock,
-    title: "Incident history",
-    description: "Access a complete record of alerts and incidents to understand patterns, performance and recurring issues.",
+    title: "Historial de incidencias",
+    description: "Accede a un registro completo de alertas e incidencias para entender patrones, rendimiento y problemas recurrentes.",
   },
   {
     id: "tasks",
     icon: CalendarCheck,
-    title: "Tasks & scheduling",
-    description: "Create and track operational tasks linked to incidents, check-ins or field interventions.",
+    title: "Tareas y planificación",
+    description: "Crea y haz seguimiento de tareas operativas vinculadas a incidencias, check-ins o intervenciones de campo.",
   },
 ];
 
@@ -67,8 +67,8 @@ function MonitoringMockup() {
       {/* Status cards grid */}
       <div className="grid grid-cols-3 gap-2">
         {[
-          { label: "Active", value: "247", status: "good" },
-          { label: "Alerts", value: "3", status: "alert" },
+          { label: "Activos", value: "247", status: "good" },
+          { label: "Alertas", value: "3", status: "alert" },
           { label: "Offline", value: "2", status: "neutral" },
         ].map((item, i) => (
           <div 
@@ -95,8 +95,8 @@ function MonitoringMockup() {
       {/* Property list */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 overflow-hidden">
         <div className="px-3 py-2 border-b border-slate-600/50 flex items-center justify-between">
-          <span className="text-xs text-slate-400">Portfolio overview</span>
-          <span className="text-[10px] text-primary">Live</span>
+          <span className="text-xs text-slate-400">Vista del portfolio</span>
+          <span className="text-[10px] text-primary">En vivo</span>
         </div>
         {[
           { name: "Marina Bay Residence", status: "good", value: "42 dB" },
@@ -135,13 +135,13 @@ function ProtocolsMockup() {
     <div className="space-y-3">
       {/* Protocol flow */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-4">
-        <div className="text-xs text-slate-400 mb-3">Noise incident protocol</div>
+        <div className="text-xs text-slate-400 mb-3">Protocolo de incidencia de ruido</div>
         <div className="space-y-2">
           {[
-            { step: "1", label: "Alert detected", status: "complete" },
-            { step: "2", label: "Notify property manager", status: "complete" },
-            { step: "3", label: "Wait 15 minutes", status: "active" },
-            { step: "4", label: "Escalate to field team", status: "pending" },
+            { step: "1", label: "Alerta detectada", status: "complete" },
+            { step: "2", label: "Notificar al gestor", status: "complete" },
+            { step: "3", label: "Esperar 15 minutos", status: "active" },
+            { step: "4", label: "Escalar al equipo de campo", status: "pending" },
           ].map((item, i) => (
             <div 
               key={i}
@@ -161,7 +161,7 @@ function ProtocolsMockup() {
                 item.status === "active" ? "text-white font-medium" : "text-slate-300"
               )}>{item.label}</span>
               {item.status === "active" && (
-                <span className="ml-auto text-xs text-primary">In progress</span>
+                <span className="ml-auto text-xs text-primary">En curso</span>
               )}
             </div>
           ))}
@@ -171,14 +171,14 @@ function ProtocolsMockup() {
       {/* Escalation rules */}
       <div className="grid grid-cols-2 gap-2">
         <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-300">
-          <div className="text-xs text-slate-400 mb-2">Escalation rules</div>
+          <div className="text-xs text-slate-400 mb-2">Reglas de escalado</div>
           <div className="text-2xl font-bold text-white">12</div>
-          <div className="text-xs text-emerald-400 mt-1">Active</div>
+          <div className="text-xs text-emerald-400 mt-1">Activas</div>
         </div>
         <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-400">
-          <div className="text-xs text-slate-400 mb-2">Response time</div>
-          <div className="text-2xl font-bold text-white">4.2m</div>
-          <div className="text-xs text-slate-400 mt-1">Average</div>
+          <div className="text-xs text-slate-400 mb-2">Tiempo respuesta</div>
+          <div className="text-2xl font-bold text-white">4,2m</div>
+          <div className="text-xs text-slate-400 mt-1">Media</div>
         </div>
       </div>
     </div>
@@ -188,21 +188,21 @@ function ProtocolsMockup() {
 function HierarchyMockup() {
   return (
     <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-4 space-y-2">
-      <div className="text-xs text-slate-400 mb-3">Portfolio structure</div>
+      <div className="text-xs text-slate-400 mb-3">Estructura del portfolio</div>
       
       {/* Tree structure */}
       <div className="space-y-1">
         <div className="flex items-center gap-2 p-2 bg-primary/20 rounded-lg border border-primary/30 animate-in fade-in duration-300">
           <Building2 className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-white">Barcelona Portfolio</span>
-          <span className="ml-auto text-xs text-slate-400">124 units</span>
+          <span className="text-sm font-medium text-white">Portfolio Barcelona</span>
+          <span className="ml-auto text-xs text-slate-400">124 unidades</span>
         </div>
         
         <div className="pl-4 space-y-1">
           {[
-            { name: "Eixample District", units: 45 },
-            { name: "Gothic Quarter", units: 38 },
-            { name: "Barceloneta Beach", units: 41 },
+            { name: "Distrito Eixample", units: 45 },
+            { name: "Barrio Gótico", units: 38 },
+            { name: "Barceloneta", units: 41 },
           ].map((building, i) => (
             <div 
               key={i}
@@ -218,14 +218,14 @@ function HierarchyMockup() {
         
         <div className="flex items-center gap-2 p-2 hover:bg-slate-600/30 rounded-lg transition-colors animate-in fade-in duration-300 delay-500">
           <Building2 className="w-4 h-4 text-slate-500" />
-          <span className="text-sm text-slate-300">Madrid Portfolio</span>
-          <span className="ml-auto text-xs text-slate-500">87 units</span>
+          <span className="text-sm text-slate-300">Portfolio Madrid</span>
+          <span className="ml-auto text-xs text-slate-500">87 unidades</span>
         </div>
         
         <div className="flex items-center gap-2 p-2 hover:bg-slate-600/30 rounded-lg transition-colors animate-in fade-in duration-300 delay-600">
           <Building2 className="w-4 h-4 text-slate-500" />
-          <span className="text-sm text-slate-300">Valencia Collection</span>
-          <span className="ml-auto text-xs text-slate-500">36 units</span>
+          <span className="text-sm text-slate-300">Colección Valencia</span>
+          <span className="ml-auto text-xs text-slate-500">36 unidades</span>
         </div>
       </div>
     </div>
@@ -238,7 +238,7 @@ function HistoryMockup() {
       {/* Timeline header */}
       <div className="flex items-center justify-between">
         <div className="flex gap-2">
-          {["All", "Noise", "Occupancy", "Smoking"].map((filter, i) => (
+          {["Todos", "Ruido", "Ocupación", "Humo"].map((filter, i) => (
             <button 
               key={i}
               className={cn(
@@ -250,16 +250,16 @@ function HistoryMockup() {
             </button>
           ))}
         </div>
-        <span className="text-xs text-slate-400">Last 7 days</span>
+        <span className="text-xs text-slate-400">Últimos 7 días</span>
       </div>
       
       {/* Timeline */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 overflow-hidden">
         {[
-          { time: "2h ago", type: "noise", property: "Downtown Loft #12", status: "resolved" },
-          { time: "5h ago", type: "occupancy", property: "Marina Bay Residence", status: "resolved" },
-          { time: "1d ago", type: "noise", property: "Beach House Villa", status: "resolved" },
-          { time: "2d ago", type: "smoking", property: "Central Park Suite", status: "resolved" },
+          { time: "hace 2h", type: "ruido", property: "Downtown Loft #12", status: "resuelto" },
+          { time: "hace 5h", type: "ocupación", property: "Marina Bay Residence", status: "resuelto" },
+          { time: "hace 1d", type: "ruido", property: "Beach House Villa", status: "resuelto" },
+          { time: "hace 2d", type: "humo", property: "Central Park Suite", status: "resuelto" },
         ].map((incident, i) => (
           <div 
             key={i}
@@ -272,9 +272,9 @@ function HistoryMockup() {
             <div className="relative">
               <AlertCircle className={cn(
                 "w-4 h-4",
-                incident.type === "noise" && "text-amber-400",
-                incident.type === "occupancy" && "text-blue-400",
-                incident.type === "smoking" && "text-red-400"
+                incident.type === "ruido" && "text-amber-400",
+                incident.type === "ocupación" && "text-blue-400",
+                incident.type === "humo" && "text-red-400"
               )} />
               {i < 3 && (
                 <div className="absolute top-5 left-1/2 w-px h-6 bg-slate-600/50 -translate-x-1/2" />
@@ -282,10 +282,10 @@ function HistoryMockup() {
             </div>
             <div className="flex-1 min-w-0">
               <div className="text-sm text-slate-200 truncate">{incident.property}</div>
-              <div className="text-xs text-slate-500 capitalize">{incident.type} alert</div>
+              <div className="text-xs text-slate-500 capitalize">Alerta de {incident.type}</div>
             </div>
             <div className="text-right">
-              <div className="text-xs text-emerald-400">Resolved</div>
+              <div className="text-xs text-emerald-400">Resuelto</div>
               <div className="text-[10px] text-slate-500">{incident.time}</div>
             </div>
           </div>
@@ -302,7 +302,7 @@ function TasksMockup() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Calendar className="w-4 h-4 text-slate-400" />
-          <span className="text-sm font-medium text-white">January 2026</span>
+          <span className="text-sm font-medium text-white">Enero 2026</span>
         </div>
         <div className="flex gap-1">
           <button className="w-6 h-6 rounded bg-slate-600/50 flex items-center justify-center hover:bg-slate-600 transition-colors">
@@ -317,7 +317,7 @@ function TasksMockup() {
       {/* Mini calendar */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3">
         <div className="grid grid-cols-7 gap-1 text-center mb-2">
-          {["M", "T", "W", "T", "F", "S", "S"].map((day, i) => (
+          {["L", "M", "X", "J", "V", "S", "D"].map((day, i) => (
             <div key={i} className="text-[10px] text-slate-500">{day}</div>
           ))}
         </div>
@@ -342,8 +342,8 @@ function TasksMockup() {
       {/* Task list */}
       <div className="space-y-2">
         {[
-          { title: "Device inspection", property: "Marina Bay", assignee: "Field Team A", time: "10:00" },
-          { title: "Guest check-in", property: "Beach House", assignee: "Operations", time: "15:00" },
+          { title: "Inspección de dispositivo", property: "Marina Bay", assignee: "Equipo Campo A", time: "10:00" },
+          { title: "Check-in huéspedes", property: "Beach House", assignee: "Operaciones", time: "15:00" },
         ].map((task, i) => (
           <div 
             key={i}
@@ -401,13 +401,13 @@ export function ManagerSection() {
               {/* Left: Text */}
               <div className="text-center lg:text-left">
                 <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                  The control layer
+                  La capa de control
                 </p>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">
-                  Meet Manager — your operational control center
+                  Conoce Manager — tu centro de control operativo
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Manager gives you real-time visibility, structured control and the tools needed to run both monitoring and operations from a single place.
+                  Manager te da visibilidad en tiempo real, control estructurado y las herramientas necesarias para gestionar monitorización y operaciones desde un solo lugar.
                 </p>
               </div>
               
@@ -415,7 +415,7 @@ export function ManagerSection() {
               <div className="flex justify-center lg:justify-end">
                 <img 
                   src={managerDevices} 
-                  alt="Manager platform on laptop and mobile" 
+                  alt="Plataforma Manager en portátil y móvil" 
                   className="max-w-full h-auto max-h-[400px] object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
                 />
               </div>
@@ -472,37 +472,37 @@ export function ManagerSection() {
                 <div className="flex flex-wrap gap-2 mb-8">
                   {activeTab === "monitoring" && (
                     <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Live status</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Device states</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Portfolio view</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Estado en vivo</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Estado dispositivos</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Vista portfolio</span>
                     </>
                   )}
                   {activeTab === "protocols" && (
                     <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Decision rules</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Escalation logic</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Automation</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Reglas de decisión</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Lógica de escalado</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Automatización</span>
                     </>
                   )}
                   {activeTab === "hierarchy" && (
                     <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Portfolio grouping</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Multi-asset control</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Scalable structure</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Agrupación portfolio</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Control multi-activo</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Estructura escalable</span>
                     </>
                   )}
                   {activeTab === "history" && (
                     <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Timeline view</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Incident logs</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Pattern analysis</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Vista cronológica</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Registro incidencias</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Análisis de patrones</span>
                     </>
                   )}
                   {activeTab === "tasks" && (
                     <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Calendar view</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Task cards</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Assignments</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Vista calendario</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Tarjetas de tareas</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Asignaciones</span>
                     </>
                   )}
                 </div>
@@ -513,15 +513,15 @@ export function ManagerSection() {
                     <>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Real-time property status across your portfolio</span>
+                        <span className="text-sm">Estado en tiempo real de propiedades en todo tu portfolio</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Instant alerts when thresholds are exceeded</span>
+                        <span className="text-sm">Alertas instantáneas cuando se superan los umbrales</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Device health monitoring and connectivity</span>
+                        <span className="text-sm">Monitorización del estado de dispositivos y conectividad</span>
                       </div>
                     </>
                   )}
@@ -529,15 +529,15 @@ export function ManagerSection() {
                     <>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Define response workflows for each incident type</span>
+                        <span className="text-sm">Define flujos de respuesta para cada tipo de incidencia</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Set escalation timers and notification rules</span>
+                        <span className="text-sm">Configura temporizadores de escalado y reglas de notificación</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Consistent handling across your entire team</span>
+                        <span className="text-sm">Gestión consistente en todo tu equipo</span>
                       </div>
                     </>
                   )}
@@ -545,15 +545,15 @@ export function ManagerSection() {
                     <>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Group properties by building, region or portfolio</span>
+                        <span className="text-sm">Agrupa propiedades por edificio, región o portfolio</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Apply settings and rules at any level</span>
+                        <span className="text-sm">Aplica configuraciones y reglas a cualquier nivel</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Scale operations without losing control</span>
+                        <span className="text-sm">Escala operaciones sin perder el control</span>
                       </div>
                     </>
                   )}
@@ -561,15 +561,15 @@ export function ManagerSection() {
                     <>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Complete audit trail for every incident</span>
+                        <span className="text-sm">Registro de auditoría completo para cada incidencia</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Filter by type, property or time period</span>
+                        <span className="text-sm">Filtra por tipo, propiedad o periodo de tiempo</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Identify recurring issues and patterns</span>
+                        <span className="text-sm">Identifica problemas recurrentes y patrones</span>
                       </div>
                     </>
                   )}
@@ -577,15 +577,15 @@ export function ManagerSection() {
                     <>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Create tasks from incidents automatically</span>
+                        <span className="text-sm">Crea tareas automáticamente desde incidencias</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Assign to team members with deadlines</span>
+                        <span className="text-sm">Asigna a miembros del equipo con plazos</span>
                       </div>
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Track field interventions and check-ins</span>
+                        <span className="text-sm">Haz seguimiento de intervenciones de campo y check-ins</span>
                       </div>
                     </>
                   )}
@@ -608,11 +608,11 @@ export function ManagerSection() {
           <AnimatedSection delay={600} className="mt-12 lg:mt-16">
             <div className="text-center space-y-6">
               <p className="text-muted-foreground text-sm lg:text-base max-w-2xl mx-auto">
-                Manager connects monitoring with our Control Center and Field Service teams, enabling faster, structured and consistent operations.
+                Manager conecta la monitorización con nuestro Centro de Control y equipos de Field Service, permitiendo operaciones más rápidas, estructuradas y consistentes.
               </p>
               <Button size="lg" className="gap-2 group" asChild>
                 <Link to="/contact">
-                  Request a Demo
+                  Solicitar una Demo
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

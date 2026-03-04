@@ -8,7 +8,6 @@ interface Partner {
   category: string;
 }
 
-// Partner logos as text-based representations (would be replaced with actual logos)
 const partners: Partner[] = [
   { name: "Guesty", category: "PMS" },
   { name: "Hostaway", category: "PMS" },
@@ -41,7 +40,6 @@ function MarqueeRow({ partners, direction = "left", speed = 30 }: { partners: Pa
   
   return (
     <div className="relative overflow-hidden">
-      {/* Gradient masks */}
       <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
       <div 
@@ -66,20 +64,18 @@ export function IntegrationsSection() {
     <section className="py-20 lg:py-28 bg-slate-900 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
           <AnimatedSection className="text-center mb-12 lg:mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Integrations
+              Integraciones
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
-              Connects with the tools you already use
+              Se conecta con las herramientas que ya usas
             </h2>
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
-              Synchronize reservations automatically. Roomonitor integrates seamlessly with leading PMS and channel managers.
+              Sincroniza reservas automáticamente. Roomonitor se integra a la perfección con los principales PMS y channel managers.
             </p>
           </AnimatedSection>
 
-          {/* Animated Logo Rows */}
           <AnimatedSection delay={200} className="mb-12 lg:mb-16">
             <div className="space-y-4">
               <MarqueeRow partners={firstRow} direction="left" speed={35} />
@@ -87,10 +83,8 @@ export function IntegrationsSection() {
             </div>
           </AnimatedSection>
 
-          {/* Two CTA Cards */}
           <AnimatedSection delay={400}>
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {/* CTA 1: See Integrations */}
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-xl scale-95 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 lg:p-8 hover:bg-white/15 hover:border-white/30 transition-all duration-300">
@@ -100,26 +94,25 @@ export function IntegrationsSection() {
                     </div>
                     <div>
                       <p className="text-xs font-medium text-primary uppercase tracking-wider mb-1">
-                        Integrations
+                        Integraciones
                       </p>
                       <h3 className="text-xl lg:text-2xl font-bold text-white">
-                        Already using a PMS?
+                        ¿Ya usas un PMS?
                       </h3>
                     </div>
                   </div>
                   <p className="text-white/70 mb-6 leading-relaxed">
-                    Explore our marketplace of integrations. Connect your property management system and start operating in minutes.
+                    Explora nuestro marketplace de integraciones. Conecta tu sistema de gestión de propiedades y empieza a operar en minutos.
                   </p>
                   <Button className="w-full sm:w-auto gap-2 group/btn" asChild>
                     <Link to="/resources/integrations">
-                      See Integrations
+                      Ver Integraciones
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
                   </Button>
                 </div>
               </div>
 
-              {/* CTA 2: Connect API */}
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-xl scale-95 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 lg:p-8 hover:bg-white/15 hover:border-white/30 transition-all duration-300">
@@ -132,16 +125,16 @@ export function IntegrationsSection() {
                         API
                       </p>
                       <h3 className="text-xl lg:text-2xl font-bold text-white">
-                        Build your own solution
+                        Construye tu propia solución
                       </h3>
                     </div>
                   </div>
                   <p className="text-white/70 mb-6 leading-relaxed">
-                    Use our public API to integrate Roomonitor capabilities into any system you already use, maintaining your brand identity.
+                    Usa nuestra API pública para integrar las capacidades de Roomonitor en cualquier sistema que ya utilices, manteniendo tu identidad de marca.
                   </p>
                   <Button variant="outline" className="w-full sm:w-auto gap-2 group/btn border-2 border-white bg-transparent text-white font-semibold hover:bg-white hover:text-slate-900 transition-colors" asChild>
                     <Link to="/resources/integrations#api">
-                      Explore API
+                      Explorar API
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
                   </Button>
@@ -152,24 +145,14 @@ export function IntegrationsSection() {
         </div>
       </div>
 
-      {/* CSS for marquee animation */}
       <style>{`
         @keyframes marquee-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.333%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
         }
-        
         @keyframes marquee-right {
-          0% {
-            transform: translateX(-33.333%);
-          }
-          100% {
-            transform: translateX(0);
-          }
+          0% { transform: translateX(-33.333%); }
+          100% { transform: translateX(0); }
         }
       `}</style>
     </section>

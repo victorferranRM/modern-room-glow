@@ -5,51 +5,51 @@ import { Radio, Headphones, Car, CheckCircle, ArrowRight } from "lucide-react";
 
 const pillars = [
   {
-    title: "V5 Sensor: Total privacy. Absolute precision.",
-    description: "Keep your properties protected without invading guest privacy. Our V5 device does not record conversations. It analyzes sound and environmental patterns to anticipate problems before they escalate.",
+    title: "Sensor V5: Privacidad total. Precisión absoluta.",
+    description: "Protege tus propiedades sin invadir la privacidad del huésped. Nuestro dispositivo V5 no graba conversaciones. Analiza patrones de sonido y ambientales para anticipar problemas antes de que escalen.",
     points: [
-      "24/7 noise monitoring and party detection",
-      "Tobacco smoke detection (protect your asset from odor damage)",
-      "Climate monitoring (optimize energy consumption)",
+      "Monitorización de ruido 24/7 y detección de fiestas",
+      "Detección de humo de tabaco (protege tu activo de daños por olor)",
+      "Monitorización climática (optimiza el consumo energético)",
     ],
-    linkText: "View technical specifications",
+    linkText: "Ver especificaciones técnicas",
     linkHref: "/monitoring",
     floatingElements: [
-      { icon: Radio, label: "Noise Alert", position: "top-8 left-8", delay: "0s" },
-      { icon: CheckCircle, label: "Smoke Free", position: "top-24 right-6", delay: "0.5s" },
-      { icon: CheckCircle, label: "Climate OK", position: "bottom-16 left-12", delay: "1s" },
+      { icon: Radio, label: "Alerta Ruido", position: "top-8 left-8", delay: "0s" },
+      { icon: CheckCircle, label: "Sin Humo", position: "top-24 right-6", delay: "0.5s" },
+      { icon: CheckCircle, label: "Clima OK", position: "bottom-16 left-12", delay: "1s" },
     ],
     bgColor: "bg-gradient-to-br from-primary/5 to-primary/10",
   },
   {
-    title: "Alarm Assistant. We represent you.",
-    description: "An alert at 3AM? Keep sleeping. Our 24/7 Control Center receives the alert, immediately contacts the guest (call/SMS), and mediates using proven protocols to stop the issue before it escalates.",
+    title: "Alarm Assistant. Te representamos.",
+    description: "¿Una alerta a las 3AM? Sigue durmiendo. Nuestro Centro de Control 24/7 recibe la alerta, contacta inmediatamente al huésped (llamada/SMS) y media usando protocolos probados para detener el problema antes de que escale.",
     points: [
-      "Immediate human intervention without disturbing you",
-      "96% of incidents resolved remotely",
-      "Detailed report in your dashboard the next morning",
+      "Intervención humana inmediata sin molestarte",
+      "96% de incidencias resueltas de forma remota",
+      "Informe detallado en tu panel a la mañana siguiente",
     ],
-    linkText: "Discover the Control Center",
+    linkText: "Descubre el Centro de Control",
     linkHref: "/services/control-center",
     floatingElements: [
-      { icon: Headphones, label: "Agent Active", position: "top-10 right-8", delay: "0.3s" },
-      { icon: CheckCircle, label: "Resolved", position: "bottom-20 left-8", delay: "0.8s" },
-      { icon: CheckCircle, label: "Report Sent", position: "top-28 left-6", delay: "0.6s" },
+      { icon: Headphones, label: "Agente Activo", position: "top-10 right-8", delay: "0.3s" },
+      { icon: CheckCircle, label: "Resuelto", position: "bottom-20 left-8", delay: "0.8s" },
+      { icon: CheckCircle, label: "Informe Enviado", position: "top-28 left-6", delay: "0.6s" },
     ],
     bgColor: "bg-gradient-to-br from-accent/30 to-accent/50",
   },
   {
-    title: "On-Site Response. Real presence when it matters.",
-    description: "When technology and remote mediation aren't enough, our Field Service team physically attends the property. From key recovery to eviction management, we are there to protect your asset.",
+    title: "Respuesta In Situ. Presencia real cuando importa.",
+    description: "Cuando la tecnología y la mediación remota no son suficientes, nuestro equipo de Field Service acude físicamente a la propiedad. Desde la recuperación de llaves hasta la gestión de desalojos, estamos ahí para proteger tu activo.",
     points: [
-      "Service available in selected cities",
+      "Servicio disponible en ciudades seleccionadas",
     ],
-    linkText: "Check coverage",
+    linkText: "Consultar cobertura",
     linkHref: "/services/field-service",
     floatingElements: [
-      { icon: Car, label: "Team Dispatched", position: "top-8 left-6", delay: "0.2s" },
-      { icon: CheckCircle, label: "On-site", position: "top-20 right-8", delay: "0.7s" },
-      { icon: CheckCircle, label: "Resolved", position: "bottom-16 right-10", delay: "1.1s" },
+      { icon: Car, label: "Equipo Enviado", position: "top-8 left-6", delay: "0.2s" },
+      { icon: CheckCircle, label: "In Situ", position: "top-20 right-8", delay: "0.7s" },
+      { icon: CheckCircle, label: "Resuelto", position: "bottom-16 right-10", delay: "1.1s" },
     ],
     bgColor: "bg-gradient-to-br from-muted to-muted/80",
   },
@@ -64,10 +64,10 @@ export function HowItWorksSection() {
           <AnimatedSection className="mb-16">
             <div>
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                Our ecosystem
+                Nuestro ecosistema
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-                Hardware + Remote + <em className="font-serif not-italic">On-site</em>
+                Hardware + Remoto + <em className="font-serif not-italic">In Situ</em>
               </h2>
             </div>
           </AnimatedSection>
@@ -81,7 +81,6 @@ export function HowItWorksSection() {
                   <div 
                     className={`relative h-72 lg:h-80 rounded-2xl ${pillar.bgColor} overflow-hidden mb-6`}
                   >
-                    {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-30">
                       <svg className="w-full h-full" viewBox="0 0 400 400">
                         <defs>
@@ -93,7 +92,6 @@ export function HowItWorksSection() {
                       </svg>
                     </div>
 
-                    {/* Floating UI Elements */}
                     {pillar.floatingElements.map((element, elemIndex) => {
                       const Icon = element.icon;
                       return (
@@ -117,7 +115,6 @@ export function HowItWorksSection() {
                       );
                     })}
 
-                    {/* Central Icon */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-20 h-20 rounded-2xl bg-background/80 backdrop-blur-sm border border-border/50 shadow-xl flex items-center justify-center transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                         <span className="text-4xl font-bold text-primary/30">0{index + 1}</span>
@@ -125,7 +122,6 @@ export function HowItWorksSection() {
                     </div>
                   </div>
 
-                  {/* Text Content */}
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
                     {pillar.title}
                   </h3>
@@ -133,7 +129,6 @@ export function HowItWorksSection() {
                     {pillar.description}
                   </p>
                   
-                  {/* Key Points */}
                   <ul className="space-y-2 mb-4">
                     {pillar.points.map((point, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -156,7 +151,6 @@ export function HowItWorksSection() {
         </div>
       </div>
 
-      {/* Floating Animation Keyframes */}
       <style>{`
         @keyframes float {
           0%, 100% {
