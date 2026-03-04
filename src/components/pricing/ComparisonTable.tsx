@@ -75,7 +75,7 @@ const COMPARISON_DATA: FeatureCategory[] = [
     name: "Operativa y servicios",
     icon: Headphones,
     features: [
-      { feature: "Tú gestionas las alertas", basic: true, pro: false, enterprise: false },
+      { feature: "Gestionamos las alertas por ti", basic: false, pro: true, enterprise: true },
       { feature: "Alarm Assistant (monitorización 24/7)", basic: false, pro: true, enterprise: true },
       { feature: "Centro de Control 24/7", basic: false, pro: false, enterprise: true },
       { feature: "Atención telefónica a huéspedes", basic: false, pro: false, enterprise: true },
