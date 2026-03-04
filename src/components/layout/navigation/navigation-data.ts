@@ -5,12 +5,7 @@ export const servicesData = {
     title: "OPERACIONES",
     items: [
       {
-        title: "Guest Assist™",
-        description: "Atención telefónica 24/7 para huéspedes fuera de horario",
-        href: "/services/guest-assist",
-      },
-      {
-        title: "Centro de Control 24/7",
+        title: "Centro de Control",
         description: "Verificación humana, toma de decisiones y escalado",
         href: "/services/control-center",
       },
@@ -18,21 +13,17 @@ export const servicesData = {
         title: "Agentes Field Service",
         description: "Intervención in situ cuando la resolución remota no es suficiente",
         href: "/services/field-service",
+        note: "Consulta disponibilidad*",
       },
     ],
   },
-  incidentRisk: {
-    title: "GESTIÓN DE INCIDENCIAS Y RIESGOS",
+  emergencies: {
+    title: "GESTIÓN DE EMERGENCIAS",
     items: [
       {
-        title: "Respuesta a Incidencias",
-        description: "Detección y resolución de incidencias de extremo a extremo",
-        href: "/services/incident-response",
-      },
-      {
-        title: "Gestión de Emergencias",
-        description: "Situaciones críticas gestionadas con protocolos y acción real",
-        href: "/services/emergency-handling",
+        title: "Atención telefónica",
+        description: "Atención telefónica para huéspedes fuera de horario",
+        href: "/services/guest-assist",
       },
       {
         title: "Night Watch",
@@ -41,17 +32,17 @@ export const servicesData = {
       },
     ],
   },
-  enablement: {
-    title: "HABILITACIÓN OPERATIVA",
+  integration: {
+    title: "INTEGRACIÓN OPERATIVA",
     items: [
       {
         title: "Acceso PMS y Herramientas",
-        description: "Operamos directamente desde el ecosistema operativo del cliente",
+        description: "Operamos directamente desde tu ecosistema operativo",
         href: "/services/pms-access",
       },
       {
         title: "Protocolos Operativos",
-        description: "Reglas y prioridades del cliente ejecutadas 24/7",
+        description: "Actuamos según tus prioridades y patrones de actuación",
         href: "/services/protocols",
       },
     ],

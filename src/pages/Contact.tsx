@@ -339,7 +339,7 @@ export default function Contact() {
                           name="province"
                           render={({ field }) =>
                           <FormItem>
-                              <FormLabel className="text-sm">Provincia / Estado</FormLabel>
+                              <FormLabel className="text-sm">Provincia / Estado *</FormLabel>
                               <FormControl>
                                 <Input placeholder="Barcelona" {...field} />
                               </FormControl>
