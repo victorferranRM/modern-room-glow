@@ -40,9 +40,9 @@ export function MegaMenuServices() {
                         <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
                           {item.description}
                         </span>
-                        {"note" in item && item.note && (
+                        {"note" in item && (item as any).note && (
                           <span className="block text-[11px] font-light italic text-muted-foreground/70 mt-1">
-                            {item.note}
+                            {(item as any).note}
                           </span>
                         )}
                       </div>
