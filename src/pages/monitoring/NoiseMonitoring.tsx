@@ -59,6 +59,17 @@ const howItWorks = [
 
 const relatedCaseStudy = caseStudies.find(cs => cs.slug === "stay-unique");
 
+function ManagerCheckItem({ text }: { text: string }) {
+  return (
+    <li className="flex items-start gap-3 group">
+      <div className="w-5 h-5 mt-0.5 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-primary group-hover:border-primary">
+        <Check className="w-3 h-3 text-primary transition-colors duration-300 group-hover:text-primary-foreground" strokeWidth={3} />
+      </div>
+      <span className="text-sm sm:text-base text-foreground/80 transition-colors group-hover:text-foreground">{text}</span>
+    </li>
+  );
+}
+
 export default function NoiseMonitoring() {
   return (
     <div className="min-h-screen bg-background">
@@ -170,17 +181,10 @@ export default function NoiseMonitoring() {
                 un único centro de control intuitivo.
               </p>
               <ul className="space-y-3 mb-8">
-                {[
-                  "Visualización de niveles de dB en tiempo real",
-                  "Configuración de umbrales personalizada por propiedad",
-                  "Datos históricos y patrones de ruido",
-                  "Integración con mensajería automatizada a huéspedes",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
+                <ManagerCheckItem text="Visualización de niveles de dB en tiempo real" />
+                <ManagerCheckItem text="Configuración de umbrales personalizada por propiedad" />
+                <ManagerCheckItem text="Datos históricos y patrones de ruido" />
+                <ManagerCheckItem text="Integración con mensajería automatizada a huéspedes" />
               </ul>
               <Button asChild>
                 <Link to="/how-it-works">
@@ -191,12 +195,12 @@ export default function NoiseMonitoring() {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
                 <img
                   src={managerDevices}
                   alt="Panel de Roomonitor Manager"
-                  className="relative w-full rounded-2xl shadow-2xl"
+                  className="relative w-full rounded-2xl shadow-lg border border-border/50"
                 />
               </div>
             </AnimatedSection>
