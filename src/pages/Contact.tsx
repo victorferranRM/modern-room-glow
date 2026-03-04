@@ -91,9 +91,8 @@ const contactFormSchema = z.object({
   max(100, "La ciudad debe tener menos de 100 caracteres"),
   province: z.
   string().
-  max(100, "La provincia debe tener menos de 100 caracteres").
-  optional().
-  or(z.literal("")),
+  min(1, "La provincia es obligatoria").
+  max(100, "La provincia debe tener menos de 100 caracteres"),
   propertySize: z.
   string().
   min(1, "Indica el número de propiedades").
