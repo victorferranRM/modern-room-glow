@@ -120,7 +120,7 @@ export default function Pricing() {
               <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 h-full">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Basic</h3>
+                    <h3 className="text-xl font-bold text-foreground">Noise Alarm</h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Dispositivo + suscripción de monitorización
                     </p>
