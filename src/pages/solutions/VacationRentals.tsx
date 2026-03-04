@@ -152,7 +152,7 @@ export default function VacationRentals() {
 
             <AnimatedSection delay={200}>
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl" />
                 <OptimizedImage
                   src={solutionRest}
                   alt="Vacation Rental Protection"

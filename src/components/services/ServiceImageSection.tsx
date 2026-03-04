@@ -52,11 +52,11 @@ export function ServiceImageSection({
             </p>
             <ul className="space-y-3 mb-8">
               {features.map((item, i) => (
-                <li key={i} className="flex items-center gap-3 group">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
-                    <Check className="w-4 h-4 text-primary" />
+                <li key={i} className="flex items-start gap-3 group">
+                  <div className="w-5 h-5 mt-0.5 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-primary group-hover:border-primary">
+                    <Check className="w-3 h-3 text-primary transition-colors duration-300 group-hover:text-primary-foreground" strokeWidth={3} />
                   </div>
-                  <span className="text-sm sm:text-base transition-colors group-hover:text-primary">
+                  <span className="text-sm sm:text-base text-foreground/80 transition-colors group-hover:text-foreground">
                     {item}
                   </span>
                 </li>
@@ -72,8 +72,8 @@ export function ServiceImageSection({
 
           <AnimatedSection delay={200} animation={reversed ? "fade-right" : "fade-left"}>
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:blur-3xl" />
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
+              <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
                 <OptimizedImage
                   src={image}
                   alt={imageAlt}
