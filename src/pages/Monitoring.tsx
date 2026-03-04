@@ -103,15 +103,14 @@ export default function Monitoring() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <AnimatedSection>
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                El Dispositivo Roomonitor
+                Sensor de Ruido Roomonitor V5
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                Un dispositivo.
-                <br />
-                <span className="text-primary">Protección completa.</span>
+                Detección de ruido en tiempo real{" "}
+                <span className="gradient-text italic">para alquiler vacacional.</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                El sensor Roomonitor combina monitorización de ruido, detección de ocupación, detección de humo y seguimiento ambiental en un único dispositivo respetuoso con la privacidad.
+                Protege tus propiedades sin invadir la privacidad de los huéspedes. El sensor V5 no graba conversaciones: analiza patrones de sonido, humo y ambiente para adelantarse a los problemas.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
