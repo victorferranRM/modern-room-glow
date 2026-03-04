@@ -42,12 +42,12 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const inquiryTypes = [
-  { value: "demo", label: "Solicitar una demo" },
-  { value: "sales", label: "Consulta comercial" },
-  { value: "enterprise", label: "Enterprise" },
-  { value: "support", label: "Soporte" },
-  { value: "partnership", label: "Colaboración" },
-  { value: "other", label: "Otro" },
+  { value: "devices", label: "Dispositivo / Sensores" },
+  { value: "cover", label: "Cover™ (Operativa delegada)" },
+  { value: "pms", label: "Integraciones PMS" },
+  { value: "support", label: "Soporte técnico" },
+  { value: "careers", label: "Buscamos talento" },
+  { value: "general", label: "Consulta general" },
 ];
 
 const propertySizes = [
@@ -91,6 +91,15 @@ const contactFormSchema = z.object({
   country: z
     .string()
     .min(1, "El país es obligatorio"),
+  city: z
+    .string()
+    .min(1, "La ciudad es obligatoria")
+    .max(100, "La ciudad debe tener menos de 100 caracteres"),
+  province: z
+    .string()
+    .max(100, "La provincia debe tener menos de 100 caracteres")
+    .optional()
+    .or(z.literal("")),
   propertySize: z
     .string()
     .min(1, "Selecciona el tamaño del portfolio"),
@@ -119,6 +128,8 @@ export default function Contact() {
       phone: "",
       company: "",
       country: "",
+      city: "",
+      province: "",
       propertySize: "",
       inquiryType: "",
       message: "",
@@ -147,6 +158,8 @@ export default function Contact() {
           phone: data.phone || null,
           company: data.company,
           country: data.country,
+          city: data.city || null,
+          province: data.province || null,
           property_size: data.propertySize || null,
           inquiry_type: data.inquiryType,
           message: data.message || null,
@@ -311,6 +324,35 @@ export default function Contact() {
                                   countryCode={selectedCountry}
                                   placeholder="Número de teléfono"
                                 />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="city"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm">Ciudad *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Barcelona" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="province"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm">Provincia / Estado</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Barcelona" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>

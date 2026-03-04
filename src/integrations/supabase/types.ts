@@ -49,6 +49,7 @@ export type Database = {
       }
       contact_inquiries: {
         Row: {
+          city: string | null
           company: string
           country: string | null
           created_at: string
@@ -60,10 +61,12 @@ export type Database = {
           message: string | null
           phone: string | null
           property_size: string | null
+          province: string | null
           status: string
           updated_at: string
         }
         Insert: {
+          city?: string | null
           company: string
           country?: string | null
           created_at?: string
@@ -75,10 +78,12 @@ export type Database = {
           message?: string | null
           phone?: string | null
           property_size?: string | null
+          province?: string | null
           status?: string
           updated_at?: string
         }
         Update: {
+          city?: string | null
           company?: string
           country?: string | null
           created_at?: string
@@ -90,6 +95,7 @@ export type Database = {
           message?: string | null
           phone?: string | null
           property_size?: string | null
+          province?: string | null
           status?: string
           updated_at?: string
         }
