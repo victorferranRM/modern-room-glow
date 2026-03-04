@@ -205,12 +205,12 @@ export default function Contact() {
                 <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 <span>Contacta con nosotros</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-                Hablemos de tus
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">Hablemos de tu
+necesidades operativas
                 <span className="gradient-text block">necesidades operativas</span>
               </h1>
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-                Tanto si gestionas 10 propiedades como 10.000, nuestro equipo está listo para mostrarte cómo Roomonitor puede transformar tu operativa.
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">Tanto si gestionas 10 propiedades como 10.000, nuestro equipo está listo para mostrarte cómo podemos transformar tus operaciones
+
               </p>
             </div>
           </div>
