@@ -8,7 +8,7 @@ import {
   Home, Phone, Shield, Smartphone, Wifi, BatteryCharging
 } from "lucide-react";
 import solutionManage from "@/assets/solution-manage.jpg";
-import roomonitorDevice from "@/assets/roomonitor-device-placeholder.jpg";
+import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 
 const monitoringFeatures = [
   {

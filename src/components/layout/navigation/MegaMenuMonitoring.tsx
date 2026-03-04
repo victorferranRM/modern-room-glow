@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { monitoringData } from "./navigation-data";
 import { Volume2, Users, Flame, Thermometer, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import roomonitorDevice from "@/assets/roomonitor-device-placeholder.jpg";
+import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 
 const icons = [Volume2, Users, Flame, Thermometer];
 
