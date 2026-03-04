@@ -80,7 +80,7 @@ const pricingPlans = [
     popular: false,
   },
   {
-    name: "Pro",
+    name: "Alarm Assistant",
     price: "29.90",
     period: "/property/month",
     devicePrice: "Included",
