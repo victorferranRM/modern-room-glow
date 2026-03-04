@@ -76,7 +76,7 @@ const pricingPlans = [
       "Manager dashboard access",
       "Mobile app access",
     ],
-    cta: "Start with Basic",
+    cta: "Start with Noise Alarm",
     popular: false,
   },
   {
