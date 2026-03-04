@@ -33,10 +33,27 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
   return (
     <div className="lg:hidden border-t bg-background max-h-[calc(100vh-4rem)] overflow-y-auto animate-fade-in">
       <div className="container mx-auto px-4 py-6 space-y-2">
-        {/* Cómo funciona */}
+        {/* Dispositivo */}
         <div className="border-b border-border/50 pb-2">
-          <Link to="/how-it-works" className="block py-3 font-medium text-foreground hover:text-primary" onClick={onClose}>
-            Cómo funciona
+          <button onClick={() => toggleSection("dispositivo")} className="flex items-center justify-between w-full py-3 text-left font-medium">
+            Dispositivo
+            <ChevronDown className={`h-4 w-4 transition-transform ${expandedSection === "dispositivo" ? "rotate-180" : ""}`} />
+          </button>
+          <AnimatedCollapsible isOpen={expandedSection === "dispositivo"}>
+            <div className="pt-4 pb-4">
+              {monitoringData.map((item) => (
+                <Link key={item.title} to={item.href} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </AnimatedCollapsible>
+        </div>
+
+        {/* Cover™ */}
+        <div className="border-b border-border/50 pb-2">
+          <Link to="/cover" className="block py-3 font-medium text-foreground hover:text-primary" onClick={onClose}>
+            Cover<sup className="text-[9px] ml-0.5">™</sup>
           </Link>
         </div>
 
@@ -62,27 +79,10 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           </AnimatedCollapsible>
         </div>
 
-        {/* Dispositivo */}
+        {/* Cómo funciona */}
         <div className="border-b border-border/50 pb-2">
-          <button onClick={() => toggleSection("dispositivo")} className="flex items-center justify-between w-full py-3 text-left font-medium">
-            Dispositivo
-            <ChevronDown className={`h-4 w-4 transition-transform ${expandedSection === "dispositivo" ? "rotate-180" : ""}`} />
-          </button>
-          <AnimatedCollapsible isOpen={expandedSection === "dispositivo"}>
-            <div className="pt-4 pb-4">
-              {monitoringData.map((item) => (
-                <Link key={item.title} to={item.href} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </AnimatedCollapsible>
-        </div>
-
-        {/* Cover™ */}
-        <div className="border-b border-border/50 pb-2">
-          <Link to="/cover" className="block py-3 font-medium text-foreground hover:text-primary" onClick={onClose}>
-            Cover<sup className="text-[9px] ml-0.5">™</sup>
+          <Link to="/how-it-works" className="block py-3 font-medium text-foreground hover:text-primary" onClick={onClose}>
+            Cómo funciona
           </Link>
         </div>
 
