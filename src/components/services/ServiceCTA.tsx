@@ -19,12 +19,11 @@ interface ServiceCTAProps {
 export function ServiceCTA({
   title,
   description,
-  primaryCTA = { text: "Talk to an Expert", link: "/contact" },
-  secondaryCTA = { text: "View Pricing", link: "/pricing" },
+  primaryCTA = { text: "Hablar con un Experto", link: "/contact" },
+  secondaryCTA = { text: "Ver Precios", link: "/pricing" },
 }: ServiceCTAProps) {
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
-      {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/20" />
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />

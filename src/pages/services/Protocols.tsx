@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Button } from "@/components/ui/button";
 import { 
-  FileText, Clock, ArrowRight, Check, 
-  Shield, Settings, ListChecks, Workflow, Edit, Book, Monitor
+  FileText, Clock, Check, Shield, Settings, ListChecks, Workflow, Edit, Book, Monitor
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
@@ -16,101 +13,61 @@ import serviceImage from "@/assets/service-protocols.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
 const features = [
-  {
-    icon: FileText,
-    title: "Custom Protocols",
-    description: "Define exactly how we should handle every situation, from noise alerts to guest complaints."
-  },
-  {
-    icon: ListChecks,
-    title: "Step-by-Step Actions",
-    description: "Clear procedures for your team and ours to follow consistently."
-  },
-  {
-    icon: Clock,
-    title: "24/7 Execution",
-    description: "Your rules are followed around the clock, even when you're asleep."
-  },
-  {
-    icon: Edit,
-    title: "Easy Updates",
-    description: "Modify your protocols anytime through our simple management interface."
-  },
-  {
-    icon: Workflow,
-    title: "Priority Rules",
-    description: "Set escalation hierarchies and priority levels for different situations."
-  },
-  {
-    icon: Shield,
-    title: "Consistent Results",
-    description: "Every incident is handled the same way, every time."
-  },
+  { icon: FileText, title: "Protocolos Personalizados", description: "Define exactamente cómo debemos gestionar cada situación, desde alertas de ruido hasta quejas de huéspedes." },
+  { icon: ListChecks, title: "Acciones Paso a Paso", description: "Procedimientos claros para tu equipo y el nuestro, para seguir de forma consistente." },
+  { icon: Clock, title: "Ejecución 24/7", description: "Tus reglas se siguen las 24 horas, incluso cuando estás durmiendo." },
+  { icon: Edit, title: "Actualizaciones Fáciles", description: "Modifica tus protocolos en cualquier momento a través de nuestra interfaz de gestión sencilla." },
+  { icon: Workflow, title: "Reglas de Prioridad", description: "Establece jerarquías de escalado y niveles de prioridad para diferentes situaciones." },
+  { icon: Shield, title: "Resultados Consistentes", description: "Cada incidencia se gestiona de la misma manera, siempre." },
 ];
 
 const protocolExamples = [
   {
-    title: "Noise Alert Protocol",
+    title: "Protocolo de Alerta de Ruido",
     steps: [
-      "Wait 5 minutes for noise to settle",
-      "If noise continues, send friendly reminder to guest",
-      "If noise persists after 15 min, call guest directly",
-      "If unresolved, escalate to property manager",
-      "Document incident with timestamps",
+      "Esperar 5 minutos a que el ruido se estabilice",
+      "Si el ruido continúa, enviar recordatorio amable al huésped",
+      "Si persiste después de 15 min, llamar directamente al huésped",
+      "Si no se resuelve, escalar al gestor de la propiedad",
+      "Documentar la incidencia con marcas de tiempo",
     ]
   },
   {
-    title: "Guest Lockout Protocol",
+    title: "Protocolo de Huésped sin Acceso",
     steps: [
-      "Verify guest identity with reservation details",
-      "Attempt remote access solution if available",
-      "If failed, contact backup keyholder",
-      "Dispatch field agent if no keyholder available",
-      "Notify property manager of resolution",
+      "Verificar identidad del huésped con datos de la reserva",
+      "Intentar solución de acceso remoto si está disponible",
+      "Si falla, contactar con el portallaves de respaldo",
+      "Enviar agente de campo si no hay portallaves disponible",
+      "Notificar al gestor de la propiedad de la resolución",
     ]
   },
   {
-    title: "Smoke Alert Protocol",
+    title: "Protocolo de Alerta de Humo",
     steps: [
-      "Immediately attempt to contact guest",
-      "If no response, alert local emergency contacts",
-      "Coordinate with fire services if needed",
-      "Dispatch field agent for visual confirmation",
-      "Full incident report within 1 hour",
+      "Intentar contactar con el huésped inmediatamente",
+      "Si no hay respuesta, alertar a contactos de emergencia locales",
+      "Coordinar con servicios de bomberos si es necesario",
+      "Enviar agente de campo para confirmación visual",
+      "Informe completo de incidencia en menos de 1 hora",
     ]
   },
 ];
 
 const setupProcess = [
-  {
-    step: "01",
-    title: "Review Templates",
-    description: "Start with our industry-standard protocol templates."
-  },
-  {
-    step: "02",
-    title: "Customize",
-    description: "Adapt the protocols to your specific requirements and preferences."
-  },
-  {
-    step: "03",
-    title: "Train Together",
-    description: "Walk through the protocols with our team to ensure clarity."
-  },
-  {
-    step: "04",
-    title: "Go Live",
-    description: "Your protocols are active and executed 24/7."
-  },
+  { step: "01", title: "Revisar Plantillas", description: "Empieza con nuestras plantillas de protocolo estándar del sector." },
+  { step: "02", title: "Personalizar", description: "Adapta los protocolos a tus requisitos y preferencias específicas." },
+  { step: "03", title: "Formación Conjunta", description: "Repasa los protocolos con nuestro equipo para asegurar claridad." },
+  { step: "04", title: "En Marcha", description: "Tus protocolos están activos y se ejecutan 24/7." },
 ];
 
 const protocolBenefits = [
-  "Consistent handling across your entire portfolio",
-  "Reduced decision fatigue for your team",
-  "Clear escalation paths for every situation",
-  "Documentation and audit trails",
-  "Easy updates as your needs evolve",
-  "Peace of mind knowing your rules are followed",
+  "Gestión consistente en todo tu portfolio",
+  "Menos fatiga de decisión para tu equipo",
+  "Rutas de escalado claras para cada situación",
+  "Documentación y registros de auditoría",
+  "Actualizaciones fáciles a medida que evolucionan tus necesidades",
+  "Tranquilidad sabiendo que tus reglas se siguen",
 ];
 
 export default function Protocols() {
@@ -120,12 +77,12 @@ export default function Protocols() {
       
       <ServiceHero
         icon={FileText}
-        badge="Operational Protocols"
-        title="Your rules,"
-        titleHighlight="executed 24/7"
-        description="Define exactly how every situation should be handled. Our team executes your protocols consistently, around the clock, ensuring your standards are always met."
+        badge="Protocolos Operativos"
+        title="Tus reglas,"
+        titleHighlight="ejecutadas 24/7"
+        description="Define exactamente cómo debe gestionarse cada situación. Nuestro equipo ejecuta tus protocolos de forma consistente, las 24 horas, asegurando que tus estándares se cumplan siempre."
         image={serviceImage}
-        imageAlt="Protocols Service"
+        imageAlt="Servicio de Protocolos"
       />
 
       {/* Manager Software Notice */}
@@ -137,33 +94,23 @@ export default function Protocols() {
               <Monitor className="w-6 h-6 text-primary" />
             </div>
             <p className="text-lg">
-              <strong>No Excel spreadsheets.</strong> We use our proprietary Manager software for standardized, 
-              real-time protocol management and execution.
+              <strong>Sin hojas de Excel.</strong> Usamos nuestro software propietario Manager para la gestión y ejecución de protocolos estandarizada y en tiempo real.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      <ServiceFeatures
-        eyebrow="Capabilities"
-        title="Complete protocol management"
-        features={features}
-      />
+      <ServiceFeatures eyebrow="Capacidades" title="Gestión completa de protocolos" features={features} />
 
       {/* Protocol Examples */}
       <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Examples
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              Sample protocols
-            </h2>
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Ejemplos</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Protocolos de ejemplo</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Here are examples of how protocols can be structured. 
-              Every protocol is customized to your specific needs.
+              Aquí tienes ejemplos de cómo se pueden estructurar los protocolos. Cada protocolo se personaliza según tus necesidades específicas.
             </p>
           </AnimatedSection>
 
@@ -180,9 +127,7 @@ export default function Protocols() {
                   <ol className="space-y-3">
                     {protocol.steps.map((step, j) => (
                       <li key={j} className="flex items-start gap-3 group/step">
-                        <span className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-xs font-medium shrink-0 transition-all duration-300 group-hover/step:bg-primary/20 group-hover/step:text-primary">
-                          {j + 1}
-                        </span>
+                        <span className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-xs font-medium shrink-0 transition-all duration-300 group-hover/step:bg-primary/20 group-hover/step:text-primary">{j + 1}</span>
                         <span className="text-sm text-muted-foreground transition-colors group-hover/step:text-foreground">{step}</span>
                       </li>
                     ))}
@@ -194,27 +139,23 @@ export default function Protocols() {
         </div>
       </section>
 
-      <ServiceProcess
-        eyebrow="Getting Started"
-        title="Setup your protocols"
-        steps={setupProcess}
-      />
+      <ServiceProcess eyebrow="Primeros Pasos" title="Configura tus protocolos" steps={setupProcess} />
 
       <ServiceImageSection
-        eyebrow="Benefits"
-        title="Why protocols matter"
-        description="Well-defined protocols ensure consistency, reduce errors, and give you peace of mind knowing exactly how every situation will be handled."
+        eyebrow="Beneficios"
+        title="Por qué importan los protocolos"
+        description="Los protocolos bien definidos aseguran consistencia, reducen errores y te dan tranquilidad sabiendo exactamente cómo se gestionará cada situación."
         features={protocolBenefits}
         image={managerDevices}
-        imageAlt="Protocol Management"
-        ctaText="See a Demo"
+        imageAlt="Gestión de Protocolos"
+        ctaText="Ver una Demo"
         ctaLink="/contact"
         background="secondary"
       />
 
       <ServiceCTA
-        title="Ready to define your protocols?"
-        description="Let's work together to create protocols that match your exact needs. Our team will help you get started."
+        title="¿Listo para definir tus protocolos?"
+        description="Trabajemos juntos para crear protocolos que se ajusten exactamente a tus necesidades. Nuestro equipo te ayudará a empezar."
       />
 
       <Footer />

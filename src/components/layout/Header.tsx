@@ -45,10 +45,10 @@ export function Header() {
   };
 
   const navItems: { label: string; menu: MenuType }[] = [
-    { label: "Services", menu: "services" },
-    { label: "Solutions", menu: "solutions" },
-    { label: "Monitoring", menu: "monitoring" },
-    { label: "Resources", menu: "resources" },
+    { label: "Servicios", menu: "services" },
+    { label: "Soluciones", menu: "solutions" },
+    { label: "Monitorización", menu: "monitoring" },
+    { label: "Recursos", menu: "resources" },
   ];
 
   return (
@@ -94,7 +94,7 @@ export function Header() {
               to="/pricing"
               className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
-              Pricing
+              Precios
             </Link>
           </nav>
 
@@ -116,7 +116,7 @@ export function Header() {
                   <DropdownMenuItem asChild>
                     <Link to="/portal" className="flex items-center gap-2 cursor-pointer">
                       <User className="h-4 w-4" />
-                      Customer Portal
+                      Portal de Cliente
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
@@ -125,17 +125,17 @@ export function Header() {
                     className="flex items-center gap-2 cursor-pointer text-destructive focus:text-destructive"
                   >
                     <LogOut className="h-4 w-4" />
-                    Log out
+                    Cerrar sesión
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <>
                 <Button variant="ghost" asChild>
-                  <Link to="/auth">Customer Portal</Link>
+                  <Link to="/auth">Portal de Cliente</Link>
                 </Button>
                 <Button asChild className="shadow-soft">
-                  <Link to="/contact">Book a Demo</Link>
+                  <Link to="/contact">Solicitar Demo</Link>
                 </Button>
               </>
             )}
@@ -145,7 +145,7 @@ export function Header() {
           <button
             className="lg:hidden p-2 -mr-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Abrir menú"
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6 text-foreground" />

@@ -2,67 +2,67 @@ import { Link } from "react-router-dom";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
 const footerLinks = {
   solutions: [{
-    name: "Noise Monitoring",
+    name: "Monitorización de Ruido",
     href: "/monitoring/noise"
   }, {
-    name: "Occupancy Detection",
+    name: "Detección de Ocupación",
     href: "/monitoring/occupancy"
   }, {
-    name: "Smoke Detection",
+    name: "Detección de Humo",
     href: "/monitoring/smoke"
   }, {
-    name: "Environment Monitoring",
+    name: "Monitorización Ambiental",
     href: "/monitoring/environment"
   }, {
-    name: "The Device",
+    name: "El Dispositivo",
     href: "/monitoring"
   }],
   company: [{
-    name: "About Us",
+    name: "Sobre Nosotros",
     href: "/about"
   }, {
-    name: "How It Works",
+    name: "Cómo Funciona",
     href: "/how-it-works"
   }, {
-    name: "Pricing",
+    name: "Precios",
     href: "/pricing"
   }, {
-    name: "Contact Us",
+    name: "Contacto",
     href: "/contact"
   }, {
-    name: "Integrations",
+    name: "Integraciones",
     href: "/integrations"
   }, {
-    name: "Case Studies",
+    name: "Casos de Éxito",
     href: "/resources/case-studies"
   }],
   resources: [{
     name: "Blog",
     href: "/blog"
   }, {
-    name: "Savings Calculator",
+    name: "Calculadora de Ahorro",
     href: "/resources/savings-calculator"
   }, {
-    name: "Customer Portal",
+    name: "Portal de Cliente",
     href: "/portal/dashboard"
   }],
   legal: [{
-    name: "Terms of Use",
+    name: "Condiciones de Uso",
     href: "/legal#terms-of-use"
   }, {
-    name: "Legal Notice",
+    name: "Aviso Legal",
     href: "/legal#legal-notice"
   }, {
-    name: "Privacy Policy",
+    name: "Política de Privacidad",
     href: "/legal#privacy-policy"
   }, {
-    name: "Cookie Policy",
+    name: "Política de Cookies",
     href: "/legal#cookie-policy"
   }, {
-    name: "Terms of Service",
+    name: "Términos del Servicio",
     href: "/legal#terms-of-service"
   }, {
-    name: "Shipping & Returns",
+    name: "Envíos y Devoluciones",
     href: "/legal#shipping-returns"
   }]
 };
@@ -76,7 +76,7 @@ export function Footer() {
               <img src={roomonitorLogo} alt="Roomonitor" className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm opacity-70 leading-relaxed mb-6 max-w-[240px]">
-              Roomonitor provides 24/7 real-time monitoring and guest management services for vacation rentals, hotels, and property owners worldwide.
+              Roomonitor ofrece monitorización 24/7 en tiempo real y servicios de gestión de huéspedes para alquileres vacacionales, hoteles y propietarios en todo el mundo.
             </p>
             <div className="flex gap-3">
               <a href="https://www.linkedin.com/company/roomonitorsl/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn">
@@ -109,7 +109,7 @@ export function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="font-semibold mb-4">Solutions</h3>
+            <h3 className="font-semibold mb-4">Soluciones</h3>
             <ul className="space-y-3">
               {footerLinks.solutions.map(link => <li key={link.name}>
                   <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">
@@ -121,7 +121,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
               {footerLinks.company.map(link => <li key={link.name}>
                   <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">
@@ -133,7 +133,7 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
+            <h3 className="font-semibold mb-4">Recursos</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map(link => <li key={link.name}>
                   <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">
@@ -159,10 +159,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm opacity-60">
-            © {new Date().getFullYear()} Roomonitor. All rights reserved. Smart Things & Friends SL.
+            © {new Date().getFullYear()} Roomonitor. Todos los derechos reservados. Smart Things & Friends SL.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-sm opacity-60">Barcelona, Spain</span>
+            <span className="text-sm opacity-60">Barcelona, España</span>
           </div>
         </div>
       </div>

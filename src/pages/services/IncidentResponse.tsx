@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Button } from "@/components/ui/button";
 import { 
-  AlertTriangle, Clock, Shield, ArrowRight, Check, 
-  Bell, Users, FileText, Radio, Workflow, Volume2,
+  AlertTriangle, Bell, Users, FileText, Radio, Workflow, Volume2,
   Flame, UserCheck, WifiOff, Thermometer
 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
@@ -18,118 +15,42 @@ import serviceImage from "@/assets/service-incident-response.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
 const stats = [
-  { value: "85%", label: "Issues resolved remotely" },
-  { value: "<2min", label: "Detection to action" },
-  { value: "24/7", label: "Coverage" },
-  { value: "100%", label: "Documented incidents" },
+  { value: "85%", label: "Incidencias resueltas remotamente" },
+  { value: "<2min", label: "De detección a acción" },
+  { value: "24/7", label: "Cobertura" },
+  { value: "100%", label: "Incidencias documentadas" },
 ];
 
 const features = [
-  {
-    icon: Bell,
-    title: "Early Detection",
-    description: "Sensors detect issues before they escalate into major problems."
-  },
-  {
-    icon: AlertTriangle,
-    title: "Instant Classification",
-    description: "Automatic severity assessment based on predefined thresholds and patterns."
-  },
-  {
-    icon: Users,
-    title: "Human Validation",
-    description: "Every alert is reviewed by trained operators to prevent false alarms."
-  },
-  {
-    icon: Workflow,
-    title: "Protocol Execution",
-    description: "Step-by-step resolution following your customized response procedures."
-  },
-  {
-    icon: Radio,
-    title: "Multi-Channel Response",
-    description: "Guest messaging, phone calls, and field dispatch — whatever it takes."
-  },
-  {
-    icon: FileText,
-    title: "Complete Documentation",
-    description: "Every incident is logged with timeline, actions, and outcomes."
-  },
+  { icon: Bell, title: "Detección Temprana", description: "Los sensores detectan problemas antes de que escalen a incidencias mayores." },
+  { icon: AlertTriangle, title: "Clasificación Instantánea", description: "Evaluación automática de severidad basada en umbrales y patrones predefinidos." },
+  { icon: Users, title: "Validación Humana", description: "Cada alerta es revisada por operadores formados para prevenir falsas alarmas." },
+  { icon: Workflow, title: "Ejecución de Protocolo", description: "Resolución paso a paso siguiendo tus procedimientos de respuesta personalizados." },
+  { icon: Radio, title: "Respuesta Multicanal", description: "Mensajes al huésped, llamadas telefónicas y despacho de campo — lo que haga falta." },
+  { icon: FileText, title: "Documentación Completa", description: "Cada incidencia se registra con línea temporal, acciones y resultados." },
 ];
 
 const incidentTypes = [
-  {
-    title: "Noise Violations",
-    description: "Excessive noise detected above threshold limits",
-    severity: "Medium",
-    icon: Volume2,
-    color: "bg-amber-100 text-amber-700 border-amber-200"
-  },
-  {
-    title: "Party Detection",
-    description: "Combined noise + occupancy indicates unauthorized gathering",
-    severity: "High",
-    icon: Users,
-    color: "bg-red-100 text-red-700 border-red-200"
-  },
-  {
-    title: "Smoke Alert",
-    description: "Smoke sensors triggered in the property",
-    severity: "Critical",
-    icon: Flame,
-    color: "bg-red-100 text-red-700 border-red-200"
-  },
-  {
-    title: "Unauthorized Occupancy",
-    description: "More guests detected than reservation allows",
-    severity: "Medium",
-    icon: UserCheck,
-    color: "bg-amber-100 text-amber-700 border-amber-200"
-  },
-  {
-    title: "Device Offline",
-    description: "Monitoring device has lost connectivity",
-    severity: "Low",
-    icon: WifiOff,
-    color: "bg-muted text-muted-foreground border-muted"
-  },
-  {
-    title: "Environment Alert",
-    description: "Temperature or humidity outside normal range",
-    severity: "Low",
-    icon: Thermometer,
-    color: "bg-muted text-muted-foreground border-muted"
-  },
+  { title: "Violaciones de Ruido", description: "Ruido excesivo detectado por encima de los límites establecidos", severity: "Media", icon: Volume2, color: "bg-amber-100 text-amber-700 border-amber-200" },
+  { title: "Detección de Fiestas", description: "Ruido + ocupación combinados indican reunión no autorizada", severity: "Alta", icon: Users, color: "bg-red-100 text-red-700 border-red-200" },
+  { title: "Alerta de Humo", description: "Sensores de humo activados en la propiedad", severity: "Crítica", icon: Flame, color: "bg-red-100 text-red-700 border-red-200" },
+  { title: "Ocupación No Autorizada", description: "Más huéspedes detectados de los que permite la reserva", severity: "Media", icon: UserCheck, color: "bg-amber-100 text-amber-700 border-amber-200" },
+  { title: "Dispositivo Offline", description: "El dispositivo de monitorización ha perdido conectividad", severity: "Baja", icon: WifiOff, color: "bg-muted text-muted-foreground border-muted" },
+  { title: "Alerta Ambiental", description: "Temperatura o humedad fuera del rango normal", severity: "Baja", icon: Thermometer, color: "bg-muted text-muted-foreground border-muted" },
 ];
 
 const responseProcess = [
-  {
-    step: "01",
-    title: "Detection",
-    description: "Sensors identify anomaly and send alert to Control Center."
-  },
-  {
-    step: "02",
-    title: "Verification",
-    description: "Operators analyze data to confirm incident and assess severity."
-  },
-  {
-    step: "03",
-    title: "Response",
-    description: "Appropriate action taken: guest contact, warning, or escalation."
-  },
-  {
-    step: "04",
-    title: "Resolution",
-    description: "Issue resolved, documented, and owner notified with full report."
-  },
+  { step: "01", title: "Detección", description: "Los sensores identifican la anomalía y envían alerta al Centro de Control." },
+  { step: "02", title: "Verificación", description: "Los operadores analizan datos para confirmar la incidencia y evaluar la severidad." },
+  { step: "03", title: "Respuesta", description: "Se toma la acción apropiada: contacto con huésped, aviso o escalado." },
+  { step: "04", title: "Resolución", description: "Incidencia resuelta, documentada y propietario notificado con informe completo." },
 ];
 
 const managerFeatures = [
-  "Real-time incident timeline",
-  "Complete action history",
-  "Exportable reports for insurance",
-  "Analytics and trend insights",
+  "Línea temporal de incidencias en tiempo real",
+  "Historial completo de acciones",
+  "Informes exportables para seguros",
+  "Analíticas e insights de tendencias",
 ];
 
 export default function IncidentResponse() {
@@ -139,33 +60,24 @@ export default function IncidentResponse() {
       
       <ServiceHero
         icon={AlertTriangle}
-        badge="Incident Response"
-        title="End-to-end incident"
-        titleHighlight="detection & resolution"
-        description="From the moment an anomaly is detected to complete resolution, we handle every step of the incident lifecycle professionally."
+        badge="Respuesta a Incidencias"
+        title="Detección y resolución"
+        titleHighlight="de incidencias de extremo a extremo"
+        description="Desde el momento en que se detecta una anomalía hasta la resolución completa, gestionamos cada paso del ciclo de vida de la incidencia de forma profesional."
         image={serviceImage}
-        imageAlt="Incident Response Service"
+        imageAlt="Servicio de Respuesta a Incidencias"
       />
 
       <ServiceStats stats={stats} />
-
-      <ServiceFeatures
-        eyebrow="Capabilities"
-        title="Complete incident management"
-        features={features}
-      />
+      <ServiceFeatures eyebrow="Capacidades" title="Gestión completa de incidencias" features={features} />
 
       {/* Incident Types */}
       <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              What We Handle
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
-              Types of incidents
-            </h2>
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Qué Gestionamos</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Tipos de incidencias</h2>
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -181,9 +93,7 @@ export default function IncidentResponse() {
                         <h3 className="text-lg font-semibold transition-colors group-hover:text-primary">{type.title}</h3>
                       </div>
                       <p className="text-muted-foreground text-sm mb-2">{type.description}</p>
-                      <span className={`text-xs font-medium px-2 py-1 rounded-full border ${type.color}`}>
-                        {type.severity}
-                      </span>
+                      <span className={`text-xs font-medium px-2 py-1 rounded-full border ${type.color}`}>{type.severity}</span>
                     </div>
                   </div>
                 </div>
@@ -193,28 +103,24 @@ export default function IncidentResponse() {
         </div>
       </section>
 
-      <ServiceProcess
-        eyebrow="Our Process"
-        title="How we respond"
-        steps={responseProcess}
-      />
+      <ServiceProcess eyebrow="Nuestro Proceso" title="Cómo respondemos" steps={responseProcess} />
 
       <ServiceImageSection
         eyebrow="Roomonitor Manager"
-        title="Full visibility into every incident"
-        description="Track all incidents in real-time, view complete histories, and access detailed reports — all from your dashboard."
+        title="Visibilidad total de cada incidencia"
+        description="Sigue todas las incidencias en tiempo real, visualiza historiales completos y accede a informes detallados — todo desde tu panel."
         features={managerFeatures}
         image={managerDevices}
-        imageAlt="Incident Dashboard"
-        ctaText="Explore Manager"
+        imageAlt="Panel de Incidencias"
+        ctaText="Explorar Manager"
         ctaLink="/how-it-works"
         background="secondary"
         reversed
       />
 
       <ServiceCTA
-        title="Ready for professional incident management?"
-        description="Let us handle incidents while you focus on your business. Our team is ready to protect your properties."
+        title="¿Listo para una gestión profesional de incidencias?"
+        description="Déjanos gestionar las incidencias mientras tú te centras en tu negocio. Nuestro equipo está preparado para proteger tus propiedades."
       />
 
       <Footer />

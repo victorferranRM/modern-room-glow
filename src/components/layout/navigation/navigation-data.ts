@@ -2,56 +2,56 @@
 
 export const servicesData = {
   operations: {
-    title: "OPERATIONS",
+    title: "OPERACIONES",
     items: [
       {
         title: "Guest Assist™",
-        description: "24/7 guest and incident handling outside office hours",
+        description: "Atención telefónica 24/7 para huéspedes fuera de horario",
         href: "/services/guest-assist",
       },
       {
-        title: "Control Center 24/7",
-        description: "Human verification, decision-making and escalation",
+        title: "Centro de Control 24/7",
+        description: "Verificación humana, toma de decisiones y escalado",
         href: "/services/control-center",
       },
       {
-        title: "Field Service Network",
-        description: "On-site intervention when remote resolution is not enough",
+        title: "Red de Servicio de Campo",
+        description: "Intervención in situ cuando la resolución remota no es suficiente",
         href: "/services/field-service",
       },
     ],
   },
   incidentRisk: {
-    title: "INCIDENT & RISK MANAGEMENT",
+    title: "GESTIÓN DE INCIDENCIAS Y RIESGOS",
     items: [
       {
-        title: "Incident Response",
-        description: "End-to-end incident detection and resolution",
+        title: "Respuesta a Incidencias",
+        description: "Detección y resolución de incidencias de extremo a extremo",
         href: "/services/incident-response",
       },
       {
-        title: "Emergency Handling",
-        description: "Critical situations managed with protocols and real action",
+        title: "Gestión de Emergencias",
+        description: "Situaciones críticas gestionadas con protocolos y acción real",
         href: "/services/emergency-handling",
       },
       {
         title: "Night Watch",
-        description: "Dedicated agents monitoring your properties to prevent parties before they escalate",
+        description: "Agentes dedicados monitorizando tus propiedades para prevenir fiestas",
         href: "/services/night-watch",
       },
     ],
   },
   enablement: {
-    title: "OPERATIONAL ENABLEMENT",
+    title: "HABILITACIÓN OPERATIVA",
     items: [
       {
-        title: "PMS & Tool Access",
-        description: "We operate directly from the client's operational ecosystem",
+        title: "Acceso PMS y Herramientas",
+        description: "Operamos directamente desde el ecosistema operativo del cliente",
         href: "/services/pms-access",
       },
       {
-        title: "Operational Protocols",
-        description: "Client rules and priorities executed 24/7",
+        title: "Protocolos Operativos",
+        description: "Reglas y prioridades del cliente ejecutadas 24/7",
         href: "/services/protocols",
       },
     ],
@@ -60,67 +60,67 @@ export const servicesData = {
 
 export const solutionsData = [
   {
-    title: "For Vacation Rentals",
-    description: "Full operational coverage outside office hours",
+    title: "Alquileres Vacacionales",
+    description: "Cobertura operativa completa fuera de horario",
     href: "/solutions/vacation-rentals",
   },
   {
-    title: "For Hotels",
-    description: "Smoke detection and asset protection",
+    title: "Hoteles",
+    description: "Detección de humo y protección de activos",
     href: "/solutions/hotels",
   },
   {
-    title: "For Property Owners",
-    description: "Noise monitoring and issue prevention",
+    title: "Propietarios",
+    description: "Monitorización de ruido y prevención de incidencias",
     href: "/solutions/property-owners",
   },
 ];
 
 export const monitoringData = [
   {
-    title: "Noise Monitoring",
-    description: "Real-time acoustic detection and alerts",
+    title: "Monitorización de Ruido",
+    description: "Detección acústica en tiempo real y alertas",
     href: "/monitoring/noise",
   },
   {
-    title: "Occupancy Detection",
-    description: "Accurate presence tracking for your properties",
+    title: "Detección de Ocupación",
+    description: "Seguimiento preciso de presencia en tus propiedades",
     href: "/monitoring/occupancy",
   },
   {
-    title: "Smoke Detection",
-    description: "Immediate smoke alerts to protect your assets",
+    title: "Detección de Humo",
+    description: "Alertas inmediatas de humo para proteger tus activos",
     href: "/monitoring/smoke",
   },
   {
-    title: "Air Quality, Temperature & Humidity",
-    description: "Environmental monitoring for guest comfort",
+    title: "Calidad del Aire, Temperatura y Humedad",
+    description: "Monitorización ambiental para el confort del huésped",
     href: "/monitoring/environment",
   },
 ];
 
 export const resourcesData = {
   learn: {
-    title: "LEARN",
+    title: "APRENDER",
     items: [
       { title: "Blog", href: "/blog" },
-      { title: "Guides", href: "/resources/guides" },
-      { title: "Knowledge Base", href: "/resources/knowledge-base" },
+      { title: "Guías", href: "/resources/guides" },
+      { title: "Base de Conocimiento", href: "/resources/knowledge-base" },
     ],
   },
   ecosystem: {
-    title: "ECOSYSTEM",
+    title: "ECOSISTEMA",
     items: [
-      { title: "Integrations", href: "/integrations" },
-      { title: "Case Studies", href: "/resources/case-studies" },
-      { title: "Savings Calculator", href: "/resources/savings-calculator" },
+      { title: "Integraciones", href: "/integrations" },
+      { title: "Casos de Éxito", href: "/resources/case-studies" },
+      { title: "Calculadora de Ahorro", href: "/resources/savings-calculator" },
     ],
   },
   company: {
-    title: "COMPANY",
+    title: "EMPRESA",
     items: [
-      { title: "About Roomonitor", href: "/about" },
-      { title: "Contact", href: "/contact" },
+      { title: "Sobre Roomonitor", href: "/about" },
+      { title: "Contacto", href: "/contact" },
     ],
   },
 };
