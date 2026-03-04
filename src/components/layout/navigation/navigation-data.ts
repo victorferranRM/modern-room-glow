@@ -15,7 +15,7 @@ export const servicesData = {
         href: "/services/control-center",
       },
       {
-        title: "Red de Servicio de Campo",
+        title: "Agentes Field Service",
         description: "Intervención in situ cuando la resolución remota no es suficiente",
         href: "/services/field-service",
       },
