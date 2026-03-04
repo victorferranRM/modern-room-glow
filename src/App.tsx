@@ -86,8 +86,6 @@ const App = () => (
               <Route path="/monitoring/environment" element={<EnvironmentMonitoring />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/resources/guides" element={<Guides />} />
-              <Route path="/resources/guides/guide/:guideId" element={<GuideDetail />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Auth />} />
 

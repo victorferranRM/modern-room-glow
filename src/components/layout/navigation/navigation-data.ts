@@ -95,23 +95,15 @@ export const resourcesData = {
     title: "APRENDER",
     items: [
       { title: "Blog", href: "/blog" },
-      { title: "Guías", href: "/resources/guides" },
       { title: "Base de Conocimiento", href: "/resources/knowledge-base" },
-    ],
-  },
-  ecosystem: {
-    title: "ECOSISTEMA",
-    items: [
-      { title: "Integraciones", href: "/integrations" },
-      { title: "Casos de Éxito", href: "/resources/case-studies" },
       { title: "Calculadora de Ahorro", href: "/resources/savings-calculator" },
     ],
   },
   company: {
     title: "EMPRESA",
     items: [
+      { title: "Casos de Éxito", href: "/resources/case-studies" },
       { title: "Sobre Roomonitor", href: "/about" },
-      { title: "Contacto", href: "/contact" },
     ],
   },
 };
