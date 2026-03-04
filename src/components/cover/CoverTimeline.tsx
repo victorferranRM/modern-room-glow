@@ -17,7 +17,7 @@ export function CoverTimeline() {
   return (
     <section id="como-funciona" className="py-20 lg:py-28 overflow-hidden">
       <div className="container mx-auto px-4 max-w-5xl">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12 lg:mb-14">
           <Badge variant="outline" className="mb-4">Proceso</Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             De la alerta a la resolución.{" "}
@@ -65,20 +65,20 @@ export function CoverTimeline() {
                     </div>
                   </div>
 
-                  {/* Desktop layout */}
-                  <div className="hidden md:grid md:grid-cols-[1fr_48px_1fr] lg:grid-cols-[1fr_56px_1fr] items-start py-6">
+                  {/* Desktop layout - compact */}
+                  <div className="hidden md:grid md:grid-cols-[1fr_40px_1fr] lg:grid-cols-[1fr_48px_1fr] items-center py-2 lg:py-3">
                     {/* Left column */}
-                    <div className={cn("flex", isLeft ? "justify-end pr-8" : "")}>
+                    <div className={cn("flex", isLeft ? "justify-end pr-6" : "")}>
                       {isLeft ? (
-                        <div className="bg-card border rounded-2xl p-6 max-w-md shadow-soft hover:shadow-soft-lg transition-shadow duration-300 group relative overflow-hidden">
-                          <div className="flex items-center gap-2 mb-3">
+                        <div className="bg-card border rounded-xl p-4 lg:p-5 max-w-sm shadow-soft hover:shadow-soft-lg transition-shadow duration-300 group relative overflow-hidden">
+                          <div className="flex items-center gap-2 mb-2">
                             <span className="text-xs font-bold text-muted-foreground/30 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                             <Badge variant="secondary" className="text-xs">{step.role}</Badge>
                           </div>
-                          <h3 className="font-bold text-lg text-foreground mb-2">{step.title}</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">{step.desc}</p>
+                          <h3 className="font-bold text-base text-foreground mb-1">{step.title}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed mb-2">{step.desc}</p>
                           {step.highlight && (
-                            <Badge className="mb-2 bg-primary/10 text-primary border-primary/20">{step.highlight}</Badge>
+                            <Badge className="mb-1.5 bg-primary/10 text-primary border-primary/20 text-xs">{step.highlight}</Badge>
                           )}
                           {step.link && (
                             <Link to={step.link.href} className="text-sm text-primary font-medium hover:underline block">
@@ -92,23 +92,23 @@ export function CoverTimeline() {
 
                     {/* Center node */}
                     <div className="flex justify-center relative z-10">
-                      <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-card border-2 border-primary/30 flex items-center justify-center shadow-[0_0_15px_hsl(var(--primary)/0.1)]">
-                        <Icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
+                      <div className="w-10 h-10 lg:w-11 lg:h-11 rounded-full bg-card border-2 border-primary/30 flex items-center justify-center shadow-[0_0_12px_hsl(var(--primary)/0.1)]">
+                        <Icon className="w-4 h-4 lg:w-5 lg:h-5 text-primary" />
                       </div>
                     </div>
 
                     {/* Right column */}
-                    <div className={cn("flex", !isLeft ? "pl-8" : "")}>
+                    <div className={cn("flex", !isLeft ? "pl-6" : "")}>
                       {!isLeft ? (
-                        <div className="bg-card border rounded-2xl p-6 max-w-md shadow-soft hover:shadow-soft-lg transition-shadow duration-300 group relative overflow-hidden">
-                          <div className="flex items-center gap-2 mb-3">
+                        <div className="bg-card border rounded-xl p-4 lg:p-5 max-w-sm shadow-soft hover:shadow-soft-lg transition-shadow duration-300 group relative overflow-hidden">
+                          <div className="flex items-center gap-2 mb-2">
                             <span className="text-xs font-bold text-muted-foreground/30 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                             <Badge variant="secondary" className="text-xs">{step.role}</Badge>
                           </div>
-                          <h3 className="font-bold text-lg text-foreground mb-2">{step.title}</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">{step.desc}</p>
+                          <h3 className="font-bold text-base text-foreground mb-1">{step.title}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed mb-2">{step.desc}</p>
                           {step.highlight && (
-                            <Badge className="mb-2 bg-primary/10 text-primary border-primary/20">{step.highlight}</Badge>
+                            <Badge className="mb-1.5 bg-primary/10 text-primary border-primary/20 text-xs">{step.highlight}</Badge>
                           )}
                           {step.link && (
                             <Link to={step.link.href} className="text-sm text-primary font-medium hover:underline block">
