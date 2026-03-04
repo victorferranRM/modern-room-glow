@@ -93,43 +93,38 @@ export default function SavingsCalculator() {
       <main>
         {/* Hero Section with Smoke Effect */}
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-b from-background via-secondary/40 to-background">
-          {/* Smoke Effect */}
           <SmokeEffect />
-          
-          {/* Decorative gradient overlays */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-8 animate-fade-in">
                 <AlertTriangle className="w-4 h-4" />
-                <span>Smoking incidents cost the hospitality industry millions annually</span>
+                <span>Los incidentes de humo cuestan millones al sector hotelero cada año</span>
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                Calculate Your <span className="text-primary">Smoke Detection</span> Savings
+                Calcula tu ahorro en <span className="text-primary">detección de humo</span>
               </h1>
               
               <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                See how Roomonitor's early smoke detection can protect your assets, 
-                prevent costly damages, and deliver measurable ROI for your portfolio.
+                Descubre cómo la detección temprana de humo de Roomonitor puede proteger tus activos, 
+                prevenir daños costosos y ofrecer un ROI medible para tu portfolio.
               </p>
 
-              {/* Trust indicators */}
               <div className="flex flex-wrap justify-center gap-8 mt-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-foreground">75%</div>
-                  <div className="text-sm text-muted-foreground">Incident Prevention</div>
+                  <div className="text-sm text-muted-foreground">Prevención de incidentes</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-foreground">5,000+</div>
-                  <div className="text-sm text-muted-foreground">Properties Protected</div>
+                  <div className="text-3xl font-bold text-foreground">5.000+</div>
+                  <div className="text-sm text-muted-foreground">Propiedades protegidas</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-foreground">&lt;30s</div>
-                  <div className="text-sm text-muted-foreground">Detection Time</div>
+                  <div className="text-sm text-muted-foreground">Tiempo de detección</div>
                 </div>
               </div>
             </div>
@@ -141,7 +136,7 @@ export default function SavingsCalculator() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-                {/* Calculator Card - Takes 3 columns */}
+                {/* Calculator Card */}
                 <Card className="lg:col-span-3 shadow-soft-lg border-2">
                   <CardHeader className="border-b bg-muted/30 pb-6">
                     <div className="flex items-center gap-4">
@@ -149,8 +144,8 @@ export default function SavingsCalculator() {
                         <Calculator className="w-7 h-7 text-white" />
                       </div>
                       <div>
-                        <CardTitle className="text-xl">Configure Your Portfolio</CardTitle>
-                        <CardDescription className="text-base">Adjust the parameters to match your properties</CardDescription>
+                        <CardTitle className="text-xl">Configura tu portfolio</CardTitle>
+                        <CardDescription className="text-base">Ajusta los parámetros según tus propiedades</CardDescription>
                       </div>
                     </div>
                   </CardHeader>
@@ -163,13 +158,13 @@ export default function SavingsCalculator() {
                             <Building2 className="w-5 h-5 text-primary" />
                           </div>
                           <div>
-                            <label className="text-sm font-semibold text-foreground">Number of Properties</label>
-                            <p className="text-xs text-muted-foreground">Total units in your portfolio</p>
+                            <label className="text-sm font-semibold text-foreground">Número de propiedades</label>
+                            <p className="text-xs text-muted-foreground">Total de unidades en tu portfolio</p>
                           </div>
                         </div>
                         <div className="text-right">
                           <span className="text-2xl font-bold text-primary">{units[0]}</span>
-                          <span className="text-sm text-muted-foreground ml-1">units</span>
+                          <span className="text-sm text-muted-foreground ml-1">uds.</span>
                         </div>
                       </div>
                       <Slider
@@ -181,8 +176,8 @@ export default function SavingsCalculator() {
                         className="w-full"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
-                        <span>10 units</span>
-                        <span>500 units</span>
+                        <span>10 uds.</span>
+                        <span>500 uds.</span>
                       </div>
                     </div>
 
@@ -194,13 +189,13 @@ export default function SavingsCalculator() {
                             <Flame className="w-5 h-5 text-destructive" />
                           </div>
                           <div>
-                            <label className="text-sm font-semibold text-foreground">Annual Incident Rate</label>
-                            <p className="text-xs text-muted-foreground">Percentage of properties affected yearly</p>
+                            <label className="text-sm font-semibold text-foreground">Tasa anual de incidentes</label>
+                            <p className="text-xs text-muted-foreground">Porcentaje de propiedades afectadas al año</p>
                           </div>
                         </div>
                         <div className="text-right">
                           <span className="text-2xl font-bold text-destructive">{incidentRate[0]}%</span>
-                          <span className="text-sm text-muted-foreground ml-1">/year</span>
+                          <span className="text-sm text-muted-foreground ml-1">/año</span>
                         </div>
                       </div>
                       <Slider
@@ -225,8 +220,8 @@ export default function SavingsCalculator() {
                             <AlertTriangle className="w-5 h-5 text-warning" />
                           </div>
                           <div>
-                            <label className="text-sm font-semibold text-foreground">Average Damage Cost</label>
-                            <p className="text-xs text-muted-foreground">Per smoking incident</p>
+                            <label className="text-sm font-semibold text-foreground">Coste medio por daño</label>
+                            <p className="text-xs text-muted-foreground">Por incidente de humo</p>
                           </div>
                         </div>
                         <div className="text-right">
@@ -243,72 +238,70 @@ export default function SavingsCalculator() {
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
                         <span>€100</span>
-                        <span>€1,000</span>
+                        <span>€1.000</span>
                       </div>
                     </div>
 
                     {/* Info box */}
                     <div className="p-4 rounded-xl bg-muted/50 border border-border">
                       <p className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">Industry average:</strong> Hotels and vacation rentals typically experience 5-15% smoking incidents annually, 
-                        with damages ranging from €200-€800 per incident including cleaning, repairs, and lost revenue.
+                        <strong className="text-foreground">Media del sector:</strong> Hoteles y alquileres vacacionales suelen experimentar entre un 5-15% de incidentes de humo al año, 
+                        con daños que van de €200 a €800 por incidente incluyendo limpieza, reparaciones e ingresos perdidos.
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Results Card - Takes 2 columns */}
+                {/* Results Card */}
                 <div className="lg:col-span-2 space-y-6">
-                  {/* Main Savings Card */}
                   <Card className="shadow-soft-lg overflow-hidden">
                     <div className="gradient-primary p-6 text-white">
                       <div className="flex items-center gap-2 text-white/80 text-sm font-medium mb-2">
                         <TrendingUp className="w-4 h-4" />
-                        Your Estimated Annual Savings
+                        Tu ahorro anual estimado
                       </div>
                       <div className="text-5xl lg:text-6xl font-bold mb-1">
                         <AnimatedCounter value={annualSavings} prefix="€" />
                       </div>
                       <div className="text-white/70">
-                        €{monthlySavings.toLocaleString()}/month
+                        €{monthlySavings.toLocaleString()}/mes
                       </div>
                     </div>
                     <CardContent className="p-6 space-y-4">
                       <div className="flex items-center justify-between py-3 border-b">
-                        <span className="text-muted-foreground">Estimated incidents/year</span>
+                        <span className="text-muted-foreground">Incidentes estimados/año</span>
                         <span className="font-semibold text-lg">{annualIncidents}</span>
                       </div>
                       <div className="flex items-center justify-between py-3 border-b">
-                        <span className="text-muted-foreground">Total potential damage</span>
+                        <span className="text-muted-foreground">Daño potencial total</span>
                         <span className="font-semibold text-lg text-destructive">€{annualDamageCost.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center justify-between py-3 border-b">
-                        <span className="text-muted-foreground">Prevention rate</span>
+                        <span className="text-muted-foreground">Tasa de prevención</span>
                         <span className="font-semibold text-lg text-primary">75%</span>
                       </div>
                       <div className="flex items-center justify-between py-3 bg-primary/5 -mx-6 px-6 rounded-lg">
-                        <span className="font-medium">3-Year Savings</span>
+                        <span className="font-medium">Ahorro a 3 años</span>
                         <span className="font-bold text-xl text-primary">€{threeYearSavings.toLocaleString()}</span>
                       </div>
                     </CardContent>
                   </Card>
 
-                  {/* CTA Card */}
                   <Card className="border-2 border-primary/20 bg-gradient-to-br from-card to-primary/5">
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold mb-2">Ready to protect your properties?</h3>
+                      <h3 className="text-lg font-semibold mb-2">¿Listo para proteger tus propiedades?</h3>
                       <p className="text-muted-foreground text-sm mb-5">
-                        Get a personalized quote and see how Roomonitor can work for your portfolio.
+                        Obtén un presupuesto personalizado y descubre cómo Roomonitor puede funcionar para tu portfolio.
                       </p>
                       <div className="space-y-3">
                         <Button size="lg" className="w-full shadow-lg" asChild>
                           <Link to="/contact">
-                            Book a Demo
+                            Solicitar una demo
                             <ArrowRight className="w-4 h-4 ml-2" />
                           </Link>
                         </Button>
                         <Button size="lg" variant="outline" className="w-full" asChild>
-                          <Link to="/pricing">View Pricing</Link>
+                          <Link to="/pricing">Ver precios</Link>
                         </Button>
                       </div>
                     </CardContent>
@@ -325,11 +318,11 @@ export default function SavingsCalculator() {
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-                  How Smoke Detection Protects Your Investment
+                  Cómo la detección de humo protege tu inversión
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Our advanced sensors detect cigarette smoke within seconds, enabling immediate intervention 
-                  before damage occurs.
+                  Nuestros sensores avanzados detectan el humo de cigarrillo en segundos, permitiendo una intervención inmediata 
+                  antes de que se produzcan daños.
                 </p>
               </div>
 
@@ -340,10 +333,10 @@ export default function SavingsCalculator() {
                     <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <span className="text-xl font-bold text-primary">1</span>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">Instant Detection</h3>
+                    <h3 className="font-semibold text-lg mb-2">Detección instantánea</h3>
                     <p className="text-muted-foreground text-sm">
-                      Advanced sensors identify cigarette smoke particles in under 30 seconds, 
-                      far faster than traditional smoke detectors.
+                      Los sensores avanzados identifican partículas de humo de cigarrillo en menos de 30 segundos, 
+                      mucho más rápido que los detectores de humo tradicionales.
                     </p>
                   </CardContent>
                 </Card>
@@ -354,10 +347,10 @@ export default function SavingsCalculator() {
                     <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <span className="text-xl font-bold text-primary">2</span>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">Immediate Alert</h3>
+                    <h3 className="font-semibold text-lg mb-2">Alerta inmediata</h3>
                     <p className="text-muted-foreground text-sm">
-                      Our Control Center receives the alert instantly and initiates 
-                      the intervention protocol based on your preferences.
+                      Nuestro Centro de Control recibe la alerta al instante e inicia 
+                      el protocolo de intervención según tus preferencias.
                     </p>
                   </CardContent>
                 </Card>
@@ -368,10 +361,10 @@ export default function SavingsCalculator() {
                     <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <span className="text-xl font-bold text-primary">3</span>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">Swift Resolution</h3>
+                    <h3 className="font-semibold text-lg mb-2">Resolución rápida</h3>
                     <p className="text-muted-foreground text-sm">
-                      Guest is contacted, situation resolved, and damage prevented — 
-                      all before smoke permeates fabrics and surfaces.
+                      Se contacta al huésped, se resuelve la situación y se previene el daño — 
+                      todo antes de que el humo impregne tejidos y superficies.
                     </p>
                   </CardContent>
                 </Card>
@@ -387,29 +380,29 @@ export default function SavingsCalculator() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
-                    Why Property Managers Choose Roomonitor
+                    Por qué los gestores eligen Roomonitor
                   </h2>
                   <div className="space-y-6">
                     {[
                       {
                         icon: Shield,
-                        title: "Asset Protection",
-                        description: "Prevent costly deep cleaning, furniture replacement, and repainting caused by smoke damage.",
+                        title: "Protección de activos",
+                        description: "Prevén costosas limpiezas profundas, sustitución de mobiliario y repintado causados por daños de humo.",
                       },
                       {
                         icon: Flame,
-                        title: "Policy Enforcement",
-                        description: "Effectively enforce non-smoking policies with evidence-backed incident documentation.",
+                        title: "Aplicación de políticas",
+                        description: "Aplica eficazmente políticas de no fumadores con documentación de incidentes basada en evidencias.",
                       },
                       {
                         icon: TrendingUp,
-                        title: "Proven ROI",
-                        description: "Most properties see full ROI within 3-6 months through prevented damages alone.",
+                        title: "ROI demostrado",
+                        description: "La mayoría de propiedades recuperan la inversión en 3-6 meses solo con los daños prevenidos.",
                       },
                       {
                         icon: CheckCircle2,
-                        title: "24/7 Monitoring",
-                        description: "Round-the-clock protection ensures incidents are caught regardless of when they occur.",
+                        title: "Monitorización 24/7",
+                        description: "Protección continua que garantiza la detección de incidentes sin importar cuándo ocurran.",
                       },
                     ].map((benefit, i) => (
                       <div key={i} className="flex gap-4 group">
@@ -430,17 +423,17 @@ export default function SavingsCalculator() {
                   <div className="space-y-8">
                     <div>
                       <div className="text-5xl font-bold text-primary mb-2">75%</div>
-                      <div className="text-slate-300">of smoking incidents prevented with early detection</div>
+                      <div className="text-slate-300">de incidentes de humo prevenidos con detección temprana</div>
                     </div>
                     <div className="h-px bg-slate-700" />
                     <div>
                       <div className="text-5xl font-bold text-primary mb-2">€350</div>
-                      <div className="text-slate-300">average cost per undetected smoking incident</div>
+                      <div className="text-slate-300">coste medio por incidente de humo no detectado</div>
                     </div>
                     <div className="h-px bg-slate-700" />
                     <div>
-                      <div className="text-5xl font-bold text-primary mb-2">3-6mo</div>
-                      <div className="text-slate-300">typical payback period for Roomonitor</div>
+                      <div className="text-5xl font-bold text-primary mb-2">3-6 meses</div>
+                      <div className="text-slate-300">periodo típico de retorno de inversión con Roomonitor</div>
                     </div>
                   </div>
                 </Card>
