@@ -8,103 +8,103 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { 
+import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { 
+  SelectValue } from
+"@/components/ui/select";
+import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage } from
+"@/components/ui/form";
 import { CountrySelect } from "@/components/ui/country-select";
 import { PhoneInput } from "@/components/ui/phone-input";
-import { 
-  ArrowRight, 
-  Building2, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import {
+  ArrowRight,
+  Building2,
+  Mail,
+  Phone,
+  MapPin,
   Clock,
   MessageSquare,
   Users,
   Shield,
   CheckCircle2,
-  Headphones
-} from "lucide-react";
+  Headphones } from
+"lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const inquiryTypes = [
-  { value: "devices", label: "Dispositivo / Sensores" },
-  { value: "cover", label: "Cover™ (Operativa delegada)" },
-  { value: "pms", label: "Integraciones PMS" },
-  { value: "support", label: "Soporte técnico" },
-  { value: "careers", label: "Buscamos talento" },
-  { value: "general", label: "Consulta general" },
-];
+{ value: "devices", label: "Dispositivo / Sensores" },
+{ value: "cover", label: "Cover™ (Operativa delegada)" },
+{ value: "pms", label: "Integraciones PMS" },
+{ value: "support", label: "Soporte técnico" },
+{ value: "careers", label: "Buscamos talento" },
+{ value: "general", label: "Consulta general" }];
+
 
 
 const benefits = [
-  "Demo personalizada de nuestra plataforma",
-  "Precios adaptados a tu portfolio",
-  "Consulta sin compromiso",
-  "Asesoramiento experto de nuestro equipo",
-];
+"Demo personalizada de nuestra plataforma",
+"Precios adaptados a tu portfolio",
+"Consulta sin compromiso",
+"Asesoramiento experto de nuestro equipo"];
+
 
 const contactFormSchema = z.object({
-  firstName: z
-    .string()
-    .min(1, "El nombre es obligatorio")
-    .max(50, "El nombre debe tener menos de 50 caracteres")
-    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "El nombre contiene caracteres no válidos"),
-  lastName: z
-    .string()
-    .min(1, "Los apellidos son obligatorios")
-    .max(50, "Los apellidos deben tener menos de 50 caracteres")
-    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "Los apellidos contienen caracteres no válidos"),
-  email: z
-    .string()
-    .min(1, "El email es obligatorio")
-    .email("Introduce un email válido")
-    .max(255, "El email debe tener menos de 255 caracteres"),
-  phone: z
-    .string()
-    .min(1, "El teléfono es obligatorio")
-    .max(30, "El teléfono debe tener menos de 30 caracteres"),
-  company: z
-    .string()
-    .min(1, "El nombre de la empresa es obligatorio")
-    .max(100, "El nombre de la empresa debe tener menos de 100 caracteres"),
-  country: z
-    .string()
-    .min(1, "El país es obligatorio"),
-  city: z
-    .string()
-    .min(1, "La ciudad es obligatoria")
-    .max(100, "La ciudad debe tener menos de 100 caracteres"),
-  province: z
-    .string()
-    .max(100, "La provincia debe tener menos de 100 caracteres")
-    .optional()
-    .or(z.literal("")),
-  propertySize: z
-    .string()
-    .min(1, "Indica el número de propiedades")
-    .regex(/^\d+$/, "Solo se permiten números"),
-  inquiryType: z
-    .string()
-    .min(1, "Selecciona un tipo de consulta"),
-  message: z
-    .string()
-    .min(1, "El mensaje es obligatorio")
-    .max(2000, "El mensaje debe tener menos de 2000 caracteres"),
+  firstName: z.
+  string().
+  min(1, "El nombre es obligatorio").
+  max(50, "El nombre debe tener menos de 50 caracteres").
+  regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "El nombre contiene caracteres no válidos"),
+  lastName: z.
+  string().
+  min(1, "Los apellidos son obligatorios").
+  max(50, "Los apellidos deben tener menos de 50 caracteres").
+  regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, "Los apellidos contienen caracteres no válidos"),
+  email: z.
+  string().
+  min(1, "El email es obligatorio").
+  email("Introduce un email válido").
+  max(255, "El email debe tener menos de 255 caracteres"),
+  phone: z.
+  string().
+  min(1, "El teléfono es obligatorio").
+  max(30, "El teléfono debe tener menos de 30 caracteres"),
+  company: z.
+  string().
+  min(1, "El nombre de la empresa es obligatorio").
+  max(100, "El nombre de la empresa debe tener menos de 100 caracteres"),
+  country: z.
+  string().
+  min(1, "El país es obligatorio"),
+  city: z.
+  string().
+  min(1, "La ciudad es obligatoria").
+  max(100, "La ciudad debe tener menos de 100 caracteres"),
+  province: z.
+  string().
+  max(100, "La provincia debe tener menos de 100 caracteres").
+  optional().
+  or(z.literal("")),
+  propertySize: z.
+  string().
+  min(1, "Indica el número de propiedades").
+  regex(/^\d+$/, "Solo se permiten números"),
+  inquiryType: z.
+  string().
+  min(1, "Selecciona un tipo de consulta"),
+  message: z.
+  string().
+  min(1, "El mensaje es obligatorio").
+  max(2000, "El mensaje debe tener menos de 2000 caracteres")
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -127,15 +127,15 @@ export default function Contact() {
       province: "",
       propertySize: "",
       inquiryType: "",
-      message: "",
-    },
+      message: ""
+    }
   });
 
   const selectedCountry = form.watch("country");
 
   useEffect(() => {
     const initialInquiry = searchParams.get("inquiry") || "";
-    if (initialInquiry && inquiryTypes.some(t => t.value === initialInquiry)) {
+    if (initialInquiry && inquiryTypes.some((t) => t.value === initialInquiry)) {
       form.setValue("inquiryType", initialInquiry);
     }
   }, [searchParams, form]);
@@ -144,21 +144,21 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const { error: dbError } = await supabase
-        .from("contact_inquiries")
-        .insert({
-          first_name: data.firstName,
-          last_name: data.lastName,
-          email: data.email,
-          phone: data.phone || null,
-          company: data.company,
-          country: data.country,
-          city: data.city || null,
-          province: data.province || null,
-          property_size: data.propertySize || null,
-          inquiry_type: data.inquiryType,
-          message: data.message || null,
-        });
+      const { error: dbError } = await supabase.
+      from("contact_inquiries").
+      insert({
+        first_name: data.firstName,
+        last_name: data.lastName,
+        email: data.email,
+        phone: data.phone || null,
+        company: data.company,
+        country: data.country,
+        city: data.city || null,
+        province: data.province || null,
+        property_size: data.propertySize || null,
+        inquiry_type: data.inquiryType,
+        message: data.message || null
+      });
 
       if (dbError) throw dbError;
 
@@ -173,7 +173,7 @@ export default function Contact() {
 
       toast({
         title: "¡Mensaje enviado correctamente!",
-        description: "Nuestro equipo te responderá en menos de 24 horas.",
+        description: "Nuestro equipo te responderá en menos de 24 horas."
       });
 
       form.reset();
@@ -182,7 +182,7 @@ export default function Contact() {
       toast({
         title: "Algo ha ido mal",
         description: "Inténtalo de nuevo o escríbenos directamente a info@roomonitor.com",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
@@ -234,203 +234,203 @@ export default function Contact() {
                         <FormField
                           control={form.control}
                           name="firstName"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Nombre *</FormLabel>
                               <FormControl>
                                 <Input placeholder="Juan" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                         <FormField
                           control={form.control}
                           name="lastName"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Apellidos *</FormLabel>
                               <FormControl>
                                 <Input placeholder="García" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="email"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Email profesional *</FormLabel>
                               <FormControl>
                                 <Input type="email" placeholder="juan@empresa.com" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                         <FormField
                           control={form.control}
                           name="company"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Empresa *</FormLabel>
                               <FormControl>
                                 <Input placeholder="Tu empresa" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="country"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">País *</FormLabel>
                               <FormControl>
                                 <CountrySelect
-                                  value={field.value}
-                                  onValueChange={field.onChange}
-                                  placeholder="Selecciona país"
-                                />
+                                value={field.value}
+                                onValueChange={field.onChange}
+                                placeholder="Selecciona país" />
+                              
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                         <FormField
                           control={form.control}
                           name="phone"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Teléfono</FormLabel>
                               <FormControl>
                                 <PhoneInput
-                                  value={field.value}
-                                  onChange={field.onChange}
-                                  countryCode={selectedCountry}
-                                  placeholder="Número de teléfono"
-                                />
+                                value={field.value}
+                                onChange={field.onChange}
+                                countryCode={selectedCountry}
+                                placeholder="Número de teléfono" />
+                              
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="city"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Ciudad *</FormLabel>
                               <FormControl>
                                 <Input placeholder="Barcelona" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                         <FormField
                           control={form.control}
                           name="province"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Provincia / Estado</FormLabel>
                               <FormControl>
                                 <Input placeholder="Barcelona" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="inquiryType"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Tipo de consulta *</FormLabel>
                               <Select
-                                value={field.value}
-                                onValueChange={field.onChange}
-                              >
+                              value={field.value}
+                              onValueChange={field.onChange}>
+                              
                                 <FormControl>
                                   <SelectTrigger>
                                     <SelectValue placeholder="Selecciona tipo" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                  {inquiryTypes.map((type) => (
-                                    <SelectItem key={type.value} value={type.value}>
+                                  {inquiryTypes.map((type) =>
+                                <SelectItem key={type.value} value={type.value}>
                                       {type.label}
                                     </SelectItem>
-                                  ))}
+                                )}
                                 </SelectContent>
                               </Select>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                         <FormField
                           control={form.control}
                           name="propertySize"
-                          render={({ field }) => (
-                            <FormItem>
+                          render={({ field }) =>
+                          <FormItem>
                               <FormLabel className="text-sm">Tamaño del portfolio *</FormLabel>
                               <FormControl>
                                 <Input
-                                  type="text"
-                                  inputMode="numeric"
-                                  placeholder="Escribe un número"
-                                  value={field.value}
-                                  onChange={(e) => {
-                                    const val = e.target.value.replace(/\D/g, "");
-                                    field.onChange(val);
-                                  }}
-                                />
+                                type="text"
+                                inputMode="numeric"
+                                placeholder="Escribe un número"
+                                value={field.value}
+                                onChange={(e) => {
+                                  const val = e.target.value.replace(/\D/g, "");
+                                  field.onChange(val);
+                                }} />
+                              
                               </FormControl>
                               <FormMessage />
                             </FormItem>
-                          )}
-                        />
+                          } />
+                        
                       </div>
 
                       <FormField
                         control={form.control}
                         name="message"
-                        render={({ field }) => (
-                          <FormItem>
+                        render={({ field }) =>
+                        <FormItem>
                             <FormLabel className="text-sm">Mensaje *</FormLabel>
                             <FormControl>
                               <Textarea
-                                placeholder="Cuéntanos sobre tus propiedades y qué necesitas..."
-                                rows={4}
-                                {...field}
-                              />
+                              placeholder="Cuéntanos sobre tus propiedades y qué necesitas..."
+                              rows={4}
+                              {...field} />
+                            
                             </FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}
-                      />
+                        } />
+                      
 
-                      <Button 
-                        type="submit" 
-                        size="lg" 
+                      <Button
+                        type="submit"
+                        size="lg"
                         className="w-full"
-                        disabled={isSubmitting}
-                      >
+                        disabled={isSubmitting}>
+                        
                         {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
@@ -450,12 +450,12 @@ export default function Contact() {
                 <div className="bg-primary/5 border border-primary/10 rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8">
                   <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">Qué puedes esperar</h3>
                   <ul className="space-y-2 md:space-y-3">
-                    {benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-start gap-2 md:gap-3">
+                    {benefits.map((benefit) =>
+                    <li key={benefit} className="flex items-start gap-2 md:gap-3">
                         <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-sm md:text-base text-muted-foreground">{benefit}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
 
@@ -470,10 +470,10 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="font-medium text-sm md:text-base text-foreground">Email</p>
-                        <a 
-                          href="mailto:info@roomonitor.com" 
-                          className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors"
-                        >
+                        <a
+                          href="mailto:info@roomonitor.com"
+                          className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
+                          
                           info@roomonitor.com
                         </a>
                       </div>
@@ -485,10 +485,10 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="font-medium text-sm md:text-base text-foreground">Teléfono</p>
-                        <a 
-                          href="tel:+34930180130" 
-                          className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors"
-                        >
+                        <a
+                          href="tel:+34930180130"
+                          className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
+                          
                           +34 930 180 130
                         </a>
                       </div>
@@ -499,7 +499,9 @@ export default function Contact() {
                         <MapPin className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium text-sm md:text-base text-foreground">Sede central</p>
+                        <p className="font-medium text-sm md:text-base text-foreground">Oficina
+
+                        </p>
                         <p className="text-sm md:text-base text-muted-foreground">
                           Barcelona, España
                         </p>
@@ -524,14 +526,12 @@ export default function Contact() {
                     <Headphones className="w-5 h-5 md:w-6 md:h-6" />
                     <h3 className="text-base md:text-lg font-semibold">¿Necesitas ayuda inmediata?</h3>
                   </div>
-                  <p className="text-background/70 mb-4 text-xs md:text-sm">
-                    Los clientes existentes pueden contactar con nuestro equipo de soporte 24/7 directamente.
+                  <p className="text-background/70 mb-4 text-xs md:text-sm">Los clientes pueden contactar con su agente de Client Success directamente.
+
                   </p>
-                  <Button 
-                    variant="secondary" 
-                    className="w-full bg-background text-foreground hover:bg-background/90"
-                    asChild
-                  >
+                  <Button variant="secondary" className="w-full bg-background text-foreground hover:bg-background/90"
+                  asChild>
+                    
                     <a href="tel:+34930180130">
                       <Phone className="w-4 h-4 mr-2" />
                       Llámanos
@@ -573,6 +573,6 @@ export default function Contact() {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
