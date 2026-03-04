@@ -28,6 +28,7 @@ export function MegaMenuResources() {
           <ul className="space-y-4">
             {resourcesData.learn.items.map((item, index) => {
               const Icon = learnIcons[index];
+              const isCalculator = item.href === "/resources/savings-calculator";
               return (
                 <li key={item.title}>
                   <Link
@@ -44,6 +45,11 @@ export function MegaMenuResources() {
                       <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
                         {learnDescriptions[index]}
                       </span>
+                      {isCalculator && (
+                        <span className="inline-flex items-center text-xs font-medium text-primary mt-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                          Probar calculadora →
+                        </span>
+                      )}
                     </div>
                   </Link>
                 </li>
@@ -83,29 +89,6 @@ export function MegaMenuResources() {
             })}
           </ul>
         </div>
-      </div>
-
-      {/* Featured CTA - Savings Calculator */}
-      <div className="mt-8 pt-6 border-t">
-        <Link
-          to="/resources/savings-calculator"
-          className="group flex items-center gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
-        >
-          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-            <Calculator className="w-6 h-6 text-primary" />
-          </div>
-          <div className="flex-1">
-            <span className="block text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
-              ¿Cuánto podrías ahorrar con Roomonitor?
-            </span>
-            <span className="block text-sm text-muted-foreground mt-0.5">
-              Calcula tu ahorro potencial con nuestras soluciones de detección de humo y monitorización
-            </span>
-          </div>
-          <span className="text-primary text-sm font-medium">
-            Probar Calculadora →
-          </span>
-        </Link>
       </div>
     </div>
   );
