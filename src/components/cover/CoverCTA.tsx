@@ -36,7 +36,7 @@ export function CoverCTA() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-background/30 text-background hover:bg-background/10 text-base px-8 py-6">
+            <Button size="lg" variant="outline" asChild className="border-background/30 bg-transparent text-background hover:bg-background/10 text-base px-8 py-6">
               <Link to="/pricing">Ver precios</Link>
             </Button>
           </div>

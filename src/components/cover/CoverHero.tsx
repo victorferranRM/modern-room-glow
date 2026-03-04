@@ -23,7 +23,7 @@ export function CoverHero() {
         <div className="max-w-4xl mx-auto text-center space-y-10">
           {/* Badge */}
           <div className="animate-fade-in flex justify-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-float shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_25px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_25px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
               <Shield className="w-4 h-4" />
               <span>Roomonitor Cover™</span>
             </div>

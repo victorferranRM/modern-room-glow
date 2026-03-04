@@ -296,7 +296,7 @@ export default function HowItWorks() {
                   <Button 
                     size="lg" 
                     variant="outline"
-                    className="border-background/20 text-background hover:bg-background/10"
+                    className="border-background/20 bg-transparent text-background hover:bg-background/10"
                     asChild
                   >
                     <Link to="/pricing">
