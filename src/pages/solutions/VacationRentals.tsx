@@ -86,7 +86,7 @@ const pricingPlans = [
     devicePrice: "Included",
     description: "24/7 human-led monitoring and response",
     features: [
-      "Everything in Basic",
+      "Everything in Noise Alarm",
       "24/7 Alarm Assistant",
       "Control Center escalation",
       "Guest communication",
