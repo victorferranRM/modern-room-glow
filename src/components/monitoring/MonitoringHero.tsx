@@ -22,8 +22,8 @@ interface MonitoringHeroProps {
 
 export function MonitoringHero({
   icon: Icon, badge, title, titleHighlight, description, image, imageAlt, breadcrumbLabel,
-  primaryCTA = { text: "Empezar", link: "/pricing" },
-  secondaryCTA = { text: "Solicitar Demo", link: "/contact" },
+  primaryCTA = { text: "Ver precios", link: "/pricing" },
+  secondaryCTA = { text: "Solicitar una demo", link: "/contact" },
 }: MonitoringHeroProps) {
   return (
     <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
