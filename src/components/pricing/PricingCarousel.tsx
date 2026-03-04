@@ -58,7 +58,7 @@ export function PricingCarousel({
   const plans = [
     {
       key: "basic",
-      name: "Basic",
+      name: "Noise Alarm",
       subtitle: "Dispositivo + suscripción de monitorización",
       features: [
         { icon: Bell, text: "Dispositivo de monitorización Roomonitor" },
