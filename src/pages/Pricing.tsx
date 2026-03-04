@@ -287,7 +287,7 @@ export default function Pricing() {
 
                   <ul className="space-y-3">
                     {[
-                      { icon: Check, text: "Todo lo de Pro" },
+                      { icon: Check, text: "Todo lo de Alarm Assistant" },
                       { icon: Home, text: "Servicios de huésped y propiedad" },
                       { icon: Users, text: "Gestión operativa completa" },
                       { icon: Shield, text: "Acuerdos SLA personalizados" },

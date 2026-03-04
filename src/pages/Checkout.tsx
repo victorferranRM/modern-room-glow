@@ -34,7 +34,7 @@ const PLANS = {
     originalDevicePrice: 90,
     monthlyPrice: 29.90,
     features: [
-      "Todo lo de Basic",
+      "Todo lo de Noise Alarm",
       "Alarm Assistant",
       "Agentes humanos monitorizando alarmas",
       "Gestión de alarmas 24/7",

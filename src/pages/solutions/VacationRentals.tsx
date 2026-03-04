@@ -103,7 +103,7 @@ const pricingPlans = [
     devicePrice: "Included",
     description: "Full operational management",
     features: [
-      "Everything in Pro",
+      "Everything in Alarm Assistant",
       "Dedicated account manager",
       "Custom protocols",
       "Field service access",

@@ -168,7 +168,7 @@ export function PortalSidebar() {
                   {company?.name || "My Company"}
                 </p>
                 <p className="text-muted-foreground">
-                  {subscription?.plan_name || "Basic"} Plan
+                  {subscription?.plan_name || "Noise Alarm"} Plan
                 </p>
               </div>
             </div>

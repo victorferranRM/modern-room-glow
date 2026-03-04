@@ -24,7 +24,7 @@ import {
 
 // Mock data
 const subscriptionData = {
-  plan: "Pro",
+  plan: "Alarm Assistant",
   status: "active",
   billingFrequency: "Monthly",
   nextInvoiceDate: "February 15, 2026",

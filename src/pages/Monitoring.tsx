@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { 
   Volume2, Users, Flame, Thermometer, Wifi, Battery, 
-  Shield, ArrowRight, Check, X, Zap, Settings, Download, Clock
+  Shield, ArrowRight, Check, X, Zap, Settings, Download, Clock, Headphones
 } from "lucide-react";
 import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 
