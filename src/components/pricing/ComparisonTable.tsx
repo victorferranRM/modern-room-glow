@@ -206,7 +206,7 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
               ) : (
                 <Button className="w-full" size="lg" asChild>
                   <Link to={`/checkout?plan=${selectedPlan}&properties=${properties}`}>
-                    Elegir {PLANS.find((p) => p.key === selectedPlan)?.name}
+                    Elegir plan
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
