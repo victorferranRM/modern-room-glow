@@ -91,9 +91,8 @@ const contactFormSchema = z.object({
   max(100, "La ciudad debe tener menos de 100 caracteres"),
   province: z.
   string().
-  max(100, "La provincia debe tener menos de 100 caracteres").
-  optional().
-  or(z.literal("")),
+  min(1, "La provincia es obligatoria").
+  max(100, "La provincia debe tener menos de 100 caracteres"),
   propertySize: z.
   string().
   min(1, "Indica el número de propiedades").
@@ -154,7 +153,7 @@ export default function Contact() {
         company: data.company,
         country: data.country,
         city: data.city || null,
-        province: data.province || null,
+        province: data.province,
         property_size: data.propertySize || null,
         inquiry_type: data.inquiryType,
         message: data.message || null
@@ -306,7 +305,7 @@ export default function Contact() {
                           name="phone"
                           render={({ field }) =>
                           <FormItem>
-                              <FormLabel className="text-sm">Teléfono</FormLabel>
+                              <FormLabel className="text-sm">Teléfono *</FormLabel>
                               <FormControl>
                                 <PhoneInput
                                 value={field.value}
@@ -340,7 +339,7 @@ export default function Contact() {
                           name="province"
                           render={({ field }) =>
                           <FormItem>
-                              <FormLabel className="text-sm">Provincia / Estado</FormLabel>
+                              <FormLabel className="text-sm">Provincia / Estado *</FormLabel>
                               <FormControl>
                                 <Input placeholder="Barcelona" {...field} />
                               </FormControl>
