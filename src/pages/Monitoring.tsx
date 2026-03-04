@@ -324,59 +324,127 @@ export default function Monitoring() {
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
               Empieza hoy
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Autoservicio para hasta 10 propiedades, o habla con un especialista para portfolios más grandes.
+            </p>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
-            <div className="max-w-md mx-auto">
-              <div className="relative p-8 rounded-3xl border-2 border-primary bg-card shadow-xl">
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+              {/* Basic Plan */}
+              <div className="bg-card border rounded-2xl p-6 lg:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Basic</h3>
+                    <p className="text-sm text-muted-foreground mt-1">Dispositivo + suscripción de monitorización</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="space-y-1">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-lg text-muted-foreground line-through">€90</span>
+                        <span className="text-3xl font-bold text-foreground">€45</span>
+                        <span className="text-sm text-muted-foreground">pago único</span>
+                      </div>
+                      <div className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-0.5 rounded">
+                        Precio exclusivo web
+                      </div>
+                    </div>
+                    <div className="pt-2 border-t border-border">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-2xl font-bold text-foreground">€13</span>
+                        <span className="text-muted-foreground">/ mes por propiedad</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Dispositivo de monitorización Roomonitor</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Alertas en tiempo real</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Dashboard y app móvil</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Notificaciones email y push</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full" size="lg" asChild>
+                    <Link to="/checkout?plan=basic&properties=1">
+                      Comprar ahora
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Pro Plan */}
+              <div className="relative bg-card border-2 border-primary rounded-2xl p-6 lg:p-8 shadow-soft-lg hover:-translate-y-1 transition-all duration-300">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded-full">
+                  <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">
                     Más popular
                   </span>
                 </div>
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">Dispositivo Roomonitor</h3>
-                  <p className="text-muted-foreground">Solución de monitorización todo-en-uno</p>
-                </div>
-
-                <div className="text-center mb-8">
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-bold">€149</span>
-                    <span className="text-muted-foreground">/dispositivo</span>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Pro</h3>
+                    <p className="text-sm text-muted-foreground mt-1">Todo lo de Basic + Alarm Assistant</p>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    + €5,99/mes de suscripción
-                  </p>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">Todas las capacidades de monitorización incluidas</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">Alertas en tiempo real y dashboard</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">Envío gratis y devolución en 30 días</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-success shrink-0" />
-                    <span className="text-sm">Garantía de 2 años</span>
-                  </li>
-                </ul>
-
-                <div className="space-y-3">
-                  <Button size="lg" className="w-full" asChild>
-                    <Link to="/checkout">Comprar ahora</Link>
+                  <div className="space-y-2">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-3xl font-bold text-foreground">€29,90</span>
+                      <span className="text-muted-foreground">/ mes por propiedad</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">+ €45 pago único por dispositivo (exclusivo web)</p>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Todo lo de Basic</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Alarm Assistant</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Agentes humanos monitorizando alarmas</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">Gestión de alarmas 24/7</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full shadow-soft" size="lg" asChild>
+                    <Link to="/checkout?plan=pro&properties=1">
+                      Comprar ahora
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="w-full" asChild>
-                    <Link to="/contact">Solicitar demo</Link>
-                  </Button>
                 </div>
+              </div>
+            </div>
+
+            {/* Enterprise CTA */}
+            <div className="max-w-4xl mx-auto mt-6">
+              <div className="bg-gradient-to-br from-secondary to-muted border rounded-2xl p-6 lg:p-8 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-2">Enterprise</h3>
+                <p className="text-sm text-muted-foreground mb-1">Gestión operativa completa</p>
+                <div className="flex items-baseline justify-center gap-1 mb-4">
+                  <span className="text-sm text-muted-foreground">Desde</span>
+                  <span className="text-2xl font-bold text-foreground">€79,90</span>
+                  <span className="text-muted-foreground">/ propiedad</span>
+                </div>
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/contact?inquiry=enterprise">
+                    Hablar con un especialista
+                  </Link>
+                </Button>
               </div>
             </div>
           </AnimatedSection>
