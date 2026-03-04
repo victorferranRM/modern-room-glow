@@ -71,8 +71,8 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-card-foreground">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-10">
           {/* Brand Column */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="inline-block mb-6">
+           <div className="lg:col-span-2">
+            <Link to="/" className="inline-block mb-4">
               <img src={roomonitorLogo} alt="Roomonitor" className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm opacity-70 leading-relaxed mb-6 max-w-[240px]">
