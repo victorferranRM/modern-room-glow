@@ -59,11 +59,11 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center shrink-0 mr-4">
             <img 
               src={roomonitorLogo} 
               alt="Roomonitor" 
-              className="h-9 sm:h-10 w-auto"
+              className="h-9 sm:h-10 w-auto object-contain"
             />
           </Link>
 

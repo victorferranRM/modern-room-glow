@@ -1,8 +1,8 @@
 const stats = [
-  { value: "5,000+", label: "Properties Protected" },
-  { value: "150K+", label: "Alerts Handled" },
-  { value: "99.9%", label: "Uptime" },
-  { value: "24/7", label: "Support Available" },
+  { value: "5.000+", label: "Propiedades Protegidas" },
+  { value: "150K+", label: "Alertas Gestionadas" },
+  { value: "99,9%", label: "Tiempo Activo" },
+  { value: "24/7", label: "Soporte Disponible" },
 ];
 
 export function StatsSection() {

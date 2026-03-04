@@ -6,20 +6,20 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { caseStudies } from "@/lib/case-studies-data";
 
 const beforeItems = [
-  "Night calls handled internally",
-  "High neighbor complaints",
-  "No on-site coverage",
-  "Reactive incident management",
+  "Llamadas nocturnas gestionadas internamente",
+  "Altas quejas de vecinos",
+  "Sin cobertura in situ",
+  "Gestión reactiva de incidencias",
 ];
 
 const afterMetrics = [
-  { value: 96, suffix: "%", label: "of incidents resolved remotely" },
-  { value: 0, suffix: "", label: "unmanaged night emergencies" },
+  { value: 96, suffix: "%", label: "de incidencias resueltas remotamente" },
+  { value: 0, suffix: "", label: "emergencias nocturnas sin gestionar" },
 ];
 
 const afterItems = [
-  "Night operational coverage",
-  "On-site intervention when escalation is required",
+  "Cobertura operativa nocturna",
+  "Intervención in situ cuando se requiere escalado",
 ];
 
 // Animated counter hook
@@ -121,18 +121,18 @@ export const WhyRoomonitorSection = () => {
         {/* Section Header */}
         <div className="mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">
-            Why Roomonitor?
+            ¿Por qué Roomonitor?
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2">
-            Real impact for{" "}
-            <span className="italic text-primary">scaling operators</span>
+            Impacto real para{" "}
+            <span className="italic text-primary">operadores en crecimiento</span>
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Side - Transformation Story */}
           <div ref={sectionRef} className="flex flex-col justify-center gap-10">
-            {/* Before - Muted & Subtle */}
+            {/* Before */}
             <div
               className="transition-all duration-700 ease-out"
               style={{
@@ -141,7 +141,7 @@ export const WhyRoomonitorSection = () => {
               }}
             >
               <p className="text-xs font-semibold text-muted-foreground/60 uppercase tracking-widest mb-5">
-                Before Roomonitor
+                Antes de Roomonitor
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
                 {beforeItems.map((item, i) => (
@@ -171,7 +171,7 @@ export const WhyRoomonitorSection = () => {
               }}
             />
 
-            {/* After - Strong & Outcome-Driven */}
+            {/* After */}
             <div>
               <p
                 className="text-xs font-semibold text-primary uppercase tracking-widest mb-6 transition-all duration-700"
@@ -180,10 +180,9 @@ export const WhyRoomonitorSection = () => {
                   opacity: isVisible ? 1 : 0,
                 }}
               >
-                After Roomonitor
+                Después de Roomonitor
               </p>
 
-              {/* Big Metrics */}
               <div className="grid grid-cols-2 gap-8 mb-8">
                 {afterMetrics.map((metric, i) => (
                   <MetricCard
@@ -197,7 +196,6 @@ export const WhyRoomonitorSection = () => {
                 ))}
               </div>
 
-              {/* Supporting outcomes */}
               <div className="space-y-3">
                 {afterItems.map((item, i) => (
                   <div
@@ -217,9 +215,8 @@ export const WhyRoomonitorSection = () => {
             </div>
           </div>
 
-          {/* Right Side - Case Studies Carousel (1/2 width) */}
+          {/* Right Side - Case Studies Carousel */}
           <div className="relative flex flex-col">
-            {/* Background Image */}
             <div className="relative rounded-2xl overflow-hidden flex-1 min-h-[450px]">
               <div
                 className={`absolute inset-0 transition-all duration-300 ease-in-out ${
@@ -233,21 +230,17 @@ export const WhyRoomonitorSection = () => {
                 />
               </div>
               
-              {/* Logo overlay */}
               <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
                 <span className="text-lg font-bold text-foreground">{activeStudy.company.charAt(0)}</span>
               </div>
               
-              {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-              {/* Quote Card */}
               <div
                 className={`absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-sm rounded-xl p-5 shadow-lg transition-all duration-300 ease-in-out ${
                   isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
                 }`}
               >
-                {/* Rating */}
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(activeStudy.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-primary text-primary" />
@@ -257,12 +250,10 @@ export const WhyRoomonitorSection = () => {
                   </span>
                 </div>
 
-                {/* Quote */}
                 <p className="text-foreground text-sm leading-relaxed mb-4 line-clamp-3">
                   "{activeStudy.quote}"
                 </p>
 
-                {/* Author */}
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="font-semibold text-foreground">{activeStudy.name}</p>
@@ -270,7 +261,7 @@ export const WhyRoomonitorSection = () => {
                   </div>
                   <Button size="sm" variant="default" asChild>
                     <Link to={`/resources/case-studies/${activeStudy.slug}`}>
-                      Read case study
+                      Ver caso de éxito
                       <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
                   </Button>
@@ -278,7 +269,6 @@ export const WhyRoomonitorSection = () => {
               </div>
             </div>
 
-            {/* Navigation Dots */}
             <div className="flex justify-center gap-2 mt-6">
               {caseStudyTestimonials.map((_, index) => (
                 <button
@@ -289,7 +279,7 @@ export const WhyRoomonitorSection = () => {
                       ? "w-8 bg-primary"
                       : "w-2 bg-primary/30 hover:bg-primary/50"
                   }`}
-                  aria-label={`Go to case study ${index + 1}`}
+                  aria-label={`Ir al caso de éxito ${index + 1}`}
                 />
               ))}
             </div>

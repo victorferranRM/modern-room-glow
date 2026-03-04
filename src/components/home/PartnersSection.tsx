@@ -8,10 +8,10 @@ const partners = [
 ];
 
 const stats = [
-  { value: "30,500+", label: "Properties monitored" },
-  { value: "1.5M", label: "Guests protected (2024)" },
-  { value: "97.2%", label: "Satisfaction rate" },
-  { value: "< 45 min", label: "Average resolution time" },
+  { value: "30.500+", label: "Propiedades monitorizadas" },
+  { value: "1,5M", label: "Huéspedes protegidos (2024)" },
+  { value: "97,2%", label: "Tasa de satisfacción" },
+  { value: "< 45 min", label: "Tiempo medio de resolución" },
 ];
 
 function LogoCard({ name }: { name: string }) {
@@ -23,12 +23,10 @@ function LogoCard({ name }: { name: string }) {
 }
 
 export function PartnersSection() {
-  // Triple the items for seamless loop
   const duplicatedPartners = [...partners, ...partners, ...partners];
 
   return (
     <section className="py-12 overflow-hidden relative">
-      {/* Subtle pattern background */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/50 via-muted/30 to-muted/50" />
       <div 
         className="absolute inset-0 opacity-[0.03]"
@@ -40,11 +38,10 @@ export function PartnersSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center mb-8">
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-            Trusted by leading hospitality operators worldwide
+            La confianza de los principales operadores de hospitalidad en todo el mundo
           </p>
         </AnimatedSection>
 
-        {/* Big Numbers */}
         <AnimatedSection delay={100} className="mb-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {stats.map((stat) => (
@@ -63,7 +60,6 @@ export function PartnersSection() {
       
       <AnimatedSection delay={200}>
         <div className="relative overflow-hidden">
-          {/* Gradient masks */}
           <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-muted/80 to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-muted/80 to-transparent z-10 pointer-events-none" />
           
@@ -80,7 +76,6 @@ export function PartnersSection() {
         </div>
       </AnimatedSection>
       
-      {/* CSS for marquee animation */}
       <style>{`
         @keyframes marquee-left {
           0% {

@@ -16,7 +16,7 @@ export function HeroSection() {
           <div className="animate-fade-in flex justify-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-float shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_25px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
               <Shield className="w-4 h-4" />
-              <span>Detection • Mediation • On-site Intervention</span>
+              <span>Detección • Mediación • Intervención In Situ</span>
             </div>
           </div>
 
@@ -25,10 +25,10 @@ export function HeroSection() {
           animationDelay: "0.05s"
         }}>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight text-foreground text-balance">
-              A sensor alerts you to the problem.
+              Un sensor te avisa del problema.
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground text-balance">
-              Our 24/7 team solves it.
+              Nuestro equipo 24/7 lo resuelve.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export function HeroSection() {
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
           animationDelay: "0.1s"
         }}>
-            Scale your portfolio without multiplying your staff — and get your nights back. We're the only platform combining intelligent hardware with real operational execution. You rest. We act.
+            Escala tu portfolio sin multiplicar tu equipo — y recupera tus noches. Somos la única plataforma que combina hardware inteligente con ejecución operativa real. Tú descansas. Nosotros actuamos.
           </p>
 
           {/* Value proposition cards */}
@@ -47,9 +47,9 @@ export function HeroSection() {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Radio className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">We detect</h3>
+              <h3 className="text-foreground font-semibold mb-2">Detectamos</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                V5 noise and tobacco sensor.
+                Sensor V5 de ruido y tabaco.
               </p>
             </div>
             
@@ -57,9 +57,9 @@ export function HeroSection() {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Headphones className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">We respond</h3>
+              <h3 className="text-foreground font-semibold mb-2">Respondemos</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Alarm Assistant contacts the guest on your behalf.
+                Alarm Assistant contacta al huésped en tu nombre.
               </p>
             </div>
             
@@ -67,9 +67,9 @@ export function HeroSection() {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Car className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">We act</h3>
+              <h3 className="text-foreground font-semibold mb-2">Actuamos</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Field Service intervenes on-site when necessary.
+                Field Service interviene in situ cuando es necesario.
               </p>
             </div>
           </div>
@@ -80,14 +80,14 @@ export function HeroSection() {
         }}>
             <Button size="lg" className="text-base px-8 py-6 shadow-soft-lg" asChild>
               <Link to="/pricing">
-                Protect my properties
+                Proteger mis propiedades
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="text-base px-8 py-6" asChild>
               <Link to="/how-it-works">
                 <MessageSquare className="w-4 h-4 mr-2" />
-                See how it works
+                Ver cómo funciona
               </Link>
             </Button>
           </div>

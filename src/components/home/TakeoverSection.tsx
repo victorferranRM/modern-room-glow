@@ -11,31 +11,31 @@ import solutionManage from "@/assets/solution-manage.jpg";
 
 const solutions = [
   {
-    tagLabel: "COMPLIANCE",
-    tagProduct: "PREVENTION",
-    title: "Prevent conflicts",
-    description: "Say goodbye to neighbor complaints, uncontrolled parties and municipal fines.",
-    ctaText: "Learn about monitoring",
+    tagLabel: "CUMPLIMIENTO",
+    tagProduct: "PREVENCIÓN",
+    title: "Prevén conflictos",
+    description: "Olvídate de las quejas de vecinos, fiestas descontroladas y multas municipales.",
+    ctaText: "Conoce la monitorización",
     ctaLink: "/monitoring",
     image: solutionRest,
     overlayColor: "from-slate-900/80 via-slate-900/60 to-transparent",
   },
   {
-    tagLabel: "EFFICIENCY",
-    tagProduct: "COST REDUCTION",
-    title: "Reduce operational costs",
-    description: "No need to hire night-shift staff. We become your out-of-hours team.",
-    ctaText: "Explore our services",
+    tagLabel: "EFICIENCIA",
+    tagProduct: "REDUCCIÓN DE COSTES",
+    title: "Reduce costes operativos",
+    description: "No necesitas contratar personal nocturno. Nos convertimos en tu equipo fuera de horario.",
+    ctaText: "Explora nuestros servicios",
     ctaLink: "/services/control-center",
     image: solutionControl,
     overlayColor: "from-slate-900/80 via-slate-900/60 to-transparent",
   },
   {
-    tagLabel: "GROWTH",
-    tagProduct: "SCALABILITY",
-    title: "Scale without limits",
-    description: "Add more properties to your portfolio without multiplying workload or stress.",
-    ctaText: "See how it works",
+    tagLabel: "CRECIMIENTO",
+    tagProduct: "ESCALABILIDAD",
+    title: "Escala sin límites",
+    description: "Añade más propiedades a tu portfolio sin multiplicar la carga de trabajo ni el estrés.",
+    ctaText: "Ver cómo funciona",
     ctaLink: "/how-it-works",
     image: solutionManage,
     overlayColor: "from-slate-900/80 via-slate-900/60 to-transparent",
@@ -79,13 +79,13 @@ export function TakeoverSection() {
           {/* Section header */}
           <AnimatedSection className="mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Problem vs Solution
+              Problema vs Solución
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-              Technology alone is <em className="font-serif not-italic">not enough</em>.
+              La tecnología sola <em className="font-serif not-italic">no es suficiente</em>.
             </h2>
             <p className="text-lg text-muted-foreground mt-4 max-w-3xl leading-relaxed">
-              A noise sensor is a passive tool. When there's a real party, you need an active response. At Roomonitor, we close the loop:
+              Un sensor de ruido es una herramienta pasiva. Cuando hay una fiesta real, necesitas una respuesta activa. En Roomonitor, cerramos el ciclo:
             </p>
           </AnimatedSection>
 
@@ -104,7 +104,6 @@ export function TakeoverSection() {
                       opacity: 0.7 + cardProgress * 0.3,
                     }}
                   >
-                    {/* Background Image with Parallax */}
                     <div 
                       className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                       style={{
@@ -120,11 +119,9 @@ export function TakeoverSection() {
                       />
                     </div>
 
-                    {/* Gradient Overlay */}
                     <div className={`absolute inset-0 bg-gradient-to-r ${solution.overlayColor}`} />
 
                     <div className="relative h-full flex flex-col lg:flex-row min-h-[450px] lg:min-h-[500px]">
-                      {/* Left Content */}
                       <div className="flex-1 p-8 lg:p-12 xl:p-16 flex flex-col justify-center max-w-xl">
                         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-white">
                           {solution.title}
@@ -139,7 +136,6 @@ export function TakeoverSection() {
                         </div>
                       </div>
 
-                      {/* Right Content */}
                       <div className="flex-1 p-8 lg:p-12 xl:p-16 flex flex-col justify-center lg:items-start">
                         <p className="text-base lg:text-lg leading-relaxed mb-8 text-white/90 max-w-md">
                           {solution.description}
@@ -154,7 +150,6 @@ export function TakeoverSection() {
                         </Button>
                       </div>
 
-                      {/* Floating Icons */}
                       <div className="hidden lg:flex absolute top-12 right-12 gap-3">
                         {icons.map((Icon, iconIndex) => (
                           <div
@@ -180,7 +175,6 @@ export function TakeoverSection() {
         </div>
       </div>
 
-      {/* Floating Animation */}
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
