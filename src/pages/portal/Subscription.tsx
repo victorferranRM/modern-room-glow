@@ -63,7 +63,7 @@ const plans = [
     popular: true,
   },
   {
-    name: "Enterprise",
+    name: "Guest & Property Services",
     price: "Custom",
     period: "",
     features: ["All Pro features", "Unlimited properties", "Dedicated account manager", "Custom integrations", "SLA guarantee"],
