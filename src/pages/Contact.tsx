@@ -50,12 +50,6 @@ const inquiryTypes = [
   { value: "general", label: "Consulta general" },
 ];
 
-const propertySizes = [
-  { value: "1-10", label: "1-10 propiedades" },
-  { value: "11-50", label: "11-50 propiedades" },
-  { value: "51-200", label: "51-200 propiedades" },
-  { value: "200+", label: "200+ propiedades" },
-];
 
 const benefits = [
   "Demo personalizada de nuestra plataforma",
@@ -102,7 +96,8 @@ const contactFormSchema = z.object({
     .or(z.literal("")),
   propertySize: z
     .string()
-    .min(1, "Selecciona el tamaño del portfolio"),
+    .min(1, "Indica el número de propiedades")
+    .regex(/^\d+$/, "Solo se permiten números"),
   inquiryType: z
     .string()
     .min(1, "Selecciona un tipo de consulta"),
@@ -394,23 +389,18 @@ export default function Contact() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel className="text-sm">Tamaño del portfolio *</FormLabel>
-                              <Select
-                                value={field.value}
-                                onValueChange={field.onChange}
-                              >
-                                <FormControl>
-                                  <SelectTrigger>
-                                    <SelectValue placeholder="Selecciona rango" />
-                                  </SelectTrigger>
-                                </FormControl>
-                                <SelectContent>
-                                  {propertySizes.map((size) => (
-                                    <SelectItem key={size.value} value={size.value}>
-                                      {size.label}
-                                    </SelectItem>
-                                  ))}
-                                </SelectContent>
-                              </Select>
+                              <FormControl>
+                                <Input
+                                  type="text"
+                                  inputMode="numeric"
+                                  placeholder="Escribe un número"
+                                  value={field.value}
+                                  onChange={(e) => {
+                                    const val = e.target.value.replace(/\D/g, "");
+                                    field.onChange(val);
+                                  }}
+                                />
+                              </FormControl>
                               <FormMessage />
                             </FormItem>
                           )}
