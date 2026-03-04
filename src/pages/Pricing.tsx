@@ -202,9 +202,9 @@ export default function Pricing() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Pro</h3>
+                    <h3 className="text-xl font-bold text-foreground">Alarm Assistant</h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Todo lo de Basic + Alarm Assistant
+                      Todo lo de Noise Alarm + monitorización 24/7
                     </p>
                   </div>
 
