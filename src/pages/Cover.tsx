@@ -6,7 +6,7 @@ import { CoverTimeline } from "@/components/cover/CoverTimeline";
 import { CoverTabs } from "@/components/cover/CoverTabs";
 import { CoverCities } from "@/components/cover/CoverCities";
 import { CoverAudience } from "@/components/cover/CoverAudience";
-import { CoverTestimonials } from "@/components/cover/CoverTestimonials";
+import { CoverRedkool } from "@/components/cover/CoverRedkool";
 import { CoverCTA } from "@/components/cover/CoverCTA";
 
 export default function Cover() {
@@ -19,7 +19,7 @@ export default function Cover() {
       <CoverTabs />
       <CoverCities />
       <CoverAudience />
-      <CoverTestimonials />
+      <CoverRedkool />
       <CoverCTA />
       <Footer />
     </div>
