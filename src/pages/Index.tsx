@@ -21,9 +21,6 @@ const Index = () => {
           <PartnersSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
-          <TakeoverSection />
-        </AnimatedSection>
-        <AnimatedSection animation="fade-up">
           <ControlLevelSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
