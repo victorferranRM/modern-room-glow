@@ -1,4 +1,10 @@
 // Case Studies data structure
+import stayUniqueLogo from "@/assets/partners/stayunique.svg";
+import delParqueFlatsLogo from "@/assets/partners/delparqueflats.png";
+import checkmyguestLogo from "@/assets/partners/checkmyguest.png";
+import youStylishLogo from "@/assets/partners/youstylish.png";
+import munStaysLogo from "@/assets/partners/munstays.png";
+import numaLogo from "@/assets/partners/numa.svg";
 
 export interface CaseStudySection {
   id: string;
@@ -43,7 +49,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "stay-unique",
     company: "Stay Unique",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: stayUniqueLogo,
     industry: "Alquiler vacacional",
     location: "Barcelona, España",
     headline: "Cómo Stay Unique redujo las incidencias de ruido un 85% con Roomonitor",
@@ -87,7 +93,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "del-parque-flats",
     company: "Del Parque Flats",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: delParqueFlatsLogo,
     industry: "Gestión de propiedades",
     location: "Madrid, España",
     headline: "Del Parque Flats logra un turismo responsable con monitorización integral",
@@ -130,7 +136,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "checkmyguest",
     company: "Checkmyguest",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: checkmyguestLogo,
     industry: "Alquiler vacacional",
     location: "París, Francia",
     headline: "Cómo Checkmyguest asegura tranquilidad con cobertura de monitorización 24/7",
@@ -174,7 +180,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "you-stylish-apartments",
     company: "You Stylish Apartments",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: youStylishLogo,
     industry: "Alquiler vacacional",
     location: "Barcelona, España",
     headline: "You Stylish Apartments minimiza incidencias a 2 de cada 1.300 reservas",
@@ -217,7 +223,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "mun-stays",
     company: "Mun Stays",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: munStaysLogo,
     industry: "Gestión de propiedades",
     location: "España",
     headline: "Cómo Mun Stays monitorizó propiedades vacías durante la pandemia",
@@ -260,7 +266,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "numa-hotels",
     company: "Numa",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: numaLogo,
     industry: "Hoteles",
     location: "Europa",
     headline: "Numa escala su hospitalidad digital-first en Europa con monitorización inteligente",
