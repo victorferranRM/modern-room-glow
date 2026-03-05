@@ -10,6 +10,16 @@ import logoBatuecas from "@/assets/partners/batuecas.webp";
 import logoBbarcelona from "@/assets/partners/bbarcelona.png";
 import logoCaleta from "@/assets/partners/caleta.png";
 import logoCaterina from "@/assets/partners/caterina.png";
+import logoCheckmyguest from "@/assets/partners/checkmyguest.png";
+import logoCubo from "@/assets/partners/cubo.jpg";
+import logoDelparque from "@/assets/partners/delparqueflats.png";
+import logoEle from "@/assets/partners/ele.png";
+import logoEnjoy from "@/assets/partners/enjoy.png";
+import logoFeelathome from "@/assets/partners/feelathome.svg";
+import logoGrancentral from "@/assets/partners/grancentral.png";
+import logoHommyhome from "@/assets/partners/hommyhome.png";
+import logoHuespending from "@/assets/partners/huespending.svg";
+import logoInnkeeper from "@/assets/partners/innkeeper.png";
 
 const partners = [
   { name: "Acomodadora", logo: logoAcomodadora },
@@ -22,6 +32,16 @@ const partners = [
   { name: "BBarcelona", logo: logoBbarcelona },
   { name: "Caleta Homes", logo: logoCaleta },
   { name: "Caterina", logo: logoCaterina },
+  { name: "Checkmyguest", logo: logoCheckmyguest },
+  { name: "Cubo's Holiday Homes", logo: logoCubo },
+  { name: "Del Parque Flats", logo: logoDelparque },
+  { name: "ELE Apartments", logo: logoEle },
+  { name: "Enjoy Apartments", logo: logoEnjoy },
+  { name: "Feel at Home", logo: logoFeelathome },
+  { name: "Gran Central Suites", logo: logoGrancentral },
+  { name: "Hommy Home", logo: logoHommyhome },
+  { name: "Huespending", logo: logoHuespending },
+  { name: "Innkeeper", logo: logoInnkeeper },
 ];
 
 const stats = [
