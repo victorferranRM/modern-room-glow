@@ -513,7 +513,7 @@ export const getPostBySlug = (slug: string): BlogPost | undefined => {
 };
 
 export const getPostsByCategory = (category: string): BlogPost[] => {
-  if (category === "All categories") {
+  if (category === "Todas las categorías") {
     return blogPosts;
   }
   return blogPosts.filter((post) => post.category === category);
