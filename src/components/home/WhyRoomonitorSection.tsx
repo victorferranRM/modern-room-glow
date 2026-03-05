@@ -60,6 +60,7 @@ const caseStudyTestimonials = caseStudies.slice(0, 5).map((study, index) => ({
   id: index + 1,
   slug: study.slug,
   image: study.heroImage,
+  logo: study.logo,
   name: study.quote?.author || study.company,
   position: study.quote?.role || `${study.industry}, ${study.location}`,
   quote: study.quote?.text || study.summary,
