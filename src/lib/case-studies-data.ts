@@ -136,7 +136,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "checkmyguest",
     company: "Checkmyguest",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: checkmyguestLogo,
     industry: "Alquiler vacacional",
     location: "París, Francia",
     headline: "Cómo Checkmyguest asegura tranquilidad con cobertura de monitorización 24/7",
