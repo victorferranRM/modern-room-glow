@@ -231,9 +231,15 @@ export const WhyRoomonitorSection = () => {
                 />
               </div>
               
-              <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
-                <span className="text-lg font-bold text-foreground">{activeStudy.company.charAt(0)}</span>
-              </div>
+              {activeStudy.logo ? (
+                <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
+                  <img src={activeStudy.logo} alt={activeStudy.company} className="h-6 w-auto object-contain" />
+                </div>
+              ) : (
+                <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
+                  <span className="text-lg font-bold text-foreground">{activeStudy.company.charAt(0)}</span>
+                </div>
+              )}
               
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 

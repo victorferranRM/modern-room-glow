@@ -143,10 +143,14 @@ export default function CaseStudies() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      <div className="absolute bottom-4 left-4 w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center">
-                        <span className="text-xl font-bold text-primary">
-                          {study.company.charAt(0)}
-                        </span>
+                      <div className="absolute bottom-4 left-4 w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center p-1.5">
+                        {study.logo ? (
+                          <img src={study.logo} alt={study.company} className="max-w-full max-h-full object-contain" />
+                        ) : (
+                          <span className="text-xl font-bold text-primary">
+                            {study.company.charAt(0)}
+                          </span>
+                        )}
                       </div>
                       <div className="absolute top-4 right-4">
                         <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-foreground">
