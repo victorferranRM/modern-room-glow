@@ -8,17 +8,17 @@ import heroMonitoring from "@/assets/hero-monitoring.jpg";
 export function HeroSection() {
   const cards = [
     {
-      image: serviceControlCenter,
+      image: heroControlCenter,
       title: "Centro de Control 24/7",
       description: "Agentes formados en hospitality evaluando, mediando y resolviendo.",
     },
     {
-      image: serviceFieldService,
+      image: heroFieldService,
       title: "Field Service en 8 ciudades",
       description: "Intervención presencial cuando la resolución remota no basta.",
     },
     {
-      image: monitoringNoise,
+      image: heroMonitoring,
       title: "Monitorización inteligente",
       description: "Sensor de ruido, humo, ocupación y ambiente.",
     },
