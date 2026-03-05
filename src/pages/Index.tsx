@@ -2,10 +2,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TakeoverSection } from "@/components/home/TakeoverSection";
+import { ControlLevelSection } from "@/components/home/ControlLevelSection";
 import { HowItWorksSection } from "@/components/home/HowItWorksSection";
 import { MonitoringSection } from "@/components/home/MonitoringSection";
 import { ManagerSection } from "@/components/home/ManagerSection";
-import { IntegrationsSection } from "@/components/home/IntegrationsSection";
 import { ClosingSection } from "@/components/home/ClosingSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { WhyRoomonitorSection } from "@/components/home/WhyRoomonitorSection";
@@ -24,6 +24,9 @@ const Index = () => {
           <TakeoverSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
+          <ControlLevelSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up">
           <HowItWorksSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
@@ -31,9 +34,6 @@ const Index = () => {
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
           <WhyRoomonitorSection />
-        </AnimatedSection>
-        <AnimatedSection animation="fade-up">
-          <IntegrationsSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
           <ManagerSection />
