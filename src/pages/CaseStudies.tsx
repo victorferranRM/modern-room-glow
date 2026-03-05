@@ -8,44 +8,42 @@ import { Link } from "react-router-dom";
 import { caseStudies, caseStudyCategories, getCaseStudiesByIndustry } from "@/lib/case-studies-data";
 
 const stats = [
-  { value: "500+", label: "Properties Protected" },
-  { value: "15", label: "Countries Served" },
-  { value: "98%", label: "Client Retention" },
-  { value: "2M+", label: "Nights Monitored" },
+  { value: "500+", label: "Propiedades protegidas" },
+  { value: "15", label: "Países" },
+  { value: "98%", label: "Retención de clientes" },
+  { value: "2M+", label: "Noches monitorizadas" },
 ];
 
 export default function CaseStudies() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Todos");
   const filteredStudies = getCaseStudiesByIndustry(activeCategory);
-
-  // Featured case study (first one)
   const featuredStudy = caseStudies[0];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Clean gradient like Lodgify */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up" className="text-center max-w-4xl mx-auto">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              Success Stories
+              Casos de éxito
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
-              Real Results from{" "}
-              <span className="text-primary">Real Properties</span>
+              Resultados reales de{" "}
+              <span className="text-primary">propiedades reales</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-              Discover how property managers worldwide are transforming their operations with Roomonitor's intelligent monitoring solutions.
+              Descubre cómo gestores de propiedades de todo el mundo están transformando sus operaciones con las soluciones de monitorización inteligente de Roomonitor.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Featured Case Study - Like Lodgify hero */}
+      {/* Featured Case Study */}
       <section className="pb-16">
         <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up">
@@ -55,10 +53,9 @@ export default function CaseStudies() {
             >
               <div className="relative rounded-2xl overflow-hidden bg-muted">
                 <div className="grid lg:grid-cols-2 gap-0">
-                  {/* Content */}
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4 w-fit">
-                      Featured
+                      Destacado
                     </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4 group-hover:text-primary transition-colors">
                       {featuredStudy.company}
@@ -77,19 +74,17 @@ export default function CaseStudies() {
                       </div>
                     </div>
                     <Button className="w-fit group/btn">
-                      Read Case Study
+                      Leer caso de éxito
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </Button>
                   </div>
                   
-                  {/* Image */}
                   <div className="relative h-64 lg:h-auto">
                     <img 
                       src={featuredStudy.heroImage} 
                       alt={featuredStudy.company}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    {/* Quote overlay */}
                     {featuredStudy.quote && (
                       <div className="absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                         <p className="text-sm text-muted-foreground italic line-clamp-2">
@@ -105,7 +100,7 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      {/* Category Filter - Like Akiles */}
+      {/* Category Filter */}
       <section className="pb-8">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex flex-wrap justify-center gap-2">
@@ -126,7 +121,7 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      {/* Case Studies Grid - Card style like Lodgify */}
+      {/* Case Studies Grid */}
       <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -141,7 +136,6 @@ export default function CaseStudies() {
                   className="group block h-full"
                 >
                   <article className="h-full bg-card rounded-xl overflow-hidden border border-border hover:border-primary/30 transition-all hover:shadow-lg">
-                    {/* Image with Logo Overlay */}
                     <div className="relative h-48 overflow-hidden">
                       <img 
                         src={study.heroImage} 
@@ -149,15 +143,11 @@ export default function CaseStudies() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      
-                      {/* Logo overlay - white square with company initial */}
                       <div className="absolute bottom-4 left-4 w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center">
                         <span className="text-xl font-bold text-primary">
                           {study.company.charAt(0)}
                         </span>
                       </div>
-                      
-                      {/* Industry badge */}
                       <div className="absolute top-4 right-4">
                         <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-foreground">
                           {study.industry}
@@ -165,22 +155,17 @@ export default function CaseStudies() {
                       </div>
                     </div>
                     
-                    {/* Content */}
                     <div className="p-6">
                       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
                         <MapPin className="h-3 w-3" />
                         {study.location}
                       </div>
-                      
                       <h3 className="text-lg font-bold tracking-tight text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                         {study.company}
                       </h3>
-                      
                       <p className="text-sm text-muted-foreground font-light mb-4 line-clamp-2">
                         {study.headline}
                       </p>
-                      
-                      {/* Stats row */}
                       <div className="flex justify-between border-t border-border pt-4">
                         {study.stats.slice(0, 3).map((stat, i) => (
                           <div key={i} className="text-center">
@@ -225,10 +210,10 @@ export default function CaseStudies() {
         <div className="container relative z-10 mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6">
-              Ready to Write Your Success Story?
+              ¿Listo para escribir tu caso de éxito?
             </h2>
             <p className="text-lg sm:text-xl text-primary-foreground/80 font-light max-w-2xl mx-auto mb-10">
-              Join hundreds of property managers who've transformed their operations with Roomonitor.
+              Únete a cientos de gestores de propiedades que han transformado sus operaciones con Roomonitor.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -238,7 +223,7 @@ export default function CaseStudies() {
                 asChild
               >
                 <Link to="/contact">
-                  Book a Demo
+                  Solicitar una Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -249,7 +234,7 @@ export default function CaseStudies() {
                 asChild
               >
                 <Link to="/resources/savings-calculator">
-                  Calculate Your Savings
+                  Calcular tu Ahorro
                 </Link>
               </Button>
             </div>

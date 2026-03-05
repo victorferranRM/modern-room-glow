@@ -5,135 +5,86 @@ import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { PartnersSection } from "@/components/home/PartnersSection";
-import { EuropeMap } from "@/components/about/EuropeMap";
 import { Heart, Target, Eye, Users, Sparkles, ArrowRight, MapPin, ExternalLink, Building2, Check, Play, Pause, Newspaper, Video, Mic, FileText } from "lucide-react";
 import solutionRest from "@/assets/solution-rest-new.jpg";
 import solutionManage from "@/assets/solution-manage.jpg";
 import solutionControl from "@/assets/solution-control.jpg";
+
+import cityBarcelona from "@/assets/city-barcelona.jpg";
+import cityMadrid from "@/assets/city-madrid.jpg";
+import cityValencia from "@/assets/city-valencia.jpg";
+import cityMalaga from "@/assets/city-malaga.jpg";
+import citySevilla from "@/assets/city-sevilla.jpg";
+import cityGranada from "@/assets/city-granada.jpg";
+import cityLisboa from "@/assets/city-lisboa.jpg";
+import cityParis from "@/assets/city-paris.jpg";
+
 const values = [{
   icon: Heart,
-  title: "Customer First",
-  description: "Every decision we make starts with our customers. We're committed to solving real problems for property managers and creating lasting partnerships.",
+  title: "El cliente primero",
+  description: "Cada decisión que tomamos empieza por nuestros clientes. Estamos comprometidos con resolver problemas reales para los gestores de propiedades y crear relaciones duraderas.",
   image: solutionRest
 }, {
   icon: Sparkles,
-  title: "Innovation",
-  description: "We continuously push the boundaries of what's possible in property monitoring. Our technology evolves with the industry's needs.",
+  title: "Innovación",
+  description: "Empujamos continuamente los límites de lo posible en monitorización de propiedades. Nuestra tecnología evoluciona con las necesidades de la industria.",
   image: solutionManage
 }, {
   icon: Users,
-  title: "Team Excellence",
-  description: "Our diverse team brings together expertise from hospitality, technology, and customer service to deliver exceptional results.",
+  title: "Excelencia del equipo",
+  description: "Nuestro equipo diverso reúne experiencia en hostelería, tecnología y servicio al cliente para ofrecer resultados excepcionales.",
   image: solutionControl
 }];
+
 const timelineEvents = [{
   year: "2014",
-  title: "Founded in Barcelona",
-  description: "Roomonitor was born from a simple idea: help property managers sleep better at night. Our founders, experienced in the vacation rental industry, saw the need for real-time monitoring and professional guest management.",
+  title: "Fundación en Barcelona",
+  description: "Roomonitor nació de una idea sencilla: ayudar a los gestores de propiedades a dormir tranquilos. Nuestros fundadores, con experiencia en la industria del alquiler vacacional, vieron la necesidad de monitorización en tiempo real y gestión profesional de huéspedes.",
   image: solutionRest
 }, {
   year: "2016",
-  title: "First Monitoring Device",
-  description: "We launched our proprietary monitoring sensor, designed specifically for vacation rentals. Privacy-first noise detection became our signature feature.",
+  title: "Primer dispositivo de monitorización",
+  description: "Lanzamos nuestro sensor de monitorización propietario, diseñado específicamente para alquileres vacacionales. La detección de ruido respetuosa con la privacidad se convirtió en nuestra seña de identidad.",
   image: solutionManage
 }, {
   year: "2018",
-  title: "24/7 Control Center",
-  description: "Opened our first Control Center with multilingual agents providing round-the-clock monitoring and guest assistance services.",
+  title: "Centro de Control 24/7",
+  description: "Abrimos nuestro primer Centro de Control con agentes multilingües proporcionando monitorización y asistencia al huésped las 24 horas del día, los 7 días de la semana.",
   image: solutionControl
 }, {
   year: "2020",
-  title: "European Expansion",
-  description: "Expanded field service network to cover major cities across Spain, Portugal, France, and Italy, enabling on-site interventions when needed.",
+  title: "Expansión europea",
+  description: "Expandimos nuestra red de servicio de campo para cubrir las principales ciudades de España, Portugal, Francia e Italia, permitiendo intervenciones presenciales cuando fuera necesario.",
   image: solutionRest
 }, {
   year: "2023",
-  title: "Manager Platform Launch",
-  description: "Released our comprehensive Manager platform, giving property managers full visibility and control over their operations.",
+  title: "Lanzamiento de Manager",
+  description: "Lanzamos nuestra plataforma integral Manager, dando a los gestores de propiedades visibilidad total y control sobre sus operaciones.",
   image: solutionManage
 }, {
   year: "2025",
-  title: "Global Vision",
-  description: "Today, Roomonitor protects thousands of properties worldwide and continues to innovate in smart hospitality solutions.",
+  title: "Visión global",
+  description: "Hoy, Roomonitor protege miles de propiedades en todo el mundo y continúa innovando en soluciones de hospitalidad inteligente.",
   image: solutionControl
 }];
-const coverageCities = [{
-  name: "Barcelona",
-  country: "Spain",
-  isHQ: true
-}, {
-  name: "Madrid",
-  country: "Spain"
-}, {
-  name: "Valencia",
-  country: "Spain"
-}, {
-  name: "Málaga",
-  country: "Spain"
-}, {
-  name: "Seville",
-  country: "Spain"
-}, {
-  name: "Granada",
-  country: "Spain"
-}, {
-  name: "Lisbon",
-  country: "Portugal"
-}, {
-  name: "Paris",
-  country: "France"
-}, {
-  name: "Milan",
-  country: "Italy"
-}];
 
-// City positions on the SVG Europe map (approximate coordinates)
-const mapCities = [{
-  name: "Barcelona",
-  x: 52,
-  y: 168,
-  isHQ: true
-}, {
-  name: "Madrid",
-  x: 35,
-  y: 172
-}, {
-  name: "Valencia",
-  x: 48,
-  y: 178
-}, {
-  name: "Málaga",
-  x: 38,
-  y: 195
-}, {
-  name: "Seville",
-  x: 28,
-  y: 188
-}, {
-  name: "Granada",
-  x: 38,
-  y: 190
-}, {
-  name: "Lisbon",
-  x: 18,
-  y: 175
-}, {
-  name: "Paris",
-  x: 62,
-  y: 122
-}, {
-  name: "Milan",
-  x: 95,
-  y: 138
-}];
+const coverageCities = [
+  { name: "Barcelona", country: "España", isHQ: true, image: cityBarcelona },
+  { name: "Madrid", country: "España", image: cityMadrid },
+  { name: "Valencia", country: "España", image: cityValencia },
+  { name: "Málaga", country: "España", image: cityMalaga },
+  { name: "Sevilla", country: "España", image: citySevilla },
+  { name: "Granada", country: "España", image: cityGranada },
+  { name: "Lisboa", country: "Portugal", image: cityLisboa },
+  { name: "París", country: "Francia", image: cityParis },
+];
 
-// Media mentions data with images
 const mediaItems = [{
   id: "phocuswire",
   type: "article",
   outlet: "PhocusWire",
-  title: "How Roomonitor is changing vacation rental management",
-  description: "An in-depth look at smart monitoring technology in the hospitality industry.",
+  title: "Cómo Roomonitor está cambiando la gestión de alquileres vacacionales",
+  description: "Una mirada en profundidad a la tecnología de monitorización inteligente en la industria hotelera.",
   icon: Newspaper,
   link: "/blog",
   image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=250&fit=crop"
@@ -141,8 +92,8 @@ const mediaItems = [{
   id: "hosteltur",
   type: "article",
   outlet: "Hosteltur",
-  title: "The future of short-term rental compliance",
-  description: "Interview with Roomonitor's CEO on regulatory challenges and solutions.",
+  title: "El futuro del cumplimiento normativo en alquiler de corta estancia",
+  description: "Entrevista con el CEO de Roomonitor sobre los retos regulatorios y soluciones.",
   icon: FileText,
   link: "/blog",
   image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=400&h=250&fit=crop"
@@ -150,8 +101,8 @@ const mediaItems = [{
   id: "podcast",
   type: "podcast",
   outlet: "Rental Scale-Up",
-  title: "Episode 45: Building a 24/7 monitoring operation",
-  description: "Behind the scenes of Roomonitor's control center operations.",
+  title: "Episodio 45: Construyendo una operación de monitorización 24/7",
+  description: "Entre bastidores de las operaciones del centro de control de Roomonitor.",
   icon: Mic,
   link: "/blog",
   image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&h=250&fit=crop"
@@ -159,8 +110,8 @@ const mediaItems = [{
   id: "video",
   type: "video",
   outlet: "Property Tech Weekly",
-  title: "Roomonitor Product Demo & Interview",
-  description: "A comprehensive walkthrough of the monitoring platform.",
+  title: "Demo de producto y entrevista con Roomonitor",
+  description: "Un recorrido completo por la plataforma de monitorización.",
   icon: Video,
   link: "/blog",
   image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=400&h=250&fit=crop"
@@ -168,8 +119,8 @@ const mediaItems = [{
   id: "expansion",
   type: "article",
   outlet: "Expansión",
-  title: "Spanish PropTech leading European market",
-  description: "How Barcelona-based startups are shaping the property tech landscape.",
+  title: "PropTech española liderando el mercado europeo",
+  description: "Cómo las startups de Barcelona están moldeando el panorama tecnológico inmobiliario.",
   icon: Newspaper,
   link: "/blog",
   image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=250&fit=crop"
@@ -178,17 +129,68 @@ const mediaItems = [{
   type: "article",
   outlet: "La Vanguardia",
   title: "Tecnología para el turismo responsable",
-  description: "Roomonitor's role in sustainable tourism management.",
+  description: "El papel de Roomonitor en la gestión del turismo sostenible.",
   icon: FileText,
   link: "/blog",
   image: "https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=400&h=250&fit=crop"
 }];
+
+function CityPhotoCarousel({ cities }: { cities: typeof coverageCities }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(prev => (prev + 1) % cities.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [cities.length]);
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+      {cities.map((city, index) => (
+        <div
+          key={city.name}
+          className="absolute inset-0 transition-opacity duration-1000"
+          style={{ opacity: activeIndex === index ? 1 : 0 }}
+        >
+          <img
+            src={city.image}
+            alt={city.name}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          <div className="absolute bottom-6 left-6">
+            <div className="flex items-center gap-2 mb-1">
+              <MapPin className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">{city.country}</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white">
+              {city.name}
+              {city.isHQ && <span className="ml-2 text-sm font-normal text-white/70">(HQ)</span>}
+            </h3>
+          </div>
+        </div>
+      ))}
+      {/* Progress dots */}
+      <div className="absolute bottom-6 right-6 flex gap-1.5">
+        {cities.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              activeIndex === index ? "bg-primary w-6" : "bg-white/50 hover:bg-white/80"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function About() {
   const [activeTimeline, setActiveTimeline] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
-  // Auto-play timeline
   const advanceTimeline = useCallback(() => {
     setActiveTimeline(prev => (prev + 1) % timelineEvents.length);
   }, []);
@@ -197,6 +199,7 @@ export default function About() {
     const interval = setInterval(advanceTimeline, 4000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, advanceTimeline]);
+
   return <div className="min-h-screen bg-background">
       <Header />
       <main>
@@ -207,29 +210,29 @@ export default function About() {
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
                 <Building2 className="w-4 h-4" />
-                <span>About Roomonitor</span>
+                <span>Sobre Roomonitor</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.15] pb-2">
-                Born in Barcelona,
-                <span className="gradient-text block pb-[10px]">thinking globally</span>
+                Nacidos en Barcelona,
+                <span className="gradient-text block pb-[10px]">con visión global</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                With over <span className="font-semibold text-foreground">10 years of experience</span> in the vacation rental industry, we're sector experts on a mission to transform how properties operate. Our smart monitoring technology and dedicated team help property managers focus on what matters most—their guests.
+                Con más de <span className="font-semibold text-foreground">10 años de experiencia</span> en la industria del alquiler vacacional, somos expertos del sector con la misión de transformar cómo operan las propiedades. Nuestra tecnología de monitorización inteligente y nuestro equipo dedicado ayudan a los gestores a centrarse en lo más importante: sus huéspedes.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Partners Carousel - Same as homepage */}
+        {/* Partners Carousel */}
         <PartnersSection />
 
         {/* Values Section */}
         <AnimatedSection className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nuestros valores</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                These principles guide everything we do at Roomonitor
+                Estos principios guían todo lo que hacemos en Roomonitor
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -249,7 +252,7 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        {/* Mission & Vision Section - Enhanced */}
+        {/* Mission & Vision Section */}
         <AnimatedSection className="py-16 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -263,16 +266,16 @@ export default function About() {
                       <Target className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <div>
-                      <span className="text-sm font-medium text-primary uppercase tracking-wider">What drives us</span>
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">Our Mission</h3>
+                      <span className="text-sm font-medium text-primary uppercase tracking-wider">Lo que nos impulsa</span>
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">Nuestra misión</h3>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                      To empower property managers with intelligent monitoring technology and professional services that ensure peace of mind.
+                      Empoderar a los gestores de propiedades con tecnología de monitorización inteligente y servicios profesionales que garantizan tranquilidad.
                     </p>
                     <ul className="space-y-3">
-                      {["Protect assets 24/7", "Deliver exceptional guest experiences", "Provide real human support"].map((item, idx) => <li key={idx} className="flex items-center gap-3 text-foreground">
+                      {["Proteger activos 24/7", "Ofrecer experiencias excepcionales al huésped", "Proporcionar soporte humano real"].map((item, idx) => <li key={idx} className="flex items-center gap-3 text-foreground">
                           <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Check className="w-3.5 h-3.5 text-primary" />
                           </div>
@@ -292,27 +295,27 @@ export default function About() {
                       <Eye className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <div>
-                      <span className="text-sm font-medium text-primary uppercase tracking-wider">Where we're going</span>
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">Our Vision</h3>
+                      <span className="text-sm font-medium text-primary uppercase tracking-wider">Hacia dónde vamos</span>
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">Nuestra visión</h3>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                      To become the global standard in smart property monitoring, creating a world where every vacation rental operates with 5-star professionalism.
+                      Convertirnos en el estándar global en monitorización inteligente de propiedades, creando un mundo donde cada alquiler vacacional opere con profesionalidad de 5 estrellas.
                     </p>
                     <div className="grid grid-cols-2 gap-4 pt-2">
                       {[{
                       value: "10K+",
-                      label: "Properties Protected"
+                      label: "Propiedades protegidas"
                     }, {
                       value: "24/7",
-                      label: "Human Support"
+                      label: "Soporte humano"
                     }, {
                       value: "4+",
-                      label: "Countries"
+                      label: "Países"
                     }, {
                       value: "98%",
-                      label: "Resolution Rate"
+                      label: "Tasa de resolución"
                     }].map((stat, idx) => <div key={idx} className="text-center p-3 rounded-xl bg-muted/50">
                           <div className="text-xl font-bold text-primary">{stat.value}</div>
                           <div className="text-xs text-muted-foreground">{stat.label}</div>
@@ -325,90 +328,21 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        {/* Media & Press Section */}
-        <AnimatedSection className="py-16 md:py-24 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">In the press</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-                Featured Media & Coverage
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Read, watch and listen to our latest appearances in industry publications and podcasts
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {mediaItems.map(item => {
-              const Icon = item.icon;
-              return <Link key={item.id} to={item.link} className="group relative bg-card border rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    {/* Image Header */}
-                    <div className="aspect-[16/10] overflow-hidden relative">
-                      <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-                      
-                      {/* Type Badge */}
-                      <div className="absolute top-3 left-3">
-                        <span className="inline-flex items-center gap-1.5 bg-background/90 backdrop-blur-sm text-foreground text-xs font-medium uppercase tracking-wider px-2.5 py-1 rounded-full">
-                          <Icon className="w-3.5 h-3.5" />
-                          {item.type}
-                        </span>
-                      </div>
-                      
-                      {/* Outlet Name on Image */}
-                      <div className="absolute bottom-3 left-3">
-                        <span className="text-sm font-bold text-white">{item.outlet}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="p-5">
-                      {/* Title */}
-                      <h3 className="text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                        {item.title}
-                      </h3>
-                      
-                      {/* Description */}
-                      <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                        {item.description}
-                      </p>
-                      
-                      {/* CTA */}
-                      <div className="flex items-center gap-2 text-sm font-medium text-primary">
-                        <span>{item.type === "video" ? "Watch now" : item.type === "podcast" ? "Listen now" : "Read article"}</span>
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </div>
-                    </div>
-                  </Link>;
-            })}
-            </div>
-
-            <div className="text-center mt-10">
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/blog">
-                  View All Articles
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* Interactive Timeline Section with Auto-play */}
+        {/* Interactive Timeline Section - MOVED ABOVE PRESS */}
         <AnimatedSection className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Journey</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nuestro recorrido</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-                From a Barcelona startup to an international property monitoring leader
+                De una startup en Barcelona a líder internacional en monitorización de propiedades
               </p>
-              {/* Auto-play controls */}
               <button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted hover:bg-muted/80 transition-colors text-sm font-medium">
                 {isAutoPlaying ? <>
                     <Pause className="w-4 h-4" />
-                    Pause auto-play
+                    Pausar
                   </> : <>
                     <Play className="w-4 h-4" />
-                    Resume auto-play
+                    Reanudar
                   </>}
               </button>
             </div>
@@ -428,21 +362,15 @@ export default function About() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Timeline Navigation */}
               <div className="relative">
-                {/* Timeline Line */}
-                
-                
                 <div className="space-y-2">
                   {timelineEvents.map((event, index) => <button key={event.year} onClick={() => {
                   setActiveTimeline(index);
                   setIsAutoPlaying(false);
                 }} className={`relative flex items-center gap-6 w-full text-left p-4 rounded-xl transition-all duration-300 ${activeTimeline === index ? "bg-primary/10" : "hover:bg-muted/50"}`}>
-                      {/* Timeline Dot */}
                       <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${activeTimeline === index ? "bg-primary text-primary-foreground scale-110" : index < activeTimeline ? "bg-primary/50" : "bg-muted border-2 border-border"}`}>
                         {activeTimeline === index && <span className="w-2 h-2 bg-primary-foreground rounded-full" />}
                       </div>
-                      
                       <div className="flex-1">
                         <span className={`text-sm font-medium ${activeTimeline === index ? "text-primary" : "text-muted-foreground"}`}>
                           {event.year}
@@ -455,7 +383,6 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Timeline Content */}
               <div className="lg:sticky lg:top-32">
                 <div className="bg-card border rounded-2xl overflow-hidden shadow-soft">
                   <div className="aspect-video overflow-hidden relative">
@@ -481,19 +408,76 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        {/* Global Presence Section */}
+        {/* Media & Press Section - NOW BELOW JOURNEY */}
+        <AnimatedSection className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-sm font-medium text-primary uppercase tracking-wider">En prensa</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
+                Medios y cobertura destacada
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Lee, mira y escucha nuestras últimas apariciones en publicaciones y podcasts del sector
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {mediaItems.map(item => {
+              const Icon = item.icon;
+              return <Link key={item.id} to={item.link} className="group relative bg-card border rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                    <div className="aspect-[16/10] overflow-hidden relative">
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+                      <div className="absolute top-3 left-3">
+                        <span className="inline-flex items-center gap-1.5 bg-background/90 backdrop-blur-sm text-foreground text-xs font-medium uppercase tracking-wider px-2.5 py-1 rounded-full">
+                          <Icon className="w-3.5 h-3.5" />
+                          {item.type === "article" ? "Artículo" : item.type === "podcast" ? "Podcast" : "Vídeo"}
+                        </span>
+                      </div>
+                      <div className="absolute bottom-3 left-3">
+                        <span className="text-sm font-bold text-white">{item.outlet}</span>
+                      </div>
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-sm font-medium text-primary">
+                        <span>{item.type === "video" ? "Ver ahora" : item.type === "podcast" ? "Escuchar ahora" : "Leer artículo"}</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </div>
+                    </div>
+                  </Link>;
+            })}
+            </div>
+
+            <div className="text-center mt-10">
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/blog">
+                  Ver todos los artículos
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Global Presence Section - CITY PHOTO CAROUSEL INSTEAD OF MAP */}
         <AnimatedSection className="py-16 md:py-24 bg-foreground text-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Born in Barcelona, <span className="text-primary">trusted globally</span>
+                  Nacidos en Barcelona, <span className="text-primary">con presencia global</span>
                 </h2>
                 <p className="text-background/70 text-lg mb-6 leading-relaxed">
-                  Our headquarters are in Barcelona, but our vision is global. We've built a physical network of field service agents in key cities across Europe, ensuring we can respond on-site when needed.
+                  Nuestra sede está en Barcelona, pero nuestra visión es global. Hemos construido una red física de agentes de servicio de campo en ciudades clave de Europa, asegurando que podemos responder in situ cuando sea necesario.
                 </p>
                 <p className="text-background/70 mb-8 leading-relaxed">
-                  When demand grows in a new city, we expand our network there. Our goal is to be wherever our clients need us.
+                  Cuando la demanda crece en una nueva ciudad, expandimos nuestra red allí. Nuestro objetivo es estar donde nuestros clientes nos necesiten.
                 </p>
                 
                 <div className="grid grid-cols-3 gap-4 mb-8">
@@ -507,9 +491,9 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Europe Map - Proper SVG with country outlines */}
-              <div className="relative">
-                <EuropeMap cities={mapCities} selectedCity={selectedCity} onCitySelect={setSelectedCity} />
+              {/* City Photo Carousel */}
+              <div>
+                <CityPhotoCarousel cities={coverageCities} />
               </div>
             </div>
           </div>
@@ -519,18 +503,18 @@ export default function About() {
         <AnimatedSection className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden">
-              <img src={solutionManage} alt="Join our team" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={solutionManage} alt="Únete al equipo" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-foreground/70" />
               <div className="relative z-10 py-20 px-8 md:py-28 md:px-16 text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-4">
-                  Join the team
+                  Únete al equipo
                 </h2>
                 <p className="text-background/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-                  We're building the future of property management, and we're doing it together. Check out our open positions and become part of our story.
+                  Estamos construyendo el futuro de la gestión de propiedades, y lo hacemos juntos. Consulta nuestras posiciones abiertas y forma parte de nuestra historia.
                 </p>
                 <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
                   <a href="https://www.linkedin.com/company/11209502/admin/posted-jobs/open/" target="_blank" rel="noopener noreferrer">
-                    View Open Positions
+                    Ver posiciones abiertas
                     <ExternalLink className="w-4 h-4 ml-2" />
                   </a>
                 </Button>
@@ -543,20 +527,20 @@ export default function About() {
         <AnimatedSection className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to get started?
+              ¿Listo para empezar?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Join thousands of property managers who trust Roomonitor to protect their properties and delight their guests.
+              Únete a miles de gestores de propiedades que confían en Roomonitor para proteger sus activos y deleitar a sus huéspedes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <a href="/contact">
-                  Request a Demo
+                  Solicitar una Demo
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="/pricing">View Pricing</a>
+                <a href="/pricing">Ver Precios</a>
               </Button>
             </div>
           </div>
@@ -564,7 +548,6 @@ export default function About() {
       </main>
       <Footer />
 
-      {/* Progress bar animation */}
       <style>{`
         @keyframes progress {
           from { width: 0%; }

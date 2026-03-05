@@ -16,16 +16,13 @@ export default function CaseStudyDetail() {
   const caseStudy = slug ? getCaseStudyBySlug(slug) : undefined;
   const relatedStudies = slug ? getRelatedCaseStudies(slug, 3) : [];
 
-  // Track active section based on scroll position
   useEffect(() => {
     if (!caseStudy) return;
-
     const handleScroll = () => {
       const sections = caseStudy.sections.map((s) => ({
         id: s.id,
         element: document.getElementById(s.id),
       }));
-
       for (const section of sections.reverse()) {
         if (section.element) {
           const rect = section.element.getBoundingClientRect();
@@ -36,7 +33,6 @@ export default function CaseStudyDetail() {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
@@ -47,9 +43,9 @@ export default function CaseStudyDetail() {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="container mx-auto px-4 py-32 text-center">
-          <h1 className="text-2xl font-bold mb-4">Case Study Not Found</h1>
+          <h1 className="text-2xl font-bold mb-4">Caso de éxito no encontrado</h1>
           <Button asChild>
-            <Link to="/resources/case-studies">Back to Case Studies</Link>
+            <Link to="/resources/case-studies">Volver a Casos de éxito</Link>
           </Button>
         </div>
         <Footer />
@@ -76,7 +72,7 @@ export default function CaseStudyDetail() {
         <div className="container mx-auto px-4 sm:px-6">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link to="/resources/case-studies" className="hover:text-primary transition-colors">
-              Success Stories
+              Casos de éxito
             </Link>
             <span>/</span>
             <span className="text-foreground">{caseStudy.company}</span>
@@ -89,17 +85,12 @@ export default function CaseStudyDetail() {
         <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up">
             <div className="max-w-4xl">
-              {/* Company name */}
               <h2 className="text-lg font-medium text-primary mb-2">
                 {caseStudy.company}
               </h2>
-              
-              {/* Headline */}
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6 leading-tight">
                 {caseStudy.headline}
               </h1>
-              
-              {/* Meta info */}
               <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
@@ -115,7 +106,7 @@ export default function CaseStudyDetail() {
         </div>
       </section>
 
-      {/* Hero Image with optional video */}
+      {/* Hero Image */}
       <section className="pb-12">
         <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up" delay={100}>
@@ -136,15 +127,11 @@ export default function CaseStudyDetail() {
                     alt={caseStudy.company}
                     className="w-full aspect-[21/9] object-cover"
                   />
-                  
-                  {/* Logo overlay */}
                   <div className="absolute bottom-6 left-6 w-20 h-20 bg-white rounded-xl shadow-lg flex items-center justify-center">
                     <span className="text-3xl font-bold text-primary">
                       {caseStudy.company.charAt(0)}
                     </span>
                   </div>
-                  
-                  {/* Video play button */}
                   {caseStudy.videoUrl && (
                     <button
                       onClick={() => setShowVideo(true)}
@@ -162,7 +149,7 @@ export default function CaseStudyDetail() {
         </div>
       </section>
 
-      {/* Stats Row - Like the reference image */}
+      {/* Stats Row */}
       <section className="pb-16">
         <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up" delay={200}>
@@ -186,8 +173,6 @@ export default function CaseStudyDetail() {
       <section className="pb-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-[280px_1fr] gap-12">
-            
-            {/* Sticky Navigation - Like Lodgify */}
             <aside className="hidden lg:block">
               <div className="sticky top-32">
                 <nav className="space-y-1">
@@ -206,22 +191,20 @@ export default function CaseStudyDetail() {
                   ))}
                 </nav>
 
-                {/* Quick CTA */}
                 <div className="mt-8 p-6 bg-muted rounded-xl">
                   <h4 className="font-semibold text-foreground mb-2">
-                    Want similar results?
+                    ¿Quieres resultados similares?
                   </h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    See how Roomonitor can help your properties.
+                    Descubre cómo Roomonitor puede ayudar a tus propiedades.
                   </p>
                   <Button size="sm" className="w-full" asChild>
-                    <Link to="/contact">Book a Demo</Link>
+                    <Link to="/contact">Solicitar una Demo</Link>
                   </Button>
                 </div>
               </div>
             </aside>
 
-            {/* Content */}
             <div className="max-w-3xl">
               {caseStudy.sections.map((section, index) => (
                 <AnimatedSection
@@ -234,11 +217,8 @@ export default function CaseStudyDetail() {
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-6">
                     {section.title}
                   </h2>
-                  
-                  {/* Render content with markdown-style formatting */}
                   <div className="prose prose-lg max-w-none">
                     {section.content.split("\n\n").map((paragraph, pIndex) => {
-                      // Handle bullet points
                       if (paragraph.startsWith("•")) {
                         return (
                           <ul key={pIndex} className="space-y-2 mb-4">
@@ -254,7 +234,6 @@ export default function CaseStudyDetail() {
                           </ul>
                         );
                       }
-                      
                       return (
                         <p 
                           key={pIndex} 
@@ -266,8 +245,6 @@ export default function CaseStudyDetail() {
                       );
                     })}
                   </div>
-                  
-                  {/* Section image */}
                   {section.image && (
                     <div className="mt-8 rounded-xl overflow-hidden">
                       <img 
@@ -280,7 +257,6 @@ export default function CaseStudyDetail() {
                 </AnimatedSection>
               ))}
 
-              {/* Quote Section */}
               {caseStudy.quote && (
                 <AnimatedSection animation="fade-up" className="mb-16">
                   <blockquote className="relative p-8 bg-muted/50 rounded-2xl border-l-4 border-primary">
@@ -295,11 +271,10 @@ export default function CaseStudyDetail() {
                 </AnimatedSection>
               )}
 
-              {/* CTA Button */}
               <AnimatedSection animation="fade-up" className="flex justify-center">
                 <Button size="lg" asChild>
                   <Link to="/contact">
-                    Get in touch
+                    Contactar
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -314,7 +289,7 @@ export default function CaseStudyDetail() {
         <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground text-center mb-12">
-              Other Success Stories
+              Otros casos de éxito
             </h2>
           </AnimatedSection>
           
@@ -342,7 +317,6 @@ export default function CaseStudyDetail() {
                         </span>
                       </div>
                     </div>
-                    
                     <div className="p-5">
                       <h3 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                         {study.company}
@@ -361,7 +335,7 @@ export default function CaseStudyDetail() {
             <Button variant="outline" asChild>
               <Link to="/resources/case-studies">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                View All Case Studies
+                Ver todos los casos de éxito
               </Link>
             </Button>
           </div>
