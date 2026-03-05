@@ -18,7 +18,6 @@ export default function Cover() {
       <CoverTabs />
       <CoverCities />
       <CoverAudience />
-      <CoverRedkool />
       <CoverCTA />
       <Footer />
     </div>
