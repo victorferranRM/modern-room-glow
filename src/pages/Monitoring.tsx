@@ -106,8 +106,7 @@ export default function Monitoring() {
                 Sensor de Ruido Roomonitor V5
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                Detección de ruido en tiempo real{" "}
-                <span className="gradient-text italic">para alquiler vacacional.</span>
+                Detección de ruido en tiempo real <span className="gradient-text">para alquiler vacacional.</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 Protege tus propiedades sin invadir la privacidad de los huéspedes. El sensor V5 no graba conversaciones: analiza patrones de sonido, humo y ambiente para adelantarse a los problemas.
