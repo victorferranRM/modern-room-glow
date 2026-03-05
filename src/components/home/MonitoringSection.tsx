@@ -122,12 +122,12 @@ export function MonitoringSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-12 lg:mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-              Capacidad adicional
-            </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Una capa adicional de control, cuando más importa
-            </h2>
+             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+               Monitorización inteligente
+             </p>
+             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+               Anticípate a los problemas dentro de tus propiedades
+             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Al monitorizar lo que ocurre dentro de la propiedad, Roomonitor ayuda a anticipar incidencias antes de que los huéspedes las reporten — reforzando las operaciones y reduciendo el impacto.
             </p>
