@@ -658,6 +658,22 @@ export function ManagerSection() {
                       </div>
                     </>
                   )}
+                  {activeTab === "integrations" && (
+                    <>
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <ChevronRight className="w-4 h-4 text-primary" />
+                        <span className="text-sm">Conexión nativa con los principales PMS y channel managers</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <ChevronRight className="w-4 h-4 text-primary" />
+                        <span className="text-sm">Integración con cerraduras inteligentes y sistemas de acceso</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <ChevronRight className="w-4 h-4 text-primary" />
+                        <span className="text-sm">API abierta para conectar cualquier herramienta personalizada</span>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 
