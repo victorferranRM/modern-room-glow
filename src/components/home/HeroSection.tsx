@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageSquare, Radio, Headphones, Car, Shield } from "lucide-react";
+import { ArrowRight, MessageSquare, Radio, Headphones, Car, Building2 } from "lucide-react";
 export function HeroSection() {
   return <section className="relative min-h-[95vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden">
       {/* Light gradient background */}
@@ -12,13 +12,13 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-12">
-          {/* Eyebrow badge */}
-          <div className="animate-fade-in flex justify-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_25px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
-              <Shield className="w-4 h-4" />
-              <span>Detección • Mediación • Intervención In Situ</span>
-            </div>
-          </div>
+           {/* Eyebrow badge */}
+           <div className="animate-fade-in flex justify-center">
+             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_25px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
+               <Building2 className="w-4 h-4" />
+               <span>Infraestructura operativa para propiedades turísticas</span>
+             </div>
+           </div>
 
           {/* Main headline */}
           <div className="space-y-2 animate-fade-in" style={{
