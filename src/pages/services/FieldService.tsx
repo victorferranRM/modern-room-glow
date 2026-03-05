@@ -79,24 +79,28 @@ export default function FieldService() {
 
       <ServiceFeatures eyebrow="Nuestra Red" title="Agentes profesionales, en cualquier lugar" features={features} background="secondary" />
 
-      {/* Intervention Types */}
+      {/* Intervention Types - Alternating horizontal layout */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Servicios</p>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Tipos de intervenciones</h2>
+            <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Nuestros agentes están preparados para actuar en múltiples escenarios, siempre siguiendo tus protocolos.
+            </p>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-4">
             {interventionTypes.map((type, i) => (
-              <AnimatedSection key={type.title} delay={i * 100}>
-                <div className="group p-6 rounded-2xl bg-card border hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/20">
+              <AnimatedSection key={type.title} delay={i * 80}>
+                <div className="group flex items-center gap-5 p-5 rounded-2xl border bg-card hover:shadow-lg hover:border-primary/20 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-105">
                     <type.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 transition-colors group-hover:text-primary">{type.title}</h3>
-                  <p className="text-muted-foreground text-sm">{type.description}</p>
+                  <div>
+                    <h3 className="text-base font-semibold text-foreground mb-0.5 group-hover:text-primary transition-colors">{type.title}</h3>
+                    <p className="text-sm text-muted-foreground">{type.description}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
