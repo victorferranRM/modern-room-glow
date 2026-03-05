@@ -275,18 +275,18 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
             </div>
           ))}
 
-          <div className="grid grid-cols-[1.5fr,1fr,1fr,1fr] bg-muted/30 border-t">
+          <div className="grid grid-cols-[1.5fr,1fr,1fr,1fr] bg-muted/30 border-t border-border/30">
             <div className="p-6 flex items-center">
               <span className="text-sm text-muted-foreground">¿Listo para empezar?</span>
             </div>
-            <div className="p-6 flex items-center justify-center border-l border-border">
+            <div className="p-6 flex items-center justify-center border-l border-border/30">
               <Button variant="outline" asChild>
                 <Link to={`/checkout?plan=basic&properties=${properties}`}>
                   Elegir Noise Alarm
                 </Link>
               </Button>
             </div>
-            <div className="p-6 flex items-center justify-center border-l border-border bg-primary/5">
+            <div className="p-6 flex items-center justify-center border-l border-border/30 bg-primary/5">
               <Button asChild>
                 <Link to={`/checkout?plan=pro&properties=${properties}`}>
                   Elegir Alarm Assistant
@@ -294,7 +294,7 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
                 </Link>
               </Button>
             </div>
-            <div className="p-6 flex items-center justify-center border-l border-border">
+            <div className="p-6 flex items-center justify-center border-l border-border/30">
               <Button variant="outline" asChild>
                 <Link to="/contact?inquiry=enterprise">Contactar ventas</Link>
               </Button>
