@@ -59,6 +59,12 @@ const managerTabs: ManagerTab[] = [
     title: "Tareas y planificación",
     description: "Crea y haz seguimiento de tareas operativas vinculadas a incidencias, check-ins o intervenciones de campo.",
   },
+  {
+    id: "integrations",
+    icon: Plug,
+    title: "Integraciones",
+    description: "Conectamos con las herramientas que ya usas — PMS, channel managers y sistemas de acceso — sin cambiar tu flujo de trabajo.",
+  },
 ];
 
 // Abstract UI Mockups for each tab (dark themed for contrast on light bg)
