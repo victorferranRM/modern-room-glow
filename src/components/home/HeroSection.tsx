@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquare, Building2 } from "lucide-react";
-import serviceControlCenter from "@/assets/service-control-center.jpg";
-import serviceFieldService from "@/assets/service-field-service.jpg";
-import monitoringNoise from "@/assets/monitoring-noise.jpg";
+import heroControlCenter from "@/assets/hero-control-center.jpg";
+import heroFieldService from "@/assets/hero-field-service.jpg";
+import heroMonitoring from "@/assets/hero-monitoring.jpg";
 
 export function HeroSection() {
   const cards = [
