@@ -9,6 +9,7 @@ import {
   Building2, 
   Clock, 
   CalendarCheck,
+  Plug,
   Circle,
   CheckCircle2,
   AlertCircle,
@@ -57,6 +58,12 @@ const managerTabs: ManagerTab[] = [
     icon: CalendarCheck,
     title: "Tareas y planificación",
     description: "Crea y haz seguimiento de tareas operativas vinculadas a incidencias, check-ins o intervenciones de campo.",
+  },
+  {
+    id: "integrations",
+    icon: Plug,
+    title: "Integraciones",
+    description: "Conectamos con las herramientas que ya usas — PMS, channel managers y sistemas de acceso — sin cambiar tu flujo de trabajo.",
   },
 ];
 
@@ -368,12 +375,60 @@ function TasksMockup() {
   );
 }
 
+function IntegrationsMockup() {
+  return (
+    <div className="space-y-3">
+      <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-4">
+        <div className="text-xs text-slate-400 mb-3">Integraciones activas</div>
+        <div className="space-y-2">
+          {[
+            { name: "Guesty", type: "PMS", status: "Conectado" },
+            { name: "Booking.com", type: "Channel Manager", status: "Conectado" },
+            { name: "Nuki", type: "Acceso", status: "Conectado" },
+            { name: "Airbnb", type: "Channel Manager", status: "Conectado" },
+          ].map((integration, i) => (
+            <div
+              key={i}
+              className="flex items-center justify-between p-2 rounded-lg bg-slate-600/30 animate-in fade-in slide-in-from-left-2 duration-300"
+              style={{ animationDelay: `${i * 100}ms` }}
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-slate-500/50 flex items-center justify-center">
+                  <Plug className="w-4 h-4 text-slate-300" />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-200 font-medium">{integration.name}</div>
+                  <div className="text-xs text-slate-500">{integration.type}</div>
+                </div>
+              </div>
+              <span className="text-xs text-emerald-400">{integration.status}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-300">
+          <div className="text-xs text-slate-400 mb-2">Sincronizaciones</div>
+          <div className="text-2xl font-bold text-white">1.247</div>
+          <div className="text-xs text-emerald-400 mt-1">Últimas 24h</div>
+        </div>
+        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-400">
+          <div className="text-xs text-slate-400 mb-2">Conectores</div>
+          <div className="text-2xl font-bold text-white">4</div>
+          <div className="text-xs text-slate-400 mt-1">Activos</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const mockupComponents: Record<string, React.ComponentType> = {
   monitoring: MonitoringMockup,
   protocols: ProtocolsMockup,
   hierarchy: HierarchyMockup,
   history: HistoryMockup,
   tasks: TasksMockup,
+  integrations: IntegrationsMockup,
 };
 
 export function ManagerSection() {
@@ -424,21 +479,28 @@ export function ManagerSection() {
 
           {/* Tab Navigation */}
           <AnimatedSection delay={200} className="mb-8 lg:mb-12">
-            <div className="flex flex-wrap justify-center gap-2 lg:gap-1">
-              {managerTabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => handleTabChange(tab.id)}
-                  className={cn(
-                    "px-4 py-2 lg:px-6 lg:py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                    activeTab === tab.id
-                      ? "text-foreground border-primary"
-                      : "text-muted-foreground border-transparent hover:text-foreground hover:border-border"
-                  )}
-                >
-                  {tab.title.toUpperCase()}
-                </button>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 lg:gap-3 max-w-4xl mx-auto">
+              {managerTabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => handleTabChange(tab.id)}
+                    className={cn(
+                      "flex items-center gap-2 px-4 py-3 lg:px-5 lg:py-3.5 text-sm font-medium transition-all duration-300 rounded-xl border",
+                      activeTab === tab.id
+                        ? "bg-primary/10 border-primary/30 text-foreground"
+                        : "bg-card border-border text-muted-foreground hover:text-foreground hover:border-primary/20"
+                    )}
+                  >
+                    <Icon className={cn(
+                      "w-4 h-4 shrink-0",
+                      activeTab === tab.id ? "text-primary" : "text-muted-foreground"
+                    )} />
+                    <span className="text-left leading-tight">{tab.title}</span>
+                  </button>
+                );
+              })}
             </div>
           </AnimatedSection>
 
@@ -503,6 +565,13 @@ export function ManagerSection() {
                       <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Vista calendario</span>
                       <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Tarjetas de tareas</span>
                       <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Asignaciones</span>
+                    </>
+                  )}
+                  {activeTab === "integrations" && (
+                    <>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">PMS y Channel Managers</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Acceso inteligente</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">API abierta</span>
                     </>
                   )}
                 </div>
@@ -586,6 +655,22 @@ export function ManagerSection() {
                       <div className="flex items-center gap-2 text-foreground/80">
                         <ChevronRight className="w-4 h-4 text-primary" />
                         <span className="text-sm">Haz seguimiento de intervenciones de campo y check-ins</span>
+                      </div>
+                    </>
+                  )}
+                  {activeTab === "integrations" && (
+                    <>
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <ChevronRight className="w-4 h-4 text-primary" />
+                        <span className="text-sm">Conexión nativa con los principales PMS y channel managers</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <ChevronRight className="w-4 h-4 text-primary" />
+                        <span className="text-sm">Integración con cerraduras inteligentes y sistemas de acceso</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <ChevronRight className="w-4 h-4 text-primary" />
+                        <span className="text-sm">API abierta para conectar cualquier herramienta personalizada</span>
                       </div>
                     </>
                   )}
