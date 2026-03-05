@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
 
 import { ControlLevelSection } from "@/components/home/ControlLevelSection";
-import { HowItWorksSection } from "@/components/home/HowItWorksSection";
+
 import { MonitoringSection } from "@/components/home/MonitoringSection";
 import { ManagerSection } from "@/components/home/ManagerSection";
 import { ClosingSection } from "@/components/home/ClosingSection";
@@ -22,9 +22,6 @@ const Index = () => {
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
           <ControlLevelSection />
-        </AnimatedSection>
-        <AnimatedSection animation="fade-up">
-          <HowItWorksSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
           <MonitoringSection />
