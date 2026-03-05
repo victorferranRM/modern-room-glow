@@ -1,4 +1,10 @@
 // Case Studies data structure
+import stayUniqueLogo from "@/assets/partners/stayunique.svg";
+import delParqueFlatsLogo from "@/assets/partners/delparqueflats.png";
+import checkmyguestLogo from "@/assets/partners/checkmyguest.png";
+import youStylishLogo from "@/assets/partners/youstylish.png";
+import munStaysLogo from "@/assets/partners/munstays.png";
+import numaLogo from "@/assets/partners/numa.svg";
 
 export interface CaseStudySection {
   id: string;
