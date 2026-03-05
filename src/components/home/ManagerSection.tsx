@@ -383,9 +383,10 @@ function IntegrationsMockup() {
         <div className="space-y-2">
           {[
             { name: "Guesty", type: "PMS", status: "Conectado" },
-            { name: "Booking.com", type: "Channel Manager", status: "Conectado" },
+            { name: "Kross Booking", type: "PMS", status: "Conectado" },
             { name: "Nuki", type: "Acceso", status: "Conectado" },
-            { name: "Airbnb", type: "Channel Manager", status: "Conectado" },
+            { name: "Avantio", type: "PMS", status: "Conectado" },
+            { name: "Hostify", type: "PMS", status: "Conectado" },
           ].map((integration, i) => (
             <div
               key={i}
