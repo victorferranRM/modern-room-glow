@@ -3,25 +3,25 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { Radio, Headphones, ShoppingCart, MessageSquare, ArrowRight, BarChart3, Bell, CheckCircle, FileText, Phone, Star } from "lucide-react";
 
-function FloatingBadge({ 
-  children, 
-  className, 
-  delay = 0 
-}: { 
-  children: React.ReactNode; 
-  className?: string; 
-  delay?: number;
-}) {
+function FloatingBadge({
+  children,
+  className,
+  delay = 0
+
+
+
+
+}: {children: React.ReactNode;className?: string;delay?: number;}) {
   return (
-    <div 
+    <div
       className={`absolute hidden lg:flex items-center gap-2 px-3 py-2 bg-white/95 backdrop-blur-sm border border-border/40 rounded-xl shadow-md z-10 ${className}`}
-      style={{ 
-        animation: `floating 3.5s ease-in-out ${delay}s infinite`,
-      }}
-    >
+      style={{
+        animation: `floating 3.5s ease-in-out ${delay}s infinite`
+      }}>
+      
       {children}
-    </div>
-  );
+    </div>);
+
 }
 
 export function ControlLevelSection() {
@@ -61,7 +61,9 @@ export function ControlLevelSection() {
 
                 <FloatingBadge className="-bottom-4 -left-4 rotate-[2deg]" delay={1.5}>
                   <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span className="text-xs font-medium text-foreground whitespace-nowrap">Configurado en 5 min</span>
+                  <span className="text-xs font-medium text-foreground whitespace-nowrap">Alarma resuelta en 5'
+
+                  </span>
                 </FloatingBadge>
 
                 <div className="bg-card rounded-2xl border-2 border-border p-8 lg:p-10 flex flex-col h-full hover:border-primary/30 transition-colors duration-300">
@@ -126,9 +128,7 @@ export function ControlLevelSection() {
                   <div>
                     <span className="text-xs font-medium text-foreground block">Guest review</span>
                     <div className="flex items-center gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-2.5 h-2.5 text-amber-400 fill-amber-400" />
-                      ))}
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-2.5 h-2.5 text-amber-400 fill-amber-400" />)}
                       <span className="text-[10px] text-muted-foreground ml-1">Exceptional!</span>
                     </div>
                   </div>
@@ -161,12 +161,12 @@ export function ControlLevelSection() {
                     <p className="text-xs font-medium text-background/50 uppercase tracking-wider mb-4">
                       Venta consultiva · Portfolio +50 propiedades
                     </p>
-                    <Button 
-                      variant="outline" 
-                      className="w-full gap-2 border-background/30 bg-transparent text-background hover:bg-background hover:text-foreground" 
-                      size="lg" 
-                      asChild
-                    >
+                    <Button
+                      variant="outline"
+                      className="w-full gap-2 border-background/30 bg-transparent text-background hover:bg-background hover:text-foreground"
+                      size="lg"
+                      asChild>
+                      
                       <Link to="/contact">
                         <MessageSquare className="w-4 h-4" />
                         Hablar con un experto
@@ -194,6 +194,6 @@ export function ControlLevelSection() {
           50% { transform: translateY(-5px) rotate(var(--tw-rotate, 0)); }
         }
       `}</style>
-    </section>
-  );
+    </section>);
+
 }
