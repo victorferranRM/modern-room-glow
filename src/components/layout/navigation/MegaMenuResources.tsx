@@ -31,27 +31,48 @@ export function MegaMenuResources() {
               const isCalculator = item.href === "/resources/savings-calculator";
               return (
                 <li key={item.title}>
-                  <Link
-                    to={item.href}
-                    className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
-                  >
-                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
-                      <Icon className="w-4 h-4 text-primary transition-transform duration-200 group-hover:scale-110" />
-                    </div>
-                    <div>
-                      <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-200">
-                        {item.title}
-                      </span>
-                      <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
-                        {learnDescriptions[index]}
-                      </span>
-                      {isCalculator && (
-                        <span className="inline-flex items-center text-xs font-medium text-primary mt-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
-                          Probar calculadora →
+                  {(item as any).external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
+                    >
+                      <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
+                        <Icon className="w-4 h-4 text-primary transition-transform duration-200 group-hover:scale-110" />
+                      </div>
+                      <div>
+                        <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-200">
+                          {item.title}
                         </span>
-                      )}
-                    </div>
-                  </Link>
+                        <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
+                          {learnDescriptions[index]}
+                        </span>
+                      </div>
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
+                    >
+                      <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
+                        <Icon className="w-4 h-4 text-primary transition-transform duration-200 group-hover:scale-110" />
+                      </div>
+                      <div>
+                        <span className="block text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-200">
+                          {item.title}
+                        </span>
+                        <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
+                          {learnDescriptions[index]}
+                        </span>
+                        {isCalculator && (
+                          <span className="inline-flex items-center text-xs font-medium text-primary mt-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                            Probar calculadora →
+                          </span>
+                        )}
+                      </div>
+                    </Link>
+                  )}
                 </li>
               );
             })}
