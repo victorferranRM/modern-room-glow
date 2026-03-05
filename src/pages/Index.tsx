@@ -9,6 +9,7 @@ import { ManagerSection } from "@/components/home/ManagerSection";
 import { ClosingSection } from "@/components/home/ClosingSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { WhyRoomonitorSection } from "@/components/home/WhyRoomonitorSection";
+import { CoverSection } from "@/components/home/CoverSection";
 import { AnimatedSection } from "@/components/ui/animated-section";
 
 const Index = () => {
@@ -26,6 +27,7 @@ const Index = () => {
         <AnimatedSection animation="fade-up">
           <MonitoringSection />
         </AnimatedSection>
+        <CoverSection />
         <AnimatedSection animation="fade-up">
           <WhyRoomonitorSection />
         </AnimatedSection>
