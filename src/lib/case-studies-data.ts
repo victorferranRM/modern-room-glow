@@ -49,7 +49,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "stay-unique",
     company: "Stay Unique",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: stayUniqueLogo,
     industry: "Alquiler vacacional",
     location: "Barcelona, España",
     headline: "Cómo Stay Unique redujo las incidencias de ruido un 85% con Roomonitor",
