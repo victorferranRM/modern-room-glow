@@ -334,10 +334,10 @@ export default function Pricing() {
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="text-center mb-10 sm:mb-12">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
-                  ¿Qué incluyen los Servicios?
+                  ¿Qué incluye Cover™?
                 </h2>
                 <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                  Los servicios se activan tras la compra con un especialista. El precio depende de tu portfolio y necesidades operativas.
+                  Cover™ es la capa operativa que se activa sobre tu monitorización. Nuestro equipo actúa en tu nombre, con tus protocolos, dentro de tu ecosistema. Precio personalizado según tamaño y necesidades de tu portfolio.
                 </p>
               </AnimatedSection>
 
@@ -345,23 +345,23 @@ export default function Pricing() {
                 {[
                   {
                     icon: Headphones,
-                    title: "Centro de Control 24/7",
-                    description: "Operadores humanos monitorizando tus propiedades las 24 horas",
+                    title: "Centro de Control",
+                    description: "Agentes formados en hospitality monitorizando, evaluando y resolviendo incidencias en tiempo real.",
                   },
                   {
                     icon: PhoneCall,
                     title: "Atención telefónica",
-                    description: "Comunicación profesional con huéspedes y gestión de incidencias",
+                    description: "Atendemos llamadas de huéspedes en tu nombre, fuera de horario. Mediación, gestión de quejas y coordinación.",
                   },
                   {
                     icon: Users,
                     title: "Field Service",
-                    description: "Intervención presencial cuando la resolución remota no es suficiente",
+                    description: "Intervención presencial en 8 ciudades cuando la resolución remota no es suficiente.",
                   },
                   {
-                    icon: Zap,
-                    title: "Respuesta inmediata",
-                    description: "Acción real en minutos, no en horas",
+                    icon: FileText,
+                    title: "Protocolos a medida",
+                    description: "Definimos juntos cómo actuar en cada escenario. Tus reglas, nuestra ejecución.",
                   },
                 ].map((service, i) => (
                   <AnimatedSection key={service.title} delay={i * 100}>
