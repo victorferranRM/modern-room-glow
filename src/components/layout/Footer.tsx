@@ -4,9 +4,17 @@ import roomonitorLogo from "@/assets/roomonitor-logo.png";
 type FooterLink = { name: string; href: string; external?: boolean };
 
 const footerLinks: Record<string, FooterLink[]> = {
-  solutions: [
-    { name: "Dispositivo Roomonitor", href: "/monitoring" },
+  operativa: [
     { name: "Roomonitor Cover™", href: "/cover" },
+    { name: "Centro de Control", href: "/services/control-center" },
+    { name: "Agentes Field Service", href: "/services/field-service" },
+    { name: "Atención telefónica", href: "/services/guest-assist" },
+    { name: "Night Watch", href: "/services/night-watch" },
+    { name: "Acceso PMS y Herramientas", href: "/services/pms-access" },
+    { name: "Protocolos Operativos", href: "/services/protocols" },
+  ],
+  tecnologia: [
+    { name: "Dispositivo Roomonitor", href: "/monitoring" },
     { name: "Monitorización de Ruido", href: "/monitoring/noise" },
     { name: "Detección de Ocupación", href: "/monitoring/occupancy" },
     { name: "Detección de Humo", href: "/monitoring/smoke" },
@@ -77,17 +85,26 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Solutions */}
+          {/* Solutions — Operativa + Tecnología */}
           <div>
             <h3 className="font-semibold mb-4">Soluciones</h3>
+
+            {/* Operativa */}
+            <p className="text-xs font-semibold opacity-50 uppercase tracking-wider mb-3">Operativa</p>
+            <ul className="space-y-3 mb-6">
+              {footerLinks.operativa.map(link => <li key={link.name}>
+                <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</Link>
+              </li>)}
+            </ul>
+
+            <div className="border-t border-white/10 mb-5" />
+
+            {/* Tecnología */}
+            <p className="text-xs font-semibold opacity-50 uppercase tracking-wider mb-3">Tecnología</p>
             <ul className="space-y-3">
-              {footerLinks.solutions.map(link => <li key={link.name}>
-                  {link.external ? (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</a>
-                  ) : (
-                    <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</Link>
-                  )}
-                </li>)}
+              {footerLinks.tecnologia.map(link => <li key={link.name}>
+                <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</Link>
+              </li>)}
             </ul>
           </div>
 
