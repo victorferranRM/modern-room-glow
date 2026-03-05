@@ -86,30 +86,27 @@ export function CoverSection() {
             <AnimatedSection key={card.title} animation="fade-up" delay={index * 100}>
               <Link
                 to={card.href}
-                className="group relative rounded-xl border border-border/60 overflow-hidden h-full flex flex-col bg-card transition-all duration-300 ease-out hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:border-primary/30"
+                className="group relative rounded-2xl overflow-hidden h-[280px] flex flex-col shadow-soft hover:shadow-soft-lg transition-shadow duration-300"
               >
-                {/* Background image */}
-                <div className="relative h-36 overflow-hidden">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-                  <div className="absolute bottom-3 left-4">
-                    <div className="w-9 h-9 rounded-lg bg-primary/90 flex items-center justify-center backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
-                      <card.icon className="w-4 h-4 text-primary-foreground" />
-                    </div>
-                  </div>
-                </div>
+                {/* Full background image */}
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                {/* Dark gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-300 group-hover:from-black/85 group-hover:via-black/50" />
 
-                {/* Content */}
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-base font-semibold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-200">
+                {/* Content positioned at bottom */}
+                <div className="relative z-10 mt-auto p-5">
+                  <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-110">
+                    <card.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-white transition-colors duration-200">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                  <p className="text-sm text-white/80 leading-relaxed mb-3">
                     {card.description}
                   </p>
                   <span className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-all duration-200 group-hover:gap-2">
