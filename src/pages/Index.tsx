@@ -27,6 +27,7 @@ const Index = () => {
         <AnimatedSection animation="fade-up">
           <MonitoringSection />
         </AnimatedSection>
+        <CoverSection />
         <AnimatedSection animation="fade-up">
           <WhyRoomonitorSection />
         </AnimatedSection>
