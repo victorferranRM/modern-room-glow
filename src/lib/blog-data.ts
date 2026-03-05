@@ -334,7 +334,7 @@ Modern systems connect with property management to:
 - Adjust energy settings
 - Generate occupancy reports
     `,
-    category: "Hotels",
+    category: "Hoteles",
     date: "2026-01-05",
     readTime: 6,
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
