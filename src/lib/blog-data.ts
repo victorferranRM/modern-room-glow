@@ -12,12 +12,12 @@ export interface BlogPost {
 }
 
 export const categories = [
-  "All categories",
-  "Vacation rentals",
-  "Events",
-  "Industry news",
-  "Property Management",
-  "Hotels",
+  "Todas las categorías",
+  "Alquiler vacacional",
+  "Eventos",
+  "Noticias del sector",
+  "Gestión de propiedades",
+  "Hoteles",
   "Roomonitor",
 ];
 

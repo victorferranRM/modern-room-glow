@@ -15,14 +15,13 @@ const BlogPost = () => {
   }
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-GB", {
+    return new Date(dateString).toLocaleDateString("es-ES", {
       year: "numeric",
       month: "long",
       day: "numeric",
     });
   };
 
-  // Get related posts (same category, excluding current)
   const relatedPosts = blogPosts
     .filter((p) => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
@@ -51,26 +50,22 @@ const BlogPost = () => {
       <section className="pt-32 pb-8">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" className="max-w-4xl mx-auto">
-            {/* Back Link */}
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to Blog
+              Volver al Blog
             </Link>
 
-            {/* Category */}
             <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
               {post.category}
             </span>
 
-            {/* Title */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight tracking-tight">
               {post.title}
             </h1>
 
-            {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8">
               <span className="flex items-center gap-2 font-medium">
                 <Calendar className="w-4 h-4" />
@@ -78,7 +73,7 @@ const BlogPost = () => {
               </span>
               <span className="flex items-center gap-2 font-medium">
                 <Clock className="w-4 h-4" />
-                {post.readTime} min read
+                {post.readTime} min de lectura
               </span>
               <Button
                 variant="ghost"
@@ -87,11 +82,10 @@ const BlogPost = () => {
                 className="flex items-center gap-2 font-medium"
               >
                 <Share2 className="w-4 h-4" />
-                Share
+                Compartir
               </Button>
             </div>
 
-            {/* Excerpt */}
             <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6 mb-8 font-light">
               {post.excerpt}
             </p>
@@ -149,14 +143,14 @@ const BlogPost = () => {
             <div className="mt-12 pt-8 border-t border-border">
               <div className="bg-muted/50 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">
-                  Ready to protect your properties?
+                  ¿Listo para proteger tus propiedades?
                 </h3>
                 <p className="text-muted-foreground mb-6 font-light">
-                  Get started with Roomonitor and ensure peace of mind for you and your neighbours.
+                  Empieza con Roomonitor y garantiza tranquilidad para ti y tus vecinos.
                 </p>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                   <Link to="/contact">
-                    Get in touch
+                    Contactar
                   </Link>
                 </Button>
               </div>
@@ -171,7 +165,7 @@ const BlogPost = () => {
           <div className="container mx-auto px-4">
             <AnimatedSection animation="fade-up" className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight text-foreground">
-                Related Articles
+                Artículos relacionados
               </h2>
             </AnimatedSection>
 

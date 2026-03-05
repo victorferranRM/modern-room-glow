@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
