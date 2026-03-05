@@ -445,7 +445,7 @@ export function ManagerSection() {
               {/* Left: Text */}
               <div className="text-center lg:text-left">
                 <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                  La capa de control
+                  Gestión de activos
                 </p>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">
                   Conoce Manager — tu centro de control operativo

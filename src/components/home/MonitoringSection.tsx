@@ -176,7 +176,7 @@ export function MonitoringSection() {
                       containerClassName="w-full h-full"
                       priority={index === 0}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
                   </div>)}
 
                 <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
