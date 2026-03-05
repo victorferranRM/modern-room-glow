@@ -22,7 +22,13 @@ import {
   Smartphone,
   Mail,
   PhoneCall,
-  Home
+  Home,
+  BarChart3,
+  Moon,
+  MapPin,
+  FileText,
+  AlertCircle,
+  KeyRound
 } from "lucide-react";
 import serviceControlCenter from "@/assets/service-control-center.jpg";
 
@@ -285,14 +291,18 @@ export default function Pricing() {
                     </p>
                   </div>
 
-                  <ul className="space-y-3">
-                    {[
-                      { icon: Check, text: "Todo lo de Alarm Assistant" },
-                      { icon: Home, text: "Servicios de huésped y propiedad" },
-                      { icon: Users, text: "Gestión operativa completa" },
-                      { icon: Shield, text: "Acuerdos SLA personalizados" },
-                      { icon: Zap, text: "Account manager dedicado" },
-                    ].map((feature) => (
+                   <ul className="space-y-3">
+                     {[
+                       { icon: Check, text: "Todo lo de Alarm Assistant" },
+                       { icon: BarChart3, text: "Centro de Control 24/7 con agentes dedicados" },
+                       { icon: PhoneCall, text: "Atención telefónica a huéspedes en tu nombre" },
+                       { icon: Moon, text: "Night Watch: prevención activa de fiestas" },
+                       { icon: MapPin, text: "Field Service: intervención presencial en 8 ciudades" },
+                       { icon: FileText, text: "Protocolos operativos personalizados por propiedad" },
+                       { icon: AlertCircle, text: "Gestión de incidencias de extremo a extremo" },
+                       { icon: KeyRound, text: "Apoyo en accesos y check-ins" },
+                       { icon: Users, text: "Servicio de conserjería" },
+                     ].map((feature) => (
                       <li key={feature.text} className="flex items-start gap-3">
                         <feature.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground">{feature.text}</span>
