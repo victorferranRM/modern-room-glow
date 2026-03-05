@@ -13,6 +13,12 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { CoverCities } from "@/components/cover/CoverCities";
 import serviceImage from "@/assets/service-field-service.jpg";
+import interventionNoise from "@/assets/intervention-noise.jpg";
+import interventionAccess from "@/assets/intervention-access.jpg";
+import interventionInspection from "@/assets/intervention-inspection.jpg";
+import interventionRepair from "@/assets/intervention-repair.jpg";
+import interventionWelcome from "@/assets/intervention-welcome.jpg";
+import interventionDocumentation from "@/assets/intervention-documentation.jpg";
 
 const stats = [
   { value: "9+", label: "Ciudades cubiertas" },
@@ -31,12 +37,12 @@ const features = [
 ];
 
 const interventionTypes = [
-  { title: "Intervención por Ruido y Fiestas", description: "Desescalada profesional cuando los niveles de ruido superan los umbrales", icon: Volume2 },
-  { title: "Huéspedes sin Acceso", description: "Asistencia de acceso de emergencia cuando los huéspedes se quedan fuera", icon: Key },
-  { title: "Inspecciones de Propiedad", description: "Comprobaciones visuales cuando los sensores detectan actividad inusual", icon: Search },
-  { title: "Reparaciones de Emergencia", description: "Coordinación con contratistas locales para arreglos urgentes", icon: Wrench },
-  { title: "Bienvenida de Huéspedes", description: "Asistencia presencial de check-in cuando es necesario", icon: HandshakeIcon },
-  { title: "Documentación de Incidencias", description: "Evidencia fotográfica y de vídeo para reclamaciones de seguros", icon: Camera },
+  { title: "Intervención por Ruido y Fiestas", description: "Desescalada profesional cuando los niveles de ruido superan los umbrales", icon: Volume2, image: interventionNoise },
+  { title: "Huéspedes sin Acceso", description: "Asistencia de acceso de emergencia cuando los huéspedes se quedan fuera", icon: Key, image: interventionAccess },
+  { title: "Inspecciones de Propiedad", description: "Comprobaciones visuales cuando los sensores detectan actividad inusual", icon: Search, image: interventionInspection },
+  { title: "Reparaciones de Emergencia", description: "Coordinación con contratistas locales para arreglos urgentes", icon: Wrench, image: interventionRepair },
+  { title: "Bienvenida de Huéspedes", description: "Asistencia presencial de check-in cuando es necesario", icon: HandshakeIcon, image: interventionWelcome },
+  { title: "Documentación de Incidencias", description: "Evidencia fotográfica y de vídeo para reclamaciones de seguros", icon: Camera, image: interventionDocumentation },
 ];
 
 const coverageCities = [
