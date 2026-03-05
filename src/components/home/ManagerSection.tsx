@@ -456,12 +456,18 @@ export function ManagerSection() {
               </div>
               
               {/* Right: Devices Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex flex-col items-center lg:items-end gap-6">
                 <img 
                   src={managerDevices} 
                   alt="Plataforma Manager en portátil y móvil" 
-                  className="max-w-full h-auto max-h-[400px] object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
+                  className="max-w-[110%] w-[110%] h-auto object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
                 />
+                <Button size="lg" className="gap-2 group" asChild>
+                  <Link to="/contact">
+                    Solicitar una Demo
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </AnimatedSection>
@@ -680,16 +686,10 @@ export function ManagerSection() {
 
           {/* Closing line + CTA */}
           <AnimatedSection delay={600} className="mt-12 lg:mt-16">
-            <div className="text-center space-y-6">
+            <div className="text-center">
               <p className="text-muted-foreground text-sm lg:text-base max-w-2xl mx-auto">
                 Manager conecta la monitorización con nuestro Centro de Control y equipos de Field Service, permitiendo operaciones más rápidas, estructuradas y consistentes.
               </p>
-              <Button size="lg" className="gap-2 group" asChild>
-                <Link to="/contact">
-                  Solicitar una Demo
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
             </div>
           </AnimatedSection>
         </div>
