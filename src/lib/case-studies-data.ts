@@ -266,7 +266,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "numa-hotels",
     company: "Numa",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: numaLogo,
     industry: "Hoteles",
     location: "Europa",
     headline: "Numa escala su hospitalidad digital-first en Europa con monitorización inteligente",
