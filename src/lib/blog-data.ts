@@ -378,7 +378,7 @@ Property managers report:
 - 25% improvement in guest satisfaction
 - 35% decrease in operational costs
     `,
-    category: "Property Management",
+    category: "Gestión de propiedades",
     date: "2026-01-03",
     readTime: 5,
     image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&h=600&fit=crop",
