@@ -223,7 +223,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "mun-stays",
     company: "Mun Stays",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: munStaysLogo,
     industry: "Gestión de propiedades",
     location: "España",
     headline: "Cómo Mun Stays monitorizó propiedades vacías durante la pandemia",
