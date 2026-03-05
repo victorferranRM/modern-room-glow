@@ -14,7 +14,7 @@ export function ClosingSection() {
             <em className="font-serif not-italic text-primary">no se hace en solitario.</em>
           </h2>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Únete a los operadores profesionales que dejaron de apagar fuegos y empezaron a centrarse en el crecimiento estratégico.
+            Únete a los gestores profesionales que han dejado de apagar fuegos para centrarse en el crecimiento estratégico.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button size="lg" className="text-base px-8 py-6 bg-white text-black font-semibold hover:bg-gray-100 shadow-lg" asChild>
