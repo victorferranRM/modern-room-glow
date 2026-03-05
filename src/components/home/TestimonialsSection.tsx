@@ -62,9 +62,9 @@ export function TestimonialsSection() {
 
         {/* Testimonial Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-soft-lg border relative">
+           <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-soft-lg border relative">
             {/* Quote mark */}
-            <div className="absolute top-8 left-8 text-6xl text-primary/20 font-serif leading-none">
+            <div className="absolute top-8 left-8 text-6xl text-primary/20 leading-none">
               "
             </div>
 

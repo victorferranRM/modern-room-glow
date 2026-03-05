@@ -67,7 +67,7 @@ export function HowItWorksSection() {
                 Nuestro ecosistema
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-                Hardware + Remoto + <em className="font-serif not-italic">In Situ</em>
+                Hardware + Remoto + <span>In Situ</span>
               </h2>
             </div>
           </AnimatedSection>

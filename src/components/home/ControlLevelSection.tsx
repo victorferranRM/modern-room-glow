@@ -15,7 +15,7 @@ export function ControlLevelSection() {
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
               ¿Qué necesita tu{" "}
-              <em className="font-serif not-italic text-primary">operativa</em>?
+              <span className="text-primary">operativa</span>?
             </h2>
           </AnimatedSection>
 

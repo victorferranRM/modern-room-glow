@@ -64,7 +64,7 @@ export function TakeoverSection() {
           {/* Dark banner */}
           <AnimatedSection delay={500}>
             <div className="bg-foreground rounded-2xl p-8 lg:p-12 text-center">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif italic font-bold text-background mb-4">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-background mb-4">
                 "Actuamos como si fuéramos tú"
               </h3>
               <p className="text-background/70 max-w-2xl mx-auto leading-relaxed mb-4">
