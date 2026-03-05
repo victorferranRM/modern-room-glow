@@ -95,7 +95,7 @@ export const resourcesData = {
     title: "APRENDER",
     items: [
       { title: "Blog", href: "/blog" },
-      { title: "Base de Conocimiento", href: "/resources/knowledge-base" },
+      { title: "Base de Conocimiento", href: "https://help.roomonitor.com/es/ayuda", external: true },
       { title: "Calculadora de Ahorro", href: "/resources/savings-calculator" },
     ],
   },
