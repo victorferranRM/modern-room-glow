@@ -22,7 +22,14 @@ import {
   Smartphone,
   Mail,
   PhoneCall,
-  Home
+  Home,
+  BarChart3,
+  Moon,
+  MapPin,
+  FileText,
+  AlertCircle,
+  KeyRound,
+  Concierge
 } from "lucide-react";
 import serviceControlCenter from "@/assets/service-control-center.jpg";
 
