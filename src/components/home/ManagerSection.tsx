@@ -567,6 +567,13 @@ export function ManagerSection() {
                       <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Asignaciones</span>
                     </>
                   )}
+                  {activeTab === "integrations" && (
+                    <>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">PMS y Channel Managers</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Acceso inteligente</span>
+                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">API abierta</span>
+                    </>
+                  )}
                 </div>
 
                 {/* Feature list */}
