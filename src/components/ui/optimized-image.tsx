@@ -77,7 +77,7 @@ export function OptimizedImage({
       {/* Skeleton placeholder */}
       <div
         className={cn(
-          "absolute inset-0 bg-gradient-to-r from-muted/50 via-muted/30 to-muted/50 animate-pulse transition-opacity duration-500",
+          "absolute inset-0 bg-muted/30 transition-opacity duration-500",
           isLoaded ? "opacity-0" : "opacity-100"
         )}
       />
