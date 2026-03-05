@@ -117,7 +117,7 @@ To adapt to these changes:
 - Train staff on new procedures
 - Monitor cancellation patterns for adjustments
     `,
-    category: "Industry news",
+    category: "Noticias del sector",
     date: "2026-01-15",
     readTime: 3,
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
