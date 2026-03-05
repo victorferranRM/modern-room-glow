@@ -96,9 +96,11 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
               {footerLinks.company.map(link => <li key={link.name}>
-                  <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">
-                    {link.name}
-                  </Link>
+                  {link.external ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</a>
+                  ) : (
+                    <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</Link>
+                  )}
                 </li>)}
             </ul>
           </div>
