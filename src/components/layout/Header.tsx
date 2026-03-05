@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, User, LogOut, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
+import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 import { MegaMenuServices } from "./navigation/MegaMenuServices";
 import { MegaMenuMonitoring } from "./navigation/MegaMenuMonitoring";
 import { MegaMenuResources } from "./navigation/MegaMenuResources";
@@ -24,6 +25,12 @@ export function Header() {
   const [activeMenu, setActiveMenu] = useState<MenuType>(null);
   const { user, signOut, loading } = useAuth();
   const navigate = useNavigate();
+
+  // Preload device image so mega menu appears instantly
+  useEffect(() => {
+    const img = new Image();
+    img.src = roomonitorDevice;
+  }, []);
 
   const handleSignOut = async () => {
     await signOut();
