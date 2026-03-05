@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { cn } from "@/lib/utils";
 import { 
   Truck, Clock, MapPin, Shield, Users, Wrench, Phone, 
   Volume2, Key, Search, Camera, HandshakeIcon
