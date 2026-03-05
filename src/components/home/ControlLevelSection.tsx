@@ -51,7 +51,7 @@ export function ControlLevelSection() {
                   <span className="text-xs font-medium text-foreground whitespace-nowrap">Dashboard en tiempo real</span>
                 </FloatingBadge>
 
-                <FloatingBadge className="-left-8 top-1/2 -translate-y-1/2 rotate-[1deg]" delay={0.8}>
+                <FloatingBadge className="-right-8 top-1/2 -translate-y-1/2 rotate-[1deg]" delay={0.8}>
                   <div className="relative">
                     <Bell className="w-4 h-4 text-amber-500 shrink-0" />
                     <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
