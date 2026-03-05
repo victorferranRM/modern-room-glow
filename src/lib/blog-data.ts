@@ -167,7 +167,7 @@ Roomonitor devices are fully compliant with the new regulation, offering:
 - Integration with property management systems
 - Evidence for compliance demonstrations
     `,
-    category: "Industry news",
+    category: "Noticias del sector",
     date: "2026-01-12",
     readTime: 4,
     image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
