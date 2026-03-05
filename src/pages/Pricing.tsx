@@ -28,8 +28,7 @@ import {
   MapPin,
   FileText,
   AlertCircle,
-  KeyRound,
-  Concierge
+  KeyRound
 } from "lucide-react";
 import serviceControlCenter from "@/assets/service-control-center.jpg";
 
