@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Eye, Truck, Phone, Moon, Settings, FileText, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { Button } from "@/components/ui/button";
 
 import imgControlCenter from "@/assets/cover-control-center.jpg";
 import imgFieldService from "@/assets/cover-field-service.jpg";
@@ -86,27 +86,32 @@ export function CoverSection() {
             <AnimatedSection key={card.title} animation="fade-up" delay={index * 100}>
               <Link
                 to={card.href}
-                className="group relative rounded-2xl overflow-hidden h-[280px] flex flex-col shadow-soft hover:shadow-soft-lg transition-shadow duration-300"
+                className="group relative rounded-2xl border border-border/60 overflow-hidden h-full flex flex-col bg-card transition-all duration-300 ease-out hover:shadow-soft-lg hover:-translate-y-1 hover:border-primary/30 shadow-soft"
               >
-                {/* Full background image */}
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                {/* Dark gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-300 group-hover:from-black/85 group-hover:via-black/50" />
-
-                {/* Content positioned at bottom */}
-                <div className="relative z-10 mt-auto p-5">
-                  <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-110">
-                    <card.icon className="w-5 h-5 text-white" />
+                {/* Image section */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                  {/* Warm subtle overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
+                  {/* Icon on image */}
+                  <div className="absolute top-3 left-3">
+                    <div className="w-9 h-9 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm">
+                      <card.icon className="w-4 h-4 text-primary" />
+                    </div>
                   </div>
-                  <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-white transition-colors duration-200">
+                </div>
+
+                {/* Text content on light background */}
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-base font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-200">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-white/80 leading-relaxed mb-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                     {card.description}
                   </p>
                   <span className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-all duration-200 group-hover:gap-2">
