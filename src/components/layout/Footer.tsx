@@ -85,17 +85,26 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Solutions */}
+          {/* Solutions — Operativa + Tecnología */}
           <div>
             <h3 className="font-semibold mb-4">Soluciones</h3>
+
+            {/* Operativa */}
+            <p className="text-xs font-semibold opacity-50 uppercase tracking-wider mb-3">Operativa</p>
+            <ul className="space-y-3 mb-6">
+              {footerLinks.operativa.map(link => <li key={link.name}>
+                <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</Link>
+              </li>)}
+            </ul>
+
+            <div className="border-t border-white/10 mb-5" />
+
+            {/* Tecnología */}
+            <p className="text-xs font-semibold opacity-50 uppercase tracking-wider mb-3">Tecnología</p>
             <ul className="space-y-3">
-              {footerLinks.solutions.map(link => <li key={link.name}>
-                  {link.external ? (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</a>
-                  ) : (
-                    <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</Link>
-                  )}
-                </li>)}
+              {footerLinks.tecnologia.map(link => <li key={link.name}>
+                <Link to={link.href} className="text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all">{link.name}</Link>
+              </li>)}
             </ul>
           </div>
 
