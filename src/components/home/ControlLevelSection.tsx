@@ -110,7 +110,7 @@ export function ControlLevelSection() {
                   <span className="text-xs font-medium text-foreground whitespace-nowrap">Incidencia resuelta en 4 min</span>
                 </FloatingBadge>
 
-                <FloatingBadge className="-left-8 top-1/2 -translate-y-1/2 rotate-[-1deg]" delay={1.2}>
+                <FloatingBadge className="-right-8 top-1/2 -translate-y-1/2 rotate-[-1deg]" delay={1.2}>
                   <div className="relative">
                     <Phone className="w-4 h-4 text-foreground/70 shrink-0" />
                     <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
