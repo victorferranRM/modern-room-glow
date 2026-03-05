@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageSquare, Radio, Headphones, Car, Shield } from "lucide-react";
+import { ArrowRight, MessageSquare, Radio, Headphones, Car, Building2 } from "lucide-react";
 export function HeroSection() {
   return <section className="relative min-h-[95vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden">
       {/* Light gradient background */}
