@@ -89,7 +89,7 @@ export function CoverSection() {
                 className="group relative rounded-2xl border border-border/60 overflow-hidden h-full flex flex-col bg-card transition-all duration-300 ease-out hover:shadow-soft-lg hover:-translate-y-1 hover:border-primary/30 shadow-soft"
               >
                 {/* Image section */}
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-44 overflow-hidden rounded-t-2xl">
                   <img
                     src={card.image}
                     alt={card.title}
