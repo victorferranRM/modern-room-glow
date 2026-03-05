@@ -16,6 +16,9 @@ export function MegaMenuMonitoring() {
             src={roomonitorDevice}
             alt="Dispositivo Roomonitor"
             className="w-full max-w-[220px] rounded-2xl shadow-lg object-cover mb-6"
+            loading="eager"
+            decoding="sync"
+            fetchPriority="high"
           />
           <Button size="default" variant="default" asChild className="group">
             <Link to="/monitoring">
