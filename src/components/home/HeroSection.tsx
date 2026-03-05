@@ -35,9 +35,9 @@ export function HeroSection() {
           {/* Subheadline */}
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
           animationDelay: "0.1s"
-        }}>
-            Escala tu portfolio sin multiplicar tu equipo — y recupera tus noches. Somos la única plataforma que combina hardware inteligente con ejecución operativa real. Tú descansas. Nosotros actuamos.
-          </p>
+        }}>Recibir una notificación de ruido a las 3 de la mañana no sirve de nada si tienes que levantarte tú. Roomonitor combina el mejor sensor del mercado con un equipo humano que interviene por ti. Tú descansas. Nosotros actuamos.
+
+        </p>
 
           {/* Value proposition cards */}
           <div className="grid sm:grid-cols-3 gap-4 lg:gap-6 max-w-4xl mx-auto animate-fade-in" style={{
@@ -47,7 +47,7 @@ export function HeroSection() {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Radio className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">Detectamos</h3>
+              <h3 className="text-foreground font-semibold mb-2">Detectamos por ti</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Sensor V5 de ruido y tabaco.
               </p>
@@ -57,7 +57,7 @@ export function HeroSection() {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Headphones className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">Respondemos</h3>
+              <h3 className="text-foreground font-semibold mb-2">Respondemos por ti</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Alarm Assistant contacta al huésped en tu nombre.
               </p>
@@ -67,7 +67,7 @@ export function HeroSection() {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Car className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">Actuamos</h3>
+              <h3 className="text-foreground font-semibold mb-2">Actuamos por ti</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Field Service interviene in situ cuando es necesario.
               </p>
