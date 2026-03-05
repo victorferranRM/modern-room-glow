@@ -180,7 +180,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "you-stylish-apartments",
     company: "You Stylish Apartments",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: youStylishLogo,
     industry: "Alquiler vacacional",
     location: "Barcelona, España",
     headline: "You Stylish Apartments minimiza incidencias a 2 de cada 1.300 reservas",
