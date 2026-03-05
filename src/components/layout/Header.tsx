@@ -26,6 +26,12 @@ export function Header() {
   const { user, signOut, loading } = useAuth();
   const navigate = useNavigate();
 
+  // Preload device image so mega menu appears instantly
+  useEffect(() => {
+    const img = new Image();
+    img.src = roomonitorDevice;
+  }, []);
+
   const handleSignOut = async () => {
     await signOut();
     navigate("/");
