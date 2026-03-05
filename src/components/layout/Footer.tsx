@@ -1,70 +1,40 @@
 import { Link } from "react-router-dom";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
-const footerLinks = {
-  solutions: [{
-    name: "Monitorización de Ruido",
-    href: "/monitoring/noise"
-  }, {
-    name: "Detección de Ocupación",
-    href: "/monitoring/occupancy"
-  }, {
-    name: "Detección de Humo",
-    href: "/monitoring/smoke"
-  }, {
-    name: "Monitorización Ambiental",
-    href: "/monitoring/environment"
-  }, {
-    name: "El Dispositivo",
-    href: "/monitoring"
-  }],
-  company: [{
-    name: "Sobre Nosotros",
-    href: "/about"
-  }, {
-    name: "Cómo Funciona",
-    href: "/how-it-works"
-  }, {
-    name: "Precios",
-    href: "/pricing"
-  }, {
-    name: "Contacto",
-    href: "/contact"
-  }, {
-    name: "Integraciones",
-    href: "/integrations"
-  }, {
-    name: "Casos de Éxito",
-    href: "/resources/case-studies"
-  }],
-  resources: [{
-    name: "Blog",
-    href: "/blog"
-  }, {
-    name: "Calculadora de Ahorro",
-    href: "/resources/savings-calculator"
-  }, {
-    name: "Portal de Cliente",
-    href: "/portal/dashboard"
-  }],
-  legal: [{
-    name: "Condiciones de Uso",
-    href: "/legal#terms-of-use"
-  }, {
-    name: "Aviso Legal",
-    href: "/legal#legal-notice"
-  }, {
-    name: "Política de Privacidad",
-    href: "/legal#privacy-policy"
-  }, {
-    name: "Política de Cookies",
-    href: "/legal#cookie-policy"
-  }, {
-    name: "Términos del Servicio",
-    href: "/legal#terms-of-service"
-  }, {
-    name: "Envíos y Devoluciones",
-    href: "/legal#shipping-returns"
-  }]
+
+type FooterLink = { name: string; href: string; external?: boolean };
+
+const footerLinks: Record<string, FooterLink[]> = {
+  solutions: [
+    { name: "Dispositivo Roomonitor", href: "/monitoring" },
+    { name: "Roomonitor Cover™", href: "/cover" },
+    { name: "Monitorización de Ruido", href: "/monitoring/noise" },
+    { name: "Detección de Ocupación", href: "/monitoring/occupancy" },
+    { name: "Detección de Humo", href: "/monitoring/smoke" },
+    { name: "Monitorización Ambiental", href: "/monitoring/environment" },
+  ],
+  company: [
+    { name: "Sobre Nosotros", href: "/about" },
+    { name: "Cómo Funciona", href: "/how-it-works" },
+    { name: "Precios", href: "/pricing" },
+    { name: "Contacto", href: "/contact" },
+    { name: "Integraciones", href: "/services/pms-access" },
+    { name: "Casos de Éxito", href: "/resources/case-studies" },
+  ],
+  resources: [
+    { name: "Blog", href: "/blog" },
+    { name: "Base de Conocimiento", href: "https://help.roomonitor.com/es/ayuda", external: true },
+    { name: "Calculadora de Ahorro", href: "/resources/savings-calculator" },
+    { name: "Manager", href: "https://manager.roomonitor.com", external: true },
+    { name: "Portal de Cliente", href: "/portal/dashboard" },
+  ],
+  legal: [
+    { name: "Condiciones de Uso", href: "/legal#terms-of-use" },
+    { name: "Aviso Legal", href: "/legal#legal-notice" },
+    { name: "Política de Privacidad", href: "/legal#privacy-policy" },
+    { name: "Política de Cookies", href: "/legal#cookie-policy" },
+    { name: "Términos del Servicio", href: "/legal#terms-of-service" },
+    { name: "Envíos y Devoluciones", href: "/legal#shipping-returns" },
+  ],
 };
 export function Footer() {
   return <footer className="bg-foreground text-background">
