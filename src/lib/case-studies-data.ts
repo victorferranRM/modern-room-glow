@@ -93,7 +93,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "del-parque-flats",
     company: "Del Parque Flats",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=80",
+    logo: delParqueFlatsLogo,
     industry: "Gestión de propiedades",
     location: "Madrid, España",
     headline: "Del Parque Flats logra un turismo responsable con monitorización integral",
