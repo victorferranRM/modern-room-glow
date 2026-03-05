@@ -15,7 +15,13 @@ import {
   Check,
   Home,
   Users,
-  Shield
+  Shield,
+  BarChart3,
+  Moon,
+  MapPin,
+  FileText,
+  AlertCircle,
+  KeyRound
 } from "lucide-react";
 
 interface PricingCarouselProps {
