@@ -9,6 +9,7 @@ import {
   Building2, 
   Clock, 
   CalendarCheck,
+  Plug,
   Circle,
   CheckCircle2,
   AlertCircle,
