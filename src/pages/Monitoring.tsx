@@ -3,10 +3,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
-import { 
-  Volume2, Users, Flame, Thermometer, Wifi, Battery, 
-  Shield, ArrowRight, Check, X, Zap, Settings, Download, Clock, Headphones
-} from "lucide-react";
+import {
+  Volume2, Users, Flame, Thermometer, Wifi, Battery,
+  Shield, ArrowRight, Check, X, Zap, Settings, Download, Clock, Headphones } from
+"lucide-react";
 import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 
 import monitoringNoise from "@/assets/monitoring-noise.jpg";
@@ -15,79 +15,79 @@ import monitoringAir from "@/assets/monitoring-air.jpg";
 import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
 
 const monitoringCapabilities = [
-  {
-    icon: Volume2,
-    title: "Monitorización de Ruido",
-    description: "Detección acústica en tiempo real y alertas instantáneas cuando se superan tus umbrales.",
-    href: "/monitoring/noise",
-    image: monitoringNoise,
-  },
-  {
-    icon: Users,
-    title: "Detección de Ocupación",
-    description: "Seguimiento de presencia de huéspedes e identificación de situaciones de sobreocupación.",
-    href: "/monitoring/occupancy",
-    image: monitoringOccupancy,
-  },
-  {
-    icon: Flame,
-    title: "Detección de Humo",
-    description: "Alertas inmediatas de humo para proteger tus activos y aplicar políticas de no fumadores.",
-    href: "/monitoring/smoke",
-    image: monitoringAir,
-  },
-  {
-    icon: Thermometer,
-    title: "Monitorización Ambiental",
-    description: "Control de temperatura, humedad y calidad del aire para el confort del huésped y la protección de la propiedad.",
-    href: "/monitoring/environment",
-    image: monitoringEnvironment,
-  },
-];
+{
+  icon: Volume2,
+  title: "Monitorización de Ruido",
+  description: "Detección acústica en tiempo real y alertas instantáneas cuando se superan tus umbrales.",
+  href: "/monitoring/noise",
+  image: monitoringNoise
+},
+{
+  icon: Users,
+  title: "Detección de Ocupación",
+  description: "Seguimiento de presencia de huéspedes e identificación de situaciones de sobreocupación.",
+  href: "/monitoring/occupancy",
+  image: monitoringOccupancy
+},
+{
+  icon: Flame,
+  title: "Detección de Humo",
+  description: "Alertas inmediatas de humo para proteger tus activos y aplicar políticas de no fumadores.",
+  href: "/monitoring/smoke",
+  image: monitoringAir
+},
+{
+  icon: Thermometer,
+  title: "Monitorización Ambiental",
+  description: "Control de temperatura, humedad y calidad del aire para el confort del huésped y la protección de la propiedad.",
+  href: "/monitoring/environment",
+  image: monitoringEnvironment
+}];
+
 
 const deviceSpecs = [
-  { label: "Dimensiones", value: "85 × 85 × 28 mm" },
-  { label: "Peso", value: "120g" },
-  { label: "Alimentación", value: "USB-C (5V/1A)" },
-  { label: "Conectividad", value: "Wi-Fi 2.4GHz" },
-  { label: "Batería de respaldo", value: "Hasta 4 horas" },
-  { label: "Rango operativo", value: "-10°C a 45°C" },
-];
+{ label: "Dimensiones", value: "85 × 85 × 28 mm" },
+{ label: "Peso", value: "120g" },
+{ label: "Alimentación", value: "USB-C (5V/1A)" },
+{ label: "Conectividad", value: "Wi-Fi 2.4GHz" },
+{ label: "Batería de respaldo", value: "Hasta 4 horas" },
+{ label: "Rango operativo", value: "-10°C a 45°C" }];
+
 
 const comparisonFeatures = [
-  { feature: "Dispositivo todo-en-uno (ruido, ocupación, humo, ambiente)", roomonitor: true, competitor: false },
-  { feature: "Monitorización en la nube en tiempo real", roomonitor: true, competitor: true },
-  { feature: "Verificación humana 24/7 disponible", roomonitor: true, competitor: false },
-  { feature: "Respetuoso con la privacidad (sin grabación de audio)", roomonitor: true, competitor: true },
-  { feature: "Respuesta a incidencias integrada", roomonitor: true, competitor: false },
-  { feature: "Integraciones PMS incluidas", roomonitor: true, competitor: false },
-  { feature: "Red de servicio de campo presencial", roomonitor: true, competitor: false },
-  { feature: "Batería de respaldo incluida", roomonitor: true, competitor: false },
-  { feature: "Calibración multi-sensor", roomonitor: true, competitor: false },
-];
+{ feature: "Dispositivo todo-en-uno (ruido, ocupación, humo, ambiente)", roomonitor: true, competitor: false },
+{ feature: "Monitorización en la nube en tiempo real", roomonitor: true, competitor: true },
+{ feature: "Verificación humana 24/7 disponible", roomonitor: true, competitor: false },
+{ feature: "Respetuoso con la privacidad (sin grabación de audio)", roomonitor: true, competitor: true },
+{ feature: "Respuesta a incidencias integrada", roomonitor: true, competitor: false },
+{ feature: "Integraciones PMS incluidas", roomonitor: true, competitor: false },
+{ feature: "Red de servicio de campo presencial", roomonitor: true, competitor: false },
+{ feature: "Batería de respaldo incluida", roomonitor: true, competitor: false },
+{ feature: "Calibración multi-sensor", roomonitor: true, competitor: false }];
+
 
 const installationSteps = [
-  {
-    step: 1,
-    title: "Desembala y enciende",
-    description: "Conecta el dispositivo a la corriente con el cable USB-C incluido. El LED parpadeará en azul indicando que está listo para configurar.",
-  },
-  {
-    step: 2,
-    title: "Descarga la app",
-    description: "Descarga la app de Roomonitor desde App Store o Google Play y crea tu cuenta o inicia sesión.",
-  },
-  {
-    step: 3,
-    title: "Conecta al Wi-Fi",
-    description: "Sigue las instrucciones de la app para conectar tu dispositivo a la red Wi-Fi de la propiedad.",
-  },
-  {
-    step: 4,
-    title: "Instala y configura",
-    description: "Usa el kit de montaje incluido para instalar el dispositivo y configura tus umbrales de alerta y preferencias de notificación.",
-  },
-];
+{
+  step: 1,
+  title: "Desembala y enciende",
+  description: "Conecta el dispositivo a la corriente con el cable USB-C incluido. El LED parpadeará en azul indicando que está listo para configurar."
+},
+{
+  step: 2,
+  title: "Descarga la app",
+  description: "Descarga la app de Roomonitor desde App Store o Google Play y crea tu cuenta o inicia sesión."
+},
+{
+  step: 3,
+  title: "Conecta al Wi-Fi",
+  description: "Sigue las instrucciones de la app para conectar tu dispositivo a la red Wi-Fi de la propiedad."
+},
+{
+  step: 4,
+  title: "Instala y configura",
+  description: "Usa el kit de montaje incluido para instalar el dispositivo y configura tus umbrales de alerta y preferencias de notificación."
+}];
+
 
 export default function Monitoring() {
   return (
@@ -131,8 +131,8 @@ export default function Monitoring() {
                 <img
                   src={roomonitorDevice}
                   alt="Dispositivo Roomonitor"
-                  className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl"
-                />
+                  className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl" />
+                
               </div>
             </AnimatedSection>
           </div>
@@ -173,22 +173,22 @@ export default function Monitoring() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Todo lo que necesitas en un dispositivo
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Controla ruido, ocupación, humo y condiciones ambientales — todo sin comprometer la privacidad del huésped.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Controla ruido, ocupación, probabilidad de humo, temperatura y humedad — todo sin comprometer la privacidad del huésped.
+
             </p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {monitoringCapabilities.map((capability, index) => (
-              <AnimatedSection key={capability.title} delay={index * 100}>
+            {monitoringCapabilities.map((capability, index) =>
+            <AnimatedSection key={capability.title} delay={index * 100}>
                 <Link
-                  to={capability.href}
-                  className="group block relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${capability.image})` }}
-                  />
+                to={capability.href}
+                className="group block relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                
+                  <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${capability.image})` }} />
+                
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 transition-colors duration-300" />
                   
                   <div className="relative h-full flex flex-col justify-end p-6 text-white">
@@ -208,7 +208,7 @@ export default function Monitoring() {
                   </div>
                 </Link>
               </AnimatedSection>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -244,20 +244,20 @@ export default function Monitoring() {
                   </div>
                   <ul className="space-y-3">
                     {[
-                      "Dispositivo V5 incluido",
-                      "Dashboard Manager completo",
-                      "Alertas en tiempo real",
-                      "Umbrales configurables por propiedad",
-                      "Histórico de datos y tendencias",
-                      "Notificaciones push, email, SMS",
-                      "Monitorización de ruido, humo, clima",
-                      "Tú gestionas las alertas",
-                    ].map((text) => (
-                      <li key={text} className="flex items-start gap-3">
+                    "Dispositivo V5 incluido",
+                    "Dashboard Manager completo",
+                    "Alertas en tiempo real",
+                    "Umbrales configurables por propiedad",
+                    "Histórico de datos y tendencias",
+                    "Notificaciones push, email, SMS",
+                    "Monitorización de ruido, humo, clima",
+                    "Tú gestionas las alertas"].
+                    map((text) =>
+                    <li key={text} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                         <span className="text-sm">{text}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <Button className="w-full" size="lg" asChild>
                     <Link to="/pricing">
@@ -287,20 +287,20 @@ export default function Monitoring() {
                   </div>
                   <ul className="space-y-3">
                     {[
-                      "Todo lo de Noise Alarm, más:",
-                      "Roomonitor monitoriza por ti 24/7",
-                      "Centro de Control recibe tus alertas",
-                      "Agente contacta al huésped en tu nombre",
-                      "Mediación y resolución remota",
-                      "Informe de incidencia en tu dashboard",
-                      "96% de incidencias resueltas sin tu intervención",
-                      "Protocolo personalizado por propiedad",
-                    ].map((text) => (
-                      <li key={text} className="flex items-start gap-3">
+                    "Todo lo de Noise Alarm, más:",
+                    "Roomonitor monitoriza por ti 24/7",
+                    "Centro de Control recibe tus alertas",
+                    "Agente contacta al huésped en tu nombre",
+                    "Mediación y resolución remota",
+                    "Informe de incidencia en tu dashboard",
+                    "96% de incidencias resueltas sin tu intervención",
+                    "Protocolo personalizado por propiedad"].
+                    map((text) =>
+                    <li key={text} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                         <span className="text-sm">{text}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <Button className="w-full" size="lg" variant="outline" asChild>
                     <Link to="/pricing">
@@ -338,36 +338,36 @@ export default function Monitoring() {
                 <div className="text-center font-semibold text-muted-foreground">Otros</div>
               </div>
               
-              {comparisonFeatures.map((item, index) => (
-                <div 
-                  key={item.feature} 
-                  className={`grid grid-cols-3 p-4 items-center ${index !== comparisonFeatures.length - 1 ? 'border-b' : ''}`}
-                >
+              {comparisonFeatures.map((item, index) =>
+              <div
+                key={item.feature}
+                className={`grid grid-cols-3 p-4 items-center ${index !== comparisonFeatures.length - 1 ? 'border-b' : ''}`}>
+                
                   <div className="text-sm">{item.feature}</div>
                   <div className="flex justify-center">
-                    {item.roomonitor ? (
-                      <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
+                    {item.roomonitor ?
+                  <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
                         <Check className="w-4 h-4 text-success" />
-                      </div>
-                    ) : (
-                      <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
+                      </div> :
+
+                  <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
                         <X className="w-4 h-4 text-destructive" />
                       </div>
-                    )}
+                  }
                   </div>
                   <div className="flex justify-center">
-                    {item.competitor ? (
-                      <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
+                    {item.competitor ?
+                  <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
                         <Check className="w-4 h-4 text-success" />
-                      </div>
-                    ) : (
-                      <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
+                      </div> :
+
+                  <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center">
                         <X className="w-4 h-4 text-destructive" />
                       </div>
-                    )}
+                  }
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </AnimatedSection>
         </div>
@@ -389,8 +389,8 @@ export default function Monitoring() {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {installationSteps.map((step, index) => (
-              <AnimatedSection key={step.step} delay={index * 100}>
+            {installationSteps.map((step, index) =>
+            <AnimatedSection key={step.step} delay={index * 100}>
                 <div className="relative p-6 rounded-2xl border bg-card h-full">
                   <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
                     {step.step}
@@ -401,7 +401,7 @@ export default function Monitoring() {
                   </div>
                 </div>
               </AnimatedSection>
-            ))}
+            )}
           </div>
 
           <AnimatedSection delay={400} className="text-center mt-12">
@@ -429,12 +429,12 @@ export default function Monitoring() {
               </p>
               
               <div className="grid grid-cols-2 gap-4">
-                {deviceSpecs.map((spec) => (
-                  <div key={spec.label} className="p-4 rounded-xl bg-card border">
+                {deviceSpecs.map((spec) =>
+                <div key={spec.label} className="p-4 rounded-xl bg-card border">
                     <div className="text-sm text-muted-foreground mb-1">{spec.label}</div>
                     <div className="font-semibold">{spec.value}</div>
                   </div>
-                ))}
+                )}
               </div>
             </AnimatedSection>
 
@@ -447,8 +447,8 @@ export default function Monitoring() {
                   loop
                   muted
                   playsInline
-                  className="relative w-full max-w-sm mx-auto rounded-2xl"
-                />
+                  className="relative w-full max-w-sm mx-auto rounded-2xl" />
+                
               </div>
             </AnimatedSection>
           </div>
@@ -456,6 +456,6 @@ export default function Monitoring() {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
