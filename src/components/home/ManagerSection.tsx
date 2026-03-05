@@ -479,21 +479,28 @@ export function ManagerSection() {
 
           {/* Tab Navigation */}
           <AnimatedSection delay={200} className="mb-8 lg:mb-12">
-            <div className="flex flex-wrap justify-center gap-2 lg:gap-1">
-              {managerTabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => handleTabChange(tab.id)}
-                  className={cn(
-                    "px-4 py-2 lg:px-6 lg:py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                    activeTab === tab.id
-                      ? "text-foreground border-primary"
-                      : "text-muted-foreground border-transparent hover:text-foreground hover:border-border"
-                  )}
-                >
-                  {tab.title.toUpperCase()}
-                </button>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 lg:gap-3 max-w-4xl mx-auto">
+              {managerTabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => handleTabChange(tab.id)}
+                    className={cn(
+                      "flex items-center gap-2 px-4 py-3 lg:px-5 lg:py-3.5 text-sm font-medium transition-all duration-300 rounded-xl border",
+                      activeTab === tab.id
+                        ? "bg-primary/10 border-primary/30 text-foreground"
+                        : "bg-card border-border text-muted-foreground hover:text-foreground hover:border-primary/20"
+                    )}
+                  >
+                    <Icon className={cn(
+                      "w-4 h-4 shrink-0",
+                      activeTab === tab.id ? "text-primary" : "text-muted-foreground"
+                    )} />
+                    <span className="text-left leading-tight">{tab.title}</span>
+                  </button>
+                );
+              })}
             </div>
           </AnimatedSection>
 
