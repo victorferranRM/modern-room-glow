@@ -430,7 +430,7 @@ When events occur without permission:
 4. Enforce consequences as stated
 5. Review for future prevention
     `,
-    category: "Events",
+    category: "Eventos",
     date: "2025-12-28",
     readTime: 4,
     image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=600&fit=crop",
