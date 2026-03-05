@@ -1,11 +1,27 @@
 import { AnimatedSection } from "@/components/ui/animated-section";
 
+import logoAcomodadora from "@/assets/partners/acomodadora.png";
+import logoAlcam from "@/assets/partners/alcam.svg";
+import logoAlguera from "@/assets/partners/alguera.png";
+import logoAmazinn from "@/assets/partners/amazinn.png";
+import logoSata from "@/assets/partners/sata.png";
+import logoAspasios from "@/assets/partners/aspasios.svg";
+import logoBatuecas from "@/assets/partners/batuecas.webp";
+import logoBbarcelona from "@/assets/partners/bbarcelona.png";
+import logoCaleta from "@/assets/partners/caleta.png";
+import logoCaterina from "@/assets/partners/caterina.png";
+
 const partners = [
-  "Checkmyguest", "Sonder", "GuestReady", "You Stylish", "Mun Stays",
-  "HostnFly", "Alterhome", "Luckey", "TheKey", "Joivy",
-  "Ukio", "Limehome", "Casai", "Hostmaker", "City Relay",
-  "Lavanda", "Pillow", "ALEP", "Fevitur", "APARTUR",
-  "ACAVE", "ASOTUR", "Madrid Aloja", "AVVA"
+  { name: "Acomodadora", logo: logoAcomodadora },
+  { name: "Alcam", logo: logoAlcam },
+  { name: "Alguera Apartments", logo: logoAlguera },
+  { name: "Amazinn Places", logo: logoAmazinn },
+  { name: "Sata Apartments", logo: logoSata },
+  { name: "Aspasios", logo: logoAspasios },
+  { name: "Batuecas", logo: logoBatuecas },
+  { name: "BBarcelona", logo: logoBbarcelona },
+  { name: "Caleta Homes", logo: logoCaleta },
+  { name: "Caterina", logo: logoCaterina },
 ];
 
 const stats = [
@@ -31,21 +47,28 @@ export function PartnersSection() {
         </div>
 
         <AnimatedSection delay={100}>
-          <div className="relative overflow-hidden">
+          <div
+            className="relative overflow-hidden group/marquee"
+          >
             <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
             <div
-              className="flex items-center"
-              style={{ animation: "marquee-left 80s linear infinite" }}
+              className="flex items-center group-hover/marquee:[animation-play-state:paused]"
+              style={{ animation: "marquee-left 60s linear infinite" }}
             >
-              {duplicatedPartners.map((name, index) => (
-                <span
-                  key={`${name}-${index}`}
-                  className="flex-shrink-0 mx-6 sm:mx-8 text-sm sm:text-base font-medium text-muted-foreground/60 hover:text-foreground transition-colors duration-300 whitespace-nowrap"
+              {duplicatedPartners.map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex-shrink-0 mx-3 w-[160px] h-[60px] p-3 flex items-center justify-center"
                 >
-                  {name}
-                </span>
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    loading="lazy"
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -74,7 +97,7 @@ export function PartnersSection() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 max-w-5xl mx-auto">
-              {stats.map((stat, i) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className="text-center group">
                   <div className="relative inline-block">
                     <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:scale-105">
