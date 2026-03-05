@@ -125,7 +125,7 @@ export const WhyRoomonitorSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2">
             Impacto real para{" "}
-            <span className="italic text-primary">operadores en crecimiento</span>
+            <span className="text-primary">operadores en crecimiento</span>
           </h2>
         </div>
 
