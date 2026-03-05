@@ -407,18 +407,6 @@ function IntegrationsMockup() {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-300">
-          <div className="text-xs text-slate-400 mb-2">Sincronizaciones</div>
-          <div className="text-2xl font-bold text-white">1.247</div>
-          <div className="text-xs text-emerald-400 mt-1">Últimas 24h</div>
-        </div>
-        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-400">
-          <div className="text-xs text-slate-400 mb-2">Conectores</div>
-          <div className="text-2xl font-bold text-white">4</div>
-          <div className="text-xs text-slate-400 mt-1">Activos</div>
-        </div>
-      </div>
     </div>
   );
 }
