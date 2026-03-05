@@ -118,8 +118,21 @@ export function MonitoringSection() {
     }
   };
 
-  return <section className="py-20 lg:py-28 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  return <section className="py-20 lg:py-28 relative overflow-hidden">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        poster=""
+      >
+        <source src="/videos/monitoring-bg.mp4" type="video/mp4" />
+      </video>
+      {/* Gradient overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/85" />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-12 lg:mb-16">
              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
