@@ -111,7 +111,7 @@ export function PartnersSection() {
 
             <div
               className="flex items-center group-hover/marquee:[animation-play-state:paused]"
-              style={{ animation: "marquee-left 60s linear infinite" }}
+              style={{ animation: "marquee-left 40s linear infinite" }}
             >
               {duplicatedPartners.map((partner, index) => (
                 <div
