@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 import { caseStudies, caseStudyCategories, getCaseStudiesByIndustry } from "@/lib/case-studies-data";
 
 const stats = [
-  { value: "500+", label: "Propiedades protegidas" },
-  { value: "15", label: "Países" },
+  { value: "50.000+", label: "Propiedades protegidas" },
+  { value: "45", label: "Países" },
   { value: "98%", label: "Retención de clientes" },
-  { value: "2M+", label: "Noches monitorizadas" },
+  { value: "10", label: "Años operando" },
 ];
 
 export default function CaseStudies() {
