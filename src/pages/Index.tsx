@@ -24,9 +24,6 @@ const Index = () => {
           <ControlLevelSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
-          <HowItWorksSection />
-        </AnimatedSection>
-        <AnimatedSection animation="fade-up">
           <MonitoringSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up">
