@@ -7,6 +7,7 @@ import { CoverTabs } from "@/components/cover/CoverTabs";
 import { CoverCities } from "@/components/cover/CoverCities";
 import { CoverAudience } from "@/components/cover/CoverAudience";
 import { CoverCTA } from "@/components/cover/CoverCTA";
+import { CoverRedkool } from "@/components/cover/CoverRedkool";
 
 export default function Cover() {
   return (
@@ -16,6 +17,7 @@ export default function Cover() {
       <CoverStats />
       <CoverTimeline />
       <CoverTabs />
+      <CoverRedkool />
       <CoverCities />
       <CoverAudience />
       <CoverCTA />

@@ -28,13 +28,13 @@ export function CoverRedkool() {
           {/* Content */}
           <AnimatedSection animation="fade-left" delay={150}>
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3">
-              Coordinación durante la gestión
+              Sistema en tiempo real
             </p>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6 text-balance">
-              Redkool, la app de nuestros agentes
+              Control total de todas las intervenciones
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground mb-8 leading-relaxed">
-              Garantizamos trazabilidad de todas las intervenciones de nuestros agentes, para que puedas ver en tiempo real los Tiempos estimados de llegada.
+              Nuestro sistema de coordinación proporciona trazabilidad completa de cada intervención. Visualiza tiempos estimados de llegada, estado en tiempo real y reportes detallados de cada incidencia.
             </p>
             <Button asChild size="lg" className="group">
               <a
@@ -42,7 +42,7 @@ export function CoverRedkool() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Más información
+                Conocer más
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
