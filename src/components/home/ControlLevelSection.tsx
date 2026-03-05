@@ -121,7 +121,7 @@ export function ControlLevelSection() {
                   </div>
                 </FloatingBadge>
 
-                <FloatingBadge className="-bottom-4 -left-4 rotate-[-2deg]" delay={2}>
+                <FloatingBadge className="-bottom-4 -right-6 rotate-[-2deg]" delay={2}>
                   <Star className="w-4 h-4 text-amber-400 fill-amber-400 shrink-0" />
                   <div>
                     <span className="text-xs font-medium text-foreground block">Guest review</span>
