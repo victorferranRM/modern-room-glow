@@ -283,7 +283,7 @@ Proactive measures include:
 - **Guest screening** - Review history
 - **Property design** - Soundproofing where possible
     `,
-    category: "Vacation rentals",
+    category: "Alquiler vacacional",
     date: "2026-01-08",
     readTime: 5,
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
