@@ -69,7 +69,7 @@ export function CoverSection() {
               Operativa delegada.<br />Cobertura real.
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-              Cuando tu equipo no está disponible, el nuestro toma el control. Centro de Control 24/7, agentes de campo y protocolos a medida.
+              Cuando tu equipo no está disponible, el nuestro toma el control. Centro de Control, atención telefónica, agentes de campo y protocolos a medida.
             </p>
             <Button size="lg" asChild>
               <Link to="/cover" className="gap-2">
@@ -106,7 +106,7 @@ export function CoverSection() {
 
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-base font-medium text-foreground mb-1.5 group-hover:text-primary transition-colors duration-200">
+                  <h3 className="text-base font-semibold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-200">
                     {card.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
