@@ -79,34 +79,38 @@ export default function FieldService() {
 
       <ServiceFeatures eyebrow="Nuestra Red" title="Agentes profesionales, en cualquier lugar" features={features} background="secondary" />
 
-      {/* Intervention Types - Alternating horizontal layout */}
-      <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Servicios</p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Tipos de intervenciones</h2>
-            <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nuestros agentes están preparados para actuar en múltiples escenarios, siempre siguiendo tus protocolos.
-            </p>
-          </AnimatedSection>
+       {/* Intervention Types - Alternating layout */}
+       <section className="py-20 lg:py-28 relative overflow-hidden">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+           <AnimatedSection className="text-center mb-16">
+             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Servicios</p>
+             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Tipos de intervenciones</h2>
+             <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+               Nuestros agentes están preparados para actuar en múltiples escenarios, siempre siguiendo tus protocolos.
+             </p>
+           </AnimatedSection>
 
-          <div className="max-w-4xl mx-auto space-y-4">
-            {interventionTypes.map((type, i) => (
-              <AnimatedSection key={type.title} delay={i * 80}>
-                <div className="group flex items-center gap-5 p-5 rounded-2xl border bg-card hover:shadow-lg hover:border-primary/20 transition-all duration-300">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-105">
-                    <type.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-semibold text-foreground mb-0.5 group-hover:text-primary transition-colors">{type.title}</h3>
-                    <p className="text-sm text-muted-foreground">{type.description}</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+           <div className="max-w-5xl mx-auto space-y-8">
+             {interventionTypes.map((type, i) => (
+               <AnimatedSection key={type.title} delay={i * 80}>
+                 <div className={cn("group flex gap-8 items-start", i % 2 === 1 ? "flex-row-reverse" : "")}>
+                   {/* Icon side */}
+                   <div className="shrink-0 pt-1">
+                     <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center transition-all duration-300 group-hover:from-primary/30 group-hover:to-primary/10 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/20">
+                       <type.icon className="w-8 h-8 text-primary" />
+                     </div>
+                   </div>
+                   {/* Content side */}
+                   <div className="flex-1 p-6 rounded-2xl border bg-card hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+                     <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">{type.title}</h3>
+                     <p className="text-base text-muted-foreground leading-relaxed">{type.description}</p>
+                   </div>
+                 </div>
+               </AnimatedSection>
+             ))}
+           </div>
+         </div>
+       </section>
 
       <ServiceProcess eyebrow="Cómo Funciona" title="Del despacho a la resolución" steps={howItWorks} background="secondary" />
 

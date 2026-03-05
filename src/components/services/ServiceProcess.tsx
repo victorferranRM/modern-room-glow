@@ -48,26 +48,26 @@ export function ServiceProcess({
           <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
           
           <div className={cn("grid gap-6", gridCols[columns])}>
-            {steps.map((step, i) => (
-              <AnimatedSection key={step.step} delay={i * 150}>
-                <div className="group text-center p-6 rounded-2xl bg-card border hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 relative">
-                  {/* Step number with glow effect */}
-                  <div className="relative mx-auto mb-4">
-                    <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
-                      {step.step}
-                    </div>
-                    <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 transition-colors group-hover:text-primary">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {step.description}
-                  </p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+             {steps.map((step, i) => (
+               <AnimatedSection key={step.step} delay={i * 150}>
+                 <div className="group p-6 rounded-2xl bg-card border hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 relative text-left">
+                   {/* Step number with glow effect */}
+                   <div className="relative mb-4 inline-block">
+                     <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
+                       {step.step}
+                     </div>
+                     <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                   </div>
+                   <h3 className="text-lg font-semibold mb-2 transition-colors group-hover:text-primary">
+                     {step.title}
+                   </h3>
+                   <p className="text-muted-foreground text-sm">
+                     {step.description}
+                   </p>
+                 </div>
+               </AnimatedSection>
+             ))}
+           </div>
         </div>
       </div>
     </section>
