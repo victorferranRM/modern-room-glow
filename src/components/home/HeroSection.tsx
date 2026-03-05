@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageSquare, Radio, Headphones, Car, Building2 } from "lucide-react";
+import { ArrowRight, MessageSquare, Radio, Headphones, MapPin, Building2 } from "lucide-react";
 export function HeroSection() {
   return <section className="relative min-h-[95vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden">
       {/* Light gradient background */}
@@ -25,18 +25,17 @@ export function HeroSection() {
           animationDelay: "0.05s"
         }}>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight text-foreground text-balance">
-              Un sensor te avisa del problema.
+              Tu operativa nocturna, resuelta.
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground text-balance">
-              Nuestro equipo 24/7 lo resuelve.
+              De 22:00 a 07:00, nosotros nos encargamos.
             </p>
           </div>
 
           {/* Subheadline */}
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
           animationDelay: "0.1s"
-        }}>Recibir una notificación de ruido a las 3 de la mañana no sirve de nada si tienes que levantarte tú. Roomonitor combina el mejor sensor del mercado con un equipo humano que interviene por ti. Tú descansas. Nosotros actuamos.
-
+        }}>Roomonitor combina monitorización inteligente, un Centro de Control y agentes de campo en 8 ciudades. Gestionamos incidencias, atendemos huéspedes y protegemos tus activos. En tu nombre, con tus protocolos. Tú descansas. Nosotros actuamos.
         </p>
 
           {/* Value proposition cards */}
@@ -45,31 +44,31 @@ export function HeroSection() {
         }}>
             <div className="bg-card border rounded-2xl p-5 lg:p-6 text-left hover:shadow-soft hover:border-primary/20 transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Radio className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="text-foreground font-semibold mb-2">Detectamos por ti</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Sensor V5 de ruido y tabaco.
-              </p>
-            </div>
-            
-            <div className="bg-card border rounded-2xl p-5 lg:p-6 text-left hover:shadow-soft hover:border-primary/20 transition-all duration-300 group">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Headphones className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">Respondemos por ti</h3>
+              <h3 className="text-foreground font-semibold mb-2">Centro de Control 24/7</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Alarm Assistant contacta al huésped en tu nombre.
+                Agentes formados en hospitality evaluando, mediando y resolviendo.
               </p>
             </div>
             
             <div className="bg-card border rounded-2xl p-5 lg:p-6 text-left hover:shadow-soft hover:border-primary/20 transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Car className="w-5 h-5 text-primary" />
+                <MapPin className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">Actuamos por ti</h3>
+              <h3 className="text-foreground font-semibold mb-2">Field Service en 8 ciudades</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Field Service interviene in situ cuando es necesario.
+                Intervención presencial cuando la resolución remota no basta.
+              </p>
+            </div>
+            
+            <div className="bg-card border rounded-2xl p-5 lg:p-6 text-left hover:shadow-soft hover:border-primary/20 transition-all duration-300 group">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Radio className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-foreground font-semibold mb-2">Monitorización inteligente</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Sensor de ruido, humo, ocupación y ambiente.
               </p>
             </div>
           </div>
@@ -79,8 +78,8 @@ export function HeroSection() {
           animationDelay: "0.3s"
         }}>
             <Button size="lg" className="text-base px-8 py-6 shadow-soft-lg" asChild>
-              <Link to="/pricing">
-                Proteger mis propiedades
+              <Link to="/cover">
+                Descubre Cover™
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>

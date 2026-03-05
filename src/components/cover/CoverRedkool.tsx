@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
@@ -37,14 +38,10 @@ export function CoverRedkool() {
               Nuestro sistema de coordinación proporciona trazabilidad completa de cada intervención. Visualiza tiempos estimados de llegada, estado en tiempo real y reportes detallados de cada incidencia.
             </p>
             <Button asChild size="lg" className="group">
-              <a
-                href="https://youtu.be/S1PdMYFIYsU?si=oUPtRXuYNyeoQE_d"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Conocer más
+              <Link to="/contact">
+                Pide más información
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
           </AnimatedSection>
         </div>

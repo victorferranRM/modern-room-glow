@@ -15,7 +15,7 @@ import {
 } from "@/lib/blog-data";
 
 const Blog = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All categories");
+  const [selectedCategory, setSelectedCategory] = useState("Todas las categorías");
   const [searchQuery, setSearchQuery] = useState("");
 
   const featuredPost = getFeaturedPost();
@@ -25,7 +25,7 @@ const Blog = () => {
     if (searchQuery.trim()) {
       posts = searchPosts(searchQuery).filter(
         (post) =>
-          selectedCategory === "All categories" ||
+          selectedCategory === "Todas las categorías" ||
           post.category === selectedCategory
       );
     }
@@ -34,7 +34,7 @@ const Blog = () => {
   }, [selectedCategory, searchQuery]);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-GB", {
+    return new Date(dateString).toLocaleDateString("es-ES", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -45,16 +45,15 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section - Clean gradient background */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" className="text-center mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 text-balance">
-              Good reads for great property operators
+              Lecturas para grandes operadores de propiedades
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-              Everything we know about staying ahead of issues, guests, and the
-              market.
+              Todo lo que sabemos sobre anticiparse a los problemas, a los huéspedes y al mercado.
             </p>
           </AnimatedSection>
 
@@ -63,7 +62,7 @@ const Blog = () => {
             <AnimatedSection animation="fade-up" delay={0.1}>
               <div className="relative bg-foreground rounded-2xl overflow-hidden max-w-5xl mx-auto shadow-xl">
                 <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-lg font-medium z-10">
-                  Featured
+                  Destacado
                 </div>
               <div className="grid md:grid-cols-2 gap-0">
                   <Link to={`/blog/${featuredPost.slug}`} className="block relative">
@@ -77,7 +76,7 @@ const Blog = () => {
                     {/* Read Time Badge on Featured */}
                     <div className="absolute bottom-4 right-4 flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-3 py-1.5 rounded-full">
                       <Clock className="w-4 h-4" />
-                      <span>{featuredPost.readTime} min read</span>
+                      <span>{featuredPost.readTime} min de lectura</span>
                     </div>
                   </Link>
                   <div className="p-8 md:p-10 flex flex-col justify-center">
@@ -91,7 +90,7 @@ const Blog = () => {
                       </span>
                       <span className="flex items-center gap-2">
                         <Clock className="w-4 h-4" />
-                        {featuredPost.readTime} min read
+                        {featuredPost.readTime} min de lectura
                       </span>
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight tracking-tight">
@@ -105,7 +104,7 @@ const Blog = () => {
                       className="w-fit bg-primary hover:bg-primary/90 text-white"
                     >
                       <Link to={`/blog/${featuredPost.slug}`}>
-                        Read more
+                        Leer más
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </Button>
@@ -123,7 +122,7 @@ const Blog = () => {
           {/* Section Title */}
           <AnimatedSection animation="fade-up" className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-              Latest Articles
+              Últimos artículos
             </h2>
           </AnimatedSection>
 
@@ -158,7 +157,7 @@ const Blog = () => {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search articles..."
+                placeholder="Buscar artículos..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 py-6 rounded-full border-muted-foreground/30 focus:border-primary"
@@ -202,7 +201,7 @@ const Blog = () => {
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center text-primary font-medium text-sm hover:underline"
                   >
-                    Read more
+                    Leer más
                   </Link>
                 </article>
               </AnimatedSection>
@@ -212,7 +211,7 @@ const Blog = () => {
           {filteredPosts.length === 0 && (
             <div className="text-center py-16">
               <p className="text-muted-foreground text-lg">
-                No articles found matching your criteria.
+                No se encontraron artículos con esos criterios.
               </p>
             </div>
           )}

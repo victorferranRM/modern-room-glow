@@ -12,12 +12,12 @@ export interface BlogPost {
 }
 
 export const categories = [
-  "All categories",
-  "Vacation rentals",
-  "Events",
-  "Industry news",
-  "Property Management",
-  "Hotels",
+  "Todas las categorías",
+  "Alquiler vacacional",
+  "Eventos",
+  "Noticias del sector",
+  "Gestión de propiedades",
+  "Hoteles",
   "Roomonitor",
 ];
 
@@ -117,7 +117,7 @@ To adapt to these changes:
 - Train staff on new procedures
 - Monitor cancellation patterns for adjustments
     `,
-    category: "Industry news",
+    category: "Noticias del sector",
     date: "2026-01-15",
     readTime: 3,
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
@@ -167,7 +167,7 @@ Roomonitor devices are fully compliant with the new regulation, offering:
 - Integration with property management systems
 - Evidence for compliance demonstrations
     `,
-    category: "Industry news",
+    category: "Noticias del sector",
     date: "2026-01-12",
     readTime: 4,
     image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
@@ -230,7 +230,7 @@ To stay compliant in Hawaii:
 - Follow occupancy and noise rules
 - Maintain insurance coverage
     `,
-    category: "Vacation rentals",
+    category: "Alquiler vacacional",
     date: "2026-01-10",
     readTime: 5,
     image: "https://images.unsplash.com/photo-1507876466758-bc54f384809c?w=800&h=600&fit=crop",
@@ -283,7 +283,7 @@ Proactive measures include:
 - **Guest screening** - Review history
 - **Property design** - Soundproofing where possible
     `,
-    category: "Vacation rentals",
+    category: "Alquiler vacacional",
     date: "2026-01-08",
     readTime: 5,
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
@@ -334,7 +334,7 @@ Modern systems connect with property management to:
 - Adjust energy settings
 - Generate occupancy reports
     `,
-    category: "Hotels",
+    category: "Hoteles",
     date: "2026-01-05",
     readTime: 6,
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
@@ -378,7 +378,7 @@ Property managers report:
 - 25% improvement in guest satisfaction
 - 35% decrease in operational costs
     `,
-    category: "Property Management",
+    category: "Gestión de propiedades",
     date: "2026-01-03",
     readTime: 5,
     image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&h=600&fit=crop",
@@ -430,7 +430,7 @@ When events occur without permission:
 4. Enforce consequences as stated
 5. Review for future prevention
     `,
-    category: "Events",
+    category: "Eventos",
     date: "2025-12-28",
     readTime: 4,
     image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=600&fit=crop",
@@ -513,7 +513,7 @@ export const getPostBySlug = (slug: string): BlogPost | undefined => {
 };
 
 export const getPostsByCategory = (category: string): BlogPost[] => {
-  if (category === "All categories") {
+  if (category === "Todas las categorías") {
     return blogPosts;
   }
   return blogPosts.filter((post) => post.category === category);
