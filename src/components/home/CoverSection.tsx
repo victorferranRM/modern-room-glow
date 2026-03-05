@@ -69,7 +69,7 @@ export function CoverSection() {
               Operativa delegada.<br />Cobertura real.
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-              Cuando tu equipo no está disponible, el nuestro toma el control. Centro de Control 24/7, agentes de campo y protocolos a medida.
+              Cuando tu equipo no está disponible, el nuestro toma el control. Centro de Control, atención telefónica, agentes de campo y protocolos a medida.
             </p>
             <Button size="lg" asChild>
               <Link to="/cover" className="gap-2">
