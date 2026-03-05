@@ -42,8 +42,8 @@ export function CoverTestimonials() {
       <div className="container mx-auto px-4 max-w-4xl">
         <AnimatedSection>
           <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-soft-lg border relative text-center">
-            {/* Quote mark */}
-            <div className="text-6xl text-primary/20 font-serif leading-none mb-6">"</div>
+             {/* Quote mark */}
+            <div className="text-6xl text-primary/20 leading-none mb-6">"</div>
 
             {/* Stars */}
             <div className="flex gap-1 justify-center mb-6">

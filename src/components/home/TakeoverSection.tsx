@@ -32,9 +32,9 @@ export function TakeoverSection() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               La solución
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
               Nos hacemos cargo de tu{" "}
-              <em className="font-serif not-italic text-primary">operativa nocturna</em>
+              <span className="text-primary">operativa nocturna</span>
             </h2>
             <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto leading-relaxed">
               Cuando tu equipo no está disponible, Roomonitor actúa como una extensión directa de tu operativa.
@@ -64,7 +64,7 @@ export function TakeoverSection() {
           {/* Dark banner */}
           <AnimatedSection delay={500}>
             <div className="bg-foreground rounded-2xl p-8 lg:p-12 text-center">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif italic font-bold text-background mb-4">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-background mb-4">
                 "Actuamos como si fuéramos tú"
               </h3>
               <p className="text-background/70 max-w-2xl mx-auto leading-relaxed mb-4">

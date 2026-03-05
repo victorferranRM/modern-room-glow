@@ -11,7 +11,7 @@ export function ClosingSection() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight text-balance">
             El Property Management moderno{" "}
-            <em className="font-serif not-italic text-primary">no se hace en solitario.</em>
+            <span className="text-primary">no se hace en solitario.</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
             Únete a los gestores profesionales que han dejado de apagar fuegos para centrarse en el crecimiento estratégico.
