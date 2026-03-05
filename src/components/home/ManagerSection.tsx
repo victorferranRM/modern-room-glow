@@ -62,8 +62,8 @@ const managerTabs: ManagerTab[] = [
   {
     id: "integrations",
     icon: Plug,
-    title: "Integraciones",
-    description: "Conectamos con las herramientas que ya usas — PMS, channel managers y sistemas de acceso — sin cambiar tu flujo de trabajo.",
+    title: "Integraciones PMS",
+    description: "Conectamos con las herramientas que ya usas para sincronizar la información de tus reservas.",
   },
 ];
 
