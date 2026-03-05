@@ -215,29 +215,17 @@ export default function CaseStudies() {
             <p className="text-lg sm:text-xl text-primary-foreground/80 font-light max-w-2xl mx-auto mb-10">
               Únete a cientos de gestores de propiedades que han transformado sus operaciones con Roomonitor.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="text-primary hover:text-primary"
-                asChild
-              >
-                <Link to="/contact">
-                  Solicitar una Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                asChild
-              >
-                <Link to="/resources/savings-calculator">
-                  Calcular tu Ahorro
-                </Link>
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              variant="secondary"
+              className="text-primary hover:text-primary"
+              asChild
+            >
+              <Link to="/contact">
+                Solicitar una Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </AnimatedSection>
         </div>
       </section>
