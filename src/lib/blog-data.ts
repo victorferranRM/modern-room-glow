@@ -230,7 +230,7 @@ To stay compliant in Hawaii:
 - Follow occupancy and noise rules
 - Maintain insurance coverage
     `,
-    category: "Vacation rentals",
+    category: "Alquiler vacacional",
     date: "2026-01-10",
     readTime: 5,
     image: "https://images.unsplash.com/photo-1507876466758-bc54f384809c?w=800&h=600&fit=crop",
