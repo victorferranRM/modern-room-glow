@@ -62,8 +62,8 @@ const managerTabs: ManagerTab[] = [
   {
     id: "integrations",
     icon: Plug,
-    title: "Integraciones",
-    description: "Conectamos con las herramientas que ya usas — PMS, channel managers y sistemas de acceso — sin cambiar tu flujo de trabajo.",
+    title: "Integraciones PMS",
+    description: "Conectamos con las herramientas que ya usas para sincronizar la información de tus reservas.",
   },
 ];
 
@@ -383,9 +383,10 @@ function IntegrationsMockup() {
         <div className="space-y-2">
           {[
             { name: "Guesty", type: "PMS", status: "Conectado" },
-            { name: "Booking.com", type: "Channel Manager", status: "Conectado" },
+            { name: "Kross Booking", type: "PMS", status: "Conectado" },
             { name: "Nuki", type: "Acceso", status: "Conectado" },
-            { name: "Airbnb", type: "Channel Manager", status: "Conectado" },
+            { name: "Avantio", type: "PMS", status: "Conectado" },
+            { name: "Hostify", type: "PMS", status: "Conectado" },
           ].map((integration, i) => (
             <div
               key={i}
@@ -404,18 +405,6 @@ function IntegrationsMockup() {
               <span className="text-xs text-emerald-400">{integration.status}</span>
             </div>
           ))}
-        </div>
-      </div>
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-300">
-          <div className="text-xs text-slate-400 mb-2">Sincronizaciones</div>
-          <div className="text-2xl font-bold text-white">1.247</div>
-          <div className="text-xs text-emerald-400 mt-1">Últimas 24h</div>
-        </div>
-        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-400">
-          <div className="text-xs text-slate-400 mb-2">Conectores</div>
-          <div className="text-2xl font-bold text-white">4</div>
-          <div className="text-xs text-slate-400 mt-1">Activos</div>
         </div>
       </div>
     </div>
@@ -456,7 +445,7 @@ export function ManagerSection() {
               {/* Left: Text */}
               <div className="text-center lg:text-left">
                 <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                  La capa de control
+                  Gestión de activos
                 </p>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">
                   Conoce Manager — tu centro de control operativo
