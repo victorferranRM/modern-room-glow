@@ -456,7 +456,7 @@ export function ManagerSection() {
               </div>
               
               {/* Right: Devices Image */}
-              <div className="flex flex-col items-center lg:items-end gap-6">
+              <div className="flex flex-col items-center gap-6">
                 <img 
                   src={managerDevices} 
                   alt="Plataforma Manager en portátil y móvil" 
