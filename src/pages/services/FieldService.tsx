@@ -10,6 +10,7 @@ import { ServiceStats } from "@/components/services/ServiceStats";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
 import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
+import { CoverCities } from "@/components/cover/CoverCities";
 import serviceImage from "@/assets/service-field-service.jpg";
 
 const stats = [
