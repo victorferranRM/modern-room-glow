@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
-import { TakeoverSection } from "@/components/home/TakeoverSection";
+
 import { ControlLevelSection } from "@/components/home/ControlLevelSection";
 import { HowItWorksSection } from "@/components/home/HowItWorksSection";
 import { MonitoringSection } from "@/components/home/MonitoringSection";

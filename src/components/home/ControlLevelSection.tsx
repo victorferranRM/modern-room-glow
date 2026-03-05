@@ -66,9 +66,6 @@ export function ControlLevelSection() {
                   <div className="w-12 h-12 rounded-xl bg-background/10 flex items-center justify-center">
                     <Headphones className="w-6 h-6 text-background" />
                   </div>
-                  <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider border border-primary rounded-full text-primary">
-                    Roomonitor Cover
-                  </span>
                 </div>
 
                 <h3 className="text-2xl font-bold mb-2">Operativa delegada</h3>
@@ -78,12 +75,12 @@ export function ControlLevelSection() {
 
                 <div className="space-y-4 mb-8 flex-1">
                   <div className="border-l-2 border-background/30 pl-4">
-                    <p className="font-semibold">Guest & Property Services</p>
-                    <p className="text-sm text-background/60">Centro de Control 24/7 + Field Service 8 ciudades</p>
+                    <p className="font-semibold">Roomonitor Cover</p>
+                    <p className="text-sm text-background/60">Monitorización + Centro de Control + Field Service</p>
                   </div>
                   <div className="border-l-2 border-background/30 pl-4">
-                    <p className="font-semibold">Global</p>
-                    <p className="text-sm text-background/60">Cover + dispositivos + monitorización completa</p>
+                    <p className="font-semibold">Only Services</p>
+                    <p className="text-sm text-background/60">Centro de Control + Field Service</p>
                   </div>
                 </div>
 

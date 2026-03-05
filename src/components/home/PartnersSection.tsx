@@ -1,10 +1,11 @@
 import { AnimatedSection } from "@/components/ui/animated-section";
 
 const partners = [
-  "ALEP", "Fevitur", "APARTUR", "ACAVE", "ASOTUR", "Madrid Aloja",
-  "AVVA", "APTUR", "AVAL", "HostnFly", "GuestReady", "Alterhome",
-  "Luckey", "TheKey", "Joivy", "Ukio", "Limehome", "Casai",
-  "Hostmaker", "City Relay", "Lavanda", "Pillow"
+  "Checkmyguest", "Sonder", "GuestReady", "You Stylish", "Mun Stays",
+  "HostnFly", "Alterhome", "Luckey", "TheKey", "Joivy",
+  "Ukio", "Limehome", "Casai", "Hostmaker", "City Relay",
+  "Lavanda", "Pillow", "ALEP", "Fevitur", "APARTUR",
+  "ACAVE", "ASOTUR", "Madrid Aloja", "AVVA"
 ];
 
 const stats = [
@@ -14,24 +15,16 @@ const stats = [
   { value: "8", label: "Ciudades con Field Service" },
 ];
 
-function LogoCard({ name }: { name: string }) {
-  return (
-    <div className="flex-shrink-0 w-32 h-14 sm:w-36 sm:h-16 bg-card/50 rounded-xl border flex items-center justify-center mx-3 hover:bg-card hover:border-primary/20 transition-all duration-300">
-      <span className="text-sm font-semibold text-muted-foreground">{name}</span>
-    </div>
-  );
-}
-
 export function PartnersSection() {
   const duplicatedPartners = [...partners, ...partners, ...partners];
 
   return (
     <>
-      {/* Confían en nosotros + logo carousel */}
-      <section className="pt-16 pb-10 overflow-hidden relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Trust bar */}
+      <section className="py-12 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-8">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-[0.15em]">
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-[0.2em]">
               Confían en nosotros
             </p>
           </AnimatedSection>
@@ -43,11 +36,16 @@ export function PartnersSection() {
             <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
             <div
-              className="flex"
-              style={{ animation: "marquee-left 60s linear infinite" }}
+              className="flex items-center"
+              style={{ animation: "marquee-left 80s linear infinite" }}
             >
               {duplicatedPartners.map((name, index) => (
-                <LogoCard key={`${name}-${index}`} name={name} />
+                <span
+                  key={`${name}-${index}`}
+                  className="flex-shrink-0 mx-6 sm:mx-8 text-sm sm:text-base font-medium text-muted-foreground/60 hover:text-foreground transition-colors duration-300 whitespace-nowrap"
+                >
+                  {name}
+                </span>
               ))}
             </div>
           </div>
@@ -61,17 +59,30 @@ export function PartnersSection() {
         `}</style>
       </section>
 
-      {/* Dark stats bar */}
-      <section className="py-14 lg:py-20 bg-foreground text-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Stats bar with visual depth */}
+      <section className="relative py-16 lg:py-20 bg-foreground overflow-hidden">
+        {/* Subtle glow accents */}
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/8 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-1/3 w-48 h-48 bg-primary/6 rounded-full blur-[80px]" />
+
+        {/* Grid texture */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{
+          backgroundImage: "linear-gradient(hsl(var(--background)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--background)) 1px, transparent 1px)",
+          backgroundSize: "60px 60px"
+        }} />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 max-w-5xl mx-auto">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-2">
-                    {stat.value}
+              {stats.map((stat, i) => (
+                <div key={stat.label} className="text-center group">
+                  <div className="relative inline-block">
+                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:scale-105">
+                      {stat.value}
+                    </div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-primary/40 rounded-full" />
                   </div>
-                  <div className="text-xs sm:text-sm text-background/60">
+                  <div className="text-xs sm:text-sm text-background/50 mt-3">
                     {stat.label}
                   </div>
                 </div>
