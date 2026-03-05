@@ -4,9 +4,17 @@ import roomonitorLogo from "@/assets/roomonitor-logo.png";
 type FooterLink = { name: string; href: string; external?: boolean };
 
 const footerLinks: Record<string, FooterLink[]> = {
-  solutions: [
-    { name: "Dispositivo Roomonitor", href: "/monitoring" },
+  operativa: [
     { name: "Roomonitor Cover™", href: "/cover" },
+    { name: "Centro de Control", href: "/services/control-center" },
+    { name: "Agentes Field Service", href: "/services/field-service" },
+    { name: "Atención telefónica", href: "/services/guest-assist" },
+    { name: "Night Watch", href: "/services/night-watch" },
+    { name: "Acceso PMS y Herramientas", href: "/services/pms-access" },
+    { name: "Protocolos Operativos", href: "/services/protocols" },
+  ],
+  tecnologia: [
+    { name: "Dispositivo Roomonitor", href: "/monitoring" },
     { name: "Monitorización de Ruido", href: "/monitoring/noise" },
     { name: "Detección de Ocupación", href: "/monitoring/occupancy" },
     { name: "Detección de Humo", href: "/monitoring/smoke" },
