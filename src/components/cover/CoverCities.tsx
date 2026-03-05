@@ -69,9 +69,9 @@ export function CoverCities() {
 
         <AnimatedSection delay={700} className="text-center mt-8">
           <p className="text-sm text-muted-foreground">
-            Abrimos nuevas ciudades cada trimestre. ¿Necesitas cobertura en tu zona?{" "}
+            Expandimos nuestra cobertura en función de la demanda. ¿Tu ciudad aún no está en la lista?{" "}
             <Link to="/contact" className="text-primary font-medium hover:underline inline-flex items-center gap-1">
-              Contáctanos <ArrowRight className="w-3 h-3" />
+              Solicítalo <ArrowRight className="w-3 h-3" />
             </Link>
           </p>
         </AnimatedSection>
