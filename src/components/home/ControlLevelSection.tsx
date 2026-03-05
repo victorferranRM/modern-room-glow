@@ -107,7 +107,7 @@ export function ControlLevelSection() {
               {/* Card 2: Delegated Operations */}
               <div className="relative">
                 {/* Floating badges - Operations side */}
-                <FloatingBadge className="-top-4 -right-6 rotate-[2deg]" delay={0.4}>
+                <FloatingBadge className="top-4 right-4 rotate-[2deg]" delay={0.4}>
                   <FileText className="w-4 h-4 text-primary shrink-0" />
                   <span className="text-xs font-medium text-foreground whitespace-nowrap">Incidencia resuelta en 4 min</span>
                 </FloatingBadge>
