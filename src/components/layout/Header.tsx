@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, User, LogOut, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
+import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 import { MegaMenuServices } from "./navigation/MegaMenuServices";
 import { MegaMenuMonitoring } from "./navigation/MegaMenuMonitoring";
 import { MegaMenuResources } from "./navigation/MegaMenuResources";
