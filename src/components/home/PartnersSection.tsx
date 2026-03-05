@@ -20,6 +20,16 @@ import logoGrancentral from "@/assets/partners/grancentral.png";
 import logoHommyhome from "@/assets/partners/hommyhome.png";
 import logoHuespending from "@/assets/partners/huespending.svg";
 import logoInnkeeper from "@/assets/partners/innkeeper.png";
+import logoLarecepcion from "@/assets/partners/larecepcion.png";
+import logoLivingmalaga from "@/assets/partners/livingmalaga.png";
+import logoMalagacenterflat from "@/assets/partners/malagacenterflat.png";
+import logoMintyhost from "@/assets/partners/mintyhost.png";
+import logoNuma from "@/assets/partners/numa.svg";
+import logoOlaliving from "@/assets/partners/olaliving.png";
+import logoPeoplerentals from "@/assets/partners/peoplerentals.png";
+import logoPushe from "@/assets/partners/pushe.png";
+import logoR2r from "@/assets/partners/r2r.png";
+import logoRoomtorent from "@/assets/partners/roomtorent.png";
 
 const partners = [
   { name: "Acomodadora", logo: logoAcomodadora },
@@ -42,6 +52,16 @@ const partners = [
   { name: "Hommy Home", logo: logoHommyhome },
   { name: "Huespending", logo: logoHuespending },
   { name: "Innkeeper", logo: logoInnkeeper },
+  { name: "La Recepción", logo: logoLarecepcion },
+  { name: "Living4Malaga", logo: logoLivingmalaga },
+  { name: "Málaga Center Flat", logo: logoMalagacenterflat },
+  { name: "Minty Host", logo: logoMintyhost },
+  { name: "Numa", logo: logoNuma },
+  { name: "Ola Living", logo: logoOlaliving },
+  { name: "People Rentals", logo: logoPeoplerentals },
+  { name: "Pushe", logo: logoPushe },
+  { name: "R2R Consulting", logo: logoR2r },
+  { name: "Room to Rent", logo: logoRoomtorent },
 ];
 
 const stats = [
