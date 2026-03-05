@@ -30,8 +30,17 @@ import logoPeoplerentals from "@/assets/partners/peoplerentals.png";
 import logoPushe from "@/assets/partners/pushe.png";
 import logoR2r from "@/assets/partners/r2r.png";
 import logoRoomtorent from "@/assets/partners/roomtorent.png";
+import logoStayunique from "@/assets/partners/stayunique.svg";
+import logoSweetinn from "@/assets/partners/sweetinn.png";
+import logoCharming from "@/assets/partners/charming.jpg";
+import logoUrbe10 from "@/assets/partners/urbe10.png";
+import logoVlchost from "@/assets/partners/vlchost.webp";
+import logoWaou from "@/assets/partners/waou.webp";
+import logoWinahost from "@/assets/partners/winahost.png";
+import logoYoustylish from "@/assets/partners/youstylish.png";
 
 const partners = [
+  { name: "Stay Unique", logo: logoStayunique },
   { name: "Acomodadora", logo: logoAcomodadora },
   { name: "Alcam", logo: logoAlcam },
   { name: "Alguera Apartments", logo: logoAlguera },
@@ -43,6 +52,7 @@ const partners = [
   { name: "Caleta Homes", logo: logoCaleta },
   { name: "Caterina", logo: logoCaterina },
   { name: "Checkmyguest", logo: logoCheckmyguest },
+  { name: "The Charming Concept", logo: logoCharming },
   { name: "Cubo's Holiday Homes", logo: logoCubo },
   { name: "Del Parque Flats", logo: logoDelparque },
   { name: "ELE Apartments", logo: logoEle },
@@ -62,6 +72,12 @@ const partners = [
   { name: "Pushe", logo: logoPushe },
   { name: "R2R Consulting", logo: logoR2r },
   { name: "Room to Rent", logo: logoRoomtorent },
+  { name: "Sweetinn", logo: logoSweetinn },
+  { name: "Urbe10", logo: logoUrbe10 },
+  { name: "VLC Host", logo: logoVlchost },
+  { name: "Waou Rentals", logo: logoWaou },
+  { name: "Winahost", logo: logoWinahost },
+  { name: "You Stylish", logo: logoYoustylish },
 ];
 
 const stats = [
