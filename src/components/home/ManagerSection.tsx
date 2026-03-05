@@ -375,12 +375,60 @@ function TasksMockup() {
   );
 }
 
+function IntegrationsMockup() {
+  return (
+    <div className="space-y-3">
+      <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-4">
+        <div className="text-xs text-slate-400 mb-3">Integraciones activas</div>
+        <div className="space-y-2">
+          {[
+            { name: "Guesty", type: "PMS", status: "Conectado" },
+            { name: "Booking.com", type: "Channel Manager", status: "Conectado" },
+            { name: "Nuki", type: "Acceso", status: "Conectado" },
+            { name: "Airbnb", type: "Channel Manager", status: "Conectado" },
+          ].map((integration, i) => (
+            <div
+              key={i}
+              className="flex items-center justify-between p-2 rounded-lg bg-slate-600/30 animate-in fade-in slide-in-from-left-2 duration-300"
+              style={{ animationDelay: `${i * 100}ms` }}
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-slate-500/50 flex items-center justify-center">
+                  <Plug className="w-4 h-4 text-slate-300" />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-200 font-medium">{integration.name}</div>
+                  <div className="text-xs text-slate-500">{integration.type}</div>
+                </div>
+              </div>
+              <span className="text-xs text-emerald-400">{integration.status}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-300">
+          <div className="text-xs text-slate-400 mb-2">Sincronizaciones</div>
+          <div className="text-2xl font-bold text-white">1.247</div>
+          <div className="text-xs text-emerald-400 mt-1">Últimas 24h</div>
+        </div>
+        <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-400">
+          <div className="text-xs text-slate-400 mb-2">Conectores</div>
+          <div className="text-2xl font-bold text-white">4</div>
+          <div className="text-xs text-slate-400 mt-1">Activos</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const mockupComponents: Record<string, React.ComponentType> = {
   monitoring: MonitoringMockup,
   protocols: ProtocolsMockup,
   hierarchy: HierarchyMockup,
   history: HistoryMockup,
   tasks: TasksMockup,
+  integrations: IntegrationsMockup,
 };
 
 export function ManagerSection() {
