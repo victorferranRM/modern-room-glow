@@ -1,7 +1,5 @@
-import Stripe from 'https://esm.sh/stripe@14.21.0?target=deno';
-
-const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY')!, {
-  apiVersion: '2024-06-20',
+const stripe = require('stripe')(Deno.env.get('STRIPE_SECRET_KEY'), {
+  httpClient: Deno.fetch,
 });
 
 Deno.serve(async (req) => {
@@ -45,7 +43,6 @@ Deno.serve(async (req) => {
     };
 
     if (!isReactivation) {
-      sessionParams.invoice_creation = undefined;
       sessionParams.subscription_data.add_invoice_items = [
         { price: PRICES.device, quantity: properties }
       ];
