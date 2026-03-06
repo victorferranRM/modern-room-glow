@@ -99,8 +99,6 @@ serve(async (req) => {
 
     // Add shipping if requested
     if (includeShipping && shippingRateId) {
-      params.append("shipping_rate_data[type]", "fixed_amount");
-      // Use the provided shipping rate ID as a Stripe shipping rate
       params.append("shipping_options[0][shipping_rate]", shippingRateId);
     } else if (includeShipping) {
       params.append("shipping_address_collection[allowed_countries][0]", "ES");
