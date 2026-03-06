@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,7 +12,8 @@ import {
   Lock,
   Building2,
   Minus,
-  Plus
+  Plus,
+  Loader2
 } from "lucide-react";
 
 const PLANS = {
