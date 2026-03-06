@@ -301,11 +301,14 @@ export default function Pricing() {
                   </ul>
 
                   {!isEnterprise ? (
-                    <Button className="w-full shadow-soft" size="lg" asChild>
-                      <Link to={`/checkout?plan=pro&properties=${properties}`}>
-                        Comprar ahora
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                    <Button 
+                      className="w-full shadow-soft" 
+                      size="lg" 
+                      onClick={() => handleCheckout("alarm_assistant")}
+                      disabled={checkoutLoading === "alarm_assistant"}
+                    >
+                      {checkoutLoading !== "alarm_assistant" ? "Comprar ahora" : "Procesando..."}
+                      {checkoutLoading !== "alarm_assistant" && <ArrowRight className="w-4 h-4 ml-2" />}
                     </Button>
                   ) : (
                     <Button className="w-full" size="lg" variant="outline" asChild>
