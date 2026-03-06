@@ -72,9 +72,35 @@ export default function Checkout() {
     if (properties > 1) setProperties(properties - 1);
   };
 
-  const handleCheckout = () => {
-    console.log("Checkout:", { plan: currentPlan, properties, deviceTotal, monthlyTotal });
-    alert("Integración de pago próximamente. Se conectará con Stripe o Shopify.");
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
+
+  const handleCheckout = async () => {
+    setCheckoutLoading(true);
+    try {
+      const plan = currentPlan === "basic" ? "noise_alarm" : "alarm_assistant";
+      
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: {
+          plan,
+          properties,
+          isReactivation: false,
+          successUrl: `${window.location.origin}/checkout?success=true`,
+          cancelUrl: `${window.location.origin}/checkout?plan=${currentPlan}&properties=${properties}`,
+        },
+      });
+
+      if (error) throw error;
+      if (data?.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error("No checkout URL returned");
+      }
+    } catch (err: any) {
+      console.error("Checkout error:", err);
+      toast.error("Error al iniciar el pago. Inténtalo de nuevo.");
+    } finally {
+      setCheckoutLoading(false);
+    }
   };
 
   return (
