@@ -37,7 +37,7 @@ const handler = async (req: Request): Promise<Response> => {
     const data: ContactNotificationRequest = await req.json();
     const firstName = escapeHtml(data.firstName);
     const lastName = escapeHtml(data.lastName);
-    const email = data.email;
+    const email = escapeHtml(data.email);
     const phone = data.phone ? escapeHtml(data.phone) : undefined;
     const company = escapeHtml(data.company);
     const propertySize = data.propertySize ? escapeHtml(data.propertySize) : undefined;

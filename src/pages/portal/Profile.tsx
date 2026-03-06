@@ -107,16 +107,32 @@ export default function Profile() {
       return;
     }
 
-    if (passwordData.newPassword.length < 6) {
+    if (passwordData.newPassword.length < 8) {
       toast({
         title: "Password too short",
-        description: "Password must be at least 6 characters.",
+        description: "Password must be at least 8 characters.",
         variant: "destructive",
       });
       return;
     }
     
     setIsSaving(true);
+
+    // Re-authenticate with current password before allowing change
+    const { error: reAuthError } = await supabase.auth.signInWithPassword({
+      email: user?.email || "",
+      password: passwordData.currentPassword,
+    });
+
+    if (reAuthError) {
+      toast({
+        title: "Current password is incorrect",
+        description: "Please enter your correct current password.",
+        variant: "destructive",
+      });
+      setIsSaving(false);
+      return;
+    }
     
     const { error } = await supabase.auth.updateUser({
       password: passwordData.newPassword,
