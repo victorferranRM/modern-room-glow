@@ -112,6 +112,7 @@ export default function Contact() {
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
