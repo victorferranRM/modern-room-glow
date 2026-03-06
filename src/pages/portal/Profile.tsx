@@ -157,8 +157,8 @@ export default function Profile() {
     });
   };
 
-  const handleLogout = () => {
-    // In a real app, this would clear the session
+  const handleLogout = async () => {
+    await signOut();
     navigate("/");
   };
 

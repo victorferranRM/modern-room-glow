@@ -144,32 +144,13 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const { error: dbError } = await supabase.
-      from("contact_inquiries").
-      insert({
-        first_name: data.firstName,
-        last_name: data.lastName,
-        email: data.email,
-        phone: data.phone || null,
-        company: data.company,
-        country: data.country,
-        city: data.city || null,
-        province: data.province,
-        property_size: data.propertySize || null,
-        inquiry_type: data.inquiryType,
-        message: data.message || null
-      });
-
-      if (dbError) throw dbError;
-
-      const { error: emailError } = await supabase.functions.invoke(
+      // Route all submissions through the edge function (which handles rate limiting, honeypot, and DB insert)
+      const { data: result, error: fnError } = await supabase.functions.invoke(
         "send-contact-notification",
         { body: { ...data, website: honeypot } }
       );
 
-      if (emailError) {
-        console.error("Email notification failed:", emailError);
-      }
+      if (fnError) throw fnError;
 
       toast({
         title: "¡Mensaje enviado correctamente!",
