@@ -284,6 +284,24 @@ export type Database = {
           },
         ]
       }
+      rate_limit_state: {
+        Row: {
+          ip_key: string
+          request_count: number | null
+          window_start: string | null
+        }
+        Insert: {
+          ip_key: string
+          request_count?: number | null
+          window_start?: string | null
+        }
+        Update: {
+          ip_key?: string
+          request_count?: number | null
+          window_start?: string | null
+        }
+        Relationships: []
+      }
       returns: {
         Row: {
           company_id: string
