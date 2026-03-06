@@ -125,6 +125,31 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
+    // Insert into contact_inquiries (server-side, after rate limit + honeypot + validation)
+    const { error: dbError } = await supabaseAdmin
+      .from("contact_inquiries")
+      .insert({
+        first_name: data.firstName,
+        last_name: data.lastName,
+        email: data.email,
+        phone: data.phone || null,
+        company: data.company,
+        country: data.country || null,
+        city: data.city || null,
+        province: data.province || null,
+        property_size: data.propertySize || null,
+        inquiry_type: data.inquiryType,
+        message: data.message || null,
+      });
+
+    if (dbError) {
+      console.error("DB insert error:", dbError);
+      return new Response(
+        JSON.stringify({ error: "Failed to save inquiry." }),
+        { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     const firstName = escapeHtml(data.firstName);
     const lastName = escapeHtml(data.lastName);
     const email = escapeHtml(data.email);
