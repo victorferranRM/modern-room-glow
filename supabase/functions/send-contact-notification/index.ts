@@ -1,12 +1,13 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 const escapeHtml = (s: string): string =>
@@ -15,6 +16,8 @@ const escapeHtml = (s: string): string =>
    .replace(/>/g, '&gt;')
    .replace(/"/g, '&quot;')
    .replace(/'/g, '&#39;');
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 interface ContactNotificationRequest {
   firstName: string;
@@ -25,16 +28,100 @@ interface ContactNotificationRequest {
   propertySize?: string;
   inquiryType: string;
   message?: string;
+  website?: string; // honeypot field
+}
+
+async function checkRateLimit(
+  supabase: ReturnType<typeof createClient>,
+  ipKey: string,
+  maxRequests: number = 5,
+  windowMs: number = 3600000 // 1 hour
+): Promise<boolean> {
+  const windowStart = new Date(Date.now() - windowMs).toISOString();
+
+  const { data } = await supabase
+    .from("rate_limit_state")
+    .select("request_count, window_start")
+    .eq("ip_key", ipKey)
+    .maybeSingle();
+
+  if (!data || new Date(data.window_start).toISOString() < windowStart) {
+    await supabase.from("rate_limit_state").upsert({
+      ip_key: ipKey,
+      request_count: 1,
+      window_start: new Date().toISOString(),
+    });
+    return true;
+  }
+
+  if (data.request_count >= maxRequests) {
+    return false;
+  }
+
+  await supabase
+    .from("rate_limit_state")
+    .update({ request_count: data.request_count + 1 })
+    .eq("ip_key", ipKey);
+
+  return true;
 }
 
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    const supabaseAdmin = createClient(
+      Deno.env.get("SUPABASE_URL")!,
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+    );
+
+    // Rate limiting by IP
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const allowed = await checkRateLimit(supabaseAdmin, ip);
+    if (!allowed) {
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        { status: 429, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     const data: ContactNotificationRequest = await req.json();
+
+    // Honeypot check — if the hidden field has a value, it's a bot
+    if (data.website && data.website.trim() !== "") {
+      // Silently accept to not tip off bots
+      return new Response(
+        JSON.stringify({ success: true }),
+        { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    // Validate required fields
+    if (!data.firstName || !data.lastName || !data.email || !data.company || !data.inquiryType) {
+      return new Response(
+        JSON.stringify({ error: "Missing required fields." }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    // Validate email format
+    if (!EMAIL_REGEX.test(data.email)) {
+      return new Response(
+        JSON.stringify({ error: "Invalid email address." }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    // Enforce length limits
+    if (data.firstName.length > 100 || data.lastName.length > 100 || data.email.length > 255 || data.company.length > 200) {
+      return new Response(
+        JSON.stringify({ error: "Input exceeds maximum length." }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     const firstName = escapeHtml(data.firstName);
     const lastName = escapeHtml(data.lastName);
     const email = escapeHtml(data.email);
@@ -44,7 +131,6 @@ const handler = async (req: Request): Promise<Response> => {
     const inquiryType = escapeHtml(data.inquiryType);
     const message = data.message ? escapeHtml(data.message) : undefined;
 
-    // Format inquiry type for display
     const inquiryLabels: Record<string, string> = {
       demo: "Book a Demo",
       sales: "Sales Inquiry",
@@ -52,12 +138,16 @@ const handler = async (req: Request): Promise<Response> => {
       services: "Services Information",
       support: "Customer Support",
       partnership: "Partnership Opportunity",
+      devices: "Dispositivo / Sensores",
+      cover: "Cover™ (Operativa delegada)",
+      pms: "Integraciones PMS",
+      careers: "Buscamos talento",
+      general: "Consulta general",
       other: "Other",
     };
 
     const inquiryLabel = inquiryLabels[inquiryType] || inquiryType;
 
-    // Send notification email to the team
     const teamEmailResponse = await resend.emails.send({
       from: "Roomonitor <onboarding@resend.dev>",
       to: ["info@roomonitor.com"],
@@ -106,10 +196,9 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Team notification sent:", teamEmailResponse);
 
-    // Send confirmation email to the customer
     const customerEmailResponse = await resend.emails.send({
       from: "Roomonitor <onboarding@resend.dev>",
-      to: [email],
+      to: [data.email],
       subject: "We've received your inquiry - Roomonitor",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -144,7 +233,7 @@ const handler = async (req: Request): Promise<Response> => {
   } catch (error: any) {
     console.error("Error in send-contact-notification function:", error);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: "An unexpected error occurred." }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
