@@ -7,22 +7,22 @@ import heroMonitoring from "@/assets/hero-monitoring.jpg";
 
 export function HeroSection() {
   const cards = [
-    {
-      image: heroControlCenter,
-      title: "Centro de Control 24/7",
-      description: "Agentes formados en hospitality evaluando, mediando y resolviendo.",
-    },
-    {
-      image: heroFieldService,
-      title: "Field Service en 8 ciudades",
-      description: "Intervención presencial cuando la resolución remota no basta.",
-    },
-    {
-      image: heroMonitoring,
-      title: "Monitorización inteligente",
-      description: "Sensor de ruido, humo, ocupación y ambiente.",
-    },
-  ];
+  {
+    image: heroControlCenter,
+    title: "Centro de Control 24/7",
+    description: "Agentes formados en hospitality evaluando, mediando y resolviendo."
+  },
+  {
+    image: heroFieldService,
+    title: "Field Service en 8 ciudades",
+    description: "Intervención presencial cuando la resolución remota no basta."
+  },
+  {
+    image: heroMonitoring,
+    title: "Monitorización inteligente",
+    description: "Sensor de ruido, humo, ocupación y ambiente."
+  }];
+
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden">
@@ -49,23 +49,23 @@ export function HeroSection() {
               Tu operativa nocturna, resuelta.
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground text-balance">
-              De 22:00 a 07:00, nosotros nos encargamos.
+              A partir de las 19h, nosotros nos encargamos.
             </p>
           </div>
 
           {/* Description */}
           <p
             className="text-[15px] sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in mb-10"
-            style={{ animationDelay: "0.1s" }}
-          >
+            style={{ animationDelay: "0.1s" }}>
+            
             Roomonitor combina monitorización inteligente, un Centro de Control y agentes de campo. Gestionamos incidencias, atendemos huéspedes y protegemos tus activos. En tu nombre, con tus protocolos. Tú descansas. Nosotros actuamos.
           </p>
 
           {/* CTAs */}
           <div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in mb-16"
-            style={{ animationDelay: "0.15s" }}
-          >
+            style={{ animationDelay: "0.15s" }}>
+            
             <Button size="lg" className="text-base px-8 py-6 shadow-soft-lg" asChild>
               <Link to="/cover">
                 Descubre Cover™
@@ -83,26 +83,26 @@ export function HeroSection() {
           {/* Value proposition cards with images */}
           <div
             className="grid sm:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto animate-fade-in"
-            style={{ animationDelay: "0.25s" }}
-          >
-            {cards.map((card, index) => (
-              <div key={index} className="group text-left">
+            style={{ animationDelay: "0.25s" }}>
+            
+            {cards.map((card, index) =>
+            <div key={index} className="group text-left">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-muted">
                   <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 </div>
                 <h3 className="text-foreground font-semibold text-lg mb-2">{card.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {card.description}
                 </p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
