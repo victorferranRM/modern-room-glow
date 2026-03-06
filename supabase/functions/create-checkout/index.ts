@@ -16,12 +16,14 @@ interface CheckoutRequest {
     };
     price?: string;
     quantity: number;
+    isOneTime?: boolean;
   }>;
   plan: string;
   properties: number;
   isReactivation?: boolean;
   includeShipping?: boolean;
   shippingRateId?: string;
+  devicePriceId?: string;
   successUrl: string;
   cancelUrl: string;
 }
@@ -52,6 +54,7 @@ serve(async (req) => {
       isReactivation,
       includeShipping,
       shippingRateId,
+      devicePriceId,
       successUrl,
       cancelUrl,
     } = body;
@@ -73,14 +76,18 @@ serve(async (req) => {
       );
     }
 
+    // Separate one-time items (device) from recurring items (subscription)
+    const recurringItems = lineItems.filter((item) => item.price !== devicePriceId);
+    const oneTimeItems = lineItems.filter((item) => item.price === devicePriceId);
+
     // Build Stripe checkout session params
     const params = new URLSearchParams();
-    params.append("mode", lineItems.some((item) => item.price_data?.recurring) ? "subscription" : "payment");
+    params.append("mode", "subscription");
     params.append("success_url", successUrl);
     params.append("cancel_url", cancelUrl);
 
-    // Add line items
-    lineItems.forEach((item, index) => {
+    // Add recurring items as line_items
+    recurringItems.forEach((item, index) => {
       if (item.price) {
         params.append(`line_items[${index}][price]`, item.price);
       } else if (item.price_data) {
@@ -97,6 +104,13 @@ serve(async (req) => {
       params.append(`line_items[${index}][quantity]`, item.quantity.toString());
     });
 
+    // Add one-time device items as invoice items on the subscription
+    oneTimeItems.forEach((item, index) => {
+      if (item.price) {
+        params.append(`subscription_data[invoice_items][${index}][price]`, item.price);
+        params.append(`subscription_data[invoice_items][${index}][quantity]`, item.quantity.toString());
+      }
+    });
     // Add shipping if requested
     if (includeShipping && shippingRateId) {
       params.append("shipping_options[0][shipping_rate]", shippingRateId);
