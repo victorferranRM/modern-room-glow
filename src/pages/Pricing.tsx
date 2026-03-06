@@ -268,11 +268,10 @@ export default function Pricing() {
                     <Button 
                       className="w-full shadow-soft" 
                       size="lg" 
-                      onClick={() => handleCheckout("alarm_assistant")}
-                      disabled={checkoutLoading === "alarm_assistant"}
+                      onClick={() => goToCheckout("pro")}
                     >
-                      {checkoutLoading !== "alarm_assistant" ? "Comprar ahora" : "Procesando..."}
-                      {checkoutLoading !== "alarm_assistant" && <ArrowRight className="w-4 h-4 ml-2" />}
+                      Comprar ahora
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   ) : (
                     <Button className="w-full" size="lg" variant="outline" asChild>

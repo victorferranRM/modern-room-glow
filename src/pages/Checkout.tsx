@@ -274,9 +274,13 @@ export default function Checkout() {
                       size="lg" 
                       className="w-full mb-4 text-base"
                       onClick={handleCheckout}
+                      disabled={checkoutLoading}
                     >
-                      <Lock className="w-4 h-4 mr-2" />
-                      Completar compra
+                      {checkoutLoading ? (
+                        <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Procesando...</>
+                      ) : (
+                        <><Lock className="w-4 h-4 mr-2" />Completar compra</>
+                      )}
                     </Button>
                     
                     <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-6">

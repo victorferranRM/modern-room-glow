@@ -190,17 +190,14 @@ export function PricingCarousel({
         </Button>
       );
     }
-    const checkoutPlan = planKey === "basic" ? "noise_alarm" : "alarm_assistant";
-    const isLoading = checkoutLoading === checkoutPlan;
     return (
       <Button 
         className={`w-full ${planKey === "pro" ? "shadow-soft" : ""}`} 
         size="lg" 
-        onClick={() => handleCheckout(checkoutPlan as "noise_alarm" | "alarm_assistant")}
-        disabled={isLoading}
+        onClick={() => goToCheckout(planKey as "basic" | "pro")}
       >
-        {isLoading ? "Procesando..." : "Comprar ahora"}
-        {!isLoading && <ArrowRight className="w-4 h-4 ml-2" />}
+        Comprar ahora
+        <ArrowRight className="w-4 h-4 ml-2" />
       </Button>
     );
   };
