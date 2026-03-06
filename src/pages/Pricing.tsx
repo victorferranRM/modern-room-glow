@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -32,13 +34,58 @@ import {
 } from "lucide-react";
 import serviceControlCenter from "@/assets/service-control-center.jpg";
 
+const PRICE_IDS = {
+  device: "price_1T7v3uHW6UdvG7qBZUphbeXB",
+  noise_alarm: "price_1T7w4iHW6UdvG7qBAs5Fx7bf",
+  alarm_assistant: "price_1T7wfMHW6UdvG7qBnSvlyY17",
+  shipping_rate: "shr_1T7vldHW6UdvG7qBZCdzYXN3",
+};
+
 export default function Pricing() {
   const [properties, setProperties] = useState(3);
+  const [checkoutLoading, setCheckoutLoading] = useState<string | null>(null);
   const isEnterprise = properties > 10;
 
   const basicDeviceTotal = 45 * properties;
   const basicMonthlyTotal = 13 * properties;
   const proMonthlyTotal = 29.90 * properties;
+
+  const handleCheckout = async (plan: "noise_alarm" | "alarm_assistant") => {
+    setCheckoutLoading(plan);
+    try {
+      const subscriptionPriceId = plan === "noise_alarm" ? PRICE_IDS.noise_alarm : PRICE_IDS.alarm_assistant;
+
+      const lineItems = [
+        { price: PRICE_IDS.device, quantity: properties },
+        { price: subscriptionPriceId, quantity: properties },
+      ];
+
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: {
+          lineItems,
+          plan,
+          properties,
+          isReactivation: false,
+          includeShipping: true,
+          shippingRateId: PRICE_IDS.shipping_rate,
+          successUrl: `${window.location.origin}/checkout?success=true`,
+          cancelUrl: `${window.location.origin}/pricing`,
+        },
+      });
+
+      if (error) throw error;
+      if (data?.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error("No checkout URL returned");
+      }
+    } catch (err: any) {
+      console.error("Checkout error:", err);
+      toast.error("Error al iniciar el pago. Inténtalo de nuevo.");
+    } finally {
+      setCheckoutLoading(null);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -179,11 +226,14 @@ export default function Pricing() {
                   </ul>
 
                   {!isEnterprise ? (
-                    <Button className="w-full" size="lg" asChild>
-                      <Link to={`/checkout?plan=basic&properties=${properties}`}>
-                        Comprar ahora
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                    <Button 
+                      className="w-full" 
+                      size="lg" 
+                      onClick={() => handleCheckout("noise_alarm")}
+                      disabled={checkoutLoading === "noise_alarm"}
+                    >
+                      {checkoutLoading === "noise_alarm" ? "Procesando..." : "Comprar ahora"}
+                      {checkoutLoading !== "noise_alarm" && <ArrowRight className="w-4 h-4 ml-2" />}
                     </Button>
                   ) : (
                     <Button className="w-full" size="lg" variant="outline" asChild>
@@ -251,11 +301,14 @@ export default function Pricing() {
                   </ul>
 
                   {!isEnterprise ? (
-                    <Button className="w-full shadow-soft" size="lg" asChild>
-                      <Link to={`/checkout?plan=pro&properties=${properties}`}>
-                        Comprar ahora
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                    <Button 
+                      className="w-full shadow-soft" 
+                      size="lg" 
+                      onClick={() => handleCheckout("alarm_assistant")}
+                      disabled={checkoutLoading === "alarm_assistant"}
+                    >
+                      {checkoutLoading !== "alarm_assistant" ? "Comprar ahora" : "Procesando..."}
+                      {checkoutLoading !== "alarm_assistant" && <ArrowRight className="w-4 h-4 ml-2" />}
                     </Button>
                   ) : (
                     <Button className="w-full" size="lg" variant="outline" asChild>
