@@ -9,6 +9,13 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
+const escapeHtml = (s: string): string =>
+  s.replace(/&/g, '&amp;')
+   .replace(/</g, '&lt;')
+   .replace(/>/g, '&gt;')
+   .replace(/"/g, '&quot;')
+   .replace(/'/g, '&#39;');
+
 interface ContactNotificationRequest {
   firstName: string;
   lastName: string;
@@ -28,7 +35,14 @@ const handler = async (req: Request): Promise<Response> => {
 
   try {
     const data: ContactNotificationRequest = await req.json();
-    const { firstName, lastName, email, phone, company, propertySize, inquiryType, message } = data;
+    const firstName = escapeHtml(data.firstName);
+    const lastName = escapeHtml(data.lastName);
+    const email = data.email;
+    const phone = data.phone ? escapeHtml(data.phone) : undefined;
+    const company = escapeHtml(data.company);
+    const propertySize = data.propertySize ? escapeHtml(data.propertySize) : undefined;
+    const inquiryType = escapeHtml(data.inquiryType);
+    const message = data.message ? escapeHtml(data.message) : undefined;
 
     // Format inquiry type for display
     const inquiryLabels: Record<string, string> = {
