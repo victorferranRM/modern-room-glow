@@ -68,6 +68,7 @@ export default function Pricing() {
           isReactivation: false,
           includeShipping: true,
           shippingRateId: PRICE_IDS.shipping_rate,
+          devicePriceId: PRICE_IDS.device,
           successUrl: `${window.location.origin}/checkout?success=true`,
           cancelUrl: `${window.location.origin}/pricing`,
         },
