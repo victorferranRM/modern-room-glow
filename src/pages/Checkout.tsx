@@ -76,27 +76,32 @@ export default function Checkout() {
 
   const handleCheckout = async () => {
     setCheckoutLoading(true);
+    const plan = currentPlan === "basic" ? "noise_alarm" : "alarm_assistant";
+    const requestBody = {
+      plan,
+      properties,
+      isReactivation: false,
+      successUrl: `${window.location.origin}/checkout?success=true`,
+      cancelUrl: `${window.location.origin}/checkout?plan=${currentPlan}&properties=${properties}`,
+    };
+    console.log("handleCheckout: invoking create-checkout with", requestBody);
+    
     try {
-      const plan = currentPlan === "basic" ? "noise_alarm" : "alarm_assistant";
-      
       const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: {
-          plan,
-          properties,
-          isReactivation: false,
-          successUrl: `${window.location.origin}/checkout?success=true`,
-          cancelUrl: `${window.location.origin}/checkout?plan=${currentPlan}&properties=${properties}`,
-        },
+        body: requestBody,
       });
+
+      console.log("handleCheckout: response data", data, "error", error);
 
       if (error) throw error;
       if (data?.url) {
+        console.log("handleCheckout: redirecting to", data.url);
         window.location.href = data.url;
       } else {
         throw new Error("No checkout URL returned");
       }
     } catch (err: any) {
-      console.error("Checkout error:", err);
+      console.error("handleCheckout: error", err);
       toast.error("Error al iniciar el pago. Inténtalo de nuevo.");
     } finally {
       setCheckoutLoading(false);
