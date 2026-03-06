@@ -1,7 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
+import { Link, useNavigate } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
 import { 
@@ -26,12 +24,6 @@ import {
   KeyRound
 } from "lucide-react";
 
-const PRICE_IDS = {
-  device: "price_1T7v3uHW6UdvG7qBZUphbeXB",
-  noise_alarm: "price_1T7w4iHW6UdvG7qBAs5Fx7bf",
-  alarm_assistant: "price_1T7wfMHW6UdvG7qBnSvlyY17",
-  shipping_rate: "shr_1T7vldHW6UdvG7qBZCdzYXN3",
-};
 
 interface PricingCarouselProps {
   properties: number;
@@ -54,43 +46,10 @@ export function PricingCarousel({
     loop: false
   });
   const [selectedIndex, setSelectedIndex] = useState(1);
-  const [checkoutLoading, setCheckoutLoading] = useState<string | null>(null);
+  const navigate = useNavigate();
 
-  const handleCheckout = async (plan: "noise_alarm" | "alarm_assistant") => {
-    setCheckoutLoading(plan);
-    try {
-      const subscriptionPriceId = plan === "noise_alarm" ? PRICE_IDS.noise_alarm : PRICE_IDS.alarm_assistant;
-      const lineItems = [
-        { price: PRICE_IDS.device, quantity: properties },
-        { price: subscriptionPriceId, quantity: properties },
-      ];
-
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: {
-          lineItems,
-          plan,
-          properties,
-          isReactivation: false,
-          includeShipping: true,
-          shippingRateId: PRICE_IDS.shipping_rate,
-          devicePriceId: PRICE_IDS.device,
-          successUrl: `${window.location.origin}/checkout?success=true`,
-          cancelUrl: `${window.location.origin}/pricing`,
-        },
-      });
-
-      if (error) throw error;
-      if (data?.url) {
-        window.location.href = data.url;
-      } else {
-        throw new Error("No checkout URL returned");
-      }
-    } catch (err: any) {
-      console.error("Checkout error:", err);
-      toast.error("Error al iniciar el pago. Inténtalo de nuevo.");
-    } finally {
-      setCheckoutLoading(null);
-    }
+  const goToCheckout = (plan: "basic" | "pro") => {
+    navigate(`/checkout?plan=${plan}&properties=${properties}`);
   };
 
   const onSelect = useCallback(() => {
@@ -231,17 +190,14 @@ export function PricingCarousel({
         </Button>
       );
     }
-    const checkoutPlan = planKey === "basic" ? "noise_alarm" : "alarm_assistant";
-    const isLoading = checkoutLoading === checkoutPlan;
     return (
       <Button 
         className={`w-full ${planKey === "pro" ? "shadow-soft" : ""}`} 
         size="lg" 
-        onClick={() => handleCheckout(checkoutPlan as "noise_alarm" | "alarm_assistant")}
-        disabled={isLoading}
+        onClick={() => goToCheckout(planKey as "basic" | "pro")}
       >
-        {isLoading ? "Procesando..." : "Comprar ahora"}
-        {!isLoading && <ArrowRight className="w-4 h-4 ml-2" />}
+        Comprar ahora
+        <ArrowRight className="w-4 h-4 ml-2" />
       </Button>
     );
   };

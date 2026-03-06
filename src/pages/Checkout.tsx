@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,7 +12,8 @@ import {
   Lock,
   Building2,
   Minus,
-  Plus
+  Plus,
+  Loader2
 } from "lucide-react";
 
 const PLANS = {
@@ -69,9 +72,35 @@ export default function Checkout() {
     if (properties > 1) setProperties(properties - 1);
   };
 
-  const handleCheckout = () => {
-    console.log("Checkout:", { plan: currentPlan, properties, deviceTotal, monthlyTotal });
-    alert("Integración de pago próximamente. Se conectará con Stripe o Shopify.");
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
+
+  const handleCheckout = async () => {
+    setCheckoutLoading(true);
+    try {
+      const plan = currentPlan === "basic" ? "noise_alarm" : "alarm_assistant";
+      
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: {
+          plan,
+          properties,
+          isReactivation: false,
+          successUrl: `${window.location.origin}/checkout?success=true`,
+          cancelUrl: `${window.location.origin}/checkout?plan=${currentPlan}&properties=${properties}`,
+        },
+      });
+
+      if (error) throw error;
+      if (data?.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error("No checkout URL returned");
+      }
+    } catch (err: any) {
+      console.error("Checkout error:", err);
+      toast.error("Error al iniciar el pago. Inténtalo de nuevo.");
+    } finally {
+      setCheckoutLoading(false);
+    }
   };
 
   return (
@@ -245,9 +274,13 @@ export default function Checkout() {
                       size="lg" 
                       className="w-full mb-4 text-base"
                       onClick={handleCheckout}
+                      disabled={checkoutLoading}
                     >
-                      <Lock className="w-4 h-4 mr-2" />
-                      Completar compra
+                      {checkoutLoading ? (
+                        <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Procesando...</>
+                      ) : (
+                        <><Lock className="w-4 h-4 mr-2" />Completar compra</>
+                      )}
                     </Button>
                     
                     <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-6">
