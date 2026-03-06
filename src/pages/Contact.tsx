@@ -164,7 +164,7 @@ export default function Contact() {
 
       const { error: emailError } = await supabase.functions.invoke(
         "send-contact-notification",
-        { body: data }
+        { body: { ...data, website: honeypot } }
       );
 
       if (emailError) {
