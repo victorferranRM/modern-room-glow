@@ -106,36 +106,45 @@ export type Database = {
           company_id: string
           created_at: string
           device_id: string
+          device_paid: boolean | null
           id: string
           installation_date: string | null
           last_online: string | null
           name: string
+          plan: string | null
           property_id: string | null
           status: string
+          stripe_payment_intent_id: string | null
           updated_at: string
         }
         Insert: {
           company_id: string
           created_at?: string
           device_id: string
+          device_paid?: boolean | null
           id?: string
           installation_date?: string | null
           last_online?: string | null
           name: string
+          plan?: string | null
           property_id?: string | null
           status?: string
+          stripe_payment_intent_id?: string | null
           updated_at?: string
         }
         Update: {
           company_id?: string
           created_at?: string
           device_id?: string
+          device_paid?: boolean | null
           id?: string
           installation_date?: string | null
           last_online?: string | null
           name?: string
+          plan?: string | null
           property_id?: string | null
           status?: string
+          stripe_payment_intent_id?: string | null
           updated_at?: string
         }
         Relationships: [
@@ -161,10 +170,14 @@ export type Database = {
           created_at: string
           id: string
           invoice_url: string | null
+          is_reactivation: boolean | null
           items: Json
           order_date: string
           order_number: string
+          shipping_address: Json | null
           status: string
+          stripe_customer_id: string | null
+          stripe_session_id: string | null
           total: number
           updated_at: string
         }
@@ -173,10 +186,14 @@ export type Database = {
           created_at?: string
           id?: string
           invoice_url?: string | null
+          is_reactivation?: boolean | null
           items?: Json
           order_date?: string
           order_number: string
+          shipping_address?: Json | null
           status?: string
+          stripe_customer_id?: string | null
+          stripe_session_id?: string | null
           total?: number
           updated_at?: string
         }
@@ -185,10 +202,14 @@ export type Database = {
           created_at?: string
           id?: string
           invoice_url?: string | null
+          is_reactivation?: boolean | null
           items?: Json
           order_date?: string
           order_number?: string
+          shipping_address?: Json | null
           status?: string
+          stripe_customer_id?: string | null
+          stripe_session_id?: string | null
           total?: number
           updated_at?: string
         }
@@ -208,9 +229,11 @@ export type Database = {
           created_at: string
           email: string | null
           first_name: string | null
+          hubspot_contact_id: string | null
           id: string
           last_name: string | null
           phone: string | null
+          stripe_customer_id: string | null
           updated_at: string
         }
         Insert: {
@@ -218,9 +241,11 @@ export type Database = {
           created_at?: string
           email?: string | null
           first_name?: string | null
+          hubspot_contact_id?: string | null
           id: string
           last_name?: string | null
           phone?: string | null
+          stripe_customer_id?: string | null
           updated_at?: string
         }
         Update: {
@@ -228,9 +253,11 @@ export type Database = {
           created_at?: string
           email?: string | null
           first_name?: string | null
+          hubspot_contact_id?: string | null
           id?: string
           last_name?: string | null
           phone?: string | null
+          stripe_customer_id?: string | null
           updated_at?: string
         }
         Relationships: [
@@ -410,41 +437,59 @@ export type Database = {
       subscriptions: {
         Row: {
           billing_frequency: string
+          cancel_at_period_end: boolean | null
           company_id: string
           created_at: string
+          current_period_end: string | null
           id: string
           monthly_cost: number
           next_billing_date: string | null
           payment_last_four: string | null
           payment_method: string | null
+          plan: string | null
           plan_name: string
           status: string
+          stripe_customer_id: string | null
+          stripe_price_id: string | null
+          stripe_subscription_id: string | null
           updated_at: string
         }
         Insert: {
           billing_frequency?: string
+          cancel_at_period_end?: boolean | null
           company_id: string
           created_at?: string
+          current_period_end?: string | null
           id?: string
           monthly_cost?: number
           next_billing_date?: string | null
           payment_last_four?: string | null
           payment_method?: string | null
+          plan?: string | null
           plan_name?: string
           status?: string
+          stripe_customer_id?: string | null
+          stripe_price_id?: string | null
+          stripe_subscription_id?: string | null
           updated_at?: string
         }
         Update: {
           billing_frequency?: string
+          cancel_at_period_end?: boolean | null
           company_id?: string
           created_at?: string
+          current_period_end?: string | null
           id?: string
           monthly_cost?: number
           next_billing_date?: string | null
           payment_last_four?: string | null
           payment_method?: string | null
+          plan?: string | null
           plan_name?: string
           status?: string
+          stripe_customer_id?: string | null
+          stripe_price_id?: string | null
+          stripe_subscription_id?: string | null
           updated_at?: string
         }
         Relationships: [
