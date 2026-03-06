@@ -32,12 +32,6 @@ import {
 } from "lucide-react";
 import serviceControlCenter from "@/assets/service-control-center.jpg";
 
-const PRICE_IDS = {
-  device: "price_1T7v3uHW6UdvG7qBZUphbeXB",
-  noise_alarm: "price_1T7w4iHW6UdvG7qBAs5Fx7bf",
-  alarm_assistant: "price_1T7wfMHW6UdvG7qBnSvlyY17",
-  shipping_rate: "shr_1T7vldHW6UdvG7qBZCdzYXN3",
-};
 
 export default function Pricing() {
   const navigate = useNavigate();
