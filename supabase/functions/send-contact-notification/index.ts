@@ -29,6 +29,9 @@ interface ContactNotificationRequest {
   inquiryType: string;
   message?: string;
   website?: string; // honeypot field
+  country?: string;
+  city?: string;
+  province?: string;
 }
 
 async function checkRateLimit(
