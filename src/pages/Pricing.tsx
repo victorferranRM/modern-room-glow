@@ -226,11 +226,14 @@ export default function Pricing() {
                   </ul>
 
                   {!isEnterprise ? (
-                    <Button className="w-full" size="lg" asChild>
-                      <Link to={`/checkout?plan=basic&properties=${properties}`}>
-                        Comprar ahora
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                    <Button 
+                      className="w-full" 
+                      size="lg" 
+                      onClick={() => handleCheckout("noise_alarm")}
+                      disabled={checkoutLoading === "noise_alarm"}
+                    >
+                      {checkoutLoading === "noise_alarm" ? "Procesando..." : "Comprar ahora"}
+                      {checkoutLoading !== "noise_alarm" && <ArrowRight className="w-4 h-4 ml-2" />}
                     </Button>
                   ) : (
                     <Button className="w-full" size="lg" variant="outline" asChild>
