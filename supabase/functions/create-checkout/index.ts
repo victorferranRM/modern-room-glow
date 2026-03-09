@@ -18,7 +18,7 @@ Deno.serve(async (req) => {
       device: "price_1T7v3uHW6UdvG7qBZUphbeXB",
       noise_alarm: "price_1T7w4iHW6UdvG7qBAs5Fx7bf",
       alarm_assistant: "price_1T7wfMHW6UdvG7qBnSvlyY17",
-      shipping: "price_1T914GHW6UdvG7qBWNQLR9Rv",
+      shipping: "price_1T91ymHW6UdvG7qBhGXsJTit",
     };
 
     const planPriceId = PRICES[plan];
