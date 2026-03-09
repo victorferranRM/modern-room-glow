@@ -18,6 +18,7 @@ Deno.serve(async (req) => {
     const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET")?.trim().replace(/^['"]|['"]$/g, "");
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const resendApiKey = Deno.env.get("RESEND_API_KEY")?.trim().replace(/^['"]|['"]$/g, "");
 
     if (!stripeSecretKey || !webhookSecret) {
       throw new Error("Missing Stripe secrets");
@@ -53,6 +54,7 @@ Deno.serve(async (req) => {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object as Stripe.Checkout.Session;
       const customerEmail = session.customer_details?.email;
+      const customerName = session.customer_details?.name || "";
       const stripeCustomerId = session.customer as string;
       const metadata = session.metadata || {};
 
@@ -90,11 +92,17 @@ Deno.serve(async (req) => {
           .eq("id", userId);
       } else {
         // Create new auth user (auto-confirmed, no password — magic link only)
+        const nameParts = customerName.split(" ");
+        const firstName = nameParts[0] || "";
+        const lastName = nameParts.slice(1).join(" ") || "";
+
         const { data: newUser, error: createError } =
           await supabaseAdmin.auth.admin.createUser({
             email: customerEmail,
             email_confirm: true,
             user_metadata: {
+              first_name: firstName,
+              last_name: lastName,
               plan: metadata.plan,
               properties: metadata.properties,
             },
@@ -108,14 +116,17 @@ Deno.serve(async (req) => {
         userId = newUser.user.id;
         console.log("Created new user:", userId);
 
-        // The handle_new_user trigger will create profile, company, etc.
-        // Update profile with Stripe customer ID after trigger runs
-        // Small delay to let the trigger complete
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        // Wait for the handle_new_user trigger to complete
+        await new Promise((resolve) => setTimeout(resolve, 1500));
 
+        // Update profile with Stripe customer ID and name
         await supabaseAdmin
           .from("profiles")
-          .update({ stripe_customer_id: stripeCustomerId })
+          .update({
+            stripe_customer_id: stripeCustomerId,
+            first_name: firstName || null,
+            last_name: lastName || null,
+          })
           .eq("id", userId);
       }
 
@@ -137,20 +148,74 @@ Deno.serve(async (req) => {
           .eq("company_id", profile.company_id);
       }
 
-      // Send magic link email so the customer can access their portal
+      // Generate magic link and send via Resend
       const siteUrl = Deno.env.get("SITE_URL") || "https://modern-room-glow.lovable.app";
-      const { error: magicLinkError } =
+      const { data: linkData, error: linkError } =
         await supabaseAdmin.auth.admin.generateLink({
           type: "magiclink",
           email: customerEmail,
           options: { redirectTo: `${siteUrl}/portal` },
         });
 
-      if (magicLinkError) {
-        console.error("Error sending magic link:", magicLinkError.message);
-        // Don't throw — user was created successfully, they can use password reset
+      if (linkError) {
+        console.error("Error generating magic link:", linkError.message);
       } else {
-        console.log("Magic link sent to:", customerEmail);
+        const magicLink = linkData?.properties?.action_link;
+        console.log("Magic link generated for:", customerEmail);
+
+        // Send magic link email via Resend
+        if (resendApiKey && magicLink) {
+          try {
+            const emailResponse = await fetch("https://api.resend.com/emails", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${resendApiKey}`,
+              },
+              body: JSON.stringify({
+                from: "Roomonitor <noreply@roomonitor.com>",
+                to: [customerEmail],
+                subject: "Accede a tu portal de Roomonitor",
+                html: `
+                  <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 560px; margin: 0 auto; padding: 40px 20px;">
+                    <div style="text-align: center; margin-bottom: 32px;">
+                      <h1 style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin: 0;">¡Bienvenido a Roomonitor!</h1>
+                    </div>
+                    <p style="font-size: 16px; color: #444; line-height: 1.6;">
+                      Hola${customerName ? ` ${customerName.split(" ")[0]}` : ""},
+                    </p>
+                    <p style="font-size: 16px; color: #444; line-height: 1.6;">
+                      Tu pedido ha sido confirmado. Haz clic en el botón de abajo para acceder a tu portal de cliente, donde podrás gestionar tus dispositivos, suscripciones y pedidos.
+                    </p>
+                    <div style="text-align: center; margin: 32px 0;">
+                      <a href="${magicLink}" style="display: inline-block; background-color: #E8836B; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none; padding: 14px 32px; border-radius: 8px;">
+                        Acceder a mi portal
+                      </a>
+                    </div>
+                    <p style="font-size: 14px; color: #888; line-height: 1.5;">
+                      Este enlace es válido durante 24 horas. Si no has realizado esta compra, puedes ignorar este email.
+                    </p>
+                    <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;" />
+                    <p style="font-size: 12px; color: #aaa; text-align: center;">
+                      © ${new Date().getFullYear()} Roomonitor. Todos los derechos reservados.
+                    </p>
+                  </div>
+                `,
+              }),
+            });
+
+            if (emailResponse.ok) {
+              console.log("Magic link email sent via Resend to:", customerEmail);
+            } else {
+              const errBody = await emailResponse.text();
+              console.error("Resend email error:", errBody);
+            }
+          } catch (emailErr: any) {
+            console.error("Failed to send email via Resend:", emailErr.message);
+          }
+        } else {
+          console.warn("Missing RESEND_API_KEY or magic link — email not sent");
+        }
       }
     }
 
