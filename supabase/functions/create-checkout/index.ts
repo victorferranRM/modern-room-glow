@@ -65,9 +65,7 @@ Deno.serve(async (req) => {
       },
     ];
 
-    if (!isReactivation) {
-      lineItems.push({ price: PRICES.device, quantity: properties });
-    }
+    // Device + shipping are added via subscription_data.add_invoice_items
 
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: "subscription",
