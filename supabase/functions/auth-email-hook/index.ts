@@ -16,12 +16,12 @@ const corsHeaders = {
 }
 
 const EMAIL_SUBJECTS: Record<string, string> = {
-  signup: 'Confirm your email',
-  invite: "You've been invited",
-  magiclink: 'Your login link',
-  recovery: 'Reset your password',
-  email_change: 'Confirm your new email',
-  reauthentication: 'Your verification code',
+  signup: 'Confirma tu email',
+  invite: 'Has sido invitado a Roomonitor',
+  magiclink: 'Tu enlace de acceso a Roomonitor',
+  recovery: 'Restablecer tu contraseña',
+  email_change: 'Confirma tu cambio de email',
+  reauthentication: 'Tu código de verificación',
 }
 
 // Template mapping
