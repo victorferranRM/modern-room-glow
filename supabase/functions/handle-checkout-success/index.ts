@@ -1,6 +1,5 @@
 import Stripe from "npm:stripe@14.21.0";
 import { createClient } from "npm:@supabase/supabase-js@2.49.4";
-import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -19,7 +18,7 @@ Deno.serve(async (req) => {
     const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET")?.trim().replace(/^['"]|['"]$/g, "");
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const resendApiKey = Deno.env.get("RESEND_API_KEY")?.trim().replace(/^['"]|['"]$/g, "");
+    const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
 
     if (!stripeSecretKey || !webhookSecret) {
       throw new Error("Missing Stripe secrets");
@@ -69,7 +68,7 @@ Deno.serve(async (req) => {
 
       console.log("Processing checkout for:", customerEmail);
 
-      // Create Supabase admin client
+      // Admin client for user management
       const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
         auth: { autoRefreshToken: false, persistSession: false },
       });
@@ -145,62 +144,23 @@ Deno.serve(async (req) => {
           .eq("company_id", profile.company_id);
       }
 
-      // Generate magic link
+      // Send magic link via native auth email system
+      // Uses the configured email domain and auth email templates
       const siteUrl = Deno.env.get("SITE_URL") || "https://modern-room-glow.lovable.app";
-      const { data: linkData, error: linkError } =
-        await supabaseAdmin.auth.admin.generateLink({
-          type: "magiclink",
-          email: customerEmail,
-          options: { redirectTo: `${siteUrl}/portal` },
-        });
 
-      if (linkError) {
-        console.error("Error generating magic link:", linkError.message);
+      const anonClient = createClient(supabaseUrl, supabaseAnonKey);
+      const { error: otpError } = await anonClient.auth.signInWithOtp({
+        email: customerEmail,
+        options: {
+          emailRedirectTo: `${siteUrl}/portal`,
+          shouldCreateUser: false,
+        },
+      });
+
+      if (otpError) {
+        console.error("Error sending magic link via auth system:", otpError.message);
       } else {
-        const magicLink = linkData?.properties?.action_link;
-        console.log("Magic link generated for:", customerEmail);
-
-        // Send magic link email via Resend
-        if (resendApiKey && magicLink) {
-          try {
-            const resend = new Resend(resendApiKey);
-            const firstName = customerName ? customerName.split(" ")[0] : "";
-
-            const emailResponse = await resend.emails.send({
-              from: "Roomonitor <onboarding@resend.dev>",
-              to: [customerEmail],
-              subject: "Welcome to Roomonitor — Access your portal",
-              html: `
-                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px 20px;">
-                  <h1 style="color: #1a1a2e; font-size: 24px; margin-bottom: 16px;">
-                    Welcome${firstName ? `, ${firstName}` : ""}!
-                  </h1>
-                  <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
-                    Your order has been confirmed and your account is ready. Click the button below to access your Roomonitor portal.
-                  </p>
-                  <div style="text-align: center; margin: 32px 0;">
-                    <a href="${magicLink}" style="background-color: #E8836B; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; display: inline-block;">
-                      Access my portal
-                    </a>
-                  </div>
-                  <p style="color: #888; font-size: 14px; line-height: 1.5;">
-                    This link is single-use and will expire in 24 hours. If you need a new one, visit the login page and request a magic link.
-                  </p>
-                  <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;" />
-                  <p style="color: #888; font-size: 13px;">
-                    Roomonitor — Smart monitoring for vacation rentals
-                  </p>
-                </div>
-              `,
-            });
-
-            console.log("Welcome email sent via Resend to:", customerEmail, emailResponse);
-          } catch (emailErr: any) {
-            console.error("Failed to send email via Resend:", emailErr.message);
-          }
-        } else {
-          console.warn("Missing RESEND_API_KEY or magic link — email not sent");
-        }
+        console.log("Magic link sent via native auth system to:", customerEmail);
       }
     }
 
