@@ -91,7 +91,6 @@ Deno.serve(async (req) => {
       sessionParams.shipping_address_collection = {
         allowed_countries: ["ES", "FR", "DE", "IT", "PT", "NL", "BE", "AT", "PL", "SE", "DK", "FI", "IE", "GR", "HR", "CZ", "HU", "RO"],
       };
-      sessionParams.shipping_options = [{ shipping_rate: PRICES.shipping }];
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);
