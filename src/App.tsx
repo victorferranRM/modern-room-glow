@@ -9,6 +9,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Pricing from "./pages/Pricing";
 import Checkout from "./pages/Checkout";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
 import Auth from "./pages/Auth";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Contact from "./pages/Contact";
@@ -73,6 +74,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/checkout/success" element={<CheckoutSuccess />} />
               <Route path="/resources/savings-calculator" element={<SavingsCalculator />} />
               <Route path="/resources/case-studies" element={<CaseStudies />} />
               <Route path="/resources/case-studies/:slug" element={<CaseStudyDetail />} />
