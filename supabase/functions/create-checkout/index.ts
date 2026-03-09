@@ -14,7 +14,7 @@ Deno.serve(async (req) => {
   try {
     const { plan, properties, isReactivation, successUrl, cancelUrl } = await req.json();
 
-    const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY')!, {
+    const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY')?.trim()!, {
       apiVersion: '2024-06-20',
     });
 
