@@ -18,7 +18,7 @@ Deno.serve(async (req) => {
     const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET")?.trim().replace(/^['"]|['"]$/g, "");
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const resendApiKey = Deno.env.get("RESEND_API_KEY")?.trim().replace(/^['"]|['"]$/g, "");
+    const hubspotAccessToken = Deno.env.get("HUBSPOT_ACCESS_TOKEN")?.trim().replace(/^['"]|['"]$/g, "").replace(/\u200B/g, "");
 
     if (!stripeSecretKey || !webhookSecret) {
       throw new Error("Missing Stripe secrets");
@@ -164,57 +164,47 @@ Deno.serve(async (req) => {
         console.log("Magic link generated for:", customerEmail);
 
         // Send magic link email via Resend
-        if (resendApiKey && magicLink) {
+        if (hubspotAccessToken && magicLink) {
           try {
-            const emailResponse = await fetch("https://api.resend.com/emails", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${resendApiKey}`,
-              },
-              body: JSON.stringify({
-                from: "Roomonitor <noreply@roomonitor.com>",
-                to: [customerEmail],
-                subject: "Accede a tu portal de Roomonitor",
-                html: `
-                  <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 560px; margin: 0 auto; padding: 40px 20px;">
-                    <div style="text-align: center; margin-bottom: 32px;">
-                      <h1 style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin: 0;">¡Bienvenido a Roomonitor!</h1>
-                    </div>
-                    <p style="font-size: 16px; color: #444; line-height: 1.6;">
-                      Hola${customerName ? ` ${customerName.split(" ")[0]}` : ""},
-                    </p>
-                    <p style="font-size: 16px; color: #444; line-height: 1.6;">
-                      Tu pedido ha sido confirmado. Haz clic en el botón de abajo para acceder a tu portal de cliente, donde podrás gestionar tus dispositivos, suscripciones y pedidos.
-                    </p>
-                    <div style="text-align: center; margin: 32px 0;">
-                      <a href="${magicLink}" style="display: inline-block; background-color: #E8836B; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none; padding: 14px 32px; border-radius: 8px;">
-                        Acceder a mi portal
-                      </a>
-                    </div>
-                    <p style="font-size: 14px; color: #888; line-height: 1.5;">
-                      Este enlace es válido durante 24 horas. Si no has realizado esta compra, puedes ignorar este email.
-                    </p>
-                    <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;" />
-                    <p style="font-size: 12px; color: #aaa; text-align: center;">
-                      © ${new Date().getFullYear()} Roomonitor. Todos los derechos reservados.
-                    </p>
-                  </div>
-                `,
-              }),
-            });
+            const emailResponse = await fetch(
+              "https://api.hubapi.com/marketing/v3/transactional/single-email/send",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${hubspotAccessToken}`,
+                },
+                body: JSON.stringify({
+                  emailId: 376310301942,
+                  message: {
+                    to: customerEmail,
+                    from: "hello@roomonitor.com",
+                    sendId: `checkout-${session.id}`,
+                  },
+                  contactProperties: {
+                    firstname: customerName ? customerName.split(" ")[0] : "",
+                    lastname: customerName ? customerName.split(" ").slice(1).join(" ") : "",
+                    email: customerEmail,
+                  },
+                  customProperties: {
+                    magic_link: magicLink,
+                  },
+                }),
+              }
+            );
 
             if (emailResponse.ok) {
-              console.log("Magic link email sent via Resend to:", customerEmail);
+              const result = await emailResponse.json();
+              console.log("HubSpot transactional email sent to:", customerEmail, "sendResult:", result.sendResult);
             } else {
               const errBody = await emailResponse.text();
-              console.error("Resend email error:", errBody);
+              console.error("HubSpot email error:", emailResponse.status, errBody);
             }
           } catch (emailErr: any) {
-            console.error("Failed to send email via Resend:", emailErr.message);
+            console.error("Failed to send email via HubSpot:", emailErr.message);
           }
         } else {
-          console.warn("Missing RESEND_API_KEY or magic link — email not sent");
+          console.warn("Missing HUBSPOT_ACCESS_TOKEN or magic link — email not sent");
         }
       }
     }
