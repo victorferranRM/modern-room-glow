@@ -9,6 +9,7 @@ import {
   Head,
   Heading,
   Html,
+  Img,
   Preview,
   Text,
 } from 'npm:@react-email/components@0.0.22'
@@ -18,25 +19,27 @@ interface MagicLinkEmailProps {
   confirmationUrl: string
 }
 
+const LOGO_URL = 'https://mtbsuzhkxzhgmijeafnq.supabase.co/storage/v1/object/public/email-assets/roomonitor-logo.png'
+
 export const MagicLinkEmail = ({
   siteName,
   confirmationUrl,
 }: MagicLinkEmailProps) => (
-  <Html lang="en" dir="ltr">
+  <Html lang="es" dir="ltr">
     <Head />
-    <Preview>Your login link for {siteName}</Preview>
+    <Preview>Tu enlace de acceso a Roomonitor</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Your login link</Heading>
+        <Img src={LOGO_URL} alt="Roomonitor" width="150" height="auto" style={logo} />
+        <Heading style={h1}>Tu enlace de acceso</Heading>
         <Text style={text}>
-          Click the button below to log in to {siteName}. This link will expire
-          shortly.
+          Haz clic en el siguiente botón para acceder a tu cuenta de Roomonitor. Este enlace caducará en breve.
         </Text>
         <Button style={button} href={confirmationUrl}>
-          Log In
+          Acceder a mi cuenta
         </Button>
         <Text style={footer}>
-          If you didn't request this link, you can safely ignore this email.
+          Si no has solicitado este enlace, puedes ignorar este mensaje.
         </Text>
       </Container>
     </Body>
@@ -45,26 +48,10 @@ export const MagicLinkEmail = ({
 
 export default MagicLinkEmail
 
-const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
-const container = { padding: '20px 25px' }
-const h1 = {
-  fontSize: '22px',
-  fontWeight: 'bold' as const,
-  color: '#000000',
-  margin: '0 0 20px',
-}
-const text = {
-  fontSize: '14px',
-  color: '#55575d',
-  lineHeight: '1.5',
-  margin: '0 0 25px',
-}
-const button = {
-  backgroundColor: '#000000',
-  color: '#ffffff',
-  fontSize: '14px',
-  borderRadius: '8px',
-  padding: '12px 20px',
-  textDecoration: 'none',
-}
+const main = { backgroundColor: '#ffffff', fontFamily: "'Inter', Arial, sans-serif" }
+const container = { padding: '40px 25px' }
+const logo = { margin: '0 0 24px' }
+const h1 = { fontSize: '22px', fontWeight: 'bold' as const, color: '#2B2421', margin: '0 0 20px' }
+const text = { fontSize: '14px', color: '#7E7269', lineHeight: '1.6', margin: '0 0 25px' }
+const button = { backgroundColor: '#E8755A', color: '#ffffff', fontSize: '14px', borderRadius: '12px', padding: '12px 24px', textDecoration: 'none', fontWeight: 'bold' as const }
 const footer = { fontSize: '12px', color: '#999999', margin: '30px 0 0' }
