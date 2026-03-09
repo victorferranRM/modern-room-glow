@@ -18,7 +18,7 @@ Deno.serve(async (req) => {
     const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET")?.trim().replace(/^['"]|['"]$/g, "");
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const resendApiKey = Deno.env.get("RESEND_API_KEY")?.trim().replace(/^['"]|['"]$/g, "");
+    const hubspotAccessToken = Deno.env.get("HUBSPOT_ACCESS_TOKEN")?.trim().replace(/^['"]|['"]$/g, "").replace(/\u200B/g, "");
 
     if (!stripeSecretKey || !webhookSecret) {
       throw new Error("Missing Stripe secrets");
