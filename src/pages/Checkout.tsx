@@ -81,7 +81,7 @@ export default function Checkout() {
       plan,
       properties,
       isReactivation: false,
-      successUrl: `${window.location.origin}/checkout?success=true`,
+      successUrl: `${window.location.origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancelUrl: `${window.location.origin}/checkout?plan=${currentPlan}&properties=${properties}`,
     };
     console.log("handleCheckout: invoking create-checkout with", requestBody);
