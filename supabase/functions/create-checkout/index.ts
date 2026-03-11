@@ -15,9 +15,9 @@ Deno.serve(async (req) => {
     const { plan, properties, isReactivation, successUrl, cancelUrl } = await req.json();
 
     const PRICES: Record<string, string> = {
-      device: "price_1T7v3uHW6UdvG7qBZUphbeXB",
-      noise_alarm: "price_1T7w4iHW6UdvG7qBAs5Fx7bf",
-      alarm_assistant: "price_1T7wfMHW6UdvG7qBnSvlyY17",
+      device: "price_1T9hcaHW6UdvG7qBZ1zXg1J2",
+      noise_alarm: "price_1T9hfwHW6UdvG7qBya8cSTWF",
+      alarm_assistant: "price_1T9hhMHW6UdvG7qBjd0TLTJn",
       shipping: "price_1T91ymHW6UdvG7qBhGXsJTit",
     };
 
