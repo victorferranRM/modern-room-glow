@@ -48,6 +48,7 @@ async function createHubSpotContact(
   });
 
   if (res.status === 409) {
+    console.log("HubSpot: Contact already exists (409), searching to update...");
     const searchRes = await fetch("https://api.hubapi.com/crm/v3/objects/contacts/search", {
       method: "POST",
       headers: {
@@ -61,9 +62,11 @@ async function createHubSpotContact(
       }),
     });
     const searchData = await searchRes.json();
+    console.log("HubSpot: Search result:", JSON.stringify(searchData));
     if (searchData.results?.[0]?.id) {
       const contactId = searchData.results[0].id;
-      await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${contactId}`, {
+      console.log("HubSpot: Updating contact", contactId, "with properties:", JSON.stringify(contactProperties));
+      const patchRes = await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${contactId}`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -71,17 +74,24 @@ async function createHubSpotContact(
         },
         body: JSON.stringify({ properties: contactProperties }),
       });
+      const patchBody = await patchRes.text();
+      console.log("HubSpot: PATCH response status:", patchRes.status, "body:", patchBody);
+      if (!patchRes.ok) {
+        console.error("HubSpot: PATCH failed:", patchRes.status, patchBody);
+      }
       return contactId;
     }
     throw new Error("Contact conflict but could not find existing contact");
   }
 
+  const createBody = await res.text();
+  console.log("HubSpot: POST response status:", res.status, "body:", createBody);
+  
   if (!res.ok) {
-    const errBody = await res.text();
-    throw new Error(`HubSpot create contact failed [${res.status}]: ${errBody}`);
+    throw new Error(`HubSpot create contact failed [${res.status}]: ${createBody}`);
   }
 
-  const data = await res.json();
+  const data = JSON.parse(createBody);
   return data.id;
 }
 
