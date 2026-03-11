@@ -295,11 +295,11 @@ Deno.serve(async (req) => {
       // --- HubSpot Integration ---
       if (hubspotAccessToken) {
         try {
-          // Prefer shipping_details.address, fall back to customer_details.address
-          const shippingAddr = session.shipping_details?.address;
+          // Prefer customer_details.address, fall back to shipping_details.address
           const customerAddr = (session.customer_details as any)?.address;
-          const addr = shippingAddr || customerAddr;
-          console.log("HubSpot: Using address source:", shippingAddr ? "shipping_details" : customerAddr ? "customer_details" : "none", JSON.stringify(addr));
+          const shippingAddr = session.shipping_details?.address;
+          const addr = customerAddr || shippingAddr;
+          console.log("HubSpot: Using address source:", customerAddr ? "customer_details" : shippingAddr ? "shipping_details" : "none", JSON.stringify(addr));
 
           const addressFields = {
             address: addr?.line1 || "",
