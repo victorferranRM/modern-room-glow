@@ -196,6 +196,10 @@ Deno.serve(async (req) => {
       const stripeCustomerId = session.customer as string;
       const metadata = session.metadata || {};
 
+      // Debug: log address sources
+      console.log("session.shipping_details:", JSON.stringify(session.shipping_details));
+      console.log("session.customer_details:", JSON.stringify(session.customer_details));
+
       if (!customerEmail) {
         console.error("No customer email found in session");
         return new Response(JSON.stringify({ error: "No customer email" }), {
