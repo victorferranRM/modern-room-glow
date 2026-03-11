@@ -113,10 +113,8 @@ async function createHubSpotDeal(
         dealname: `RM - ${contactName}`,
         pipeline: "3032965352",
         dealstage: "4150681833",
-        hubspot_owner_id: "71977733",
-        dealtype: "newbusiness",
+        dealtype: "New Business",
         amount: String(oneTimeAmount),
-        hs_mrr: String(recurringAmount),
       },
     }),
   });
@@ -204,6 +202,7 @@ Deno.serve(async (req) => {
       // Debug: log address sources
       console.log("session.shipping_details:", JSON.stringify(session.shipping_details));
       console.log("session.customer_details:", JSON.stringify(session.customer_details));
+      console.log("session.collected_information:", JSON.stringify((session as any).collected_information));
 
       if (!customerEmail) {
         console.error("No customer email found in session");
