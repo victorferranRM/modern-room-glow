@@ -16,29 +16,30 @@ async function createHubSpotContact(
   addressFields: { address: string; city: string; state: string; country: string; zip: string },
   properties: number
 ): Promise<string> {
+  const contactProperties = {
+    email,
+    firstname: firstName,
+    lastname: lastName,
+    address: addressFields.address,
+    city: addressFields.city,
+    state: addressFields.state,
+    country: addressFields.country,
+    zip: addressFields.zip,
+    inmuebles__c: String(properties),
+    hs_lead_status: "NEW",
+    lifecyclestage: "customer",
+    hs_analytics_source: "DIRECT_TRAFFIC",
+    leadsource: "OnlineStore",
+  };
+  console.log("HubSpot: Contact properties to send:", JSON.stringify(contactProperties));
+
   const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      properties: {
-        email,
-        firstname: firstName,
-        lastname: lastName,
-        address: addressFields.address,
-        city: addressFields.city,
-        estado_provincia__c: addressFields.state,
-        country: addressFields.country,
-        zip: addressFields.zip,
-        inmuebles__c: String(properties),
-        hs_lead_status: "NEW",
-        lifecyclestage: "customer",
-        hs_analytics_source: "DIRECT_TRAFFIC",
-        leadsource: "OnlineStore",
-      },
-    }),
+    body: JSON.stringify({ properties: contactProperties }),
   });
 
   if (res.status === 409) {
@@ -65,22 +66,7 @@ async function createHubSpotContact(
           Authorization: `Bearer ${accessToken}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          properties: {
-            firstname: firstName,
-            lastname: lastName,
-            address: addressFields.address,
-            city: addressFields.city,
-            estado_provincia__c: addressFields.state,
-            country: addressFields.country,
-            zip: addressFields.zip,
-            inmuebles__c: String(properties),
-            hs_lead_status: "NEW",
-            lifecyclestage: "customer",
-            hs_analytics_source: "DIRECT_TRAFFIC",
-            leadsource: "OnlineStore",
-          },
-        }),
+        body: JSON.stringify({ properties: contactProperties }),
       });
       return contactId;
     }
