@@ -71,7 +71,7 @@ async function createHubSpotContact(
             lastname: lastName,
             address: addressFields.address,
             city: addressFields.city,
-            state: addressFields.state,
+            estado_provincia__c: addressFields.state,
             country: addressFields.country,
             zip: addressFields.zip,
             inmuebles__c: String(properties),
