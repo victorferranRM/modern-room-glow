@@ -13,25 +13,28 @@ async function createHubSpotContact(
   email: string,
   firstName: string,
   lastName: string,
-  addressFields: { address: string; city: string; state: string; country: string; zip: string },
+  country: string,
+  city: string,
+  address: string,
+  zip: string,
+  state: string,
   properties: number
 ): Promise<string> {
   const contactProperties = {
     email,
     firstname: firstName,
     lastname: lastName,
-    address: addressFields.address,
-    city: addressFields.city,
-    state: addressFields.state,
-    country: addressFields.country,
-    zip: addressFields.zip,
+    address,
+    city,
+    state,
+    zip,
+    country,
     inmuebles__c: String(properties),
     hs_lead_status: "NEW",
     lifecyclestage: "customer",
     hs_analytics_source: "DIRECT_TRAFFIC",
     leadsource: "OnlineStore",
   };
-  console.log("HubSpot: Contact properties to send:", JSON.stringify(contactProperties));
 
   const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
     method: "POST",
@@ -43,7 +46,6 @@ async function createHubSpotContact(
   });
 
   if (res.status === 409) {
-    // Contact already exists — search by email
     const searchRes = await fetch("https://api.hubapi.com/crm/v3/objects/contacts/search", {
       method: "POST",
       headers: {
@@ -59,7 +61,6 @@ async function createHubSpotContact(
     const searchData = await searchRes.json();
     if (searchData.results?.[0]?.id) {
       const contactId = searchData.results[0].id;
-      // Update existing contact with new data
       await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${contactId}`, {
         method: "PATCH",
         headers: {
