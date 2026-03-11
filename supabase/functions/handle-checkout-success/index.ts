@@ -66,22 +66,7 @@ async function createHubSpotContact(
           Authorization: `Bearer ${accessToken}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          properties: {
-            firstname: firstName,
-            lastname: lastName,
-            address: addressFields.address,
-            city: addressFields.city,
-            estado_provincia__c: addressFields.state,
-            country: addressFields.country,
-            zip: addressFields.zip,
-            inmuebles__c: String(properties),
-            hs_lead_status: "NEW",
-            lifecyclestage: "customer",
-            hs_analytics_source: "DIRECT_TRAFFIC",
-            leadsource: "OnlineStore",
-          },
-        }),
+        body: JSON.stringify({ properties: contactProperties }),
       });
       return contactId;
     }
