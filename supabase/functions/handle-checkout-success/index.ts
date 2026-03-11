@@ -31,7 +31,10 @@ async function createHubSpotContact(
         country,
         city,
         inmuebles__c: String(properties),
-        hs_lead_status: "Venta Web",
+        hs_lead_status: "NEW",
+        lifecyclestage: "customer",
+        hs_analytics_source: "DIRECT_TRAFFIC",
+        leadsource: "ECOMMERCE_INTEGRATION",
       },
     }),
   });
