@@ -13,8 +13,7 @@ async function createHubSpotContact(
   email: string,
   firstName: string,
   lastName: string,
-  country: string,
-  city: string,
+  addressFields: { address: string; city: string; state: string; country: string; zip: string },
   properties: number
 ): Promise<string> {
   const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
@@ -28,8 +27,11 @@ async function createHubSpotContact(
         email,
         firstname: firstName,
         lastname: lastName,
-        country,
-        city,
+        address: addressFields.address,
+        city: addressFields.city,
+        state: addressFields.state,
+        country: addressFields.country,
+        zip: addressFields.zip,
         inmuebles__c: String(properties),
         hs_lead_status: "NEW",
         lifecyclestage: "customer",
@@ -67,8 +69,11 @@ async function createHubSpotContact(
           properties: {
             firstname: firstName,
             lastname: lastName,
-            country,
-            city,
+            address: addressFields.address,
+            city: addressFields.city,
+            state: addressFields.state,
+            country: addressFields.country,
+            zip: addressFields.zip,
             inmuebles__c: String(properties),
             hs_lead_status: "NEW",
             lifecyclestage: "customer",
@@ -196,6 +201,10 @@ Deno.serve(async (req) => {
       const stripeCustomerId = session.customer as string;
       const metadata = session.metadata || {};
 
+      // Debug: log address sources
+      console.log("session.shipping_details:", JSON.stringify(session.shipping_details));
+      console.log("session.customer_details:", JSON.stringify(session.customer_details));
+
       if (!customerEmail) {
         console.error("No customer email found in session");
         return new Response(JSON.stringify({ error: "No customer email" }), {
@@ -301,9 +310,20 @@ Deno.serve(async (req) => {
       // --- HubSpot Integration ---
       if (hubspotAccessToken) {
         try {
-          const shippingAddress = session.shipping_details?.address;
-          const hsCountry = shippingAddress?.country || "";
-          const hsCity = shippingAddress?.city || "";
+          // Prefer shipping_details.address, fall back to customer_details.address
+          const shippingAddr = session.shipping_details?.address;
+          const customerAddr = (session.customer_details as any)?.address;
+          const addr = shippingAddr || customerAddr;
+          console.log("HubSpot: Using address source:", shippingAddr ? "shipping_details" : customerAddr ? "customer_details" : "none", JSON.stringify(addr));
+
+          const addressFields = {
+            address: addr?.line1 || "",
+            city: addr?.city || "",
+            state: addr?.state || "",
+            country: addr?.country || "",
+            zip: addr?.postal_code || "",
+          };
+
           const numProperties = parseInt(metadata.properties || "1", 10);
           const fullName = `${firstName} ${lastName}`.trim();
 
@@ -312,7 +332,6 @@ Deno.serve(async (req) => {
           let recurringAmount = 0;
 
           if (session.subscription) {
-            // Retrieve the full session with line_items expanded
             const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
               expand: ["line_items.data.price"],
             });
@@ -336,8 +355,7 @@ Deno.serve(async (req) => {
             customerEmail,
             firstName,
             lastName,
-            hsCountry,
-            hsCity,
+            addressFields,
             numProperties
           );
           console.log("HubSpot: Contact created/found:", contactId);
