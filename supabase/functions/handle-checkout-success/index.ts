@@ -34,7 +34,7 @@ async function createHubSpotContact(
         hs_lead_status: "NEW",
         lifecyclestage: "customer",
         hs_analytics_source: "DIRECT_TRAFFIC",
-        leadsource: "ECOMMERCE_INTEGRATION",
+        leadsource: "OnlineStore",
       },
     }),
   });
@@ -73,7 +73,7 @@ async function createHubSpotContact(
             hs_lead_status: "NEW",
             lifecyclestage: "customer",
             hs_analytics_source: "DIRECT_TRAFFIC",
-            leadsource: "ECOMMERCE_INTEGRATION",
+            leadsource: "OnlineStore",
           },
         }),
       });
