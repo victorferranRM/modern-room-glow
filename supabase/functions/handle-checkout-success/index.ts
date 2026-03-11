@@ -13,25 +13,28 @@ async function createHubSpotContact(
   email: string,
   firstName: string,
   lastName: string,
-  addressFields: { address: string; city: string; state: string; country: string; zip: string },
+  country: string,
+  city: string,
+  address: string,
+  zip: string,
+  state: string,
   properties: number
 ): Promise<string> {
   const contactProperties = {
     email,
     firstname: firstName,
     lastname: lastName,
-    address: addressFields.address,
-    city: addressFields.city,
-    state: addressFields.state,
-    country: addressFields.country,
-    zip: addressFields.zip,
+    address,
+    city,
+    state,
+    zip,
+    country,
     inmuebles__c: String(properties),
     hs_lead_status: "NEW",
     lifecyclestage: "customer",
     hs_analytics_source: "DIRECT_TRAFFIC",
     leadsource: "OnlineStore",
   };
-  console.log("HubSpot: Contact properties to send:", JSON.stringify(contactProperties));
 
   const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
     method: "POST",
@@ -43,7 +46,6 @@ async function createHubSpotContact(
   });
 
   if (res.status === 409) {
-    // Contact already exists — search by email
     const searchRes = await fetch("https://api.hubapi.com/crm/v3/objects/contacts/search", {
       method: "POST",
       headers: {
@@ -59,7 +61,6 @@ async function createHubSpotContact(
     const searchData = await searchRes.json();
     if (searchData.results?.[0]?.id) {
       const contactId = searchData.results[0].id;
-      // Update existing contact with new data
       await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${contactId}`, {
         method: "PATCH",
         headers: {
@@ -295,19 +296,12 @@ Deno.serve(async (req) => {
       // --- HubSpot Integration ---
       if (hubspotAccessToken) {
         try {
-          // Prefer customer_details.address, fall back to shipping_details.address
-          const customerAddr = (session.customer_details as any)?.address;
-          const shippingAddr = session.shipping_details?.address;
-          const addr = customerAddr || shippingAddr;
-          console.log("HubSpot: Using address source:", customerAddr ? "customer_details" : shippingAddr ? "shipping_details" : "none", JSON.stringify(addr));
-
-          const addressFields = {
-            address: addr?.line1 || "",
-            city: addr?.city || "",
-            state: addr?.state || "",
-            country: addr?.country || "",
-            zip: addr?.postal_code || "",
-          };
+          const customerAddress = session.customer_details?.address || session.shipping_details?.address;
+          const hsCountry = customerAddress?.country || "";
+          const hsCity = customerAddress?.city || "";
+          const hsAddress = customerAddress?.line1 || "";
+          const hsZip = customerAddress?.postal_code || "";
+          const hsState = customerAddress?.state || "";
 
           const numProperties = parseInt(metadata.properties || "1", 10);
           const fullName = `${firstName} ${lastName}`.trim();
@@ -340,7 +334,11 @@ Deno.serve(async (req) => {
             customerEmail,
             firstName,
             lastName,
-            addressFields,
+            hsCountry,
+            hsCity,
+            hsAddress,
+            hsZip,
+            hsState,
             numProperties
           );
           console.log("HubSpot: Contact created/found:", contactId);
