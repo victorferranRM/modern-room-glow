@@ -109,7 +109,7 @@ async function createHubSpotDeal(
         pipeline: "3032965352",
         dealstage: "4150681833",
         hubspot_owner_id: "71977733",
-        deal_type: "Venta Web",
+        deal_type: "newbusiness",
         amount: String(oneTimeAmount),
         recurringrevenue_amount: String(recurringAmount),
       },
