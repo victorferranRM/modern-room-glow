@@ -36,6 +36,8 @@ async function createHubSpotContact(
     leadsource: "OnlineStore",
   };
 
+  console.log("HubSpot: Contact properties to send:", JSON.stringify(contactProperties));
+
   const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
     method: "POST",
     headers: {
@@ -86,8 +88,7 @@ async function createHubSpotContact(
 async function createHubSpotDeal(
   accessToken: string,
   contactName: string,
-  oneTimeAmount: number,
-  recurringAmount: number
+  oneTimeAmount: number
 ): Promise<string> {
   const res = await fetch("https://api.hubapi.com/crm/v3/objects/deals", {
     method: "POST",
@@ -186,11 +187,6 @@ Deno.serve(async (req) => {
       const stripeCustomerId = session.customer as string;
       const metadata = session.metadata || {};
 
-      // Debug: log address sources
-      console.log("session.shipping_details:", JSON.stringify(session.shipping_details));
-      console.log("session.customer_details:", JSON.stringify(session.customer_details));
-      console.log("session.collected_information:", JSON.stringify((session as any).collected_information));
-
       if (!customerEmail) {
         console.error("No customer email found in session");
         return new Response(JSON.stringify({ error: "No customer email" }), {
@@ -205,7 +201,6 @@ Deno.serve(async (req) => {
         auth: { autoRefreshToken: false, persistSession: false },
       });
 
-      // Check if user already exists
       const { data: existingUsers } = await supabaseAdmin.auth.admin.listUsers();
       const existingUser = existingUsers?.users?.find(
         (u) => u.email === customerEmail
@@ -220,7 +215,6 @@ Deno.serve(async (req) => {
       if (existingUser) {
         userId = existingUser.id;
         console.log("User already exists:", userId);
-
         await supabaseAdmin
           .from("profiles")
           .update({ stripe_customer_id: stripeCustomerId })
@@ -258,7 +252,6 @@ Deno.serve(async (req) => {
           .eq("id", userId);
       }
 
-      // Update subscription with Stripe IDs
       const { data: profile } = await supabaseAdmin
         .from("profiles")
         .select("company_id")
@@ -276,7 +269,6 @@ Deno.serve(async (req) => {
           .eq("company_id", profile.company_id);
       }
 
-      // Send magic link
       const siteUrl = Deno.env.get("SITE_URL") || "https://modern-room-glow.lovable.app";
       const anonClient = createClient(supabaseUrl, supabaseAnonKey);
       const { error: otpError } = await anonClient.auth.signInWithOtp({
@@ -293,7 +285,6 @@ Deno.serve(async (req) => {
         console.log("Magic link sent to:", customerEmail);
       }
 
-      // --- HubSpot Integration ---
       if (hubspotAccessToken) {
         try {
           const customerAddress = session.customer_details?.address || session.shipping_details?.address;
@@ -302,11 +293,9 @@ Deno.serve(async (req) => {
           const hsAddress = customerAddress?.line1 || "";
           const hsZip = customerAddress?.postal_code || "";
           const hsState = customerAddress?.state || "";
-
           const numProperties = parseInt(metadata.properties || "1", 10);
           const fullName = `${firstName} ${lastName}`.trim();
 
-          // Calculate one-time amount (device + shipping) and recurring from line items
           let oneTimeAmount = 0;
           let recurringAmount = 0;
 
@@ -347,15 +336,13 @@ Deno.serve(async (req) => {
           const dealId = await createHubSpotDeal(
             hubspotAccessToken,
             fullName,
-            oneTimeAmount,
-            recurringAmount
+            oneTimeAmount
           );
           console.log("HubSpot: Deal created:", dealId);
 
           await associateDealToContact(hubspotAccessToken, dealId, contactId);
           console.log("HubSpot: Deal associated to contact");
         } catch (hubspotError: any) {
-          // Log but don't fail the webhook — Supabase user is already created
           console.error("HubSpot integration error:", hubspotError.message);
         }
       } else {
