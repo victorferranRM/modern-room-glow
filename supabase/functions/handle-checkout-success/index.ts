@@ -202,6 +202,7 @@ Deno.serve(async (req) => {
       // Debug: log address sources
       console.log("session.shipping_details:", JSON.stringify(session.shipping_details));
       console.log("session.customer_details:", JSON.stringify(session.customer_details));
+      console.log("session.collected_information:", JSON.stringify((session as any).collected_information));
 
       if (!customerEmail) {
         console.error("No customer email found in session");
