@@ -13,8 +13,7 @@ async function createHubSpotContact(
   email: string,
   firstName: string,
   lastName: string,
-  country: string,
-  city: string,
+  addressFields: { address: string; city: string; state: string; country: string; zip: string },
   properties: number
 ): Promise<string> {
   const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
@@ -28,8 +27,11 @@ async function createHubSpotContact(
         email,
         firstname: firstName,
         lastname: lastName,
-        country,
-        city,
+        address: addressFields.address,
+        city: addressFields.city,
+        state: addressFields.state,
+        country: addressFields.country,
+        zip: addressFields.zip,
         inmuebles__c: String(properties),
         hs_lead_status: "NEW",
         lifecyclestage: "customer",
