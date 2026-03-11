@@ -69,8 +69,11 @@ async function createHubSpotContact(
           properties: {
             firstname: firstName,
             lastname: lastName,
-            country,
-            city,
+            address: addressFields.address,
+            city: addressFields.city,
+            state: addressFields.state,
+            country: addressFields.country,
+            zip: addressFields.zip,
             inmuebles__c: String(properties),
             hs_lead_status: "NEW",
             lifecyclestage: "customer",
