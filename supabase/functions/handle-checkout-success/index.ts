@@ -310,9 +310,20 @@ Deno.serve(async (req) => {
       // --- HubSpot Integration ---
       if (hubspotAccessToken) {
         try {
-          const shippingAddress = session.shipping_details?.address;
-          const hsCountry = shippingAddress?.country || "";
-          const hsCity = shippingAddress?.city || "";
+          // Prefer shipping_details.address, fall back to customer_details.address
+          const shippingAddr = session.shipping_details?.address;
+          const customerAddr = (session.customer_details as any)?.address;
+          const addr = shippingAddr || customerAddr;
+          console.log("HubSpot: Using address source:", shippingAddr ? "shipping_details" : customerAddr ? "customer_details" : "none", JSON.stringify(addr));
+
+          const addressFields = {
+            address: addr?.line1 || "",
+            city: addr?.city || "",
+            state: addr?.state || "",
+            country: addr?.country || "",
+            zip: addr?.postal_code || "",
+          };
+
           const numProperties = parseInt(metadata.properties || "1", 10);
           const fullName = `${firstName} ${lastName}`.trim();
 
@@ -321,7 +332,6 @@ Deno.serve(async (req) => {
           let recurringAmount = 0;
 
           if (session.subscription) {
-            // Retrieve the full session with line_items expanded
             const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
               expand: ["line_items.data.price"],
             });
@@ -345,8 +355,7 @@ Deno.serve(async (req) => {
             customerEmail,
             firstName,
             lastName,
-            hsCountry,
-            hsCity,
+            addressFields,
             numProperties
           );
           console.log("HubSpot: Contact created/found:", contactId);
