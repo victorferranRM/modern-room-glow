@@ -100,26 +100,40 @@ async function createHubSpotDeal(
   contactName: string,
   oneTimeAmount: number
 ): Promise<string> {
-  const res = await fetch("https://api.hubapi.com/crm/v3/objects/deals", {
+  const dealProperties: Record<string, string> = {
+    dealname: `RM - ${contactName}`,
+    pipeline: "3032965352",
+    dealstage: "4150681833",
+    dealtype: "New Business",
+    amount: String(oneTimeAmount),
+    hubspot_owner_id: "71977733",
+  };
+
+  let res = await fetch("https://api.hubapi.com/crm/v3/objects/deals", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      properties: {
-        dealname: `RM - ${contactName}`,
-        pipeline: "3032965352",
-        dealstage: "4150681833",
-        dealtype: "New Business",
-        amount: String(oneTimeAmount),
-      },
-    }),
+    body: JSON.stringify({ properties: dealProperties }),
   });
 
   if (!res.ok) {
     const errBody = await res.text();
-    throw new Error(`HubSpot create deal failed [${res.status}]: ${errBody}`);
+    console.warn("HubSpot: Deal creation with owner failed, retrying without hubspot_owner_id:", errBody);
+    delete dealProperties.hubspot_owner_id;
+    res = await fetch("https://api.hubapi.com/crm/v3/objects/deals", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ properties: dealProperties }),
+    });
+    if (!res.ok) {
+      const errBody2 = await res.text();
+      throw new Error(`HubSpot create deal failed [${res.status}]: ${errBody2}`);
+    }
   }
 
   const data = await res.json();
