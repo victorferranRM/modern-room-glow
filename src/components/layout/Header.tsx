@@ -194,7 +194,7 @@ export function Header() {
         {/* Mega Menu Dropdown */}
         <div
           className={cn(
-            "hidden lg:block absolute left-0 right-0 bg-background border-b shadow-lg transition-all duration-300 ease-out origin-top",
+            "hidden lg:block absolute left-0 right-0 bg-white border-b shadow-lg transition-all duration-300 ease-out origin-top",
             activeMenu 
               ? "opacity-100 visible translate-y-0 scale-y-100" 
               : "opacity-0 invisible -translate-y-2 scale-y-95"
