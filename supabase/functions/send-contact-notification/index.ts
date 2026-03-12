@@ -172,10 +172,8 @@ async function enqueueEmail(
   label: string
 ): Promise<void> {
   const messageId = crypto.randomUUID();
-  const runId = crypto.randomUUID();
   const payload = {
     message_id: messageId,
-    run_id: runId,
     to,
     from: FROM_ADDRESS,
     sender_domain: SENDER_DOMAIN,
