@@ -356,6 +356,40 @@ Deno.serve(async (req) => {
           );
           console.log("HubSpot: Contact created/found:", contactId);
 
+          // Activate communication subscriptions (non-blocking)
+          try {
+            const subHeaders = {
+              Authorization: `Bearer ${hubspotAccessToken}`,
+              "Content-Type": "application/json",
+            };
+            const [marketingRes, serviceRes] = await Promise.all([
+              fetch("https://api.hubapi.com/communication-preferences/v3/subscribe", {
+                method: "POST",
+                headers: subHeaders,
+                body: JSON.stringify({
+                  emailAddress: customerEmail,
+                  subscriptionId: "subscriptionType_marketing",
+                  legalBasis: "LEGITIMATE_INTEREST_PQL",
+                  legalBasisExplanation: "Customer purchased a product",
+                }),
+              }),
+              fetch("https://api.hubapi.com/communication-preferences/v3/subscribe", {
+                method: "POST",
+                headers: subHeaders,
+                body: JSON.stringify({
+                  emailAddress: customerEmail,
+                  subscriptionId: "subscriptionType_customer_service",
+                  legalBasis: "LEGITIMATE_INTEREST_PQL",
+                  legalBasisExplanation: "Customer purchased a product",
+                }),
+              }),
+            ]);
+            console.log("HubSpot: Marketing subscription status:", marketingRes.status);
+            console.log("HubSpot: Customer service subscription status:", serviceRes.status);
+          } catch (subError: any) {
+            console.warn("HubSpot: Subscription activation error (non-blocking):", subError.message);
+          }
+
           console.log("HubSpot: Creating deal for", fullName, { oneTimeAmount, recurringAmount });
           const dealId = await createHubSpotDeal(
             hubspotAccessToken,
