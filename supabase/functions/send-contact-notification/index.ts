@@ -117,7 +117,7 @@ async function createOrUpdateHubSpotContact(data: ContactNotificationRequest): P
   if (data.message) properties.message = data.message;
   if (data.propertySize) properties.inmuebles__c = data.propertySize;
   if (data.inquiryType && HUBSPOT_INQUIRY_MAP[data.inquiryType]) {
-    properties.consultation_type = HUBSPOT_INQUIRY_MAP[data.inquiryType];
+    properties.your_recipient = HUBSPOT_INQUIRY_MAP[data.inquiryType];
   }
 
   try {
@@ -172,8 +172,10 @@ async function enqueueEmail(
   label: string
 ): Promise<void> {
   const messageId = crypto.randomUUID();
+  const runId = crypto.randomUUID();
   const payload = {
     message_id: messageId,
+    run_id: runId,
     to,
     from: FROM_ADDRESS,
     sender_domain: SENDER_DOMAIN,
