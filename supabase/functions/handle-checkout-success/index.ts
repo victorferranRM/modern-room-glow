@@ -19,7 +19,7 @@ async function createHubSpotContact(
   zip: string,
   state: string,
   properties: number
-): Promise<{ contactId: string; email: string }> {
+): Promise<string> {
   const contactProperties = {
     email,
     firstname: firstName,
