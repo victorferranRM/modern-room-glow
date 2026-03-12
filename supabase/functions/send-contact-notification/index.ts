@@ -268,71 +268,82 @@ const handler = async (req: Request): Promise<Response> => {
     const inquiryLabel = inquiryLabels[inquiryType] || inquiryType;
     const teamEmail = getTeamEmail(data.inquiryType);
 
+    // --- Email 1: Notificación interna al equipo Roomonitor ---
     const teamEmailResponse = await resend.emails.send({
-      from: "Roomonitor <onboarding@resend.dev>",
+      from: "Roomonitor <hello@roomonitor.com>",
       to: [teamEmail],
-      subject: `New Contact Inquiry: ${inquiryLabel} from ${company}`,
+      subject: `Nueva consulta: ${inquiryLabel} — ${company}`,
       html: `
-        <h2>New Contact Form Submission</h2>
-        <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-          <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Name</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">${firstName} ${lastName}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Email</td>
-            <td style="padding: 8px; border: 1px solid #ddd;"><a href="mailto:${email}">${email}</a></td>
-          </tr>
-          ${phone ? `
-          <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Phone</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">${phone}</td>
-          </tr>
-          ` : ''}
-          <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Company</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">${company}</td>
-          </tr>
-          ${propertySize ? `
-          <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Portfolio Size</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">${propertySize}</td>
-          </tr>
-          ` : ''}
-          <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Inquiry Type</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">${inquiryLabel}</td>
-          </tr>
-          ${message ? `
-          <tr>
-            <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Message</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">${message}</td>
-          </tr>
-          ` : ''}
-        </table>
-        <p style="margin-top: 20px; color: #666;">This inquiry was submitted via the Roomonitor website contact form.</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a2e;">
+          <h2 style="margin-bottom: 8px;">Nueva consulta desde el formulario web</h2>
+          <p style="color: #555; margin-top: 0;">Has recibido una nueva consulta a través del formulario de contacto de la web. Aquí tienes el detalle:</p>
+          <table style="border-collapse: collapse; width: 100%; margin-top: 16px;">
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2; width: 35%;">Nombre</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${firstName} ${lastName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Email</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;"><a href="mailto:${email}">${email}</a></td>
+            </tr>
+            ${phone ? `<tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Teléfono</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${phone}</td>
+            </tr>` : ''}
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Empresa</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${company}</td>
+            </tr>
+            ${data.country ? `<tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">País</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.country)}</td>
+            </tr>` : ''}
+            ${data.city ? `<tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Ciudad</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.city)}</td>
+            </tr>` : ''}
+            ${data.province ? `<tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Provincia / Estado</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.province)}</td>
+            </tr>` : ''}
+            ${propertySize ? `<tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Tamaño del portfolio</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${propertySize}</td>
+            </tr>` : ''}
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Tipo de consulta</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${inquiryLabel}</td>
+            </tr>
+            ${message ? `<tr>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Mensaje</td>
+              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${message}</td>
+            </tr>` : ''}
+          </table>
+          <p style="margin-top: 24px; color: #888; font-size: 13px;">Este mensaje ha sido enviado automáticamente desde el formulario de contacto de roomonitor.com.</p>
+        </div>
       `,
     });
 
     console.log("Team notification sent to:", teamEmail, teamEmailResponse);
 
+    // --- Email 2: Confirmación al usuario ---
     const customerEmailResponse = await resend.emails.send({
-      from: "Roomonitor <onboarding@resend.dev>",
+      from: "Roomonitor <hello@roomonitor.com>",
       to: [data.email],
-      subject: "We've received your inquiry - Roomonitor",
+      subject: "Hemos recibido tu consulta — Roomonitor",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="color: #1a1a2e;">Thank you for contacting us, ${firstName}!</h1>
-          <p>We've received your inquiry about <strong>${inquiryLabel}</strong> and our team will get back to you within 24 hours.</p>
-          <p>In the meantime, here's a summary of your submission:</p>
-          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p><strong>Company:</strong> ${company}</p>
-            ${propertySize ? `<p><strong>Portfolio Size:</strong> ${propertySize}</p>` : ''}
-            <p><strong>Inquiry Type:</strong> ${inquiryLabel}</p>
-            ${message ? `<p><strong>Your Message:</strong> ${message}</p>` : ''}
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a2e;">
+          <h1 style="font-size: 22px; margin-bottom: 8px;">Hola ${firstName}, ¡gracias por escribirnos!</h1>
+          <p>Hemos recibido tu consulta y nuestro equipo se pondrá en contacto contigo en menos de <strong>24 horas</strong>.</p>
+          <p>Mientras tanto, aquí tienes un resumen de lo que nos has enviado:</p>
+          <div style="background-color: #f9f7f2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <p style="margin: 4px 0;"><strong>Empresa:</strong> ${company}</p>
+            ${propertySize ? `<p style="margin: 4px 0;"><strong>Tamaño del portfolio:</strong> ${propertySize}</p>` : ''}
+            <p style="margin: 4px 0;"><strong>Tipo de consulta:</strong> ${inquiryLabel}</p>
+            ${message ? `<p style="margin: 4px 0;"><strong>Tu mensaje:</strong> ${message}</p>` : ''}
           </div>
-          <p>If you have any urgent questions, feel free to reach out to us at <a href="mailto:info@roomonitor.com">info@roomonitor.com</a>.</p>
-          <p style="margin-top: 30px;">Best regards,<br><strong>The Roomonitor Team</strong></p>
+          <p>Si tienes alguna duda urgente, puedes escribirnos a <a href="mailto:info@roomonitor.com">info@roomonitor.com</a> o llamarnos al <a href="tel:+34930180130">+34 930 180 130</a>.</p>
+          <p style="margin-top: 30px;">Un saludo,<br><strong>El equipo de Roomonitor</strong></p>
         </div>
       `,
     });
