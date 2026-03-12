@@ -117,7 +117,7 @@ async function createOrUpdateHubSpotContact(data: ContactNotificationRequest): P
   if (data.message) properties.message = data.message;
   if (data.propertySize) properties.inmuebles__c = data.propertySize;
   if (data.inquiryType && HUBSPOT_INQUIRY_MAP[data.inquiryType]) {
-    properties.consultation_type = HUBSPOT_INQUIRY_MAP[data.inquiryType];
+    properties.your_recipient = HUBSPOT_INQUIRY_MAP[data.inquiryType];
   }
 
   try {
