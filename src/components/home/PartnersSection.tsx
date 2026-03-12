@@ -93,7 +93,7 @@ export function PartnersSection() {
   return (
     <>
       {/* Trust bar */}
-      <section className="py-12 overflow-hidden">
+      <section className="py-12 bg-white overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-8">
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-[0.2em]">
