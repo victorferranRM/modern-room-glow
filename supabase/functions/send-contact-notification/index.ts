@@ -28,17 +28,44 @@ interface ContactNotificationRequest {
   propertySize?: string;
   inquiryType: string;
   message?: string;
-  website?: string; // honeypot field
+  website?: string;
   country?: string;
   city?: string;
   province?: string;
+}
+
+// HubSpot inquiry type mapping
+const HUBSPOT_INQUIRY_MAP: Record<string, string> = {
+  devices: "Dispositivo",
+  cover: "Servicios",
+  pms: "Integraciones",
+  support: "Soporte",
+  careers: "Buscamos talento",
+  general: "Consulta general",
+};
+
+// Email routing by inquiry type
+function getTeamEmail(inquiryType: string): string {
+  switch (inquiryType) {
+    case "devices":
+    case "cover":
+      return "sales@roomonitor.com";
+    case "pms":
+    case "support":
+    case "general":
+      return "support@roomonitor.com";
+    case "careers":
+      return "info@roomonitor.com";
+    default:
+      return "info@roomonitor.com";
+  }
 }
 
 async function checkRateLimit(
   supabase: ReturnType<typeof createClient>,
   ipKey: string,
   maxRequests: number = 5,
-  windowMs: number = 3600000 // 1 hour
+  windowMs: number = 3600000
 ): Promise<boolean> {
   const windowStart = new Date(Date.now() - windowMs).toISOString();
 
@@ -69,6 +96,75 @@ async function checkRateLimit(
   return true;
 }
 
+async function createOrUpdateHubSpotContact(data: ContactNotificationRequest): Promise<void> {
+  const accessToken = (Deno.env.get("HUBSPOT_PRIVATE_APP_TOKEN") || "").replace(/[\r\n\t\s]+/g, "");
+  if (!accessToken) {
+    console.warn("HUBSPOT_PRIVATE_APP_TOKEN not configured, skipping HubSpot sync");
+    return;
+  }
+
+  const properties: Record<string, string> = {
+    firstname: data.firstName,
+    lastname: data.lastName,
+    email: data.email,
+    company: data.company,
+  };
+
+  if (data.phone) properties.phone = data.phone;
+  if (data.country) properties.country = data.country;
+  if (data.city) properties.city = data.city;
+  if (data.province) properties.state = data.province;
+  if (data.message) properties.message = data.message;
+  if (data.propertySize) properties.inmuebles__c = data.propertySize;
+  if (data.inquiryType && HUBSPOT_INQUIRY_MAP[data.inquiryType]) {
+    properties.consultation_type = HUBSPOT_INQUIRY_MAP[data.inquiryType];
+  }
+
+  try {
+    // Try to create contact
+    const createRes = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ properties }),
+    });
+
+    if (createRes.ok) {
+      console.log("HubSpot contact created successfully");
+      return;
+    }
+
+    const createBody = await createRes.json();
+
+    // If conflict (contact exists), update by email
+    if (createRes.status === 409) {
+      const existingId = createBody?.message?.match(/Existing ID: (\d+)/)?.[1];
+      if (existingId) {
+        const updateRes = await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${existingId}`, {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ properties }),
+        });
+        if (updateRes.ok) {
+          console.log("HubSpot contact updated successfully");
+        } else {
+          const updateErr = await updateRes.text();
+          console.error("HubSpot contact update failed:", updateErr);
+        }
+      }
+    } else {
+      console.error("HubSpot contact creation failed:", JSON.stringify(createBody));
+    }
+  } catch (err) {
+    console.error("HubSpot sync error:", err);
+  }
+}
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -80,7 +176,6 @@ const handler = async (req: Request): Promise<Response> => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Rate limiting by IP
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
     const allowed = await checkRateLimit(supabaseAdmin, ip);
     if (!allowed) {
@@ -92,9 +187,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     const data: ContactNotificationRequest = await req.json();
 
-    // Honeypot check — if the hidden field has a value, it's a bot
+    // Honeypot check
     if (data.website && data.website.trim() !== "") {
-      // Silently accept to not tip off bots
       return new Response(
         JSON.stringify({ success: true }),
         { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
@@ -109,7 +203,6 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Validate email format
     if (!EMAIL_REGEX.test(data.email)) {
       return new Response(
         JSON.stringify({ error: "Invalid email address." }),
@@ -117,7 +210,6 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Enforce length limits
     if (data.firstName.length > 100 || data.lastName.length > 100 || data.email.length > 255 || data.company.length > 200) {
       return new Response(
         JSON.stringify({ error: "Input exceeds maximum length." }),
@@ -125,7 +217,7 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Insert into contact_inquiries (server-side, after rate limit + honeypot + validation)
+    // Insert into DB
     const { error: dbError } = await supabaseAdmin
       .from("contact_inquiries")
       .insert({
@@ -150,6 +242,11 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
+    // Sync to HubSpot (non-blocking)
+    createOrUpdateHubSpotContact(data).catch((err) =>
+      console.error("HubSpot sync failed (non-blocking):", err)
+    );
+
     const firstName = escapeHtml(data.firstName);
     const lastName = escapeHtml(data.lastName);
     const email = escapeHtml(data.email);
@@ -160,25 +257,20 @@ const handler = async (req: Request): Promise<Response> => {
     const message = data.message ? escapeHtml(data.message) : undefined;
 
     const inquiryLabels: Record<string, string> = {
-      demo: "Book a Demo",
-      sales: "Sales Inquiry",
-      enterprise: "Enterprise Solutions",
-      services: "Services Information",
-      support: "Customer Support",
-      partnership: "Partnership Opportunity",
       devices: "Dispositivo / Sensores",
       cover: "Cover™ (Operativa delegada)",
       pms: "Integraciones PMS",
+      support: "Soporte técnico",
       careers: "Buscamos talento",
       general: "Consulta general",
-      other: "Other",
     };
 
     const inquiryLabel = inquiryLabels[inquiryType] || inquiryType;
+    const teamEmail = getTeamEmail(data.inquiryType);
 
     const teamEmailResponse = await resend.emails.send({
       from: "Roomonitor <onboarding@resend.dev>",
-      to: ["info@roomonitor.com"],
+      to: [teamEmail],
       subject: `New Contact Inquiry: ${inquiryLabel} from ${company}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -222,7 +314,7 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Team notification sent:", teamEmailResponse);
+    console.log("Team notification sent to:", teamEmail, teamEmailResponse);
 
     const customerEmailResponse = await resend.emails.send({
       from: "Roomonitor <onboarding@resend.dev>",
