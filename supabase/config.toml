@@ -9,3 +9,5 @@ project_id = "mtbsuzhkxzhgmijeafnq"
     verify_jwt = false
   [functions.send-contact-notification]
     verify_jwt = false
+  [functions.process-email-queue]
+    verify_jwt = false

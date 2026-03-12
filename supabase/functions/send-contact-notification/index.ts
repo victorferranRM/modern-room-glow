@@ -1,8 +1,8 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const SENDER_DOMAIN = "notify.roomonitor.com";
+const FROM_ADDRESS = "Roomonitor <hello@roomonitor.com>";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -121,7 +121,6 @@ async function createOrUpdateHubSpotContact(data: ContactNotificationRequest): P
   }
 
   try {
-    // Try to create contact
     const createRes = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
       method: "POST",
       headers: {
@@ -138,7 +137,6 @@ async function createOrUpdateHubSpotContact(data: ContactNotificationRequest): P
 
     const createBody = await createRes.json();
 
-    // If conflict (contact exists), update by email
     if (createRes.status === 409) {
       const existingId = createBody?.message?.match(/Existing ID: (\d+)/)?.[1];
       if (existingId) {
@@ -163,6 +161,41 @@ async function createOrUpdateHubSpotContact(data: ContactNotificationRequest): P
   } catch (err) {
     console.error("HubSpot sync error:", err);
   }
+}
+
+// Enqueue a transactional email via the Lovable Cloud email queue
+async function enqueueEmail(
+  supabase: ReturnType<typeof createClient>,
+  to: string,
+  subject: string,
+  html: string,
+  label: string
+): Promise<void> {
+  const messageId = crypto.randomUUID();
+  const payload = {
+    message_id: messageId,
+    to,
+    from: FROM_ADDRESS,
+    sender_domain: SENDER_DOMAIN,
+    subject,
+    html,
+    text: html.replace(/<[^>]*>/g, ''), // basic HTML strip for plain text
+    purpose: "transactional",
+    label,
+    queued_at: new Date().toISOString(),
+  };
+
+  const { error } = await supabase.rpc("enqueue_email", {
+    queue_name: "transactional_emails",
+    payload,
+  });
+
+  if (error) {
+    console.error(`Failed to enqueue email (${label}):`, error);
+    throw new Error(`Failed to enqueue email: ${error.message}`);
+  }
+
+  console.log(`Email enqueued successfully: ${label} → ${to} (${messageId})`);
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -269,93 +302,95 @@ const handler = async (req: Request): Promise<Response> => {
     const teamEmail = getTeamEmail(data.inquiryType);
 
     // --- Email 1: Notificación interna al equipo Roomonitor ---
-    const teamEmailResponse = await resend.emails.send({
-      from: "Roomonitor <hello@roomonitor.com>",
-      to: [teamEmail],
-      subject: `Nueva consulta: ${inquiryLabel} — ${company}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a2e;">
-          <h2 style="margin-bottom: 8px;">Nueva consulta desde el formulario web</h2>
-          <p style="color: #555; margin-top: 0;">Has recibido una nueva consulta a través del formulario de contacto de la web. Aquí tienes el detalle:</p>
-          <table style="border-collapse: collapse; width: 100%; margin-top: 16px;">
-            <tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2; width: 35%;">Nombre</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${firstName} ${lastName}</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Email</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;"><a href="mailto:${email}">${email}</a></td>
-            </tr>
-            ${phone ? `<tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Teléfono</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${phone}</td>
-            </tr>` : ''}
-            <tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Empresa</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${company}</td>
-            </tr>
-            ${data.country ? `<tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">País</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.country)}</td>
-            </tr>` : ''}
-            ${data.city ? `<tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Ciudad</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.city)}</td>
-            </tr>` : ''}
-            ${data.province ? `<tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Provincia / Estado</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.province)}</td>
-            </tr>` : ''}
-            ${propertySize ? `<tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Tamaño del portfolio</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${propertySize}</td>
-            </tr>` : ''}
-            <tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Tipo de consulta</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${inquiryLabel}</td>
-            </tr>
-            ${message ? `<tr>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Mensaje</td>
-              <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${message}</td>
-            </tr>` : ''}
-          </table>
-          <p style="margin-top: 24px; color: #888; font-size: 13px;">Este mensaje ha sido enviado automáticamente desde el formulario de contacto de roomonitor.com.</p>
-        </div>
-      `,
-    });
+    const teamHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a2e;">
+        <h2 style="margin-bottom: 8px;">Nueva consulta desde el formulario web</h2>
+        <p style="color: #555; margin-top: 0;">Has recibido una nueva consulta a través del formulario de contacto de la web. Aquí tienes el detalle:</p>
+        <table style="border-collapse: collapse; width: 100%; margin-top: 16px;">
+          <tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2; width: 35%;">Nombre</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${firstName} ${lastName}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Email</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;"><a href="mailto:${email}">${email}</a></td>
+          </tr>
+          ${phone ? `<tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Teléfono</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${phone}</td>
+          </tr>` : ''}
+          <tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Empresa</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${company}</td>
+          </tr>
+          ${data.country ? `<tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">País</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.country)}</td>
+          </tr>` : ''}
+          ${data.city ? `<tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Ciudad</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.city)}</td>
+          </tr>` : ''}
+          ${data.province ? `<tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Provincia / Estado</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${escapeHtml(data.province)}</td>
+          </tr>` : ''}
+          ${propertySize ? `<tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Tamaño del portfolio</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${propertySize}</td>
+          </tr>` : ''}
+          <tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Tipo de consulta</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${inquiryLabel}</td>
+          </tr>
+          ${message ? `<tr>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0; font-weight: bold; background: #f9f7f2;">Mensaje</td>
+            <td style="padding: 10px 12px; border: 1px solid #e0e0e0;">${message}</td>
+          </tr>` : ''}
+        </table>
+        <p style="margin-top: 24px; color: #888; font-size: 13px;">Este mensaje ha sido enviado automáticamente desde el formulario de contacto de roomonitor.com.</p>
+      </div>
+    `;
 
-    console.log("Team notification sent to:", teamEmail, teamEmailResponse);
+    await enqueueEmail(
+      supabaseAdmin,
+      teamEmail,
+      `Nueva consulta: ${inquiryLabel} — ${company}`,
+      teamHtml,
+      "contact-team-notification"
+    );
+
+    console.log("Team notification enqueued for:", teamEmail);
 
     // --- Email 2: Confirmación al usuario ---
-    const customerEmailResponse = await resend.emails.send({
-      from: "Roomonitor <hello@roomonitor.com>",
-      to: [data.email],
-      subject: "Hemos recibido tu consulta — Roomonitor",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a2e;">
-          <h1 style="font-size: 22px; margin-bottom: 8px;">Hola ${firstName}, ¡gracias por escribirnos!</h1>
-          <p>Hemos recibido tu consulta y nuestro equipo se pondrá en contacto contigo en menos de <strong>24 horas</strong>.</p>
-          <p>Mientras tanto, aquí tienes un resumen de lo que nos has enviado:</p>
-          <div style="background-color: #f9f7f2; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p style="margin: 4px 0;"><strong>Empresa:</strong> ${company}</p>
-            ${propertySize ? `<p style="margin: 4px 0;"><strong>Tamaño del portfolio:</strong> ${propertySize}</p>` : ''}
-            <p style="margin: 4px 0;"><strong>Tipo de consulta:</strong> ${inquiryLabel}</p>
-            ${message ? `<p style="margin: 4px 0;"><strong>Tu mensaje:</strong> ${message}</p>` : ''}
-          </div>
-          <p>Si tienes alguna duda urgente, puedes escribirnos a <a href="mailto:info@roomonitor.com">info@roomonitor.com</a> o llamarnos al <a href="tel:+34930180130">+34 930 180 130</a>.</p>
-          <p style="margin-top: 30px;">Un saludo,<br><strong>El equipo de Roomonitor</strong></p>
+    const customerHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a2e;">
+        <h1 style="font-size: 22px; margin-bottom: 8px;">Hola ${firstName}, ¡gracias por escribirnos!</h1>
+        <p>Hemos recibido tu consulta y nuestro equipo se pondrá en contacto contigo en menos de <strong>24 horas</strong>.</p>
+        <p>Mientras tanto, aquí tienes un resumen de lo que nos has enviado:</p>
+        <div style="background-color: #f9f7f2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <p style="margin: 4px 0;"><strong>Empresa:</strong> ${company}</p>
+          ${propertySize ? `<p style="margin: 4px 0;"><strong>Tamaño del portfolio:</strong> ${propertySize}</p>` : ''}
+          <p style="margin: 4px 0;"><strong>Tipo de consulta:</strong> ${inquiryLabel}</p>
+          ${message ? `<p style="margin: 4px 0;"><strong>Tu mensaje:</strong> ${message}</p>` : ''}
         </div>
-      `,
-    });
+        <p>Si tienes alguna duda urgente, puedes escribirnos a <a href="mailto:info@roomonitor.com">info@roomonitor.com</a> o llamarnos al <a href="tel:+34930180130">+34 930 180 130</a>.</p>
+        <p style="margin-top: 30px;">Un saludo,<br><strong>El equipo de Roomonitor</strong></p>
+      </div>
+    `;
 
-    console.log("Customer confirmation sent:", customerEmailResponse);
+    await enqueueEmail(
+      supabaseAdmin,
+      data.email,
+      "Hemos recibido tu consulta — Roomonitor",
+      customerHtml,
+      "contact-customer-confirmation"
+    );
+
+    console.log("Customer confirmation enqueued for:", data.email);
 
     return new Response(
-      JSON.stringify({ 
-        success: true, 
-        teamEmail: teamEmailResponse, 
-        customerEmail: customerEmailResponse 
-      }),
+      JSON.stringify({ success: true }),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
