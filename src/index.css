@@ -11,8 +11,11 @@
 @layer base {
   :root {
     /* Warm cream/ivory backgrounds */
-    --background: 40 33% 98%;
+    --background: 43 36% 96%;
     --foreground: 20 14% 15%;
+
+    /* Alternating surface tones */
+    --surface-cream: 32 25% 90%;
 
     /* Cards with subtle warmth */
     --card: 40 33% 99%;

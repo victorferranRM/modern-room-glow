@@ -117,7 +117,7 @@ export const WhyRoomonitorSection = () => {
   const activeStudy = caseStudyTestimonials[activeIndex];
 
   return (
-    <section className="py-20 md:py-28 bg-secondary/50">
+    <section className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="mb-16">

@@ -54,7 +54,7 @@ export function Header() {
   return (
     <TooltipProvider>
       <header 
-        className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b"
+        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b"
         onMouseLeave={handleMenuLeave}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,7 +194,7 @@ export function Header() {
         {/* Mega Menu Dropdown */}
         <div
           className={cn(
-            "hidden lg:block absolute left-0 right-0 bg-background border-b shadow-lg transition-all duration-300 ease-out origin-top",
+            "hidden lg:block absolute left-0 right-0 bg-white border-b shadow-lg transition-all duration-300 ease-out origin-top",
             activeMenu 
               ? "opacity-100 visible translate-y-0 scale-y-100" 
               : "opacity-0 invisible -translate-y-2 scale-y-95"
