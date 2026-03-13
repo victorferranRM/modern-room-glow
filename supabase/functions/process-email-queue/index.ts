@@ -249,9 +249,9 @@ Deno.serve(async (req) => {
       }
 
       try {
-        await sendLovableEmail(
-          {
-            run_id: payload.run_id || globalRunId,
+        // Build email params, omitting run_id entirely if not available
+        // so the library can resolve it from the API key
+        const emailParams: Record<string, unknown> = {
             to: payload.to,
             from: payload.from,
             sender_domain: payload.sender_domain,
@@ -263,7 +263,14 @@ Deno.serve(async (req) => {
             idempotency_key: payload.idempotency_key,
             unsubscribe_token: payload.unsubscribe_token,
             message_id: payload.message_id,
-          },
+        }
+        const resolvedRunId = payload.run_id || globalRunId
+        if (resolvedRunId) {
+          emailParams.run_id = resolvedRunId
+        }
+        console.log('Sending email with run_id:', resolvedRunId, 'to:', payload.to)
+        await sendLovableEmail(
+          emailParams as any,
           // sendUrl is optional — when LOVABLE_SEND_URL is not set, the library
           // falls back to the default Lovable API endpoint (https://api.lovable.dev).
           // Set LOVABLE_SEND_URL as a Supabase secret to override (e.g. for local dev).
