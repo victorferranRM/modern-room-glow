@@ -48,6 +48,10 @@ Deno.serve(async (req) => {
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
+  // Extract run_id from LOVABLE_API_KEY JWT claims
+  const apiKeyClaims = apiKey ? parseJwtClaims(apiKey) : null
+  const globalRunId = (apiKeyClaims?.run_id as string) || (apiKeyClaims?.project_id as string) || (apiKeyClaims?.sub as string) || undefined
+
   if (!apiKey || !supabaseUrl || !supabaseServiceKey) {
     console.error('Missing required environment variables')
     return new Response(
@@ -244,7 +248,7 @@ Deno.serve(async (req) => {
       try {
         await sendLovableEmail(
           {
-            run_id: payload.run_id,
+            run_id: payload.run_id || globalRunId,
             to: payload.to,
             from: payload.from,
             sender_domain: payload.sender_domain,
