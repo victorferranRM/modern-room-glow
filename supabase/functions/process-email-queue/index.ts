@@ -30,6 +30,21 @@ Deno.serve(async (req) => {
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
+  // Discover available LOVABLE env vars for run_id resolution
+  const lovableEnvKeys: string[] = []
+  // @ts-ignore — Deno.env.toObject is available in Deno runtime
+  try {
+    const allEnv = Deno.env.toObject()
+    for (const key of Object.keys(allEnv)) {
+      if (key.startsWith('LOVABLE') || key.includes('PROJECT') || key.includes('RUN_ID')) {
+        lovableEnvKeys.push(key)
+      }
+    }
+    if (lovableEnvKeys.length > 0) {
+      console.log('Available env keys for run_id resolution:', lovableEnvKeys.join(', '))
+    }
+  } catch (_e) { /* ignore */ }
+
   if (!apiKey || !supabaseUrl || !supabaseServiceKey) {
     console.error('Missing required environment variables')
     return new Response(
@@ -163,10 +178,36 @@ Deno.serve(async (req) => {
         }
       }
 
+      // Resolve run_id: payload > env vars > extract from SUPABASE_URL
+      const resolvedRunId = payload.run_id
+        || Deno.env.get('LOVABLE_RUN_ID')
+        || Deno.env.get('LOVABLE_PROJECT_ID')
+        || Deno.env.get('LOVABLE_PROJECT_REF')
+        || (() => {
+          // Extract project ref from SUPABASE_URL as last resort
+          const url = Deno.env.get('SUPABASE_URL') || ''
+          const match = url.match(/https:\/\/([^.]+)\.supabase\.co/)
+          return match ? match[1] : undefined
+        })()
+
+      if (!resolvedRunId) {
+        console.error('Cannot resolve run_id for email send', {
+          queue,
+          msg_id: msg.msg_id,
+          available_env_keys: lovableEnvKeys,
+        })
+        // Leave message in queue for retry
+        continue
+      }
+
+      if (!payload.run_id) {
+        console.log('Resolved run_id from env/fallback', { run_id: resolvedRunId, queue, msg_id: msg.msg_id })
+      }
+
       try {
         await sendLovableEmail(
           {
-            run_id: payload.run_id,
+            run_id: resolvedRunId,
             to: payload.to,
             from: payload.from,
             sender_domain: payload.sender_domain,
