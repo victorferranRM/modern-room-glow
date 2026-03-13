@@ -50,7 +50,10 @@ Deno.serve(async (req) => {
 
   // Extract run_id from LOVABLE_API_KEY JWT claims
   const apiKeyClaims = apiKey ? parseJwtClaims(apiKey) : null
+  console.log('LOVABLE_API_KEY JWT claims:', JSON.stringify(apiKeyClaims))
+  console.log('All env keys:', Object.keys(Deno.env.toObject()).filter(k => k.startsWith('LOVABLE') || k.startsWith('SUPABASE')).join(', '))
   const globalRunId = (apiKeyClaims?.run_id as string) || (apiKeyClaims?.project_id as string) || (apiKeyClaims?.sub as string) || undefined
+  console.log('Resolved globalRunId:', globalRunId)
 
   if (!apiKey || !supabaseUrl || !supabaseServiceKey) {
     console.error('Missing required environment variables')
