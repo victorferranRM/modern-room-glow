@@ -30,6 +30,21 @@ Deno.serve(async (req) => {
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
+  // Discover available LOVABLE env vars for run_id resolution
+  const lovableEnvKeys: string[] = []
+  // @ts-ignore — Deno.env.toObject is available in Deno runtime
+  try {
+    const allEnv = Deno.env.toObject()
+    for (const key of Object.keys(allEnv)) {
+      if (key.startsWith('LOVABLE') || key.includes('PROJECT') || key.includes('RUN_ID')) {
+        lovableEnvKeys.push(key)
+      }
+    }
+    if (lovableEnvKeys.length > 0) {
+      console.log('Available env keys for run_id resolution:', lovableEnvKeys.join(', '))
+    }
+  } catch (_e) { /* ignore */ }
+
   if (!apiKey || !supabaseUrl || !supabaseServiceKey) {
     console.error('Missing required environment variables')
     return new Response(
