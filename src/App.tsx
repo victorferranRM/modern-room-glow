@@ -2,10 +2,14 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { LanguageRedirect } from "@/i18n/LanguageRedirect";
+import { supportedLangs, routePaths } from "@/i18n/routes";
+import type { SupportedLang } from "@/i18n/routes";
+
 import Index from "./pages/Index";
 import Pricing from "./pages/Pricing";
 import Checkout from "./pages/Checkout";
@@ -25,8 +29,6 @@ import OccupancyDetection from "./pages/monitoring/OccupancyDetection";
 import SmokeDetection from "./pages/monitoring/SmokeDetection";
 import EnvironmentMonitoring from "./pages/monitoring/EnvironmentMonitoring";
 import NotFound from "./pages/NotFound";
-
-// Service Pages
 import GuestAssist from "./pages/services/GuestAssist";
 import ControlCenter from "./pages/services/ControlCenter";
 import FieldService from "./pages/services/FieldService";
@@ -35,20 +37,12 @@ import EmergencyHandling from "./pages/services/EmergencyHandling";
 import NightWatch from "./pages/services/NightWatch";
 import PMSAccess from "./pages/services/PMSAccess";
 import Protocols from "./pages/services/Protocols";
-
-// Legal Page
 import Legal from "./pages/Legal";
-
-// Solution Pages
 import VacationRentals from "./pages/solutions/VacationRentals";
 import Hotels from "./pages/solutions/Hotels";
 import PropertyOwners from "./pages/solutions/PropertyOwners";
-
-// About Page
 import About from "./pages/About";
 import Cover from "./pages/Cover";
-
-// Portal Pages
 import { PortalLayout } from "./components/portal/PortalLayout";
 import { ProtectedRoute } from "./components/portal/ProtectedRoute";
 import Dashboard from "./pages/portal/Dashboard";
@@ -61,6 +55,60 @@ import Profile from "./pages/portal/Profile";
 
 const queryClient = new QueryClient();
 
+// Route configs: key → component mapping
+const routeComponents: Record<string, React.ComponentType> = {
+  contact: Contact,
+  pricing: Pricing,
+  howItWorks: HowItWorks,
+  about: About,
+  cover: Cover,
+  blog: Blog,
+  blogPost: BlogPost,
+  monitoring: Monitoring,
+  monitoringNoise: NoiseMonitoring,
+  monitoringOccupancy: OccupancyDetection,
+  monitoringSmoke: SmokeDetection,
+  monitoringEnvironment: EnvironmentMonitoring,
+  controlCenter: ControlCenter,
+  fieldService: FieldService,
+  guestAssist: GuestAssist,
+  nightWatch: NightWatch,
+  pmsAccess: PMSAccess,
+  protocols: Protocols,
+  incidentResponse: IncidentResponse,
+  emergencyHandling: EmergencyHandling,
+  vacationRentals: VacationRentals,
+  hotels: Hotels,
+  propertyOwners: PropertyOwners,
+  caseStudies: CaseStudies,
+  caseStudyDetail: CaseStudyDetail,
+  savingsCalculator: SavingsCalculator,
+  integrations: Integrations,
+  legal: Legal,
+  auth: Auth,
+  login: Auth,
+  checkout: Checkout,
+  checkoutSuccess: CheckoutSuccess,
+};
+
+function LanguageLayout() {
+  return <Outlet />;
+}
+
+function generateLangRoutes(lang: SupportedLang) {
+  const routes: React.ReactNode[] = [];
+
+  Object.entries(routeComponents).forEach(([key, Component]) => {
+    const paths = routePaths[key];
+    if (!paths) return;
+    const path = paths[lang];
+    if (path === undefined) return;
+    routes.push(<Route key={`${lang}-${key}`} path={path} element={<Component />} />);
+  });
+
+  return routes;
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <LanguageProvider>
@@ -71,68 +119,39 @@ const App = () => (
           <ScrollToTop />
           <AuthProvider>
             <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="/checkout/success" element={<CheckoutSuccess />} />
-              <Route path="/resources/savings-calculator" element={<SavingsCalculator />} />
-              <Route path="/resources/case-studies" element={<CaseStudies />} />
-              <Route path="/resources/case-studies/:slug" element={<CaseStudyDetail />} />
-              <Route path="/integrations" element={<Integrations />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/monitoring" element={<Monitoring />} />
-              <Route path="/monitoring/noise" element={<NoiseMonitoring />} />
-              <Route path="/monitoring/occupancy" element={<OccupancyDetection />} />
-              <Route path="/monitoring/smoke" element={<SmokeDetection />} />
-              <Route path="/monitoring/environment" element={<EnvironmentMonitoring />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/auth" element={<Auth />} />
-              <Route path="/login" element={<Auth />} />
+              {/* Root: detect browser language and redirect */}
+              <Route path="/" element={<LanguageRedirect />} />
 
-              {/* Service Routes */}
-              <Route path="/services/guest-assist" element={<GuestAssist />} />
-              <Route path="/services/control-center" element={<ControlCenter />} />
-              <Route path="/services/field-service" element={<FieldService />} />
-              <Route path="/services/incident-response" element={<IncidentResponse />} />
-              <Route path="/services/emergency-handling" element={<EmergencyHandling />} />
-              <Route path="/services/night-watch" element={<NightWatch />} />
-              <Route path="/services/pms-access" element={<PMSAccess />} />
-              <Route path="/services/protocols" element={<Protocols />} />
+              {/* Language-prefixed routes */}
+              {supportedLangs.map(lang => (
+                <Route key={lang} path={`/${lang}`} element={<LanguageLayout />}>
+                  <Route index element={<Index />} />
+                  {generateLangRoutes(lang)}
 
-              {/* Legal Route */}
-              <Route path="/legal" element={<Legal />} />
+                  {/* Portal routes */}
+                  <Route
+                    path="portal"
+                    element={
+                      <ProtectedRoute>
+                        <PortalLayout />
+                      </ProtectedRoute>
+                    }
+                  >
+                    <Route index element={<Dashboard />} />
+                    <Route path="subscription" element={<Subscription />} />
+                    <Route path="devices" element={<Devices />} />
+                    <Route path="orders" element={<Orders />} />
+                    <Route path="services" element={<Services />} />
+                    <Route path="returns" element={<Returns />} />
+                    <Route path="profile" element={<Profile />} />
+                  </Route>
 
-              {/* Solution Routes */}
-              <Route path="/solutions/vacation-rentals" element={<VacationRentals />} />
-              <Route path="/solutions/hotels" element={<Hotels />} />
-              <Route path="/solutions/property-owners" element={<PropertyOwners />} />
+                  <Route path="*" element={<NotFound />} />
+                </Route>
+              ))}
 
-              {/* About Route */}
-              <Route path="/about" element={<About />} />
-              <Route path="/cover" element={<Cover />} />
-              
-              {/* Customer Portal Routes - Protected */}
-              <Route
-                path="/portal"
-                element={
-                  <ProtectedRoute>
-                    <PortalLayout />
-                  </ProtectedRoute>
-                }
-              >
-                <Route index element={<Dashboard />} />
-                <Route path="subscription" element={<Subscription />} />
-                <Route path="devices" element={<Devices />} />
-                <Route path="orders" element={<Orders />} />
-                <Route path="services" element={<Services />} />
-                <Route path="returns" element={<Returns />} />
-                <Route path="profile" element={<Profile />} />
-              </Route>
-              
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
+              {/* Catch-all for non-lang-prefixed paths */}
+              <Route path="*" element={<LanguageRedirect />} />
             </Routes>
           </AuthProvider>
         </BrowserRouter>

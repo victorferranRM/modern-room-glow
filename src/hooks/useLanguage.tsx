@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { Language, languages, getLanguageByCode, defaultLanguageCode } from "@/lib/languages";
+import { Language, languages, getLanguageByCode } from "@/lib/languages";
 
 interface LanguageContextType {
   currentLanguage: Language;
@@ -10,28 +10,33 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Default to English
-  const defaultLanguage = getLanguageByCode(defaultLanguageCode) || languages[0];
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLanguage);
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(
+    getLanguageByCode("en") || languages[0]
+  );
 
+  // Sync language from URL on navigation
   useEffect(() => {
-    // Try to get saved language from localStorage
-    const savedLang = localStorage.getItem("preferred-language");
-    if (savedLang) {
-      const lang = getLanguageByCode(savedLang);
-      if (lang) {
-        setCurrentLanguage(lang);
+    const syncFromUrl = () => {
+      const match = window.location.pathname.match(/^\/(es|en|fr|pt)(\/|$)/);
+      if (match) {
+        const lang = getLanguageByCode(match[1]);
+        if (lang && lang.code !== currentLanguage.code) {
+          setCurrentLanguage(lang);
+          document.documentElement.lang = lang.code;
+          localStorage.setItem("preferred-language", lang.code);
+        }
       }
-    }
-    // Don't auto-detect browser language - default to English since it's the only published version
-  }, []);
+    };
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, [currentLanguage.code]);
 
   const setLanguage = (code: string) => {
     const lang = getLanguageByCode(code);
     if (lang) {
       setCurrentLanguage(lang);
       localStorage.setItem("preferred-language", code);
-      // Update document lang attribute for accessibility
       document.documentElement.lang = code;
     }
   };
