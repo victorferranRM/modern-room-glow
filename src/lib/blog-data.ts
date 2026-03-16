@@ -24,46 +24,46 @@ export const categories = [
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    slug: "del-parque-flats-responsible-tourism",
-    title: "Del Parque Flats highlights the importance of Roomonitor in promoting responsible tourism",
-    excerpt: "The Málaga-based company Del Parque Flats is leading the way in responsible tourism through Roomonitor technology: noise monitors, smoke detectors, and professional operational control.",
+    slug: "del-parque-flats-turismo-responsable",
+    title: "Del Parque Flats destaca la importancia de Roomonitor en la promoción del turismo responsable",
+    excerpt: "La empresa malagueña Del Parque Flats lidera el turismo responsable gracias a la tecnología de Roomonitor: monitores de ruido, detectores de humo y control operativo profesional.",
     content: `
-## Leading Responsible Tourism in Málaga
+## Liderando el turismo responsable en Málaga
 
-Del Parque Flats, a prominent vacation rental operator based in Málaga, Spain, has become a pioneer in implementing responsible tourism practices through Roomonitor's comprehensive monitoring solutions.
+Del Parque Flats, un destacado operador de alquiler vacacional con sede en Málaga, se ha convertido en pionero en la implementación de prácticas de turismo responsable a través de las soluciones integrales de monitorización de Roomonitor.
 
-### The Challenge
+### El desafío
 
-Managing multiple vacation rental properties in a historic city center presents unique challenges:
+Gestionar múltiples propiedades de alquiler vacacional en un centro histórico presenta retos únicos:
 
-- **Noise complaints** from neighbours affecting community relations
-- **Ensuring guest safety** across all properties
-- **Maintaining operational control** without 24/7 on-site staff
-- **Building trust** with local authorities and communities
+- **Quejas por ruido** de los vecinos que afectan las relaciones comunitarias
+- **Garantizar la seguridad de los huéspedes** en todas las propiedades
+- **Mantener el control operativo** sin personal presencial 24/7
+- **Generar confianza** con las autoridades locales y las comunidades
 
-### The Roomonitor Solution
+### La solución Roomonitor
 
-Del Parque Flats deployed Roomonitor devices across their portfolio, implementing:
+Del Parque Flats desplegó dispositivos Roomonitor en toda su cartera, implementando:
 
-1. **Noise monitoring** - Real-time alerts when decibel levels exceed thresholds
-2. **Smoke detection** - Instant notifications for potential fire hazards
-3. **Occupancy tracking** - Privacy-compliant guest monitoring
-4. **Environmental sensors** - Temperature and humidity monitoring
+1. **Monitorización de ruido** - Alertas en tiempo real cuando los niveles de decibelios superan los umbrales
+2. **Detección de humo** - Notificaciones instantáneas ante posibles riesgos de incendio
+3. **Seguimiento de ocupación** - Monitorización de huéspedes respetuosa con la privacidad
+4. **Sensores ambientales** - Monitorización de temperatura y humedad
 
-### Results Achieved
+### Resultados obtenidos
 
-Since implementing Roomonitor:
+Desde la implementación de Roomonitor:
 
-- **92% reduction** in noise complaints
-- **Zero smoking incidents** reported
-- **35% improvement** in guest satisfaction scores
-- **Stronger relationships** with local community
+- **Reducción del 92%** en quejas por ruido
+- **Cero incidentes de tabaco** reportados
+- **Mejora del 35%** en las puntuaciones de satisfacción de los huéspedes
+- **Relaciones más sólidas** con la comunidad local
 
-### A Model for the Industry
+### Un modelo para el sector
 
-Del Parque Flats demonstrates that professional vacation rental management and responsible tourism are not mutually exclusive. Their success has inspired other operators in Málaga to adopt similar approaches.
+Del Parque Flats demuestra que la gestión profesional de alquileres vacacionales y el turismo responsable no son excluyentes. Su éxito ha inspirado a otros operadores de Málaga a adoptar enfoques similares.
 
-> "Roomonitor has transformed how we manage our properties. We can now guarantee our neighbours peace of mind while providing exceptional guest experiences." - Del Parque Flats Management
+> "Roomonitor ha transformado la forma en que gestionamos nuestras propiedades. Ahora podemos garantizar tranquilidad a nuestros vecinos mientras ofrecemos experiencias excepcionales a los huéspedes." - Dirección de Del Parque Flats
     `,
     category: "Roomonitor",
     date: "2026-01-18",
@@ -73,49 +73,49 @@ Del Parque Flats demonstrates that professional vacation rental management and r
   },
   {
     id: "2",
-    slug: "airbnb-cancellation-policies-october-2025",
-    title: "Airbnb updates its cancellation policies: new conditions from October 2025",
-    excerpt: "Airbnb has announced an important update to its cancellation policies for short stays. From 1 October 2025, all bookings of 27 nights or fewer will be subject to new conditions.",
+    slug: "airbnb-politicas-cancelacion-octubre-2025",
+    title: "Airbnb actualiza sus políticas de cancelación: nuevas condiciones desde octubre de 2025",
+    excerpt: "Airbnb ha anunciado una importante actualización de sus políticas de cancelación para estancias cortas. Desde el 1 de octubre de 2025, todas las reservas de 27 noches o menos estarán sujetas a nuevas condiciones.",
     content: `
-## New Cancellation Framework
+## Nuevo marco de cancelaciones
 
-Airbnb has implemented significant changes to its cancellation policies, affecting both hosts and guests worldwide.
+Airbnb ha implementado cambios significativos en sus políticas de cancelación, que afectan tanto a anfitriones como a huéspedes en todo el mundo.
 
-### Key Changes
+### Cambios principales
 
-The updated policies include:
+Las políticas actualizadas incluyen:
 
-- **Stricter timelines** for free cancellation
-- **Improved host protection** against last-minute cancellations
-- **Clearer refund structures** for guests
-- **Enhanced flexibility options** for premium listings
+- **Plazos más estrictos** para la cancelación gratuita
+- **Mayor protección para los anfitriones** frente a cancelaciones de última hora
+- **Estructuras de reembolso más claras** para los huéspedes
+- **Opciones de flexibilidad mejoradas** para anuncios premium
 
-### Impact on Hosts
+### Impacto en los anfitriones
 
-Property managers should be aware of:
+Los gestores de propiedades deben tener en cuenta:
 
-1. **New default policies** automatically applied to listings
-2. **Options to upgrade** to more protective policies
-3. **Changes to payout timelines** for cancelled bookings
-4. **Updated review policies** for cancellation-related disputes
+1. **Nuevas políticas predeterminadas** aplicadas automáticamente a los anuncios
+2. **Opciones para actualizar** a políticas más protectoras
+3. **Cambios en los plazos de pago** para reservas canceladas
+4. **Políticas de reseñas actualizadas** para disputas relacionadas con cancelaciones
 
-### What Guests Should Know
+### Lo que los huéspedes deben saber
 
-Travellers booking after October 2025:
+Los viajeros que reserven después de octubre de 2025:
 
-- Review cancellation terms carefully before booking
-- Understand the new refund tiers
-- Consider travel insurance for added protection
-- Check individual listing policies for variations
+- Revisar cuidadosamente las condiciones de cancelación antes de reservar
+- Comprender los nuevos niveles de reembolso
+- Considerar un seguro de viaje para mayor protección
+- Consultar las políticas individuales de cada anuncio
 
-### Recommendations for Property Managers
+### Recomendaciones para gestores de propiedades
 
-To adapt to these changes:
+Para adaptarse a estos cambios:
 
-- Review and update your cancellation policy settings
-- Communicate changes to repeat guests
-- Train staff on new procedures
-- Monitor cancellation patterns for adjustments
+- Revisa y actualiza la configuración de tu política de cancelación
+- Comunica los cambios a los huéspedes recurrentes
+- Forma a tu equipo en los nuevos procedimientos
+- Monitoriza los patrones de cancelación para realizar ajustes
     `,
     category: "Noticias del sector",
     date: "2026-01-15",
@@ -124,48 +124,48 @@ To adapt to these changes:
   },
   {
     id: "3",
-    slug: "cantabria-noise-sensors-regulation",
-    title: "Cantabria requires noise sensors in holiday rentals: new regulation now in effect",
-    excerpt: "The Government of Cantabria has officially approved Decree 50/2025—a pivotal piece of legislation aimed at regulating short-term rental properties, enhancing legal certainty, and improving neighbourhood relations.",
+    slug: "cantabria-sensores-ruido-regulacion",
+    title: "Cantabria exige sensores de ruido en alquileres vacacionales: nueva regulación en vigor",
+    excerpt: "El Gobierno de Cantabria ha aprobado oficialmente el Decreto 50/2025, una legislación clave destinada a regular los alquileres de corta estancia, mejorar la seguridad jurídica y las relaciones vecinales.",
     content: `
-## Landmark Regulation in Cantabria
+## Regulación pionera en Cantabria
 
-Cantabria has become one of the first Spanish regions to mandate noise monitoring devices in vacation rentals, setting a precedent for responsible tourism legislation.
+Cantabria se ha convertido en una de las primeras regiones españolas en exigir dispositivos de monitorización de ruido en los alquileres vacacionales, estableciendo un precedente en la legislación de turismo responsable.
 
-### The New Requirements
+### Los nuevos requisitos
 
-Decree 50/2025 establishes:
+El Decreto 50/2025 establece:
 
-- **Mandatory noise sensors** in all licensed vacation rentals
-- **Maximum decibel thresholds** during quiet hours
-- **Reporting requirements** for property operators
-- **Penalties for non-compliance** up to €30,000
+- **Sensores de ruido obligatorios** en todos los alquileres vacacionales con licencia
+- **Umbrales máximos de decibelios** durante las horas de descanso
+- **Requisitos de informes** para los operadores de propiedades
+- **Sanciones por incumplimiento** de hasta 30.000 €
 
-### Implementation Timeline
+### Calendario de implementación
 
-Property operators must comply by:
+Los operadores de propiedades deben cumplir en los siguientes plazos:
 
-1. **March 2026** - All new registrations require noise sensors
-2. **September 2026** - Existing properties must retrofit devices
-3. **December 2026** - Full enforcement begins
+1. **Marzo 2026** - Todas las nuevas altas requieren sensores de ruido
+2. **Septiembre 2026** - Las propiedades existentes deben instalar dispositivos
+3. **Diciembre 2026** - Comienza la aplicación total
 
-### Why This Matters
+### Por qué es importante
 
-This regulation addresses:
+Esta regulación aborda:
 
-- Growing concerns from residential communities
-- The need for professional management standards
-- Balance between tourism and quality of life
-- Setting national precedent for other regions
+- Las crecientes preocupaciones de las comunidades residenciales
+- La necesidad de estándares profesionales de gestión
+- El equilibrio entre turismo y calidad de vida
+- La creación de un precedente nacional para otras regiones
 
-### How Roomonitor Helps
+### Cómo ayuda Roomonitor
 
-Roomonitor devices are fully compliant with the new regulation, offering:
+Los dispositivos Roomonitor cumplen totalmente con la nueva regulación, ofreciendo:
 
-- Real-time noise monitoring without audio recording
-- Automated alerts and documentation
-- Integration with property management systems
-- Evidence for compliance demonstrations
+- Monitorización de ruido en tiempo real sin grabación de audio
+- Alertas automatizadas y documentación
+- Integración con sistemas de gestión de propiedades
+- Evidencias para demostrar el cumplimiento normativo
     `,
     category: "Noticias del sector",
     date: "2026-01-12",
@@ -174,61 +174,61 @@ Roomonitor devices are fully compliant with the new regulation, offering:
   },
   {
     id: "4",
-    slug: "hawaii-short-term-rental-laws-2026",
-    title: "Hawaii short-term rental laws in 2026: state rules, county bans, taxes, and enforcement explained",
-    excerpt: "This article explores how Hawaii's 2026 short-term rental laws concentrate vacation rentals in resort and visitor zones, give counties explicit power to phase out STRs in residential areas.",
+    slug: "hawaii-leyes-alquiler-corta-estancia-2026",
+    title: "Leyes de alquiler de corta estancia en Hawái en 2026: normativas estatales, prohibiciones por condado, impuestos y aplicación",
+    excerpt: "Este artículo explora cómo las leyes de alquiler de corta estancia de Hawái en 2026 concentran los alquileres vacacionales en zonas turísticas y de resort, otorgando a los condados poder explícito para eliminarlos de las zonas residenciales.",
     content: `
-## Hawaii's Evolving STR Landscape
+## El cambiante panorama del alquiler de corta estancia en Hawái
 
-Hawaii has implemented some of the strictest short-term rental regulations in the United States. Understanding these rules is crucial for property owners and managers.
+Hawái ha implementado algunas de las regulaciones de alquiler de corta estancia más estrictas de Estados Unidos. Comprender estas normas es crucial para propietarios y gestores de propiedades.
 
-### State-Level Framework
+### Marco normativo estatal
 
-The Hawaii state legislature established a framework that:
+La legislatura estatal de Hawái ha establecido un marco que:
 
-- Grants counties authority to regulate STRs
-- Mandates registration with the Hawaii Tax Department
-- Requires GET and TAT tax collection
+- Otorga a los condados la autoridad para regular los alquileres de corta estancia
+- Exige el registro en el Departamento de Impuestos de Hawái
+- Requiere la recaudación de los impuestos GET y TAT
 
-### County-by-County Breakdown
+### Desglose por condado
 
-#### Oahu (Honolulu County)
-- Permits required for all vacation rentals
-- 90-day minimum in most residential zones
-- Strict enforcement with significant fines
+#### Oahu (Condado de Honolulu)
+- Se requieren permisos para todos los alquileres vacacionales
+- Mínimo de 90 días en la mayoría de las zonas residenciales
+- Aplicación estricta con multas significativas
 
-#### Maui County
-- Registration and compliance required
-- Restrictions in residential areas
-- Community input on new permits
+#### Condado de Maui
+- Registro y cumplimiento obligatorios
+- Restricciones en zonas residenciales
+- Participación comunitaria en nuevos permisos
 
-#### Hawaii Island (Big Island)
-- More permissive than other counties
-- Zoning determines eligibility
-- Registration still required
+#### Isla de Hawái (Big Island)
+- Más permisiva que otros condados
+- La zonificación determina la elegibilidad
+- Registro igualmente obligatorio
 
 #### Kauai
-- Limited permits available
-- Preference for established operators
-- Strong community oversight
+- Permisos limitados disponibles
+- Preferencia por operadores establecidos
+- Fuerte supervisión comunitaria
 
-### Tax Obligations
+### Obligaciones fiscales
 
-Property owners must collect and remit:
+Los propietarios deben recaudar y remitir:
 
-1. **General Excise Tax (GET)** - 4.5%
-2. **Transient Accommodations Tax (TAT)** - 10.25%
-3. **County surcharges** - Varies by location
+1. **Impuesto General sobre el Consumo (GET)** - 4,5%
+2. **Impuesto sobre Alojamientos Temporales (TAT)** - 10,25%
+3. **Recargos del condado** - Variable según la ubicación
 
-### Compliance Strategies
+### Estrategias de cumplimiento
 
-To stay compliant in Hawaii:
+Para cumplir la normativa en Hawái:
 
-- Register with all required agencies
-- Display permit numbers in listings
-- Collect and remit all taxes
-- Follow occupancy and noise rules
-- Maintain insurance coverage
+- Registrarse en todas las agencias requeridas
+- Mostrar los números de permiso en los anuncios
+- Recaudar y remitir todos los impuestos
+- Cumplir las normas de ocupación y ruido
+- Mantener la cobertura de seguro
     `,
     category: "Alquiler vacacional",
     date: "2026-01-10",
@@ -237,51 +237,51 @@ To stay compliant in Hawaii:
   },
   {
     id: "5",
-    slug: "acceptable-decibel-levels-noise-guide",
-    title: "Acceptable decibel levels: noise limit and quiet hours guide for Airbnb and STR hosts",
-    excerpt: "This article explains how noise limits affect short-term rentals, the varying acceptable decibel levels for different times of day, and how hosts can prevent complaints.",
+    slug: "niveles-decibelios-aceptables-guia-ruido",
+    title: "Niveles de decibelios aceptables: guía de límites de ruido y horas de silencio para anfitriones de Airbnb y alquileres de corta estancia",
+    excerpt: "Este artículo explica cómo los límites de ruido afectan a los alquileres de corta estancia, los niveles de decibelios aceptables según la franja horaria y cómo los anfitriones pueden prevenir quejas.",
     content: `
-## Understanding Decibel Levels for Vacation Rentals
+## Entender los niveles de decibelios en alquileres vacacionales
 
-Managing noise in short-term rentals requires understanding what constitutes acceptable sound levels and how to monitor them effectively.
+Gestionar el ruido en alquileres de corta estancia requiere comprender qué constituyen niveles de sonido aceptables y cómo monitorizarlos eficazmente.
 
-### Decibel Scale Basics
+### Conceptos básicos de la escala de decibelios
 
-Understanding the decibel scale helps set appropriate thresholds:
+Comprender la escala de decibelios ayuda a establecer umbrales apropiados:
 
-| Decibel Level | Example Sound |
-|---------------|---------------|
-| 30 dB | Quiet library |
-| 50 dB | Normal conversation |
-| 70 dB | Vacuum cleaner |
-| 85 dB | City traffic |
-| 100 dB | Concert |
+| Nivel de decibelios | Ejemplo de sonido |
+|---------------------|-------------------|
+| 30 dB | Biblioteca silenciosa |
+| 50 dB | Conversación normal |
+| 70 dB | Aspiradora |
+| 85 dB | Tráfico urbano |
+| 100 dB | Concierto |
 
-### Recommended Thresholds
+### Umbrales recomendados
 
-For vacation rentals, we recommend:
+Para alquileres vacacionales, recomendamos:
 
-- **Daytime (7am-10pm)**: 70 dB maximum
-- **Evening (10pm-11pm)**: 60 dB maximum  
-- **Nighttime (11pm-7am)**: 50 dB maximum
+- **Diurno (7:00-22:00)**: 70 dB máximo
+- **Noche temprana (22:00-23:00)**: 60 dB máximo
+- **Nocturno (23:00-7:00)**: 50 dB máximo
 
-### Quiet Hours Best Practices
+### Buenas prácticas para horas de silencio
 
-Establish clear quiet hours in your house rules:
+Establece horas de silencio claras en las normas de la casa:
 
-1. Define specific time windows
-2. Explain consequences of violations
-3. Provide contact information for issues
-4. Consider local ordinances
+1. Define franjas horarias específicas
+2. Explica las consecuencias de las infracciones
+3. Proporciona información de contacto para incidencias
+4. Ten en cuenta las ordenanzas locales
 
-### Preventing Noise Issues
+### Prevención de problemas de ruido
 
-Proactive measures include:
+Las medidas proactivas incluyen:
 
-- **Smart monitoring** - Real-time alerts
-- **Clear communication** - Pre-arrival messages
-- **Guest screening** - Review history
-- **Property design** - Soundproofing where possible
+- **Monitorización inteligente** - Alertas en tiempo real
+- **Comunicación clara** - Mensajes previos a la llegada
+- **Verificación de huéspedes** - Historial de reseñas
+- **Diseño de la propiedad** - Insonorización cuando sea posible
     `,
     category: "Alquiler vacacional",
     date: "2026-01-08",
@@ -290,49 +290,49 @@ Proactive measures include:
   },
   {
     id: "6",
-    slug: "hotel-occupancy-monitoring-trends",
-    title: "Hotel occupancy monitoring: 2026 trends and technologies for property managers",
-    excerpt: "Discover the latest technologies transforming hotel occupancy monitoring, from IoT sensors to AI-powered analytics that optimize operations.",
+    slug: "monitorizacion-ocupacion-hoteles-tendencias",
+    title: "Monitorización de la ocupación hotelera: tendencias y tecnologías 2026 para gestores de propiedades",
+    excerpt: "Descubre las últimas tecnologías que están transformando la monitorización de la ocupación hotelera, desde sensores IoT hasta analíticas impulsadas por IA que optimizan las operaciones.",
     content: `
-## The Evolution of Occupancy Monitoring
+## La evolución de la monitorización de la ocupación
 
-Hotel occupancy monitoring has evolved significantly, leveraging IoT and AI to provide real-time insights for property managers.
+La monitorización de la ocupación hotelera ha evolucionado significativamente, aprovechando el IoT y la IA para proporcionar información en tiempo real a los gestores de propiedades.
 
-### Current Technology Landscape
+### Panorama tecnológico actual
 
-Modern solutions include:
+Las soluciones modernas incluyen:
 
-- **IoT Sensors** - Motion and presence detection
-- **Smart Thermostats** - Occupancy inference
-- **Door Sensors** - Entry/exit tracking
-- **Camera Analytics** - Anonymized counting
+- **Sensores IoT** - Detección de movimiento y presencia
+- **Termostatos inteligentes** - Inferencia de ocupación
+- **Sensores de puerta** - Seguimiento de entradas y salidas
+- **Analítica de cámaras** - Conteo anonimizado
 
-### Benefits for Hotels
+### Beneficios para los hoteles
 
-Implementing occupancy monitoring delivers:
+Implementar la monitorización de la ocupación aporta:
 
-1. **Energy Savings** - 20-30% reduction in HVAC costs
-2. **Staff Optimization** - Right-size housekeeping schedules
-3. **Safety Compliance** - Fire code adherence
-4. **Guest Experience** - Personalized services
+1. **Ahorro energético** - Reducción del 20-30% en costes de climatización
+2. **Optimización del personal** - Ajuste de horarios de limpieza
+3. **Cumplimiento de seguridad** - Adhesión a normativas contra incendios
+4. **Experiencia del huésped** - Servicios personalizados
 
-### Privacy Considerations
+### Consideraciones de privacidad
 
-Ethical implementation requires:
+La implementación ética requiere:
 
-- Clear disclosure to guests
-- No personal identification
-- Aggregate data only
-- Secure data storage
+- Comunicación clara a los huéspedes
+- Sin identificación personal
+- Solo datos agregados
+- Almacenamiento seguro de datos
 
-### Integration with PMS
+### Integración con PMS
 
-Modern systems connect with property management to:
+Los sistemas modernos se conectan con la gestión de propiedades para:
 
-- Automate room status updates
-- Trigger cleaning requests
-- Adjust energy settings
-- Generate occupancy reports
+- Automatizar las actualizaciones de estado de las habitaciones
+- Activar solicitudes de limpieza
+- Ajustar la configuración energética
+- Generar informes de ocupación
     `,
     category: "Hoteles",
     date: "2026-01-05",
@@ -341,42 +341,42 @@ Modern systems connect with property management to:
   },
   {
     id: "7",
-    slug: "property-management-automation-2026",
-    title: "Property management automation: streamlining operations with smart technology",
-    excerpt: "Learn how automation is revolutionizing property management, from guest communications to maintenance scheduling and everything in between.",
+    slug: "automatizacion-gestion-propiedades-2026",
+    title: "Automatización en la gestión de propiedades: optimizando operaciones con tecnología inteligente",
+    excerpt: "Descubre cómo la automatización está revolucionando la gestión de propiedades, desde las comunicaciones con los huéspedes hasta la programación del mantenimiento y mucho más.",
     content: `
-## Automating Property Management
+## Automatización de la gestión de propiedades
 
-Automation has become essential for scaling property management operations while maintaining quality guest experiences.
+La automatización se ha convertido en algo esencial para escalar las operaciones de gestión de propiedades manteniendo experiencias de calidad para los huéspedes.
 
-### Key Automation Areas
+### Áreas clave de automatización
 
-Modern property managers automate:
+Los gestores de propiedades modernos automatizan:
 
-- **Guest Communications** - Check-in instructions, house rules
-- **Access Control** - Smart locks, keyless entry
-- **Monitoring** - Noise, occupancy, environment
-- **Maintenance** - Scheduling, vendor coordination
-- **Cleaning** - Task assignment, quality checks
+- **Comunicaciones con huéspedes** - Instrucciones de check-in, normas de la casa
+- **Control de acceso** - Cerraduras inteligentes, entrada sin llave
+- **Monitorización** - Ruido, ocupación, medioambiente
+- **Mantenimiento** - Programación, coordinación con proveedores
+- **Limpieza** - Asignación de tareas, controles de calidad
 
-### Implementation Strategy
+### Estrategia de implementación
 
-Successful automation requires:
+Una automatización exitosa requiere:
 
-1. **Audit Current Processes** - Identify bottlenecks
-2. **Prioritize High-Impact Areas** - Guest experience first
-3. **Select Compatible Tools** - Integration matters
-4. **Train Your Team** - Technology enables, people deliver
-5. **Measure and Iterate** - Continuous improvement
+1. **Auditar los procesos actuales** - Identificar cuellos de botella
+2. **Priorizar las áreas de alto impacto** - La experiencia del huésped primero
+3. **Seleccionar herramientas compatibles** - La integración importa
+4. **Formar al equipo** - La tecnología habilita, las personas ejecutan
+5. **Medir e iterar** - Mejora continua
 
-### ROI of Automation
+### ROI de la automatización
 
-Property managers report:
+Los gestores de propiedades reportan:
 
-- 60% reduction in manual tasks
-- 40% faster response times
-- 25% improvement in guest satisfaction
-- 35% decrease in operational costs
+- Reducción del 60% en tareas manuales
+- Tiempos de respuesta un 40% más rápidos
+- Mejora del 25% en la satisfacción del huésped
+- Disminución del 35% en costes operativos
     `,
     category: "Gestión de propiedades",
     date: "2026-01-03",
@@ -385,50 +385,50 @@ Property managers report:
   },
   {
     id: "8",
-    slug: "vacation-rental-events-management",
-    title: "Managing events and gatherings in vacation rentals: a complete guide",
-    excerpt: "How to handle party requests, set clear policies, and use technology to prevent unauthorized gatherings while maintaining positive guest relationships.",
+    slug: "gestion-eventos-alquileres-vacacionales",
+    title: "Gestión de eventos y reuniones en alquileres vacacionales: guía completa",
+    excerpt: "Cómo gestionar solicitudes de fiestas, establecer políticas claras y usar tecnología para prevenir reuniones no autorizadas manteniendo relaciones positivas con los huéspedes.",
     content: `
-## Event Management for Vacation Rentals
+## Gestión de eventos en alquileres vacacionales
 
-Balancing hospitality with property protection requires clear policies and smart monitoring when it comes to events and gatherings.
+Equilibrar la hospitalidad con la protección de la propiedad requiere políticas claras y monitorización inteligente cuando se trata de eventos y reuniones.
 
-### Setting Clear Policies
+### Establecer políticas claras
 
-Define your stance on events:
+Define tu postura sobre los eventos:
 
-- **No events policy** - Strictest approach
-- **Approved gatherings only** - Case-by-case basis
-- **Small gatherings permitted** - With clear limits
-- **Event-friendly properties** - Designed for gatherings
+- **Política de cero eventos** - El enfoque más estricto
+- **Solo reuniones aprobadas** - Caso por caso
+- **Pequeñas reuniones permitidas** - Con límites claros
+- **Propiedades aptas para eventos** - Diseñadas para reuniones
 
-### Prevention Strategies
+### Estrategias de prevención
 
-Reduce unauthorized event risks:
+Reduce los riesgos de eventos no autorizados:
 
-1. **Clear listing descriptions** - State policies upfront
-2. **Guest verification** - Review booking patterns
-3. **Smart monitoring** - Noise and occupancy alerts
-4. **Security deposits** - Financial accountability
+1. **Descripciones claras en el anuncio** - Indica las políticas desde el principio
+2. **Verificación de huéspedes** - Revisa los patrones de reserva
+3. **Monitorización inteligente** - Alertas de ruido y ocupación
+4. **Depósitos de seguridad** - Responsabilidad financiera
 
-### Technology Solutions
+### Soluciones tecnológicas
 
-Use technology to prevent issues:
+Usa la tecnología para prevenir problemas:
 
-- **Noise monitors** - Alert before neighbours complain
-- **Occupancy sensors** - Detect unusual numbers
-- **Smart access** - Control entry points
-- **Outdoor cameras** - Monitor common areas
+- **Monitores de ruido** - Alerta antes de que los vecinos se quejen
+- **Sensores de ocupación** - Detecta números inusuales
+- **Acceso inteligente** - Controla los puntos de entrada
+- **Cámaras exteriores** - Monitoriza zonas comunes
 
-### Handling Violations
+### Gestión de infracciones
 
-When events occur without permission:
+Cuando se producen eventos sin permiso:
 
-1. Receive automated alert
-2. Contact guests immediately
-3. Document the situation
-4. Enforce consequences as stated
-5. Review for future prevention
+1. Recibir la alerta automatizada
+2. Contactar con los huéspedes de inmediato
+3. Documentar la situación
+4. Aplicar las consecuencias establecidas
+5. Revisar para prevención futura
     `,
     category: "Eventos",
     date: "2025-12-28",
@@ -437,65 +437,65 @@ When events occur without permission:
   },
   {
     id: "9",
-    slug: "roomonitor-device-installation-guide",
-    title: "How to install and configure your Roomonitor device: step-by-step guide",
-    excerpt: "A comprehensive guide to installing Roomonitor devices in your properties, including optimal placement, WiFi setup, and threshold configuration.",
+    slug: "guia-instalacion-dispositivo-roomonitor",
+    title: "Cómo instalar y configurar tu dispositivo Roomonitor: guía paso a paso",
+    excerpt: "Una guía completa para instalar dispositivos Roomonitor en tus propiedades, incluyendo la ubicación óptima, configuración WiFi y ajuste de umbrales.",
     content: `
-## Getting Started with Roomonitor
+## Primeros pasos con Roomonitor
 
-Installing your Roomonitor device is straightforward. Follow this guide to ensure optimal performance and reliable monitoring.
+Instalar tu dispositivo Roomonitor es sencillo. Sigue esta guía para garantizar un rendimiento óptimo y una monitorización fiable.
 
-### Before You Begin
+### Antes de empezar
 
-Ensure you have:
+Asegúrate de tener:
 
-- Your Roomonitor device
-- Stable WiFi connection (2.4GHz)
-- The Roomonitor Manager app installed
-- Property details ready for configuration
+- Tu dispositivo Roomonitor
+- Conexión WiFi estable (2,4 GHz)
+- La app Roomonitor Manager instalada
+- Los datos de la propiedad listos para la configuración
 
-### Installation Steps
+### Pasos de instalación
 
-#### Step 1: Choose the Location
+#### Paso 1: Elige la ubicación
 
-Optimal placement considerations:
+Consideraciones para una ubicación óptima:
 
-- **Central common area** for best coverage
-- **Wall-mounted** at 2-3 meters height
-- **Away from** direct sound sources (TV, speakers)
-- **Visible to guests** for transparency
+- **Zona común central** para mejor cobertura
+- **Montado en pared** a 2-3 metros de altura
+- **Alejado de** fuentes de sonido directas (TV, altavoces)
+- **Visible para los huéspedes** por transparencia
 
-#### Step 2: Connect to Power
+#### Paso 2: Conecta a la corriente
 
-- Use the provided power adapter
-- Ensure stable power supply
-- Consider backup power for critical monitoring
+- Utiliza el adaptador de corriente incluido
+- Asegura una fuente de alimentación estable
+- Considera alimentación de respaldo para monitorización crítica
 
-#### Step 3: WiFi Configuration
+#### Paso 3: Configuración WiFi
 
-1. Open the Roomonitor Manager app
-2. Select "Add New Device"
-3. Follow on-screen prompts
-4. Enter your WiFi credentials
-5. Wait for connection confirmation
+1. Abre la app Roomonitor Manager
+2. Selecciona "Añadir nuevo dispositivo"
+3. Sigue las indicaciones en pantalla
+4. Introduce las credenciales de tu WiFi
+5. Espera la confirmación de conexión
 
-#### Step 4: Set Thresholds
+#### Paso 4: Ajusta los umbrales
 
-Configure appropriate levels:
+Configura los niveles apropiados:
 
-- **Daytime threshold** - Typically 70 dB
-- **Night threshold** - Typically 55 dB
-- **Quiet hours** - Define start and end times
-- **Alert delay** - How long before notification
+- **Umbral diurno** - Normalmente 70 dB
+- **Umbral nocturno** - Normalmente 55 dB
+- **Horas de silencio** - Define las horas de inicio y fin
+- **Retardo de alerta** - Tiempo antes de la notificación
 
-### Testing Your Setup
+### Prueba tu configuración
 
-After installation:
+Después de la instalación:
 
-- Generate test sounds at various levels
-- Verify alerts are received correctly
-- Adjust thresholds if needed
-- Train your team on response procedures
+- Genera sonidos de prueba a varios niveles
+- Verifica que las alertas se reciben correctamente
+- Ajusta los umbrales si es necesario
+- Forma a tu equipo en los procedimientos de respuesta
     `,
     category: "Roomonitor",
     date: "2025-12-20",
