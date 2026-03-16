@@ -1,4 +1,7 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "@/hooks/useLanguage";
+import { switchLanguagePath } from "@/i18n/routes";
+import { useCurrentLang } from "@/i18n/useTranslation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,9 +10,23 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import type { SupportedLang } from "@/i18n/routes";
 
 export function LanguageSelector() {
   const { currentLanguage, setLanguage, languages } = useLanguage();
+  const currentLang = useCurrentLang();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLanguageChange = (code: string) => {
+    setLanguage(code);
+    const newPath = switchLanguagePath(
+      location.pathname,
+      currentLang,
+      code as SupportedLang
+    );
+    navigate(newPath + location.search + location.hash);
+  };
 
   return (
     <DropdownMenu>
@@ -24,7 +41,7 @@ export function LanguageSelector() {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => setLanguage(lang.code)}
+            onClick={() => handleLanguageChange(lang.code)}
             className={`flex items-center gap-3 cursor-pointer ${
               currentLanguage.code === lang.code ? "bg-primary/10" : ""
             }`}

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, User, LogOut, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
