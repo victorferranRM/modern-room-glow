@@ -52,7 +52,7 @@ export function CoverAudience() {
             return (
               <AnimatedSection key={i} delay={i * 150}>
                 <div className="group rounded-2xl overflow-hidden border border-border/60 bg-background shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-400 h-full flex flex-col">
-                  {/* Image top half with overlay + icon */}
+                  {/* Image top half with overlay */}
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <img
                       src={profile.img}
@@ -60,19 +60,18 @@ export function CoverAudience() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    {/* Dark overlay */}
                     <div className="absolute inset-0 bg-foreground/25" />
-                    {/* Icon centered on image */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon
-                        className="w-14 h-14 lg:w-16 lg:h-16 text-primary drop-shadow-lg transition-transform duration-500 group-hover:scale-110"
-                        strokeWidth={1.4}
-                      />
+                  </div>
+
+                  {/* Icon badge — straddling image and content */}
+                  <div className="relative flex justify-center -mt-8 z-10">
+                    <div className="w-16 h-16 rounded-full bg-[#faf8f4] shadow-[0_4px_20px_rgba(0,0,0,0.12)] flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                      <Icon className="w-7 h-7 text-primary" strokeWidth={1.6} />
                     </div>
                   </div>
 
                   {/* Content bottom half */}
-                  <div className="p-7 lg:p-8 flex flex-col flex-1">
+                  <div className="px-7 lg:px-8 pb-7 lg:pb-8 pt-4 flex flex-col flex-1">
                     <Badge variant="secondary" className="w-fit text-[11px] mb-3">{profile.stat}</Badge>
                     <h3 className="font-bold text-lg lg:text-xl text-foreground leading-tight mb-2">
                       {profile.title}
