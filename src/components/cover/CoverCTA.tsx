@@ -10,11 +10,6 @@ export function CoverCTA() {
       <div className="absolute top-0 left-1/4 w-80 h-80 bg-primary/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary/8 rounded-full blur-[100px]" />
 
-      {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(var(--background)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--background)) 1px, transparent 1px)",
-        backgroundSize: "60px 60px"
-      }} />
 
       {/* Noise texture */}
       <div className="absolute inset-0 opacity-[0.04]" style={{
