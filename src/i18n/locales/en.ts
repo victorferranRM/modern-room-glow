@@ -861,6 +861,7 @@ const en = {
     ctaTitle: "Ready to get started?",
     ctaDescription: "Join thousands of property managers who trust Roomonitor to protect their assets and delight their guests.",
     requestDemo: "Request a Demo",
+    viewPricing: "View Pricing",
   },
   hero: {
     badge: "Operational infrastructure for vacation rentals",
