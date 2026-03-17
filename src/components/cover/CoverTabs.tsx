@@ -5,27 +5,16 @@ import {
   Plug, GitBranch, GraduationCap, Network, ClipboardList,
   CheckCircle2, Circle, ChevronRight, ArrowDown, User
 } from "lucide-react";
+import { useTranslation } from "@/i18n/useTranslation";
 
-interface Tab {
-  id: string;
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-}
+const tabIcons = [Plug, GitBranch, GraduationCap, Network, ClipboardList];
+const tabIds = ["tools", "protocols", "team", "hierarchy", "reports"];
 
-const tabs: Tab[] = [
-  { id: "tools", icon: Plug, title: "Accedemos a tus herramientas", description: "PMS, canal de comunicación, cerraduras inteligentes. Trabajamos dentro de tu ecosistema." },
-  { id: "protocols", icon: GitBranch, title: "Protocolos a medida", description: "Definimos juntos cómo actuar en cada escenario: ruido, emergencias, late check-in, mantenimiento." },
-  { id: "team", icon: GraduationCap, title: "Equipo formado en hospitality", description: "No somos un call center genérico. Nuestros agentes entienden la industria del alojamiento." },
-  { id: "hierarchy", icon: Network, title: "Jerarquía operativa", description: "Agente → Lead Agent → Shift Manager → Field Service. Cada nivel sabe qué hacer y cuándo escalar." },
-  { id: "reports", icon: ClipboardList, title: "Reportes de cada incidencia", description: "Trazabilidad completa. Sabes qué pasó, quién actuó, y cómo se resolvió." },
-];
-
-function ToolsMockup() {
+function ToolsMockup({ m }: { m: any }) {
   const pmsTools = ["Guesty", "Avantio", "Hostaway", "Lodgify", "Hostify", "Smoobu"];
   return (
     <div className="space-y-4">
-      <div className="text-xs text-slate-400 mb-2">Integraciones activas</div>
+      <div className="text-xs text-slate-400 mb-2">{m.activeIntegrations}</div>
       <div className="grid grid-cols-3 gap-2">
         {pmsTools.map((name, i) => (
           <div key={name} className="bg-slate-700/50 border border-slate-600/50 rounded-lg p-3 text-center animate-in fade-in duration-300" style={{ animationDelay: `${i * 80}ms` }}>
@@ -37,23 +26,23 @@ function ToolsMockup() {
         ))}
       </div>
       <div className="flex items-center gap-2 text-xs text-emerald-400 mt-2">
-        <CheckCircle2 className="w-3 h-3" /> Conectado a tu PMS en tiempo real
+        <CheckCircle2 className="w-3 h-3" /> {m.connectedRealtime}
       </div>
     </div>
   );
 }
 
-function ProtocolsMockup() {
+function ProtocolsMockup({ m }: { m: any }) {
   const nodes = [
-    { label: "Alerta de ruido", status: "trigger" },
-    { label: "¿Supera 75 dB?", status: "decision" },
-    { label: "Sí → Contactar huésped", status: "action" },
-    { label: "¿Resuelto en 15 min?", status: "decision" },
-    { label: "No → Escalar a Field Service", status: "action" },
+    { label: m.noiseAlert, status: "trigger" },
+    { label: m.exceedsDb, status: "decision" },
+    { label: m.yesContact, status: "action" },
+    { label: m.resolvedIn15, status: "decision" },
+    { label: m.noEscalate, status: "action" },
   ];
   return (
     <div className="space-y-2">
-      <div className="text-xs text-slate-400 mb-3">Árbol de decisión — Ruido nocturno</div>
+      <div className="text-xs text-slate-400 mb-3">{m.decisionTree}</div>
       {nodes.map((node, i) => (
         <div key={i}>
           <div className={cn(
@@ -66,9 +55,7 @@ function ProtocolsMockup() {
             {node.label}
           </div>
           {i < nodes.length - 1 && (
-            <div className="flex justify-center py-1 ml-4">
-              <ArrowDown className="w-3 h-3 text-slate-500" />
-            </div>
+            <div className="flex justify-center py-1 ml-4"><ArrowDown className="w-3 h-3 text-slate-500" /></div>
           )}
         </div>
       ))}
@@ -76,10 +63,10 @@ function ProtocolsMockup() {
   );
 }
 
-function TeamMockup() {
+function TeamMockup({ m }: { m: any }) {
   return (
     <div className="space-y-3">
-      <div className="text-xs text-slate-400 mb-2">Perfil de agente</div>
+      <div className="text-xs text-slate-400 mb-2">{m.agentProfile}</div>
       <div className="bg-slate-700/50 border border-slate-600/50 rounded-lg p-4 animate-in fade-in duration-300">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
@@ -87,7 +74,7 @@ function TeamMockup() {
           </div>
           <div>
             <div className="text-sm font-medium text-white">Ana Martínez</div>
-            <div className="text-xs text-slate-400">Lead Agent • Turno noche</div>
+            <div className="text-xs text-slate-400">{m.nightShift}</div>
           </div>
         </div>
         <div className="grid grid-cols-3 gap-2 mb-3">
@@ -96,7 +83,7 @@ function TeamMockup() {
           ))}
         </div>
         <div className="grid grid-cols-2 gap-2">
-          <div className="bg-slate-600/50 rounded-lg p-2"><div className="text-lg font-bold text-white">98%</div><div className="text-[10px] text-slate-400">Resolución</div></div>
+          <div className="bg-slate-600/50 rounded-lg p-2"><div className="text-lg font-bold text-white">98%</div><div className="text-[10px] text-slate-400">{m.resolution}</div></div>
           <div className="bg-slate-600/50 rounded-lg p-2"><div className="text-lg font-bold text-white">3,2m</div><div className="text-[10px] text-slate-400">AHT</div></div>
         </div>
       </div>
@@ -104,7 +91,7 @@ function TeamMockup() {
   );
 }
 
-function HierarchyMockup() {
+function HierarchyMockup({ m }: { m: any }) {
   const levels = [
     { title: "Agente CC", color: "bg-blue-400/20 border-blue-400/30 text-blue-300" },
     { title: "Lead Agent", color: "bg-emerald-400/20 border-emerald-400/30 text-emerald-300" },
@@ -113,7 +100,7 @@ function HierarchyMockup() {
   ];
   return (
     <div className="space-y-2">
-      <div className="text-xs text-slate-400 mb-3">Cadena de escalación</div>
+      <div className="text-xs text-slate-400 mb-3">{m.escalationChain}</div>
       {levels.map((level, i) => (
         <div key={i}>
           <div className={cn("px-4 py-3 rounded-lg text-sm font-medium border flex items-center gap-2 animate-in fade-in duration-300", level.color)} style={{ animationDelay: `${i * 120}ms`, marginLeft: `${i * 16}px` }}>
@@ -131,16 +118,16 @@ function HierarchyMockup() {
   );
 }
 
-function ReportsMockup() {
+function ReportsMockup({ m }: { m: any }) {
   const events = [
-    { time: "22:14", label: "Alerta recibida", status: "bg-amber-400" },
-    { time: "22:15", label: "Agente asignado", status: "bg-blue-400" },
-    { time: "22:18", label: "Contacto con huésped", status: "bg-blue-400" },
-    { time: "22:32", label: "Incidencia resuelta", status: "bg-emerald-400" },
+    { time: "22:14", label: m.alertReceived, status: "bg-amber-400" },
+    { time: "22:15", label: m.agentAssigned, status: "bg-blue-400" },
+    { time: "22:18", label: m.guestContacted, status: "bg-blue-400" },
+    { time: "22:32", label: m.incidentResolved, status: "bg-emerald-400" },
   ];
   return (
     <div className="space-y-3">
-      <div className="text-xs text-slate-400 mb-2">Informe de incidencia #4821</div>
+      <div className="text-xs text-slate-400 mb-2">{m.incidentReport} #4821</div>
       <div className="bg-slate-700/50 border border-slate-600/50 rounded-lg p-4">
         <div className="space-y-3">
           {events.map((e, i) => (
@@ -152,7 +139,7 @@ function ReportsMockup() {
           ))}
         </div>
         <div className="mt-4 pt-3 border-t border-slate-600/50 flex items-center justify-between">
-          <span className="text-xs text-slate-400">Duración total</span>
+          <span className="text-xs text-slate-400">{m.totalDuration}</span>
           <span className="text-sm font-medium text-emerald-400">18 min</span>
         </div>
       </div>
@@ -160,18 +147,12 @@ function ReportsMockup() {
   );
 }
 
-const mockups: Record<string, React.ComponentType> = {
-  tools: ToolsMockup,
-  protocols: ProtocolsMockup,
-  team: TeamMockup,
-  hierarchy: HierarchyMockup,
-  reports: ReportsMockup,
-};
-
 export function CoverTabs() {
+  const { t, tObject } = useTranslation();
+  const items = tObject<{ title: string; description: string }[]>('cover.tabs.items');
+  const m = tObject<Record<string, string>>('cover.tabs.mockup');
   const [activeTab, setActiveTab] = useState("tools");
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const MockupComponent = mockups[activeTab];
 
   const handleTabChange = (tabId: string) => {
     if (tabId === activeTab) return;
@@ -182,50 +163,49 @@ export function CoverTabs() {
     }, 200);
   };
 
+  const mockupMap: Record<string, React.ReactNode> = {
+    tools: <ToolsMockup m={m} />,
+    protocols: <ProtocolsMockup m={m} />,
+    team: <TeamMockup m={m} />,
+    hierarchy: <HierarchyMockup m={m} />,
+    reports: <ReportsMockup m={m} />,
+  };
+
   return (
     <section className="py-20 lg:py-28 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              No somos un call center.<br />
-              <span className="gradient-text">Somos tu estructura operativa.</span>
+              {t('cover.tabs.title')}<br />
+              <span className="gradient-text">{t('cover.tabs.titleHighlight')}</span>
             </h2>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
             <div className="grid lg:grid-cols-[1fr_1fr] gap-8 lg:gap-12 items-start">
-              {/* Tabs */}
               <div className="space-y-2">
-                {tabs.map((tab) => {
-                  const Icon = tab.icon;
-                  const isActive = activeTab === tab.id;
+                {items?.map((tab, idx) => {
+                  const Icon = tabIcons[idx];
+                  const tabId = tabIds[idx];
+                  const isActive = activeTab === tabId;
                   return (
                     <button
-                      key={tab.id}
-                      onClick={() => handleTabChange(tab.id)}
+                      key={tabId}
+                      onClick={() => handleTabChange(tabId)}
                       className={cn(
                         "w-full text-left p-4 rounded-xl border transition-all duration-300 group",
-                        isActive
-                          ? "bg-card border-primary/30 shadow-soft"
-                          : "bg-transparent border-transparent hover:bg-card/50 hover:border-border"
+                        isActive ? "bg-card border-primary/30 shadow-soft" : "bg-transparent border-transparent hover:bg-card/50 hover:border-border"
                       )}
                     >
                       <div className="flex items-center gap-3">
-                        <div className={cn(
-                          "w-10 h-10 rounded-lg flex items-center justify-center transition-colors shrink-0",
-                          isActive ? "bg-primary/10" : "bg-muted"
-                        )}>
+                        <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center transition-colors shrink-0", isActive ? "bg-primary/10" : "bg-muted")}>
                           <Icon className={cn("w-5 h-5", isActive ? "text-primary" : "text-muted-foreground")} />
                         </div>
                         <div>
-                          <h3 className={cn("font-semibold text-sm", isActive ? "text-foreground" : "text-muted-foreground")}>
-                            {tab.title}
-                          </h3>
+                          <h3 className={cn("font-semibold text-sm", isActive ? "text-foreground" : "text-muted-foreground")}>{tab.title}</h3>
                           {isActive && (
-                            <p className="text-sm text-muted-foreground mt-1 leading-relaxed animate-fade-in">
-                              {tab.description}
-                            </p>
+                            <p className="text-sm text-muted-foreground mt-1 leading-relaxed animate-fade-in">{tab.description}</p>
                           )}
                         </div>
                       </div>
@@ -234,16 +214,15 @@ export function CoverTabs() {
                 })}
               </div>
 
-              {/* Mockup panel */}
               <div className="bg-slate-800 rounded-2xl border border-slate-700/50 p-6 min-h-[400px] shadow-soft-lg">
                 <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-700/50">
                   <div className="w-3 h-3 rounded-full bg-red-400/60" />
                   <div className="w-3 h-3 rounded-full bg-amber-400/60" />
                   <div className="w-3 h-3 rounded-full bg-emerald-400/60" />
-                  <span className="text-xs text-slate-500 ml-2">Cover™ Control Panel</span>
+                  <span className="text-xs text-slate-500 ml-2">{m?.panelTitle}</span>
                 </div>
                 <div className={cn("transition-opacity duration-200", isTransitioning ? "opacity-0" : "opacity-100")}>
-                  <MockupComponent />
+                  {mockupMap[activeTab]}
                 </div>
               </div>
             </div>
