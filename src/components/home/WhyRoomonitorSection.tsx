@@ -1,28 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, X, CheckCircle2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { caseStudies } from "@/lib/case-studies-data";
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
-const beforeItems = [
-  "Llamadas nocturnas gestionadas internamente",
-  "Altas quejas de vecinos",
-  "Sin cobertura in situ",
-  "Gestión reactiva de incidencias",
-];
+const afterMetricValues = [96, 0];
 
-const afterMetrics = [
-  { value: 96, suffix: "%", label: "de incidencias resueltas remotamente" },
-  { value: 0, suffix: "", label: "emergencias nocturnas sin gestionar" },
-];
-
-const afterItems = [
-  "Cobertura operativa nocturna",
-  "Intervención in situ cuando se requiere escalado",
-];
-
-// Animated counter hook
 function useCountUp(target: number, duration = 1800, shouldStart = false) {
   const [count, setCount] = useState(0);
   const hasStarted = useRef(false);
@@ -30,32 +15,22 @@ function useCountUp(target: number, duration = 1800, shouldStart = false) {
   useEffect(() => {
     if (!shouldStart || hasStarted.current) return;
     hasStarted.current = true;
-
-    if (target === 0) {
-      setCount(0);
-      return;
-    }
-
+    if (target === 0) { setCount(0); return; }
     const steps = 40;
     const increment = target / steps;
     const stepDuration = duration / steps;
-    let current = 0;
     let step = 0;
-
     const timer = setInterval(() => {
       step++;
-      current = Math.min(Math.round(increment * step), target);
-      setCount(current);
+      setCount(Math.min(Math.round(increment * step), target));
       if (step >= steps) clearInterval(timer);
     }, stepDuration);
-
     return () => clearInterval(timer);
   }, [target, duration, shouldStart]);
 
   return count;
 }
 
-// Map case studies to display format with testimonials
 const caseStudyTestimonials = caseStudies.slice(0, 5).map((study, index) => ({
   id: index + 1,
   slug: study.slug,
@@ -70,25 +45,20 @@ const caseStudyTestimonials = caseStudies.slice(0, 5).map((study, index) => ({
 
 const MetricCard = ({ value, suffix, label, delay, isVisible }: { value: number; suffix: string; label: string; delay: number; isVisible: boolean }) => {
   const count = useCountUp(value, 1800, isVisible);
-
   return (
-    <div
-      className="transition-all duration-700 ease-out"
-      style={{
-        transitionDelay: `${delay}ms`,
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0)" : "translateY(12px)",
-      }}
-    >
-      <span className="text-5xl md:text-6xl font-bold text-primary tracking-tight leading-none">
-        {count}{suffix}
-      </span>
+    <div className="transition-all duration-700 ease-out" style={{ transitionDelay: `${delay}ms`, opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(12px)" }}>
+      <span className="text-5xl md:text-6xl font-bold text-primary tracking-tight leading-none">{count}{suffix}</span>
       <p className="text-muted-foreground text-sm md:text-base mt-2 leading-snug">{label}</p>
     </div>
   );
 };
 
 export const WhyRoomonitorSection = () => {
+  const { t, tObject } = useTranslation();
+  const beforeItems = tObject("home.whyRoomonitor.beforeItems") as string[];
+  const afterMetrics = tObject("home.whyRoomonitor.afterMetrics") as Array<{ suffix: string; label: string }>;
+  const afterItems = tObject("home.whyRoomonitor.afterItems") as string[];
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.15 });
@@ -101,17 +71,13 @@ export const WhyRoomonitorSection = () => {
         setIsTransitioning(false);
       }, 300);
     }, 8000);
-
     return () => clearInterval(interval);
   }, []);
 
   const handleDotClick = (index: number) => {
     if (index === activeIndex) return;
     setIsTransitioning(true);
-    setTimeout(() => {
-      setActiveIndex(index);
-      setIsTransitioning(false);
-    }, 300);
+    setTimeout(() => { setActiveIndex(index); setIsTransitioning(false); }, 300);
   };
 
   const activeStudy = caseStudyTestimonials[activeIndex];
@@ -119,42 +85,26 @@ export const WhyRoomonitorSection = () => {
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        {/* Section Header */}
         <div className="mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">
-            ¿Por qué Roomonitor?
+            {t("home.whyRoomonitor.eyebrow")}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2">
-            Impacto real para{" "}
-            <span className="text-primary">operadores en crecimiento</span>
+            {t("home.whyRoomonitor.title")}{" "}
+            <span className="text-primary">{t("home.whyRoomonitor.titleHighlight")}</span>
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-          {/* Left Side - Transformation Story */}
           <div ref={sectionRef} className="flex flex-col justify-center gap-10">
             {/* Before */}
-            <div
-              className="transition-all duration-700 ease-out"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(16px)",
-              }}
-            >
+            <div className="transition-all duration-700 ease-out" style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(16px)" }}>
               <p className="text-xs font-semibold text-muted-foreground/60 uppercase tracking-widest mb-5">
-                Antes de Roomonitor
+                {t("home.whyRoomonitor.before")}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
                 {beforeItems.map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-2.5 text-muted-foreground/70 transition-all duration-500"
-                    style={{
-                      transitionDelay: `${150 + i * 80}ms`,
-                      opacity: isVisible ? 1 : 0,
-                      transform: isVisible ? "translateX(0)" : "translateX(-8px)",
-                    }}
-                  >
+                  <div key={i} className="flex items-center gap-2.5 text-muted-foreground/70 transition-all duration-500" style={{ transitionDelay: `${150 + i * 80}ms`, opacity: isVisible ? 1 : 0, transform: isVisible ? "translateX(0)" : "translateX(-8px)" }}>
                     <X className="h-3.5 w-3.5 text-muted-foreground/40 shrink-0" />
                     <span className="text-sm">{item}</span>
                   </div>
@@ -162,52 +112,21 @@ export const WhyRoomonitorSection = () => {
               </div>
             </div>
 
-            {/* Divider */}
-            <div
-              className="h-px bg-border/60 transition-all duration-700 ease-out origin-left"
-              style={{
-                transitionDelay: "400ms",
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "scaleX(1)" : "scaleX(0)",
-              }}
-            />
+            <div className="h-px bg-border/60 transition-all duration-700 ease-out origin-left" style={{ transitionDelay: "400ms", opacity: isVisible ? 1 : 0, transform: isVisible ? "scaleX(1)" : "scaleX(0)" }} />
 
             {/* After */}
             <div>
-              <p
-                className="text-xs font-semibold text-primary uppercase tracking-widest mb-6 transition-all duration-700"
-                style={{
-                  transitionDelay: "500ms",
-                  opacity: isVisible ? 1 : 0,
-                }}
-              >
-                Después de Roomonitor
+              <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-6 transition-all duration-700" style={{ transitionDelay: "500ms", opacity: isVisible ? 1 : 0 }}>
+                {t("home.whyRoomonitor.after")}
               </p>
-
               <div className="grid grid-cols-2 gap-8 mb-8">
                 {afterMetrics.map((metric, i) => (
-                  <MetricCard
-                    key={i}
-                    value={metric.value}
-                    suffix={metric.suffix}
-                    label={metric.label}
-                    delay={600 + i * 150}
-                    isVisible={isVisible}
-                  />
+                  <MetricCard key={i} value={afterMetricValues[i]} suffix={metric.suffix} label={metric.label} delay={600 + i * 150} isVisible={isVisible} />
                 ))}
               </div>
-
               <div className="space-y-3">
                 {afterItems.map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 transition-all duration-600 ease-out"
-                    style={{
-                      transitionDelay: `${900 + i * 100}ms`,
-                      opacity: isVisible ? 1 : 0,
-                      transform: isVisible ? "translateY(0)" : "translateY(8px)",
-                    }}
-                  >
+                  <div key={i} className="flex items-center gap-3 transition-all duration-600 ease-out" style={{ transitionDelay: `${900 + i * 100}ms`, opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(8px)" }}>
                     <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
                     <span className="text-base md:text-lg font-medium text-foreground">{item}</span>
                   </div>
@@ -216,21 +135,12 @@ export const WhyRoomonitorSection = () => {
             </div>
           </div>
 
-          {/* Right Side - Case Studies Carousel */}
+          {/* Carousel */}
           <div className="relative flex flex-col">
             <div className="relative rounded-2xl overflow-hidden flex-1 min-h-[450px]">
-              <div
-                className={`absolute inset-0 transition-all duration-300 ease-in-out ${
-                  isTransitioning ? "opacity-0 scale-105" : "opacity-100 scale-100"
-                }`}
-              >
-                <img
-                  src={activeStudy.image}
-                  alt={activeStudy.company}
-                  className="w-full h-full object-cover"
-                />
+              <div className={`absolute inset-0 transition-all duration-300 ease-in-out ${isTransitioning ? "opacity-0 scale-105" : "opacity-100 scale-100"}`}>
+                <img src={activeStudy.image} alt={activeStudy.company} className="w-full h-full object-cover" />
               </div>
-              
               {activeStudy.logo ? (
                 <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
                   <img src={activeStudy.logo} alt={activeStudy.company} className="h-6 w-auto object-contain" />
@@ -240,54 +150,32 @@ export const WhyRoomonitorSection = () => {
                   <span className="text-lg font-bold text-foreground">{activeStudy.company.charAt(0)}</span>
                 </div>
               )}
-              
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-              <div
-                className={`absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-sm rounded-xl p-5 shadow-lg transition-all duration-300 ease-in-out ${
-                  isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
-                }`}
-              >
+              <div className={`absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-sm rounded-xl p-5 shadow-lg transition-all duration-300 ease-in-out ${isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}>
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(activeStudy.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                   ))}
-                  <span className="text-sm text-muted-foreground ml-2">
-                    ({activeStudy.rating}.0)
-                  </span>
+                  <span className="text-sm text-muted-foreground ml-2">({activeStudy.rating}.0)</span>
                 </div>
-
-                <p className="text-foreground text-sm leading-relaxed mb-4 line-clamp-3">
-                  "{activeStudy.quote}"
-                </p>
-
+                <p className="text-foreground text-sm leading-relaxed mb-4 line-clamp-3">"{activeStudy.quote}"</p>
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="font-semibold text-foreground">{activeStudy.name}</p>
                     <p className="text-xs text-muted-foreground">{activeStudy.position}</p>
                   </div>
                   <Button size="sm" variant="default" asChild>
-                    <Link to={`/resources/case-studies/${activeStudy.slug}`}>
-                      Ver caso de éxito
+                    <LocalizedLink to={`/resources/case-studies/${activeStudy.slug}`}>
+                      {t("home.whyRoomonitor.viewCaseStudy")}
                       <ArrowRight className="ml-1 h-3 w-3" />
-                    </Link>
+                    </LocalizedLink>
                   </Button>
                 </div>
               </div>
             </div>
-
             <div className="flex justify-center gap-2 mt-6">
               {caseStudyTestimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleDotClick(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === activeIndex
-                      ? "w-8 bg-primary"
-                      : "w-2 bg-primary/30 hover:bg-primary/50"
-                  }`}
-                  aria-label={`Ir al caso de éxito ${index + 1}`}
-                />
+                <button key={index} onClick={() => handleDotClick(index)} className={`h-2 rounded-full transition-all duration-300 ${index === activeIndex ? "w-8 bg-primary" : "w-2 bg-primary/30 hover:bg-primary/50"}`} aria-label={`${t("home.whyRoomonitor.goToCaseStudy")} ${index + 1}`} />
               ))}
             </div>
           </div>
