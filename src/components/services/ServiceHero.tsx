@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
 
 interface ServiceHeroProps {
   icon: LucideIcon;
@@ -13,29 +14,21 @@ interface ServiceHeroProps {
   description: string;
   image: string;
   imageAlt: string;
-  primaryCTA?: {
-    text: string;
-    link: string;
-  };
-  secondaryCTA?: {
-    text: string;
-    link: string;
-  };
+  primaryCTA?: { text: string; link: string; };
+  secondaryCTA?: { text: string; link: string; };
   variant?: "primary" | "destructive";
 }
 
 export function ServiceHero({
-  icon: Icon,
-  badge,
-  title,
-  titleHighlight,
-  description,
-  image,
-  imageAlt,
-  primaryCTA = { text: "Más Información", link: "/contact" },
-  secondaryCTA = { text: "Ver Precios", link: "/pricing" },
+  icon: Icon, badge, title, titleHighlight, description, image, imageAlt,
+  primaryCTA,
+  secondaryCTA,
   variant = "primary",
 }: ServiceHeroProps) {
+  const { t } = useTranslation();
+  const resolvedPrimaryCTA = primaryCTA || { text: t('shared.learnMore'), link: "/contact" };
+  const resolvedSecondaryCTA = secondaryCTA || { text: t('shared.viewPricing'), link: "/pricing" };
+
   const badgeStyles = variant === "destructive" 
     ? "bg-destructive/10 text-destructive" 
     : "bg-primary/10 text-primary";
@@ -50,7 +43,6 @@ export function ServiceHero({
         <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-primary/5 to-transparent blur-3xl" />
         <div className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-secondary/50 to-transparent blur-3xl" />
       </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="fade-right">
@@ -72,27 +64,17 @@ export function ServiceHero({
               {description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                asChild
-                className="group transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <Link to={primaryCTA.link}>
-                  {primaryCTA.text}
+              <Button size="lg" asChild className="group transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <LocalizedLink to={resolvedPrimaryCTA.link}>
+                  {resolvedPrimaryCTA.text}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </LocalizedLink>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                asChild
-                className="hover:bg-secondary/80 transition-all duration-300"
-              >
-                <Link to={secondaryCTA.link}>{secondaryCTA.text}</Link>
+              <Button size="lg" variant="outline" asChild className="hover:bg-secondary/80 transition-all duration-300">
+                <LocalizedLink to={resolvedSecondaryCTA.link}>{resolvedSecondaryCTA.text}</LocalizedLink>
               </Button>
             </div>
           </AnimatedSection>
-
           <AnimatedSection delay={200} animation="fade-left">
             <div className="relative group">
               <div className={cn(
@@ -100,13 +82,7 @@ export function ServiceHero({
                 glowStyles
               )} />
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <OptimizedImage
-                  src={image}
-                  alt={imageAlt}
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  containerClassName="w-full aspect-[4/3]"
-                  priority
-                />
+                <OptimizedImage src={image} alt={imageAlt} className="w-full object-cover transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" priority />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </div>

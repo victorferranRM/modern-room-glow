@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Button } from "@/components/ui/button";
@@ -6,6 +5,8 @@ import {
   Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { ArrowRight, LucideIcon } from "lucide-react";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
 
 interface MonitoringHeroProps {
   icon: LucideIcon;
@@ -22,9 +23,13 @@ interface MonitoringHeroProps {
 
 export function MonitoringHero({
   icon: Icon, badge, title, titleHighlight, description, image, imageAlt, breadcrumbLabel,
-  primaryCTA = { text: "Ver precios", link: "/pricing" },
-  secondaryCTA = { text: "Solicitar una demo", link: "/contact" },
+  primaryCTA,
+  secondaryCTA,
 }: MonitoringHeroProps) {
+  const { t } = useTranslation();
+  const resolvedPrimaryCTA = primaryCTA || { text: t('shared.viewPricing'), link: "/pricing" };
+  const resolvedSecondaryCTA = secondaryCTA || { text: t('shared.requestDemo'), link: "/contact" };
+
   return (
     <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-secondary/30 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -35,9 +40,9 @@ export function MonitoringHero({
         <AnimatedSection className="mb-6">
           <Breadcrumb>
             <BreadcrumbList>
-              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/" className="text-muted-foreground hover:text-foreground">Inicio</Link></BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbItem><BreadcrumbLink asChild><LocalizedLink to="/" className="text-muted-foreground hover:text-foreground">{t('shared.breadcrumbHome')}</LocalizedLink></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/monitoring" className="text-muted-foreground hover:text-foreground">Monitorización</Link></BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbItem><BreadcrumbLink asChild><LocalizedLink to="/monitoring" className="text-muted-foreground hover:text-foreground">{t('shared.breadcrumbMonitoring')}</LocalizedLink></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbPage>{breadcrumbLabel}</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>
@@ -54,8 +59,8 @@ export function MonitoringHero({
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">{description}</p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild><Link to={primaryCTA.link}>{primaryCTA.text}<ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
-              <Button size="lg" variant="outline" asChild><Link to={secondaryCTA.link}>{secondaryCTA.text}</Link></Button>
+              <Button size="lg" asChild><LocalizedLink to={resolvedPrimaryCTA.link}>{resolvedPrimaryCTA.text}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
+              <Button size="lg" variant="outline" asChild><LocalizedLink to={resolvedSecondaryCTA.link}>{resolvedSecondaryCTA.text}</LocalizedLink></Button>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={200}>
