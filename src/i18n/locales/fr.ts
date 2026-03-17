@@ -537,8 +537,9 @@ const fr = {
     heroTitle: "Lectures pour les grands opérateurs de propriétés",
     heroSubtitle: "Tout ce que nous savons sur l'anticipation des problèmes, des clients et du marché.",
     featured: "À la une",
-    readTime: "min de lecture",
-    readTimeShort: "min",
+    readTime: "{min} min de lecture",
+    readTimeShort: "{min} min",
+    readMore: "Lire la suite",
     latestArticles: "Derniers articles",
     searchPlaceholder: "Rechercher des articles...",
     noResults: "Aucun article trouvé correspondant à vos critères.",
@@ -547,6 +548,7 @@ const fr = {
     startWithRoomonitor: "Commencez avec Roomonitor et garantissez la tranquillité pour vous et vos voisins.",
     allCategories: "Toutes les catégories",
     categories: ["Toutes les catégories","Locations de Vacances","Événements","Actualités du Secteur","Gestion de Propriétés","Hôtels","Roomonitor"],
+    dateLocale: "fr-FR",
   },
   services: {
     controlCenter: {
