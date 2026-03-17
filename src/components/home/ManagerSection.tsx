@@ -484,8 +484,8 @@ export function ManagerSection() {
                     className={cn(
                       "flex items-center gap-2 px-4 py-3 lg:px-5 lg:py-3.5 text-sm font-medium transition-all duration-300 rounded-xl border",
                       activeTab === tab.id
-                        ? "bg-primary/10 border-primary/30 text-foreground"
-                        : "bg-card border-border text-muted-foreground hover:text-foreground hover:border-primary/20"
+                        ? "bg-card border-primary/30 text-foreground shadow-sm"
+                        : "bg-secondary border-transparent text-muted-foreground hover:text-foreground hover:border-border"
                     )}
                   >
                     <Icon className={cn(
