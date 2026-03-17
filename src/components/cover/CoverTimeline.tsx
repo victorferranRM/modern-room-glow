@@ -98,7 +98,7 @@ export function CoverTimeline() {
                   </div>
 
                   {/* Desktop layout */}
-                  <div className="hidden md:grid md:grid-cols-[1fr_40px_1fr] lg:grid-cols-[1fr_48px_1fr] items-center py-3 lg:py-4">
+                  <div className="hidden md:grid md:grid-cols-[1fr_40px_1fr] lg:grid-cols-[1fr_48px_1fr] items-start -my-12 lg:-my-16">
                     {/* Left column */}
                     <div className={cn("flex", isLeft ? "justify-end pr-6" : "")}>
                       {isLeft ? (
