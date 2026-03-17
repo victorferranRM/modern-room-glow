@@ -1,109 +1,46 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { 
-  Activity, 
-  GitBranch, 
-  Building2, 
-  Clock, 
-  CalendarCheck,
-  Plug,
-  Circle,
-  CheckCircle2,
-  AlertCircle,
-  ChevronRight,
-  User,
-  Calendar,
-  ArrowRight
+import {
+  Activity, GitBranch, Building2, Clock, CalendarCheck, Plug,
+  Circle, CheckCircle2, AlertCircle, ChevronRight, User, Calendar, ArrowRight
 } from "lucide-react";
-
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 import managerDevices from "@/assets/manager-devices.png";
 
-interface ManagerTab {
-  id: string;
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-}
-
-const managerTabs: ManagerTab[] = [
-  {
-    id: "monitoring",
-    icon: Activity,
-    title: "Monitorización en tiempo real",
-    description: "Monitoriza el estado de tus propiedades y señales in situ en tiempo real, con visibilidad clara en todo tu portfolio.",
-  },
-  {
-    id: "protocols",
-    icon: GitBranch,
-    title: "Protocolos operativos",
-    description: "Define cómo se gestionan las incidencias, quién actúa y cuándo — asegurando decisiones consistentes en todas tus operaciones.",
-  },
-  {
-    id: "hierarchy",
-    icon: Building2,
-    title: "Jerarquía de activos",
-    description: "Organiza tus activos por edificios, unidades o portfolios, y gestiona operaciones a escala con una estructura clara.",
-  },
-  {
-    id: "history",
-    icon: Clock,
-    title: "Historial de incidencias",
-    description: "Accede a un registro completo de alertas e incidencias para entender patrones, rendimiento y problemas recurrentes.",
-  },
-  {
-    id: "tasks",
-    icon: CalendarCheck,
-    title: "Tareas y planificación",
-    description: "Crea y haz seguimiento de tareas operativas vinculadas a incidencias, check-ins o intervenciones de campo.",
-  },
-  {
-    id: "integrations",
-    icon: Plug,
-    title: "Integraciones PMS",
-    description: "Conectamos con las herramientas que ya usas para sincronizar la información de tus reservas.",
-  },
+const tabMeta = [
+  { id: "monitoring", icon: Activity },
+  { id: "protocols", icon: GitBranch },
+  { id: "hierarchy", icon: Building2 },
+  { id: "history", icon: Clock },
+  { id: "tasks", icon: CalendarCheck },
+  { id: "integrations", icon: Plug },
 ];
 
-// Abstract UI Mockups for each tab (dark themed for contrast on light bg)
-function MonitoringMockup() {
+// --- Mockup Components (decorative UI demos) ---
+
+function MonitoringMockup({ m }: { m: any }) {
   return (
     <div className="space-y-3">
-      {/* Status cards grid */}
       <div className="grid grid-cols-3 gap-2">
         {[
-          { label: "Activos", value: "247", status: "good" },
-          { label: "Alertas", value: "3", status: "alert" },
-          { label: "Offline", value: "2", status: "neutral" },
+          { label: m.active, value: "247", status: "good" },
+          { label: m.alerts, value: "3", status: "alert" },
+          { label: m.offline, value: "2", status: "neutral" },
         ].map((item, i) => (
-          <div 
-            key={i}
-            className={cn(
-              "bg-slate-700/50 rounded-lg p-3 border border-slate-600/50",
-              i === 0 && "animate-in fade-in duration-500",
-              i === 1 && "animate-in fade-in duration-500 delay-100",
-              i === 2 && "animate-in fade-in duration-500 delay-200"
-            )}
-          >
+          <div key={i} className={cn("bg-slate-700/50 rounded-lg p-3 border border-slate-600/50", `animate-in fade-in duration-500 delay-${i * 100}`)}>
             <div className="text-slate-400 text-xs mb-1">{item.label}</div>
             <div className="text-2xl font-bold text-white">{item.value}</div>
-            <div className={cn(
-              "w-2 h-2 rounded-full mt-2",
-              item.status === "good" && "bg-emerald-400",
-              item.status === "alert" && "bg-amber-400",
-              item.status === "neutral" && "bg-slate-500"
-            )} />
+            <div className={cn("w-2 h-2 rounded-full mt-2", item.status === "good" && "bg-emerald-400", item.status === "alert" && "bg-amber-400", item.status === "neutral" && "bg-slate-500")} />
           </div>
         ))}
       </div>
-      
-      {/* Property list */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 overflow-hidden">
         <div className="px-3 py-2 border-b border-slate-600/50 flex items-center justify-between">
-          <span className="text-xs text-slate-400">Vista del portfolio</span>
-          <span className="text-[10px] text-primary">En vivo</span>
+          <span className="text-xs text-slate-400">{m.portfolioView}</span>
+          <span className="text-[10px] text-primary">{m.inProgress ? "" : ""}</span>
         </div>
         {[
           { name: "Marina Bay Residence", status: "good", value: "42 dB" },
@@ -111,25 +48,12 @@ function MonitoringMockup() {
           { name: "Beach House Villa", status: "good", value: "35 dB" },
           { name: "Central Park Suite", status: "good", value: "38 dB" },
         ].map((property, i) => (
-          <div 
-            key={i}
-            className={cn(
-              "px-3 py-2 flex items-center justify-between border-b border-slate-600/30 last:border-0 hover:bg-slate-600/30 transition-colors",
-              "animate-in slide-in-from-left-2 duration-300",
-            )}
-            style={{ animationDelay: `${i * 75}ms` }}
-          >
+          <div key={i} className="px-3 py-2 flex items-center justify-between border-b border-slate-600/30 last:border-0 hover:bg-slate-600/30 transition-colors animate-in slide-in-from-left-2 duration-300" style={{ animationDelay: `${i * 75}ms` }}>
             <div className="flex items-center gap-2">
-              <div className={cn(
-                "w-1.5 h-1.5 rounded-full",
-                property.status === "good" ? "bg-emerald-400" : "bg-amber-400"
-              )} />
+              <div className={cn("w-1.5 h-1.5 rounded-full", property.status === "good" ? "bg-emerald-400" : "bg-amber-400")} />
               <span className="text-sm text-slate-200">{property.name}</span>
             </div>
-            <span className={cn(
-              "text-xs",
-              property.status === "good" ? "text-slate-400" : "text-amber-400"
-            )}>{property.value}</span>
+            <span className={cn("text-xs", property.status === "good" ? "text-slate-400" : "text-amber-400")}>{property.value}</span>
           </div>
         ))}
       </div>
@@ -137,162 +61,107 @@ function MonitoringMockup() {
   );
 }
 
-function ProtocolsMockup() {
+function ProtocolsMockup({ m }: { m: any }) {
+  const steps = [
+    { step: "1", label: m.alertDetected, status: "complete" },
+    { step: "2", label: m.notifyManager, status: "complete" },
+    { step: "3", label: m.wait15, status: "active" },
+    { step: "4", label: m.escalateField, status: "pending" },
+  ];
   return (
     <div className="space-y-3">
-      {/* Protocol flow */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-4">
-        <div className="text-xs text-slate-400 mb-3">Protocolo de incidencia de ruido</div>
+        <div className="text-xs text-slate-400 mb-3">{m.noiseProtocol}</div>
         <div className="space-y-2">
-          {[
-            { step: "1", label: "Alerta detectada", status: "complete" },
-            { step: "2", label: "Notificar al gestor", status: "complete" },
-            { step: "3", label: "Esperar 15 minutos", status: "active" },
-            { step: "4", label: "Escalar al equipo de campo", status: "pending" },
-          ].map((item, i) => (
-            <div 
-              key={i}
-              className={cn(
-                "flex items-center gap-3 p-2 rounded-lg transition-colors",
-                item.status === "active" && "bg-primary/20 border border-primary/30",
-                item.status === "complete" && "opacity-70",
-                "animate-in fade-in slide-in-from-left-2 duration-300"
-              )}
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
+          {steps.map((item, i) => (
+            <div key={i} className={cn("flex items-center gap-3 p-2 rounded-lg transition-colors", item.status === "active" && "bg-primary/20 border border-primary/30", item.status === "complete" && "opacity-70", "animate-in fade-in slide-in-from-left-2 duration-300")} style={{ animationDelay: `${i * 100}ms` }}>
               {item.status === "complete" && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
               {item.status === "active" && <Circle className="w-4 h-4 text-primary animate-pulse" />}
               {item.status === "pending" && <Circle className="w-4 h-4 text-slate-500" />}
-              <span className={cn(
-                "text-sm",
-                item.status === "active" ? "text-white font-medium" : "text-slate-300"
-              )}>{item.label}</span>
-              {item.status === "active" && (
-                <span className="ml-auto text-xs text-primary">En curso</span>
-              )}
+              <span className={cn("text-sm", item.status === "active" ? "text-white font-medium" : "text-slate-300")}>{item.label}</span>
+              {item.status === "active" && <span className="ml-auto text-xs text-primary">{m.inProgress}</span>}
             </div>
           ))}
         </div>
       </div>
-      
-      {/* Escalation rules */}
       <div className="grid grid-cols-2 gap-2">
         <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-300">
-          <div className="text-xs text-slate-400 mb-2">Reglas de escalado</div>
+          <div className="text-xs text-slate-400 mb-2">{m.escalationRules}</div>
           <div className="text-2xl font-bold text-white">12</div>
-          <div className="text-xs text-emerald-400 mt-1">Activas</div>
+          <div className="text-xs text-emerald-400 mt-1">{m.activeLabel}</div>
         </div>
         <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 animate-in fade-in duration-500 delay-400">
-          <div className="text-xs text-slate-400 mb-2">Tiempo respuesta</div>
+          <div className="text-xs text-slate-400 mb-2">{m.responseTime}</div>
           <div className="text-2xl font-bold text-white">4,2m</div>
-          <div className="text-xs text-slate-400 mt-1">Media</div>
+          <div className="text-xs text-slate-400 mt-1">{m.average}</div>
         </div>
       </div>
     </div>
   );
 }
 
-function HierarchyMockup() {
+function HierarchyMockup({ m }: { m: any }) {
   return (
     <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-4 space-y-2">
-      <div className="text-xs text-slate-400 mb-3">Estructura del portfolio</div>
-      
-      {/* Tree structure */}
+      <div className="text-xs text-slate-400 mb-3">{m.portfolioStructure}</div>
       <div className="space-y-1">
         <div className="flex items-center gap-2 p-2 bg-primary/20 rounded-lg border border-primary/30 animate-in fade-in duration-300">
           <Building2 className="w-4 h-4 text-primary" />
           <span className="text-sm font-medium text-white">Portfolio Barcelona</span>
-          <span className="ml-auto text-xs text-slate-400">124 unidades</span>
+          <span className="ml-auto text-xs text-slate-400">124 {m.units}</span>
         </div>
-        
         <div className="pl-4 space-y-1">
-          {[
-            { name: "Distrito Eixample", units: 45 },
-            { name: "Barrio Gótico", units: 38 },
-            { name: "Barceloneta", units: 41 },
-          ].map((building, i) => (
-            <div 
-              key={i}
-              className="flex items-center gap-2 p-2 hover:bg-slate-600/30 rounded-lg transition-colors animate-in slide-in-from-left-4 duration-300"
-              style={{ animationDelay: `${(i + 1) * 100}ms` }}
-            >
+          {[{ name: "Distrito Eixample", units: 45 }, { name: "Barrio Gótico", units: 38 }, { name: "Barceloneta", units: 41 }].map((building, i) => (
+            <div key={i} className="flex items-center gap-2 p-2 hover:bg-slate-600/30 rounded-lg transition-colors animate-in slide-in-from-left-4 duration-300" style={{ animationDelay: `${(i + 1) * 100}ms` }}>
               <ChevronRight className="w-3 h-3 text-slate-500" />
               <span className="text-sm text-slate-200">{building.name}</span>
               <span className="ml-auto text-xs text-slate-500">{building.units}</span>
             </div>
           ))}
         </div>
-        
         <div className="flex items-center gap-2 p-2 hover:bg-slate-600/30 rounded-lg transition-colors animate-in fade-in duration-300 delay-500">
           <Building2 className="w-4 h-4 text-slate-500" />
           <span className="text-sm text-slate-300">Portfolio Madrid</span>
-          <span className="ml-auto text-xs text-slate-500">87 unidades</span>
+          <span className="ml-auto text-xs text-slate-500">87 {m.units}</span>
         </div>
-        
         <div className="flex items-center gap-2 p-2 hover:bg-slate-600/30 rounded-lg transition-colors animate-in fade-in duration-300 delay-600">
           <Building2 className="w-4 h-4 text-slate-500" />
-          <span className="text-sm text-slate-300">Colección Valencia</span>
-          <span className="ml-auto text-xs text-slate-500">36 unidades</span>
+          <span className="text-sm text-slate-300">Portfolio Valencia</span>
+          <span className="ml-auto text-xs text-slate-500">36 {m.units}</span>
         </div>
       </div>
     </div>
   );
 }
 
-function HistoryMockup() {
+function HistoryMockup({ m }: { m: any }) {
+  const filters = [m.allFilter, m.noiseFilter, m.occupancyFilter, m.smokeFilter];
+  const incidents = [
+    { time: m.hoursAgo.replace("{n}", "2"), type: "noise", property: "Downtown Loft #12", alertLabel: m.noiseAlert },
+    { time: m.hoursAgo.replace("{n}", "5"), type: "occupancy", property: "Marina Bay Residence", alertLabel: m.occupancyAlert },
+    { time: m.daysAgo.replace("{n}", "1"), type: "noise", property: "Beach House Villa", alertLabel: m.noiseAlert },
+    { time: m.daysAgo.replace("{n}", "2"), type: "smoke", property: "Central Park Suite", alertLabel: m.smokeAlert },
+  ];
   return (
     <div className="space-y-3">
-      {/* Timeline header */}
       <div className="flex items-center justify-between">
         <div className="flex gap-2">
-          {["Todos", "Ruido", "Ocupación", "Humo"].map((filter, i) => (
-            <button 
-              key={i}
-              className={cn(
-                "px-2 py-1 rounded text-xs transition-colors",
-                i === 0 ? "bg-primary text-white" : "bg-slate-600/50 text-slate-300 hover:bg-slate-600"
-              )}
-            >
-              {filter}
-            </button>
+          {filters.map((filter, i) => (
+            <button key={i} className={cn("px-2 py-1 rounded text-xs transition-colors", i === 0 ? "bg-primary text-white" : "bg-slate-600/50 text-slate-300 hover:bg-slate-600")}>{filter}</button>
           ))}
         </div>
-        <span className="text-xs text-slate-400">Últimos 7 días</span>
+        <span className="text-xs text-slate-400">{m.last7days}</span>
       </div>
-      
-      {/* Timeline */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 overflow-hidden">
-        {[
-          { time: "hace 2h", type: "ruido", property: "Downtown Loft #12", status: "resuelto" },
-          { time: "hace 5h", type: "ocupación", property: "Marina Bay Residence", status: "resuelto" },
-          { time: "hace 1d", type: "ruido", property: "Beach House Villa", status: "resuelto" },
-          { time: "hace 2d", type: "humo", property: "Central Park Suite", status: "resuelto" },
-        ].map((incident, i) => (
-          <div 
-            key={i}
-            className={cn(
-              "px-3 py-3 flex items-center gap-3 border-b border-slate-600/30 last:border-0 hover:bg-slate-600/30 transition-colors",
-              "animate-in fade-in slide-in-from-right-2 duration-300"
-            )}
-            style={{ animationDelay: `${i * 75}ms` }}
-          >
-            <div className="relative">
-              <AlertCircle className={cn(
-                "w-4 h-4",
-                incident.type === "ruido" && "text-amber-400",
-                incident.type === "ocupación" && "text-blue-400",
-                incident.type === "humo" && "text-red-400"
-              )} />
-              {i < 3 && (
-                <div className="absolute top-5 left-1/2 w-px h-6 bg-slate-600/50 -translate-x-1/2" />
-              )}
-            </div>
+        {incidents.map((incident, i) => (
+          <div key={i} className="px-3 py-3 flex items-center gap-3 border-b border-slate-600/30 last:border-0 hover:bg-slate-600/30 transition-colors animate-in fade-in slide-in-from-right-2 duration-300" style={{ animationDelay: `${i * 75}ms` }}>
+            <AlertCircle className={cn("w-4 h-4", incident.type === "noise" && "text-amber-400", incident.type === "occupancy" && "text-blue-400", incident.type === "smoke" && "text-red-400")} />
             <div className="flex-1 min-w-0">
               <div className="text-sm text-slate-200 truncate">{incident.property}</div>
-              <div className="text-xs text-slate-500 capitalize">Alerta de {incident.type}</div>
+              <div className="text-xs text-slate-500">{incident.alertLabel}</div>
             </div>
             <div className="text-right">
-              <div className="text-xs text-emerald-400">Resuelto</div>
+              <div className="text-xs text-emerald-400">{m.resolved}</div>
               <div className="text-[10px] text-slate-500">{incident.time}</div>
             </div>
           </div>
@@ -302,26 +171,23 @@ function HistoryMockup() {
   );
 }
 
-function TasksMockup() {
+function TasksMockup({ m }: { m: any }) {
+  const tasks = [
+    { title: m.deviceInspection, property: "Marina Bay", assignee: m.fieldTeamA, time: "10:00" },
+    { title: m.guestCheckin, property: "Beach House", assignee: m.operationsTeam, time: "15:00" },
+  ];
   return (
     <div className="space-y-3">
-      {/* Calendar header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Calendar className="w-4 h-4 text-slate-400" />
-          <span className="text-sm font-medium text-white">Enero 2026</span>
+          <span className="text-sm font-medium text-white">2026</span>
         </div>
         <div className="flex gap-1">
-          <button className="w-6 h-6 rounded bg-slate-600/50 flex items-center justify-center hover:bg-slate-600 transition-colors">
-            <ChevronRight className="w-3 h-3 text-slate-400 rotate-180" />
-          </button>
-          <button className="w-6 h-6 rounded bg-slate-600/50 flex items-center justify-center hover:bg-slate-600 transition-colors">
-            <ChevronRight className="w-3 h-3 text-slate-400" />
-          </button>
+          <button className="w-6 h-6 rounded bg-slate-600/50 flex items-center justify-center hover:bg-slate-600 transition-colors"><ChevronRight className="w-3 h-3 text-slate-400 rotate-180" /></button>
+          <button className="w-6 h-6 rounded bg-slate-600/50 flex items-center justify-center hover:bg-slate-600 transition-colors"><ChevronRight className="w-3 h-3 text-slate-400" /></button>
         </div>
       </div>
-      
-      {/* Mini calendar */}
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3">
         <div className="grid grid-cols-7 gap-1 text-center mb-2">
           {["L", "M", "X", "J", "V", "S", "D"].map((day, i) => (
@@ -329,40 +195,15 @@ function TasksMockup() {
           ))}
         </div>
         <div className="grid grid-cols-7 gap-1">
-          {Array.from({ length: 31 }, (_, i) => i + 1).slice(0, 28).map((day, i) => (
-            <div 
-              key={i}
-              className={cn(
-                "w-6 h-6 rounded text-xs flex items-center justify-center transition-colors",
-                day === 15 && "bg-primary text-white",
-                day === 18 && "bg-amber-400/20 text-amber-400 border border-amber-400/30",
-                day === 22 && "bg-slate-600/50 text-slate-200",
-                day !== 15 && day !== 18 && day !== 22 && "text-slate-400 hover:bg-slate-600/50"
-              )}
-            >
-              {day}
-            </div>
+          {Array.from({ length: 28 }, (_, i) => i + 1).map((day) => (
+            <div key={day} className={cn("w-6 h-6 rounded text-xs flex items-center justify-center transition-colors", day === 15 && "bg-primary text-white", day === 18 && "bg-amber-400/20 text-amber-400 border border-amber-400/30", day === 22 && "bg-slate-600/50 text-slate-200", day !== 15 && day !== 18 && day !== 22 && "text-slate-400 hover:bg-slate-600/50")}>{day}</div>
           ))}
         </div>
       </div>
-      
-      {/* Task list */}
       <div className="space-y-2">
-        {[
-          { title: "Inspección de dispositivo", property: "Marina Bay", assignee: "Equipo Campo A", time: "10:00" },
-          { title: "Check-in huéspedes", property: "Beach House", assignee: "Operaciones", time: "15:00" },
-        ].map((task, i) => (
-          <div 
-            key={i}
-            className={cn(
-              "bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 flex items-center gap-3 hover:bg-slate-600/50 transition-colors",
-              "animate-in fade-in slide-in-from-bottom-2 duration-300"
-            )}
-            style={{ animationDelay: `${i * 100}ms` }}
-          >
-            <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-              <User className="w-4 h-4 text-primary" />
-            </div>
+        {tasks.map((task, i) => (
+          <div key={i} className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-3 flex items-center gap-3 hover:bg-slate-600/50 transition-colors animate-in fade-in slide-in-from-bottom-2 duration-300" style={{ animationDelay: `${i * 100}ms` }}>
+            <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><User className="w-4 h-4 text-primary" /></div>
             <div className="flex-1 min-w-0">
               <div className="text-sm text-slate-100 font-medium">{task.title}</div>
               <div className="text-xs text-slate-400">{task.property} • {task.assignee}</div>
@@ -375,34 +216,26 @@ function TasksMockup() {
   );
 }
 
-function IntegrationsMockup() {
+function IntegrationsMockup({ m }: { m: any }) {
+  const integrations = [
+    { name: "Guesty", type: "PMS" }, { name: "Kross Booking", type: "PMS" },
+    { name: "Nuki", type: "Access" }, { name: "Avantio", type: "PMS" }, { name: "Hostify", type: "PMS" },
+  ];
   return (
     <div className="space-y-3">
       <div className="bg-slate-700/50 rounded-lg border border-slate-600/50 p-4">
-        <div className="text-xs text-slate-400 mb-3">Integraciones activas</div>
+        <div className="text-xs text-slate-400 mb-3">{m.activeIntegrations}</div>
         <div className="space-y-2">
-          {[
-            { name: "Guesty", type: "PMS", status: "Conectado" },
-            { name: "Kross Booking", type: "PMS", status: "Conectado" },
-            { name: "Nuki", type: "Acceso", status: "Conectado" },
-            { name: "Avantio", type: "PMS", status: "Conectado" },
-            { name: "Hostify", type: "PMS", status: "Conectado" },
-          ].map((integration, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-between p-2 rounded-lg bg-slate-600/30 animate-in fade-in slide-in-from-left-2 duration-300"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
+          {integrations.map((integration, i) => (
+            <div key={i} className="flex items-center justify-between p-2 rounded-lg bg-slate-600/30 animate-in fade-in slide-in-from-left-2 duration-300" style={{ animationDelay: `${i * 100}ms` }}>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-slate-500/50 flex items-center justify-center">
-                  <Plug className="w-4 h-4 text-slate-300" />
-                </div>
+                <div className="w-8 h-8 rounded-lg bg-slate-500/50 flex items-center justify-center"><Plug className="w-4 h-4 text-slate-300" /></div>
                 <div>
                   <div className="text-sm text-slate-200 font-medium">{integration.name}</div>
                   <div className="text-xs text-slate-500">{integration.type}</div>
                 </div>
               </div>
-              <span className="text-xs text-emerald-400">{integration.status}</span>
+              <span className="text-xs text-emerald-400">{m.connected}</span>
             </div>
           ))}
         </div>
@@ -411,7 +244,7 @@ function IntegrationsMockup() {
   );
 }
 
-const mockupComponents: Record<string, React.ComponentType> = {
+const mockupMap: Record<string, React.ComponentType<{ m: any }>> = {
   monitoring: MonitoringMockup,
   protocols: ProtocolsMockup,
   hierarchy: HierarchyMockup,
@@ -421,10 +254,17 @@ const mockupComponents: Record<string, React.ComponentType> = {
 };
 
 export function ManagerSection() {
+  const { t, tObject } = useTranslation();
+  const tabs = tObject("home.manager.tabs") as Array<{ title: string; description: string }>;
+  const pills = tObject("home.manager.pills") as Record<string, string[]>;
+  const features = tObject("home.manager.features") as Record<string, string[]>;
+  const mockupLabels = tObject("home.manager.mockup") as any;
+
   const [activeTab, setActiveTab] = useState("monitoring");
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const activeTabData = managerTabs.find(t => t.id === activeTab)!;
-  const MockupComponent = mockupComponents[activeTab];
+  const activeTabIndex = tabMeta.findIndex(t => t.id === activeTab);
+  const activeTabData = tabs[activeTabIndex];
+  const MockupComponent = mockupMap[activeTab];
 
   const handleTabChange = (tabId: string) => {
     if (tabId === activeTab) return;
@@ -442,31 +282,28 @@ export function ManagerSection() {
           {/* Header with Image */}
           <AnimatedSection className="mb-12 lg:mb-16">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Left: Text */}
               <div className="text-center lg:text-left">
                 <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
-                  Gestión de activos
+                  {t("home.manager.headerEyebrow")}
                 </p>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">
-                  Conoce Manager — tu centro de control operativo
+                  {t("home.manager.headerTitle")}
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Manager te da visibilidad en tiempo real, control estructurado y las herramientas necesarias para gestionar monitorización y operaciones desde un solo lugar.
+                  {t("home.manager.headerDescription")}
                 </p>
               </div>
-              
-              {/* Right: Devices Image */}
               <div className="flex flex-col items-center gap-6">
-                <img 
-                  src={managerDevices} 
-                  alt="Plataforma Manager en portátil y móvil" 
+                <img
+                  src={managerDevices}
+                  alt={t("home.manager.devicesAlt")}
                   className="max-w-[110%] w-[110%] h-auto object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
                 />
                 <Button size="lg" className="gap-2 group" asChild>
-                  <Link to="/contact">
-                    Solicitar una Demo
+                  <LocalizedLink to="/contact">
+                    {t("home.manager.requestDemo")}
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  </LocalizedLink>
                 </Button>
               </div>
             </div>
@@ -475,24 +312,21 @@ export function ManagerSection() {
           {/* Tab Navigation */}
           <AnimatedSection delay={200} className="mb-8 lg:mb-12">
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 lg:gap-3 max-w-4xl mx-auto">
-              {managerTabs.map((tab) => {
-                const Icon = tab.icon;
+              {tabMeta.map((meta, index) => {
+                const Icon = meta.icon;
                 return (
                   <button
-                    key={tab.id}
-                    onClick={() => handleTabChange(tab.id)}
+                    key={meta.id}
+                    onClick={() => handleTabChange(meta.id)}
                     className={cn(
                       "flex items-center gap-2 px-4 py-3 lg:px-5 lg:py-3.5 text-sm font-medium transition-all duration-300 rounded-xl border",
-                      activeTab === tab.id
+                      activeTab === meta.id
                         ? "bg-card border-primary/30 text-foreground shadow-sm"
                         : "bg-secondary border-transparent text-muted-foreground hover:text-foreground hover:border-border"
                     )}
                   >
-                    <Icon className={cn(
-                      "w-4 h-4 shrink-0",
-                      activeTab === tab.id ? "text-primary" : "text-muted-foreground"
-                    )} />
-                    <span className="text-left leading-tight">{tab.title}</span>
+                    <Icon className={cn("w-4 h-4 shrink-0", activeTab === meta.id ? "text-primary" : "text-muted-foreground")} />
+                    <span className="text-left leading-tight">{tabs[index].title}</span>
                   </button>
                 );
               })}
@@ -502,193 +336,43 @@ export function ManagerSection() {
           {/* Content Area */}
           <AnimatedSection delay={400}>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Left: Text content */}
-              <div 
-                className={cn(
-                  "bg-card rounded-2xl border p-6 lg:p-8 shadow-soft transition-all duration-300",
-                  isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
-                )}
-              >
+              <div className={cn("bg-card rounded-2xl border p-6 lg:p-8 shadow-soft transition-all duration-300", isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0")}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    {(() => {
-                      const Icon = activeTabData.icon;
-                      return <Icon className="w-6 h-6 text-primary" />;
-                    })()}
+                    {(() => { const Icon = tabMeta[activeTabIndex].icon; return <Icon className="w-6 h-6 text-primary" />; })()}
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">
-                    {activeTabData.title}
-                  </h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground">{activeTabData.title}</h3>
                 </div>
-                
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  {activeTabData.description}
-                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8">{activeTabData.description}</p>
 
-                {/* Feature pills based on tab */}
+                {/* Pills */}
                 <div className="flex flex-wrap gap-2 mb-8">
-                  {activeTab === "monitoring" && (
-                    <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Estado en vivo</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Estado dispositivos</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Vista portfolio</span>
-                    </>
-                  )}
-                  {activeTab === "protocols" && (
-                    <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Reglas de decisión</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Lógica de escalado</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Automatización</span>
-                    </>
-                  )}
-                  {activeTab === "hierarchy" && (
-                    <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Agrupación portfolio</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Control multi-activo</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Estructura escalable</span>
-                    </>
-                  )}
-                  {activeTab === "history" && (
-                    <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Vista cronológica</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Registro incidencias</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Análisis de patrones</span>
-                    </>
-                  )}
-                  {activeTab === "tasks" && (
-                    <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Vista calendario</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Tarjetas de tareas</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Asignaciones</span>
-                    </>
-                  )}
-                  {activeTab === "integrations" && (
-                    <>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">PMS y Channel Managers</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">Acceso inteligente</span>
-                      <span className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">API abierta</span>
-                    </>
-                  )}
+                  {(pills[activeTab] || []).map((pill, i) => (
+                    <span key={i} className="px-3 py-1 bg-secondary rounded-full text-xs text-foreground/70">{pill}</span>
+                  ))}
                 </div>
 
-                {/* Feature list */}
+                {/* Features */}
                 <div className="space-y-3">
-                  {activeTab === "monitoring" && (
-                    <>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Estado en tiempo real de propiedades en todo tu portfolio</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Alertas instantáneas cuando se superan los umbrales</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Monitorización del estado de dispositivos y conectividad</span>
-                      </div>
-                    </>
-                  )}
-                  {activeTab === "protocols" && (
-                    <>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Define flujos de respuesta para cada tipo de incidencia</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Configura temporizadores de escalado y reglas de notificación</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Gestión consistente en todo tu equipo</span>
-                      </div>
-                    </>
-                  )}
-                  {activeTab === "hierarchy" && (
-                    <>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Agrupa propiedades por edificio, región o portfolio</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Aplica configuraciones y reglas a cualquier nivel</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Escala operaciones sin perder el control</span>
-                      </div>
-                    </>
-                  )}
-                  {activeTab === "history" && (
-                    <>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Registro de auditoría completo para cada incidencia</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Filtra por tipo, propiedad o periodo de tiempo</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Identifica problemas recurrentes y patrones</span>
-                      </div>
-                    </>
-                  )}
-                  {activeTab === "tasks" && (
-                    <>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Crea tareas automáticamente desde incidencias</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Asigna a miembros del equipo con plazos</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Haz seguimiento de intervenciones de campo y check-ins</span>
-                      </div>
-                    </>
-                  )}
-                  {activeTab === "integrations" && (
-                    <>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Conexión nativa con los principales PMS y channel managers</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">Integración con cerraduras inteligentes y sistemas de acceso</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-foreground/80">
-                        <ChevronRight className="w-4 h-4 text-primary" />
-                        <span className="text-sm">API abierta para conectar cualquier herramienta personalizada</span>
-                      </div>
-                    </>
-                  )}
+                  {(features[activeTab] || []).map((feature, i) => (
+                    <div key={i} className="flex items-center gap-2 text-foreground/80">
+                      <ChevronRight className="w-4 h-4 text-primary" />
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Right: UI Mockup (keeps dark theme for visual contrast) */}
-              <div 
-                className={cn(
-                  "bg-slate-800 rounded-2xl border border-slate-700 p-4 lg:p-6 min-h-[400px] transition-all duration-300 shadow-soft-lg",
-                  isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
-                )}
-              >
-                <MockupComponent />
+              <div className={cn("bg-slate-800 rounded-2xl border border-slate-700 p-4 lg:p-6 min-h-[400px] transition-all duration-300 shadow-soft-lg", isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100")}>
+                <MockupComponent m={mockupLabels} />
               </div>
             </div>
           </AnimatedSection>
 
-          {/* Closing line + CTA */}
           <AnimatedSection delay={600} className="mt-12 lg:mt-16">
             <div className="text-center">
               <p className="text-muted-foreground text-sm lg:text-base max-w-2xl mx-auto">
-                Manager conecta la monitorización con nuestro Centro de Control y equipos de Field Service, permitiendo operaciones más rápidas, estructuradas y consistentes.
+                {t("home.manager.closingText")}
               </p>
             </div>
           </AnimatedSection>
