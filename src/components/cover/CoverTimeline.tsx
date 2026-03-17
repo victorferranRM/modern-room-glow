@@ -59,10 +59,10 @@ export function CoverTimeline() {
   return (
     <section id="como-funciona" className="py-20 lg:py-28 overflow-hidden">
       <div className="container mx-auto px-4 max-w-5xl">
-        <AnimatedSection className="text-center mb-12 lg:mb-14">
+        <AnimatedSection className="text-center mb-16 lg:mb-20">
           <Badge variant="outline" className="mb-4">Proceso</Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-            De la alerta a la resolución.{" "}
+            De la alerta a la resolución.<br />
             <span className="gradient-text">Sin tu intervención.</span>
           </h2>
         </AnimatedSection>

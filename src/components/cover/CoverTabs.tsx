@@ -188,7 +188,7 @@ export function CoverTabs() {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              No somos un call center.{" "}
+              No somos un call center.<br />
               <span className="gradient-text">Somos tu estructura operativa.</span>
             </h2>
           </AnimatedSection>
