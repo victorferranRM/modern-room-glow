@@ -254,6 +254,8 @@ const es = {
       title: "El Property Management moderno",
       titleHighlight: "no se hace en solitario.",
       description: "Únete a los gestores profesionales que han dejado de apagar fuegos para centrarse en el crecimiento estratégico.",
+      ctaPrimary: "Hablar con un experto",
+      ctaSecondary: "Ver planes y precios",
     },
   },
   contact: {

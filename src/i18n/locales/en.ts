@@ -254,6 +254,8 @@ const en = {
       title: "Modern Property Management",
       titleHighlight: "isn't done alone.",
       description: "Join the professional managers who stopped putting out fires to focus on strategic growth.",
+      ctaPrimary: "Talk to an expert",
+      ctaSecondary: "View plans & pricing",
     },
   },
   contact: {
