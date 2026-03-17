@@ -1,39 +1,42 @@
-import { Link } from "react-router-dom";
-import { resourcesData } from "./navigation-data";
+import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
+import { resourceHrefs } from "./navigation-data";
 import { BookOpen, HelpCircle, Calculator, Award, Building } from "lucide-react";
 
 const learnIcons = [BookOpen, HelpCircle, Calculator];
 const companyIcons = [Award, Building];
 
-const learnDescriptions = [
-  "Insights y tendencias en operaciones de hospitalidad",
-  "Encuentra respuestas a preguntas frecuentes",
-  "Descubre cuánto podrías ahorrar con Roomonitor",
-];
-
-const companyDescriptions = [
-  "Historias de éxito de nuestros partners",
-  "Nuestra misión y el equipo detrás de Roomonitor",
-];
-
 export function MegaMenuResources() {
+  const { tObject, t } = useTranslation();
+  const learnSection = tObject<{
+    title: string;
+    items: { title: string }[];
+    descriptions: string[];
+  }>("megaMenu.resources.learn");
+  const companySection = tObject<{
+    title: string;
+    items: { title: string }[];
+    descriptions: string[];
+  }>("megaMenu.resources.company");
+
   return (
     <div className="w-full max-w-4xl mx-auto p-8">
       <div className="grid grid-cols-2 gap-12">
         {/* Learn Column */}
         <div>
           <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-6">
-            {resourcesData.learn.title}
+            {learnSection.title}
           </h3>
           <ul className="space-y-4">
-            {resourcesData.learn.items.map((item, index) => {
+            {learnSection.items.map((item, index) => {
               const Icon = learnIcons[index];
-              const isCalculator = item.href === "/resources/savings-calculator";
+              const hrefData = resourceHrefs.learn[index];
+              const isCalculator = hrefData.href === "/resources/savings-calculator";
               return (
-                <li key={item.title}>
-                  {(item as any).external ? (
+                <li key={hrefData.href}>
+                  {hrefData.external ? (
                     <a
-                      href={item.href}
+                      href={hrefData.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
@@ -46,13 +49,13 @@ export function MegaMenuResources() {
                           {item.title}
                         </span>
                         <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
-                          {learnDescriptions[index]}
+                          {learnSection.descriptions[index]}
                         </span>
                       </div>
                     </a>
                   ) : (
                     <Link
-                      to={item.href}
+                      to={hrefData.href}
                       className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
                     >
                       <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
@@ -63,11 +66,11 @@ export function MegaMenuResources() {
                           {item.title}
                         </span>
                         <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
-                          {learnDescriptions[index]}
+                          {learnSection.descriptions[index]}
                         </span>
                         {isCalculator && (
                           <span className="inline-flex items-center text-xs font-medium text-primary mt-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
-                            Probar calculadora →
+                            {t("nav.tryCalculator")}
                           </span>
                         )}
                       </div>
@@ -82,15 +85,16 @@ export function MegaMenuResources() {
         {/* Company Column */}
         <div>
           <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-6">
-            {resourcesData.company.title}
+            {companySection.title}
           </h3>
           <ul className="space-y-4">
-            {resourcesData.company.items.map((item, index) => {
+            {companySection.items.map((item, index) => {
               const Icon = companyIcons[index];
+              const hrefData = resourceHrefs.company[index];
               return (
-                <li key={item.title}>
+                <li key={hrefData.href}>
                   <Link
-                    to={item.href}
+                    to={hrefData.href}
                     className="group flex items-start gap-3 p-3 -mx-3 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
                   >
                     <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5 transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
@@ -101,7 +105,7 @@ export function MegaMenuResources() {
                         {item.title}
                       </span>
                       <span className="block text-sm text-muted-foreground mt-0.5 leading-relaxed transition-colors duration-200 group-hover:text-muted-foreground/80">
-                        {companyDescriptions[index]}
+                        {companySection.descriptions[index]}
                       </span>
                     </div>
                   </Link>

@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ShoppingCart } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { servicesData, monitoringData, resourcesData } from "./navigation-data";
+import { serviceHrefs, monitoringHrefs, resourceHrefs } from "./navigation-data";
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -25,10 +26,31 @@ function AnimatedCollapsible({ isOpen, children }: { isOpen: boolean; children: 
 
 export function MobileMenu({ onClose }: MobileMenuProps) {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const { t, tObject } = useTranslation();
 
   const toggleSection = (section: string) => {
     setExpandedSection(expandedSection === section ? null : section);
   };
+
+  const monitoringItems = tObject<{ title: string; description: string }[]>("megaMenu.monitoring");
+
+  const serviceSections = (["operations", "emergencies", "integration"] as const).map((key) => {
+    const section = tObject<{ title: string; items: { title: string; description: string }[] }>(`megaMenu.services.${key}`);
+    return { ...section, hrefs: serviceHrefs[key] };
+  });
+
+  const resourceSections = [
+    {
+      title: tObject<{ title: string }>("megaMenu.resources.learn").title,
+      items: tObject<{ items: { title: string }[] }>("megaMenu.resources.learn").items,
+      hrefs: resourceHrefs.learn,
+    },
+    {
+      title: tObject<{ title: string }>("megaMenu.resources.company").title,
+      items: tObject<{ items: { title: string }[] }>("megaMenu.resources.company").items,
+      hrefs: resourceHrefs.company,
+    },
+  ];
 
   return (
     <div className="lg:hidden border-t bg-background max-h-[calc(100vh-4rem)] overflow-y-auto animate-fade-in">
@@ -36,13 +58,13 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
         {/* Dispositivo */}
         <div className="border-b border-border/50 pb-2">
           <button onClick={() => toggleSection("dispositivo")} className="flex items-center justify-between w-full py-3 text-left font-medium">
-            Dispositivo
+            {t("nav.device")}
             <ChevronDown className={`h-4 w-4 transition-transform ${expandedSection === "dispositivo" ? "rotate-180" : ""}`} />
           </button>
           <AnimatedCollapsible isOpen={expandedSection === "dispositivo"}>
             <div className="pt-4 pb-4">
-              {monitoringData.map((item) => (
-                <Link key={item.title} to={item.href} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
+              {monitoringItems.map((item, index) => (
+                <Link key={monitoringHrefs[index]} to={monitoringHrefs[index]} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
                   {item.title}
                 </Link>
               ))}
@@ -53,23 +75,23 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
         {/* Cover™ */}
         <div className="border-b border-border/50 pb-2">
           <Link to="/cover" className="block py-3 font-medium text-foreground hover:text-primary" onClick={onClose}>
-            Cover<sup className="text-[9px] ml-0.5">™</sup>
+            {t("nav.cover")}<sup className="text-[9px] ml-0.5">™</sup>
           </Link>
         </div>
 
         {/* Servicios */}
         <div className="border-b border-border/50 pb-2">
           <button onClick={() => toggleSection("services")} className="flex items-center justify-between w-full py-3 text-left font-medium">
-            Servicios
+            {t("nav.services")}
             <ChevronDown className={`h-4 w-4 transition-transform ${expandedSection === "services" ? "rotate-180" : ""}`} />
           </button>
           <AnimatedCollapsible isOpen={expandedSection === "services"}>
             <div className="pt-4 pb-4 space-y-6">
-              {[servicesData.operations, servicesData.emergencies, servicesData.integration].map((section) => (
+              {serviceSections.map((section) => (
                 <div key={section.title}>
                   <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-2 px-2">{section.title}</h4>
-                  {section.items.map((item) => (
-                    <Link key={item.title} to={item.href} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
+                  {section.items.map((item, index) => (
+                    <Link key={section.hrefs[index]} to={section.hrefs[index]} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
                       {item.title}
                     </Link>
                   ))}
@@ -82,26 +104,33 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
         {/* Cómo funciona */}
         <div className="border-b border-border/50 pb-2">
           <Link to="/how-it-works" className="block py-3 font-medium text-foreground hover:text-primary" onClick={onClose}>
-            Cómo funciona
+            {t("nav.howItWorks")}
           </Link>
         </div>
 
         {/* Recursos */}
         <div className="border-b border-border/50 pb-2">
           <button onClick={() => toggleSection("resources")} className="flex items-center justify-between w-full py-3 text-left font-medium">
-            Recursos
+            {t("nav.resources")}
             <ChevronDown className={`h-4 w-4 transition-transform ${expandedSection === "resources" ? "rotate-180" : ""}`} />
           </button>
           <AnimatedCollapsible isOpen={expandedSection === "resources"}>
             <div className="pt-4 pb-4 space-y-5">
-              {[resourcesData.learn, resourcesData.company].map((section) => (
+              {resourceSections.map((section) => (
                 <div key={section.title}>
                   <h4 className="text-xs font-semibold text-muted-foreground tracking-wider mb-2 px-2">{section.title}</h4>
-                  {section.items.map((item) => (
-                    <Link key={item.title} to={item.href} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
-                      {item.title}
-                    </Link>
-                  ))}
+                  {section.items.map((item, index) => {
+                    const hrefData = section.hrefs[index];
+                    return hrefData.external ? (
+                      <a key={hrefData.href} href={hrefData.href} target="_blank" rel="noopener noreferrer" className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link key={hrefData.href} to={hrefData.href} className="block px-2 py-2.5 text-sm text-foreground hover:text-primary" onClick={onClose}>
+                        {item.title}
+                      </Link>
+                    );
+                  })}
                 </div>
               ))}
             </div>
@@ -113,12 +142,12 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           <Button variant="outline" asChild className="w-full">
             <Link to="/pricing" onClick={onClose} className="gap-2">
               <ShoppingCart className="h-4 w-4" />
-              Comprar
+              {t("nav.buy")}
             </Link>
           </Button>
           <Button asChild className="w-full">
             <Link to="/contact" onClick={onClose}>
-              Contactar
+              {t("nav.contact")}
             </Link>
           </Button>
         </div>

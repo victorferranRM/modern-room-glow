@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import { monitoringData } from "./navigation-data";
+import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
+import { monitoringHrefs } from "./navigation-data";
 import { Volume2, Users, Flame, Thermometer, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import roomonitorDevice from "@/assets/roomonitor-device.jpg";
@@ -7,6 +8,9 @@ import roomonitorDevice from "@/assets/roomonitor-device.jpg";
 const icons = [Volume2, Users, Flame, Thermometer];
 
 export function MegaMenuMonitoring() {
+  const { tObject, t } = useTranslation();
+  const monitoringItems = tObject<{ title: string; description: string }[]>("megaMenu.monitoring");
+
   return (
     <div className="w-full max-w-5xl mx-auto p-8">
       <div className="grid grid-cols-5 gap-8">
@@ -14,7 +18,7 @@ export function MegaMenuMonitoring() {
         <div className="col-span-2 flex flex-col items-center justify-center">
           <img 
             src={roomonitorDevice}
-            alt="Dispositivo Roomonitor"
+            alt="Roomonitor"
             className="w-full max-w-[220px] rounded-2xl shadow-lg object-cover mb-6"
             loading="eager"
             decoding="sync"
@@ -22,7 +26,7 @@ export function MegaMenuMonitoring() {
           />
           <Button size="default" variant="default" asChild className="group">
             <Link to="/monitoring">
-              Descubre el dispositivo
+              {t("nav.discoverDevice")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -31,15 +35,16 @@ export function MegaMenuMonitoring() {
         {/* Right - Monitoring options */}
         <div className="col-span-3">
           <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-6">
-            CAPACIDADES DE MONITORIZACIÓN
+            {t("nav.monitoringCapabilities")}
           </h3>
           <ul className="grid grid-cols-2 gap-3">
-            {monitoringData.map((item, index) => {
+            {monitoringItems.map((item, index) => {
               const Icon = icons[index];
+              const href = monitoringHrefs[index];
               return (
-                <li key={item.title}>
+                <li key={href}>
                   <Link
-                    to={item.href}
+                    to={href}
                     className="group flex items-start gap-4 p-4 rounded-xl transition-all duration-200 ease-out hover:bg-muted/80"
                   >
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-105">
