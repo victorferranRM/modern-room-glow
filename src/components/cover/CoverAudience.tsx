@@ -43,7 +43,7 @@ export function CoverAudience() {
       }} />
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <AnimatedSection className="text-center mb-14">
+        <AnimatedSection className="text-center mb-16 lg:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Diseñado para gestores{" "}
             <span className="text-primary">que escalan</span>
@@ -53,23 +53,34 @@ export function CoverAudience() {
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-14">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {profiles.map((profile, i) => {
             const Icon = profile.icon;
             return (
               <AnimatedSection key={i} delay={i * 150}>
-                <div className="relative group rounded-2xl border border-background/10 bg-background/[0.05] backdrop-blur-sm p-6 lg:p-8 hover:bg-background/[0.08] transition-all duration-300 h-full">
-                  <div className="flex items-start justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-primary leading-none">{profile.stat}</div>
-                      <div className="text-[11px] text-background/40 mt-0.5">{profile.statLabel}</div>
-                    </div>
+                <div className="relative group rounded-2xl border border-background/10 bg-background/[0.04] p-8 lg:p-10 min-h-[320px] lg:min-h-[360px] flex flex-col justify-between transition-all duration-500 hover:bg-background/[0.08] hover:border-primary/30 hover:shadow-[0_0_40px_-10px_hsl(var(--primary)/0.2)] hover:-translate-y-1">
+                  {/* Stat as decorative watermark */}
+                  <span className="absolute top-5 right-6 text-[64px] lg:text-[80px] font-black leading-none text-background/[0.06] select-none pointer-events-none transition-colors duration-500 group-hover:text-primary/[0.08]">
+                    {profile.stat}
+                  </span>
+
+                  {/* Top: Icon + stat label */}
+                  <div>
+                    <Icon className="w-12 h-12 lg:w-14 lg:h-14 text-primary mb-6 transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
+                    <h3 className="font-bold text-2xl lg:text-[1.7rem] text-background leading-tight mb-3">
+                      {profile.title}
+                    </h3>
+                    <p className="text-base text-background/50 leading-relaxed">
+                      {profile.desc}
+                    </p>
                   </div>
-                  <h3 className="font-bold text-lg text-background mb-2">{profile.title}</h3>
-                  <p className="text-sm text-background/50 leading-relaxed">{profile.desc}</p>
+
+                  {/* Bottom: stat pill */}
+                  <div className="mt-6 flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-semibold text-primary">
+                      {profile.stat} <span className="text-primary/70 font-normal">{profile.statLabel}</span>
+                    </span>
+                  </div>
                 </div>
               </AnimatedSection>
             );
