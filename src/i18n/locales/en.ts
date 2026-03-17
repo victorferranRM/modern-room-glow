@@ -499,6 +499,20 @@ const en = {
     heroTitle: "About Roomonitor",
     heroDescription: "Technology + People. Since 2014, helping property managers sleep peacefully.",
   },
+  hero: {
+    badge: "Operational infrastructure for vacation rentals",
+    title: "Your night-time operations, sorted.",
+    subtitle: "From 7 PM onwards, we take over.",
+    description: "Roomonitor combines smart monitoring, a Control Center and field agents. We handle incidents, assist guests and protect your assets. On your behalf, with your protocols. You rest. We act.",
+    cta_primary: "Discover Cover™",
+    cta_secondary: "See how it works",
+    card1_title: "24/7 Control Center",
+    card1_description: "Hospitality-trained agents evaluating, mediating and resolving.",
+    card2_title: "Field Service in 8 cities",
+    card2_description: "On-site intervention when remote resolution isn't enough.",
+    card3_title: "Smart monitoring",
+    card3_description: "Noise, smoke, occupancy and environment sensors.",
+  },
 };
 
 export default en;
