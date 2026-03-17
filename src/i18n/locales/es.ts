@@ -499,6 +499,20 @@ const es = {
     heroTitle: "Sobre Roomonitor",
     heroDescription: "Tecnología + Personas. Desde 2014, ayudamos a gestores de propiedades a dormir tranquilos.",
   },
+  hero: {
+    badge: "Infraestructura operativa para propiedades turísticas",
+    title: "Tu operativa nocturna, resuelta.",
+    subtitle: "A partir de las 19h, nosotros nos encargamos.",
+    description: "Roomonitor combina monitorización inteligente, un Centro de Control y agentes de campo. Gestionamos incidencias, atendemos huéspedes y protegemos tus activos. En tu nombre, con tus protocolos. Tú descansas. Nosotros actuamos.",
+    cta_primary: "Descubre Cover™",
+    cta_secondary: "Ver cómo funciona",
+    card1_title: "Centro de Control 24/7",
+    card1_description: "Agentes formados en hospitality evaluando, mediando y resolviendo.",
+    card2_title: "Field Service en 8 ciudades",
+    card2_description: "Intervención presencial cuando la resolución remota no basta.",
+    card3_title: "Monitorización inteligente",
+    card3_description: "Sensor de ruido, humo, ocupación y ambiente.",
+  },
 };
 
 export default es;
