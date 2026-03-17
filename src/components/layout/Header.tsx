@@ -27,6 +27,7 @@ export function Header() {
   const [activeMenu, setActiveMenu] = useState<MenuType>(null);
   const { user, signOut, loading } = useAuth();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   // Preload device image so mega menu appears instantly
   useEffect(() => {
@@ -47,12 +48,6 @@ export function Header() {
     setActiveMenu(null);
   };
 
-  const megaMenuItems: { label: React.ReactNode; menu: MenuType }[] = [
-    { label: "Servicios", menu: "services" },
-    { label: "Dispositivo", menu: "dispositivo" },
-    { label: "Recursos", menu: "resources" },
-  ];
-
   return (
     <TooltipProvider>
       <header 
@@ -70,7 +65,7 @@ export function Header() {
               />
             </Link>
 
-            {/* Desktop Navigation — Dispositivo ▾ · Cover™ · Servicios ▾ · Cómo funciona · Recursos ▾ */}
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
               {/* Dispositivo (mega menu) */}
               <button
@@ -80,7 +75,7 @@ export function Header() {
                   activeMenu === "dispositivo" ? "text-primary" : "text-foreground hover:text-primary"
                 )}
               >
-                Dispositivo
+                {t("nav.device")}
                 <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeMenu === "dispositivo" && "rotate-180")} />
               </button>
 
@@ -90,7 +85,7 @@ export function Header() {
                 className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
                 onMouseEnter={() => setActiveMenu(null)}
               >
-                Cover<sup className="text-[9px] ml-0.5">™</sup>
+                {t("nav.cover")}<sup className="text-[9px] ml-0.5">™</sup>
               </Link>
 
               {/* Servicios (mega menu) */}
@@ -101,7 +96,7 @@ export function Header() {
                   activeMenu === "services" ? "text-primary" : "text-foreground hover:text-primary"
                 )}
               >
-                Servicios
+                {t("nav.services")}
                 <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeMenu === "services" && "rotate-180")} />
               </button>
 
@@ -111,7 +106,7 @@ export function Header() {
                 className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
                 onMouseEnter={() => setActiveMenu(null)}
               >
-                Cómo funciona
+                {t("nav.howItWorks")}
               </Link>
 
               {/* Recursos (mega menu) */}
@@ -122,7 +117,7 @@ export function Header() {
                   activeMenu === "resources" ? "text-primary" : "text-foreground hover:text-primary"
                 )}
               >
-                Recursos
+                {t("nav.resources")}
                 <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", activeMenu === "resources" && "rotate-180")} />
               </button>
             </nav>
@@ -141,7 +136,7 @@ export function Header() {
                         </Link>
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent>Portal Cliente</TooltipContent>
+                    <TooltipContent>{t("nav.customerPortal")}</TooltipContent>
                   </Tooltip>
 
                   <Tooltip>
@@ -150,7 +145,7 @@ export function Header() {
                         <LogOut className="h-4 w-4" />
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent>Cerrar sesión</TooltipContent>
+                    <TooltipContent>{t("nav.signOut")}</TooltipContent>
                   </Tooltip>
                 </>
               ) : (
@@ -162,18 +157,18 @@ export function Header() {
                       </Link>
                     </Button>
                   </TooltipTrigger>
-                  <TooltipContent>Portal Cliente</TooltipContent>
+                  <TooltipContent>{t("nav.customerPortal")}</TooltipContent>
                 </Tooltip>
               )}
 
               <Button size="sm" variant="outline" asChild className="border-border bg-background text-foreground hover:bg-muted hover:text-foreground">
-                <Link to="/contact">Contactar</Link>
+                <Link to="/contact">{t("nav.contact")}</Link>
               </Button>
 
               <Button size="sm" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link to="/pricing" className="gap-1.5">
                   <ShoppingCart className="h-3.5 w-3.5" />
-                  Comprar
+                  {t("nav.buy")}
                 </Link>
               </Button>
             </div>
@@ -182,7 +177,7 @@ export function Header() {
             <button
               className="lg:hidden p-2 -mr-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Abrir menú"
+              aria-label={t("nav.openMenu")}
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6 text-foreground" />

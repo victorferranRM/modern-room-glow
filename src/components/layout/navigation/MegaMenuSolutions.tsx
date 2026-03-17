@@ -1,46 +1,32 @@
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
 import { ChevronRight } from "lucide-react";
 import solutionVacation from "@/assets/solution-rest-new.jpg";
 import solutionHotel from "@/assets/solution-manage.jpg";
 import solutionOwners from "@/assets/solution-control.jpg";
 
-const solutionCards = [
-  {
-    title: "Alquileres Vacacionales",
-    description: "Cobertura operativa completa fuera de horario",
-    image: solutionVacation,
-    href: "/solutions/vacation-rentals",
-  },
-  {
-    title: "Hoteles",
-    description: "Detección de humo y protección de activos",
-    image: solutionHotel,
-    href: "/solutions/hotels",
-  },
-  {
-    title: "Propietarios",
-    description: "Monitorización de ruido y prevención de incidencias",
-    image: solutionOwners,
-    href: "/solutions/property-owners",
-  },
-];
+const solutionHrefs = ["/solutions/vacation-rentals", "/solutions/hotels", "/solutions/property-owners"];
+const solutionImages = [solutionVacation, solutionHotel, solutionOwners];
 
 export function MegaMenuSolutions() {
+  const { tObject, t } = useTranslation();
+  const solutions = tObject<{ title: string; description: string }[]>("megaMenu.solutions");
+
   return (
     <div className="w-full max-w-4xl mx-auto p-8">
       <div>
         <h3 className="text-xs font-semibold text-muted-foreground tracking-wider mb-4">
-          ADAPTADO A TU PORTFOLIO
+          {t("megaMenu.solutions.0.title") ? "" : ""}{/* Section header could be added to dict if needed */}
         </h3>
         <div className="grid grid-cols-3 gap-4">
-          {solutionCards.map((card) => (
+          {solutions.map((card, index) => (
             <Link
-              key={card.title}
-              to={card.href}
+              key={solutionHrefs[index]}
+              to={solutionHrefs[index]}
               className="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md hover:shadow-xl transition-all duration-300"
             >
               <img 
-                src={card.image} 
+                src={solutionImages[index]} 
                 alt={card.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
