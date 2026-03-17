@@ -1,30 +1,41 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { AnimatedSection } from "@/components/ui/animated-section";
 
 export function ClosingSection() {
   return (
-    <section className="relative py-32 lg:py-40 overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80')` }} />
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight text-balance">
+    <section className="relative bg-foreground text-background py-20 lg:py-28 overflow-hidden">
+      {/* Glow orbs */}
+      <div className="absolute top-0 left-1/4 w-80 h-80 bg-primary/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary/8 rounded-full blur-[100px]" />
+
+      {/* Noise texture */}
+      <div className="absolute inset-0 opacity-[0.04]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
+      }} />
+
+      <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
+        <AnimatedSection>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-balance mb-6">
             El Property Management moderno{" "}
             <span className="text-primary">no se hace en solitario.</span>
           </h2>
-          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-background/60 max-w-2xl mx-auto leading-relaxed mb-10">
             Únete a los gestores profesionales que han dejado de apagar fuegos para centrarse en el crecimiento estratégico.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="text-base px-8 py-6 bg-white text-black font-semibold hover:bg-gray-100 shadow-lg" asChild>
-              <Link to="/contact">Hablar con un experto</Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" asChild className="bg-background text-foreground hover:bg-background/90 text-base px-8 py-6">
+              <Link to="/contact" className="gap-2">
+                Hablar con un experto
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 border-2 border-white bg-transparent text-white font-semibold hover:bg-white hover:text-black transition-colors" asChild>
-              <Link to="/pricing">Ver planes y precios<ArrowRight className="w-4 h-4 ml-2" /></Link>
+            <Button size="lg" variant="outline" asChild className="border-background/30 bg-transparent text-background hover:bg-background/10 text-base px-8 py-6">
+              <Link to="/pricing">Ver planes y precios</Link>
             </Button>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

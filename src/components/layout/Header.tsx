@@ -166,7 +166,7 @@ export function Header() {
                 </Tooltip>
               )}
 
-              <Button size="sm" variant="outline" asChild className="border-border bg-background text-foreground hover:bg-muted">
+              <Button size="sm" variant="outline" asChild className="border-border bg-background text-foreground hover:bg-muted hover:text-foreground">
                 <Link to="/contact">Contactar</Link>
               </Button>
 
