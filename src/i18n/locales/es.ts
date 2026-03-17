@@ -861,6 +861,7 @@ const es = {
     ctaTitle: "¿Listo para empezar?",
     ctaDescription: "Únete a miles de gestores de propiedades que confían en Roomonitor para proteger sus activos y deleitar a sus huéspedes.",
     requestDemo: "Solicitar una Demo",
+    viewPricing: "Ver Precios",
   },
   hero: {
     badge: "Infraestructura operativa para propiedades turísticas",
