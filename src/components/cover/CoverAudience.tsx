@@ -4,27 +4,31 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
+import imgApartments from "@/assets/audience-apartments.jpg";
+import imgManagement from "@/assets/audience-management.jpg";
+import imgHotel from "@/assets/audience-hotel.jpg";
+
 const profiles = [
   {
     icon: Building2,
     title: "Gestor de +50 propiedades",
     desc: "Tu equipo no puede cubrir las noches. Cover se convierte en tu equipo nocturno.",
     stat: "+50 propiedades",
-    gradient: "from-[#e8ddd0] to-[#d9cdbf]",
+    img: imgApartments,
   },
   {
     icon: Users,
     title: "Empresa de property management",
     desc: "Ofreces gestión integral. Cover es tu back-office nocturno, con tus protocolos.",
     stat: "24/7 cobertura",
-    gradient: "from-[#dce4e0] to-[#c8d5ce]",
+    img: imgManagement,
   },
   {
     icon: Globe,
     title: "Cadena o grupo hotelero",
     desc: "Múltiples ubicaciones, mismo nivel de servicio. Consistencia operativa garantizada.",
     stat: "8 ciudades",
-    gradient: "from-[#e0d8e4] to-[#d0c5d6]",
+    img: imgHotel,
   },
 ];
 
@@ -48,12 +52,23 @@ export function CoverAudience() {
             return (
               <AnimatedSection key={i} delay={i * 150}>
                 <div className="group rounded-2xl overflow-hidden border border-border/60 bg-background shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-400 h-full flex flex-col">
-                  {/* Visual top half */}
-                  <div className={`bg-gradient-to-br ${profile.gradient} flex items-center justify-center py-14 lg:py-16`}>
-                    <Icon
-                      className="w-16 h-16 lg:w-20 lg:h-20 text-foreground/70 transition-transform duration-500 group-hover:scale-110"
-                      strokeWidth={1.2}
+                  {/* Image top half with overlay + icon */}
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img
+                      src={profile.img}
+                      alt={profile.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-foreground/25" />
+                    {/* Icon centered on image */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Icon
+                        className="w-14 h-14 lg:w-16 lg:h-16 text-primary drop-shadow-lg transition-transform duration-500 group-hover:scale-110"
+                        strokeWidth={1.4}
+                      />
+                    </div>
                   </div>
 
                   {/* Content bottom half */}
