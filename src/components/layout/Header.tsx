@@ -166,15 +166,15 @@ export function Header() {
                 </Tooltip>
               )}
 
-              <Button variant="outline" size="sm" asChild>
+              <Button size="sm" variant="outline" asChild className="border-border bg-background text-foreground hover:bg-muted">
+                <Link to="/contact">Contactar</Link>
+              </Button>
+
+              <Button size="sm" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link to="/pricing" className="gap-1.5">
                   <ShoppingCart className="h-3.5 w-3.5" />
                   Comprar
                 </Link>
-              </Button>
-
-              <Button size="sm" asChild>
-                <Link to="/contact">Contactar</Link>
               </Button>
             </div>
 
