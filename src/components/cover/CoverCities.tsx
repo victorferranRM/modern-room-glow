@@ -25,7 +25,7 @@ const cities = [
 
 export function CoverCities() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-secondary/50">
       <div className="container mx-auto px-4 max-w-6xl">
         <AnimatedSection className="text-center mb-16">
           <Badge variant="outline" className="mb-4">Cobertura</Badge>
