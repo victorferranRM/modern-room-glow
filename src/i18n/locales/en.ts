@@ -537,8 +537,9 @@ const en = {
     heroTitle: "Reads for top property operators",
     heroSubtitle: "Everything we know about staying ahead of problems, guests and the market.",
     featured: "Featured",
-    readTime: "min read",
-    readTimeShort: "min",
+    readTime: "{min} min read",
+    readTimeShort: "{min} min",
+    readMore: "Read more",
     latestArticles: "Latest articles",
     searchPlaceholder: "Search articles...",
     noResults: "No articles found matching your criteria.",
@@ -547,6 +548,7 @@ const en = {
     startWithRoomonitor: "Get started with Roomonitor and ensure peace of mind for you and your neighbours.",
     allCategories: "All categories",
     categories: ["All categories","Vacation Rentals","Events","Industry News","Property Management","Hotels","Roomonitor"],
+    dateLocale: "en-US",
   },
   services: {
     controlCenter: {
