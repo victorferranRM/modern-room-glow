@@ -1,32 +1,15 @@
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
 import { Button } from "@/components/ui/button";
-import { 
-  Flame, Shield, ArrowRight, Check, Ban,
-  AlertTriangle, FileCheck
-} from "lucide-react";
-
+import { Flame, Shield, ArrowRight, Check, Ban, AlertTriangle, FileCheck } from "lucide-react";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
 import monitoringSmoke from "@/assets/monitoring-air.jpg";
 import managerDevices from "@/assets/manager-devices.png";
 
-const smokeFeatures = [
-  { icon: AlertTriangle, title: "Alertas instantáneas de humo", description: "Detecta humo de cigarrillo y vapeo en el momento en que se produce en tu propiedad." },
-  { icon: Ban, title: "Cumplimiento de políticas", description: "Aplica las políticas de no fumadores de forma efectiva con detección en tiempo real." },
-  { icon: Shield, title: "Protección del activo", description: "Prevén daños por humo, olores persistentes y costosas limpiezas profundas." },
-  { icon: FileCheck, title: "Documentación de incidentes", description: "Mantén registros de incidentes de tabaquismo para infracciones de políticas y disputas." },
-];
-
-const howItWorks = [
-  { step: "01", title: "Instala el sensor", description: "Instala el dispositivo Roomonitor — incluye detección de humo junto con otros sensores." },
-  { step: "02", title: "Análisis de calidad del aire", description: "Sensores avanzados monitorizan continuamente partículas en el aire y firmas de humo." },
-  { step: "03", title: "Detección inteligente", description: "Distingue entre humo de cigarrillo, vapeo y actividades inofensivas como cocinar." },
-  { step: "04", title: "Respuesta inmediata", description: "Recibe alertas instantáneas y mensajería automática al huésped para abordar las infracciones." },
-];
-
-
+const featureIcons = [AlertTriangle, Ban, Shield, FileCheck];
 
 function ManagerCheckItem({ text }: { text: string }) {
   return (
@@ -40,30 +23,21 @@ function ManagerCheckItem({ text }: { text: string }) {
 }
 
 export default function SmokeDetection() {
+  const { t, tObject } = useTranslation();
+  const stats = tObject<{ value: string; label: string }[]>('monitoringSmoke.stats');
+  const features = tObject<{ title: string; description: string }[]>('monitoringSmoke.features');
+  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringSmoke.howItWorks');
+  const managerFeatures = tObject<string[]>('monitoringSmoke.managerFeatures');
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      <MonitoringHero
-        icon={Flame}
-        badge="Detección de Humo"
-        title="Protege tu propiedad"
-        titleHighlight="del daño por humo"
-        description="Detecta infracciones de tabaquismo al instante, aplica políticas de no fumadores y protege tu propiedad de daños costosos y limpiezas profundas."
-        image={monitoringSmoke}
-        imageAlt="Detección de humo de tabaco"
-        breadcrumbLabel="Detección de Humo"
-      />
+      <MonitoringHero icon={Flame} badge={t('monitoringSmoke.badge')} title={t('monitoringSmoke.title')} titleHighlight={t('monitoringSmoke.titleHighlight')} description={t('monitoringSmoke.description')} image={monitoringSmoke} imageAlt={t('monitoringSmoke.badge')} breadcrumbLabel={t('monitoringSmoke.breadcrumb')} />
 
       <section className="py-12 bg-secondary/30 border-y">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "€500+", label: "Ahorro por incidente" },
-              { value: "<30s", label: "Tiempo de detección" },
-              { value: "95%", label: "Cumplimiento de política" },
-              { value: "24/7", label: "Protección" },
-            ].map((stat, i) => (
+            {stats.map((stat, i) => (
               <AnimatedSection key={i} delay={i * 100} className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -76,25 +50,20 @@ export default function SmokeDetection() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Características principales</p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Tecnología avanzada de detección de humo</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nuestros sensores distinguen entre humo perjudicial y actividades normales, 
-              asegurando una detección precisa sin falsas alarmas.
-            </p>
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">{t('monitoringSmoke.featuresEyebrow')}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringSmoke.featuresTitle')}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('monitoringSmoke.featuresSubtitle')}</p>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {smokeFeatures.map((feature, i) => (
-              <AnimatedSection key={feature.title} delay={i * 100}>
+            {features.map((feature, i) => { const Icon = featureIcons[i]; return (
+              <AnimatedSection key={i} delay={i * 100}>
                 <div className="p-6 rounded-2xl bg-card border h-full hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4"><Icon className="w-6 h-6 text-primary" /></div>
                   <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
                   <p className="text-muted-foreground text-sm">{feature.description}</p>
                 </div>
               </AnimatedSection>
-            ))}
+            ); })}
           </div>
         </div>
       </section>
@@ -102,24 +71,19 @@ export default function SmokeDetection() {
       <section className="py-20 lg:py-28 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Cómo funciona</p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">De la detección a la resolución</h2>
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">{t('monitoringSmoke.howItWorksEyebrow')}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringSmoke.howItWorksTitle')}</h2>
           </AnimatedSection>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {howItWorks.map((step, i) => (
-                <AnimatedSection key={step.step} delay={i * 100}>
-                  <div className="flex gap-4 p-6 rounded-2xl bg-card border">
-                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold shrink-0">{step.step}</div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                      <p className="text-muted-foreground text-sm">{step.description}</p>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
+          <div className="max-w-4xl mx-auto"><div className="grid md:grid-cols-2 gap-6">
+            {howItWorks.map((step, i) => (
+              <AnimatedSection key={i} delay={i * 100}>
+                <div className="flex gap-4 p-6 rounded-2xl bg-card border">
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold shrink-0">{step.step}</div>
+                  <div><h3 className="text-lg font-semibold mb-2">{step.title}</h3><p className="text-muted-foreground text-sm">{step.description}</p></div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div></div>
         </div>
       </section>
 
@@ -127,34 +91,16 @@ export default function SmokeDetection() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Roomonitor Manager</p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Monitoriza la calidad del aire en tiempo real</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Sigue los eventos de detección de humo, visualiza métricas de calidad del aire y gestiona 
-                las respuestas a incidentes desde tu panel centralizado.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <ManagerCheckItem text="Alertas de eventos de humo en tiempo real" />
-                <ManagerCheckItem text="Historial de registros de calidad del aire" />
-                <ManagerCheckItem text="Notificaciones automáticas a huéspedes" />
-                <ManagerCheckItem text="Documentación de incidentes para disputas" />
-              </ul>
-              <Button asChild>
-                <Link to="/how-it-works">
-                  Explorar Manager
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">{t('monitoringSmoke.managerEyebrow')}</p>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringSmoke.managerTitle')}</h2>
+              <p className="text-lg text-muted-foreground mb-6">{t('monitoringSmoke.managerDescription')}</p>
+              <ul className="space-y-3 mb-8">{managerFeatures.map((text, i) => <ManagerCheckItem key={i} text={text} />)}</ul>
+              <Button asChild><LocalizedLink to="/how-it-works">{t('shared.exploreManager')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
             </AnimatedSection>
-
             <AnimatedSection delay={200}>
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
-                <img
-                  src={managerDevices}
-                  alt="Panel de Roomonitor Manager"
-                  className="relative w-full rounded-2xl shadow-lg border border-border/50"
-                />
+                <img src={managerDevices} alt={t('monitoringSmoke.managerEyebrow')} className="relative w-full rounded-2xl shadow-lg border border-border/50" />
               </div>
             </AnimatedSection>
           </div>
@@ -164,19 +110,15 @@ export default function SmokeDetection() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">¿Listo para aplicar políticas libres de humo?</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Protege tu propiedad del daño por humo y asegura que los huéspedes respeten 
-              tus normas de no fumadores con la detección inteligente de Roomonitor.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringSmoke.ctaTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-8">{t('monitoringSmoke.ctaDescription')}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild><Link to="/pricing">Ver precios<ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
-              <Button size="lg" variant="outline" asChild><Link to="/contact">Solicitar una demo</Link></Button>
+              <Button size="lg" asChild><LocalizedLink to="/pricing">{t('shared.viewPricing')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
+              <Button size="lg" variant="outline" asChild><LocalizedLink to="/contact">{t('shared.requestDemo')}</LocalizedLink></Button>
             </div>
           </AnimatedSection>
         </div>
       </section>
-
       <Footer />
     </div>
   );
