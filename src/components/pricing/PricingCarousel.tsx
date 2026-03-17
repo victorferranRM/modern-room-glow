@@ -1,29 +1,11 @@
-import { useState, useCallback, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
-import { 
-  ArrowRight, 
-  MessageSquare, 
-  Bell,
-  Smartphone,
-  Mail,
-  Zap,
-  PhoneCall,
-  Headphones,
-  Clock,
-  Check,
-  Home,
-  Users,
-  Shield,
-  BarChart3,
-  Moon,
-  MapPin,
-  FileText,
-  AlertCircle,
-  KeyRound
-} from "lucide-react";
-
+import { ArrowRight, MessageSquare, Bell, Smartphone, Mail, Zap, PhoneCall, Headphones, Clock, Check, Users, BarChart3, Moon, MapPin, FileText, AlertCircle, KeyRound } from "lucide-react";
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { useNavigate } from "react-router-dom";
+import { useCallback, useEffect } from "react";
 
 interface PricingCarouselProps {
   properties: number;
@@ -33,20 +15,22 @@ interface PricingCarouselProps {
   proMonthlyTotal: number;
 }
 
-export function PricingCarousel({ 
-  properties, 
-  isEnterprise, 
-  basicDeviceTotal, 
-  basicMonthlyTotal, 
-  proMonthlyTotal 
-}: PricingCarouselProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    align: "center",
-    containScroll: "trimSnaps",
-    loop: false
-  });
+const planIcons = {
+  basic: [Bell, Zap, Smartphone, Mail],
+  pro: [Check, PhoneCall, Headphones, Clock],
+  enterprise: [Check, BarChart3, PhoneCall, Moon, MapPin, FileText, AlertCircle, KeyRound, Users],
+};
+
+export function PricingCarousel({ properties, isEnterprise, basicDeviceTotal, basicMonthlyTotal, proMonthlyTotal }: PricingCarouselProps) {
+  const { t, tObject } = useTranslation();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "center", containScroll: "trimSnaps", loop: false });
   const [selectedIndex, setSelectedIndex] = useState(1);
   const navigate = useNavigate();
+
+  const plans = tObject<Record<string, { name: string; subtitle: string; features: string[] }>>('pricing.plans');
+  const basic = plans?.basic;
+  const pro = plans?.pro;
+  const enterprise = plans?.enterprise;
 
   const goToCheckout = (plan: "basic" | "pro") => {
     navigate(`/checkout?plan=${plan}&properties=${properties}`);
@@ -62,119 +46,67 @@ export function PricingCarousel({
     onSelect();
     emblaApi.on("select", onSelect);
     emblaApi.scrollTo(1, false);
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
+    return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi, onSelect]);
 
-  const plans = [
-    {
-      key: "basic",
-      name: "Noise Alarm",
-      subtitle: "Dispositivo + suscripción de monitorización",
-      features: [
-        { icon: Bell, text: "Dispositivo de monitorización Roomonitor" },
-        { icon: Zap, text: "Alertas en tiempo real" },
-        { icon: Smartphone, text: "Dashboard y app móvil" },
-        { icon: Mail, text: "Notificaciones email y push" },
-      ],
-      popular: false,
-    },
-    {
-      key: "pro",
-      name: "Alarm Assistant",
-      subtitle: "Todo lo de Noise Alarm + monitorización 24/7",
-      features: [
-        { icon: Check, text: "Todo lo de Noise Alarm" },
-        { icon: PhoneCall, text: "Alarm Assistant" },
-        { icon: Headphones, text: "Agentes humanos monitorizando alarmas" },
-        { icon: Clock, text: "Gestión de alarmas 24/7" },
-      ],
-      popular: true,
-    },
-    {
-      key: "enterprise",
-      name: "Guest & Property Services",
-      subtitle: "Gestión operativa completa",
-      features: [
-        { icon: Check, text: "Todo lo de Alarm Assistant" },
-        { icon: BarChart3, text: "Centro de Control 24/7 con agentes dedicados" },
-        { icon: PhoneCall, text: "Atención telefónica a huéspedes en tu nombre" },
-        { icon: Moon, text: "Night Watch: prevención activa de fiestas" },
-        { icon: MapPin, text: "Field Service: intervención presencial en 8 ciudades" },
-        { icon: FileText, text: "Protocolos operativos personalizados por propiedad" },
-        { icon: AlertCircle, text: "Gestión de incidencias de extremo a extremo" },
-        { icon: KeyRound, text: "Apoyo en accesos y check-ins" },
-        { icon: Users, text: "Servicio de conserjería" },
-      ],
-      popular: false,
-    },
+  const planList = [
+    { key: "basic" as const, data: basic, icons: planIcons.basic, popular: false },
+    { key: "pro" as const, data: pro, icons: planIcons.pro, popular: true },
+    { key: "enterprise" as const, data: enterprise, icons: planIcons.enterprise, popular: false },
   ];
 
   const renderPrice = (planKey: string) => {
     if (planKey === "basic") {
-      if (isEnterprise) {
-        return <div className="text-2xl font-bold text-foreground">Contactar ventas</div>;
-      }
+      if (isEnterprise) return <div className="text-2xl font-bold text-foreground">{t('pricing.contactSales')}</div>;
       return (
         <div className="space-y-3">
           <div className="space-y-1">
             <div className="flex items-baseline gap-2">
               <span className="text-lg text-muted-foreground line-through">€90</span>
               <span className="text-3xl font-bold text-foreground">€45</span>
-              <span className="text-sm text-muted-foreground">pago único</span>
+              <span className="text-sm text-muted-foreground">{t('pricing.oneTimePayment')}</span>
             </div>
-            <div className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-0.5 rounded">
-              Precio exclusivo web
-            </div>
+            <div className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-0.5 rounded">{t('pricing.webExclusive')}</div>
           </div>
           <div className="pt-2 border-t border-border">
             <div className="flex items-baseline gap-1">
               <span className="text-2xl font-bold text-foreground">€13</span>
-              <span className="text-muted-foreground text-sm">/ mes por propiedad</span>
+              <span className="text-muted-foreground text-sm">{t('pricing.perMonth')}</span>
             </div>
           </div>
           {properties > 1 && (
             <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
-              {properties} propiedades: €{basicDeviceTotal} pago único + €{basicMonthlyTotal}/mes
+              {t('pricing.propertiesLabel', { n: String(properties), device: String(basicDeviceTotal), monthly: String(basicMonthlyTotal) })}
             </p>
           )}
         </div>
       );
     }
-    
     if (planKey === "pro") {
-      if (isEnterprise) {
-        return <div className="text-2xl font-bold text-foreground">Contactar ventas</div>;
-      }
+      if (isEnterprise) return <div className="text-2xl font-bold text-foreground">{t('pricing.contactSales')}</div>;
       return (
         <div className="space-y-3">
           <div className="flex items-baseline gap-1">
             <span className="text-3xl font-bold text-foreground">€29,90</span>
-            <span className="text-muted-foreground text-sm">/ mes por propiedad</span>
+            <span className="text-muted-foreground text-sm">{t('pricing.perMonth')}</span>
           </div>
-          <p className="text-sm text-muted-foreground">
-            + €45 pago único por dispositivo (exclusivo web)
-          </p>
+          <p className="text-sm text-muted-foreground">{t('pricing.carousel.plusDevice')}</p>
           {properties > 1 && (
             <p className="text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
-              {properties} propiedades: €{basicDeviceTotal} pago único + €{proMonthlyTotal.toFixed(2).replace('.00', '')}/mes
+              {t('pricing.propertiesLabel', { n: String(properties), device: String(basicDeviceTotal), monthly: proMonthlyTotal.toFixed(2).replace('.00', '') })}
             </p>
           )}
         </div>
       );
     }
-    
     return (
       <div className="space-y-2">
         <div className="flex items-baseline gap-1">
-          <span className="text-sm text-muted-foreground">Desde</span>
+          <span className="text-sm text-muted-foreground">{t('pricing.from')}</span>
           <span className="text-3xl font-bold text-foreground">€79,90</span>
-          <span className="text-muted-foreground text-sm">/ propiedad</span>
+          <span className="text-muted-foreground text-sm">{t('pricing.perProperty')}</span>
         </div>
-        <p className="text-sm text-muted-foreground">
-          Precio variable según tamaño del portfolio
-        </p>
+        <p className="text-sm text-muted-foreground">{t('pricing.variablePrice')}</p>
       </div>
     );
   };
@@ -183,20 +115,16 @@ export function PricingCarousel({
     if (planKey === "enterprise" || isEnterprise) {
       return (
         <Button className="w-full" size="lg" variant="outline" asChild>
-          <Link to="/contact?inquiry=enterprise">
+          <LocalizedLink to="/contact?inquiry=enterprise">
             <MessageSquare className="w-4 h-4 mr-2" />
-            Hablar con un especialista
-          </Link>
+            {t('pricing.talkToSpecialist')}
+          </LocalizedLink>
         </Button>
       );
     }
     return (
-      <Button 
-        className={`w-full ${planKey === "pro" ? "shadow-soft" : ""}`} 
-        size="lg" 
-        onClick={() => goToCheckout(planKey as "basic" | "pro")}
-      >
-        Comprar ahora
+      <Button className={`w-full ${planKey === "pro" ? "shadow-soft" : ""}`} size="lg" onClick={() => goToCheckout(planKey as "basic" | "pro")}>
+        {t('pricing.buyNow')}
         <ArrowRight className="w-4 h-4 ml-2" />
       </Button>
     );
@@ -206,44 +134,35 @@ export function PricingCarousel({
     <div className="lg:hidden">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {plans.map((plan, index) => (
-            <div 
-              key={plan.key} 
-              className="flex-[0_0_85%] min-w-0 pl-4 first:pl-4"
-            >
-              <div 
-                className={`
-                  relative bg-card border rounded-2xl p-6 shadow-soft h-full transition-all duration-300
-                  ${plan.popular ? "border-2 border-primary" : ""}
-                  ${plan.key === "enterprise" ? "bg-gradient-to-br from-secondary to-muted" : ""}
-                  ${selectedIndex === index ? "scale-100 opacity-100" : "scale-95 opacity-70"}
-                `}
-              >
+          {planList.map((plan, index) => (
+            <div key={plan.key} className="flex-[0_0_85%] min-w-0 pl-4 first:pl-4">
+              <div className={`relative bg-card border rounded-2xl p-6 shadow-soft h-full transition-all duration-300
+                ${plan.popular ? "border-2 border-primary" : ""}
+                ${plan.key === "enterprise" ? "bg-gradient-to-br from-secondary to-muted" : ""}
+                ${selectedIndex === index ? "scale-100 opacity-100" : "scale-95 opacity-70"}
+              `}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">
-                      Más popular
-                    </span>
+                    <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">{t('pricing.mostPopular')}</span>
                   </div>
                 )}
-
                 <div className="space-y-6">
                   <div className={plan.popular ? "pt-2" : ""}>
-                    <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{plan.subtitle}</p>
+                    <h3 className="text-xl font-bold text-foreground">{plan.data?.name}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{plan.data?.subtitle}</p>
                   </div>
-
                   {renderPrice(plan.key)}
-
                   <ul className="space-y-3">
-                    {plan.features.map((feature) => (
-                      <li key={feature.text} className="flex items-start gap-3">
-                        <feature.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{feature.text}</span>
-                      </li>
-                    ))}
+                    {plan.data?.features.map((feature, fi) => {
+                      const Icon = plan.icons[fi] || Check;
+                      return (
+                        <li key={fi} className="flex items-start gap-3">
+                          <Icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-sm text-foreground">{feature}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
-
                   {renderCTA(plan.key)}
                 </div>
               </div>
@@ -251,27 +170,15 @@ export function PricingCarousel({
           ))}
         </div>
       </div>
-
       <div className="flex justify-center gap-2 mt-6">
-        {plans.map((plan, index) => (
-          <button
-            key={plan.key}
-            onClick={() => emblaApi?.scrollTo(index)}
-            className={`
-              w-2.5 h-2.5 rounded-full transition-all duration-300
-              ${selectedIndex === index 
-                ? "bg-primary w-6" 
-                : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-              }
-            `}
-            aria-label={`Ir al plan ${plan.name}`}
+        {planList.map((plan, index) => (
+          <button key={plan.key} onClick={() => emblaApi?.scrollTo(index)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${selectedIndex === index ? "bg-primary w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`}
+            aria-label={`${t('pricing.carousel.goToPlan')} ${plan.data?.name}`}
           />
         ))}
       </div>
-
-      <p className="text-center text-xs text-muted-foreground mt-3">
-        Desliza para comparar planes
-      </p>
+      <p className="text-center text-xs text-muted-foreground mt-3">{t('pricing.carousel.swipeToCompare')}</p>
     </div>
   );
 }
