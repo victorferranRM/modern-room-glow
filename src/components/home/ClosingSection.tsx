@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
+import { useTranslation } from "@/i18n/useTranslation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 
 export function ClosingSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative bg-foreground text-background py-20 lg:py-28 overflow-hidden">
       {/* Glow orbs */}
@@ -18,21 +21,21 @@ export function ClosingSection() {
       <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
         <AnimatedSection>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-balance mb-6">
-            El Property Management moderno{" "}
-            <span className="text-primary">no se hace en solitario.</span>
+            {t("home.closing.title")}{" "}
+            <span className="text-primary">{t("home.closing.titleHighlight")}</span>
           </h2>
           <p className="text-lg sm:text-xl text-background/60 max-w-2xl mx-auto leading-relaxed mb-10">
-            Únete a los gestores profesionales que han dejado de apagar fuegos para centrarse en el crecimiento estratégico.
+            {t("home.closing.description")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="bg-background text-foreground hover:bg-background/90 text-base px-8 py-6">
               <Link to="/contact" className="gap-2">
-                Hablar con un experto
+                {t("home.closing.ctaPrimary")}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-background/30 bg-transparent text-background hover:bg-background/10 text-base px-8 py-6">
-              <Link to="/pricing">Ver planes y precios</Link>
+              <Link to="/pricing">{t("home.closing.ctaSecondary")}</Link>
             </Button>
           </div>
         </AnimatedSection>
