@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Header } from "@/components/layout/Header";
@@ -15,53 +15,33 @@ import {
   Plus,
   Loader2
 } from "lucide-react";
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
-const PLANS = {
-  basic: {
-    name: "Noise Alarm",
-    description: "Dispositivo + suscripción de monitorización",
-    devicePrice: 45,
-    originalDevicePrice: 90,
-    monthlyPrice: 13,
-    features: [
-      "Dispositivo de monitorización Roomonitor",
-      "Alertas en tiempo real",
-      "Dashboard y app móvil",
-      "Notificaciones email y push",
-    ],
-  },
-  pro: {
-    name: "Alarm Assistant",
-    description: "Todo lo de Noise Alarm + monitorización 24/7",
-    devicePrice: 45,
-    originalDevicePrice: 90,
-    monthlyPrice: 29.90,
-    features: [
-      "Todo lo de Noise Alarm",
-      "Alarm Assistant",
-      "Agentes humanos monitorizando alarmas",
-      "Gestión de alarmas 24/7",
-    ],
-  },
+const PLAN_PRICES = {
+  basic: { devicePrice: 45, originalDevicePrice: 90, monthlyPrice: 13 },
+  pro: { devicePrice: 45, originalDevicePrice: 90, monthlyPrice: 29.90 },
 };
 
-type PlanType = keyof typeof PLANS;
+type PlanType = keyof typeof PLAN_PRICES;
 
 export default function Checkout() {
+  const { t, tObject } = useTranslation();
   const [searchParams] = useSearchParams();
   const planParam = searchParams.get("plan") as PlanType | null;
   const propertiesParam = searchParams.get("properties");
   
-  const initialPlan = planParam && PLANS[planParam] ? planParam : "basic";
+  const initialPlan = planParam && PLAN_PRICES[planParam] ? planParam : "basic";
   const initialProperties = propertiesParam ? Math.min(Math.max(parseInt(propertiesParam) || 1, 1), 10) : 1;
   
   const [currentPlan, setCurrentPlan] = useState<PlanType>(initialPlan);
   const [properties, setProperties] = useState(initialProperties);
   
-  const selectedPlan = PLANS[currentPlan];
-  const deviceTotal = selectedPlan.devicePrice * properties;
-  const originalDeviceTotal = selectedPlan.originalDevicePrice * properties;
-  const monthlyTotal = selectedPlan.monthlyPrice * properties;
+  const prices = PLAN_PRICES[currentPlan];
+  const planData = tObject<{ name: string; description: string; features: string[] }>(`checkout.plans.${currentPlan}`);
+  const deviceTotal = prices.devicePrice * properties;
+  const originalDeviceTotal = prices.originalDevicePrice * properties;
+  const monthlyTotal = prices.monthlyPrice * properties;
   const savings = originalDeviceTotal - deviceTotal;
 
   const incrementProperties = () => {
@@ -84,29 +64,28 @@ export default function Checkout() {
       successUrl: `${window.location.origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancelUrl: `${window.location.origin}/checkout?plan=${currentPlan}&properties=${properties}`,
     };
-    console.log("handleCheckout: invoking create-checkout with", requestBody);
     
     try {
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: requestBody,
       });
 
-      console.log("handleCheckout: response data", data, "error", error);
-
       if (error) throw error;
       if (data?.url) {
-        console.log("handleCheckout: redirecting to", data.url);
         window.location.href = data.url;
       } else {
         throw new Error("No checkout URL returned");
       }
     } catch (err: any) {
       console.error("handleCheckout: error", err);
-      toast.error("Error al iniciar el pago. Inténtalo de nuevo.");
+      toast.error(t('checkout.paymentError'));
     } finally {
       setCheckoutLoading(false);
     }
   };
+
+  const propertyLabel = properties === 1 ? t('checkout.propertyLabel') : t('checkout.propertiesLabel');
+  const deviceLabel = properties === 1 ? t('checkout.deviceLabel') : t('checkout.devicesLabel');
 
   return (
     <div className="min-h-screen bg-background">
@@ -115,32 +94,33 @@ export default function Checkout() {
       <main className="pt-24 lg:pt-32 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Link 
+            <LocalizedLink 
               to="/pricing" 
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
-              Volver a precios
-            </Link>
+              {t('checkout.backToPricing')}
+            </LocalizedLink>
 
             <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
               <div className="lg:col-span-3 space-y-6">
                 <div>
                   <h1 className="text-3xl font-bold text-foreground mb-2">
-                    Completa tu pedido
+                    {t('checkout.completeOrder')}
                   </h1>
                   <p className="text-muted-foreground">
-                    Estás comprando el plan {selectedPlan.name} para {properties} {properties === 1 ? "propiedad" : "propiedades"}
+                    {t('checkout.orderDescription', { plan: planData.name, count: String(properties), label: propertyLabel })}
                   </p>
                 </div>
 
                 {/* Plan Switcher */}
                 <div className="bg-card border rounded-2xl p-6 shadow-soft">
                   <div className="mb-6">
-                    <p className="text-sm font-medium text-muted-foreground mb-3">Selecciona tu plan</p>
+                    <p className="text-sm font-medium text-muted-foreground mb-3">{t('checkout.selectPlan')}</p>
                     <div className="grid grid-cols-2 gap-3">
-                      {(Object.keys(PLANS) as PlanType[]).map((planKey) => {
-                        const planData = PLANS[planKey];
+                      {(Object.keys(PLAN_PRICES) as PlanType[]).map((planKey) => {
+                        const pd = tObject<{ name: string; description: string }>(`checkout.plans.${planKey}`);
+                        const pp = PLAN_PRICES[planKey];
                         const isSelected = currentPlan === planKey;
                         return (
                           <button
@@ -154,7 +134,7 @@ export default function Checkout() {
                           >
                             {planKey === "pro" && (
                               <span className="absolute -top-2.5 left-3 bg-primary text-primary-foreground text-[10px] font-medium px-2 py-0.5 rounded-full">
-                                Más popular
+                                {t('checkout.mostPopular')}
                               </span>
                             )}
                             <div className="flex items-center gap-2 mb-2">
@@ -165,13 +145,13 @@ export default function Checkout() {
                                   <div className="w-2 h-2 rounded-full bg-primary" />
                                 )}
                               </div>
-                              <span className="font-semibold text-foreground">{planData.name}</span>
+                              <span className="font-semibold text-foreground">{pd.name}</span>
                             </div>
                             <p className="text-lg font-bold text-foreground">
-                              €{planData.monthlyPrice.toFixed(2).replace('.00', '')}
-                              <span className="text-sm font-normal text-muted-foreground">/mes</span>
+                              €{pp.monthlyPrice.toFixed(2).replace('.00', '')}
+                              <span className="text-sm font-normal text-muted-foreground">{t('checkout.month')}</span>
                             </p>
-                            <p className="text-xs text-muted-foreground mt-1">{planData.description}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{pd.description}</p>
                           </button>
                         );
                       })}
@@ -183,8 +163,8 @@ export default function Checkout() {
                     <div className="flex items-center gap-3">
                       <Building2 className="w-5 h-5 text-primary" />
                       <div>
-                        <p className="font-medium text-foreground">Propiedades</p>
-                        <p className="text-sm text-muted-foreground">{properties} {properties === 1 ? "dispositivo" : "dispositivos"} de monitorización incluidos</p>
+                        <p className="font-medium text-foreground">{t('checkout.properties')}</p>
+                        <p className="text-sm text-muted-foreground">{t('checkout.devicesIncluded', { count: String(properties), label: deviceLabel })}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -192,7 +172,6 @@ export default function Checkout() {
                         onClick={decrementProperties}
                         disabled={properties <= 1}
                         className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-background hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                        aria-label="Reducir propiedades"
                       >
                         <Minus className="w-4 h-4 text-foreground" />
                       </button>
@@ -201,7 +180,6 @@ export default function Checkout() {
                         onClick={incrementProperties}
                         disabled={properties >= 10}
                         className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-background hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                        aria-label="Aumentar propiedades"
                       >
                         <Plus className="w-4 h-4 text-foreground" />
                       </button>
@@ -210,9 +188,9 @@ export default function Checkout() {
 
                   {/* Features */}
                   <div className="space-y-3">
-                    <p className="text-sm font-medium text-foreground">Qué incluye:</p>
+                    <p className="text-sm font-medium text-foreground">{t('checkout.whatsIncluded')}</p>
                     <ul className="grid sm:grid-cols-2 gap-2">
-                      {selectedPlan.features.map((feature) => (
+                      {planData.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-primary shrink-0" />
                           <span className="text-sm text-muted-foreground">{feature}</span>
@@ -224,13 +202,13 @@ export default function Checkout() {
 
                 {/* Pricing Breakdown */}
                 <div className="bg-card border rounded-2xl p-6 shadow-soft">
-                  <h3 className="font-semibold text-foreground mb-4">Desglose de precios</h3>
+                  <h3 className="font-semibold text-foreground mb-4">{t('checkout.priceBreakdown')}</h3>
                   
                   <div className="space-y-4">
                     <div className="flex items-center justify-between py-3 border-b border-border">
                       <div>
-                        <p className="font-medium text-foreground">Dispositivos de monitorización ({properties}x)</p>
-                        <p className="text-sm text-muted-foreground">Compra única</p>
+                        <p className="font-medium text-foreground">{t('checkout.monitoringDevices', { count: String(properties) })}</p>
+                        <p className="text-sm text-muted-foreground">{t('checkout.oneTimePurchase')}</p>
                       </div>
                       <div className="text-right">
                         <p className="text-muted-foreground line-through text-sm">€{originalDeviceTotal}</p>
@@ -240,30 +218,30 @@ export default function Checkout() {
 
                     <div className="flex items-center justify-between py-3 border-b border-border">
                       <div>
-                        <p className="font-medium text-foreground">Suscripción {selectedPlan.name} ({properties}x)</p>
-                        <p className="text-sm text-muted-foreground">Facturación mensual</p>
+                        <p className="font-medium text-foreground">{t('checkout.subscription', { plan: planData.name, count: String(properties) })}</p>
+                        <p className="text-sm text-muted-foreground">{t('checkout.monthlyBilling')}</p>
                       </div>
                       <div className="text-right">
-                        <p className="font-semibold text-foreground">€{monthlyTotal.toFixed(2).replace('.00', '')}/mes</p>
+                        <p className="font-semibold text-foreground">€{monthlyTotal.toFixed(2).replace('.00', '')}{t('checkout.month')}</p>
                       </div>
                     </div>
 
                     <div className="pt-2">
                       <div className="flex items-center justify-between mb-2">
-                        <p className="text-lg font-semibold text-foreground">Total hoy</p>
+                        <p className="text-lg font-semibold text-foreground">{t('checkout.totalToday')}</p>
                         <p className="text-2xl font-bold text-foreground">
                           €{(deviceTotal + monthlyTotal).toFixed(2).replace('.00', '')}
                         </p>
                       </div>
                       <p className="text-sm text-muted-foreground text-right">
-                        Después €{monthlyTotal.toFixed(2).replace('.00', '')}/mes
+                        {t('checkout.after', { amount: monthlyTotal.toFixed(2).replace('.00', '') })}
                       </p>
                     </div>
 
                     {savings > 0 && (
                       <div className="bg-green-500/10 text-green-600 rounded-lg p-3 text-center">
                         <p className="text-sm font-medium">
-                          ¡Ahorras €{savings} con el precio exclusivo web!
+                          {t('checkout.savings', { amount: String(savings) })}
                         </p>
                       </div>
                     )}
@@ -282,51 +260,51 @@ export default function Checkout() {
                       disabled={checkoutLoading}
                     >
                       {checkoutLoading ? (
-                        <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Procesando...</>
+                        <><Loader2 className="w-4 h-4 mr-2 animate-spin" />{t('checkout.processing')}</>
                       ) : (
-                        <><Lock className="w-4 h-4 mr-2" />Completar compra</>
+                        <><Lock className="w-4 h-4 mr-2" />{t('checkout.completePurchase')}</>
                       )}
                     </Button>
                     
                     <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-6">
                       <Shield className="w-4 h-4" />
-                      <span>Pago seguro con Stripe</span>
+                      <span>{t('checkout.securePayment')}</span>
                     </div>
 
                     <div className="space-y-3 pt-4 border-t border-border">
                       <div className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">Envío gratis en todos los dispositivos</p>
+                        <p className="text-sm text-muted-foreground">{t('checkout.freeShipping')}</p>
                       </div>
                       <div className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">Cancela tu suscripción en cualquier momento</p>
+                        <p className="text-sm text-muted-foreground">{t('checkout.cancelAnytime')}</p>
                       </div>
                       <div className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground">Garantía de devolución de 30 días</p>
+                        <p className="text-sm text-muted-foreground">{t('checkout.guarantee')}</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="bg-secondary/50 rounded-xl p-5 text-center">
-                    <p className="text-sm text-foreground font-medium mb-2">¿Necesitas ayuda?</p>
+                    <p className="text-sm text-foreground font-medium mb-2">{t('checkout.needHelp')}</p>
                     <p className="text-sm text-muted-foreground mb-3">
-                      Nuestro equipo está aquí para responder tus preguntas
+                      {t('checkout.teamHelp')}
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/contact">Contactar con ventas</Link>
+                      <LocalizedLink to="/contact">{t('checkout.contactSales')}</LocalizedLink>
                     </Button>
                   </div>
 
                   <div className="flex items-center justify-center gap-4 pt-4">
                     <div className="flex items-center gap-1.5 text-muted-foreground">
                       <Lock className="w-4 h-4" />
-                      <span className="text-xs">SSL Seguro</span>
+                      <span className="text-xs">{t('checkout.sslSecure')}</span>
                     </div>
                     <div className="flex items-center gap-1.5 text-muted-foreground">
                       <Shield className="w-4 h-4" />
-                      <span className="text-xs">Cumple RGPD</span>
+                      <span className="text-xs">{t('checkout.gdprCompliant')}</span>
                     </div>
                   </div>
                 </div>

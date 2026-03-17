@@ -1,5 +1,4 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
@@ -13,9 +12,12 @@ import {
   getPostsByCategory,
   searchPosts,
 } from "@/lib/blog-data";
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const Blog = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Todas las categorías");
+  const { t, lang } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState(t('blog.allCategories'));
   const [searchQuery, setSearchQuery] = useState("");
 
   const featuredPost = getFeaturedPost();
@@ -25,16 +27,15 @@ const Blog = () => {
     if (searchQuery.trim()) {
       posts = searchPosts(searchQuery).filter(
         (post) =>
-          selectedCategory === "Todas las categorías" ||
+          selectedCategory === t('blog.allCategories') ||
           post.category === selectedCategory
       );
     }
-    // Exclude featured post from main grid
     return posts.filter((post) => !post.featured);
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery, t]);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("es-ES", {
+    return new Date(dateString).toLocaleDateString(t('blog.dateLocale'), {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -50,10 +51,10 @@ const Blog = () => {
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" className="text-center mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 text-balance">
-              Lecturas para grandes operadores de propiedades
+              {t('blog.heroTitle')}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-              Todo lo que sabemos sobre anticiparse a los problemas, a los huéspedes y al mercado.
+              {t('blog.heroSubtitle')}
             </p>
           </AnimatedSection>
 
@@ -62,10 +63,10 @@ const Blog = () => {
             <AnimatedSection animation="fade-up" delay={0.1}>
               <div className="relative bg-foreground rounded-2xl overflow-hidden max-w-5xl mx-auto shadow-xl">
                 <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-lg font-medium z-10">
-                  Destacado
+                  {t('blog.featured')}
                 </div>
               <div className="grid md:grid-cols-2 gap-0">
-                  <Link to={`/blog/${featuredPost.slug}`} className="block relative">
+                  <LocalizedLink to={`/blog/${featuredPost.slug}`} className="block relative">
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={featuredPost.image}
@@ -73,12 +74,11 @@ const Blog = () => {
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    {/* Read Time Badge on Featured */}
                     <div className="absolute bottom-4 right-4 flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-3 py-1.5 rounded-full">
                       <Clock className="w-4 h-4" />
-                      <span>{featuredPost.readTime} min de lectura</span>
+                      <span>{t('blog.readTime', { min: String(featuredPost.readTime) })}</span>
                     </div>
-                  </Link>
+                  </LocalizedLink>
                   <div className="p-8 md:p-10 flex flex-col justify-center">
                     <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-4 w-fit font-medium">
                       {featuredPost.category}
@@ -90,7 +90,7 @@ const Blog = () => {
                       </span>
                       <span className="flex items-center gap-2">
                         <Clock className="w-4 h-4" />
-                        {featuredPost.readTime} min de lectura
+                        {t('blog.readTime', { min: String(featuredPost.readTime) })}
                       </span>
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight tracking-tight">
@@ -103,10 +103,10 @@ const Blog = () => {
                       asChild
                       className="w-fit bg-primary hover:bg-primary/90 text-white"
                     >
-                      <Link to={`/blog/${featuredPost.slug}`}>
-                        Leer más
+                      <LocalizedLink to={`/blog/${featuredPost.slug}`}>
+                        {t('blog.readMore')}
                         <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                      </LocalizedLink>
                     </Button>
                   </div>
                 </div>
@@ -119,10 +119,9 @@ const Blog = () => {
       {/* Blog Listing Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          {/* Section Title */}
           <AnimatedSection animation="fade-up" className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-              Últimos artículos
+              {t('blog.latestArticles')}
             </h2>
           </AnimatedSection>
 
@@ -157,7 +156,7 @@ const Blog = () => {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Buscar artículos..."
+                placeholder={t('blog.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 py-6 rounded-full border-muted-foreground/30 focus:border-primary"
@@ -174,35 +173,34 @@ const Blog = () => {
                 delay={0.1 * (index % 3)}
               >
                 <article className="group">
-                  <Link to={`/blog/${post.slug}`} className="block mb-5">
+                  <LocalizedLink to={`/blog/${post.slug}`} className="block mb-5">
                     <div className="aspect-[16/10] rounded-xl overflow-hidden bg-muted relative">
                       <img
                         src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      {/* Read Time Badge */}
                       <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-foreground/80 backdrop-blur-sm text-background text-xs font-medium px-2.5 py-1.5 rounded-full">
                         <Clock className="w-3.5 h-3.5" />
-                        <span>{post.readTime} min</span>
+                        <span>{t('blog.readTimeShort', { min: String(post.readTime) })}</span>
                       </div>
                     </div>
-                  </Link>
+                  </LocalizedLink>
 
                   <h3 className="text-xl font-bold text-foreground mb-3 leading-tight tracking-tight group-hover:text-primary transition-colors">
-                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                    <LocalizedLink to={`/blog/${post.slug}`}>{post.title}</LocalizedLink>
                   </h3>
 
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-3 font-light leading-relaxed">
                     {post.excerpt}
                   </p>
 
-                  <Link
+                  <LocalizedLink
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center text-primary font-medium text-sm hover:underline"
                   >
-                    Leer más
-                  </Link>
+                    {t('blog.readMore')}
+                  </LocalizedLink>
                 </article>
               </AnimatedSection>
             ))}
@@ -211,7 +209,7 @@ const Blog = () => {
           {filteredPosts.length === 0 && (
             <div className="text-center py-16">
               <p className="text-muted-foreground text-lg">
-                No se encontraron artículos con esos criterios.
+                {t('blog.noResults')}
               </p>
             </div>
           )}

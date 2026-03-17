@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, MapPin, Building2, Play } from "lucide-react";
-import { getCaseStudyBySlug, getRelatedCaseStudies, type CaseStudy } from "@/lib/case-studies-data";
+import { getCaseStudyBySlug, getRelatedCaseStudies } from "@/lib/case-studies-data";
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 export default function CaseStudyDetail() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState<string>("");
@@ -43,9 +46,9 @@ export default function CaseStudyDetail() {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="container mx-auto px-4 py-32 text-center">
-          <h1 className="text-2xl font-bold mb-4">Caso de éxito no encontrado</h1>
+          <h1 className="text-2xl font-bold mb-4">{t('caseStudyDetail.notFound')}</h1>
           <Button asChild>
-            <Link to="/resources/case-studies">Volver a Casos de éxito</Link>
+            <LocalizedLink to="/resources/case-studies">{t('caseStudyDetail.backToCaseStudies')}</LocalizedLink>
           </Button>
         </div>
         <Footer />
@@ -71,9 +74,9 @@ export default function CaseStudyDetail() {
       <section className="pt-24 pb-4">
         <div className="container mx-auto px-4 sm:px-6">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link to="/resources/case-studies" className="hover:text-primary transition-colors">
-              Casos de éxito
-            </Link>
+            <LocalizedLink to="/resources/case-studies" className="hover:text-primary transition-colors">
+              {t('caseStudyDetail.breadcrumbCaseStudies')}
+            </LocalizedLink>
             <span>/</span>
             <span className="text-foreground">{caseStudy.company}</span>
           </nav>
@@ -193,13 +196,13 @@ export default function CaseStudyDetail() {
 
                 <div className="mt-8 p-6 bg-muted rounded-xl">
                   <h4 className="font-semibold text-foreground mb-2">
-                    ¿Quieres resultados similares?
+                    {t('caseStudyDetail.wantResults')}
                   </h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Descubre cómo Roomonitor puede ayudar a tus propiedades.
+                    {t('caseStudyDetail.wantResultsDesc')}
                   </p>
                   <Button size="sm" className="w-full" asChild>
-                    <Link to="/contact">Solicitar una Demo</Link>
+                    <LocalizedLink to="/contact">{t('caseStudyDetail.requestDemo')}</LocalizedLink>
                   </Button>
                 </div>
               </div>
@@ -273,10 +276,10 @@ export default function CaseStudyDetail() {
 
               <AnimatedSection animation="fade-up" className="flex justify-center">
                 <Button size="lg" asChild>
-                  <Link to="/contact">
-                    Contactar
+                  <LocalizedLink to="/contact">
+                    {t('caseStudyDetail.contact')}
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+                  </LocalizedLink>
                 </Button>
               </AnimatedSection>
             </div>
@@ -289,7 +292,7 @@ export default function CaseStudyDetail() {
         <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground text-center mb-12">
-              Otros casos de éxito
+              {t('caseStudyDetail.relatedStudies')}
             </h2>
           </AnimatedSection>
           
@@ -300,7 +303,7 @@ export default function CaseStudyDetail() {
                 animation="fade-up" 
                 delay={index * 100}
               >
-                <Link 
+                <LocalizedLink 
                   to={`/resources/case-studies/${study.slug}`}
                   className="group block h-full"
                 >
@@ -326,17 +329,17 @@ export default function CaseStudyDetail() {
                       </p>
                     </div>
                   </article>
-                </Link>
+                </LocalizedLink>
               </AnimatedSection>
             ))}
           </div>
           
           <div className="text-center mt-12">
             <Button variant="outline" asChild>
-              <Link to="/resources/case-studies">
+              <LocalizedLink to="/resources/case-studies">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Ver todos los casos de éxito
-              </Link>
+                {t('caseStudyDetail.viewAll')}
+              </LocalizedLink>
             </Button>
           </div>
         </div>

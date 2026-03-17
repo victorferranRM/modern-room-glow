@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,6 +10,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Eye, EyeOff, ArrowLeft, AlertCircle, Loader2 } from "lucide-react";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
 import { z } from "zod";
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 const passwordSchema = z.string().min(6, "Password must be at least 6 characters");
@@ -18,6 +20,7 @@ const DEMO_EMAIL = "demo@roomonitor.com";
 const DEMO_PASSWORD = "demo1234";
 
 export default function Auth() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { user, signIn, signUp, loading: authLoading } = useAuth();
   
@@ -28,11 +31,9 @@ export default function Auth() {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   
-  // Login form state
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   
-  // Signup form state
   const [signupEmail, setSignupEmail] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
   const [signupConfirmPassword, setSignupConfirmPassword] = useState("");
@@ -44,11 +45,9 @@ export default function Auth() {
     setError(null);
     setIsDemoLoading(true);
 
-    // Try to sign in first
     const { error: signInError } = await signIn(DEMO_EMAIL, DEMO_PASSWORD);
     
     if (signInError) {
-      // If login fails, try to create the demo account
       const { error: signUpError } = await signUp(DEMO_EMAIL, DEMO_PASSWORD, {
         first_name: "Demo",
         last_name: "User",
@@ -56,16 +55,14 @@ export default function Auth() {
       });
 
       if (signUpError) {
-        // Account might already exist but with different password, or other error
-        setError("Demo account unavailable. Please create a new account to explore the portal.");
+        setError(t('auth.errors.demoUnavailable'));
         setIsDemoLoading(false);
         return;
       }
 
-      // Now try to sign in again
       const { error: retryError } = await signIn(DEMO_EMAIL, DEMO_PASSWORD);
       if (retryError) {
-        setError("Demo account created! Please click 'Sign In' to log in.");
+        setError(t('auth.errors.demoCreated'));
         setLoginEmail(DEMO_EMAIL);
         setLoginPassword(DEMO_PASSWORD);
         setIsDemoLoading(false);
@@ -77,7 +74,6 @@ export default function Auth() {
     navigate("/portal");
   };
 
-  // Redirect if already logged in
   useEffect(() => {
     if (user && !authLoading) {
       navigate("/portal");
@@ -88,7 +84,6 @@ export default function Auth() {
     e.preventDefault();
     setError(null);
     
-    // Validate inputs
     try {
       emailSchema.parse(loginEmail);
       passwordSchema.parse(loginPassword);
@@ -105,7 +100,7 @@ export default function Auth() {
     
     if (error) {
       if (error.message.includes("Invalid login credentials")) {
-        setError("Invalid email or password. Please try again.");
+        setError(t('auth.errors.invalidCredentials'));
       } else {
         setError(error.message);
       }
@@ -122,7 +117,6 @@ export default function Auth() {
     setError(null);
     setSuccess(null);
     
-    // Validate inputs
     try {
       emailSchema.parse(signupEmail);
       passwordSchema.parse(signupPassword);
@@ -134,7 +128,7 @@ export default function Auth() {
     }
     
     if (signupPassword !== signupConfirmPassword) {
-      setError("Passwords do not match.");
+      setError(t('auth.errors.passwordsMismatch'));
       return;
     }
     
@@ -148,7 +142,7 @@ export default function Auth() {
     
     if (error) {
       if (error.message.includes("User already registered")) {
-        setError("An account with this email already exists. Please log in instead.");
+        setError(t('auth.errors.alreadyRegistered'));
       } else {
         setError(error.message);
       }
@@ -156,7 +150,7 @@ export default function Auth() {
       return;
     }
     
-    setSuccess("Account created successfully! You can now log in.");
+    setSuccess(t('auth.success.accountCreated'));
     setActiveTab("login");
     setLoginEmail(signupEmail);
     setIsSubmitting(false);
@@ -172,39 +166,35 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Header */}
       <header className="p-4">
-        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+        <LocalizedLink to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
           <ArrowLeft className="h-4 w-4" />
-          <span>Back to home</span>
-        </Link>
+          <span>{t('auth.backToHome')}</span>
+        </LocalizedLink>
       </header>
 
-      {/* Main Content */}
       <main className="flex-1 flex items-center justify-center px-4 py-8">
         <div className="w-full max-w-md">
-          {/* Logo */}
           <div className="flex justify-center mb-8">
-            <Link to="/">
+            <LocalizedLink to="/">
               <img src={roomonitorLogo} alt="Roomonitor" className="h-10" />
-            </Link>
+            </LocalizedLink>
           </div>
 
           <Card className="shadow-soft">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Customer Portal</CardTitle>
+              <CardTitle className="text-2xl">{t('auth.portalTitle')}</CardTitle>
               <CardDescription>
-                Manage your devices, subscriptions, and services
+                {t('auth.portalDescription')}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "login" | "signup")}>
                 <TabsList className="grid w-full grid-cols-2 mb-6">
-                  <TabsTrigger value="login">Log In</TabsTrigger>
-                  <TabsTrigger value="signup">Sign Up</TabsTrigger>
+                  <TabsTrigger value="login">{t('auth.logIn')}</TabsTrigger>
+                  <TabsTrigger value="signup">{t('auth.signUp')}</TabsTrigger>
                 </TabsList>
 
-                {/* Error/Success Messages */}
                 {error && (
                   <Alert variant="destructive" className="mb-4">
                     <AlertCircle className="h-4 w-4" />
@@ -217,11 +207,10 @@ export default function Auth() {
                   </Alert>
                 )}
 
-                {/* Login Form */}
                 <TabsContent value="login">
                   <form onSubmit={handleLogin} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="login-email">Email</Label>
+                      <Label htmlFor="login-email">{t('auth.email')}</Label>
                       <Input
                         id="login-email"
                         type="email"
@@ -233,7 +222,7 @@ export default function Auth() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="login-password">Password</Label>
+                      <Label htmlFor="login-password">{t('auth.password')}</Label>
                       <div className="relative">
                         <Input
                           id="login-password"
@@ -259,20 +248,19 @@ export default function Auth() {
                       {isSubmitting ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                          Signing in...
+                          {t('auth.signingIn')}
                         </>
                       ) : (
-                        "Sign In"
+                        t('auth.signInBtn')
                       )}
                     </Button>
 
-                    {/* Demo Login */}
                     <div className="relative my-4">
                       <div className="absolute inset-0 flex items-center">
                         <span className="w-full border-t" />
                       </div>
                       <div className="relative flex justify-center text-xs uppercase">
-                        <span className="bg-card px-2 text-muted-foreground">Or</span>
+                        <span className="bg-card px-2 text-muted-foreground">{t('auth.or')}</span>
                       </div>
                     </div>
                     <Button
@@ -285,24 +273,23 @@ export default function Auth() {
                       {isDemoLoading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                          Loading demo...
+                          {t('auth.loadingDemo')}
                         </>
                       ) : (
-                        "Try Demo Account"
+                        t('auth.tryDemo')
                       )}
                     </Button>
                     <p className="text-xs text-center text-muted-foreground">
-                      Explore the portal with sample data
+                      {t('auth.demoExplore')}
                     </p>
                   </form>
                 </TabsContent>
 
-                {/* Signup Form */}
                 <TabsContent value="signup">
                   <form onSubmit={handleSignup} className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="first-name">First Name</Label>
+                        <Label htmlFor="first-name">{t('auth.firstName')}</Label>
                         <Input
                           id="first-name"
                           placeholder="John"
@@ -312,7 +299,7 @@ export default function Auth() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="last-name">Last Name</Label>
+                        <Label htmlFor="last-name">{t('auth.lastName')}</Label>
                         <Input
                           id="last-name"
                           placeholder="Doe"
@@ -323,7 +310,7 @@ export default function Auth() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="company-name">Company Name</Label>
+                      <Label htmlFor="company-name">{t('auth.companyName')}</Label>
                       <Input
                         id="company-name"
                         placeholder="Acme Properties Ltd."
@@ -333,7 +320,7 @@ export default function Auth() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="signup-email">Email</Label>
+                      <Label htmlFor="signup-email">{t('auth.email')}</Label>
                       <Input
                         id="signup-email"
                         type="email"
@@ -345,7 +332,7 @@ export default function Auth() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="signup-password">Password</Label>
+                      <Label htmlFor="signup-password">{t('auth.password')}</Label>
                       <div className="relative">
                         <Input
                           id="signup-password"
@@ -368,7 +355,7 @@ export default function Auth() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="confirm-password">Confirm Password</Label>
+                      <Label htmlFor="confirm-password">{t('auth.confirmPassword')}</Label>
                       <Input
                         id="confirm-password"
                         type="password"
@@ -383,10 +370,10 @@ export default function Auth() {
                       {isSubmitting ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                          Creating account...
+                          {t('auth.creatingAccount')}
                         </>
                       ) : (
-                        "Create Account"
+                        t('auth.createAccount')
                       )}
                     </Button>
                   </form>
@@ -396,14 +383,14 @@ export default function Auth() {
           </Card>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            By signing in, you agree to our{" "}
-            <Link to="/terms" className="underline hover:text-foreground">
-              Terms of Service
-            </Link>{" "}
-            and{" "}
-            <Link to="/privacy" className="underline hover:text-foreground">
-              Privacy Policy
-            </Link>
+            {t('auth.termsAgree')}{" "}
+            <LocalizedLink to="/legal#terms-of-service" className="underline hover:text-foreground">
+              {t('auth.termsOfService')}
+            </LocalizedLink>{" "}
+            {t('auth.and')}{" "}
+            <LocalizedLink to="/legal#privacy-policy" className="underline hover:text-foreground">
+              {t('auth.privacyPolicy')}
+            </LocalizedLink>
           </p>
         </div>
       </main>
