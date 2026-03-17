@@ -1,22 +1,17 @@
 import { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { cn } from "@/lib/utils";
-
-const sections = [
-  { id: "terms-of-use", title: "Terms of Use" },
-  { id: "legal-notice", title: "Legal Notice" },
-  { id: "privacy-policy", title: "Privacy Policy" },
-  { id: "cookie-policy", title: "Cookie Policy" },
-  { id: "terms-of-service", title: "Terms of Service" },
-  { id: "shipping-returns", title: "Shipping & Returns" },
-];
+import { useTranslation } from "@/i18n/useTranslation";
 
 export default function Legal() {
+  const { t, tObject } = useTranslation();
   const location = useLocation();
-  const [activeSection, setActiveSection] = useState("terms-of-use");
+
+  const sections = tObject<{ id: string; title: string }[]>('legal.sections');
+  const [activeSection, setActiveSection] = useState(sections[0]?.id || "terms-of-use");
 
   useEffect(() => {
     const hash = location.hash.replace("#", "");
@@ -32,7 +27,7 @@ export default function Legal() {
         }
       }, 100);
     }
-  }, [location]);
+  }, [location, sections]);
 
   const handleSectionClick = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -55,10 +50,10 @@ export default function Legal() {
           <AnimatedSection animation="fade-up">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Legal Information
+                {t('legal.title')}
               </h1>
               <p className="text-lg text-muted-foreground">
-                Smart Things & Friends SL — Last updated: January 2026
+                {t('legal.subtitle')}
               </p>
             </div>
           </AnimatedSection>
@@ -87,7 +82,7 @@ export default function Legal() {
         </div>
       </section>
 
-      {/* Content */}
+      {/* Content — static legal text stays in English as-is */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -376,7 +371,7 @@ export default function Legal() {
             {/* Contact Info */}
             <div className="mt-12 pt-8 border-t border-border">
               <div className="bg-muted/30 rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Contact Information</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t('legal.contactTitle')}</h3>
                 <p className="text-muted-foreground mb-4"><strong>Smart Things & Friends SL</strong></p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li><strong>Registered Address:</strong> Calle Bailèn 3, 3-2, 08010 Barcelona</li>

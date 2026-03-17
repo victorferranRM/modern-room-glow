@@ -4,20 +4,17 @@ import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
 import { caseStudies, caseStudyCategories, getCaseStudiesByIndustry } from "@/lib/case-studies-data";
-
-const stats = [
-  { value: "50.000+", label: "Propiedades protegidas" },
-  { value: "45", label: "Países" },
-  { value: "98%", label: "Retención de clientes" },
-  { value: "10", label: "Años operando" },
-];
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 export default function CaseStudies() {
+  const { t, tObject } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("Todos");
   const filteredStudies = getCaseStudiesByIndustry(activeCategory);
   const featuredStudy = caseStudies[0];
+
+  const stats = tObject<{ value: string; label: string }[]>('caseStudies.stats');
 
   return (
     <div className="min-h-screen bg-background">
@@ -30,14 +27,14 @@ export default function CaseStudies() {
         <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up" className="text-center max-w-4xl mx-auto">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              Casos de éxito
+              {t('caseStudies.badge')}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
-              Resultados reales de{" "}
-              <span className="text-primary">propiedades reales</span>
+              {t('caseStudies.heroTitle1')}{" "}
+              <span className="text-primary">{t('caseStudies.heroTitle2')}</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-              Descubre cómo gestores de propiedades de todo el mundo están transformando sus operaciones con las soluciones de monitorización inteligente de Roomonitor.
+              {t('caseStudies.heroSubtitle')}
             </p>
           </AnimatedSection>
         </div>
@@ -47,7 +44,7 @@ export default function CaseStudies() {
       <section className="pb-16">
         <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fade-up">
-            <Link 
+            <LocalizedLink 
               to={`/resources/case-studies/${featuredStudy.slug}`}
               className="block group"
             >
@@ -55,7 +52,7 @@ export default function CaseStudies() {
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4 w-fit">
-                      Destacado
+                      {t('caseStudies.featured')}
                     </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4 group-hover:text-primary transition-colors">
                       {featuredStudy.company}
@@ -74,7 +71,7 @@ export default function CaseStudies() {
                       </div>
                     </div>
                     <Button className="w-fit group/btn">
-                      Leer caso de éxito
+                      {t('caseStudies.readCaseStudy')}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </Button>
                   </div>
@@ -95,7 +92,7 @@ export default function CaseStudies() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </LocalizedLink>
           </AnimatedSection>
         </div>
       </section>
@@ -131,7 +128,7 @@ export default function CaseStudies() {
                 animation="fade-up" 
                 delay={index * 100}
               >
-                <Link 
+                <LocalizedLink 
                   to={`/resources/case-studies/${study.slug}`}
                   className="group block h-full"
                 >
@@ -180,7 +177,7 @@ export default function CaseStudies() {
                       </div>
                     </div>
                   </article>
-                </Link>
+                </LocalizedLink>
               </AnimatedSection>
             ))}
           </div>
@@ -214,10 +211,10 @@ export default function CaseStudies() {
         <div className="container relative z-10 mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection animation="fade-up">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6">
-              ¿Listo para escribir tu caso de éxito?
+              {t('caseStudies.readyTitle')}
             </h2>
             <p className="text-lg sm:text-xl text-primary-foreground/80 font-light max-w-2xl mx-auto mb-10">
-              Únete a cientos de gestores de propiedades que han transformado sus operaciones con Roomonitor.
+              {t('caseStudies.readySubtitle')}
             </p>
             <Button 
               size="lg" 
@@ -225,10 +222,10 @@ export default function CaseStudies() {
               className="text-primary hover:text-primary"
               asChild
             >
-              <Link to="/contact">
-                Solicitar una Demo
+              <LocalizedLink to="/contact">
+                {t('caseStudies.requestDemo')}
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </LocalizedLink>
             </Button>
           </AnimatedSection>
         </div>

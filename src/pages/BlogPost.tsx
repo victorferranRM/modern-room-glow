@@ -1,12 +1,15 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getPostBySlug, blogPosts } from "@/lib/blog-data";
+import { useTranslation } from "@/i18n/useTranslation";
+import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const BlogPost = () => {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
 
@@ -15,7 +18,7 @@ const BlogPost = () => {
   }
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("es-ES", {
+    return new Date(dateString).toLocaleDateString(t('blog.dateLocale'), {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -50,13 +53,13 @@ const BlogPost = () => {
       <section className="pt-32 pb-8">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" className="max-w-4xl mx-auto">
-            <Link
+            <LocalizedLink
               to="/blog"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
+              {t('blogPost.backToBlog')}
+            </LocalizedLink>
 
             <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
               {post.category}
@@ -73,7 +76,7 @@ const BlogPost = () => {
               </span>
               <span className="flex items-center gap-2 font-medium">
                 <Clock className="w-4 h-4" />
-                {post.readTime} min de lectura
+                {t('blog.readTime', { min: String(post.readTime) })}
               </span>
               <Button
                 variant="ghost"
@@ -82,7 +85,7 @@ const BlogPost = () => {
                 className="flex items-center gap-2 font-medium"
               >
                 <Share2 className="w-4 h-4" />
-                Compartir
+                {t('blogPost.share')}
               </Button>
             </div>
 
@@ -143,15 +146,15 @@ const BlogPost = () => {
             <div className="mt-12 pt-8 border-t border-border">
               <div className="bg-muted/50 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">
-                  ¿Listo para proteger tus propiedades?
+                  {t('blogPost.readyTitle')}
                 </h3>
                 <p className="text-muted-foreground mb-6 font-light">
-                  Empieza con Roomonitor y garantiza tranquilidad para ti y tus vecinos.
+                  {t('blogPost.readyDescription')}
                 </p>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                  <Link to="/contact">
-                    Contactar
-                  </Link>
+                  <LocalizedLink to="/contact">
+                    {t('blogPost.contact')}
+                  </LocalizedLink>
                 </Button>
               </div>
             </div>
@@ -165,7 +168,7 @@ const BlogPost = () => {
           <div className="container mx-auto px-4">
             <AnimatedSection animation="fade-up" className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight text-foreground">
-                Artículos relacionados
+                {t('blog.relatedArticles')}
               </h2>
             </AnimatedSection>
 
@@ -177,7 +180,7 @@ const BlogPost = () => {
                   delay={0.1 * index}
                 >
                   <article className="group">
-                    <Link
+                    <LocalizedLink
                       to={`/blog/${relatedPost.slug}`}
                       className="block mb-4"
                     >
@@ -188,22 +191,22 @@ const BlogPost = () => {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
-                    </Link>
+                    </LocalizedLink>
 
                     <span className="inline-block border border-primary/50 text-primary text-xs px-3 py-1 rounded-full mb-3 font-medium">
                       {relatedPost.category}
                     </span>
 
                     <h3 className="text-lg font-bold text-foreground mb-2 leading-tight tracking-tight group-hover:text-primary transition-colors line-clamp-2">
-                      <Link to={`/blog/${relatedPost.slug}`}>
+                      <LocalizedLink to={`/blog/${relatedPost.slug}`}>
                         {relatedPost.title}
-                      </Link>
+                      </LocalizedLink>
                     </h3>
 
                     <div className="flex items-center gap-3 text-muted-foreground text-sm font-medium">
                       <span className="flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5" />
-                        {relatedPost.readTime} min
+                        {t('blog.readTimeShort', { min: String(relatedPost.readTime) })}
                       </span>
                     </div>
                   </article>
