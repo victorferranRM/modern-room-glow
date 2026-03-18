@@ -19,7 +19,7 @@ const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
 const exampleImages = [interventionNoise, interventionAccess, interventionInspection];
 
 export default function Protocols() {
-  const { t, tObject } = useTranslation();
+  const { t, tObject, lang } = useTranslation();
   const featuresData = tObject<{ title: string; description: string }[]>('serviceProtocols.features') ?? [];
   const protocolExamples = tObject<{ title: string; steps: string[] }[]>('serviceProtocols.examples') ?? [];
   const setupProcess = tObject<{ step: string; title: string; description: string }[]>('serviceProtocols.setup') ?? [];
