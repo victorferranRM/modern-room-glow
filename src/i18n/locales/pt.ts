@@ -1349,6 +1349,7 @@ const pt = {
       "Tranquilidade sabendo que suas regras são seguidas",
     ],
     benefitsCTA: "Ver uma Demo",
+    benefitsImageAlt: "Gestão hierárquica de protocolos operacionais por conta, cidade e quarto",
     imagePlaceholder: "Imagem: Software de gestão de protocolos operacionais em tempo real",
     ctaTitle: "Pronto para definir seus protocolos?",
     ctaDescription: "Vamos trabalhar juntos para criar protocolos que se ajustem às suas necessidades. Nossa equipe ajudará você a começar.",
