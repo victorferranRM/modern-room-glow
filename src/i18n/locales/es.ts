@@ -1358,8 +1358,10 @@ const es = {
       "Tranquilidad sabiendo que tus reglas se siguen",
     ],
     benefitsCTA: "Ver una Demo",
+    imagePlaceholder: "Imagen: Software de gestión de protocolos operativos en tiempo real",
     ctaTitle: "¿Listo para definir tus protocolos?",
     ctaDescription: "Trabajemos juntos para crear protocolos que se ajusten exactamente a tus necesidades. Nuestro equipo te ayudará a empezar.",
+    ctaPrimary: "Crear mis protocolos operativos",
   },
   serviceIncidentResponse: {
     badge: "Respuesta a Incidencias",
