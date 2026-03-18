@@ -91,7 +91,7 @@ export default function Monitoring() {
               const Icon = capabilityIcons[index];
               return (
                 <AnimatedSection key={index} delay={index * 100}>
-                  <LocalizedLink to={capabilityHrefs[index]} className="group block relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                  <LocalizedLink to={capabilityHrefs[index]} className="group block relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style={{ backgroundImage: `url(${capabilityImages[index]})` }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 transition-colors duration-300" />
                     <div className="relative h-full flex flex-col justify-end p-6 text-white">
