@@ -54,7 +54,7 @@ export default function Protocols() {
         </div>
       </section>
 
-      <ServiceFeatures eyebrow={t('serviceProtocols.featuresEyebrow')} title={t('serviceProtocols.featuresTitle')} features={features} background="white" />
+      <ServiceFeatures eyebrow={t('serviceProtocols.featuresEyebrow')} title={t('serviceProtocols.featuresTitle')} features={features} />
 
       <ProtocolExamples
         eyebrow={t('serviceProtocols.examplesEyebrow')}
