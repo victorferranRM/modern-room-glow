@@ -21,9 +21,16 @@ import cityParis from "@/assets/city-paris.jpg";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
+import timelineBarcelona from "@/assets/timeline-barcelona.webp";
+import timelineDevice from "@/assets/timeline-device.webp";
+import heroControlCenter from "@/assets/hero-control-center.jpg";
+import timelineParis from "@/assets/timeline-paris.webp";
+import timelineManager from "@/assets/timeline-manager.webp";
+import timelineIntegrations from "@/assets/timeline-integrations.webp";
+
 const valueImages = [solutionRest, solutionManage, solutionControl];
 const valueIcons = [Heart, Sparkles, Users];
-const timelineImages = [solutionRest, solutionManage, solutionControl, solutionRest, solutionManage, solutionControl];
+const timelineImages = [timelineBarcelona, timelineDevice, heroControlCenter, timelineParis, timelineManager, timelineIntegrations];
 
 const coverageCities = [
   { name: "Barcelona", country: "España", isHQ: true, image: cityBarcelona },

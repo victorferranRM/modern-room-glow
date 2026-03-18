@@ -822,12 +822,12 @@ const es = {
     pause: "Pausar",
     resume: "Reanudar",
     timeline: [
-      { year: "2014", title: "Fundación en Barcelona", description: "Roomonitor nació de una idea sencilla: ayudar a los gestores de propiedades a dormir tranquilos." },
-      { year: "2016", title: "Primer dispositivo", description: "Lanzamos nuestro sensor de monitorización propietario, diseñado específicamente para alquileres vacacionales." },
-      { year: "2018", title: "Centro de Control 24/7", description: "Abrimos nuestro primer Centro de Control con agentes multilingües las 24 horas." },
-      { year: "2020", title: "Expansión europea", description: "Expandimos nuestra red de servicio de campo para cubrir las principales ciudades de España, Portugal, Francia e Italia." },
-      { year: "2023", title: "Lanzamiento de Manager", description: "Lanzamos nuestra plataforma integral Manager para visibilidad total y control de operaciones." },
-      { year: "2025", title: "Visión global", description: "Hoy protegemos miles de propiedades en todo el mundo y continuamos innovando." },
+      { year: "2014", title: "Fundación en Barcelona", description: "Roomonitor nace en Barcelona con una misión clara: ofrecer a los gestores de alojamiento turístico la tranquilidad que necesitan para operar sin sobresaltos, especialmente durante la noche." },
+      { year: "2016", title: "Primer dispositivo", description: "Diseñamos y fabricamos nuestro propio sensor de monitorización acústica, pensado exclusivamente para el sector del alquiler vacacional. Un hardware compacto, fiable y fácil de instalar." },
+      { year: "2018", title: "Centro de Control 24/7", description: "Ponemos en marcha nuestro Centro de Control con agentes multilingües operando las 24 horas, los 365 días del año. Cada alerta es verificada por personas reales antes de actuar." },
+      { year: "2020", title: "Expansión europea", description: "Desplegamos nuestra red de agentes de campo en las principales ciudades de España, Portugal, Francia e Italia, llevando la intervención presencial allí donde se necesita." },
+      { year: "2023", title: "Lanzamiento de Manager", description: "Lanzamos Manager, nuestra plataforma integral que centraliza la gestión de protocolos, propiedades, reservas e incidencias en un único panel de control." },
+      { year: "2025", title: "Digitalización & IA", description: "Integramos inteligencia artificial y automatizaciones avanzadas para impulsar la eficiencia operativa de nuestros clientes: desde la detección predictiva hasta la gestión autónoma de incidencias." },
     ],
     press: {
       eyebrow: "En prensa",
