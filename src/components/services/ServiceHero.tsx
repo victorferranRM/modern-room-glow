@@ -70,7 +70,7 @@ export function ServiceHero({
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </LocalizedLink>
               </Button>
-              <Button size="lg" variant="outline" asChild className="hover:bg-secondary/80 transition-all duration-300">
+              <Button size="lg" variant="outline" asChild className="hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300">
                 <LocalizedLink to={resolvedSecondaryCTA.link}>{resolvedSecondaryCTA.text}</LocalizedLink>
               </Button>
             </div>
