@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
+import { MonitoringBanner } from "@/components/monitoring/MonitoringBanner";
 import { Button } from "@/components/ui/button";
 import { Volume2, Bell, Shield, Clock, ArrowRight, Check, BarChart3 } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
@@ -70,6 +71,8 @@ export default function NoiseMonitoring() {
           </div>
         </div>
       </section>
+
+      <MonitoringBanner />
 
       <section className="py-20 lg:py-28 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
