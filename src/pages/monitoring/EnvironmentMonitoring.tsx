@@ -92,19 +92,16 @@ export default function EnvironmentMonitoring() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
+            <AnimatedSection className="lg:col-span-2">
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">{t('monitoringEnvironment.managerEyebrow')}</p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringEnvironment.managerTitle')}</h2>
               <p className="text-lg text-muted-foreground mb-6">{t('monitoringEnvironment.managerDescription')}</p>
               <ul className="space-y-3 mb-8">{managerFeatures.map((text, i) => <ManagerCheckItem key={i} text={text} />)}</ul>
               <Button asChild><LocalizedLink to="/how-it-works">{t('shared.exploreManager')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
             </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
-                <img src={managerDevices} alt={t('monitoringEnvironment.managerEyebrow')} className="relative w-full rounded-2xl shadow-lg border border-border/50" />
-              </div>
+            <AnimatedSection delay={200} className="lg:col-span-3">
+              <img src={managerDevices} alt={t('monitoringEnvironment.managerEyebrow')} className="w-full" />
             </AnimatedSection>
           </div>
         </div>
