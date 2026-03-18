@@ -1100,8 +1100,10 @@ const pt = {
     imageSectionEyebrow: "Nosso Papel",
     imageSectionTitle: "O que nosso Centro de Controle faz",
     imageSectionDescription: "Somos a ponte entre seus sensores e a ação real. Quando algo acontece, verificamos, decidimos e agimos — tudo segundo suas regras.",
+    imagePlaceholder: "Imagem: Painel do Centro de Controle com alertas em tempo real",
     ctaTitle: "Pronto para monitorização profissional?",
     ctaDescription: "Nosso Centro de Controle está pronto para proteger suas propriedades 24/7. Fale com um especialista para saber como podemos ajudar.",
+    ctaPrimary: "Ver como funciona o Centro de Controle",
   },
   serviceFieldService: {
     badge: "Agentes de Campo",
