@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Headphones, Clock, Globe, Shield, Phone, MessageSquare, Users, Zap, FileText, Heart } from "lucide-react";
+import { Headphones, Clock, Globe, Shield, Phone, MessageSquare, Users, Zap, FileText, Heart, BotOff, UserCheck } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceStats } from "@/components/services/ServiceStats";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
