@@ -37,27 +37,17 @@ export default function Protocols() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,hsl(var(--primary)/0.15),transparent_60%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-6 flex-1 text-center sm:text-left">
-                <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shrink-0 shadow-lg shadow-primary/30">
-                  <Monitor className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-background mb-3">
-                    {t('serviceProtocols.managerBannerTitle')}
-                  </h3>
-                  <p className="text-base text-background/60 max-w-xl leading-relaxed">
-                    {t('serviceProtocols.managerBannerSubtitle')}
-                  </p>
-                </div>
+            <div className="flex flex-col sm:flex-row items-center gap-6 max-w-3xl mx-auto text-center sm:text-left">
+              <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shrink-0 shadow-lg shadow-primary/30">
+                <Monitor className="w-8 h-8 text-primary-foreground" />
               </div>
-              <div className="shrink-0">
-                <a
-                  href={`/${lang}/manager`}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-base hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
-                >
-                  {t('serviceProtocols.managerBannerCTA')}
-                </a>
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-background mb-3">
+                  {t('serviceProtocols.managerBannerTitle')}
+                </h3>
+                <p className="text-base text-background/60 max-w-xl leading-relaxed">
+                  {t('serviceProtocols.managerBannerSubtitle')}
+                </p>
               </div>
             </div>
           </AnimatedSection>
