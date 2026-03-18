@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Flame, Shield, ArrowRight, Check, Ban, AlertTriangle, FileCheck } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import monitoringSmoke from "@/assets/monitoring-air.jpg";
+import monitoringSmoke from "@/assets/monitoring-smoke.webp";
 import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [AlertTriangle, Ban, Shield, FileCheck];

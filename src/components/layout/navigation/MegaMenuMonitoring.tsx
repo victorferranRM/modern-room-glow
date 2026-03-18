@@ -3,7 +3,7 @@ import { useTranslation } from "@/i18n/useTranslation";
 import { monitoringHrefs } from "./navigation-data";
 import { Volume2, Users, Flame, Thermometer, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import roomonitorDevice from "@/assets/roomonitor-device.jpg";
+import sensorRoomonitor from "@/assets/sensor-roomonitor.webp";
 
 const icons = [Volume2, Users, Flame, Thermometer];
 
@@ -17,7 +17,7 @@ export function MegaMenuMonitoring() {
         {/* Left - Device showcase */}
         <div className="col-span-2 flex flex-col items-center justify-center">
           <img 
-            src={roomonitorDevice}
+            src={sensorRoomonitor}
             alt="Roomonitor"
             className="w-full max-w-[220px] rounded-2xl shadow-lg object-cover mb-6"
             loading="eager"

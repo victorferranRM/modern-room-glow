@@ -9,10 +9,10 @@ import {
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import roomonitorDevice from "@/assets/roomonitor-device.jpg";
-import monitoringNoise from "@/assets/monitoring-noise.jpg";
-import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
-import monitoringAir from "@/assets/monitoring-air.jpg";
-import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
+import monitoringNoise from "@/assets/monitoring-noise.webp";
+import monitoringOccupancy from "@/assets/monitoring-occupancy.webp";
+import monitoringAir from "@/assets/monitoring-smoke.webp";
+import monitoringEnvironment from "@/assets/monitoring-environment.webp";
 
 const capabilityIcons = [Volume2, Users, Flame, Thermometer];
 const capabilityImages = [monitoringNoise, monitoringOccupancy, monitoringAir, monitoringEnvironment];
