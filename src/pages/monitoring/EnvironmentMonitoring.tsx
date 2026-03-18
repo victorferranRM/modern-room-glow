@@ -23,7 +23,7 @@ export default function EnvironmentMonitoring() {
       <Header />
       <MonitoringHero icon={Thermometer} badge={t('monitoringEnvironment.badge')} title={t('monitoringEnvironment.title')} titleHighlight={t('monitoringEnvironment.titleHighlight')} description={t('monitoringEnvironment.description')} image={monitoringEnvironment} imageAlt={t('monitoringEnvironment.badge')} breadcrumbLabel={t('monitoringEnvironment.breadcrumb')} />
 
-      <section className="py-12 bg-secondary/30 border-y">
+      <section className="py-12 bg-foreground/5 border-y">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
