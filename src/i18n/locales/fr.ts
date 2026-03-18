@@ -1100,8 +1100,10 @@ const fr = {
     imageSectionEyebrow: "Notre Rôle",
     imageSectionTitle: "Ce que fait notre Centre de Contrôle",
     imageSectionDescription: "Nous sommes le pont entre vos capteurs et l'action réelle. Quand quelque chose se passe, nous vérifions, décidons et agissons — selon vos règles.",
+    imagePlaceholder: "Image : Tableau de bord du Centre de Contrôle avec alertes en temps réel",
     ctaTitle: "Prêt pour une surveillance professionnelle ?",
     ctaDescription: "Notre Centre de Contrôle est prêt à protéger vos propriétés 24/7. Parlez à un expert pour savoir comment nous pouvons vous aider.",
+    ctaPrimary: "Voir comment fonctionne le Centre de Contrôle",
   },
   serviceFieldService: {
     badge: "Agents de Terrain",
