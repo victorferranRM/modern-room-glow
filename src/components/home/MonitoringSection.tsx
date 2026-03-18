@@ -6,16 +6,16 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
-import monitoringNoise from "@/assets/monitoring-noise.webp";
-import monitoringOccupancy from "@/assets/monitoring-occupancy.webp";
-import monitoringAir from "@/assets/monitoring-smoke.webp";
-import monitoringEnvironment from "@/assets/monitoring-environment.webp";
+import homeMonitoringNoise from "@/assets/home-monitoring-noise.webp";
+import homeMonitoringOccupancy from "@/assets/home-monitoring-occupancy.webp";
+import homeMonitoringSmoke from "@/assets/home-monitoring-smoke.webp";
+import homeMonitoringEnvironment from "@/assets/home-monitoring-environment.webp";
 
 const dimensionMeta = [
-  { id: "noise", icon: Volume2, image: monitoringNoise, href: "/monitoring/noise", hasCalculator: false, status: "normal" as const },
-  { id: "occupancy", icon: Users, image: monitoringOccupancy, href: "/monitoring/occupancy", hasCalculator: false, status: "good" as const },
-  { id: "smoking", icon: Wind, image: monitoringAir, href: "/monitoring/smoke", hasCalculator: true, status: "good" as const },
-  { id: "environment", icon: Thermometer, image: monitoringEnvironment, href: "/monitoring/environment", hasCalculator: false, status: "good" as const },
+  { id: "noise", icon: Volume2, image: homeMonitoringNoise, href: "/monitoring/noise", hasCalculator: false, status: "normal" as const },
+  { id: "occupancy", icon: Users, image: homeMonitoringOccupancy, href: "/monitoring/occupancy", hasCalculator: false, status: "good" as const },
+  { id: "smoking", icon: Wind, image: homeMonitoringSmoke, href: "/monitoring/smoke", hasCalculator: true, status: "good" as const },
+  { id: "environment", icon: Thermometer, image: homeMonitoringEnvironment, href: "/monitoring/environment", hasCalculator: false, status: "good" as const },
 ];
 
 export function MonitoringSection() {
