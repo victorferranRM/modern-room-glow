@@ -1311,6 +1311,9 @@ const en = {
     titleHighlight: "executed 24/7",
     description: "Define exactly how every situation should be handled. Our team executes your protocols consistently, around the clock, ensuring your standards are always met.",
     managerNotice: "No spreadsheets. We use our proprietary Manager software for standardised, real-time protocol management and execution.",
+    managerBannerTitle: "Powered by our proprietary Manager software",
+    managerBannerSubtitle: "No spreadsheets, no improvisation. Every protocol is created, assigned and executed in real time through Manager, our operational software.",
+    managerBannerCTA: "Discover Manager",
     featuresEyebrow: "Capabilities",
     featuresTitle: "Complete protocol management",
     features: [

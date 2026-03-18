@@ -1311,6 +1311,9 @@ const pt = {
     titleHighlight: "executadas 24/7",
     description: "Defina exatamente como cada situação deve ser gerenciada. Nossa equipe executa seus protocolos de forma consistente, 24 horas por dia, garantindo que seus padrões sejam sempre mantidos.",
     managerNotice: "Sem planilhas. Usamos nosso software proprietário Manager para gestão e execução padronizada de protocolos em tempo real.",
+    managerBannerTitle: "Gerenciado pelo nosso software proprietário Manager",
+    managerBannerSubtitle: "Sem planilhas nem improvisação. Todos os protocolos são criados, atribuídos e executados em tempo real através do Manager, nosso software operacional.",
+    managerBannerCTA: "Conheça o Manager",
     featuresEyebrow: "Capacidades",
     featuresTitle: "Gestão completa de protocolos",
     features: [

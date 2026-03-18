@@ -1311,6 +1311,9 @@ const fr = {
     titleHighlight: "exécutées 24/7",
     description: "Définissez exactement comment chaque situation doit être gérée. Notre équipe exécute vos protocoles de façon cohérente, 24 heures sur 24, assurant que vos standards sont toujours respectés.",
     managerNotice: "Pas de tableurs. Nous utilisons notre logiciel propriétaire Manager pour la gestion et l'exécution standardisée des protocoles en temps réel.",
+    managerBannerTitle: "Piloté par notre logiciel propriétaire Manager",
+    managerBannerSubtitle: "Pas de tableurs ni d'improvisation. Chaque protocole est créé, assigné et exécuté en temps réel via Manager, notre logiciel opérationnel.",
+    managerBannerCTA: "Découvrir Manager",
     featuresEyebrow: "Capacités",
     featuresTitle: "Gestion complète des protocoles",
     features: [
