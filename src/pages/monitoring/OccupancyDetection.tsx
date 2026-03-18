@@ -3,32 +3,20 @@ import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
 import { MonitoringBanner } from "@/components/monitoring/MonitoringBanner";
+import { ManagerSection } from "@/components/monitoring/ManagerSection";
 import { Button } from "@/components/ui/button";
-import { Users, Eye, ArrowRight, Check, TrendingUp, UserCheck, AlertTriangle } from "lucide-react";
+import { Users, Eye, ArrowRight, TrendingUp, UserCheck, AlertTriangle } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import monitoringOccupancy from "@/assets/monitoring-occupancy.webp";
-import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [Eye, AlertTriangle, UserCheck, TrendingUp];
-
-function ManagerCheckItem({ text }: { text: string }) {
-  return (
-    <li className="flex items-start gap-3 group">
-      <div className="w-5 h-5 mt-0.5 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-primary group-hover:border-primary">
-        <Check className="w-3 h-3 text-primary transition-colors duration-300 group-hover:text-primary-foreground" strokeWidth={3} />
-      </div>
-      <span className="text-sm sm:text-base text-foreground/80 transition-colors group-hover:text-foreground">{text}</span>
-    </li>
-  );
-}
 
 export default function OccupancyDetection() {
   const { t, tObject } = useTranslation();
   const stats = tObject<{ value: string; label: string }[]>('monitoringOccupancy.stats');
   const features = tObject<{ title: string; description: string }[]>('monitoringOccupancy.features');
   const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringOccupancy.howItWorks');
-  const managerFeatures = tObject<string[]>('monitoringOccupancy.managerFeatures');
 
   return (
     <div className="min-h-screen bg-background">
@@ -90,22 +78,7 @@ export default function OccupancyDetection() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-12 items-center">
-            <AnimatedSection className="lg:col-span-2">
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">{t('monitoringOccupancy.managerEyebrow')}</p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringOccupancy.managerTitle')}</h2>
-              <p className="text-lg text-muted-foreground mb-6">{t('monitoringOccupancy.managerDescription')}</p>
-              <ul className="space-y-3 mb-8">{managerFeatures.map((text, i) => <ManagerCheckItem key={i} text={text} />)}</ul>
-              <Button asChild><LocalizedLink to="/how-it-works">{t('shared.exploreManager')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
-            </AnimatedSection>
-            <AnimatedSection delay={200} className="lg:col-span-3">
-              <img src={managerDevices} alt={t('monitoringOccupancy.managerEyebrow')} className="w-full" />
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <ManagerSection translationKey="monitoringOccupancy" />
 
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
