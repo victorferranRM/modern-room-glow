@@ -70,7 +70,7 @@ export default function FieldService() {
       </section>
 
       <ServiceProcess eyebrow={t('serviceFieldService.processEyebrow')} title={t('serviceFieldService.processTitle')} steps={processSteps} background="secondary" />
-      <ServiceCTA title={t('serviceFieldService.ctaTitle')} description={t('serviceFieldService.ctaDescription')} primaryCTA={{ text: t('serviceFieldService.primaryCTA'), link: "/contact" }} />
+      <ServiceCTA title={t('serviceFieldService.ctaTitle')} description={t('serviceFieldService.ctaDescription')} primaryCTA={{ text: t('serviceFieldService.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
   );

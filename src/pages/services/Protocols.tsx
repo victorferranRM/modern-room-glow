@@ -9,7 +9,6 @@ import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-protocols.jpg";
-import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
 
@@ -73,8 +72,8 @@ export default function Protocols() {
       </section>
 
       <ServiceProcess eyebrow={t('serviceProtocols.setupEyebrow')} title={t('serviceProtocols.setupTitle')} steps={setupProcess} />
-      <ServiceImageSection eyebrow={t('serviceProtocols.benefitsEyebrow')} title={t('serviceProtocols.benefitsTitle')} description={t('serviceProtocols.benefitsDescription')} features={protocolBenefits} image={managerDevices} imageAlt={t('serviceProtocols.badge')} ctaText={t('serviceProtocols.benefitsCTA')} ctaLink="/contact" background="secondary" />
-      <ServiceCTA title={t('serviceProtocols.ctaTitle')} description={t('serviceProtocols.ctaDescription')} />
+      <ServiceImageSection eyebrow={t('serviceProtocols.benefitsEyebrow')} title={t('serviceProtocols.benefitsTitle')} description={t('serviceProtocols.benefitsDescription')} features={protocolBenefits} placeholderText={t('serviceProtocols.imagePlaceholder')} ctaText={t('serviceProtocols.benefitsCTA')} ctaLink="/contact" background="secondary" />
+      <ServiceCTA title={t('serviceProtocols.ctaTitle')} description={t('serviceProtocols.ctaDescription')} primaryCTA={{ text: t('serviceProtocols.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
   );

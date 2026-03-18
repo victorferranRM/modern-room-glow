@@ -1100,8 +1100,10 @@ const es = {
       { step: "03", title: "Decisión Inteligente", description: "Según tu protocolo, decidimos el mejor curso de acción." },
       { step: "04", title: "Resolución Rápida", description: "Actuamos, documentamos todo y te mantenemos informado." },
     ],
+    imagePlaceholder: "Imagen: Panel del Centro de Control con alertas en tiempo real",
     ctaTitle: "¿Listo para monitorización profesional?",
     ctaDescription: "Nuestro Centro de Control está preparado para proteger tus propiedades 24/7. Habla con un experto para saber cómo podemos ayudarte.",
+    ctaPrimary: "Ver cómo funciona el Centro de Control",
   },
   serviceFieldService: {
     badge: "Red de Servicio de Campo",
@@ -1146,6 +1148,7 @@ const es = {
     ],
     ctaTitle: "¿Necesitas cobertura de servicio de campo?",
     ctaDescription: "Comprueba si tus propiedades están en nuestra área de cobertura. Nuestra red está en constante expansión.",
+    ctaPrimary: "Consultar disponibilidad en tu ciudad",
   },
   serviceGuestAssist: {
     badge: "Guest Assist™",
@@ -1204,9 +1207,10 @@ const es = {
       "Configurar preferencias de notificación",
     ],
     protocolCTA: "Ver una Demo",
+    imagePlaceholder: "Imagen: Interfaz de gestión de protocolo de atención al huésped",
     ctaTitle: "¿Listo para dar un descanso a tu equipo?",
     ctaDescription: "Déjanos gestionar las llamadas de huéspedes mientras tú te centras en hacer crecer tu negocio. Agenda una llamada de orientación rápida para saber más.",
-    ctaPrimary: "Agendar Llamada",
+    ctaPrimary: "Activar atención a huéspedes",
   },
   serviceNightWatch: {
     badge: "Night Watch",
@@ -1258,8 +1262,10 @@ const es = {
       "Cobertura de fines de semana y festivos",
     ],
     preventionCTA: "Activar Night Watch",
+    imagePlaceholder: "Imagen: Dashboard de monitorización nocturna con alertas proactivas",
     ctaTitle: "Duerme tranquilo mientras vigilamos",
     ctaDescription: "Nuestro equipo Night Watch está preparado para proteger tus propiedades durante las horas de mayor riesgo. Habla con nosotros sobre la cobertura para tu portfolio.",
+    ctaPrimary: "Proteger mis propiedades de noche",
   },
   servicePMSAccess: {
     badge: "Acceso PMS y Herramientas",
@@ -1305,7 +1311,7 @@ const es = {
     ],
     ctaTitle: "¿Listo para integrarte?",
     ctaDescription: "Conecta tu PMS y déjanos trabajar como una extensión de tu equipo. La configuración solo toma unos minutos.",
-    ctaPrimary: "Empezar",
+    ctaPrimary: "Ver integraciones disponibles",
     ctaSecondary: "Ver Todas las Integraciones",
   },
   serviceProtocols: {
@@ -1352,8 +1358,10 @@ const es = {
       "Tranquilidad sabiendo que tus reglas se siguen",
     ],
     benefitsCTA: "Ver una Demo",
+    imagePlaceholder: "Imagen: Software de gestión de protocolos operativos en tiempo real",
     ctaTitle: "¿Listo para definir tus protocolos?",
     ctaDescription: "Trabajemos juntos para crear protocolos que se ajusten exactamente a tus necesidades. Nuestro equipo te ayudará a empezar.",
+    ctaPrimary: "Crear mis protocolos operativos",
   },
   serviceIncidentResponse: {
     badge: "Respuesta a Incidencias",

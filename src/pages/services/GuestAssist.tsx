@@ -10,11 +10,9 @@ import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-guest-assist.jpg";
-import managerDevices from "@/assets/manager-devices.png";
 
 const commitmentIcons = [Clock, Zap, FileText, Globe, Shield, Heart];
 const whatWeAreNotIcons = [Users, MessageSquare];
-const whatWeAreNotImages = [serviceImage, managerDevices];
 const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones];
 
 export default function GuestAssist() {
@@ -53,8 +51,8 @@ export default function GuestAssist() {
               return (
                 <AnimatedSection key={i} delay={i * 150} animation={i === 0 ? "fade-right" : "fade-left"}>
                   <div className="group relative overflow-hidden rounded-2xl bg-card border hover:border-destructive/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                    <div className="relative h-48 overflow-hidden">
-                      <img src={whatWeAreNotImages[i]} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="relative h-48 overflow-hidden bg-muted">
+                      <img src={serviceImage} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                       <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
                       <div className="absolute top-4 right-4">
                         <div className="w-12 h-12 rounded-xl bg-destructive/10 border border-destructive/20 flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
@@ -109,7 +107,7 @@ export default function GuestAssist() {
       </section>
 
       <ServiceProcess eyebrow={t('serviceGuestAssist.processEyebrow')} title={t('serviceGuestAssist.processTitle')} steps={processSteps} background="secondary" columns={3} />
-      <ServiceImageSection eyebrow={t('serviceGuestAssist.protocolEyebrow')} title={t('serviceGuestAssist.protocolTitle')} description={t('serviceGuestAssist.protocolDescription')} features={protocolFeatures} image={managerDevices} imageAlt={t('serviceGuestAssist.badge')} ctaText={t('serviceGuestAssist.protocolCTA')} ctaLink="/contact" reversed />
+      <ServiceImageSection eyebrow={t('serviceGuestAssist.protocolEyebrow')} title={t('serviceGuestAssist.protocolTitle')} description={t('serviceGuestAssist.protocolDescription')} features={protocolFeatures} placeholderText={t('serviceGuestAssist.imagePlaceholder')} ctaText={t('serviceGuestAssist.protocolCTA')} ctaLink="/contact" reversed />
       <ServiceCTA title={t('serviceGuestAssist.ctaTitle')} description={t('serviceGuestAssist.ctaDescription')} primaryCTA={{ text: t('serviceGuestAssist.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
