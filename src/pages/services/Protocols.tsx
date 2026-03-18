@@ -15,10 +15,10 @@ const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
 
 export default function Protocols() {
   const { t, tObject } = useTranslation();
-  const featuresData = tObject<{ title: string; description: string }[]>('serviceProtocols.features');
-  const protocolExamples = tObject<{ title: string; steps: string[] }[]>('serviceProtocols.examples');
-  const setupProcess = tObject<{ step: string; title: string; description: string }[]>('serviceProtocols.setupProcess');
-  const protocolBenefits = tObject<string[]>('serviceProtocols.benefits');
+  const featuresData = tObject<{ title: string; description: string }[]>('serviceProtocols.features') ?? [];
+  const protocolExamples = tObject<{ title: string; steps: string[] }[]>('serviceProtocols.examples') ?? [];
+  const setupProcess = tObject<{ step: string; title: string; description: string }[]>('serviceProtocols.setup') ?? [];
+  const protocolBenefits = tObject<string[]>('serviceProtocols.benefitsFeatures') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 

@@ -14,9 +14,9 @@ const featureIcons = [Eye, AlertTriangle, UserCheck, TrendingUp];
 
 export default function OccupancyDetection() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('monitoringOccupancy.stats');
-  const features = tObject<{ title: string; description: string }[]>('monitoringOccupancy.features');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringOccupancy.howItWorks');
+  const stats = tObject<{ value: string; label: string }[]>('monitoringOccupancy.stats') ?? [];
+  const features = tObject<{ title: string; description: string }[]>('monitoringOccupancy.features') ?? [];
+  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringOccupancy.howItWorks') ?? [];
 
   return (
     <div className="min-h-screen bg-background">

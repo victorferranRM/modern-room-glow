@@ -23,17 +23,17 @@ const interventionImages = [interventionNoise, interventionAccess, interventionI
 
 export default function FieldService() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceFieldService.stats');
-  const featuresData = tObject<{ title: string; description: string }[]>('serviceFieldService.features');
-  const interventionTypes = tObject<{ title: string; description: string }[]>('serviceFieldService.interventionTypes');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('serviceFieldService.howItWorks');
+  const stats = tObject<{ value: string; label: string }[]>('serviceFieldService.stats') ?? [];
+  const featuresData = tObject<{ title: string; description: string }[]>('serviceFieldService.features') ?? [];
+  const interventionTypes = tObject<{ title: string; description: string }[]>('serviceFieldService.interventions') ?? [];
+  const processSteps = tObject<{ step: string; title: string; description: string }[]>('serviceFieldService.process') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ServiceHero icon={Truck} badge={t('serviceFieldService.badge')} title={t('serviceFieldService.title')} titleHighlight={t('serviceFieldService.titleHighlight')} description={t('serviceFieldService.description')} image={serviceImage} imageAlt={t('serviceFieldService.badge')} primaryCTA={{ text: t('serviceFieldService.heroCTA'), link: "/contact" }} />
+      <ServiceHero icon={Truck} badge={t('serviceFieldService.badge')} title={t('serviceFieldService.title')} titleHighlight={t('serviceFieldService.titleHighlight')} description={t('serviceFieldService.description')} image={serviceImage} imageAlt={t('serviceFieldService.badge')} primaryCTA={{ text: t('serviceFieldService.primaryCTA'), link: "/contact" }} />
       <ServiceStats stats={stats} />
       <CoverCities />
       <ServiceFeatures eyebrow={t('serviceFieldService.featuresEyebrow')} title={t('serviceFieldService.featuresTitle')} features={features} background="secondary" />
@@ -69,8 +69,8 @@ export default function FieldService() {
         </div>
       </section>
 
-      <ServiceProcess eyebrow={t('serviceFieldService.processEyebrow')} title={t('serviceFieldService.processTitle')} steps={howItWorks} background="secondary" />
-      <ServiceCTA title={t('serviceFieldService.ctaTitle')} description={t('serviceFieldService.ctaDescription')} primaryCTA={{ text: t('serviceFieldService.heroCTA'), link: "/contact" }} />
+      <ServiceProcess eyebrow={t('serviceFieldService.processEyebrow')} title={t('serviceFieldService.processTitle')} steps={processSteps} background="secondary" />
+      <ServiceCTA title={t('serviceFieldService.ctaTitle')} description={t('serviceFieldService.ctaDescription')} primaryCTA={{ text: t('serviceFieldService.primaryCTA'), link: "/contact" }} />
       <Footer />
     </div>
   );

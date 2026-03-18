@@ -14,18 +14,18 @@ const securityIcons = [Key, Shield, Lock];
 
 export default function PMSAccess() {
   const { t, tObject } = useTranslation();
-  const featuresData = tObject<{ title: string; description: string }[]>('servicePMSAccess.features');
-  const platforms = tObject<{ name: string; logo: string }[]>('servicePMSAccess.platforms');
-  const howWeWork = tObject<{ step: string; title: string; description: string }[]>('servicePMSAccess.howWeWork');
-  const capabilities = tObject<string[]>('servicePMSAccess.capabilities');
-  const securityCards = tObject<{ title: string; desc: string }[]>('servicePMSAccess.securityCards');
+  const featuresData = tObject<{ title: string; description: string }[]>('servicePMSAccess.features') ?? [];
+  const platforms = tObject<{ name: string; logo: string }[]>('servicePMSAccess.platforms') ?? [];
+  const howWeWork = tObject<{ step: string; title: string; description: string }[]>('servicePMSAccess.process') ?? [];
+  const capabilities = tObject<string[]>('servicePMSAccess.capabilities') ?? [];
+  const securityCards = tObject<{ title: string; desc: string }[]>('servicePMSAccess.securityCards') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ServiceHero icon={Settings} badge={t('servicePMSAccess.badge')} title={t('servicePMSAccess.title')} titleHighlight={t('servicePMSAccess.titleHighlight')} description={t('servicePMSAccess.description')} image={serviceImage} imageAlt={t('servicePMSAccess.badge')} secondaryCTA={{ text: t('servicePMSAccess.heroSecondary'), link: "/integrations" }} />
+      <ServiceHero icon={Settings} badge={t('servicePMSAccess.badge')} title={t('servicePMSAccess.title')} titleHighlight={t('servicePMSAccess.titleHighlight')} description={t('servicePMSAccess.description')} image={serviceImage} imageAlt={t('servicePMSAccess.badge')} secondaryCTA={{ text: t('servicePMSAccess.secondaryCTA'), link: "/integrations" }} />
 
       {/* Supported Platforms */}
       <section className="py-12 bg-card border-y relative overflow-hidden">

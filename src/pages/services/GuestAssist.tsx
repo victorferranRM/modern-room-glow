@@ -19,21 +19,22 @@ const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones]
 
 export default function GuestAssist() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceGuestAssist.stats');
-  const commitmentsData = tObject<{ title: string; description: string }[]>('serviceGuestAssist.commitments');
-  const whatWeAreNot = tObject<{ title: string; description: string }[]>('serviceGuestAssist.whatWeAreNot');
-  const useCases = tObject<{ title: string }[]>('serviceGuestAssist.useCases');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('serviceGuestAssist.howItWorks');
-  const protocolFeatures = tObject<string[]>('serviceGuestAssist.protocolFeatures');
+  const stats = tObject<{ value: string; label: string }[]>('serviceGuestAssist.stats') ?? [];
+  const commitmentsData = tObject<{ title: string; description: string }[]>('serviceGuestAssist.features') ?? [];
+  const whatWeAreNot = tObject<{ title: string; description: string }[]>('serviceGuestAssist.whatWeAreNot') ?? [];
+  const useCasesRaw = tObject<string[]>('serviceGuestAssist.useCases') ?? [];
+  const processSteps = tObject<{ step: string; title: string; description: string }[]>('serviceGuestAssist.process') ?? [];
+  const protocolFeatures = tObject<string[]>('serviceGuestAssist.protocolFeatures') ?? [];
 
   const commitments = commitmentsData.map((c, i) => ({ ...c, icon: commitmentIcons[i] }));
+  const useCases = useCasesRaw.map(title => ({ title }));
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ServiceHero icon={Headphones} badge={t('serviceGuestAssist.badge')} title={t('serviceGuestAssist.title')} titleHighlight={t('serviceGuestAssist.titleHighlight')} description={t('serviceGuestAssist.description')} image={serviceImage} imageAlt={t('serviceGuestAssist.badge')} primaryCTA={{ text: t('serviceGuestAssist.heroCTA'), link: "/contact" }} />
+      <ServiceHero icon={Headphones} badge={t('serviceGuestAssist.badge')} title={t('serviceGuestAssist.title')} titleHighlight={t('serviceGuestAssist.titleHighlight')} description={t('serviceGuestAssist.description')} image={serviceImage} imageAlt={t('serviceGuestAssist.badge')} primaryCTA={{ text: t('serviceGuestAssist.primaryCTA'), link: "/contact" }} />
       <ServiceStats stats={stats} />
-      <ServiceFeatures eyebrow={t('serviceGuestAssist.commitmentsEyebrow')} title={t('serviceGuestAssist.commitmentsTitle')} features={commitments} />
+      <ServiceFeatures eyebrow={t('serviceGuestAssist.featuresEyebrow')} title={t('serviceGuestAssist.featuresTitle')} features={commitments} />
 
       {/* What We're NOT */}
       <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
@@ -42,7 +43,7 @@ export default function GuestAssist() {
           <AnimatedSection className="text-center mb-16">
             <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">{t('serviceGuestAssist.whatWeAreNotEyebrow')}</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              {t('serviceGuestAssist.whatWeAreNotTitle')} <span className="text-destructive">{t('serviceGuestAssist.whatWeAreNotNO')}</span> {t('serviceGuestAssist.whatWeAreNotTitle2')}
+              {t('serviceGuestAssist.whatWeAreNotTitle')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('serviceGuestAssist.whatWeAreNotSubtitle')}</p>
           </AnimatedSection>
@@ -63,7 +64,7 @@ export default function GuestAssist() {
                       <div className="absolute bottom-4 left-4">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-sm font-medium text-destructive border border-destructive/20">
                           <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
-                          {t('serviceGuestAssist.whatWeAreNotNO')}
+                          {t('serviceGuestAssist.notLabel')}
                         </div>
                       </div>
                     </div>
@@ -107,7 +108,7 @@ export default function GuestAssist() {
         </div>
       </section>
 
-      <ServiceProcess eyebrow={t('serviceGuestAssist.processEyebrow')} title={t('serviceGuestAssist.processTitle')} steps={howItWorks} background="secondary" columns={3} />
+      <ServiceProcess eyebrow={t('serviceGuestAssist.processEyebrow')} title={t('serviceGuestAssist.processTitle')} steps={processSteps} background="secondary" columns={3} />
       <ServiceImageSection eyebrow={t('serviceGuestAssist.protocolEyebrow')} title={t('serviceGuestAssist.protocolTitle')} description={t('serviceGuestAssist.protocolDescription')} features={protocolFeatures} image={managerDevices} imageAlt={t('serviceGuestAssist.badge')} ctaText={t('serviceGuestAssist.protocolCTA')} ctaLink="/contact" reversed />
       <ServiceCTA title={t('serviceGuestAssist.ctaTitle')} description={t('serviceGuestAssist.ctaDescription')} primaryCTA={{ text: t('serviceGuestAssist.ctaPrimary'), link: "/contact" }} />
       <Footer />

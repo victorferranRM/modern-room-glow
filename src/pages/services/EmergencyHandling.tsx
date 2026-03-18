@@ -17,11 +17,11 @@ const emergencyIcons = [Flame, Droplets, Lock, HeartPulse];
 
 export default function EmergencyHandling() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceEmergencyHandling.stats');
-  const emergencyTypes = tObject<{ title: string; description: string; response: string }[]>('serviceEmergencyHandling.types');
-  const featuresData = tObject<{ title: string; description: string }[]>('serviceEmergencyHandling.features');
-  const responseProtocol = tObject<{ step: string; title: string; description: string }[]>('serviceEmergencyHandling.process');
-  const managerFeatures = tObject<string[]>('serviceEmergencyHandling.managerFeatures');
+  const stats = tObject<{ value: string; label: string }[]>('serviceEmergencyHandling.stats') ?? [];
+  const emergencyTypes = tObject<{ title: string; description: string; response: string }[]>('serviceEmergencyHandling.types') ?? [];
+  const featuresData = tObject<{ title: string; description: string }[]>('serviceEmergencyHandling.features') ?? [];
+  const responseProtocol = tObject<{ step: string; title: string; description: string }[]>('serviceEmergencyHandling.process') ?? [];
+  const managerFeatures = tObject<string[]>('serviceEmergencyHandling.managerFeatures') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
