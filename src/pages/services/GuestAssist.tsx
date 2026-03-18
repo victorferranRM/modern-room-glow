@@ -108,7 +108,7 @@ export default function GuestAssist() {
       </section>
 
       <ServiceProcess eyebrow={t('serviceGuestAssist.processEyebrow')} title={t('serviceGuestAssist.processTitle')} steps={processSteps} background="secondary" columns={3} />
-      <ServiceImageSection eyebrow={t('serviceGuestAssist.protocolEyebrow')} title={t('serviceGuestAssist.protocolTitle')} description={t('serviceGuestAssist.protocolDescription')} features={protocolFeatures} placeholderText={t('serviceGuestAssist.imagePlaceholder')} ctaText={t('serviceGuestAssist.protocolCTA')} ctaLink="/contact" reversed />
+      <ServiceImageSection eyebrow={t('serviceGuestAssist.protocolEyebrow')} title={t('serviceGuestAssist.protocolTitle')} description={t('serviceGuestAssist.protocolDescription')} features={protocolFeatures} image={protocolImage} imageAlt="Operational protocols" ctaText={t('serviceGuestAssist.protocolCTA')} ctaLink="/services/protocols" reversed />
       <ServiceCTA title={t('serviceGuestAssist.ctaTitle')} description={t('serviceGuestAssist.ctaDescription')} primaryCTA={{ text: t('serviceGuestAssist.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
