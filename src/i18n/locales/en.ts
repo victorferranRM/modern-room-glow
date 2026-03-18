@@ -1253,8 +1253,10 @@ const en = {
       "Weekend and holiday coverage",
     ],
     preventionCTA: "Activate Night Watch",
+    imagePlaceholder: "Image: Night monitoring dashboard with proactive alerts",
     ctaTitle: "Sleep easy while we watch",
     ctaDescription: "Our Night Watch team is ready to protect your properties during peak-risk hours. Talk to us about coverage for your portfolio.",
+    ctaPrimary: "Protect my properties at night",
   },
   servicePMSAccess: {
     badge: "PMS Access & Tools",
