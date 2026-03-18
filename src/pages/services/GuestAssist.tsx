@@ -20,7 +20,7 @@ const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones]
 export default function GuestAssist() {
   const { t, tObject } = useTranslation();
   const stats = tObject<{ value: string; label: string }[]>('serviceGuestAssist.stats') ?? [];
-  const commitmentsData = tObject<{ title: string; description: string }[]>('serviceGuestAssist.commitments') ?? [];
+  const commitmentsData = tObject<{ title: string; description: string }[]>('serviceGuestAssist.features') ?? [];
   const whatWeAreNot = tObject<{ title: string; description: string }[]>('serviceGuestAssist.whatWeAreNot') ?? [];
   const useCasesRaw = tObject<string[]>('serviceGuestAssist.useCases') ?? [];
   const processSteps = tObject<{ step: string; title: string; description: string }[]>('serviceGuestAssist.process') ?? [];
