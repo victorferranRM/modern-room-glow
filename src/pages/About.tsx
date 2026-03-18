@@ -398,7 +398,7 @@ export default function About() {
         <AnimatedSection className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden">
-              <img src={solutionManage} alt={t('about.joinTeam.title')} className="absolute inset-0 w-full h-full object-cover" />
+              <img src={aboutJoinTeam} alt={t('about.joinTeam.title')} className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-foreground/70" />
               <div className="relative z-10 py-20 px-8 md:py-28 md:px-16 text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-4">{t('about.joinTeam.title')}</h2>
