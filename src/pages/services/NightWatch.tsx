@@ -20,7 +20,7 @@ export default function NightWatch() {
   const featuresData = tObject<{ title: string; description: string }[]>('serviceNightWatch.features') ?? [];
   const coverageHours = tObject<{ day: string; hours: string }[]>('serviceNightWatch.coverageHours') ?? [];
   const preventionProcess = tObject<{ step: string; title: string; description: string }[]>('serviceNightWatch.process') ?? [];
-  const partyPrevention = tObject<string[]>('serviceNightWatch.partyPrevention') ?? [];
+  const partyPrevention = tObject<string[]>('serviceNightWatch.preventionFeatures') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
