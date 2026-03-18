@@ -1100,8 +1100,10 @@ const es = {
       { step: "03", title: "Decisión Inteligente", description: "Según tu protocolo, decidimos el mejor curso de acción." },
       { step: "04", title: "Resolución Rápida", description: "Actuamos, documentamos todo y te mantenemos informado." },
     ],
+    imagePlaceholder: "Imagen: Panel del Centro de Control con alertas en tiempo real",
     ctaTitle: "¿Listo para monitorización profesional?",
     ctaDescription: "Nuestro Centro de Control está preparado para proteger tus propiedades 24/7. Habla con un experto para saber cómo podemos ayudarte.",
+    ctaPrimary: "Ver cómo funciona el Centro de Control",
   },
   serviceFieldService: {
     badge: "Red de Servicio de Campo",
