@@ -64,7 +64,7 @@ export default function GuestAssist() {
                       <div className="absolute bottom-4 left-4">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-sm font-medium text-destructive border border-destructive/20">
                           <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
-                          {t('serviceGuestAssist.whatWeAreNotNO')}
+                          {t('serviceGuestAssist.notLabel')}
                         </div>
                       </div>
                     </div>
