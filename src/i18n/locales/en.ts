@@ -1100,8 +1100,10 @@ const en = {
     imageSectionEyebrow: "Our Role",
     imageSectionTitle: "What our Control Center does",
     imageSectionDescription: "We are the bridge between your sensors and real action. When something happens, we verify, decide and act — all according to your rules.",
+    imagePlaceholder: "Image: Control Center dashboard with real-time alerts",
     ctaTitle: "Ready for professional monitoring?",
     ctaDescription: "Our Control Center is ready to protect your properties 24/7. Talk to an expert to learn how we can help.",
+    ctaPrimary: "See how the Control Center works",
   },
   serviceFieldService: {
     badge: "Field Service Agents",
