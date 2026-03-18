@@ -29,7 +29,7 @@ import timelineParis from "@/assets/timeline-paris.webp";
 import timelineManager from "@/assets/timeline-manager.webp";
 import timelineIntegrations from "@/assets/timeline-integrations.webp";
 
-const valueImages = [solutionRest, solutionManage, solutionControl];
+const valueImages = [aboutCustomerFirst, aboutInnovation, aboutTeamExcellence];
 const valueIcons = [Heart, Sparkles, Users];
 const timelineImages = [timelineBarcelona, timelineDevice, heroControlCenter, timelineParis, timelineManager, timelineIntegrations];
 
