@@ -9,7 +9,6 @@ import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-control-center.jpg";
-import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [Eye, Brain, AlertTriangle, Zap, Users, Shield];
 
@@ -28,9 +27,9 @@ export default function ControlCenter() {
       <ServiceHero icon={Eye} badge={t('serviceControlCenter.badge')} title={t('serviceControlCenter.title')} titleHighlight={t('serviceControlCenter.titleHighlight')} description={t('serviceControlCenter.description')} image={serviceImage} imageAlt={t('serviceControlCenter.badge')} />
       <ServiceStats stats={stats} />
       <ServiceFeatures eyebrow={t('serviceControlCenter.featuresEyebrow')} title={t('serviceControlCenter.featuresTitle')} features={features} />
-      <ServiceImageSection eyebrow={t('serviceControlCenter.imageEyebrow')} title={t('serviceControlCenter.imageTitle')} description={t('serviceControlCenter.imageDescription')} features={capabilities} image={managerDevices} imageAlt={t('serviceControlCenter.badge')} ctaText={t('shared.learnMore')} ctaLink="/contact" background="secondary" />
+      <ServiceImageSection eyebrow={t('serviceControlCenter.imageEyebrow')} title={t('serviceControlCenter.imageTitle')} description={t('serviceControlCenter.imageDescription')} features={capabilities} placeholderText={t('serviceControlCenter.imagePlaceholder')} ctaText={t('shared.learnMore')} ctaLink="/contact" background="secondary" />
       <ServiceProcess eyebrow={t('serviceControlCenter.processEyebrow')} title={t('serviceControlCenter.processTitle')} steps={processSteps} />
-      <ServiceCTA title={t('serviceControlCenter.ctaTitle')} description={t('serviceControlCenter.ctaDescription')} />
+      <ServiceCTA title={t('serviceControlCenter.ctaTitle')} description={t('serviceControlCenter.ctaDescription')} primaryCTA={{ text: t('serviceControlCenter.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
   );
