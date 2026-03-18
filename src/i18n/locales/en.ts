@@ -1155,6 +1155,7 @@ const en = {
     coverageCTA: "Check availability",
     ctaTitle: "Need on-site support?",
     ctaDescription: "Our field service agents are ready to act on your behalf. Talk to us about coverage for your portfolio.",
+    ctaPrimary: "Check availability in your city",
   },
   serviceGuestAssist: {
     badge: "Guest Assist™",

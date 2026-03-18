@@ -1155,6 +1155,7 @@ const fr = {
     coverageCTA: "Vérifier la disponibilité",
     ctaTitle: "Besoin d'un support sur site ?",
     ctaDescription: "Nos agents de terrain sont prêts à agir en votre nom. Parlez-nous de la couverture pour votre portfolio.",
+    ctaPrimary: "Vérifier la disponibilité dans votre ville",
   },
   serviceGuestAssist: {
     badge: "Guest Assist™",
