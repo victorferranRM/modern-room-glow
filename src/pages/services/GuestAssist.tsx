@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Headphones, Clock, Globe, Shield, Phone, MessageSquare, Users, Zap, FileText, Heart } from "lucide-react";
+import { Headphones, Clock, Globe, Shield, Phone, MessageSquare, Users, Zap, FileText, Heart, BotOff, UserCheck } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceStats } from "@/components/services/ServiceStats";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
@@ -13,7 +13,7 @@ import serviceImage from "@/assets/service-guest-assist.jpg";
 import protocolImage from "@/assets/cover-protocols.webp";
 
 const commitmentIcons = [Clock, Zap, FileText, Globe, Shield, Heart];
-const whatWeAreNotIcons = [Users, MessageSquare];
+const whatWeAreNotIcons = [BotOff, UserCheck];
 const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones];
 
 export default function GuestAssist() {
@@ -37,7 +37,7 @@ export default function GuestAssist() {
 
       {/* What We're NOT */}
       <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">{t('serviceGuestAssist.whatWeAreNotEyebrow')}</span>
@@ -46,31 +46,23 @@ export default function GuestAssist() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('serviceGuestAssist.whatWeAreNotSubtitle')}</p>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {whatWeAreNot.map((item, i) => {
               const Icon = whatWeAreNotIcons[i];
               return (
                 <AnimatedSection key={i} delay={i * 150} animation={i === 0 ? "fade-right" : "fade-left"}>
-                  <div className="group relative overflow-hidden rounded-2xl bg-card border hover:border-destructive/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                    <div className="relative h-48 overflow-hidden bg-muted">
-                      <img src={serviceImage} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-                      <div className="absolute top-4 right-4">
-                        <div className="w-12 h-12 rounded-xl bg-destructive/10 border border-destructive/20 flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                          <Icon className="w-6 h-6 text-destructive" />
-                        </div>
-                      </div>
-                      <div className="absolute bottom-4 left-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-sm font-medium text-destructive border border-destructive/20">
-                          <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
-                          {t('serviceGuestAssist.notLabel')}
-                        </div>
-                      </div>
+                  <div className="group relative rounded-2xl bg-card border p-8 lg:p-10 h-full hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
+                    {/* Large icon area */}
+                    <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/15 group-hover:rotate-3">
+                      <Icon className="w-10 h-10 text-primary transition-transform duration-300" />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-3 transition-colors group-hover:text-destructive">{item.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                    {/* "NO" badge */}
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-destructive/10 text-xs font-semibold text-destructive uppercase tracking-wider mb-4">
+                      <span className="w-1.5 h-1.5 rounded-full bg-destructive" />
+                      {t('serviceGuestAssist.notLabel')}
                     </div>
+                    <h3 className="text-xl font-bold mb-3 transition-colors group-hover:text-primary">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </AnimatedSection>
               );
