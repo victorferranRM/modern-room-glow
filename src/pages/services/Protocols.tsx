@@ -11,8 +11,12 @@ import { ProtocolExamples } from "@/components/services/ProtocolExamples";
 import { useTranslation } from "@/i18n/useTranslation";
 import heroImage from "@/assets/cover-protocols.webp";
 import protocolsManagerImage from "@/assets/protocols-manager.webp";
+import interventionNoise from "@/assets/intervention-noise.jpg";
+import interventionAccess from "@/assets/intervention-access.jpg";
+import interventionInspection from "@/assets/intervention-inspection.jpg";
 
 const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
+const exampleImages = [interventionNoise, interventionAccess, interventionInspection];
 
 export default function Protocols() {
   const { t, tObject } = useTranslation();
@@ -28,13 +32,16 @@ export default function Protocols() {
       <Header />
       <ServiceHero icon={FileText} badge={t('serviceProtocols.badge')} title={t('serviceProtocols.title')} titleHighlight={t('serviceProtocols.titleHighlight')} description={t('serviceProtocols.description')} image={heroImage} imageAlt={t('serviceProtocols.badge')} />
 
-      {/* Manager Software Notice */}
-      <section className="py-12 bg-primary/5 border-y relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
-        <div className="container mx-auto px-4 relative">
-          <AnimatedSection className="flex items-center justify-center gap-4 text-center">
-            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center transition-transform duration-300 hover:scale-110"><Monitor className="w-6 h-6 text-primary" /></div>
-            <p className="text-lg" dangerouslySetInnerHTML={{ __html: t('serviceProtocols.managerNotice') }} />
+      {/* Manager Software Notice - redesigned as inline subtle badge */}
+      <section className="py-6 border-b relative">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <div className="flex items-center justify-center gap-3 py-3 px-6 rounded-xl bg-card border border-border/50 max-w-3xl mx-auto shadow-sm">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <Monitor className="w-4 h-4 text-primary" />
+              </div>
+              <p className="text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: t('serviceProtocols.managerNotice') }} />
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -46,6 +53,7 @@ export default function Protocols() {
         title={t('serviceProtocols.examplesTitle')}
         subtitle={t('serviceProtocols.examplesSubtitle')}
         protocols={protocolExamples}
+        images={exampleImages}
       />
 
       {/* Benefits with image - white background */}
