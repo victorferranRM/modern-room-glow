@@ -1302,7 +1302,7 @@ const en = {
     ],
     ctaTitle: "Ready to integrate?",
     ctaDescription: "Connect your PMS and let us work as an extension of your team. Setup takes just minutes.",
-    ctaPrimary: "Get Started",
+    ctaPrimary: "View available integrations",
     ctaSecondary: "View All Integrations",
   },
   serviceProtocols: {
