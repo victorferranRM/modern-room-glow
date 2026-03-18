@@ -19,14 +19,15 @@ const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones]
 
 export default function GuestAssist() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceGuestAssist.stats');
-  const commitmentsData = tObject<{ title: string; description: string }[]>('serviceGuestAssist.commitments');
-  const whatWeAreNot = tObject<{ title: string; description: string }[]>('serviceGuestAssist.whatWeAreNot');
-  const useCases = tObject<{ title: string }[]>('serviceGuestAssist.useCases');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('serviceGuestAssist.howItWorks');
-  const protocolFeatures = tObject<string[]>('serviceGuestAssist.protocolFeatures');
+  const stats = tObject<{ value: string; label: string }[]>('serviceGuestAssist.stats') ?? [];
+  const commitmentsData = tObject<{ title: string; description: string }[]>('serviceGuestAssist.commitments') ?? [];
+  const whatWeAreNot = tObject<{ title: string; description: string }[]>('serviceGuestAssist.whatWeAreNot') ?? [];
+  const useCasesRaw = tObject<string[]>('serviceGuestAssist.useCases') ?? [];
+  const processSteps = tObject<{ step: string; title: string; description: string }[]>('serviceGuestAssist.process') ?? [];
+  const protocolFeatures = tObject<string[]>('serviceGuestAssist.protocolFeatures') ?? [];
 
   const commitments = commitmentsData.map((c, i) => ({ ...c, icon: commitmentIcons[i] }));
+  const useCases = useCasesRaw.map(title => ({ title }));
 
   return (
     <div className="min-h-screen bg-background">
