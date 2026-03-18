@@ -46,11 +46,11 @@ export function ManagerSection({ translationKey }: ManagerSectionProps) {
           </AnimatedSection>
           <AnimatedSection delay={200} className="lg:col-span-3">
 <div className="flex flex-col">
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-start">
                 <img
                   src={managerDevices}
                   alt={t(`${translationKey}.managerEyebrow`)}
-                  className="w-full h-full object-contain object-center"
+                  className="w-full object-contain object-left"
                 />
               </div>
               <div className="mt-6 flex justify-start">
