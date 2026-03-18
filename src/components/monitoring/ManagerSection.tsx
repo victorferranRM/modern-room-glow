@@ -25,7 +25,7 @@ export function ManagerSection({ translationKey }: ManagerSectionProps) {
   const managerFeatures = tObject<string[]>(`${translationKey}.managerFeatures`);
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12 items-stretch">
           <AnimatedSection className="lg:col-span-2 flex flex-col">
