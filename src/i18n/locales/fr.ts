@@ -1349,8 +1349,10 @@ const fr = {
       "Tranquillité de savoir que vos règles sont suivies",
     ],
     benefitsCTA: "Voir une Démo",
+    imagePlaceholder: "Image : Logiciel de gestion des protocoles opérationnels en temps réel",
     ctaTitle: "Prêt à définir vos protocoles ?",
     ctaDescription: "Travaillons ensemble pour créer des protocoles adaptés à vos besoins. Notre équipe vous aidera à démarrer.",
+    ctaPrimary: "Créer mes protocoles opérationnels",
   },
   serviceIncidentResponse: {
     badge: "Réponse aux Incidents",
