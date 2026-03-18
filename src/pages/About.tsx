@@ -5,9 +5,10 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { Heart, Target, Eye, Users, Sparkles, ArrowRight, MapPin, ExternalLink, Building2, Check, Play, Pause, Newspaper, Video, Mic, FileText } from "lucide-react";
-import solutionRest from "@/assets/solution-rest-new.jpg";
-import solutionManage from "@/assets/solution-manage.jpg";
-import solutionControl from "@/assets/solution-control.jpg";
+import aboutCustomerFirst from "@/assets/about-customer-first.webp";
+import aboutInnovation from "@/assets/about-innovation.webp";
+import aboutTeamExcellence from "@/assets/about-team-excellence.webp";
+import aboutJoinTeam from "@/assets/about-join-team.webp";
 
 import cityBarcelona from "@/assets/city-barcelona.jpg";
 import cityMadrid from "@/assets/city-madrid.jpg";
