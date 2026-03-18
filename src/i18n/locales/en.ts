@@ -1349,6 +1349,7 @@ const en = {
       "Peace of mind knowing your rules are followed",
     ],
     benefitsCTA: "See a Demo",
+    benefitsImageAlt: "Hierarchical management of operational protocols by account, city and room",
     imagePlaceholder: "Image: Real-time operational protocol management software",
     ctaTitle: "Ready to define your protocols?",
     ctaDescription: "Let's work together to create protocols that fit your exact needs. Our team will help you get started.",

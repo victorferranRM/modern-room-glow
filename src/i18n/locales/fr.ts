@@ -1349,6 +1349,7 @@ const fr = {
       "Tranquillité de savoir que vos règles sont suivies",
     ],
     benefitsCTA: "Voir une Démo",
+    benefitsImageAlt: "Gestion hiérarchique des protocoles opérationnels par compte, ville et chambre",
     imagePlaceholder: "Image : Logiciel de gestion des protocoles opérationnels en temps réel",
     ctaTitle: "Prêt à définir vos protocoles ?",
     ctaDescription: "Travaillons ensemble pour créer des protocoles adaptés à vos besoins. Notre équipe vous aidera à démarrer.",
