@@ -10,6 +10,7 @@ import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-guest-assist.jpg";
+import protocolImage from "@/assets/cover-protocols.webp";
 
 const commitmentIcons = [Clock, Zap, FileText, Globe, Shield, Heart];
 const whatWeAreNotIcons = [Users, MessageSquare];
