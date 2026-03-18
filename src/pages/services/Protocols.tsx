@@ -19,7 +19,7 @@ const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
 const exampleImages = [interventionNoise, interventionAccess, interventionInspection];
 
 export default function Protocols() {
-  const { t, tObject } = useTranslation();
+  const { t, tObject, lang } = useTranslation();
   const featuresData = tObject<{ title: string; description: string }[]>('serviceProtocols.features') ?? [];
   const protocolExamples = tObject<{ title: string; steps: string[] }[]>('serviceProtocols.examples') ?? [];
   const setupProcess = tObject<{ step: string; title: string; description: string }[]>('serviceProtocols.setup') ?? [];
@@ -33,16 +33,31 @@ export default function Protocols() {
       <ServiceHero icon={FileText} badge={t('serviceProtocols.badge')} title={t('serviceProtocols.title')} titleHighlight={t('serviceProtocols.titleHighlight')} description={t('serviceProtocols.description')} image={heroImage} imageAlt={t('serviceProtocols.badge')} />
 
       {/* Manager Software Notice - redesigned as inline subtle badge */}
-      <section className="py-10 lg:py-14 relative overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="py-16 lg:py-20 bg-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,hsl(var(--primary)/0.15),transparent_60%)]" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
-            <div className="relative max-w-4xl mx-auto rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6 shadow-lg">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
-              <div className="w-14 h-14 rounded-2xl bg-primary/15 flex items-center justify-center shrink-0 ring-4 ring-primary/10">
-                <Monitor className="w-7 h-7 text-primary" />
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-6 flex-1 text-center sm:text-left">
+                <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shrink-0 shadow-lg shadow-primary/30">
+                  <Monitor className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-background mb-3">
+                    {t('serviceProtocols.managerBannerTitle')}
+                  </h3>
+                  <p className="text-base text-background/60 max-w-xl leading-relaxed">
+                    {t('serviceProtocols.managerBannerSubtitle')}
+                  </p>
+                </div>
               </div>
-              <div className="text-center sm:text-left">
-                <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('serviceProtocols.managerNotice') }} />
+              <div className="shrink-0">
+                <a
+                  href={`/${lang}/manager`}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-base hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
+                >
+                  {t('serviceProtocols.managerBannerCTA')}
+                </a>
               </div>
             </div>
           </AnimatedSection>
