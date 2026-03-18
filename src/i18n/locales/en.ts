@@ -822,12 +822,12 @@ const en = {
     pause: "Pause",
     resume: "Resume",
     timeline: [
-      { year: "2014", title: "Founded in Barcelona", description: "Roomonitor was born from a simple idea: helping property managers sleep peacefully." },
-      { year: "2016", title: "First monitoring device", description: "We launched our proprietary monitoring sensor, designed specifically for vacation rentals." },
-      { year: "2018", title: "24/7 Control Center", description: "We opened our first Control Center with multilingual agents around the clock." },
-      { year: "2020", title: "European expansion", description: "We expanded our field service network to cover major cities in Spain, Portugal, France and Italy." },
-      { year: "2023", title: "Manager launch", description: "We launched our comprehensive Manager platform for full visibility and operational control." },
-      { year: "2025", title: "Global vision", description: "Today we protect thousands of properties worldwide and continue innovating." },
+      { year: "2014", title: "Founded in Barcelona", description: "Roomonitor was born in Barcelona with a clear mission: giving short-term rental managers the peace of mind they need to operate without disruptions, especially overnight." },
+      { year: "2016", title: "First device", description: "We designed and manufactured our own acoustic monitoring sensor, built exclusively for the vacation rental industry. Compact, reliable, and easy to install." },
+      { year: "2018", title: "24/7 Control Center", description: "We launched our Control Center with multilingual agents operating 24 hours a day, 365 days a year. Every alert is verified by real people before any action is taken." },
+      { year: "2020", title: "European expansion", description: "We deployed our field agent network across major cities in Spain, Portugal, France and Italy, bringing on-site intervention wherever it's needed." },
+      { year: "2023", title: "Manager launch", description: "We launched Manager, our all-in-one platform that centralises protocol management, properties, bookings and incident handling in a single dashboard." },
+      { year: "2025", title: "Digitalization & AI", description: "We're integrating artificial intelligence and advanced automation to boost our clients' operational efficiency — from predictive detection to autonomous incident management." },
     ],
     press: {
       eyebrow: "In the press",
