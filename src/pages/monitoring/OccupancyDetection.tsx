@@ -3,32 +3,20 @@ import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
 import { MonitoringBanner } from "@/components/monitoring/MonitoringBanner";
+import { ManagerSection } from "@/components/monitoring/ManagerSection";
 import { Button } from "@/components/ui/button";
-import { Users, Eye, ArrowRight, Check, TrendingUp, UserCheck, AlertTriangle } from "lucide-react";
+import { Users, Eye, ArrowRight, TrendingUp, UserCheck, AlertTriangle } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import monitoringOccupancy from "@/assets/monitoring-occupancy.webp";
-import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [Eye, AlertTriangle, UserCheck, TrendingUp];
-
-function ManagerCheckItem({ text }: { text: string }) {
-  return (
-    <li className="flex items-start gap-3 group">
-      <div className="w-5 h-5 mt-0.5 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-primary group-hover:border-primary">
-        <Check className="w-3 h-3 text-primary transition-colors duration-300 group-hover:text-primary-foreground" strokeWidth={3} />
-      </div>
-      <span className="text-sm sm:text-base text-foreground/80 transition-colors group-hover:text-foreground">{text}</span>
-    </li>
-  );
-}
 
 export default function OccupancyDetection() {
   const { t, tObject } = useTranslation();
   const stats = tObject<{ value: string; label: string }[]>('monitoringOccupancy.stats');
   const features = tObject<{ title: string; description: string }[]>('monitoringOccupancy.features');
   const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringOccupancy.howItWorks');
-  const managerFeatures = tObject<string[]>('monitoringOccupancy.managerFeatures');
 
   return (
     <div className="min-h-screen bg-background">
