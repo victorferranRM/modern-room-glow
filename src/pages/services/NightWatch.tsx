@@ -57,7 +57,7 @@ export default function NightWatch() {
 
       <ServiceFeatures eyebrow={t('serviceNightWatch.featuresEyebrow')} title={t('serviceNightWatch.featuresTitle')} features={features} background="secondary" />
       <ServiceProcess eyebrow={t('serviceNightWatch.processEyebrow')} title={t('serviceNightWatch.processTitle')} steps={preventionProcess} />
-      <ServiceImageSection eyebrow={t('serviceNightWatch.imageSectionEyebrow')} title={t('serviceNightWatch.imageSectionTitle')} description={t('serviceNightWatch.imageSectionDescription')} features={partyPrevention} image={managerDevices} imageAlt={t('serviceNightWatch.badge')} ctaText={t('serviceNightWatch.imageSectionCTA')} ctaLink="/contact" background="secondary" />
+      <ServiceImageSection eyebrow={t('serviceNightWatch.preventionEyebrow')} title={t('serviceNightWatch.preventionTitle')} description={t('serviceNightWatch.preventionDescription')} features={partyPrevention} image={managerDevices} imageAlt={t('serviceNightWatch.badge')} ctaText={t('serviceNightWatch.preventionCTA')} ctaLink="/contact" background="secondary" />
       <ServiceCTA title={t('serviceNightWatch.ctaTitle')} description={t('serviceNightWatch.ctaDescription')} />
       <Footer />
     </div>

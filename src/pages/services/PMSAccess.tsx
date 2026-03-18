@@ -25,7 +25,7 @@ export default function PMSAccess() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ServiceHero icon={Settings} badge={t('servicePMSAccess.badge')} title={t('servicePMSAccess.title')} titleHighlight={t('servicePMSAccess.titleHighlight')} description={t('servicePMSAccess.description')} image={serviceImage} imageAlt={t('servicePMSAccess.badge')} secondaryCTA={{ text: t('servicePMSAccess.heroSecondary'), link: "/integrations" }} />
+      <ServiceHero icon={Settings} badge={t('servicePMSAccess.badge')} title={t('servicePMSAccess.title')} titleHighlight={t('servicePMSAccess.titleHighlight')} description={t('servicePMSAccess.description')} image={serviceImage} imageAlt={t('servicePMSAccess.badge')} secondaryCTA={{ text: t('servicePMSAccess.secondaryCTA'), link: "/integrations" }} />
 
       {/* Supported Platforms */}
       <section className="py-12 bg-card border-y relative overflow-hidden">
