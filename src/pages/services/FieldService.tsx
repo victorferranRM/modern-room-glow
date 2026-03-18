@@ -23,10 +23,10 @@ const interventionImages = [interventionNoise, interventionAccess, interventionI
 
 export default function FieldService() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceFieldService.stats');
-  const featuresData = tObject<{ title: string; description: string }[]>('serviceFieldService.features');
-  const interventionTypes = tObject<{ title: string; description: string }[]>('serviceFieldService.interventionTypes');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('serviceFieldService.howItWorks');
+  const stats = tObject<{ value: string; label: string }[]>('serviceFieldService.stats') ?? [];
+  const featuresData = tObject<{ title: string; description: string }[]>('serviceFieldService.features') ?? [];
+  const interventionTypes = tObject<{ title: string; description: string }[]>('serviceFieldService.interventions') ?? [];
+  const processSteps = tObject<{ step: string; title: string; description: string }[]>('serviceFieldService.process') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
