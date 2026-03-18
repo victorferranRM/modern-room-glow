@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { ChevronDown, Book, CheckCircle2 } from "lucide-react";
+import { ChevronDown, Book } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 
 interface ProtocolExample {
   title: string;
@@ -13,9 +14,10 @@ interface ProtocolExamplesProps {
   title: string;
   subtitle: string;
   protocols: ProtocolExample[];
+  images?: string[];
 }
 
-export function ProtocolExamples({ eyebrow, title, subtitle, protocols }: ProtocolExamplesProps) {
+export function ProtocolExamples({ eyebrow, title, subtitle, protocols, images }: ProtocolExamplesProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
@@ -29,9 +31,10 @@ export function ProtocolExamples({ eyebrow, title, subtitle, protocols }: Protoc
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </AnimatedSection>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-5xl mx-auto space-y-4">
           {protocols.map((protocol, i) => {
             const isActive = activeIndex === i;
+            const protocolImage = images?.[i];
             return (
               <AnimatedSection key={i} delay={i * 100}>
                 <div
@@ -75,43 +78,70 @@ export function ProtocolExamples({ eyebrow, title, subtitle, protocols }: Protoc
                     )} />
                   </button>
 
-                  {/* Expandable steps */}
+                  {/* Expandable content */}
                   <div className={cn(
                     "grid transition-all duration-500 ease-in-out",
                     isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   )}>
                     <div className="overflow-hidden">
                       <div className="px-5 sm:px-6 pb-6 pt-0">
-                        <div className="relative pl-8 space-y-0">
-                          {/* Vertical connector line */}
-                          <div className="absolute left-[13px] top-3 bottom-3 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
+                        <div className={cn(
+                          "gap-8",
+                          protocolImage ? "grid lg:grid-cols-[1fr_280px]" : ""
+                        )}>
+                          {/* Steps */}
+                          <div className="relative pl-8 space-y-0">
+                            {/* Vertical connector line */}
+                            <div className="absolute left-[13px] top-3 bottom-3 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
 
-                          {protocol.steps.map((step, j) => (
+                            {protocol.steps.map((step, j) => (
+                              <div
+                                key={j}
+                                className="relative flex items-start gap-4 py-3 group/step"
+                                style={{
+                                  animationDelay: isActive ? `${j * 80}ms` : "0ms",
+                                  animation: isActive ? "fadeSlideIn 0.4s ease-out forwards" : "none",
+                                  opacity: isActive ? 0 : 1,
+                                }}
+                              >
+                                {/* Step dot */}
+                                <div className="absolute left-[-22px] top-[18px] w-[14px] h-[14px] rounded-full border-2 border-primary/40 bg-card flex items-center justify-center transition-all duration-300 group-hover/step:border-primary group-hover/step:scale-125">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-primary/60 group-hover/step:bg-primary transition-colors" />
+                                </div>
+
+                                {/* Step number badge */}
+                                <span className="shrink-0 w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-xs font-bold text-primary transition-all duration-300 group-hover/step:bg-primary group-hover/step:text-primary-foreground group-hover/step:scale-110">
+                                  {j + 1}
+                                </span>
+
+                                {/* Step text */}
+                                <span className="text-sm sm:text-base text-foreground/80 transition-colors group-hover/step:text-foreground leading-relaxed pt-0.5">
+                                  {step}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Image */}
+                          {protocolImage && (
                             <div
-                              key={j}
-                              className="relative flex items-start gap-4 py-3 group/step"
+                              className="hidden lg:block"
                               style={{
-                                animationDelay: isActive ? `${j * 80}ms` : "0ms",
-                                animation: isActive ? "fadeSlideIn 0.4s ease-out forwards" : "none",
+                                animation: isActive ? "fadeSlideIn 0.5s ease-out 0.2s forwards" : "none",
                                 opacity: isActive ? 0 : 1,
                               }}
                             >
-                              {/* Step dot */}
-                              <div className="absolute left-[-22px] top-[18px] w-[14px] h-[14px] rounded-full border-2 border-primary/40 bg-card flex items-center justify-center transition-all duration-300 group-hover/step:border-primary group-hover/step:scale-125">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary/60 group-hover/step:bg-primary transition-colors" />
+                              <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-md h-full">
+                                <OptimizedImage
+                                  src={protocolImage}
+                                  alt={protocol.title}
+                                  className="w-full h-full"
+                                  containerClassName="w-full h-full min-h-[200px]"
+                                  objectFit="cover"
+                                />
                               </div>
-
-                              {/* Step number badge */}
-                              <span className="shrink-0 w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-xs font-bold text-primary transition-all duration-300 group-hover/step:bg-primary group-hover/step:text-primary-foreground group-hover/step:scale-110">
-                                {j + 1}
-                              </span>
-
-                              {/* Step text */}
-                              <span className="text-sm sm:text-base text-foreground/80 transition-colors group-hover/step:text-foreground leading-relaxed pt-0.5">
-                                {step}
-                              </span>
                             </div>
-                          ))}
+                          )}
                         </div>
                       </div>
                     </div>
@@ -123,17 +153,10 @@ export function ProtocolExamples({ eyebrow, title, subtitle, protocols }: Protoc
         </div>
       </div>
 
-      {/* Keyframe animation for step reveal */}
       <style>{`
         @keyframes fadeSlideIn {
-          from {
-            opacity: 0;
-            transform: translateX(-8px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
+          from { opacity: 0; transform: translateX(-8px); }
+          to { opacity: 1; transform: translateX(0); }
         }
       `}</style>
     </section>
