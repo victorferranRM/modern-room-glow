@@ -32,9 +32,9 @@ export default function GuestAssist() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ServiceHero icon={Headphones} badge={t('serviceGuestAssist.badge')} title={t('serviceGuestAssist.title')} titleHighlight={t('serviceGuestAssist.titleHighlight')} description={t('serviceGuestAssist.description')} image={serviceImage} imageAlt={t('serviceGuestAssist.badge')} primaryCTA={{ text: t('serviceGuestAssist.heroCTA'), link: "/contact" }} />
+      <ServiceHero icon={Headphones} badge={t('serviceGuestAssist.badge')} title={t('serviceGuestAssist.title')} titleHighlight={t('serviceGuestAssist.titleHighlight')} description={t('serviceGuestAssist.description')} image={serviceImage} imageAlt={t('serviceGuestAssist.badge')} primaryCTA={{ text: t('serviceGuestAssist.primaryCTA'), link: "/contact" }} />
       <ServiceStats stats={stats} />
-      <ServiceFeatures eyebrow={t('serviceGuestAssist.commitmentsEyebrow')} title={t('serviceGuestAssist.commitmentsTitle')} features={commitments} />
+      <ServiceFeatures eyebrow={t('serviceGuestAssist.featuresEyebrow') || t('serviceGuestAssist.commitmentsEyebrow')} title={t('serviceGuestAssist.featuresTitle') || t('serviceGuestAssist.commitmentsTitle')} features={commitments} />
 
       {/* What We're NOT */}
       <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">

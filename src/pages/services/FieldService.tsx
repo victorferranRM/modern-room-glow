@@ -33,7 +33,7 @@ export default function FieldService() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ServiceHero icon={Truck} badge={t('serviceFieldService.badge')} title={t('serviceFieldService.title')} titleHighlight={t('serviceFieldService.titleHighlight')} description={t('serviceFieldService.description')} image={serviceImage} imageAlt={t('serviceFieldService.badge')} primaryCTA={{ text: t('serviceFieldService.heroCTA'), link: "/contact" }} />
+      <ServiceHero icon={Truck} badge={t('serviceFieldService.badge')} title={t('serviceFieldService.title')} titleHighlight={t('serviceFieldService.titleHighlight')} description={t('serviceFieldService.description')} image={serviceImage} imageAlt={t('serviceFieldService.badge')} primaryCTA={{ text: t('serviceFieldService.primaryCTA'), link: "/contact" }} />
       <ServiceStats stats={stats} />
       <CoverCities />
       <ServiceFeatures eyebrow={t('serviceFieldService.featuresEyebrow')} title={t('serviceFieldService.featuresTitle')} features={features} background="secondary" />
