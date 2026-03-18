@@ -25,11 +25,11 @@ const incidentColors = [
 
 export default function IncidentResponse() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceIncidentResponse.stats');
-  const featuresData = tObject<{ title: string; description: string }[]>('serviceIncidentResponse.features');
-  const incidentTypes = tObject<{ title: string; description: string; severity: string }[]>('serviceIncidentResponse.types');
-  const responseProcess = tObject<{ step: string; title: string; description: string }[]>('serviceIncidentResponse.process');
-  const managerFeatures = tObject<string[]>('serviceIncidentResponse.managerFeatures');
+  const stats = tObject<{ value: string; label: string }[]>('serviceIncidentResponse.stats') ?? [];
+  const featuresData = tObject<{ title: string; description: string }[]>('serviceIncidentResponse.features') ?? [];
+  const incidentTypes = tObject<{ title: string; description: string; severity: string }[]>('serviceIncidentResponse.types') ?? [];
+  const responseProcess = tObject<{ step: string; title: string; description: string }[]>('serviceIncidentResponse.process') ?? [];
+  const managerFeatures = tObject<string[]>('serviceIncidentResponse.managerFeatures') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 

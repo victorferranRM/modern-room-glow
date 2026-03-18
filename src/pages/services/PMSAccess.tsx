@@ -14,11 +14,11 @@ const securityIcons = [Key, Shield, Lock];
 
 export default function PMSAccess() {
   const { t, tObject } = useTranslation();
-  const featuresData = tObject<{ title: string; description: string }[]>('servicePMSAccess.features');
-  const platforms = tObject<{ name: string; logo: string }[]>('servicePMSAccess.platforms');
-  const howWeWork = tObject<{ step: string; title: string; description: string }[]>('servicePMSAccess.howWeWork');
-  const capabilities = tObject<string[]>('servicePMSAccess.capabilities');
-  const securityCards = tObject<{ title: string; desc: string }[]>('servicePMSAccess.securityCards');
+  const featuresData = tObject<{ title: string; description: string }[]>('servicePMSAccess.features') ?? [];
+  const platforms = tObject<{ name: string; logo: string }[]>('servicePMSAccess.platforms') ?? [];
+  const howWeWork = tObject<{ step: string; title: string; description: string }[]>('servicePMSAccess.howWeWork') ?? [];
+  const capabilities = tObject<string[]>('servicePMSAccess.capabilities') ?? [];
+  const securityCards = tObject<{ title: string; desc: string }[]>('servicePMSAccess.securityCards') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 

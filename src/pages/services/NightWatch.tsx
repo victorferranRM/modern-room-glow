@@ -16,11 +16,11 @@ const featureIcons = [Moon, Eye, Volume2, UserCheck, Bell, Shield];
 
 export default function NightWatch() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceNightWatch.stats');
-  const featuresData = tObject<{ title: string; description: string }[]>('serviceNightWatch.features');
-  const coverageHours = tObject<{ day: string; hours: string }[]>('serviceNightWatch.coverageHours');
-  const preventionProcess = tObject<{ step: string; title: string; description: string }[]>('serviceNightWatch.process');
-  const partyPrevention = tObject<string[]>('serviceNightWatch.partyPrevention');
+  const stats = tObject<{ value: string; label: string }[]>('serviceNightWatch.stats') ?? [];
+  const featuresData = tObject<{ title: string; description: string }[]>('serviceNightWatch.features') ?? [];
+  const coverageHours = tObject<{ day: string; hours: string }[]>('serviceNightWatch.coverageHours') ?? [];
+  const preventionProcess = tObject<{ step: string; title: string; description: string }[]>('serviceNightWatch.process') ?? [];
+  const partyPrevention = tObject<string[]>('serviceNightWatch.partyPrevention') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
