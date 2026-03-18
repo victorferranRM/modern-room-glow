@@ -1302,7 +1302,7 @@ const fr = {
     ],
     ctaTitle: "Prêt à vous intégrer ?",
     ctaDescription: "Connectez votre PMS et laissez-nous travailler comme une extension de votre équipe. La configuration ne prend que quelques minutes.",
-    ctaPrimary: "Commencer",
+    ctaPrimary: "Voir les intégrations disponibles",
     ctaSecondary: "Voir Toutes les Intégrations",
   },
   serviceProtocols: {
