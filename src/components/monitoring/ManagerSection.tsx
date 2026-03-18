@@ -44,21 +44,23 @@ export function ManagerSection({ translationKey }: ManagerSectionProps) {
               ))}
             </ul>
           </AnimatedSection>
-          <AnimatedSection delay={200} className="lg:col-span-3 flex flex-col">
-            <div className="flex-1 flex items-center justify-center">
-              <img
-                src={managerDevices}
-                alt={t(`${translationKey}.managerEyebrow`)}
-                className="w-full object-contain object-center"
-              />
-            </div>
-            <div className="mt-6">
-              <Button asChild>
-                <LocalizedLink to="/how-it-works">
-                  {t('shared.exploreManager')}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </LocalizedLink>
-              </Button>
+          <AnimatedSection delay={200} className="lg:col-span-3">
+            <div className="flex h-full flex-col">
+              <div className="flex-1 flex items-center justify-center">
+                <img
+                  src={managerDevices}
+                  alt={t(`${translationKey}.managerEyebrow`)}
+                  className="w-full h-full object-contain object-center"
+                />
+              </div>
+              <div className="mt-6 flex justify-start">
+                <Button asChild>
+                  <LocalizedLink to="/how-it-works">
+                    {t('shared.exploreManager')}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </LocalizedLink>
+                </Button>
+              </div>
             </div>
           </AnimatedSection>
         </div>
