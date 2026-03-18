@@ -43,7 +43,7 @@ export default function GuestAssist() {
           <AnimatedSection className="text-center mb-16">
             <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">{t('serviceGuestAssist.whatWeAreNotEyebrow')}</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-              {t('serviceGuestAssist.whatWeAreNotTitle')} <span className="text-destructive">{t('serviceGuestAssist.whatWeAreNotNO')}</span> {t('serviceGuestAssist.whatWeAreNotTitle2')}
+              {t('serviceGuestAssist.whatWeAreNotTitle')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('serviceGuestAssist.whatWeAreNotSubtitle')}</p>
           </AnimatedSection>
