@@ -1148,6 +1148,7 @@ const es = {
     ],
     ctaTitle: "¿Necesitas cobertura de servicio de campo?",
     ctaDescription: "Comprueba si tus propiedades están en nuestra área de cobertura. Nuestra red está en constante expansión.",
+    ctaPrimary: "Consultar disponibilidad en tu ciudad",
   },
   serviceGuestAssist: {
     badge: "Guest Assist™",
