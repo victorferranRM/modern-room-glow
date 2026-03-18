@@ -936,8 +936,8 @@ const fr = {
   },
   monitoringOccupancy: {
     badge: "Détection d'Occupation",
-    title: "Sachez qui est dans votre",
-    titleHighlight: "propriété à tout moment",
+    title: "Sachez qui est dans votre propriété",
+    titleHighlight: "à tout moment",
     description: "Détectez les fêtes non autorisées, vérifiez le nombre de clients et prévenez la suroccupation — en respectant pleinement la vie privée.",
     breadcrumb: "Détection d'Occupation",
     stats: [
