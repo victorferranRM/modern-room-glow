@@ -14,9 +14,9 @@ const featureIcons = [AlertTriangle, Ban, Shield, FileCheck];
 
 export default function SmokeDetection() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('monitoringSmoke.stats');
-  const features = tObject<{ title: string; description: string }[]>('monitoringSmoke.features');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringSmoke.howItWorks');
+  const stats = tObject<{ value: string; label: string }[]>('monitoringSmoke.stats') ?? [];
+  const features = tObject<{ title: string; description: string }[]>('monitoringSmoke.features') ?? [];
+  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringSmoke.howItWorks') ?? [];
 
   return (
     <div className="min-h-screen bg-background">

@@ -14,9 +14,9 @@ const featureIcons = [Thermometer, Droplets, Wind, Gauge];
 
 export default function EnvironmentMonitoring() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('monitoringEnvironment.stats');
-  const features = tObject<{ title: string; description: string }[]>('monitoringEnvironment.features');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringEnvironment.howItWorks');
+  const stats = tObject<{ value: string; label: string }[]>('monitoringEnvironment.stats') ?? [];
+  const features = tObject<{ title: string; description: string }[]>('monitoringEnvironment.features') ?? [];
+  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringEnvironment.howItWorks') ?? [];
 
   return (
     <div className="min-h-screen bg-background">

@@ -14,9 +14,9 @@ const featureIcons = [Bell, Clock, Shield, BarChart3];
 
 export default function NoiseMonitoring() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('monitoringNoise.stats');
-  const features = tObject<{ title: string; description: string }[]>('monitoringNoise.features');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringNoise.howItWorks');
+  const stats = tObject<{ value: string; label: string }[]>('monitoringNoise.stats') ?? [];
+  const features = tObject<{ title: string; description: string }[]>('monitoringNoise.features') ?? [];
+  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('monitoringNoise.howItWorks') ?? [];
 
   return (
     <div className="min-h-screen bg-background">
