@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
-import imgAlerta from "@/assets/monitoring-noise.jpg";
+import imgAlerta from "@/assets/monitoring-noise.webp";
 import imgAgente from "@/assets/cover-control-center.jpg";
 import imgResolucion from "@/assets/cover-phone-assist.jpg";
 import imgEscalacion from "@/assets/cover-protocols.jpg";

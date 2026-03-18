@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
-import monitoringNoise from "@/assets/monitoring-noise.jpg";
-import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
-import monitoringAir from "@/assets/monitoring-air.jpg";
-import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
+import monitoringNoise from "@/assets/monitoring-noise.webp";
+import monitoringOccupancy from "@/assets/monitoring-occupancy.webp";
+import monitoringAir from "@/assets/monitoring-smoke.webp";
+import monitoringEnvironment from "@/assets/monitoring-environment.webp";
 
 const dimensionMeta = [
   { id: "noise", icon: Volume2, image: monitoringNoise, href: "/monitoring/noise", hasCalculator: false, status: "normal" as const },
