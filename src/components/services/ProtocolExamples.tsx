@@ -1,7 +1,4 @@
-import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { ChevronDown, Book } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 
 interface ProtocolExample {
@@ -18,8 +15,6 @@ interface ProtocolExamplesProps {
 }
 
 export function ProtocolExamples({ eyebrow, title, subtitle, protocols, images }: ProtocolExamplesProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
-
   return (
     <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -31,119 +26,58 @@ export function ProtocolExamples({ eyebrow, title, subtitle, protocols, images }
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </AnimatedSection>
 
-        <div className="max-w-5xl mx-auto space-y-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {protocols.map((protocol, i) => {
-            const isActive = activeIndex === i;
             const protocolImage = images?.[i];
             return (
-              <AnimatedSection key={i} delay={i * 100}>
-                <div
-                  className={cn(
-                    "rounded-2xl border transition-all duration-500 overflow-hidden",
-                    isActive
-                      ? "bg-card shadow-xl border-primary/30 ring-1 ring-primary/10"
-                      : "bg-card/60 hover:bg-card hover:shadow-md border-border/50 hover:border-primary/20"
-                  )}
-                >
-                  {/* Header - clickable */}
-                  <button
-                    onClick={() => setActiveIndex(isActive ? null : i)}
-                    className="w-full flex items-center gap-4 p-5 sm:p-6 text-left group"
-                  >
-                    <div className={cn(
-                      "w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500",
-                      isActive
-                        ? "bg-primary text-primary-foreground scale-110 shadow-lg shadow-primary/30"
-                        : "bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:scale-105"
-                    )}>
-                      <Book className="w-5 h-5" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className={cn(
-                        "font-semibold text-lg transition-colors duration-300",
-                        isActive ? "text-primary" : "group-hover:text-primary"
-                      )}>
+              <AnimatedSection key={i} delay={i * 150}>
+                <div className="rounded-2xl border border-border/50 bg-card shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden h-full flex flex-col group">
+                  {/* Image */}
+                  {protocolImage && (
+                    <div className="relative aspect-video overflow-hidden">
+                      <OptimizedImage
+                        src={protocolImage}
+                        alt={protocol.title}
+                        className="w-full h-full group-hover:scale-105 transition-transform duration-700"
+                        containerClassName="w-full h-full"
+                        objectFit="cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                      <h3 className="absolute bottom-0 left-0 right-0 p-5 text-lg font-semibold text-white">
                         {protocol.title}
                       </h3>
-                      <p className={cn(
-                        "text-sm text-muted-foreground transition-all duration-300",
-                        isActive ? "opacity-0 h-0" : "opacity-100"
-                      )}>
-                        {protocol.steps.length} pasos
-                      </p>
                     </div>
-                    <ChevronDown className={cn(
-                      "w-5 h-5 text-muted-foreground shrink-0 transition-all duration-500",
-                      isActive ? "rotate-180 text-primary" : "group-hover:text-primary"
-                    )} />
-                  </button>
+                  )}
 
-                  {/* Expandable content */}
-                  <div className={cn(
-                    "grid transition-all duration-500 ease-in-out",
-                    isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                  )}>
-                    <div className="overflow-hidden">
-                      <div className="px-5 sm:px-6 pb-6 pt-0">
-                        <div className={cn(
-                          "gap-8",
-                          protocolImage ? "grid lg:grid-cols-[1fr_280px]" : ""
-                        )}>
-                          {/* Steps */}
-                          <div className="relative pl-8 space-y-0">
-                            {/* Vertical connector line */}
-                            <div className="absolute left-[13px] top-3 bottom-3 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
+                  {/* If no image, show title normally */}
+                  {!protocolImage && (
+                    <div className="px-5 pt-5 pb-2">
+                      <h3 className="text-lg font-semibold text-foreground">{protocol.title}</h3>
+                    </div>
+                  )}
 
-                            {protocol.steps.map((step, j) => (
-                              <div
-                                key={j}
-                                className="relative flex items-start gap-4 py-3 group/step"
-                                style={{
-                                  animationDelay: isActive ? `${j * 80}ms` : "0ms",
-                                  animation: isActive ? "fadeSlideIn 0.4s ease-out forwards" : "none",
-                                  opacity: isActive ? 0 : 1,
-                                }}
-                              >
-                                {/* Step dot */}
-                                <div className="absolute left-[-22px] top-[18px] w-[14px] h-[14px] rounded-full border-2 border-primary/40 bg-card flex items-center justify-center transition-all duration-300 group-hover/step:border-primary group-hover/step:scale-125">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-primary/60 group-hover/step:bg-primary transition-colors" />
-                                </div>
+                  {/* Steps */}
+                  <div className="p-5 pt-4 flex-1">
+                    <div className="relative pl-6 space-y-0">
+                      {/* Vertical line */}
+                      <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-primary/30 via-primary/15 to-transparent" />
 
-                                {/* Step number badge */}
-                                <span className="shrink-0 w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-xs font-bold text-primary transition-all duration-300 group-hover/step:bg-primary group-hover/step:text-primary-foreground group-hover/step:scale-110">
-                                  {j + 1}
-                                </span>
+                      {protocol.steps.map((step, j) => (
+                        <div key={j} className="relative flex items-start gap-3 py-2 group/step">
+                          {/* Dot */}
+                          <div className="absolute left-[-18px] top-[12px] w-[10px] h-[10px] rounded-full border-2 border-primary/30 bg-card group-hover/step:border-primary transition-colors" />
 
-                                {/* Step text */}
-                                <span className="text-sm sm:text-base text-foreground/80 transition-colors group-hover/step:text-foreground leading-relaxed pt-0.5">
-                                  {step}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
+                          {/* Number */}
+                          <span className="shrink-0 w-6 h-6 rounded-md bg-primary/10 flex items-center justify-center text-xs font-bold text-primary group-hover/step:bg-primary group-hover/step:text-primary-foreground transition-all">
+                            {j + 1}
+                          </span>
 
-                          {/* Image */}
-                          {protocolImage && (
-                            <div
-                              className="hidden lg:block"
-                              style={{
-                                animation: isActive ? "fadeSlideIn 0.5s ease-out 0.2s forwards" : "none",
-                                opacity: isActive ? 0 : 1,
-                              }}
-                            >
-                              <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-md h-full">
-                                <OptimizedImage
-                                  src={protocolImage}
-                                  alt={protocol.title}
-                                  className="w-full h-full"
-                                  containerClassName="w-full h-full min-h-[200px]"
-                                  objectFit="cover"
-                                />
-                              </div>
-                            </div>
-                          )}
+                          {/* Text */}
+                          <span className="text-sm text-muted-foreground group-hover/step:text-foreground transition-colors leading-relaxed">
+                            {step}
+                          </span>
                         </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -152,13 +86,6 @@ export function ProtocolExamples({ eyebrow, title, subtitle, protocols, images }
           })}
         </div>
       </div>
-
-      <style>{`
-        @keyframes fadeSlideIn {
-          from { opacity: 0; transform: translateX(-8px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-      `}</style>
     </section>
   );
 }
