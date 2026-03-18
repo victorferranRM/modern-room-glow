@@ -53,7 +53,7 @@ export function ManagerSection({ translationKey }: ManagerSectionProps) {
                   className="w-full object-contain object-left"
                 />
               </div>
-              <div className="mt-6 flex justify-start">
+              <div className="mt-6 flex justify-center">
                 <Button size="lg" className="gap-2 group" asChild>
                   <LocalizedLink to="/contact">
                     {t('shared.requestDemo')}
