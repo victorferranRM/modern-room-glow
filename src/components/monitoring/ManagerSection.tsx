@@ -54,10 +54,10 @@ export function ManagerSection({ translationKey }: ManagerSectionProps) {
                 />
               </div>
               <div className="mt-6 flex justify-start">
-                <Button asChild>
-                  <LocalizedLink to="/how-it-works">
-                    {t('shared.exploreManager')}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                <Button size="lg" className="gap-2 group" asChild>
+                  <LocalizedLink to="/contact">
+                    {t('shared.requestDemo')}
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </LocalizedLink>
                 </Button>
               </div>
