@@ -13,7 +13,7 @@ import serviceImage from "@/assets/service-guest-assist.jpg";
 import protocolImage from "@/assets/cover-protocols.webp";
 
 const commitmentIcons = [Clock, Zap, FileText, Globe, Shield, Heart];
-const whatWeAreNotIcons = [Users, MessageSquare];
+const whatWeAreNotIcons = [BotOff, UserCheck];
 const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones];
 
 export default function GuestAssist() {
