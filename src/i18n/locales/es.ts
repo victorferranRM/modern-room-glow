@@ -1262,8 +1262,10 @@ const es = {
       "Cobertura de fines de semana y festivos",
     ],
     preventionCTA: "Activar Night Watch",
+    imagePlaceholder: "Imagen: Dashboard de monitorización nocturna con alertas proactivas",
     ctaTitle: "Duerme tranquilo mientras vigilamos",
     ctaDescription: "Nuestro equipo Night Watch está preparado para proteger tus propiedades durante las horas de mayor riesgo. Habla con nosotros sobre la cobertura para tu portfolio.",
+    ctaPrimary: "Proteger mis propiedades de noche",
   },
   servicePMSAccess: {
     badge: "Acceso PMS y Herramientas",
