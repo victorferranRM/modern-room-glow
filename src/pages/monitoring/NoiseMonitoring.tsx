@@ -23,7 +23,7 @@ export default function NoiseMonitoring() {
       <Header />
       <MonitoringHero icon={Volume2} badge={t('monitoringNoise.badge')} title={t('monitoringNoise.title')} titleHighlight={t('monitoringNoise.titleHighlight')} description={t('monitoringNoise.description')} image={monitoringNoise} imageAlt={t('monitoringNoise.badge')} breadcrumbLabel={t('monitoringNoise.breadcrumb')} />
 
-      <section className="py-12 bg-secondary/30 border-y">
+      <section className="py-12 bg-foreground/5 border-y">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (

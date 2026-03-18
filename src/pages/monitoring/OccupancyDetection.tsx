@@ -23,7 +23,7 @@ export default function OccupancyDetection() {
       <Header />
       <MonitoringHero icon={Users} badge={t('monitoringOccupancy.badge')} title={t('monitoringOccupancy.title')} titleHighlight={t('monitoringOccupancy.titleHighlight')} description={t('monitoringOccupancy.description')} image={monitoringOccupancy} imageAlt={t('monitoringOccupancy.badge')} breadcrumbLabel={t('monitoringOccupancy.breadcrumb')} />
 
-      <section className="py-12 bg-secondary/30 border-y">
+      <section className="py-12 bg-foreground/5 border-y">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (

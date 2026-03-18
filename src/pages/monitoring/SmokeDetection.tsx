@@ -23,7 +23,7 @@ export default function SmokeDetection() {
       <Header />
       <MonitoringHero icon={Flame} badge={t('monitoringSmoke.badge')} title={t('monitoringSmoke.title')} titleHighlight={t('monitoringSmoke.titleHighlight')} description={t('monitoringSmoke.description')} image={monitoringSmoke} imageAlt={t('monitoringSmoke.badge')} breadcrumbLabel={t('monitoringSmoke.breadcrumb')} />
 
-      <section className="py-12 bg-secondary/30 border-y">
+      <section className="py-12 bg-foreground/5 border-y">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
