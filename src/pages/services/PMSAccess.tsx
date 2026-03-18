@@ -16,7 +16,7 @@ export default function PMSAccess() {
   const { t, tObject } = useTranslation();
   const featuresData = tObject<{ title: string; description: string }[]>('servicePMSAccess.features') ?? [];
   const platforms = tObject<{ name: string; logo: string }[]>('servicePMSAccess.platforms') ?? [];
-  const howWeWork = tObject<{ step: string; title: string; description: string }[]>('servicePMSAccess.howWeWork') ?? [];
+  const howWeWork = tObject<{ step: string; title: string; description: string }[]>('servicePMSAccess.process') ?? [];
   const capabilities = tObject<string[]>('servicePMSAccess.capabilities') ?? [];
   const securityCards = tObject<{ title: string; desc: string }[]>('servicePMSAccess.securityCards') ?? [];
 
