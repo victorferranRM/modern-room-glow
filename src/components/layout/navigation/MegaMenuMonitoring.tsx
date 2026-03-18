@@ -17,7 +17,7 @@ export function MegaMenuMonitoring() {
         {/* Left - Device showcase */}
         <div className="col-span-2 flex flex-col items-center justify-center">
           <img 
-            src={roomonitorDevice}
+            src={sensorRoomonitor}
             alt="Roomonitor"
             className="w-full max-w-[220px] rounded-2xl shadow-lg object-cover mb-6"
             loading="eager"
