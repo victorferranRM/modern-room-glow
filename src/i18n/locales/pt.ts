@@ -1198,9 +1198,10 @@ const pt = {
       "Configurar preferências de notificação",
     ],
     protocolCTA: "Ver uma Demo",
+    imagePlaceholder: "Imagem: Interface de gestão de protocolo de atendimento ao hóspede",
     ctaTitle: "Pronto para dar um descanso à sua equipe?",
     ctaDescription: "Deixe-nos gerenciar as chamadas dos hóspedes enquanto você foca no crescimento do negócio. Agende uma chamada de orientação rápida.",
-    ctaPrimary: "Agendar Chamada",
+    ctaPrimary: "Ativar atendimento a hóspedes",
   },
   serviceNightWatch: {
     badge: "Night Watch",
