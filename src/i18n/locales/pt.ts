@@ -1302,7 +1302,7 @@ const pt = {
     ],
     ctaTitle: "Pronto para integrar?",
     ctaDescription: "Conecte seu PMS e deixe-nos trabalhar como extensão da sua equipe. A configuração leva apenas minutos.",
-    ctaPrimary: "Começar",
+    ctaPrimary: "Ver integrações disponíveis",
     ctaSecondary: "Ver Todas as Integrações",
   },
   serviceProtocols: {
