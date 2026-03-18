@@ -78,22 +78,7 @@ export default function SmokeDetection() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-12 items-center">
-            <AnimatedSection className="lg:col-span-2">
-              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">{t('monitoringSmoke.managerEyebrow')}</p>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringSmoke.managerTitle')}</h2>
-              <p className="text-lg text-muted-foreground mb-6">{t('monitoringSmoke.managerDescription')}</p>
-              <ul className="space-y-3 mb-8">{managerFeatures.map((text, i) => <ManagerCheckItem key={i} text={text} />)}</ul>
-              <Button asChild><LocalizedLink to="/how-it-works">{t('shared.exploreManager')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
-            </AnimatedSection>
-            <AnimatedSection delay={200} className="lg:col-span-3">
-              <img src={managerDevices} alt={t('monitoringSmoke.managerEyebrow')} className="w-full" />
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <ManagerSection translationKey="monitoringSmoke" />
 
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
