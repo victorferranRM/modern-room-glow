@@ -9,13 +9,13 @@ import {
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import roomonitorDevice from "@/assets/roomonitor-device.jpg";
-import monitoringNoise from "@/assets/monitoring-noise.webp";
-import monitoringOccupancy from "@/assets/monitoring-occupancy.webp";
-import monitoringAir from "@/assets/monitoring-smoke.webp";
-import monitoringEnvironment from "@/assets/monitoring-environment.webp";
+import homeMonitoringNoise from "@/assets/home-monitoring-noise.webp";
+import homeMonitoringOccupancy from "@/assets/home-monitoring-occupancy.webp";
+import homeMonitoringSmoke from "@/assets/home-monitoring-smoke.webp";
+import homeMonitoringEnvironment from "@/assets/home-monitoring-environment.webp";
 
 const capabilityIcons = [Volume2, Users, Flame, Thermometer];
-const capabilityImages = [monitoringNoise, monitoringOccupancy, monitoringAir, monitoringEnvironment];
+const capabilityImages = [homeMonitoringNoise, homeMonitoringOccupancy, homeMonitoringSmoke, homeMonitoringEnvironment];
 const capabilityHrefs = ["/monitoring/noise", "/monitoring/occupancy", "/monitoring/smoke", "/monitoring/environment"];
 const comparisonRoomonitor = [true, true, true, true, true, true, true, true, true];
 const comparisonCompetitor = [false, true, false, true, false, false, false, false, false];
