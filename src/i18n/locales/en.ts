@@ -1198,9 +1198,10 @@ const en = {
       "Configure notification preferences",
     ],
     protocolCTA: "See a Demo",
+    imagePlaceholder: "Image: Guest support protocol management interface",
     ctaTitle: "Ready to give your team a break?",
     ctaDescription: "Let us handle guest calls while you focus on growing your business. Schedule a quick orientation call to learn more.",
-    ctaPrimary: "Schedule Call",
+    ctaPrimary: "Activate guest support",
   },
   serviceNightWatch: {
     badge: "Night Watch",
