@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { MonitoringHero } from "@/components/monitoring/MonitoringHero";
+import { MonitoringBanner } from "@/components/monitoring/MonitoringBanner";
 import { Button } from "@/components/ui/button";
 import { Users, Eye, ArrowRight, Check, TrendingUp, UserCheck, AlertTriangle } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
