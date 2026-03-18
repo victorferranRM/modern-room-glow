@@ -28,8 +28,8 @@ export default function ControlCenter() {
       <ServiceHero icon={Eye} badge={t('serviceControlCenter.badge')} title={t('serviceControlCenter.title')} titleHighlight={t('serviceControlCenter.titleHighlight')} description={t('serviceControlCenter.description')} image={serviceImage} imageAlt={t('serviceControlCenter.badge')} />
       <ServiceStats stats={stats} />
       <ServiceFeatures eyebrow={t('serviceControlCenter.featuresEyebrow')} title={t('serviceControlCenter.featuresTitle')} features={features} />
-      <ServiceImageSection eyebrow={t('serviceControlCenter.imageSectionEyebrow')} title={t('serviceControlCenter.imageSectionTitle')} description={t('serviceControlCenter.imageSectionDescription')} features={capabilities} image={managerDevices} imageAlt={t('serviceControlCenter.badge')} ctaText={t('shared.learnMore')} ctaLink="/contact" background="secondary" />
-      <ServiceProcess eyebrow={t('serviceControlCenter.processEyebrow')} title={t('serviceControlCenter.processTitle')} steps={howItWorks} />
+      <ServiceImageSection eyebrow={t('serviceControlCenter.imageEyebrow')} title={t('serviceControlCenter.imageTitle')} description={t('serviceControlCenter.imageDescription')} features={capabilities} image={managerDevices} imageAlt={t('serviceControlCenter.badge')} ctaText={t('shared.learnMore')} ctaLink="/contact" background="secondary" />
+      <ServiceProcess eyebrow={t('serviceControlCenter.processEyebrow')} title={t('serviceControlCenter.processTitle')} steps={processSteps} />
       <ServiceCTA title={t('serviceControlCenter.ctaTitle')} description={t('serviceControlCenter.ctaDescription')} />
       <Footer />
     </div>
