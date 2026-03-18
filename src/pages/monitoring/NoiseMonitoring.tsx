@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Volume2, Bell, Shield, Clock, ArrowRight, Check, BarChart3 } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import monitoringNoise from "@/assets/monitoring-noise.jpg";
+import monitoringNoise from "@/assets/monitoring-noise.webp";
 import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [Bell, Clock, Shield, BarChart3];

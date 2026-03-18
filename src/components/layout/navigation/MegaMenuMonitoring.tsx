@@ -3,7 +3,7 @@ import { useTranslation } from "@/i18n/useTranslation";
 import { monitoringHrefs } from "./navigation-data";
 import { Volume2, Users, Flame, Thermometer, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import roomonitorDevice from "@/assets/roomonitor-device.jpg";
+import sensorRoomonitor from "@/assets/sensor-roomonitor.webp";
 
 const icons = [Volume2, Users, Flame, Thermometer];
 

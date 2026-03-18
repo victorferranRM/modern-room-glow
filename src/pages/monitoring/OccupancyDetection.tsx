@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Eye, ArrowRight, Check, TrendingUp, UserCheck, AlertTriangle } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import monitoringOccupancy from "@/assets/monitoring-occupancy.jpg";
+import monitoringOccupancy from "@/assets/monitoring-occupancy.webp";
 import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [Eye, AlertTriangle, UserCheck, TrendingUp];

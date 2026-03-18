@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Thermometer, Droplets, ArrowRight, Check, Wind, Gauge } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import monitoringEnvironment from "@/assets/monitoring-environment.jpg";
+import monitoringEnvironment from "@/assets/monitoring-environment.webp";
 import managerDevices from "@/assets/manager-devices.png";
 
 const featureIcons = [Thermometer, Droplets, Wind, Gauge];
