@@ -1198,9 +1198,10 @@ const fr = {
       "Configurer les préférences de notification",
     ],
     protocolCTA: "Voir une Démo",
+    imagePlaceholder: "Image : Interface de gestion de protocole de support client",
     ctaTitle: "Prêt à donner une pause à votre équipe ?",
     ctaDescription: "Laissez-nous gérer les appels clients pendant que vous vous concentrez sur la croissance. Planifiez un appel d'orientation rapide.",
-    ctaPrimary: "Planifier un Appel",
+    ctaPrimary: "Activer le support clients",
   },
   serviceNightWatch: {
     badge: "Night Watch",
