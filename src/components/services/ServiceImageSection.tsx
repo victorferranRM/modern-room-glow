@@ -16,7 +16,8 @@ interface ServiceImageSectionProps {
   ctaText?: string;
   ctaLink?: string;
   reversed?: boolean;
-  background?: "default" | "secondary";
+  background?: "default" | "secondary" | "white";
+  ctaPosition?: "inline" | "below-image";
 }
 
 export function ServiceImageSection({
