@@ -15,10 +15,10 @@ const featureIcons = [Eye, Brain, AlertTriangle, Zap, Users, Shield];
 
 export default function ControlCenter() {
   const { t, tObject } = useTranslation();
-  const stats = tObject<{ value: string; label: string }[]>('serviceControlCenter.stats');
-  const featuresData = tObject<{ title: string; description: string }[]>('serviceControlCenter.features');
-  const capabilities = tObject<string[]>('serviceControlCenter.capabilities');
-  const howItWorks = tObject<{ step: string; title: string; description: string }[]>('serviceControlCenter.howItWorks');
+  const stats = tObject<{ value: string; label: string }[]>('serviceControlCenter.stats') ?? [];
+  const featuresData = tObject<{ title: string; description: string }[]>('serviceControlCenter.features') ?? [];
+  const capabilities = tObject<string[]>('serviceControlCenter.capabilities') ?? [];
+  const processSteps = tObject<{ step: string; title: string; description: string }[]>('serviceControlCenter.process') ?? [];
 
   const features = featuresData.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
