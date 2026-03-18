@@ -1253,8 +1253,10 @@ const fr = {
       "Couverture weekends et jours fériés",
     ],
     preventionCTA: "Activer Night Watch",
+    imagePlaceholder: "Image : Tableau de bord de surveillance nocturne avec alertes proactives",
     ctaTitle: "Dormez tranquille pendant que nous veillons",
     ctaDescription: "Notre équipe Night Watch est prête à protéger vos propriétés pendant les heures de pointe. Parlez-nous de la couverture pour votre portfolio.",
+    ctaPrimary: "Protéger mes propriétés la nuit",
   },
   servicePMSAccess: {
     badge: "Accès PMS et Outils",
