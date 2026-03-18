@@ -45,8 +45,8 @@ export function ManagerSection({ translationKey }: ManagerSectionProps) {
             </ul>
           </AnimatedSection>
           <AnimatedSection delay={200} className="lg:col-span-3">
-            <div className="flex h-full flex-col">
-              <div className="flex-1 flex items-center justify-center">
+<div className="flex flex-col">
+              <div className="flex items-center justify-center">
                 <img
                   src={managerDevices}
                   alt={t(`${translationKey}.managerEyebrow`)}
