@@ -5,9 +5,10 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { Heart, Target, Eye, Users, Sparkles, ArrowRight, MapPin, ExternalLink, Building2, Check, Play, Pause, Newspaper, Video, Mic, FileText } from "lucide-react";
-import solutionRest from "@/assets/solution-rest-new.jpg";
-import solutionManage from "@/assets/solution-manage.jpg";
-import solutionControl from "@/assets/solution-control.jpg";
+import aboutCustomerFirst from "@/assets/about-customer-first.webp";
+import aboutInnovation from "@/assets/about-innovation.webp";
+import aboutTeamExcellence from "@/assets/about-team-excellence.webp";
+import aboutJoinTeam from "@/assets/about-join-team.webp";
 
 import cityBarcelona from "@/assets/city-barcelona.jpg";
 import cityMadrid from "@/assets/city-madrid.jpg";
@@ -28,7 +29,7 @@ import timelineParis from "@/assets/timeline-paris.webp";
 import timelineManager from "@/assets/timeline-manager.webp";
 import timelineIntegrations from "@/assets/timeline-integrations.webp";
 
-const valueImages = [solutionRest, solutionManage, solutionControl];
+const valueImages = [aboutCustomerFirst, aboutInnovation, aboutTeamExcellence];
 const valueIcons = [Heart, Sparkles, Users];
 const timelineImages = [timelineBarcelona, timelineDevice, heroControlCenter, timelineParis, timelineManager, timelineIntegrations];
 
@@ -397,7 +398,7 @@ export default function About() {
         <AnimatedSection className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden">
-              <img src={solutionManage} alt={t('about.joinTeam.title')} className="absolute inset-0 w-full h-full object-cover" />
+              <img src={aboutJoinTeam} alt={t('about.joinTeam.title')} className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-foreground/70" />
               <div className="relative z-10 py-20 px-8 md:py-28 md:px-16 text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-4">{t('about.joinTeam.title')}</h2>
