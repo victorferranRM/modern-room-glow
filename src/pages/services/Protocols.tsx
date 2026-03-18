@@ -33,14 +33,17 @@ export default function Protocols() {
       <ServiceHero icon={FileText} badge={t('serviceProtocols.badge')} title={t('serviceProtocols.title')} titleHighlight={t('serviceProtocols.titleHighlight')} description={t('serviceProtocols.description')} image={heroImage} imageAlt={t('serviceProtocols.badge')} />
 
       {/* Manager Software Notice - redesigned as inline subtle badge */}
-      <section className="py-6 border-b relative">
+      <section className="py-10 lg:py-14 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <AnimatedSection>
-            <div className="flex items-center justify-center gap-3 py-3 px-6 rounded-xl bg-card border border-border/50 max-w-3xl mx-auto shadow-sm">
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                <Monitor className="w-4 h-4 text-primary" />
+            <div className="relative max-w-4xl mx-auto rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6 shadow-lg">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+              <div className="w-14 h-14 rounded-2xl bg-primary/15 flex items-center justify-center shrink-0 ring-4 ring-primary/10">
+                <Monitor className="w-7 h-7 text-primary" />
               </div>
-              <p className="text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: t('serviceProtocols.managerNotice') }} />
+              <div className="text-center sm:text-left">
+                <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('serviceProtocols.managerNotice') }} />
+              </div>
             </div>
           </AnimatedSection>
         </div>
