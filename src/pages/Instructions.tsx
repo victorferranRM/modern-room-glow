@@ -12,6 +12,7 @@ import {
 import { ArrowRight, Download, ImageIcon, ExternalLink } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
+import instructionsHero from "@/assets/instructions-hero.webp";
 
 function ImagePlaceholder({ text }: { text: string }) {
   return (
