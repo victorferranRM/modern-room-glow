@@ -63,7 +63,7 @@ export default function GuestAssist() {
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
                       <div className="pt-1">
-                        <h3 className="text-xl font-bold mb-1.5 transition-colors group-hover:text-primary">
+                        <h3 className="text-xl lg:text-2xl font-bold mb-1.5 transition-colors group-hover:text-primary">
                           {item.title}
                         </h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">
