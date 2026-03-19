@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import {
   Accordion,
   AccordionContent,
@@ -11,6 +12,7 @@ import {
 import { ArrowRight, Download, ImageIcon, ExternalLink } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
+import instructionsHero from "@/assets/instructions-hero.webp";
 
 function ImagePlaceholder({ text }: { text: string }) {
   return (
@@ -57,14 +59,17 @@ export default function Instructions() {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <ImagePlaceholder text={t("instructions.hero.imagePlaceholder")} />
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl" />
+                <OptimizedImage src={instructionsHero} alt={t("instructions.hero.title")} className="w-full rounded-2xl" containerClassName="w-full aspect-square" priority />
+              </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Anchor Index */}
-      <section className="sticky top-16 z-30 bg-background/95 backdrop-blur-sm border-b">
+      <section className="sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-b">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 py-4 justify-center">
             {anchors.map((label, i) => (
@@ -81,7 +86,7 @@ export default function Instructions() {
       </section>
 
       {/* Steps */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-[hsl(0,0%,100%)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto space-y-20 lg:space-y-28">
             {steps.map((step, i) => {
