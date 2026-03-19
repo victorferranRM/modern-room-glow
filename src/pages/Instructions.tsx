@@ -147,7 +147,16 @@ export default function Instructions() {
                           </Button>
                         )}
                       </div>
-                      <ImagePlaceholder text={step.imagePlaceholder} />
+                      {i === 0 ? (
+                        <div className="relative group">
+                          <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
+                          <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
+                            <OptimizedImage src={instructionsStep1} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
+                          </div>
+                        </div>
+                      ) : (
+                        <ImagePlaceholder text={step.imagePlaceholder} />
+                      )}
                     </div>
                   </AnimatedSection>
                 </div>
