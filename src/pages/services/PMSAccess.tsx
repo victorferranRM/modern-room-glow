@@ -9,15 +9,20 @@ import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import heroImage from "@/assets/hero-pms-access.webp";
 import smartlockImage from "@/assets/smartlock-access.webp";
+import pmsAvantio from "@/assets/pms/avantio.webp";
+import pmsAvaibook from "@/assets/pms/avaibook.webp";
+import pmsGuesty from "@/assets/pms/guesty.webp";
+import pmsHostify from "@/assets/pms/hostify.webp";
+import pmsKross from "@/assets/pms/kross.webp";
 
 const benefitIcons = [Zap, SmilePlus, Star, Gauge, ShieldCheck, BarChart3];
 
-const pmsLogos: { name: string; initials: string; color: string }[] = [
-  { name: "Avantio", initials: "Av", color: "#0066CC" },
-  { name: "Guesty", initials: "G", color: "#00B4AB" },
-  { name: "Hostaway", initials: "H", color: "#FF6B35" },
-  { name: "Beds24", initials: "B", color: "#E74C3C" },
-  { name: "Octorate", initials: "O", color: "#7B2D8E" },
+const pmsLogos: { name: string; logo: string }[] = [
+  { name: "Avantio", logo: pmsAvantio },
+  { name: "AvaiBook", logo: pmsAvaibook },
+  { name: "Guesty", logo: pmsGuesty },
+  { name: "Hostify", logo: pmsHostify },
+  { name: "Kross Booking", logo: pmsKross },
 ];
 
 export default function PMSAccess() {
@@ -77,7 +82,7 @@ export default function PMSAccess() {
         imageAlt="Smart lock access for vacation rentals"
         ctaText={t('servicePMSAccess.ctaPrimary')}
         ctaLink="/contact"
-        background="secondary"
+        background="white"
       />
 
       {/* Section 3 — How integration works */}
@@ -96,15 +101,12 @@ export default function PMSAccess() {
               {t('servicePMSAccess.pmsTitle')}
             </h2>
           </AnimatedSection>
-          <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto mb-10">
+          <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto mb-10">
             {pmsLogos.map((pms, i) => (
               <AnimatedSection key={pms.name} delay={i * 80}>
                 <div className="flex flex-col items-center gap-3 px-8 py-6 rounded-2xl bg-background/10 backdrop-blur-sm border border-background/10 hover:bg-background/15 transition-all duration-300 hover:-translate-y-1 min-w-[140px]">
-                  <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-bold tracking-tight"
-                    style={{ backgroundColor: `${pms.color}20`, color: pms.color }}
-                  >
-                    {pms.initials}
+                  <div className="w-14 h-14 rounded-xl overflow-hidden bg-background/10 flex items-center justify-center">
+                    <img src={pms.logo} alt={pms.name} className="w-full h-full object-contain" />
                   </div>
                   <span className="text-sm font-medium text-background/80">{pms.name}</span>
                 </div>
