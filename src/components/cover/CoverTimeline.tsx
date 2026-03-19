@@ -10,7 +10,7 @@ import imgAgente from "@/assets/cover-control-center.jpg";
 import imgResolucion from "@/assets/cover-phone-assist.jpg";
 import imgEscalacion from "@/assets/cover-protocols.jpg";
 import imgField from "@/assets/cover-field-service.jpg";
-import imgInforme from "@/assets/intervention-documentation.jpg";
+import imgInforme from "@/assets/intervention-documentation.webp";
 
 const icons = [Bell, Eye, Phone, ArrowUpCircle, MapPin, FileText];
 const images = [imgAlerta, imgAgente, imgResolucion, imgEscalacion, imgField, imgInforme];
