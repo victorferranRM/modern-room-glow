@@ -8,7 +8,7 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-control-center.jpg";
+import serviceImage from "@/assets/service-control-center.webp";
 
 const featureIcons = [Eye, Brain, AlertTriangle, Zap, Users, Shield];
 
