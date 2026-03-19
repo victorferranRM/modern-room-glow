@@ -165,11 +165,20 @@ export default function Instructions() {
                           </Button>
                         )}
                       </div>
-                      {i === 0 || i === 1 ? (
+                      {i === 8 ? (
                         <div className="relative group">
                           <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
                           <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
-                            <OptimizedImage src={i === 0 ? instructionsStep1 : instructionsStep2} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
+                            <video autoPlay loop muted playsInline className="w-full rounded-2xl">
+                              <source src="/videos/instructions-step9.mp4" type="video/mp4" />
+                            </video>
+                          </div>
+                        </div>
+                      ) : stepImages[i] ? (
+                        <div className="relative group">
+                          <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
+                          <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
+                            <OptimizedImage src={stepImages[i]} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
                           </div>
                         </div>
                       ) : (
