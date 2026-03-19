@@ -1099,6 +1099,20 @@ const fr = {
       { step: "04", title: "Résolution et Documentation", description: "Nous exécutons l'action, vérifions la résolution et générons un rapport complet avec toutes les actions et horodatages." },
     ],
     imagePlaceholder: "Image : Centre de Contrôle gérant plusieurs types d'incidents",
+    card: {
+      title: "Centre de Contrôle",
+      subtitle: "Gestion intégrale des incidents dans vos propriétés",
+      items: [
+        { label: "Alarm Assistant", desc: "Notre équipe vérifie et agit pour vous" },
+        { label: "Guest Support", desc: "Assistance directe aux voyageurs 24/7" },
+      ],
+      footer: "OPÉRATIONS DÉLÉGUÉES · RÉSOLUTION GARANTIE",
+      pills: [
+        "Alerte vérifiée en <2min",
+        "Incident résolu",
+        "Voisin notifié",
+      ],
+    },
     ctaTitle: "Prêt pour une gestion intégrale des incidents ?",
     ctaDescription: "Notre Centre de Contrôle est prêt à gérer toute situation dans vos propriétés 24/7. Parlez à un expert pour savoir comment nous pouvons vous aider.",
     ctaPrimary: "Découvrir le Centre de Contrôle",
