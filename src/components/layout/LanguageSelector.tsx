@@ -1,3 +1,4 @@
+import { useState, useRef, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "@/hooks/useLanguage";
 import { switchLanguagePath } from "@/i18n/routes";
@@ -17,8 +18,23 @@ export function LanguageSelector() {
   const currentLang = useCurrentLang();
   const navigate = useNavigate();
   const location = useLocation();
+  const [open, setOpen] = useState(false);
+  const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = useCallback(() => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+    setOpen(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    closeTimeout.current = setTimeout(() => setOpen(false), 150);
+  }, []);
 
   const handleLanguageChange = (code: string) => {
+    setOpen(false);
     setLanguage(code);
     const newPath = switchLanguagePath(
       location.pathname,
@@ -29,31 +45,38 @@ export function LanguageSelector() {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2 px-2">
-          <span className="text-lg leading-none">{currentLanguage.flag}</span>
-          <span className="hidden sm:inline text-sm">{currentLanguage.code.toUpperCase()}</span>
-          <ChevronDown className="h-3 w-3 opacity-50" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-44 bg-background border z-50">
-        {languages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            onClick={() => handleLanguageChange(lang.code)}
-            className={`flex items-center gap-3 cursor-pointer ${
-              currentLanguage.code === lang.code ? "bg-primary/10" : ""
-            }`}
-          >
-            <span className="text-lg leading-none">{lang.flag}</span>
-            <span className="flex-1">{lang.nativeName}</span>
-            {currentLanguage.code === lang.code && (
-              <span className="text-primary text-xs">✓</span>
-            )}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <DropdownMenu open={open} onOpenChange={setOpen}>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" size="sm" className="gap-2 px-2">
+            <span className="text-lg leading-none">{currentLanguage.flag}</span>
+            <span className="hidden sm:inline text-sm">{currentLanguage.code.toUpperCase()}</span>
+            <ChevronDown className="h-3 w-3 opacity-50" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          align="end"
+          className="w-44 bg-background border z-50"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          {languages.map((lang) => (
+            <DropdownMenuItem
+              key={lang.code}
+              onClick={() => handleLanguageChange(lang.code)}
+              className={`flex items-center gap-3 cursor-pointer ${
+                currentLanguage.code === lang.code ? "bg-primary/10" : ""
+              }`}
+            >
+              <span className="text-lg leading-none">{lang.flag}</span>
+              <span className="flex-1">{lang.nativeName}</span>
+              {currentLanguage.code === lang.code && (
+                <span className="text-primary text-xs">✓</span>
+              )}
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 }
