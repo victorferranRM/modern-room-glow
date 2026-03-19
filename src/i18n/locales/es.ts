@@ -1783,7 +1783,7 @@ const es = {
       { title: "Personalización de datos", description: "Edita el nombre, dirección y teléfonos de contacto para alertas de cada propiedad.", imagePlaceholder: "Imagen: pantalla de edición de propiedad" },
       { title: "Explora tus dashboards", description: "Accede a manager.roomonitor.com desde cualquier dispositivo para ver tus datos en tiempo real.", imagePlaceholder: "Imagen: dashboard de Manager" },
     ],
-    dashboardButton: "Ir a dashboards",
+    dashboardButton: "Ir a Manager",
     faqTitle: "Preguntas frecuentes",
     faqs: [
       { question: "¿Necesito WiFi?", answer: "Sí, el dispositivo requiere una conexión WiFi 2.4 GHz para funcionar correctamente." },

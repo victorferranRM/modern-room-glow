@@ -1789,7 +1789,7 @@ const fr = {
       { title: "Personnalisation des données", description: "Modifiez le nom, l'adresse et les numéros de téléphone de contact pour les alertes de chaque propriété.", imagePlaceholder: "Image : écran d'édition de propriété" },
       { title: "Explorez vos tableaux de bord", description: "Accédez à manager.roomonitor.com depuis n'importe quel appareil pour consulter vos données en temps réel.", imagePlaceholder: "Image : tableau de bord Manager" },
     ],
-    dashboardButton: "Aller aux tableaux de bord",
+    dashboardButton: "Aller à Manager",
     faqTitle: "Questions fréquentes",
     faqs: [
       { question: "Ai-je besoin du WiFi ?", answer: "Oui, l'appareil nécessite une connexion WiFi 2,4 GHz pour fonctionner correctement." },

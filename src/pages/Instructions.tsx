@@ -15,6 +15,23 @@ import { useTranslation } from "@/i18n/useTranslation";
 import instructionsHero from "@/assets/instructions-hero.webp";
 import instructionsStep1 from "@/assets/instructions-step1.webp";
 import instructionsStep2 from "@/assets/instructions-step2.webp";
+import instructionsStep3 from "@/assets/instructions-step3.webp";
+import instructionsStep4 from "@/assets/instructions-step4.webp";
+import instructionsStep5 from "@/assets/instructions-step5.webp";
+import instructionsStep6 from "@/assets/instructions-step6.webp";
+import instructionsStep7 from "@/assets/instructions-step7.webp";
+import instructionsStep8 from "@/assets/instructions-step8.webp";
+
+const stepImages: Record<number, string> = {
+  0: instructionsStep1,
+  1: instructionsStep2,
+  2: instructionsStep3,
+  3: instructionsStep4,
+  4: instructionsStep5,
+  5: instructionsStep6,
+  6: instructionsStep7,
+  7: instructionsStep8,
+};
 
 function ImagePlaceholder({ text }: { text: string }) {
   return (
@@ -71,7 +88,7 @@ export default function Instructions() {
       </section>
 
       {/* Anchor Index */}
-      <section className="hidden lg:block sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y">
+      <section className="hidden lg:block sticky top-[64px] z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y pt-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 py-6 justify-center">
             {anchors.map((label, i) => (
@@ -148,11 +165,20 @@ export default function Instructions() {
                           </Button>
                         )}
                       </div>
-                      {i === 0 || i === 1 ? (
+                      {i === 8 ? (
                         <div className="relative group">
                           <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
                           <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
-                            <OptimizedImage src={i === 0 ? instructionsStep1 : instructionsStep2} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
+                            <video autoPlay loop muted playsInline className="w-full rounded-2xl">
+                              <source src="/videos/instructions-step9.mp4" type="video/mp4" />
+                            </video>
+                          </div>
+                        </div>
+                      ) : stepImages[i] ? (
+                        <div className="relative group">
+                          <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
+                          <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
+                            <OptimizedImage src={stepImages[i]} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
                           </div>
                         </div>
                       ) : (

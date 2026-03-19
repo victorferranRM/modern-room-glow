@@ -1789,7 +1789,7 @@ const pt = {
       { title: "Personalização de dados", description: "Edite o nome, morada e telefones de contacto para alertas de cada propriedade.", imagePlaceholder: "Imagem: ecrã de edição de propriedade" },
       { title: "Explore os seus dashboards", description: "Aceda a manager.roomonitor.com a partir de qualquer dispositivo para ver os seus dados em tempo real.", imagePlaceholder: "Imagem: dashboard do Manager" },
     ],
-    dashboardButton: "Ir para dashboards",
+    dashboardButton: "Ir para Manager",
     faqTitle: "Perguntas frequentes",
     faqs: [
       { question: "Preciso de WiFi?", answer: "Sim, o dispositivo requer uma ligação WiFi 2.4 GHz para funcionar corretamente." },
