@@ -174,7 +174,7 @@ export default function Monitoring() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-[hsl(0,0%,100%)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">{t('monitoring.comparison.eyebrow')}</p>
