@@ -11,9 +11,12 @@ import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-guest-assist.jpg";
 import protocolImage from "@/assets/cover-protocols.webp";
+import notVirtualImage from "@/assets/not-virtual-assistants.jpg";
+import notChatbotsImage from "@/assets/not-chatbots.jpg";
 
 const commitmentIcons = [Clock, Zap, FileText, Globe, Shield, Heart];
 const whatWeAreNotIcons = [BotOff, UserCheck];
+const whatWeAreNotImages = [notVirtualImage, notChatbotsImage];
 const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones];
 
 export default function GuestAssist() {
@@ -45,23 +48,25 @@ export default function GuestAssist() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('serviceGuestAssist.whatWeAreNotSubtitle')}</p>
           </AnimatedSection>
-          <div className="max-w-4xl mx-auto space-y-0 divide-y divide-border">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
             {whatWeAreNot.map((item, i) => {
               const Icon = whatWeAreNotIcons[i];
+              const image = whatWeAreNotImages[i];
               return (
-                <AnimatedSection key={i} delay={i * 150}>
-                  <div className="group flex items-start gap-6 lg:gap-10 py-10 first:pt-0 last:pb-0">
-                    {/* Icon with vertical accent line */}
-                    <div className="flex flex-col items-center gap-3 shrink-0">
-                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-105">
-                        <Icon className="w-7 h-7 text-primary" />
-                      </div>
-                      <span className="text-[10px] font-bold text-destructive uppercase tracking-widest px-2 py-0.5 rounded bg-destructive/10">{t('serviceGuestAssist.notLabel')}</span>
-                    </div>
+                <AnimatedSection key={i} delay={i * 150} animation={i === 0 ? "fade-right" : "fade-left"}>
+                  <div className="group relative rounded-2xl overflow-hidden h-full min-h-[420px] cursor-default">
+                    {/* Background image */}
+                    <img src={image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/10" />
                     {/* Content */}
-                    <div className="pt-1">
-                      <h3 className="text-xl font-bold mb-2 transition-colors group-hover:text-primary">{item.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed max-w-lg">{item.description}</p>
+                    <div className="relative h-full flex flex-col justify-end p-8 lg:p-10">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-destructive/20 backdrop-blur-sm text-xs font-bold text-destructive uppercase tracking-widest mb-4 w-fit border border-destructive/30">
+                        <span className="w-2 h-2 rounded-full bg-destructive" />
+                        {t('serviceGuestAssist.notLabel')}
+                      </div>
+                      <h3 className="text-xl lg:text-2xl font-bold text-background mb-3">{item.title}</h3>
+                      <p className="text-background/75 leading-relaxed text-sm lg:text-base">{item.description}</p>
                     </div>
                   </div>
                 </AnimatedSection>
