@@ -39,7 +39,7 @@ export default function GuestAssist() {
       <ServiceFeatures eyebrow={t('serviceGuestAssist.featuresEyebrow')} title={t('serviceGuestAssist.featuresTitle')} features={commitments} />
 
       {/* What We're NOT */}
-      <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-[hsl(0,0%,100%)] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">{t('serviceGuestAssist.whatWeAreNotEyebrow')}</span>
