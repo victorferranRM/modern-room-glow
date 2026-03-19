@@ -164,7 +164,7 @@ const es = {
     },
     monitoring: {
       eyebrow: "Monitorización inteligente",
-      title: "Anticípate a los problemas dentro de tus propiedades",
+      title: "Anticípate a los problemas\ndentro de tus propiedades",
       description: "Al monitorizar lo que ocurre dentro de la propiedad, Roomonitor ayuda a anticipar incidencias antes de que los huéspedes las reporten — reforzando las operaciones y reduciendo el impacto.",
       learnMoreAbout: "Saber más sobre {label}",
       calculateSavings: "Calcular Ahorro",
