@@ -60,7 +60,7 @@ export default function Instructions() {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <div className="relative">
+              <div className="relative max-w-sm lg:max-w-md mx-auto">
                 <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl" />
                 <OptimizedImage src={instructionsHero} alt={t("instructions.hero.title")} className="w-full rounded-2xl" containerClassName="w-full aspect-square" priority />
               </div>
