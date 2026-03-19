@@ -63,7 +63,7 @@ export function MonitoringSection() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
               {t("home.monitoring.eyebrow")}
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 whitespace-pre-line">
               {t("home.monitoring.title")}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
