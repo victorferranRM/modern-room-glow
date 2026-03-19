@@ -1099,6 +1099,20 @@ const en = {
       { step: "04", title: "Resolution & Documentation", description: "We execute the action, verify resolution and generate a complete report with all actions and timestamps." },
     ],
     imagePlaceholder: "Image: Control Center managing multiple incident types",
+    card: {
+      title: "Control Center",
+      subtitle: "Comprehensive incident management for your properties",
+      items: [
+        { label: "Alarm Assistant", desc: "Our team verifies and acts for you" },
+        { label: "Guest Support", desc: "Direct guest support 24/7" },
+      ],
+      footer: "DELEGATED OPERATIONS · GUARANTEED RESOLUTION",
+      pills: [
+        "Alert verified in <2min",
+        "Incident resolved",
+        "Neighbour notified",
+      ],
+    },
     ctaTitle: "Ready for comprehensive incident management?",
     ctaDescription: "Our Control Center is ready to manage any situation at your properties 24/7. Talk to an expert to learn how we can help.",
     ctaPrimary: "Discover the Control Center",

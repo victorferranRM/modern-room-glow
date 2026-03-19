@@ -1099,6 +1099,20 @@ const es = {
       { step: "04", title: "Resolución y Documentación", description: "Ejecutamos la acción, verificamos la resolución y generamos un informe completo con todas las acciones y timestamps." },
     ],
     imagePlaceholder: "Imagen: Centro de Control gestionando múltiples tipos de incidencias",
+    card: {
+      title: "Centro de Control",
+      subtitle: "Gestión integral de incidencias en tus propiedades",
+      items: [
+        { label: "Alarm Assistant", desc: "Nuestro equipo verifica y actúa por ti" },
+        { label: "Guest Support", desc: "Atención directa al huésped 24/7" },
+      ],
+      footer: "OPERATIVA DELEGADA · RESOLUCIÓN GARANTIZADA",
+      pills: [
+        "Alerta verificada en <2min",
+        "Incidencia resuelta",
+        "Vecino notificado",
+      ],
+    },
     ctaTitle: "¿Listo para una gestión integral de incidencias?",
     ctaDescription: "Nuestro Centro de Control está preparado para gestionar cualquier situación en tus propiedades 24/7. Habla con un experto para conocer cómo podemos ayudarte.",
     ctaPrimary: "Descubre el Centro de Control",

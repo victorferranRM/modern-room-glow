@@ -1099,6 +1099,20 @@ const pt = {
       { step: "04", title: "Resolução e Documentação", description: "Executamos a ação, verificamos a resolução e geramos um relatório completo com todas as ações e timestamps." },
     ],
     imagePlaceholder: "Imagem: Centro de Controle a gerir múltiplos tipos de incidências",
+    card: {
+      title: "Centro de Controle",
+      subtitle: "Gestão integral de incidências nas suas propriedades",
+      items: [
+        { label: "Alarm Assistant", desc: "A nossa equipa verifica e age por si" },
+        { label: "Guest Support", desc: "Apoio direto ao hóspede 24/7" },
+      ],
+      footer: "OPERAÇÃO DELEGADA · RESOLUÇÃO GARANTIDA",
+      pills: [
+        "Alerta verificado em <2min",
+        "Incidência resolvida",
+        "Vizinho notificado",
+      ],
+    },
     ctaTitle: "Pronto para uma gestão integral de incidências?",
     ctaDescription: "Nosso Centro de Controle está pronto para gerir qualquer situação nas suas propriedades 24/7. Fale com um especialista para saber como podemos ajudar.",
     ctaPrimary: "Descubra o Centro de Controle",

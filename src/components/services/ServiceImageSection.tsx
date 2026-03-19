@@ -18,6 +18,7 @@ interface ServiceImageSectionProps {
   reversed?: boolean;
   background?: "default" | "secondary" | "white";
   ctaPosition?: "inline" | "below-image";
+  customImageContent?: React.ReactNode;
 }
 
 export function ServiceImageSection({
@@ -26,6 +27,7 @@ export function ServiceImageSection({
   ctaText = "Learn More", ctaLink = "/contact",
   reversed = false, background = "default",
   ctaPosition = "inline",
+  customImageContent,
 }: ServiceImageSectionProps) {
   const bgClass = {
     default: "",
@@ -33,8 +35,9 @@ export function ServiceImageSection({
     white: "bg-card",
   }[background];
 
-  const renderImage = () => (
-    image ? (
+  const renderImage = () => {
+    if (customImageContent) return customImageContent;
+    if (image) return (
       <div className="relative group">
         <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
         <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
@@ -42,7 +45,8 @@ export function ServiceImageSection({
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
       </div>
-    ) : (
+    );
+    return (
       <div className="relative rounded-2xl bg-muted border border-border/50 aspect-video flex flex-col items-center justify-center gap-4 p-8">
         <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
           <ImageIcon className="w-8 h-8 text-primary/40" />
@@ -51,8 +55,8 @@ export function ServiceImageSection({
           {placeholderText || "Imagen: contenido visual próximamente"}
         </p>
       </div>
-    )
-  );
+    );
+  };
 
   const renderCTA = () => (
     <Button asChild className="group transform hover:scale-105 transition-all duration-300">
