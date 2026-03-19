@@ -16,6 +16,7 @@ import notChatbotsImage from "@/assets/not-chatbots.jpg";
 
 const commitmentIcons = [Clock, Zap, FileText, Globe, Shield, Heart];
 const whatWeAreNotIcons = [BotOff, UserCheck];
+const whatWeAreNotImages = [notVirtualImage, notChatbotsImage];
 const useCaseIcons = [Phone, Shield, FileText, MessageSquare, Users, Headphones];
 
 export default function GuestAssist() {
