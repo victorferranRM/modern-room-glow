@@ -37,7 +37,6 @@ export default function GuestAssist() {
 
       {/* What We're NOT */}
       <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">{t('serviceGuestAssist.whatWeAreNotEyebrow')}</span>
@@ -46,23 +45,24 @@ export default function GuestAssist() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('serviceGuestAssist.whatWeAreNotSubtitle')}</p>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-0 divide-y divide-border">
             {whatWeAreNot.map((item, i) => {
               const Icon = whatWeAreNotIcons[i];
               return (
-                <AnimatedSection key={i} delay={i * 150} animation={i === 0 ? "fade-right" : "fade-left"}>
-                  <div className="group relative rounded-2xl bg-card border p-8 lg:p-10 h-full hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
-                    {/* Large icon area */}
-                    <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary/15 group-hover:rotate-3">
-                      <Icon className="w-10 h-10 text-primary transition-transform duration-300" />
+                <AnimatedSection key={i} delay={i * 150}>
+                  <div className="group flex items-start gap-6 lg:gap-10 py-10 first:pt-0 last:pb-0">
+                    {/* Icon with vertical accent line */}
+                    <div className="flex flex-col items-center gap-3 shrink-0">
+                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-105">
+                        <Icon className="w-7 h-7 text-primary" />
+                      </div>
+                      <span className="text-[10px] font-bold text-destructive uppercase tracking-widest px-2 py-0.5 rounded bg-destructive/10">{t('serviceGuestAssist.notLabel')}</span>
                     </div>
-                    {/* "NO" badge */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-destructive/10 text-xs font-semibold text-destructive uppercase tracking-wider mb-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-destructive" />
-                      {t('serviceGuestAssist.notLabel')}
+                    {/* Content */}
+                    <div className="pt-1">
+                      <h3 className="text-xl font-bold mb-2 transition-colors group-hover:text-primary">{item.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed max-w-lg">{item.description}</p>
                     </div>
-                    <h3 className="text-xl font-bold mb-3 transition-colors group-hover:text-primary">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </AnimatedSection>
               );
