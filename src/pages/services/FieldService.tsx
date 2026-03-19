@@ -19,7 +19,7 @@ import interventionWelcome from "@/assets/intervention-welcome.jpg";
 import interventionDocumentation from "@/assets/intervention-documentation.jpg";
 
 const featureIcons = [MapPin, Clock, Users, Wrench, Shield, Phone];
-const interventionIcons = [Volume2, Key, Search, Wrench, HandshakeIcon, Camera];
+const interventionIcons = [Key, UserCheck, Siren, Volume2, ConciergeBell, FileSignature];
 const interventionImages = [interventionNoise, interventionAccess, interventionInspection, interventionRepair, interventionWelcome, interventionDocumentation];
 
 export default function FieldService() {
