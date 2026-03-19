@@ -75,6 +75,7 @@ export default function FieldService() {
 
 
       <ServiceProcess eyebrow={t('serviceFieldService.processEyebrow')} title={t('serviceFieldService.processTitle')} steps={processSteps} background="secondary" />
+      <CoverRedkool />
       <ServiceCTA title={t('serviceFieldService.ctaTitle')} description={t('serviceFieldService.ctaDescription')} primaryCTA={{ text: t('serviceFieldService.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
