@@ -9,7 +9,7 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { CoverCities } from "@/components/cover/CoverCities";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-field-service.jpg";
+import serviceImage from "@/assets/service-field-service.webp";
 import interventionNoise from "@/assets/intervention-noise.jpg";
 import interventionAccess from "@/assets/intervention-access.jpg";
 import interventionInspection from "@/assets/intervention-inspection.jpg";
