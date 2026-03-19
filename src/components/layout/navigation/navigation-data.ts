@@ -19,6 +19,7 @@ export const resourceHrefs = {
     { href: "/blog", external: false },
     { href: "https://help.roomonitor.com/es/ayuda", external: true },
     { href: "/resources/savings-calculator", external: false },
+    { href: "/installation-guide", external: false },
   ],
   company: [
     { href: "/resources/case-studies", external: false },
