@@ -18,7 +18,7 @@ interface ProtocolExamplesProps {
   icons?: LucideIcon[];
 }
 
-const defaultIcons: LucideIcon[] = [Volume2, Key, Flame];
+const defaultIcons: LucideIcon[] = [CalendarOff, Key, Volume2];
 
 export function ProtocolExamples({ eyebrow, title, subtitle, protocols, images, icons = defaultIcons }: ProtocolExamplesProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
