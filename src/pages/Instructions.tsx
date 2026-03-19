@@ -15,6 +15,23 @@ import { useTranslation } from "@/i18n/useTranslation";
 import instructionsHero from "@/assets/instructions-hero.webp";
 import instructionsStep1 from "@/assets/instructions-step1.webp";
 import instructionsStep2 from "@/assets/instructions-step2.webp";
+import instructionsStep3 from "@/assets/instructions-step3.webp";
+import instructionsStep4 from "@/assets/instructions-step4.webp";
+import instructionsStep5 from "@/assets/instructions-step5.webp";
+import instructionsStep6 from "@/assets/instructions-step6.webp";
+import instructionsStep7 from "@/assets/instructions-step7.webp";
+import instructionsStep8 from "@/assets/instructions-step8.webp";
+
+const stepImages: Record<number, string> = {
+  0: instructionsStep1,
+  1: instructionsStep2,
+  2: instructionsStep3,
+  3: instructionsStep4,
+  4: instructionsStep5,
+  5: instructionsStep6,
+  6: instructionsStep7,
+  7: instructionsStep8,
+};
 
 function ImagePlaceholder({ text }: { text: string }) {
   return (
