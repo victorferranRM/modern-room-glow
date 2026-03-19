@@ -24,6 +24,12 @@ const Index = () => {
         <AnimatedSection animation="fade-up">
           <ControlLevelSection />
         </AnimatedSection>
+        {/* Video banner separator */}
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '3/1' }}>
+          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/videos/monitoring-bg.mp4" type="video/mp4" />
+          </video>
+        </div>
         <AnimatedSection animation="fade-up">
           <MonitoringSection />
         </AnimatedSection>
