@@ -70,16 +70,16 @@ export default function Instructions() {
       </section>
 
       {/* Anchor Index */}
-      <section className="sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-b">
+      <section className="sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3 py-4 justify-center">
+          <div className="flex flex-wrap gap-3 py-5 justify-center">
             {anchors.map((label, i) => (
               <button
                 key={anchorIds[i]}
                 onClick={() => scrollTo(anchorIds[i])}
                 className="px-5 py-2.5 text-sm font-semibold text-primary border border-primary/30 bg-primary/5 rounded-full transition-all duration-200 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-md"
               >
-                {label}
+                {i + 1}. {label}
               </button>
             ))}
           </div>
