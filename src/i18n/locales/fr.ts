@@ -1126,7 +1126,7 @@ const fr = {
     description: "Notre équipe de terrain fournit une intervention sur site quand les situations nécessitent une présence physique. Disponible dans 8 villes, prêt à agir en votre nom.",
     stats: [
       { value: "8", label: "Villes couvertes" },
-      { value: "<45min", label: "Arrivée moyenne" },
+      { value: "<30min", label: "Arrivée moyenne" },
       { value: "24/7", label: "Disponibilité" },
       { value: "100%", label: "Interventions documentées" },
     ],
