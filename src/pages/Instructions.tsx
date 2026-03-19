@@ -14,6 +14,7 @@ import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import instructionsHero from "@/assets/instructions-hero.webp";
 import instructionsStep1 from "@/assets/instructions-step1.webp";
+import instructionsStep2 from "@/assets/instructions-step2.webp";
 
 function ImagePlaceholder({ text }: { text: string }) {
   return (
