@@ -1195,7 +1195,7 @@ const es = {
     process: [
       { step: "01", title: "Agenda una videollamada", description: "Revisaremos tu protocolo y reemplazaremos tu número de contacto de Airbnb/Booking.com con un número dedicado de Guest Assist." },
       { step: "02", title: "Completa tu protocolo", description: "Define lo que debemos seguir cada vez que los huéspedes llamen. Puedes editarlo en cualquier momento." },
-      { step: "03", title: "¡Guest Assist está activo!", description: "Relájate y desconecta con tranquilidad. Te contactaremos solo cuando sea necesario y enviaremos resúmenes diarios." },
+      { step: "03", title: "¡Desvío de llamadas activo!", description: "Relájate y desconecta con tranquilidad. Te contactaremos solo cuando sea necesario y enviaremos resúmenes diarios." },
     ],
     protocolEyebrow: "Tus Reglas, Nuestra Ejecución",
     protocolTitle: "Protocolo",

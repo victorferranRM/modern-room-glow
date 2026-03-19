@@ -1198,6 +1198,13 @@ const pt = {
       "Configurar preferências de notificação",
     ],
     protocolCTA: "Ver uma Demo",
+    processEyebrow: "Como Funciona",
+    processTitle: "Comece em 3 passos simples",
+    process: [
+      { step: "01", title: "Agende uma videochamada", description: "Revisaremos seu protocolo e substituiremos seu número de contato do Airbnb/Booking.com por um número dedicado do Guest Assist." },
+      { step: "02", title: "Complete seu protocolo", description: "Defina o que devemos seguir cada vez que os hóspedes ligarem. Você pode editá-lo a qualquer momento." },
+      { step: "03", title: "Desvio de chamadas ativo!", description: "Relaxe e desconecte com tranquilidade. Entraremos em contato apenas quando necessário e enviaremos resumos diários." },
+    ],
     imagePlaceholder: "Imagem: Interface de gestão de protocolo de atendimento ao hóspede",
     ctaTitle: "Pronto para dar um descanso à sua equipe?",
     ctaDescription: "Deixe-nos gerenciar as chamadas dos hóspedes enquanto você foca no crescimento do negócio. Agende uma chamada de orientação rápida.",

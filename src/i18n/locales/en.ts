@@ -1198,6 +1198,13 @@ const en = {
       "Configure notification preferences",
     ],
     protocolCTA: "See a Demo",
+    processEyebrow: "How It Works",
+    processTitle: "Get started in 3 simple steps",
+    process: [
+      { step: "01", title: "Schedule a video call", description: "We'll review your protocol and replace your Airbnb/Booking.com contact number with a dedicated Guest Assist number." },
+      { step: "02", title: "Complete your protocol", description: "Define what we should follow every time guests call. You can edit it at any time." },
+      { step: "03", title: "Call forwarding active!", description: "Relax and disconnect with peace of mind. We'll contact you only when necessary and send daily summaries." },
+    ],
     imagePlaceholder: "Image: Guest support protocol management interface",
     ctaTitle: "Ready to give your team a break?",
     ctaDescription: "Let us handle guest calls while you focus on growing your business. Schedule a quick orientation call to learn more.",

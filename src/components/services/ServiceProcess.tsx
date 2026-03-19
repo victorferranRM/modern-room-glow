@@ -11,7 +11,7 @@ interface ServiceProcessProps {
   eyebrow: string;
   title: string;
   steps: Step[];
-  background?: "default" | "secondary";
+  background?: "default" | "secondary" | "white";
   columns?: 3 | 4 | 5;
 }
 
@@ -31,7 +31,7 @@ export function ServiceProcess({
   return (
     <section className={cn(
       "py-20 lg:py-28 relative overflow-hidden",
-      background === "secondary" && "bg-secondary/30"
+      background === "secondary" ? "bg-secondary/30" : background === "white" ? "bg-[hsl(0,0%,100%)]" : "bg-background"
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <AnimatedSection className="text-center mb-10 sm:mb-12 lg:mb-16">
