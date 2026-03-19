@@ -10,7 +10,7 @@ import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-control-center.webp";
 
-const featureIcons = [Eye, Brain, AlertTriangle, Zap, Users, Shield];
+const featureIcons = [KeyRound, MapPin, Megaphone, Siren, Clock, FileText];
 
 export default function ControlCenter() {
   const { t, tObject } = useTranslation();
