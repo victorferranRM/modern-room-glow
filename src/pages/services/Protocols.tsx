@@ -11,9 +11,9 @@ import { ProtocolExamples } from "@/components/services/ProtocolExamples";
 import { useTranslation } from "@/i18n/useTranslation";
 import heroImage from "@/assets/cover-protocols.webp";
 import protocolsManagerImage from "@/assets/protocols-manager.webp";
-import interventionNoise from "@/assets/intervention-noise.jpg";
-import interventionAccess from "@/assets/intervention-access.jpg";
-import interventionWelcome from "@/assets/intervention-welcome.jpg";
+import interventionNoise from "@/assets/intervention-noise.webp";
+import interventionAccess from "@/assets/intervention-access.webp";
+import interventionConcierge from "@/assets/intervention-concierge.webp";
 
 const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
 const exampleImages = [interventionWelcome, interventionAccess, interventionNoise];
