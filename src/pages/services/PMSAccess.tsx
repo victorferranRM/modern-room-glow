@@ -29,7 +29,6 @@ export default function PMSAccess() {
 
       {/* Supported Platforms */}
       <section className="py-12 bg-card border-y relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="container mx-auto px-4 relative">
           <AnimatedSection className="text-center mb-8">
             <p className="text-sm text-muted-foreground">{t('servicePMSAccess.platformsSubtitle')}</p>
