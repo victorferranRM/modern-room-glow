@@ -104,8 +104,8 @@ export default function PMSAccess() {
           <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto mb-10">
             {pmsLogos.map((pms, i) => (
               <AnimatedSection key={pms.name} delay={i * 80}>
-                <div className="flex flex-col items-center gap-3 px-8 py-6 rounded-2xl bg-background/10 backdrop-blur-sm border border-background/10 hover:bg-background/15 transition-all duration-300 hover:-translate-y-1 min-w-[140px]">
-                  <div className="w-14 h-14 rounded-xl overflow-hidden bg-background/10 flex items-center justify-center">
+                <div className="flex flex-col items-center gap-3 px-8 py-6 rounded-2xl bg-white/15 backdrop-blur-sm border border-background/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 min-w-[140px]">
+                  <div className="w-14 h-14 rounded-xl overflow-hidden bg-white flex items-center justify-center p-1.5">
                     <img src={pms.logo} alt={pms.name} className="w-full h-full object-contain" />
                   </div>
                   <span className="text-sm font-medium text-background/80">{pms.name}</span>
