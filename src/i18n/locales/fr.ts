@@ -1300,6 +1300,7 @@ const fr = {
       { title: "Expérience élevée", description: "Standard de qualité homogène dans tous vos hébergements." },
       { title: "Opérations optimisées", description: "Processus plus rapides, efficaces et cohérents sur tout votre portefeuille." },
       { title: "Sécurité renforcée", description: "Accès limités au PMS, uniquement ce qui est nécessaire pour opérer." },
+      { title: "Données et reporting", description: "Métriques de performance et rapports opérationnels intégrés directement dans votre flux de travail." },
     ],
     smartlocksEyebrow: "Serrures connectées",
     smartlocksTitle: "Accès distant aux smartlocks",

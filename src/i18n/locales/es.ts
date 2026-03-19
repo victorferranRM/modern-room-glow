@@ -1294,6 +1294,7 @@ const es = {
       { title: "Experiencia elevada", description: "Estándar de calidad homogéneo en todos tus alojamientos." },
       { title: "Operativa optimizada", description: "Procesos más rápidos, eficientes y consistentes en toda tu cartera." },
       { title: "Seguridad reforzada", description: "Accesos limitados al PMS, solo lo necesario para operar." },
+      { title: "Datos y reporting", description: "Métricas de rendimiento y reportes operativos integrados directamente en tu flujo de trabajo." },
     ],
     smartlocksEyebrow: "Cerraduras inteligentes",
     smartlocksTitle: "Acceso remoto a smartlocks",

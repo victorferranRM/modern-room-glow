@@ -73,7 +73,8 @@ export default function PMSAccess() {
         title={t('servicePMSAccess.smartlocksTitle')}
         description={t('servicePMSAccess.smartlocksDescription')}
         features={smartlocksFeatures}
-        placeholderText={t('servicePMSAccess.smartlocksEyebrow')}
+        image={smartlockImage}
+        imageAlt="Smart lock access for vacation rentals"
         ctaText={t('servicePMSAccess.ctaPrimary')}
         ctaLink="/contact"
         background="secondary"
