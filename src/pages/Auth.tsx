@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Eye, EyeOff, ArrowLeft, AlertCircle, Loader2 } from "lucide-react";
-import roomonitorLogo from "@/assets/roomonitor-logo.png";
+import roomonitorLogo from "@/assets/roomonitor-logo.webp";
 import { z } from "zod";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";

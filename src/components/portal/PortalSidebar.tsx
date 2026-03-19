@@ -27,7 +27,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/hooks/useAuth";
 import { useSubscription } from "@/hooks/usePortalData";
-import roomonitorLogo from "@/assets/roomonitor-logo.png";
+import roomonitorLogo from "@/assets/roomonitor-logo.webp";
 
 const mainNavItems = [
   { title: "Dashboard", url: "/portal", icon: LayoutDashboard },
