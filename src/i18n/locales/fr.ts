@@ -1090,7 +1090,7 @@ const fr = {
       "Gérer les urgences et coordonner avec les autorités",
       "Communiquer avec les voyageurs hors horaires au nom du gestionnaire",
       "Appliquer des protocoles personnalisés pour chaque type d'incident",
-      "Documenter chaque action avec horodatage pour propriétaires et assureurs",
+      
     ],
     processEyebrow: "Processus",
     processTitle: "De l'incident à la résolution",
