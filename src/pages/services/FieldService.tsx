@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Truck, Clock, MapPin, Shield, Users, Wrench, Phone, Volume2, Key, Search, Camera, HandshakeIcon } from "lucide-react";
+import { Truck, Clock, MapPin, Shield, Users, Wrench, Phone, Key, UserCheck, Siren, Volume2, ConciergeBell, FileSignature } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceStats } from "@/components/services/ServiceStats";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
@@ -19,7 +19,7 @@ import interventionWelcome from "@/assets/intervention-welcome.jpg";
 import interventionDocumentation from "@/assets/intervention-documentation.jpg";
 
 const featureIcons = [MapPin, Clock, Users, Wrench, Shield, Phone];
-const interventionIcons = [Volume2, Key, Search, Wrench, HandshakeIcon, Camera];
+const interventionIcons = [Key, UserCheck, Siren, Volume2, ConciergeBell, FileSignature];
 const interventionImages = [interventionNoise, interventionAccess, interventionInspection, interventionRepair, interventionWelcome, interventionDocumentation];
 
 export default function FieldService() {
