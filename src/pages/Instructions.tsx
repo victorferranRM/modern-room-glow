@@ -13,6 +13,7 @@ import { ArrowRight, Download, ImageIcon, ExternalLink } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import instructionsHero from "@/assets/instructions-hero.webp";
+import instructionsStep1 from "@/assets/instructions-step1.webp";
 
 function ImagePlaceholder({ text }: { text: string }) {
   return (
@@ -59,7 +60,7 @@ export default function Instructions() {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <div className="relative">
+              <div className="relative max-w-sm lg:max-w-md mx-auto">
                 <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl" />
                 <OptimizedImage src={instructionsHero} alt={t("instructions.hero.title")} className="w-full rounded-2xl" containerClassName="w-full aspect-square" priority />
               </div>
@@ -69,16 +70,16 @@ export default function Instructions() {
       </section>
 
       {/* Anchor Index */}
-      <section className="sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-b">
+      <section className="sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3 py-4 justify-center">
+          <div className="flex flex-wrap gap-3 py-5 justify-center">
             {anchors.map((label, i) => (
               <button
                 key={anchorIds[i]}
                 onClick={() => scrollTo(anchorIds[i])}
                 className="px-5 py-2.5 text-sm font-semibold text-primary border border-primary/30 bg-primary/5 rounded-full transition-all duration-200 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-md"
               >
-                {label}
+                {i + 1}. {label}
               </button>
             ))}
           </div>
@@ -146,7 +147,16 @@ export default function Instructions() {
                           </Button>
                         )}
                       </div>
-                      <ImagePlaceholder text={step.imagePlaceholder} />
+                      {i === 0 ? (
+                        <div className="relative group">
+                          <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
+                          <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
+                            <OptimizedImage src={instructionsStep1} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
+                          </div>
+                        </div>
+                      ) : (
+                        <ImagePlaceholder text={step.imagePlaceholder} />
+                      )}
                     </div>
                   </AnimatedSection>
                 </div>
