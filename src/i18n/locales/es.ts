@@ -40,10 +40,12 @@ const es = {
         { title: "Blog" },
         { title: "Base de Conocimiento" },
         { title: "Calculadora de Ahorro" },
+        { title: "Instrucciones" },
       ], descriptions: [
         "Insights y tendencias en operaciones de hospitalidad",
         "Encuentra respuestas a preguntas frecuentes",
         "Descubre cuánto podrías ahorrar con Roomonitor",
+        "Guía paso a paso para instalar tu dispositivo",
       ]},
       company: { title: "EMPRESA", items: [
         { title: "Casos de Éxito" },

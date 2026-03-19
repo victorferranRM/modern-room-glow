@@ -40,10 +40,12 @@ const fr = {
         { title: "Blog" },
         { title: "Base de Connaissances" },
         { title: "Calculateur d'Économies" },
+        { title: "Manuel d'installation" },
       ], descriptions: [
         "Insights et tendances en opérations hôtelières",
         "Trouvez des réponses aux questions fréquentes",
         "Découvrez combien vous pourriez économiser avec Roomonitor",
+        "Guide étape par étape pour installer votre appareil",
       ]},
       company: { title: "ENTREPRISE", items: [
         { title: "Études de Cas" },

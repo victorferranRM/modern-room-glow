@@ -40,10 +40,12 @@ const en = {
         { title: "Blog" },
         { title: "Knowledge Base" },
         { title: "Savings Calculator" },
+        { title: "Installation Guide" },
       ], descriptions: [
         "Insights and trends in hospitality operations",
         "Find answers to frequently asked questions",
         "Discover how much you could save with Roomonitor",
+        "Step-by-step guide to install your device",
       ]},
       company: { title: "COMPANY", items: [
         { title: "Case Studies" },
