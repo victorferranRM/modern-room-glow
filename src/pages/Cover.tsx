@@ -19,7 +19,7 @@ export default function Cover() {
       <CoverTimeline />
       <CoverTabs />
       <CoverRedkool />
-      <CoverTestimonials />
+      
       <CoverCities />
       <CoverAudience />
       <CoverCTA />
