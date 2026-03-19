@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Settings, Zap, SmilePlus, Star, Gauge, ShieldCheck } from "lucide-react";
+import { Settings, Zap, SmilePlus, Star, Gauge, ShieldCheck, BarChart3 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceProcess } from "@/components/services/ServiceProcess";
