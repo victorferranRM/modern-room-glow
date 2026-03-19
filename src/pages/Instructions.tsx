@@ -88,7 +88,7 @@ export default function Instructions() {
       </section>
 
       {/* Anchor Index */}
-      <section className="hidden lg:block sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y">
+      <section className="hidden lg:block sticky top-[64px] z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y pt-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 py-6 justify-center">
             {anchors.map((label, i) => (
