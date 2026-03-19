@@ -1090,7 +1090,7 @@ const en = {
       "Manage emergencies and coordinate with authorities",
       "Communicate with guests after hours on behalf of the manager",
       "Apply customised protocols for each type of incident",
-      "Document every action with timestamps for owners and insurers",
+      
     ],
     processEyebrow: "Process",
     processTitle: "From incident to resolution",

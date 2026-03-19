@@ -1090,7 +1090,7 @@ const pt = {
       "Gerir emergências e coordenar com autoridades",
       "Comunicar com hóspedes fora de horário em nome do gestor",
       "Aplicar protocolos personalizados para cada tipo de incidência",
-      "Documentar cada ação com timestamps para proprietários e seguros",
+      
     ],
     processEyebrow: "Processo",
     processTitle: "Da incidência à resolução",
