@@ -3,12 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
   ArrowRight,
   Wifi,
   Headphones,
@@ -31,12 +25,78 @@ const monitoringIcons = [Package, SlidersHorizontal, Activity];
 const operationsIcons = [FileText, Link2, Moon, ClipboardCheck];
 const commonIcons = [ShieldCheck, FileCheck, Bell];
 
+interface StepData {
+  title: string;
+  description: string;
+  bullets: string[];
+  stat?: string;
+  statLabel?: string;
+  imagePlaceholder: string;
+}
+
+function StepBlock({ step, index, icon: Icon }: { step: StepData; index: number; icon: React.ElementType }) {
+  const imageOnRight = index % 2 === 0;
+  const num = String(index + 1).padStart(2, "0");
+
+  const textContent = (
+    <div className="flex flex-col justify-center">
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shrink-0">
+          {num}
+        </div>
+        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+          <Icon className="w-5 h-5 text-primary" />
+        </div>
+      </div>
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">{step.title}</h3>
+      <p className="text-muted-foreground mb-5">{step.description}</p>
+      <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
+        {step.bullets.map((bullet, i) => (
+          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+            {bullet}
+          </li>
+        ))}
+      </ul>
+      {step.stat && (
+        <div className="flex items-baseline gap-3">
+          <span className="text-4xl sm:text-5xl font-bold text-primary">{step.stat}</span>
+          {step.statLabel && <span className="text-sm text-muted-foreground">{step.statLabel}</span>}
+        </div>
+      )}
+    </div>
+  );
+
+  const imageContent = (
+    <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center">
+      <p className="text-muted-foreground text-sm text-center px-6">{step.imagePlaceholder}</p>
+    </div>
+  );
+
+  return (
+    <AnimatedSection animation="fade-up" delay={index * 100}>
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        {imageOnRight ? (
+          <>
+            {textContent}
+            {imageContent}
+          </>
+        ) : (
+          <>
+            {imageContent}
+            {textContent}
+          </>
+        )}
+      </div>
+    </AnimatedSection>
+  );
+}
+
 export default function HowItWorks() {
   const { t, tObject } = useTranslation();
-  const monitoringSteps = tObject<{ title: string; description: string }[]>("howItWorks.monitoringSteps");
-  const operationsSteps = tObject<{ title: string; description: string }[]>("howItWorks.operationsSteps");
+  const monitoringSteps = tObject<StepData[]>("howItWorks.monitoringSteps");
+  const operationsSteps = tObject<StepData[]>("howItWorks.operationsSteps");
   const commonItems = tObject<{ title: string; description: string }[]>("howItWorks.commonItems");
-  const faqs = tObject<{ question: string; answer: string }[]>("howItWorks.faqs");
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -119,7 +179,7 @@ export default function HowItWorks() {
         {/* Bloque 1 — Monitorización */}
         <section id="monitorizacion" className="py-20 lg:py-28 scroll-mt-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection className="text-center mb-12 lg:mb-16">
+            <AnimatedSection className="text-center mb-16 lg:mb-20">
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 {t("howItWorks.monitoringEyebrow")}
               </p>
@@ -128,28 +188,10 @@ export default function HowItWorks() {
               </h2>
             </AnimatedSection>
 
-            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-              {monitoringSteps?.map((step, i) => {
-                const Icon = monitoringIcons[i];
-                return (
-                  <AnimatedSection key={i} animation="fade-up" delay={i * 150}>
-                    <div className="group p-6 rounded-2xl bg-card border hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 h-full text-left">
-                      <div className="relative mb-4 inline-block">
-                        <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
-                          {String(i + 1).padStart(2, "0")}
-                        </div>
-                      </div>
-                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
-                        <Icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <h3 className="text-lg font-semibold mb-2 transition-colors group-hover:text-primary">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">{step.description}</p>
-                    </div>
-                  </AnimatedSection>
-                );
-              })}
+            <div className="max-w-6xl mx-auto space-y-20 lg:space-y-28">
+              {monitoringSteps?.map((step, i) => (
+                <StepBlock key={i} step={step} index={i} icon={monitoringIcons[i]} />
+              ))}
             </div>
           </div>
         </section>
@@ -157,7 +199,7 @@ export default function HowItWorks() {
         {/* Bloque 2 — Operativa delegada */}
         <section id="operativa" className="py-20 lg:py-28 bg-muted/30 scroll-mt-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection className="text-center mb-12 lg:mb-16">
+            <AnimatedSection className="text-center mb-16 lg:mb-20">
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 {t("howItWorks.operationsEyebrow")}
               </p>
@@ -166,28 +208,10 @@ export default function HowItWorks() {
               </h2>
             </AnimatedSection>
 
-            <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {operationsSteps?.map((step, i) => {
-                const Icon = operationsIcons[i];
-                return (
-                  <AnimatedSection key={i} animation="fade-up" delay={i * 150}>
-                    <div className="group p-6 rounded-2xl bg-card border hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 h-full text-left">
-                      <div className="relative mb-4 inline-block">
-                        <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
-                          {String(i + 1).padStart(2, "0")}
-                        </div>
-                      </div>
-                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
-                        <Icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <h3 className="text-lg font-semibold mb-2 transition-colors group-hover:text-primary">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">{step.description}</p>
-                    </div>
-                  </AnimatedSection>
-                );
-              })}
+            <div className="max-w-6xl mx-auto space-y-20 lg:space-y-28">
+              {operationsSteps?.map((step, i) => (
+                <StepBlock key={i} step={step} index={i} icon={operationsIcons[i]} />
+              ))}
             </div>
           </div>
         </section>
@@ -201,51 +225,21 @@ export default function HowItWorks() {
               </h2>
             </AnimatedSection>
 
-            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 lg:gap-12">
               {commonItems?.map((item, i) => {
                 const Icon = commonIcons[i];
                 return (
                   <AnimatedSection key={i} animation="fade-up" delay={i * 150}>
-                    <div className="text-center">
-                      <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-5">
+                    <div>
+                      <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center mb-5">
                         <Icon className="w-7 h-7 text-primary-foreground" />
                       </div>
-                      <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                      <p className="text-background/70 text-sm">{item.description}</p>
+                      <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                      <p className="text-background/70 text-sm leading-relaxed">{item.description}</p>
                     </div>
                   </AnimatedSection>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-16 lg:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection animation="fade-up" className="text-center mb-10 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
-                {t("howItWorks.faqTitle")}
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                {t("howItWorks.faqDescription")}
-              </p>
-            </AnimatedSection>
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-3">
-                {faqs?.map((faq, index) => (
-                  <AnimatedSection key={index} animation="fade-up" delay={index * 50}>
-                    <AccordionItem value={`faq-${index}`} className="bg-card border rounded-2xl px-6 data-[state=open]:shadow-md transition-shadow">
-                      <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </AnimatedSection>
-                ))}
-              </Accordion>
             </div>
           </div>
         </section>
