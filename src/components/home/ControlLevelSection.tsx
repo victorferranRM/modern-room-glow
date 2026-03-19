@@ -166,9 +166,6 @@ export function ControlLevelSection() {
                       size="lg"
                       asChild
                     >
-                      size="lg"
-                      asChild
-                    >
                       <Link to="/contact">
                         <MessageSquare className="w-4 h-4" />
                         {t("home.controlLevel.delegated.talkExpert")}
