@@ -59,7 +59,10 @@ export default function Instructions() {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <ImagePlaceholder text={t("instructions.hero.imagePlaceholder")} />
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl" />
+                <OptimizedImage src={instructionsHero} alt={t("instructions.hero.title")} className="w-full rounded-2xl" containerClassName="w-full aspect-square" priority />
+              </div>
             </AnimatedSection>
           </div>
         </div>
