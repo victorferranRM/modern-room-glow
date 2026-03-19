@@ -1209,7 +1209,7 @@ const fr = {
     processEyebrow: "Comment ça marche",
     processTitle: "Commencez en 3 étapes simples",
     process: [
-      { step: "01", title: "Planifiez un appel vidéo", description: "Nous réviserons votre protocole et remplacerons votre numéro de contact Airbnb/Booking.com par un numéro dédié Guest Assist." },
+      { step: "01", title: "Planifiez un appel vidéo", description: "Nous réviserons votre protocole et remplacerons votre numéro de contact Airbnb/Booking.com par un numéro dédié Roomonitor." },
       { step: "02", title: "Complétez votre protocole", description: "Définissez ce que nous devons suivre à chaque appel de client. Vous pouvez le modifier à tout moment." },
       { step: "03", title: "Transfert d'appels actif !", description: "Détendez-vous en toute tranquillité. Nous vous contacterons uniquement si nécessaire et enverrons des résumés quotidiens." },
     ],
