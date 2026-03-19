@@ -36,6 +36,7 @@ export const routePaths: Record<string, Record<SupportedLang, string>> = {
   caseStudyDetail: { es: 'recursos/casos-exito/:slug', en: 'resources/case-studies/:slug', fr: 'ressources/etudes-de-cas/:slug', pt: 'recursos/casos-sucesso/:slug' },
   savingsCalculator: { es: 'recursos/calculadora-ahorro', en: 'resources/savings-calculator', fr: 'ressources/calculateur-economies', pt: 'recursos/calculadora-economia' },
   integrations: { es: 'integraciones', en: 'integrations', fr: 'integrations', pt: 'integracoes' },
+  instructions: { es: 'instrucciones', en: 'installation-guide', fr: 'manuel-installation', pt: 'manual-instalacao' },
   legal: { es: 'legal', en: 'legal', fr: 'legal', pt: 'legal' },
   auth: { es: 'auth', en: 'auth', fr: 'auth', pt: 'auth' },
   login: { es: 'login', en: 'login', fr: 'login', pt: 'login' },

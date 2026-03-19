@@ -85,6 +85,7 @@ const routeComponents: Record<string, React.ComponentType> = {
   caseStudyDetail: CaseStudyDetail,
   savingsCalculator: SavingsCalculator,
   integrations: Integrations,
+  instructions: Instructions,
   legal: Legal,
   auth: Auth,
   login: Auth,
