@@ -9,7 +9,7 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { CoverCities } from "@/components/cover/CoverCities";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-field-service.jpg";
+import serviceImage from "@/assets/service-field-service.webp";
 import interventionNoise from "@/assets/intervention-noise.jpg";
 import interventionAccess from "@/assets/intervention-access.jpg";
 import interventionInspection from "@/assets/intervention-inspection.jpg";
@@ -35,8 +35,6 @@ export default function FieldService() {
       <Header />
       <ServiceHero icon={Truck} badge={t('serviceFieldService.badge')} title={t('serviceFieldService.title')} titleHighlight={t('serviceFieldService.titleHighlight')} description={t('serviceFieldService.description')} image={serviceImage} imageAlt={t('serviceFieldService.badge')} primaryCTA={{ text: t('serviceFieldService.primaryCTA'), link: "/contact" }} />
       <ServiceStats stats={stats} />
-      <CoverCities />
-      <ServiceFeatures eyebrow={t('serviceFieldService.featuresEyebrow')} title={t('serviceFieldService.featuresTitle')} features={features} background="secondary" />
 
       {/* Intervention Types */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
@@ -68,6 +66,12 @@ export default function FieldService() {
           </div>
         </div>
       </section>
+
+      <ServiceFeatures eyebrow={t('serviceFieldService.featuresEyebrow')} title={t('serviceFieldService.featuresTitle')} features={features} background="secondary" />
+      <CoverCities />
+
+
+
 
       <ServiceProcess eyebrow={t('serviceFieldService.processEyebrow')} title={t('serviceFieldService.processTitle')} steps={processSteps} background="secondary" />
       <ServiceCTA title={t('serviceFieldService.ctaTitle')} description={t('serviceFieldService.ctaDescription')} primaryCTA={{ text: t('serviceFieldService.ctaPrimary'), link: "/contact" }} />
