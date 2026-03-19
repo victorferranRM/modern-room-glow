@@ -1090,7 +1090,7 @@ const es = {
       "Gestionar emergencias y coordinar con autoridades",
       "Comunicarse con huéspedes fuera de horario en nombre del gestor",
       "Aplicar protocolos personalizados para cada tipo de incidencia",
-      "Documentar cada acción con timestamps para propietarios y seguros",
+      
     ],
     processEyebrow: "Proceso",
     processTitle: "De la incidencia a la resolución",
