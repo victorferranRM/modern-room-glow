@@ -21,6 +21,7 @@ import HowItWorks from "./pages/HowItWorks";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Integrations from "./pages/Integrations";
+import Instructions from "./pages/Instructions";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Monitoring from "./pages/Monitoring";
