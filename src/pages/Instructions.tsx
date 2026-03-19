@@ -86,7 +86,7 @@ export default function Instructions() {
       </section>
 
       {/* Steps */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-[hsl(0,0%,100%)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto space-y-20 lg:space-y-28">
             {steps.map((step, i) => {
