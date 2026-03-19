@@ -1095,7 +1095,7 @@ const es = {
     process: [
       { step: "01", title: "Detección o Contacto", description: "Una alerta de sensor, una llamada de huésped o un reporte vecinal llega al Centro de Control." },
       { step: "02", title: "Verificación Humana", description: "Un operador formado analiza la situación, cruza datos y confirma la naturaleza de la incidencia." },
-      { step: "03", title: "Decisión según Protocolo", description: "Aplicamos el protocolo específico del gestor: contacto con huésped, activación de Field Service, notificación al propietario o coordinación con autoridades." },
+      { step: "03", title: "Decisión según Protocolo", description: "Aplicamos el protocolo específico del gestor: contacto con huésped, activación de Field Service, notificación al propietario..." },
       { step: "04", title: "Resolución y Documentación", description: "Ejecutamos la acción, verificamos la resolución y generamos un informe completo con todas las acciones y timestamps." },
     ],
     imagePlaceholder: "Imagen: Centro de Control gestionando múltiples tipos de incidencias",
