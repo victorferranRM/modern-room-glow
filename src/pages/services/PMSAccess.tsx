@@ -7,9 +7,10 @@ import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-pms-access.jpg";
+import heroImage from "@/assets/hero-pms-access.webp";
+import smartlockImage from "@/assets/smartlock-access.webp";
 
-const benefitIcons = [Zap, SmilePlus, Star, Gauge, ShieldCheck];
+const benefitIcons = [Zap, SmilePlus, Star, Gauge, ShieldCheck, BarChart3];
 
 const pmsLogos: { name: string; initials: string; color: string }[] = [
   { name: "Avantio", initials: "Av", color: "#0066CC" },
