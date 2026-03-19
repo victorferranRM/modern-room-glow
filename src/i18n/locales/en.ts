@@ -84,7 +84,7 @@ const en = {
     ],
     resourceLinks: [
       { name: "Blog" }, { name: "Knowledge Base" }, { name: "Savings Calculator" },
-      { name: "Manager" }, { name: "Customer Portal" },
+      { name: "Installation Guide" }, { name: "Manager" }, { name: "Customer Portal" },
     ],
     legalLinks: [
       { name: "Terms of Use" }, { name: "Legal Notice" }, { name: "Privacy Policy" },

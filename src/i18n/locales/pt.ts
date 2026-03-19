@@ -84,7 +84,7 @@ const pt = {
     ],
     resourceLinks: [
       { name: "Blog" }, { name: "Base de Conhecimento" }, { name: "Calculadora de Economia" },
-      { name: "Manager" }, { name: "Portal do Cliente" },
+      { name: "Manual de Instalação" }, { name: "Manager" }, { name: "Portal do Cliente" },
     ],
     legalLinks: [
       { name: "Condições de Uso" }, { name: "Aviso Legal" }, { name: "Política de Privacidade" },

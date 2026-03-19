@@ -84,7 +84,7 @@ const fr = {
     ],
     resourceLinks: [
       { name: "Blog" }, { name: "Base de Connaissances" }, { name: "Calculateur d'Économies" },
-      { name: "Manager" }, { name: "Portail Client" },
+      { name: "Manuel d'installation" }, { name: "Manager" }, { name: "Portail Client" },
     ],
     legalLinks: [
       { name: "Conditions d'Utilisation" }, { name: "Mentions Légales" }, { name: "Politique de Confidentialité" },
