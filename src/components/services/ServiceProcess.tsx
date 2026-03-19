@@ -11,7 +11,7 @@ interface ServiceProcessProps {
   eyebrow: string;
   title: string;
   steps: Step[];
-  background?: "default" | "secondary";
+  background?: "default" | "secondary" | "white";
   columns?: 3 | 4 | 5;
 }
 
