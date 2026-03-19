@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
-import managerDevices from "@/assets/manager-devices.png";
+import managerDevices from "@/assets/manager-devices.webp";
 
 const tabMeta = [
   { id: "monitoring", icon: Activity },

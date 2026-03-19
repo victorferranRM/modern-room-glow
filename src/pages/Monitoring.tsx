@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import roomonitorDevice from "@/assets/roomonitor-device.jpg";
+import roomonitorDevice from "@/assets/roomonitor-device.webp";
 import homeMonitoringNoise from "@/assets/home-monitoring-noise.webp";
 import homeMonitoringOccupancy from "@/assets/home-monitoring-occupancy.webp";
 import homeMonitoringSmoke from "@/assets/home-monitoring-smoke.webp";

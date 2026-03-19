@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Volume2, Users, Wind, Thermometer, Headphones, Shield, Clock, MapPin, Phone, FileText, Building2 } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import solutionRest from "@/assets/solution-rest-new.jpg";
+import solutionRest from "@/assets/solution-rest-new.webp";
 
 const serviceIcons = [Volume2, Users, Wind, Thermometer, Headphones, Phone, MapPin, FileText];
 const serviceHrefs = ["/monitoring/noise", "/monitoring/occupancy", "/monitoring/smoke", "/monitoring/environment", "/services/control-center", "/services/guest-assist", "/services/field-service", "/services/protocols"];

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import managerDevices from "@/assets/manager-devices.png";
+import managerDevices from "@/assets/manager-devices.webp";
 
 function ManagerCheckItem({ text }: { text: string }) {
   return (

@@ -4,14 +4,14 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
-import cityBarcelona from "@/assets/city-barcelona.jpg";
-import cityMadrid from "@/assets/city-madrid.jpg";
-import cityMalaga from "@/assets/city-malaga.jpg";
-import cityValencia from "@/assets/city-valencia.jpg";
-import citySevilla from "@/assets/city-sevilla.jpg";
-import cityGranada from "@/assets/city-granada.jpg";
-import cityLisboa from "@/assets/city-lisboa.jpg";
-import cityParis from "@/assets/city-paris.jpg";
+import cityBarcelona from "@/assets/city-barcelona.webp";
+import cityMadrid from "@/assets/city-madrid.webp";
+import cityMalaga from "@/assets/city-malaga.webp";
+import cityValencia from "@/assets/city-valencia.webp";
+import citySevilla from "@/assets/city-sevilla.webp";
+import cityGranada from "@/assets/city-granada.webp";
+import cityLisboa from "@/assets/city-lisboa.webp";
+import cityParis from "@/assets/city-paris.webp";
 
 const cityData = [
   { nameKey: "Barcelona", hours: "24/7", flag: "🇪🇸", img: cityBarcelona },
