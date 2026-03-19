@@ -84,7 +84,7 @@ export default function NightWatch() {
         </div>
       </section>
 
-      <ServiceImageSection eyebrow={t('serviceNightWatch.preventionEyebrow')} title={t('serviceNightWatch.preventionTitle')} description={t('serviceNightWatch.preventionDescription')} features={partyPrevention} placeholderText={t('serviceNightWatch.imagePlaceholder')} ctaText={t('serviceNightWatch.preventionCTA')} ctaLink="/contact" background="secondary" />
+      <ServiceImageSection eyebrow={t('serviceNightWatch.preventionEyebrow')} title={t('serviceNightWatch.preventionTitle')} description={t('serviceNightWatch.preventionDescription')} features={partyPrevention} image={preventionImage} imageAlt={t('serviceNightWatch.badge')} ctaText={t('serviceNightWatch.preventionCTA')} ctaLink="/contact" background="secondary" />
       <ServiceCTA title={t('serviceNightWatch.ctaTitle')} description={t('serviceNightWatch.ctaDescription')} primaryCTA={{ text: t('serviceNightWatch.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
