@@ -9,7 +9,7 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-guest-assist.jpg";
+import serviceImage from "@/assets/service-guest-assist.webp";
 import protocolImage from "@/assets/cover-protocols.webp";
 import notVirtualImage from "@/assets/not-virtual-assistants.jpg";
 import notChatbotsImage from "@/assets/not-chatbots.jpg";
