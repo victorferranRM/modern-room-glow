@@ -55,8 +55,8 @@ export function ServiceHero({
               {badge}
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6 leading-[1.15]">
-              <span className="block sm:inline">{title}</span>{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-primary/70 bg-clip-text block pb-1">
+              {title}{" "}
+              <span className="text-primary bg-gradient-to-r from-primary to-primary/70 bg-clip-text pb-1">
                 {titleHighlight}
               </span>
             </h1>
