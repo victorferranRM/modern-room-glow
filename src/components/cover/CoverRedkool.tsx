@@ -21,7 +21,7 @@ export function CoverRedkool() {
                   src={redkoolImage}
                   alt="Redkool app"
                   className="w-full transition-transform duration-700 group-hover:scale-105"
-                  containerClassName="w-full aspect-[3/4]"
+                  containerClassName="w-full aspect-square"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
