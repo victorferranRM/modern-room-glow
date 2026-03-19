@@ -9,15 +9,20 @@ import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import heroImage from "@/assets/hero-pms-access.webp";
 import smartlockImage from "@/assets/smartlock-access.webp";
+import pmsAvantio from "@/assets/pms/avantio.webp";
+import pmsAvaibook from "@/assets/pms/avaibook.webp";
+import pmsGuesty from "@/assets/pms/guesty.webp";
+import pmsHostify from "@/assets/pms/hostify.webp";
+import pmsKross from "@/assets/pms/kross.webp";
 
 const benefitIcons = [Zap, SmilePlus, Star, Gauge, ShieldCheck, BarChart3];
 
-const pmsLogos: { name: string; initials: string; color: string }[] = [
-  { name: "Avantio", initials: "Av", color: "#0066CC" },
-  { name: "Guesty", initials: "G", color: "#00B4AB" },
-  { name: "Hostaway", initials: "H", color: "#FF6B35" },
-  { name: "Beds24", initials: "B", color: "#E74C3C" },
-  { name: "Octorate", initials: "O", color: "#7B2D8E" },
+const pmsLogos: { name: string; logo: string }[] = [
+  { name: "Avantio", logo: pmsAvantio },
+  { name: "AvaiBook", logo: pmsAvaibook },
+  { name: "Guesty", logo: pmsGuesty },
+  { name: "Hostify", logo: pmsHostify },
+  { name: "Kross Booking", logo: pmsKross },
 ];
 
 export default function PMSAccess() {
