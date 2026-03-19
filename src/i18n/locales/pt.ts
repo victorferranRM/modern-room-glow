@@ -1770,6 +1770,46 @@ const pt = {
     goToPortal: "Ir para o meu portal",
     backToHome: "Voltar ao início",
   },
+  instructions: {
+    hero: {
+      eyebrow: "GUIA DE INSTALAÇÃO",
+      title: "Manual de instalação",
+      subtitle: "Siga estes passos para instalar e configurar o seu dispositivo Roomonitor em poucos minutos.",
+      imagePlaceholder: "Imagem: dispositivo Roomonitor",
+    },
+    anchors: ["Descarregue a app", "Instale o dispositivo", "Monitorize as suas propriedades", "Perguntas frequentes"],
+    steps: [
+      { title: "Descarregue a app e inicie sessão", description: "Descarregue a app Roomonitor na App Store ou Google Play. Inicie sessão com as credenciais recebidas por email e ative as notificações.", imagePlaceholder: "Imagem: ecrã de login da app" },
+      { title: "Preparação e localização", description: "Escolha uma zona onde os hóspedes se reúnem (sala de estar). Evite fontes de ruído, televisores ou eletrodomésticos. Certifique-se de ter cobertura WiFi e uma tomada próxima.", imagePlaceholder: "Imagem: localização ideal do dispositivo" },
+      { title: "Fixação do dispositivo", description: "Use o autocolante adesivo ou aparafuse a placa metálica. A segunda opção é preferível em superfícies rugosas.", imagePlaceholder: "Imagem: fixação com autocolante e parafusos" },
+      { title: "Ligação do dispositivo", description: "Ligue o carregador e conecte-o ao dispositivo via USB-C.", imagePlaceholder: "Imagem: ligação USB-C do dispositivo" },
+      { title: "Início da configuração", description: "Localize o orifício junto ao conector USB. Com um clip, pressione o botão interno 3 vezes, mantendo a terceira pressão até que as luzes se apaguem. Aguarde a luz azul intermitente.", imagePlaceholder: "Imagem: botão de reset do dispositivo" },
+      { title: "Configuração do dispositivo", description: "Na app, adicione um novo dispositivo detetado e vincule-o à sua rede WiFi. Tenha a password à mão.", imagePlaceholder: "Imagem: ecrã de configuração WiFi" },
+      { title: "Verificação e finalização", description: "Luz verde intermitente = configuração correta. Luz vermelha = erro, repita o processo.", imagePlaceholder: "Imagem: luzes de estado do dispositivo" },
+      { title: "Personalização de dados", description: "Edite o nome, morada e telefones de contacto para alertas de cada propriedade.", imagePlaceholder: "Imagem: ecrã de edição de propriedade" },
+      { title: "Explore os seus dashboards", description: "Aceda a manager.roomonitor.com a partir de qualquer dispositivo para ver os seus dados em tempo real.", imagePlaceholder: "Imagem: dashboard do Manager" },
+    ],
+    dashboardButton: "Ir para dashboards",
+    faqTitle: "Perguntas frequentes",
+    faqs: [
+      { question: "Preciso de WiFi?", answer: "Sim, o dispositivo requer uma ligação WiFi 2.4 GHz para funcionar corretamente." },
+      { question: "Como faço o reset do dispositivo?", answer: "Tem 4 opções:<br/><br/><strong>Desligar:</strong> 5 pressões rápidas do botão interno.<br/><strong>Reiniciar:</strong> 3 pressões rápidas.<br/><strong>Factory Reset:</strong> 3 pressões mantendo a terceira até as luzes se apagarem.<br/><strong>Hard Reset:</strong> desligar o dispositivo e desconectar a bateria interna." },
+      { question: "Posso usá-lo apenas com bateria?", answer: "O dispositivo foi concebido para estar sempre ligado à corrente. A bateria de reserva dura aproximadamente 2 meses em standby ou 2 dias em uso normal. Receberá um alerta por email se for desconectado durante mais de 20 minutos." },
+      { question: "O que significam as luzes?", answer: "" },
+    ],
+    lightColors: [
+      { color: "Vermelho → verde → azul", meaning: "O dispositivo está a ligar" },
+      { color: "Azul → verde → vermelho", meaning: "O dispositivo está a desligar" },
+      { color: "Azul rápido", meaning: "Modo de configuração" },
+      { color: "Azul lento", meaning: "A tentar ligar ao WiFi" },
+      { color: "Verde intermitente", meaning: "WiFi ligado com sucesso" },
+      { color: "Vermelho intermitente", meaning: "Erro de ligação WiFi" },
+      { color: "Branco intermitente", meaning: "Factory reset em curso" },
+    ],
+    ctaTitle: "Precisa de ajuda?",
+    ctaDescription: "A nossa equipa de suporte está disponível para ajudá-lo com a instalação e configuração.",
+    ctaButton: "Contactar suporte",
+  },
 };
 
 export default pt;

@@ -1770,6 +1770,46 @@ const fr = {
     goToPortal: "Aller à mon portail",
     backToHome: "Retour à l'accueil",
   },
+  instructions: {
+    hero: {
+      eyebrow: "GUIDE D'INSTALLATION",
+      title: "Manuel d'installation",
+      subtitle: "Suivez ces étapes pour installer et configurer votre appareil Roomonitor en quelques minutes.",
+      imagePlaceholder: "Image : appareil Roomonitor",
+    },
+    anchors: ["Téléchargez l'app", "Installez l'appareil", "Surveillez vos propriétés", "Questions fréquentes"],
+    steps: [
+      { title: "Téléchargez l'app et connectez-vous", description: "Téléchargez l'application Roomonitor sur l'App Store ou Google Play. Connectez-vous avec les identifiants reçus par email et activez les notifications.", imagePlaceholder: "Image : écran de connexion de l'app" },
+      { title: "Préparation et emplacement", description: "Choisissez un endroit où les clients se rassemblent (salon). Évitez les sources de bruit, téléviseurs ou appareils électroménagers. Assurez-vous d'avoir une couverture WiFi et une prise à proximité.", imagePlaceholder: "Image : emplacement idéal de l'appareil" },
+      { title: "Fixation de l'appareil", description: "Utilisez l'autocollant adhésif ou vissez la plaque métallique. La seconde option est préférable sur les surfaces rugueuses.", imagePlaceholder: "Image : fixation avec autocollant et vis" },
+      { title: "Connexion de l'appareil", description: "Branchez le chargeur et connectez-le à l'appareil via USB-C.", imagePlaceholder: "Image : connexion USB-C de l'appareil" },
+      { title: "Lancement de la configuration", description: "Localisez le trou à côté du connecteur USB. Avec un trombone, appuyez 3 fois sur le bouton interne en maintenant la troisième pression jusqu'à ce que les lumières s'éteignent. Attendez le clignotement bleu.", imagePlaceholder: "Image : bouton de réinitialisation" },
+      { title: "Configuration de l'appareil", description: "Dans l'application, ajoutez un nouvel appareil détecté et associez-le à votre réseau WiFi. Ayez le mot de passe à portée de main.", imagePlaceholder: "Image : écran de configuration WiFi" },
+      { title: "Vérification et finalisation", description: "Lumière verte clignotante = configuration réussie. Lumière rouge = erreur, répétez le processus.", imagePlaceholder: "Image : voyants d'état de l'appareil" },
+      { title: "Personnalisation des données", description: "Modifiez le nom, l'adresse et les numéros de téléphone de contact pour les alertes de chaque propriété.", imagePlaceholder: "Image : écran d'édition de propriété" },
+      { title: "Explorez vos tableaux de bord", description: "Accédez à manager.roomonitor.com depuis n'importe quel appareil pour consulter vos données en temps réel.", imagePlaceholder: "Image : tableau de bord Manager" },
+    ],
+    dashboardButton: "Aller aux tableaux de bord",
+    faqTitle: "Questions fréquentes",
+    faqs: [
+      { question: "Ai-je besoin du WiFi ?", answer: "Oui, l'appareil nécessite une connexion WiFi 2,4 GHz pour fonctionner correctement." },
+      { question: "Comment réinitialiser l'appareil ?", answer: "Vous avez 4 options :<br/><br/><strong>Éteindre :</strong> 5 pressions rapides du bouton interne.<br/><strong>Redémarrer :</strong> 3 pressions rapides.<br/><strong>Réinitialisation usine :</strong> 3 pressions en maintenant la troisième jusqu'à extinction des lumières.<br/><strong>Réinitialisation matérielle :</strong> éteindre l'appareil et déconnecter la batterie interne." },
+      { question: "Puis-je l'utiliser uniquement sur batterie ?", answer: "L'appareil est conçu pour rester branché en permanence. La batterie de secours dure environ 2 mois en veille ou 2 jours en utilisation normale. Vous recevrez une alerte par email s'il est déconnecté pendant plus de 20 minutes." },
+      { question: "Que signifient les voyants ?", answer: "" },
+    ],
+    lightColors: [
+      { color: "Rouge → vert → bleu", meaning: "L'appareil s'allume" },
+      { color: "Bleu → vert → rouge", meaning: "L'appareil s'éteint" },
+      { color: "Bleu rapide", meaning: "Mode configuration" },
+      { color: "Bleu lent", meaning: "Tentative de connexion WiFi" },
+      { color: "Vert clignotant", meaning: "WiFi connecté avec succès" },
+      { color: "Rouge clignotant", meaning: "Erreur de connexion WiFi" },
+      { color: "Blanc clignotant", meaning: "Réinitialisation usine en cours" },
+    ],
+    ctaTitle: "Besoin d'aide ?",
+    ctaDescription: "Notre équipe de support est disponible pour vous aider avec l'installation et la configuration.",
+    ctaButton: "Contacter le support",
+  },
 };
 
 export default fr;
