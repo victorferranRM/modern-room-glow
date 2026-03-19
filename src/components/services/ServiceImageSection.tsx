@@ -27,6 +27,7 @@ export function ServiceImageSection({
   ctaText = "Learn More", ctaLink = "/contact",
   reversed = false, background = "default",
   ctaPosition = "inline",
+  customImageContent,
 }: ServiceImageSectionProps) {
   const bgClass = {
     default: "",
