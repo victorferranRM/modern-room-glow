@@ -40,10 +40,12 @@ const es = {
         { title: "Blog" },
         { title: "Base de Conocimiento" },
         { title: "Calculadora de Ahorro" },
+        { title: "Instrucciones" },
       ], descriptions: [
         "Insights y tendencias en operaciones de hospitalidad",
         "Encuentra respuestas a preguntas frecuentes",
         "Descubre cuánto podrías ahorrar con Roomonitor",
+        "Guía paso a paso para instalar tu dispositivo",
       ]},
       company: { title: "EMPRESA", items: [
         { title: "Casos de Éxito" },
@@ -82,7 +84,7 @@ const es = {
     ],
     resourceLinks: [
       { name: "Blog" }, { name: "Base de Conocimiento" }, { name: "Calculadora de Ahorro" },
-      { name: "Manager" }, { name: "Portal de Cliente" },
+      { name: "Instrucciones" }, { name: "Manager" }, { name: "Portal de Cliente" },
     ],
     legalLinks: [
       { name: "Condiciones de Uso" }, { name: "Aviso Legal" }, { name: "Política de Privacidad" },
@@ -891,6 +893,7 @@ const es = {
     breadcrumbMonitoring: "Monitorización",
     recommended: "Recomendado",
     downloadManual: "Descargar manual de instalación",
+    installationManual: "Manual de instalación",
   },
   // Monitoring subpages
   monitoringNoise: {
@@ -1760,6 +1763,46 @@ const es = {
     ],
     goToPortal: "Ir a mi portal",
     backToHome: "Volver al inicio",
+  },
+  instructions: {
+    hero: {
+      eyebrow: "GUÍA DE INSTALACIÓN",
+      title: "Manual de instalación",
+      subtitle: "Sigue estos pasos para instalar y configurar tu dispositivo Roomonitor en pocos minutos.",
+      imagePlaceholder: "Imagen: dispositivo Roomonitor",
+    },
+    anchors: ["Descarga la app", "Instala el dispositivo", "Monitoriza tus propiedades", "Preguntas frecuentes"],
+    steps: [
+      { title: "Descarga la app e inicia sesión", description: "Descarga la app de Roomonitor en App Store o Google Play. Inicia sesión con las credenciales recibidas por email y activa las notificaciones.", imagePlaceholder: "Imagen: pantalla de login de la app" },
+      { title: "Preparación y ubicación", description: "Elige una zona donde los huéspedes se congreguen (salón). Evita fuentes de ruido, televisores o electrodomésticos. Asegúrate de tener cobertura WiFi y enchufe cercano.", imagePlaceholder: "Imagen: ubicación ideal del dispositivo" },
+      { title: "Fijación del dispositivo", description: "Usa la pegatina o atornilla la placa metálica. La segunda opción es preferible en superficies rugosas.", imagePlaceholder: "Imagen: fijación con pegatina y tornillos" },
+      { title: "Conexión del dispositivo", description: "Conecta el cargador y enchúfalo al dispositivo mediante USB-C.", imagePlaceholder: "Imagen: conexión USB-C del dispositivo" },
+      { title: "Inicio de configuración", description: "Localiza el agujero junto al conector USB. Con un clip, pulsa 3 veces el botón interior dejando pulsada la tercera hasta que se apaguen las luces. Espera la luz azul parpadeante.", imagePlaceholder: "Imagen: botón de reset del dispositivo" },
+      { title: "Configuración del dispositivo", description: "En la app, añade un nuevo dispositivo detectado y vincúlalo a tu red WiFi. Ten la contraseña a mano.", imagePlaceholder: "Imagen: pantalla de configuración WiFi" },
+      { title: "Verificación y finalización", description: "Luz verde parpadeante = configuración correcta. Luz roja = error, repite el proceso.", imagePlaceholder: "Imagen: luces de estado del dispositivo" },
+      { title: "Personalización de datos", description: "Edita el nombre, dirección y teléfonos de contacto para alertas de cada propiedad.", imagePlaceholder: "Imagen: pantalla de edición de propiedad" },
+      { title: "Explora tus dashboards", description: "Accede a manager.roomonitor.com desde cualquier dispositivo para ver tus datos en tiempo real.", imagePlaceholder: "Imagen: dashboard de Manager" },
+    ],
+    dashboardButton: "Ir a dashboards",
+    faqTitle: "Preguntas frecuentes",
+    faqs: [
+      { question: "¿Necesito WiFi?", answer: "Sí, el dispositivo requiere una conexión WiFi 2.4 GHz para funcionar correctamente." },
+      { question: "¿Cómo reseteo el dispositivo?", answer: "Tienes 4 opciones:<br/><br/><strong>Apagar:</strong> 5 pulsaciones rápidas del botón interior.<br/><strong>Reinicio:</strong> 3 pulsaciones rápidas.<br/><strong>Factory Reset:</strong> 3 pulsaciones manteniendo pulsada la tercera hasta que se apaguen las luces.<br/><strong>Hard Reset:</strong> apagar el dispositivo y desconectar la batería interna." },
+      { question: "¿Puedo usarlo solo con batería?", answer: "El dispositivo está diseñado para estar enchufado siempre. La batería de respaldo dura aproximadamente 2 meses en modo standby o 2 días en uso normal. Recibirás un aviso por email si se desconecta durante más de 20 minutos." },
+      { question: "¿Qué significan las luces?", answer: "" },
+    ],
+    lightColors: [
+      { color: "Rojo → verde → azul", meaning: "El dispositivo se está encendiendo" },
+      { color: "Azul → verde → rojo", meaning: "El dispositivo se está apagando" },
+      { color: "Azul rápido", meaning: "Modo configuración" },
+      { color: "Azul lento", meaning: "Intentando conectar a WiFi" },
+      { color: "Verde parpadeante", meaning: "WiFi conectada correctamente" },
+      { color: "Rojo parpadeante", meaning: "Error de conexión WiFi" },
+      { color: "Blanco parpadeante", meaning: "Factory reset en proceso" },
+    ],
+    ctaTitle: "¿Necesitas ayuda?",
+    ctaDescription: "Nuestro equipo de soporte está disponible para ayudarte con la instalación y configuración.",
+    ctaButton: "Contactar con soporte",
   },
 };
 

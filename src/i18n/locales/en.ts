@@ -40,10 +40,12 @@ const en = {
         { title: "Blog" },
         { title: "Knowledge Base" },
         { title: "Savings Calculator" },
+        { title: "Installation Guide" },
       ], descriptions: [
         "Insights and trends in hospitality operations",
         "Find answers to frequently asked questions",
         "Discover how much you could save with Roomonitor",
+        "Step-by-step guide to install your device",
       ]},
       company: { title: "COMPANY", items: [
         { title: "Case Studies" },
@@ -82,7 +84,7 @@ const en = {
     ],
     resourceLinks: [
       { name: "Blog" }, { name: "Knowledge Base" }, { name: "Savings Calculator" },
-      { name: "Manager" }, { name: "Customer Portal" },
+      { name: "Installation Guide" }, { name: "Manager" }, { name: "Customer Portal" },
     ],
     legalLinks: [
       { name: "Terms of Use" }, { name: "Legal Notice" }, { name: "Privacy Policy" },
@@ -891,6 +893,7 @@ const en = {
     breadcrumbMonitoring: "Monitoring",
     recommended: "Recommended",
     downloadManual: "Download installation manual",
+    installationManual: "Installation guide",
   },
   // Monitoring subpages
   monitoringNoise: {
@@ -1766,6 +1769,46 @@ const en = {
     ],
     goToPortal: "Go to my portal",
     backToHome: "Back to home",
+  },
+  instructions: {
+    hero: {
+      eyebrow: "INSTALLATION GUIDE",
+      title: "Installation guide",
+      subtitle: "Follow these steps to install and set up your Roomonitor device in just a few minutes.",
+      imagePlaceholder: "Image: Roomonitor device",
+    },
+    anchors: ["Download the app", "Install the device", "Monitor your properties", "FAQ"],
+    steps: [
+      { title: "Download the app and sign in", description: "Download the Roomonitor app from the App Store or Google Play. Sign in with the credentials received by email and enable notifications.", imagePlaceholder: "Image: app login screen" },
+      { title: "Preparation and placement", description: "Choose an area where guests gather (living room). Avoid noise sources, TVs or appliances. Make sure you have WiFi coverage and a nearby outlet.", imagePlaceholder: "Image: ideal device placement" },
+      { title: "Mount the device", description: "Use the adhesive sticker or screw in the metal plate. The second option is preferred on rough surfaces.", imagePlaceholder: "Image: mounting with sticker and screws" },
+      { title: "Connect the device", description: "Connect the charger and plug it into the device via USB-C.", imagePlaceholder: "Image: USB-C device connection" },
+      { title: "Start configuration", description: "Locate the hole next to the USB connector. With a paperclip, press the internal button 3 times, holding the third press until the lights turn off. Wait for the blinking blue light.", imagePlaceholder: "Image: device reset button" },
+      { title: "Configure the device", description: "In the app, add a newly detected device and link it to your WiFi network. Have the password ready.", imagePlaceholder: "Image: WiFi configuration screen" },
+      { title: "Verification and completion", description: "Blinking green light = configuration successful. Red light = error, repeat the process.", imagePlaceholder: "Image: device status lights" },
+      { title: "Customise your data", description: "Edit the name, address and contact phone numbers for alerts on each property.", imagePlaceholder: "Image: property editing screen" },
+      { title: "Explore your dashboards", description: "Access manager.roomonitor.com from any device to view your real-time data.", imagePlaceholder: "Image: Manager dashboard" },
+    ],
+    dashboardButton: "Go to dashboards",
+    faqTitle: "Frequently asked questions",
+    faqs: [
+      { question: "Do I need WiFi?", answer: "Yes, the device requires a 2.4 GHz WiFi connection to work properly." },
+      { question: "How do I reset the device?", answer: "You have 4 options:<br/><br/><strong>Power off:</strong> 5 quick presses of the internal button.<br/><strong>Restart:</strong> 3 quick presses.<br/><strong>Factory Reset:</strong> 3 presses, holding the third until the lights turn off.<br/><strong>Hard Reset:</strong> power off the device and disconnect the internal battery." },
+      { question: "Can I use it on battery only?", answer: "The device is designed to be plugged in at all times. The backup battery lasts approximately 2 months on standby or 2 days under normal use. You'll receive an email alert if it's disconnected for more than 20 minutes." },
+      { question: "What do the lights mean?", answer: "" },
+    ],
+    lightColors: [
+      { color: "Red → green → blue", meaning: "The device is powering on" },
+      { color: "Blue → green → red", meaning: "The device is powering off" },
+      { color: "Fast blue", meaning: "Configuration mode" },
+      { color: "Slow blue", meaning: "Attempting to connect to WiFi" },
+      { color: "Blinking green", meaning: "WiFi connected successfully" },
+      { color: "Blinking red", meaning: "WiFi connection error" },
+      { color: "Blinking white", meaning: "Factory reset in progress" },
+    ],
+    ctaTitle: "Need help?",
+    ctaDescription: "Our support team is available to help you with installation and setup.",
+    ctaButton: "Contact support",
   },
 };
 

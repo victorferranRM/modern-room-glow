@@ -234,8 +234,10 @@ export default function Monitoring() {
             ))}
           </div>
           <AnimatedSection delay={400} className="text-center mt-12">
-            <Button variant="outline" size="lg" className="gap-2">
-              <Download className="w-4 h-4" />{t('shared.downloadManual')}
+            <Button variant="outline" size="lg" className="gap-2" asChild>
+              <LocalizedLink to="/installation-guide">
+                <Download className="w-4 h-4" />{t('shared.installationManual')}
+              </LocalizedLink>
             </Button>
           </AnimatedSection>
         </div>

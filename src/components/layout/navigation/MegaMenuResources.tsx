@@ -1,9 +1,9 @@
 import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import { resourceHrefs } from "./navigation-data";
-import { BookOpen, HelpCircle, Calculator, Award, Building } from "lucide-react";
+import { BookOpen, HelpCircle, Calculator, Award, Building, FileText } from "lucide-react";
 
-const learnIcons = [BookOpen, HelpCircle, Calculator];
+const learnIcons = [BookOpen, HelpCircle, Calculator, FileText];
 const companyIcons = [Award, Building];
 
 export function MegaMenuResources() {
