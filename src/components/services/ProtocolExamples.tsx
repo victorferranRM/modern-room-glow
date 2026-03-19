@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { ChevronDown, Volume2, Key, Flame, LucideIcon } from "lucide-react";
+import { ChevronDown, Volume2, Key, CalendarOff, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 
