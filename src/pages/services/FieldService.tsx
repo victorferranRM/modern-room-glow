@@ -8,6 +8,7 @@ import { ServiceFeatures } from "@/components/services/ServiceFeatures";
 import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { CoverCities } from "@/components/cover/CoverCities";
+import { CoverRedkool } from "@/components/cover/CoverRedkool";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-field-service.webp";
 import interventionNoise from "@/assets/intervention-noise.jpg";
@@ -74,6 +75,7 @@ export default function FieldService() {
 
 
       <ServiceProcess eyebrow={t('serviceFieldService.processEyebrow')} title={t('serviceFieldService.processTitle')} steps={processSteps} background="secondary" />
+      <CoverRedkool />
       <ServiceCTA title={t('serviceFieldService.ctaTitle')} description={t('serviceFieldService.ctaDescription')} primaryCTA={{ text: t('serviceFieldService.ctaPrimary'), link: "/contact" }} />
       <Footer />
     </div>
