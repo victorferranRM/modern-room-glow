@@ -18,6 +18,7 @@ interface ServiceImageSectionProps {
   reversed?: boolean;
   background?: "default" | "secondary" | "white";
   ctaPosition?: "inline" | "below-image";
+  customImageContent?: React.ReactNode;
 }
 
 export function ServiceImageSection({
