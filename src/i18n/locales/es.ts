@@ -893,6 +893,7 @@ const es = {
     breadcrumbMonitoring: "Monitorización",
     recommended: "Recomendado",
     downloadManual: "Descargar manual de instalación",
+    installationManual: "Manual de instalación",
   },
   // Monitoring subpages
   monitoringNoise: {
