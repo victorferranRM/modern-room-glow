@@ -7,7 +7,7 @@ import { CoverTabs } from "@/components/cover/CoverTabs";
 import { CoverCities } from "@/components/cover/CoverCities";
 import { CoverAudience } from "@/components/cover/CoverAudience";
 import { CoverRedkool } from "@/components/cover/CoverRedkool";
-import { CoverTestimonials } from "@/components/cover/CoverTestimonials";
+
 import { CoverCTA } from "@/components/cover/CoverCTA";
 
 export default function Cover() {
