@@ -1127,7 +1127,7 @@ const fr = {
     stats: [
       { value: "8", label: "Villes couvertes" },
       { value: "<30min", label: "Arrivée moyenne" },
-      { value: "24/7", label: "Disponibilité" },
+      { value: "Dès 19h", label: "Disponibilité" },
       { value: "100%", label: "Interventions documentées" },
     ],
     featuresEyebrow: "Capacités",
