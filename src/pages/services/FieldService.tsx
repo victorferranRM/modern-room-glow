@@ -11,16 +11,16 @@ import { CoverCities } from "@/components/cover/CoverCities";
 import { CoverRedkool } from "@/components/cover/CoverRedkool";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-field-service.webp";
-import interventionNoise from "@/assets/intervention-noise.jpg";
-import interventionAccess from "@/assets/intervention-access.jpg";
-import interventionInspection from "@/assets/intervention-inspection.jpg";
-import interventionRepair from "@/assets/intervention-repair.jpg";
-import interventionWelcome from "@/assets/intervention-welcome.jpg";
-import interventionDocumentation from "@/assets/intervention-documentation.jpg";
+import interventionAccess from "@/assets/intervention-access.webp";
+import interventionCheckin from "@/assets/intervention-checkin.webp";
+import interventionEmergency from "@/assets/intervention-emergency.webp";
+import interventionNoise from "@/assets/intervention-noise.webp";
+import interventionConcierge from "@/assets/intervention-concierge.webp";
+import interventionDocumentation from "@/assets/intervention-documentation.webp";
 
 const featureIcons = [MapPin, Clock, Users, Wrench, Shield, Phone];
 const interventionIcons = [Key, UserCheck, Siren, Volume2, ConciergeBell, FileSignature];
-const interventionImages = [interventionNoise, interventionAccess, interventionInspection, interventionRepair, interventionWelcome, interventionDocumentation];
+const interventionImages = [interventionAccess, interventionCheckin, interventionEmergency, interventionNoise, interventionConcierge, interventionDocumentation];
 
 export default function FieldService() {
   const { t, tObject } = useTranslation();
