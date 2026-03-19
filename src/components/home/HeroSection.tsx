@@ -90,7 +90,7 @@ export function HeroSection() {
           >
             {cards.map((card, index) => (
               <div key={index} className="group text-left">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-muted">
+                <div className="aspect-[5/4] rounded-2xl overflow-hidden mb-5 bg-muted">
                   <img
                     src={card.image}
                     alt={card.title}
