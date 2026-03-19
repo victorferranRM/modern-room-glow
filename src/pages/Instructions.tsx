@@ -14,6 +14,7 @@ import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import instructionsHero from "@/assets/instructions-hero.webp";
 import instructionsStep1 from "@/assets/instructions-step1.webp";
+import instructionsStep2 from "@/assets/instructions-step2.webp";
 
 function ImagePlaceholder({ text }: { text: string }) {
   return (
@@ -70,9 +71,9 @@ export default function Instructions() {
       </section>
 
       {/* Anchor Index */}
-      <section className="sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y">
+      <section className="hidden lg:block sticky top-16 z-30 bg-[hsl(0,0%,100%)]/95 backdrop-blur-sm border-y">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3 py-5 justify-center">
+          <div className="flex flex-wrap gap-3 py-6 justify-center">
             {anchors.map((label, i) => (
               <button
                 key={anchorIds[i]}
@@ -147,11 +148,11 @@ export default function Instructions() {
                           </Button>
                         )}
                       </div>
-                      {i === 0 ? (
+                      {i === 0 || i === 1 ? (
                         <div className="relative group">
                           <div className="absolute -inset-4 bg-gradient-to-br from-muted/60 to-transparent rounded-3xl blur-2xl transition-all duration-500 group-hover:from-muted/80" />
                           <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
-                            <OptimizedImage src={instructionsStep1} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
+                            <OptimizedImage src={i === 0 ? instructionsStep1 : instructionsStep2} alt={step.title} className="w-full transition-transform duration-700 group-hover:scale-105" containerClassName="w-full aspect-[4/3]" />
                           </div>
                         </div>
                       ) : (
