@@ -1,6 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Eye, Clock, Shield, AlertTriangle, Users, Zap, Brain } from "lucide-react";
+import { Eye, KeyRound, MapPin, Megaphone, Siren, Clock, FileText } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceStats } from "@/components/services/ServiceStats";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
