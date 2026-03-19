@@ -4,7 +4,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Headphones, Clock, Globe, Shield, Phone, MessageSquare, Users, Zap, FileText, Heart, BotOff, UserCheck } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceStats } from "@/components/services/ServiceStats";
-import { ServiceFeatures } from "@/components/services/ServiceFeatures";
+
 import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
