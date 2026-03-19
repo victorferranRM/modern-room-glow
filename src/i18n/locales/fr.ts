@@ -1343,9 +1343,9 @@ const fr = {
     examplesTitle: "Exemples de protocoles",
     examplesSubtitle: "Voici des exemples de structuration de protocoles. Chaque protocole est personnalisé selon vos besoins.",
     examples: [
+      { title: "Protocole de Check-in Non Programmé", steps: ["Recevoir une alerte d'arrivée hors horaire prévu","Vérifier l'identité du client avec les données de réservation","Coordonner l'accès à distance ou envoyer un agent de terrain","Fournir les instructions d'entrée et accueil du client","Documenter l'incident et notifier le gestionnaire de la propriété"] },
+      { title: "Protocole Client avec Problèmes d'Accès", steps: ["Vérifier l'identité du client avec les données de réservation","Tenter une solution d'accès à distance si disponible","Si échec, contacter le gardien de clés de secours","Envoyer un agent de terrain si aucun gardien disponible","Notifier le gestionnaire de la résolution"] },
       { title: "Protocole d'Alerte de Bruit", steps: ["Attendre 5 minutes que le bruit se stabilise","Si le bruit continue, envoyer un rappel poli au client","S'il persiste après 15 min, appeler directement le client","Si non résolu, escalader au gestionnaire de la propriété","Documenter l'incident avec horodatages"] },
-      { title: "Protocole Client sans Accès", steps: ["Vérifier l'identité du client avec les données de réservation","Tenter une solution d'accès à distance si disponible","Si échec, contacter le gardien de clés de secours","Envoyer un agent de terrain si aucun gardien disponible","Notifier le gestionnaire de la résolution"] },
-      { title: "Protocole d'Alerte de Fumée", steps: ["Tenter de contacter le client immédiatement","Si pas de réponse, alerter les contacts d'urgence locaux","Coordonner avec les services de pompiers si nécessaire","Envoyer un agent de terrain pour confirmation visuelle","Rapport complet d'incident dans l'heure"] },
     ],
     setupEyebrow: "Pour Commencer",
     setupTitle: "Configurez vos protocoles",

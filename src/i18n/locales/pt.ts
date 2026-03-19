@@ -1343,9 +1343,9 @@ const pt = {
     examplesTitle: "Exemplos de protocolos",
     examplesSubtitle: "Veja exemplos de como protocolos podem ser estruturados. Cada protocolo é personalizado segundo suas necessidades.",
     examples: [
+      { title: "Protocolo de Check-in Não Programado", steps: ["Receber alerta de chegada fora do horário previsto","Verificar identidade do hóspede com dados da reserva","Coordenar acesso remoto ou envio de agente de campo","Facilitar instruções de entrada e boas-vindas ao hóspede","Documentar o incidente e notificar o gestor da propriedade"] },
+      { title: "Protocolo de Hóspede com Problemas de Acesso", steps: ["Verificar identidade do hóspede com dados da reserva","Tentar solução de acesso remoto se disponível","Se falhar, contatar o chaveiro de backup","Enviar agente de campo se nenhum chaveiro disponível","Notificar o gestor da resolução"] },
       { title: "Protocolo de Alerta de Ruído", steps: ["Esperar 5 minutos para o ruído se estabilizar","Se o ruído continuar, enviar lembrete gentil ao hóspede","Se persistir após 15 min, ligar diretamente para o hóspede","Se não resolver, escalonar para o gestor da propriedade","Documentar o incidente com timestamps"] },
-      { title: "Protocolo de Hóspede sem Acesso", steps: ["Verificar identidade do hóspede com dados da reserva","Tentar solução de acesso remoto se disponível","Se falhar, contatar o chaveiro de backup","Enviar agente de campo se nenhum chaveiro disponível","Notificar o gestor da resolução"] },
-      { title: "Protocolo de Alerta de Fumaça", steps: ["Tentar contatar o hóspede imediatamente","Se sem resposta, alertar contatos de emergência locais","Coordenar com serviços de bombeiros se necessário","Enviar agente de campo para confirmação visual","Relatório completo do incidente em 1 hora"] },
     ],
     setupEyebrow: "Para Começar",
     setupTitle: "Configure seus protocolos",

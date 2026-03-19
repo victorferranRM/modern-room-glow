@@ -1337,9 +1337,9 @@ const es = {
     examplesTitle: "Protocolos de ejemplo",
     examplesSubtitle: "Aquí tienes ejemplos de cómo se pueden estructurar los protocolos. Cada protocolo se personaliza según tus necesidades específicas.",
     examples: [
+      { title: "Protocolo de Check-in No Programado", steps: ["Recibir alerta de llegada fuera del horario previsto","Verificar identidad del huésped con datos de la reserva","Coordinar acceso remoto o envío de agente de campo","Facilitar instrucciones de entrada y bienvenida al huésped","Documentar la incidencia y notificar al gestor de la propiedad"] },
+      { title: "Protocolo de Huésped con Problemas de Acceso", steps: ["Verificar identidad del huésped con datos de la reserva","Intentar solución de acceso remoto si está disponible","Si falla, contactar con el portallaves de respaldo","Enviar agente de campo si no hay portallaves disponible","Notificar al gestor de la propiedad de la resolución"] },
       { title: "Protocolo de Alerta de Ruido", steps: ["Esperar 5 minutos a que el ruido se estabilice","Si el ruido continúa, enviar recordatorio amable al huésped","Si persiste después de 15 min, llamar directamente al huésped","Si no se resuelve, escalar al gestor de la propiedad","Documentar la incidencia con marcas de tiempo"] },
-      { title: "Protocolo de Huésped sin Acceso", steps: ["Verificar identidad del huésped con datos de la reserva","Intentar solución de acceso remoto si está disponible","Si falla, contactar con el portallaves de respaldo","Enviar agente de campo si no hay portallaves disponible","Notificar al gestor de la propiedad de la resolución"] },
-      { title: "Protocolo de Alerta de Humo", steps: ["Intentar contactar con el huésped inmediatamente","Si no hay respuesta, alertar a contactos de emergencia locales","Coordinar con servicios de bomberos si es necesario","Enviar agente de campo para confirmación visual","Informe completo de incidencia en menos de 1 hora"] },
     ],
     setupEyebrow: "Primeros Pasos",
     setupTitle: "Configura tus protocolos",

@@ -13,10 +13,10 @@ import heroImage from "@/assets/cover-protocols.webp";
 import protocolsManagerImage from "@/assets/protocols-manager.webp";
 import interventionNoise from "@/assets/intervention-noise.jpg";
 import interventionAccess from "@/assets/intervention-access.jpg";
-import interventionInspection from "@/assets/intervention-inspection.jpg";
+import interventionWelcome from "@/assets/intervention-welcome.jpg";
 
 const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
-const exampleImages = [interventionNoise, interventionAccess, interventionInspection];
+const exampleImages = [interventionWelcome, interventionAccess, interventionNoise];
 
 export default function Protocols() {
   const { t, tObject, lang } = useTranslation();
