@@ -1,15 +1,16 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { Settings, Zap, SmilePlus, Star, Gauge, ShieldCheck } from "lucide-react";
+import { Settings, Zap, SmilePlus, Star, Gauge, ShieldCheck, BarChart3 } from "lucide-react";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-pms-access.jpg";
+import heroImage from "@/assets/hero-pms-access.webp";
+import smartlockImage from "@/assets/smartlock-access.webp";
 
-const benefitIcons = [Zap, SmilePlus, Star, Gauge, ShieldCheck];
+const benefitIcons = [Zap, SmilePlus, Star, Gauge, ShieldCheck, BarChart3];
 
 const pmsLogos: { name: string; initials: string; color: string }[] = [
   { name: "Avantio", initials: "Av", color: "#0066CC" },
@@ -34,7 +35,7 @@ export default function PMSAccess() {
         title={t('servicePMSAccess.title')}
         titleHighlight={t('servicePMSAccess.titleHighlight')}
         description={t('servicePMSAccess.description')}
-        image={serviceImage}
+        image={heroImage}
         imageAlt={t('servicePMSAccess.badge')}
         primaryCTA={{ text: t('servicePMSAccess.ctaPrimary'), link: "/contact" }}
       />
@@ -47,7 +48,7 @@ export default function PMSAccess() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3">{t('servicePMSAccess.benefitsEyebrow')}</p>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-balance">{t('servicePMSAccess.benefitsTitle')}</h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {benefits.map((b, i) => {
               const Icon = benefitIcons[i];
               return (
@@ -72,7 +73,8 @@ export default function PMSAccess() {
         title={t('servicePMSAccess.smartlocksTitle')}
         description={t('servicePMSAccess.smartlocksDescription')}
         features={smartlocksFeatures}
-        placeholderText={t('servicePMSAccess.smartlocksEyebrow')}
+        image={smartlockImage}
+        imageAlt="Smart lock access for vacation rentals"
         ctaText={t('servicePMSAccess.ctaPrimary')}
         ctaLink="/contact"
         background="secondary"

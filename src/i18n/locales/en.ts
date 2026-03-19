@@ -1300,6 +1300,7 @@ const en = {
       { title: "Elevated experience", description: "Consistent quality standard across all your properties." },
       { title: "Optimised operations", description: "Faster, more efficient and consistent processes across your portfolio." },
       { title: "Enhanced security", description: "Limited PMS access — only what's needed to operate." },
+      { title: "Data & reporting", description: "Performance metrics and operational reports integrated directly into your workflow." },
     ],
     smartlocksEyebrow: "Smart locks",
     smartlocksTitle: "Remote smartlock access",
