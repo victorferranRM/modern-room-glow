@@ -16,7 +16,7 @@ import interventionAccess from "@/assets/intervention-access.webp";
 import interventionConcierge from "@/assets/intervention-concierge.webp";
 
 const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
-const exampleImages = [interventionWelcome, interventionAccess, interventionNoise];
+const exampleImages = [interventionConcierge, interventionAccess, interventionNoise];
 
 export default function Protocols() {
   const { t, tObject, lang } = useTranslation();
