@@ -8,6 +8,7 @@ import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-night-watch.jpg";
+import preventionImage from "@/assets/service-night-watch-prevention.webp";
 
 const howItWorksIcons = [Eye, MapPin, MessageCircle, ArrowUpRight];
 
