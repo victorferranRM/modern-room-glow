@@ -1128,7 +1128,7 @@ const en = {
       { value: "8", label: "Cities covered" },
       { value: "<30min", label: "Average arrival" },
       { value: "From 7pm", label: "Availability" },
-      { value: "100%", label: "Documented interventions" },
+      { value: "100%", label: "Real-time traceability" },
     ],
     featuresEyebrow: "Capabilities",
     featuresTitle: "Professional on-site intervention",

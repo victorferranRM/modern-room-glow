@@ -1129,7 +1129,7 @@ const es = {
       { value: "8", label: "Ciudades cubiertas" },
       { value: "<30min", label: "Llegada media" },
       { value: "De 19h", label: "Disponibilidad" },
-      { value: "100%", label: "Visitas documentadas" },
+      { value: "100%", label: "Trazabilidad en tiempo real" },
     ],
     featuresEyebrow: "Nuestra Red",
     featuresTitle: "Agentes profesionales, en cualquier lugar",

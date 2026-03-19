@@ -1128,7 +1128,7 @@ const pt = {
       { value: "8", label: "Cidades cobertas" },
       { value: "<30min", label: "Chegada média" },
       { value: "A partir 19h", label: "Disponibilidade" },
-      { value: "100%", label: "Intervenções documentadas" },
+      { value: "100%", label: "Rastreabilidade em tempo real" },
     ],
     featuresEyebrow: "Capacidades",
     featuresTitle: "Intervenção profissional presencial",
