@@ -20,7 +20,7 @@ import interventionDocumentation from "@/assets/intervention-documentation.webp"
 
 const featureIcons = [MapPin, Clock, Users, Wrench, Shield, Phone];
 const interventionIcons = [Key, UserCheck, Siren, Volume2, ConciergeBell, FileSignature];
-const interventionImages = [interventionNoise, interventionAccess, interventionInspection, interventionRepair, interventionWelcome, interventionDocumentation];
+const interventionImages = [interventionAccess, interventionCheckin, interventionEmergency, interventionNoise, interventionConcierge, interventionDocumentation];
 
 export default function FieldService() {
   const { t, tObject } = useTranslation();
