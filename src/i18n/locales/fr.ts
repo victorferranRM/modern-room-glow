@@ -1128,7 +1128,7 @@ const fr = {
       { value: "8", label: "Villes couvertes" },
       { value: "<30min", label: "Arrivée moyenne" },
       { value: "Dès 19h", label: "Disponibilité" },
-      { value: "100%", label: "Interventions documentées" },
+      { value: "100%", label: "Traçabilité en temps réel" },
     ],
     featuresEyebrow: "Capacités",
     featuresTitle: "Intervention professionnelle sur site",
