@@ -48,7 +48,7 @@ export default function PMSAccess() {
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3">{t('servicePMSAccess.benefitsEyebrow')}</p>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-balance">{t('servicePMSAccess.benefitsTitle')}</h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {benefits.map((b, i) => {
               const Icon = benefitIcons[i];
               return (
