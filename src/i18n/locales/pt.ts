@@ -1164,7 +1164,7 @@ const pt = {
     description: "Seus hóspedes ligam e nós atendemos — como se fôssemos parte da sua equipe. Atendimento telefônico multilíngue 24/7 para consultas comuns, emergências e comunicação fora do horário.",
     stats: [
       { value: "24/7", label: "Disponibilidade telefônica" },
-      { value: "3", label: "Idiomas suportados" },
+      { value: "7", label: "Idiomas suportados" },
       { value: "96%", label: "Resolução na primeira chamada" },
       { value: "<30s", label: "Tempo médio de atendimento" },
     ],

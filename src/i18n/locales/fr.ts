@@ -1164,7 +1164,7 @@ const fr = {
     description: "Vos clients appellent et nous répondons — comme si nous faisions partie de votre équipe. Assistance téléphonique multilingue 24/7 pour les demandes courantes, urgences et communications hors horaires.",
     stats: [
       { value: "24/7", label: "Disponibilité téléphonique" },
-      { value: "3", label: "Langues supportées" },
+      { value: "7", label: "Langues supportées" },
       { value: "96%", label: "Résolution au premier appel" },
       { value: "<30s", label: "Temps de réponse moyen" },
     ],

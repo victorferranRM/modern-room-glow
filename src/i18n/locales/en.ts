@@ -1164,7 +1164,7 @@ const en = {
     description: "Your guests call and we answer — as if we were part of your team. 24/7 multilingual phone support that handles common queries, emergencies and after-hours communication.",
     stats: [
       { value: "24/7", label: "Phone availability" },
-      { value: "3", label: "Languages supported" },
+      { value: "7", label: "Languages supported" },
       { value: "96%", label: "First-call resolution" },
       { value: "<30s", label: "Average answer time" },
     ],
