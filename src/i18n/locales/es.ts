@@ -1314,7 +1314,7 @@ const es = {
     pmsTitle: "Integraciones compatibles",
     pmsFooter: "¿No ves tu PMS? Contáctanos — integramos con cualquier plataforma con API disponible.",
     ctaTitle: "Integra tus herramientas y empieza a operar con Roomonitor",
-    ctaDescription: "Conecta tu PMS con nuestro equipo y deja que trabajemos como una extensión real de tu operativa diaria.",
+    ctaDescription: "Conecta tu PMS y actuaremos como una extensión real de tu operativa diaria.",
     ctaPrimary: "Conecta tu PMS",
     ctaSecondary: "Ver documentación API",
   },
