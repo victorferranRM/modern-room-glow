@@ -1,6 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { FileText, Clock, Edit, Shield, ListChecks, Workflow, Monitor } from "lucide-react";
+import { FileText, Clock, Edit, Shield, ListChecks, Workflow, Monitor, CalendarOff } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
