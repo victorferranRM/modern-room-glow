@@ -47,7 +47,7 @@ export default function NightWatch() {
       </section>
 
       {/* How Night Watch works — commitment style */}
-      <section className="py-20 lg:py-28 bg-secondary/30 relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-[hsl(0,0%,100%)] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-14 lg:mb-20">
             <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3">{t('serviceNightWatch.howItWorksEyebrow')}</p>
