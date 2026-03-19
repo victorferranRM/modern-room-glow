@@ -1089,8 +1089,6 @@ const pt = {
       "Tratar queixas de vizinhos e condomínios",
       "Gerir emergências e coordenar com autoridades",
       "Comunicar com hóspedes fora de horário em nome do gestor",
-      "Aplicar protocolos personalizados para cada tipo de incidência",
-      
     ],
     processEyebrow: "Processo",
     processTitle: "Da incidência à resolução",

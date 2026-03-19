@@ -1089,8 +1089,6 @@ const en = {
       "Handle neighbour and community complaints",
       "Manage emergencies and coordinate with authorities",
       "Communicate with guests after hours on behalf of the manager",
-      "Apply customised protocols for each type of incident",
-      
     ],
     processEyebrow: "Process",
     processTitle: "From incident to resolution",
