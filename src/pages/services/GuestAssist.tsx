@@ -57,15 +57,13 @@ export default function GuestAssist() {
                   <AnimatedSection key={i} delay={i * 80}>
                     <div className={`group flex gap-5 py-8 ${i < commitments.length - (commitments.length % 2 === 0 ? 2 : 1) ? 'border-b border-border' : ''}`}>
                       <div className="shrink-0 flex flex-col items-center gap-2">
-                        <span className="text-3xl lg:text-4xl font-bold text-primary/20 tabular-nums">
+                        <span className="text-3xl lg:text-4xl font-bold text-primary/40 tabular-nums">
                           {String(i + 1).padStart(2, '0')}
                         </span>
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
-                          <Icon className="w-5 h-5 text-primary" />
-                        </div>
+                        <Icon className="w-5 h-5 text-primary" />
                       </div>
                       <div className="pt-1">
-                        <h3 className="text-lg font-semibold mb-1.5 transition-colors group-hover:text-primary">
+                        <h3 className="text-xl font-bold mb-1.5 transition-colors group-hover:text-primary">
                           {item.title}
                         </h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">
