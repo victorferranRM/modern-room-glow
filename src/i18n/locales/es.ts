@@ -1126,7 +1126,7 @@ const es = {
     description: "Cuando la resolución remota no es suficiente, nuestros agentes de campo formados llegan a tu propiedad para gestionar situaciones de forma profesional y según tus protocolos.",
     primaryCTA: "Ver Cobertura",
     stats: [
-      { value: "9+", label: "Ciudades cubiertas" },
+      { value: "8", label: "Ciudades cubiertas" },
       { value: "<45min", label: "Llegada media" },
       { value: "24/7", label: "Disponibilidad" },
       { value: "100%", label: "Visitas documentadas" },
