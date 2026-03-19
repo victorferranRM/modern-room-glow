@@ -1,7 +1,7 @@
 import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import { footerHrefs } from "./navigation/navigation-data";
-import roomonitorLogo from "@/assets/roomonitor-logo.png";
+import roomonitorLogo from "@/assets/roomonitor-logo.webp";
 
 export function Footer() {
   const { t, tObject } = useTranslation();
