@@ -10,7 +10,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { Check, ArrowRight, MessageSquare, Building2, Zap, BadgeCheck, Bell, Smartphone, Mail, PhoneCall, Headphones, Clock, Users, BarChart3, Moon, MapPin, FileText, AlertCircle, KeyRound } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
-import serviceControlCenter from "@/assets/service-control-center.jpg";
+import serviceControlCenter from "@/assets/service-control-center.webp";
 
 const planIcons = {
   basic: [Bell, Zap, Smartphone, Mail],
