@@ -35,7 +35,7 @@ export default function PMSAccess() {
         title={t('servicePMSAccess.title')}
         titleHighlight={t('servicePMSAccess.titleHighlight')}
         description={t('servicePMSAccess.description')}
-        image={serviceImage}
+        image={heroImage}
         imageAlt={t('servicePMSAccess.badge')}
         primaryCTA={{ text: t('servicePMSAccess.ctaPrimary'), link: "/contact" }}
       />
