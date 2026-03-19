@@ -105,7 +105,7 @@ export default function ControlCenter() {
         features={capabilities}
         ctaText={t('shared.learnMore')}
         ctaLink="/contact"
-        background="secondary"
+        background="white"
         ctaPosition="below-image"
         customImageContent={card ? <ControlCenterCard card={card} /> : undefined}
       />
