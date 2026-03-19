@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { ChevronDown, Volume2, Key, Flame, LucideIcon } from "lucide-react";
+import { ChevronDown, Volume2, Key, CalendarOff, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 
@@ -18,7 +18,7 @@ interface ProtocolExamplesProps {
   icons?: LucideIcon[];
 }
 
-const defaultIcons: LucideIcon[] = [Volume2, Key, Flame];
+const defaultIcons: LucideIcon[] = [CalendarOff, Key, Volume2];
 
 export function ProtocolExamples({ eyebrow, title, subtitle, protocols, images, icons = defaultIcons }: ProtocolExamplesProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

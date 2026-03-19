@@ -1343,9 +1343,9 @@ const en = {
     examplesTitle: "Example protocols",
     examplesSubtitle: "Here are examples of how protocols can be structured. Each protocol is customised to your specific needs.",
     examples: [
+      { title: "Unscheduled Check-in Protocol", steps: ["Receive alert of arrival outside scheduled time","Verify guest identity with booking data","Coordinate remote access or dispatch field agent","Provide entry instructions and welcome to guest","Document the incident and notify property manager"] },
+      { title: "Guest Access Issues Protocol", steps: ["Verify guest identity with booking data","Attempt remote access solution if available","If fails, contact backup keyholder","Send field agent if no keyholder available","Notify property manager of resolution"] },
       { title: "Noise Alert Protocol", steps: ["Wait 5 minutes for noise to stabilise","If noise continues, send gentle reminder to guest","If it persists after 15 min, call guest directly","If unresolved, escalate to property manager","Document the incident with timestamps"] },
-      { title: "Guest Lockout Protocol", steps: ["Verify guest identity with booking data","Attempt remote access solution if available","If fails, contact backup keyholder","Send field agent if no keyholder available","Notify property manager of resolution"] },
-      { title: "Smoke Alert Protocol", steps: ["Attempt to contact guest immediately","If no response, alert local emergency contacts","Coordinate with fire services if necessary","Send field agent for visual confirmation","Full incident report within 1 hour"] },
     ],
     setupEyebrow: "Getting Started",
     setupTitle: "Set up your protocols",

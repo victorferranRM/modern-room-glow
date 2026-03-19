@@ -1,6 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { FileText, Clock, Edit, Shield, ListChecks, Workflow, Monitor } from "lucide-react";
+import { FileText, Clock, Edit, Shield, ListChecks, Workflow, Monitor, CalendarOff } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
@@ -13,10 +13,10 @@ import heroImage from "@/assets/cover-protocols.webp";
 import protocolsManagerImage from "@/assets/protocols-manager.webp";
 import interventionNoise from "@/assets/intervention-noise.jpg";
 import interventionAccess from "@/assets/intervention-access.jpg";
-import interventionInspection from "@/assets/intervention-inspection.jpg";
+import interventionWelcome from "@/assets/intervention-welcome.jpg";
 
 const featureIcons = [FileText, ListChecks, Clock, Edit, Workflow, Shield];
-const exampleImages = [interventionNoise, interventionAccess, interventionInspection];
+const exampleImages = [interventionWelcome, interventionAccess, interventionNoise];
 
 export default function Protocols() {
   const { t, tObject, lang } = useTranslation();
