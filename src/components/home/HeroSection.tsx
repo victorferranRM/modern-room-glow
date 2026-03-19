@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquare, Building2 } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
-import heroControlCenter from "@/assets/hero-control-center.jpg";
-import heroFieldService from "@/assets/hero-field-service.jpg";
-import heroMonitoring from "@/assets/hero-monitoring.jpg";
+import heroControlCenter from "@/assets/hero-control-center.webp";
+import heroFieldService from "@/assets/hero-field-service.webp";
+import heroMonitoring from "@/assets/hero-monitoring.webp";
 
 export function HeroSection() {
   const { t } = useTranslation();

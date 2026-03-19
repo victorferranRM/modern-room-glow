@@ -9,8 +9,8 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-incident-response.jpg";
-import managerDevices from "@/assets/manager-devices.png";
+import serviceImage from "@/assets/service-incident-response.webp";
+import managerDevices from "@/assets/manager-devices.webp";
 
 const featureIcons = [Bell, AlertTriangle, Users, Workflow, Radio, FileText];
 const incidentIcons = [Volume2, Users, Flame, UserCheck, WifiOff, Thermometer];

@@ -4,12 +4,12 @@ import { Eye, Truck, Phone, Moon, Settings, FileText, ArrowRight } from "lucide-
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Button } from "@/components/ui/button";
 
-import imgControlCenter from "@/assets/cover-control-center.jpg";
-import imgFieldService from "@/assets/cover-field-service.jpg";
-import imgPhoneAssist from "@/assets/cover-phone-assist.jpg";
-import imgNightWatch from "@/assets/cover-night-watch.jpg";
-import imgPmsTools from "@/assets/cover-pms-tools.jpg";
-import imgProtocols from "@/assets/cover-protocols.jpg";
+import imgControlCenter from "@/assets/cover-control-center.webp";
+import imgFieldService from "@/assets/cover-field-service.webp";
+import imgPhoneAssist from "@/assets/cover-phone-assist.webp";
+import imgNightWatch from "@/assets/cover-night-watch.webp";
+import imgPmsTools from "@/assets/cover-pms-tools.webp";
+import imgProtocols from "@/assets/cover-protocols.webp";
 
 const coverIcons = [Eye, Truck, Phone, Moon, Settings, FileText];
 const coverHrefs = [

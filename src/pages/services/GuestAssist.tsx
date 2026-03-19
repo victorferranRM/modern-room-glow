@@ -11,8 +11,8 @@ import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
 import serviceImage from "@/assets/service-guest-assist.webp";
 import protocolImage from "@/assets/cover-protocols.webp";
-import notVirtualImage from "@/assets/not-virtual-assistants.jpg";
-import notChatbotsImage from "@/assets/not-chatbots.jpg";
+import notVirtualImage from "@/assets/not-virtual-assistants.webp";
+import notChatbotsImage from "@/assets/not-chatbots.webp";
 
 const commitmentIcons = [Clock, Zap, FileText, Globe, Shield, Heart];
 const whatWeAreNotIcons = [BotOff, UserCheck];

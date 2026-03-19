@@ -6,10 +6,10 @@ import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 import imgAlerta from "@/assets/monitoring-noise.webp";
-import imgAgente from "@/assets/cover-control-center.jpg";
-import imgResolucion from "@/assets/cover-phone-assist.jpg";
-import imgEscalacion from "@/assets/cover-protocols.jpg";
-import imgField from "@/assets/cover-field-service.jpg";
+import imgAgente from "@/assets/cover-control-center.webp";
+import imgResolucion from "@/assets/cover-phone-assist.webp";
+import imgEscalacion from "@/assets/cover-protocols.webp";
+import imgField from "@/assets/cover-field-service.webp";
 import imgInforme from "@/assets/intervention-documentation.webp";
 
 const icons = [Bell, Eye, Phone, ArrowUpCircle, MapPin, FileText];

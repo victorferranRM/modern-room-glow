@@ -1,9 +1,9 @@
 import { LocalizedLink as Link } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
 import { ChevronRight } from "lucide-react";
-import solutionVacation from "@/assets/solution-rest-new.jpg";
-import solutionHotel from "@/assets/solution-manage.jpg";
-import solutionOwners from "@/assets/solution-control.jpg";
+import solutionVacation from "@/assets/solution-rest-new.webp";
+import solutionHotel from "@/assets/solution-manage.webp";
+import solutionOwners from "@/assets/solution-control.webp";
 
 const solutionHrefs = ["/solutions/vacation-rentals", "/solutions/hotels", "/solutions/property-owners"];
 const solutionImages = [solutionVacation, solutionHotel, solutionOwners];

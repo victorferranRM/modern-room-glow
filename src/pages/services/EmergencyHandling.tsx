@@ -9,8 +9,8 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceImageSection } from "@/components/services/ServiceImageSection";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { useTranslation } from "@/i18n/useTranslation";
-import serviceImage from "@/assets/service-emergency.jpg";
-import managerDevices from "@/assets/manager-devices.png";
+import serviceImage from "@/assets/service-emergency.webp";
+import managerDevices from "@/assets/manager-devices.webp";
 
 const featureIcons = [Siren, Clock, Phone, Users, Shield, AlertTriangle];
 const emergencyIcons = [Flame, Droplets, Lock, HeartPulse];

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Wind, Calculator, Shield, Euro, Clock, Building, AlertTriangle, TrendingDown } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import solutionControl from "@/assets/solution-control.jpg";
+import solutionControl from "@/assets/solution-control.webp";
 
 const problemIcons = [Euro, AlertTriangle, Clock, TrendingDown];
 

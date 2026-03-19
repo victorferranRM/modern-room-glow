@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, User, LogOut, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import roomonitorLogo from "@/assets/roomonitor-logo.png";
-import roomonitorDevice from "@/assets/roomonitor-device.jpg";
+import roomonitorDevice from "@/assets/roomonitor-device.webp";
 import { MegaMenuServices } from "./navigation/MegaMenuServices";
 import { MegaMenuMonitoring } from "./navigation/MegaMenuMonitoring";
 import { MegaMenuResources } from "./navigation/MegaMenuResources";

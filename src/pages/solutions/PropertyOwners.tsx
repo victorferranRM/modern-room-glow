@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Volume2, Users, Wind, Thermometer, Home, Phone, Shield, Smartphone, Wifi, BatteryCharging } from "lucide-react";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 import { useTranslation } from "@/i18n/useTranslation";
-import solutionManage from "@/assets/solution-manage.jpg";
-import roomonitorDevice from "@/assets/roomonitor-device.jpg";
+import solutionManage from "@/assets/solution-manage.webp";
+import roomonitorDevice from "@/assets/roomonitor-device.webp";
 
 const monitoringIcons = [Volume2, Users, Wind, Thermometer];
 const deviceSpecIcons = [Wifi, BatteryCharging, Smartphone];

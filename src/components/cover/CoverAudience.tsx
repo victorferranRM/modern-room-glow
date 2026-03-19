@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
-import imgApartments from "@/assets/audience-apartments.jpg";
-import imgManagement from "@/assets/audience-management.jpg";
-import imgHotel from "@/assets/audience-hotel.jpg";
+import imgApartments from "@/assets/audience-apartments.webp";
+import imgManagement from "@/assets/audience-management.webp";
+import imgHotel from "@/assets/audience-hotel.webp";
 
 const profileIcons = [Building2, Users, Globe];
 const profileImages = [imgApartments, imgManagement, imgHotel];
