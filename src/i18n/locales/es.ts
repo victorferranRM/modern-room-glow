@@ -1089,8 +1089,6 @@ const es = {
       "Atender quejas de vecinos y comunidades de propietarios",
       "Gestionar emergencias y coordinar con autoridades",
       "Comunicarse con huéspedes fuera de horario en nombre del gestor",
-      "Aplicar protocolos personalizados para cada tipo de incidencia",
-      
     ],
     processEyebrow: "Proceso",
     processTitle: "De la incidencia a la resolución",

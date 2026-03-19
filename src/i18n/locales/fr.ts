@@ -1089,8 +1089,6 @@ const fr = {
       "Traiter les plaintes des voisins et des copropriétés",
       "Gérer les urgences et coordonner avec les autorités",
       "Communiquer avec les voyageurs hors horaires au nom du gestionnaire",
-      "Appliquer des protocoles personnalisés pour chaque type d'incident",
-      
     ],
     processEyebrow: "Processus",
     processTitle: "De l'incident à la résolution",
