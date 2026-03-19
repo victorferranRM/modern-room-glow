@@ -92,15 +92,13 @@ export function ServiceImageSection({
           </AnimatedSection>
           <AnimatedSection delay={200} animation={reversed ? "fade-right" : "fade-left"}>
             {renderImage()}
+            {ctaPosition === "below-image" && (
+              <div className="flex justify-center mt-10">
+                {renderCTA()}
+              </div>
+            )}
           </AnimatedSection>
         </div>
-
-        {/* CTA below image - centered */}
-        {ctaPosition === "below-image" && (
-          <AnimatedSection delay={400} className="flex justify-center mt-12">
-            {renderCTA()}
-          </AnimatedSection>
-        )}
       </div>
     </section>
   );
