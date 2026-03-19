@@ -1267,7 +1267,7 @@ const es = {
     ],
     preventionCTA: "Activar Night Watch",
     imagePlaceholder: "Imagen: Dashboard de monitorización nocturna con alertas proactivas",
-    ctaTitle: "Duerme tranquilo mientras vigilamos",
+    ctaTitle: "Duerme tranquilo mientras estamos de guardia",
     ctaDescription: "Nuestro equipo Night Watch está preparado para proteger tus propiedades durante las horas de mayor riesgo. Habla con nosotros sobre la cobertura para tu portfolio.",
     ctaPrimary: "Proteger mis propiedades de noche",
   },
