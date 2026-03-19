@@ -82,7 +82,7 @@ export default function PMSAccess() {
         imageAlt="Smart lock access for vacation rentals"
         ctaText={t('servicePMSAccess.ctaPrimary')}
         ctaLink="/contact"
-        background="secondary"
+        background="white"
       />
 
       {/* Section 3 — How integration works */}
