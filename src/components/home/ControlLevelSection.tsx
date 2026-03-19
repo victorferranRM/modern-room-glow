@@ -162,7 +162,10 @@ export function ControlLevelSection() {
                     </p>
                     <Button
                       variant="outline"
-                      className="w-full gap-2 border-background/30 bg-transparent text-background hover:bg-background hover:text-foreground"
+                      className="w-full gap-2 border-background/30 bg-background text-foreground hover:bg-background/80 hover:text-foreground"
+                      size="lg"
+                      asChild
+                    >
                       size="lg"
                       asChild
                     >
