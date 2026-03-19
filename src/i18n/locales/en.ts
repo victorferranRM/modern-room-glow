@@ -1126,7 +1126,7 @@ const en = {
     description: "Our field service team provides on-site intervention when situations require physical presence. Available in 8 cities, ready to act on your behalf.",
     stats: [
       { value: "8", label: "Cities covered" },
-      { value: "<45min", label: "Average arrival" },
+      { value: "<30min", label: "Average arrival" },
       { value: "24/7", label: "Availability" },
       { value: "100%", label: "Documented interventions" },
     ],

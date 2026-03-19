@@ -1127,7 +1127,7 @@ const es = {
     primaryCTA: "Ver Cobertura",
     stats: [
       { value: "8", label: "Ciudades cubiertas" },
-      { value: "<45min", label: "Llegada media" },
+      { value: "<30min", label: "Llegada media" },
       { value: "24/7", label: "Disponibilidad" },
       { value: "100%", label: "Visitas documentadas" },
     ],

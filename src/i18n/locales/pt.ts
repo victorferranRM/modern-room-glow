@@ -1126,7 +1126,7 @@ const pt = {
     description: "Nossa equipe de campo fornece intervenção presencial quando as situações exigem presença física. Disponível em 8 cidades, pronto para agir em seu nome.",
     stats: [
       { value: "8", label: "Cidades cobertas" },
-      { value: "<45min", label: "Chegada média" },
+      { value: "<30min", label: "Chegada média" },
       { value: "24/7", label: "Disponibilidade" },
       { value: "100%", label: "Intervenções documentadas" },
     ],
