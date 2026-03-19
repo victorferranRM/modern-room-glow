@@ -1285,7 +1285,7 @@ const es = {
     badge: "Acceso PMS y Herramientas",
     title: "Tu PMS,",
     titleHighlight: "nuestra ventaja operativa",
-    description: "Conectamos con tus herramientas para trabajar como una extensión real de tu equipo, no como una capa encima.",
+    description: "Nos conectamos con tus herramientas para trabajar como una extensión real de tu equipo. Eso nos permite optimizar la eficiencia de nuestro equipo para garantizar la mejor experiencia de huésped posible.",
     benefitsEyebrow: "Ventaja competitiva",
     benefitsTitle: "Por qué la integración importa",
     benefits: [
