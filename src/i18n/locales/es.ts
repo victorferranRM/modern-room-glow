@@ -1128,7 +1128,7 @@ const es = {
     stats: [
       { value: "8", label: "Ciudades cubiertas" },
       { value: "<30min", label: "Llegada media" },
-      { value: "24/7", label: "Disponibilidad" },
+      { value: "De 19h", label: "Disponibilidad" },
       { value: "100%", label: "Visitas documentadas" },
     ],
     featuresEyebrow: "Nuestra Red",

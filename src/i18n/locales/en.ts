@@ -1127,7 +1127,7 @@ const en = {
     stats: [
       { value: "8", label: "Cities covered" },
       { value: "<30min", label: "Average arrival" },
-      { value: "24/7", label: "Availability" },
+      { value: "From 7pm", label: "Availability" },
       { value: "100%", label: "Documented interventions" },
     ],
     featuresEyebrow: "Capabilities",

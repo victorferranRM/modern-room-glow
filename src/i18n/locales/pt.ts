@@ -1127,7 +1127,7 @@ const pt = {
     stats: [
       { value: "8", label: "Cidades cobertas" },
       { value: "<30min", label: "Chegada média" },
-      { value: "24/7", label: "Disponibilidade" },
+      { value: "A partir 19h", label: "Disponibilidade" },
       { value: "100%", label: "Intervenções documentadas" },
     ],
     featuresEyebrow: "Capacidades",
