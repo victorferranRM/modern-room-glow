@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
-import redkoolImage from "@/assets/redkool-app-map.jpg";
+import redkoolImage from "@/assets/redkool-app-map.webp";
 
 export function CoverRedkool() {
   const { t } = useTranslation();
