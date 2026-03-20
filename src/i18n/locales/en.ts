@@ -758,12 +758,6 @@ const en = {
         imagePlaceholder: "Image: incident report with detailed timeline",
       },
     ],
-    commonTitle: "What they have in common",
-    commonItems: [
-      { title: "Your protocols, always", description: "We don't improvise. Every action is defined in advance with you. We know when to act, when to escalate and when to wait for your confirmation." },
-      { title: "Everything is recorded", description: "Every alert, every call, every intervention. Documented with timestamps for you, your neighbours, your owners and your insurance." },
-      { title: "You're always in control", description: "You can step in at any time. You receive real-time notifications and have full access to the history from the panel." },
-    ],
     ctaTitle: "Ready to get started?",
     ctaDescription: "Join over 500 property managers who trust Roomonitor to protect their properties and guests.",
     bookDemo: "Book a Demo",
