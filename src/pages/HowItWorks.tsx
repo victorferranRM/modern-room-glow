@@ -5,92 +5,54 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import {
   ArrowRight,
   ArrowDown,
-  Wifi,
   Headphones,
-  Package,
-  SlidersHorizontal,
-  Activity,
-  FileText,
-  Link2,
-  Moon,
-  ClipboardCheck,
+  Wifi,
   Building2,
 } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
+import { HowItWorksSteps } from "@/components/how-it-works/HowItWorksSteps";
 
-const monitoringIcons = [Package, SlidersHorizontal, Activity];
-const operationsIcons = [FileText, Link2, Moon, ClipboardCheck];
+import heroOpsImg from "@/assets/how-it-works/operativa-nocturna-roomonitor.webp";
+import heroMonitorImg from "@/assets/how-it-works/sensor-roomonitor.webp";
 
-interface StepData {
-  title: string;
-  description: string;
-  bullets: string[];
-  stat?: string;
-  statLabel?: string;
-  imagePlaceholder: string;
-}
+const operationsImages = [
+  () => import("@/assets/how-it-works/patrones-de-accion.webp"),
+  () => import("@/assets/how-it-works/integraciones.webp"),
+  () => import("@/assets/how-it-works/operativa-nocturna.webp"),
+  () => import("@/assets/how-it-works/informes.webp"),
+];
 
-function StepBlock({ step, index, icon: Icon }: { step: StepData; index: number; icon: React.ElementType }) {
-  const imageOnRight = index % 2 === 0;
-  const num = String(index + 1).padStart(2, "0");
+const monitoringImages = [
+  () => import("@/assets/how-it-works/dispositivo-instalacion.webp"),
+  () => import("@/assets/how-it-works/mediciones-manager.webp"),
+  () => import("@/assets/how-it-works/umbrales-roomonitor.webp"),
+];
 
-  const textContent = (
-    <div className="flex flex-col justify-center">
-      <div className="flex items-center gap-4 mb-4">
-        <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shrink-0">
-          {num}
-        </div>
-        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-          <Icon className="w-5 h-5 text-primary" />
-        </div>
-      </div>
-      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">{step.title}</h3>
-      <p className="text-muted-foreground mb-5">{step.description}</p>
-      <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
-        {step.bullets.map((bullet, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-            {bullet}
-          </li>
-        ))}
-      </ul>
-      {step.stat && (
-        <div className="flex items-baseline gap-3">
-          <span className="text-4xl sm:text-5xl font-bold text-primary">{step.stat}</span>
-          {step.statLabel && <span className="text-sm text-muted-foreground">{step.statLabel}</span>}
-        </div>
-      )}
-    </div>
-  );
+// Pre-resolve the dynamic imports
+import opsImg0 from "@/assets/how-it-works/patrones-de-accion.webp";
+import opsImg1 from "@/assets/how-it-works/integraciones.webp";
+import opsImg2 from "@/assets/how-it-works/operativa-nocturna.webp";
+import opsImg3 from "@/assets/how-it-works/informes.webp";
+import monImg0 from "@/assets/how-it-works/dispositivo-instalacion.webp";
+import monImg1 from "@/assets/how-it-works/mediciones-manager.webp";
+import monImg2 from "@/assets/how-it-works/umbrales-roomonitor.webp";
 
-  const imageContent = (
-    <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center">
-      <p className="text-muted-foreground text-sm text-center px-6">{step.imagePlaceholder}</p>
-    </div>
-  );
-
-  return (
-    <AnimatedSection animation="fade-up" delay={index * 100}>
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        {imageOnRight ? (
-          <>
-            {textContent}
-            {imageContent}
-          </>
-        ) : (
-          <>
-            {imageContent}
-            {textContent}
-          </>
-        )}
-      </div>
-    </AnimatedSection>
-  );
-}
+const opsImages = [opsImg0, opsImg1, opsImg2, opsImg3];
+const monImages = [monImg0, monImg1, monImg2];
 
 export default function HowItWorks() {
   const { t, tObject } = useTranslation();
+
+  interface StepData {
+    title: string;
+    description: string;
+    bullets: string[];
+    stat?: string;
+    statLabel?: string;
+    imagePlaceholder: string;
+  }
+
   const monitoringSteps = tObject<StepData[]>("howItWorks.monitoringSteps");
   const operationsSteps = tObject<StepData[]>("howItWorks.operationsSteps");
 
@@ -120,15 +82,19 @@ export default function HowItWorks() {
           </div>
         </section>
 
-        {/* Selector — Two options with image placeholders */}
+        {/* Selector */}
         <section className="pb-16 lg:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-16">
               {/* Operativa delegada */}
               <AnimatedSection animation="fade-up" delay={200}>
                 <div className="group cursor-pointer" onClick={() => scrollTo("operativa")}>
-                  <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center mb-6">
-                    <Headphones className="w-12 h-12 text-muted-foreground/30" />
+                  <div className="rounded-2xl overflow-hidden aspect-video mb-6">
+                    <img
+                      src={heroOpsImg}
+                      alt="Operativa nocturna Roomonitor"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {t("howItWorks.selectorOpsTitle")}
@@ -149,8 +115,12 @@ export default function HowItWorks() {
               {/* Monitorización */}
               <AnimatedSection animation="fade-up" delay={300}>
                 <div className="group cursor-pointer" onClick={() => scrollTo("monitorizacion")}>
-                  <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center mb-6">
-                    <Wifi className="w-12 h-12 text-muted-foreground/30" />
+                  <div className="rounded-2xl overflow-hidden aspect-video mb-6">
+                    <img
+                      src={heroMonitorImg}
+                      alt="Sensor Roomonitor"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {t("howItWorks.selectorMonitorTitle")}
@@ -182,17 +152,12 @@ export default function HowItWorks() {
                 {t("howItWorks.operationsTitle")}
               </h2>
             </AnimatedSection>
-
-            <div className="max-w-6xl mx-auto space-y-20 lg:space-y-28">
-              {operationsSteps?.map((step, i) => (
-                <StepBlock key={i} step={step} index={i} icon={operationsIcons[i]} />
-              ))}
-            </div>
+            <HowItWorksSteps steps={operationsSteps} images={opsImages} />
           </div>
         </section>
 
         {/* Bloque 2 — Monitorización */}
-        <section id="monitorizacion" className="py-20 lg:py-28 scroll-mt-20">
+        <section id="monitorizacion" className="py-20 lg:py-28 bg-[hsl(0,0%,100%)] scroll-mt-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection className="text-center mb-16 lg:mb-20">
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
@@ -202,12 +167,7 @@ export default function HowItWorks() {
                 {t("howItWorks.monitoringTitle")}
               </h2>
             </AnimatedSection>
-
-            <div className="max-w-6xl mx-auto space-y-20 lg:space-y-28">
-              {monitoringSteps?.map((step, i) => (
-                <StepBlock key={i} step={step} index={i} icon={monitoringIcons[i]} />
-              ))}
-            </div>
+            <HowItWorksSteps steps={monitoringSteps} images={monImages} />
           </div>
         </section>
 
