@@ -1166,6 +1166,7 @@ const pt = {
     title: "Quando a resolução remota",
     titleHighlight: "não é suficiente",
     description: "Nossa equipe de campo fornece intervenção presencial quando as situações exigem presença física. Disponível em 8 cidades, pronto para agir em seu nome.",
+    primaryCTA: "Ver Cobertura",
     stats: [
       { value: "8", label: "Cidades cobertas" },
       { value: "<30min", label: "Chegada média" },
@@ -1184,6 +1185,7 @@ const pt = {
     ],
     interventionsEyebrow: "Tipos de Intervenção",
     interventionsTitle: "Quando enviamos agentes",
+    interventionsSubtitle: "Os nossos agentes estão preparados para atuar em múltiplos cenários, sempre seguindo os seus protocolos.",
     interventions: [
       { title: "Acesso de emergência", description: "São 2h da manhã e o hóspede não consegue entrar. O nosso agente chega, abre e resolve antes que escale." },
       { title: "Check-in presencial", description: "O código não funciona, a fechadura falha ou o hóspede simplesmente precisa de alguém. Nós aparecemos." },
@@ -1200,15 +1202,6 @@ const pt = {
       { step: "03", title: "Intervenção Presencial", description: "Resolução profissional seguindo seus protocolos e padrões." },
       { step: "04", title: "Relatório e Documentação", description: "Relatório completo com fotos e ações, disponível no seu painel." },
     ],
-    coverageEyebrow: "Cobertura",
-    coverageTitle: "Disponível em 8 cidades",
-    coverageDescription: "Nossa rede de campo está ativa em 8 cidades europeias, com expansão baseada na demanda.",
-    coverageFeatures: [
-      "Barcelona, Madrid, Málaga, Valência, Sevilha, Granada (Espanha)",
-      "Lisboa (Portugal)",
-      "Paris (França)",
-    ],
-    coverageCTA: "Verificar disponibilidade",
     ctaTitle: "Precisa de suporte presencial?",
     ctaDescription: "Nossos agentes de campo estão prontos para agir em seu nome. Fale conosco sobre a cobertura para seu portfólio.",
     ctaPrimary: "Verificar disponibilidade na sua cidade",

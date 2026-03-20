@@ -1166,6 +1166,7 @@ const fr = {
     title: "Quand la résolution à distance",
     titleHighlight: "ne suffit pas",
     description: "Notre équipe de terrain fournit une intervention sur site quand les situations nécessitent une présence physique. Disponible dans 8 villes, prêt à agir en votre nom.",
+    primaryCTA: "Voir la Couverture",
     stats: [
       { value: "8", label: "Villes couvertes" },
       { value: "<30min", label: "Arrivée moyenne" },
@@ -1184,6 +1185,7 @@ const fr = {
     ],
     interventionsEyebrow: "Types d'Intervention",
     interventionsTitle: "Quand nous déployons des agents",
+    interventionsSubtitle: "Nos agents sont formés pour agir dans de multiples scénarios, toujours en suivant vos protocoles.",
     interventions: [
       { title: "Accès d'urgence", description: "Il est 2h du matin et votre client ne peut pas entrer. Notre agent arrive, ouvre et résout avant que ça n'escalade." },
       { title: "Check-in en personne", description: "Le code ne marche pas, la serrure bloque ou le client a simplement besoin de quelqu'un. On est là." },
@@ -1200,15 +1202,6 @@ const fr = {
       { step: "03", title: "Intervention sur Site", description: "Résolution professionnelle suivant vos protocoles et standards." },
       { step: "04", title: "Rapport et Documentation", description: "Rapport complet avec photos et actions, disponible sur votre tableau de bord." },
     ],
-    coverageEyebrow: "Couverture",
-    coverageTitle: "Disponible dans 8 villes",
-    coverageDescription: "Notre réseau de terrain est actif dans 8 villes européennes, avec une expansion basée sur la demande.",
-    coverageFeatures: [
-      "Barcelone, Madrid, Málaga, Valence, Séville, Grenade (Espagne)",
-      "Lisbonne (Portugal)",
-      "Paris (France)",
-    ],
-    coverageCTA: "Vérifier la disponibilité",
     ctaTitle: "Besoin d'un support sur site ?",
     ctaDescription: "Nos agents de terrain sont prêts à agir en votre nom. Parlez-nous de la couverture pour votre portfolio.",
     ctaPrimary: "Vérifier la disponibilité dans votre ville",

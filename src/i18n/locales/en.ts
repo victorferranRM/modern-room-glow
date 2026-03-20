@@ -1166,6 +1166,7 @@ const en = {
     title: "When remote resolution",
     titleHighlight: "isn't enough",
     description: "Our field service team provides on-site intervention when situations require physical presence. Available in 8 cities, ready to act on your behalf.",
+    primaryCTA: "See Coverage",
     stats: [
       { value: "8", label: "Cities covered" },
       { value: "<30min", label: "Average arrival" },
@@ -1184,6 +1185,7 @@ const en = {
     ],
     interventionsEyebrow: "Intervention Types",
     interventionsTitle: "When we deploy agents",
+    interventionsSubtitle: "Our agents are trained to act in multiple scenarios, always following your protocols.",
     interventions: [
       { title: "Emergency Access", description: "It's 2am and your guest can't get in. Our agent arrives, opens up and resolves it before it escalates." },
       { title: "In-person Check-in", description: "The code doesn't work, the lock fails or the guest just needs someone there. We show up." },
@@ -1200,15 +1202,6 @@ const en = {
       { step: "03", title: "On-Site Intervention", description: "Professional resolution following your protocols and standards." },
       { step: "04", title: "Report & Documentation", description: "Complete report with photos and actions taken, available on your dashboard." },
     ],
-    coverageEyebrow: "Coverage",
-    coverageTitle: "Available in 8 cities",
-    coverageDescription: "Our field service network is active in 8 European cities, with expansion based on demand.",
-    coverageFeatures: [
-      "Barcelona, Madrid, Málaga, Valencia, Seville, Granada (Spain)",
-      "Lisbon (Portugal)",
-      "Paris (France)",
-    ],
-    coverageCTA: "Check availability",
     ctaTitle: "Need on-site support?",
     ctaDescription: "Our field service agents are ready to act on your behalf. Talk to us about coverage for your portfolio.",
     ctaPrimary: "Check availability in your city",

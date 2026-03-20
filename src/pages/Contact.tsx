@@ -1,3 +1,4 @@
+import contactHeroImg from "@/assets/contact-hero.webp";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -153,19 +154,47 @@ export default function Contact() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
-          <div className="absolute top-1/4 -left-32 w-64 md:w-96 h-64 md:h-96 bg-primary/10 rounded-full blur-[128px]" />
-          <div className="absolute bottom-1/4 -right-32 w-64 md:w-96 h-64 md:h-96 bg-primary/5 rounded-full blur-[128px]" />
-          
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-medium">
-                <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span>{t('contact.badge')}</span>
+        <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+              {/* Left column — text (60%) */}
+              <div className="lg:col-span-3 space-y-5 md:space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-medium">
+                  <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                  <span>{t('contact.badge')}</span>
+                </div>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold tracking-tight text-foreground leading-[1.08]">
+                  {t('contact.title')} <span className="text-primary">{t('contact.titleHighlight')}</span>
+                </h1>
+                <p className="text-base md:text-lg text-muted-foreground max-w-lg">
+                  {t('contact.description')}
+                </p>
+
+                {/* What to expect — moved here */}
+                <div className="pt-2 md:pt-4">
+                  <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">{t('contact.sidebar.benefitsTitle')}</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                    {benefits.map((benefit) => (
+                      <li key={benefit} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-muted-foreground">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">{t('contact.title')} <span className="gradient-text">{t('contact.titleHighlight')}</span></h1>
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">{t('contact.description')}</p>
+
+              {/* Right column — photo (40%) */}
+              <div className="lg:col-span-2 hidden lg:block">
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden">
+                  <img
+                    src={contactHeroImg}
+                    alt="Equipo Roomonitor en propiedad"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -399,19 +428,6 @@ export default function Contact() {
 
               {/* Sidebar */}
               <div className="lg:col-span-2 space-y-6 md:space-y-8 order-2">
-                {/* Benefits Card */}
-                <div className="bg-primary/5 border border-primary/10 rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8">
-                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{t('contact.sidebar.benefitsTitle')}</h3>
-                  <ul className="space-y-2 md:space-y-3">
-                    {benefits.map((benefit) =>
-                    <li key={benefit} className="flex items-start gap-2 md:gap-3">
-                        <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm md:text-base text-muted-foreground">{benefit}</span>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-
                 {/* Contact Info */}
                 <div className="bg-card border rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 space-y-4 md:space-y-6">
                   <h3 className="text-base md:text-lg font-semibold text-foreground">{t('contact.sidebar.directContact')}</h3>
