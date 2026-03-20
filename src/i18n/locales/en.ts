@@ -1185,6 +1185,7 @@ const en = {
     ],
     interventionsEyebrow: "Intervention Types",
     interventionsTitle: "When we deploy agents",
+    interventionsSubtitle: "Our agents are trained to act in multiple scenarios, always following your protocols.",
     interventions: [
       { title: "Emergency Access", description: "It's 2am and your guest can't get in. Our agent arrives, opens up and resolves it before it escalates." },
       { title: "In-person Check-in", description: "The code doesn't work, the lock fails or the guest just needs someone there. We show up." },
