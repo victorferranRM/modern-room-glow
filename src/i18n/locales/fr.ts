@@ -1166,6 +1166,7 @@ const fr = {
     title: "Quand la résolution à distance",
     titleHighlight: "ne suffit pas",
     description: "Notre équipe de terrain fournit une intervention sur site quand les situations nécessitent une présence physique. Disponible dans 8 villes, prêt à agir en votre nom.",
+    primaryCTA: "Voir la Couverture",
     stats: [
       { value: "8", label: "Villes couvertes" },
       { value: "<30min", label: "Arrivée moyenne" },
