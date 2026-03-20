@@ -1166,6 +1166,7 @@ const pt = {
     title: "Quando a resolução remota",
     titleHighlight: "não é suficiente",
     description: "Nossa equipe de campo fornece intervenção presencial quando as situações exigem presença física. Disponível em 8 cidades, pronto para agir em seu nome.",
+    primaryCTA: "Ver Cobertura",
     stats: [
       { value: "8", label: "Cidades cobertas" },
       { value: "<30min", label: "Chegada média" },
