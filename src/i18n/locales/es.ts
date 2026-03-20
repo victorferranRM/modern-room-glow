@@ -712,7 +712,7 @@ const es = {
         imagePlaceholder: "Imagen: dispositivo Roomonitor V5 instalado en pared",
       },
       {
-        title: "Configuras tus umbrales y recibes alertas al instante",
+        title: "Configuras tus umbrales y monitorizas tus dashboards a tiempo real",
         description: "Defines el nivel de ruido, ocupación y otros parámetros desde el dashboard. Cuando algo supera el umbral, te avisamos al momento.",
         bullets: ["Umbrales personalizados por propiedad", "Alertas por push, email o SMS", "Histórico de datos y patrones", "Vista multi-propiedad en un solo panel"],
         stat: "<2 min",
