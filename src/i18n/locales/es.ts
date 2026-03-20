@@ -720,7 +720,7 @@ const es = {
         imagePlaceholder: "Imagen: dashboard con umbrales y alertas configurados",
       },
       {
-        title: "Gestionas cada situación desde donde estés",
+        title: "Gestionas cada situación desde donde estés, recibiendo alertas automáticas",
         description: "Recibes la alerta con toda la información necesaria para decidir. Puedes actuar tú o activar Alarm Assistant para que nuestro equipo lo gestione.",
         bullets: ["App móvil y panel web", "Historial completo de cada propiedad", "Escalado opcional a nuestro equipo", "Documentación automática"],
         imagePlaceholder: "Imagen: app móvil mostrando alerta activa con opciones",
