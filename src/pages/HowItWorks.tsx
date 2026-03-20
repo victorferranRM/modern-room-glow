@@ -5,8 +5,6 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import {
   ArrowRight,
   ArrowDown,
-  Headphones,
-  Wifi,
   Building2,
 } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
@@ -15,21 +13,6 @@ import { HowItWorksSteps } from "@/components/how-it-works/HowItWorksSteps";
 
 import heroOpsImg from "@/assets/how-it-works/operativa-nocturna-roomonitor.webp";
 import heroMonitorImg from "@/assets/how-it-works/sensor-roomonitor.webp";
-
-const operationsImages = [
-  () => import("@/assets/how-it-works/patrones-de-accion.webp"),
-  () => import("@/assets/how-it-works/integraciones.webp"),
-  () => import("@/assets/how-it-works/operativa-nocturna.webp"),
-  () => import("@/assets/how-it-works/informes.webp"),
-];
-
-const monitoringImages = [
-  () => import("@/assets/how-it-works/dispositivo-instalacion.webp"),
-  () => import("@/assets/how-it-works/mediciones-manager.webp"),
-  () => import("@/assets/how-it-works/umbrales-roomonitor.webp"),
-];
-
-// Pre-resolve the dynamic imports
 import opsImg0 from "@/assets/how-it-works/patrones-de-accion.webp";
 import opsImg1 from "@/assets/how-it-works/integraciones.webp";
 import opsImg2 from "@/assets/how-it-works/operativa-nocturna.webp";
@@ -41,18 +24,17 @@ import monImg2 from "@/assets/how-it-works/umbrales-roomonitor.webp";
 const opsImages = [opsImg0, opsImg1, opsImg2, opsImg3];
 const monImages = [monImg0, monImg1, monImg2];
 
+interface StepData {
+  title: string;
+  description: string;
+  bullets: string[];
+  stat?: string;
+  statLabel?: string;
+  imagePlaceholder: string;
+}
+
 export default function HowItWorks() {
   const { t, tObject } = useTranslation();
-
-  interface StepData {
-    title: string;
-    description: string;
-    bullets: string[];
-    stat?: string;
-    statLabel?: string;
-    imagePlaceholder: string;
-  }
-
   const monitoringSteps = tObject<StepData[]>("howItWorks.monitoringSteps");
   const operationsSteps = tObject<StepData[]>("howItWorks.operationsSteps");
 
@@ -64,19 +46,41 @@ export default function HowItWorks() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero */}
-        <section className="pt-32 pb-12">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+        {/* Hero — impactful, full-width */}
+        <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-20 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
+            <div className="absolute bottom-0 -right-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="max-w-5xl mx-auto text-center space-y-8">
               <AnimatedSection animation="fade-up">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground text-balance">
+                <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
+                  {t("howItWorks.heroEyebrow")}
+                </p>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-foreground leading-[1.05]">
                   {t("howItWorks.heroTitle")}
                 </h1>
               </AnimatedSection>
-              <AnimatedSection animation="fade-up" delay={100}>
-                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+              <AnimatedSection animation="fade-up" delay={120}>
+                <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                   {t("howItWorks.heroDescription")}
                 </p>
+              </AnimatedSection>
+              <AnimatedSection animation="fade-up" delay={240}>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+                  <Button size="lg" className="text-base px-8 h-12" asChild>
+                    <LocalizedLink to="/contact?inquiry=demo">
+                      {t("howItWorks.bookDemo")}
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </LocalizedLink>
+                  </Button>
+                  <Button size="lg" variant="outline" className="text-base px-8 h-12" asChild>
+                    <LocalizedLink to="/pricing">{t("about.viewPricing")}</LocalizedLink>
+                  </Button>
+                </div>
               </AnimatedSection>
             </div>
           </div>
@@ -152,7 +156,7 @@ export default function HowItWorks() {
                 {t("howItWorks.operationsTitle")}
               </h2>
             </AnimatedSection>
-            <HowItWorksSteps steps={operationsSteps} images={opsImages} />
+            <HowItWorksSteps steps={operationsSteps} images={opsImages} screenshotIndices={[0, 1]} />
           </div>
         </section>
 

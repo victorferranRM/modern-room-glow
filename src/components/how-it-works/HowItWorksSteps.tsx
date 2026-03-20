@@ -12,9 +12,11 @@ interface StepData {
 interface HowItWorksStepsProps {
   steps: StepData[] | undefined;
   images: string[];
+  /** Indices of images that are screenshots and should not be cropped */
+  screenshotIndices?: number[];
 }
 
-export function HowItWorksSteps({ steps, images }: HowItWorksStepsProps) {
+export function HowItWorksSteps({ steps, images, screenshotIndices = [] }: HowItWorksStepsProps) {
   if (!steps) return null;
 
   return (
@@ -23,6 +25,7 @@ export function HowItWorksSteps({ steps, images }: HowItWorksStepsProps) {
         const imageOnRight = index % 2 === 0;
         const num = String(index + 1).padStart(2, "0");
         const img = images[index];
+        const isScreenshot = screenshotIndices.includes(index);
 
         const textContent = (
           <div className="flex flex-col justify-center">
@@ -51,16 +54,16 @@ export function HowItWorksSteps({ steps, images }: HowItWorksStepsProps) {
         );
 
         const imageContent = (
-          <div className="rounded-2xl overflow-hidden aspect-video">
+          <div className={`rounded-2xl overflow-hidden ${isScreenshot ? 'border border-border/50 shadow-lg bg-background p-2' : 'aspect-video'}`}>
             {img ? (
               <img
                 src={img}
                 alt={step.title}
-                className="w-full h-full object-cover"
+                className={`w-full h-full rounded-xl ${isScreenshot ? 'object-contain' : 'object-cover'}`}
                 loading="lazy"
               />
             ) : (
-              <div className="w-full h-full bg-muted flex items-center justify-center">
+              <div className="w-full h-full bg-muted flex items-center justify-center min-h-48">
                 <p className="text-muted-foreground text-sm text-center px-6">{step.imagePlaceholder}</p>
               </div>
             )}
