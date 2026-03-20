@@ -173,11 +173,11 @@ export default function Contact() {
                 {/* What to expect — moved here */}
                 <div className="pt-2 md:pt-4">
                   <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">{t('contact.sidebar.benefitsTitle')}</h3>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                  <ul className="space-y-1.5">
                     {benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-muted-foreground">{benefit}</span>
+                        <span className="text-primary text-xs mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-xs text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -200,7 +200,7 @@ export default function Contact() {
         </section>
 
         {/* Main Content */}
-        <section className="py-8 md:py-16 lg:py-24">
+        <section className="py-8 md:py-0 lg:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
               {/* Contact Form */}
