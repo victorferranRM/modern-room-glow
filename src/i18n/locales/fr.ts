@@ -1185,6 +1185,7 @@ const fr = {
     ],
     interventionsEyebrow: "Types d'Intervention",
     interventionsTitle: "Quand nous déployons des agents",
+    interventionsSubtitle: "Nos agents sont formés pour agir dans de multiples scénarios, toujours en suivant vos protocoles.",
     interventions: [
       { title: "Accès d'urgence", description: "Il est 2h du matin et votre client ne peut pas entrer. Notre agent arrive, ouvre et résout avant que ça n'escalade." },
       { title: "Check-in en personne", description: "Le code ne marche pas, la serrure bloque ou le client a simplement besoin de quelqu'un. On est là." },
