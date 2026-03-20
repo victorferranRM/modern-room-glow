@@ -89,7 +89,7 @@ export default function HowItWorks() {
                   </p>
                   <Button
                     variant="outline"
-                    className="bg-white hover:bg-white/90"
+                    className="bg-white text-foreground hover:bg-foreground hover:text-background hover:border-foreground"
                     onClick={(e) => { e.stopPropagation(); scrollTo("operativa"); }}
                   >
                     {t("howItWorks.seeHow")}
@@ -116,7 +116,7 @@ export default function HowItWorks() {
                   </p>
                   <Button
                     variant="outline"
-                    className="bg-white hover:bg-white/90"
+                    className="bg-white text-foreground hover:bg-foreground hover:text-background hover:border-foreground"
                     onClick={(e) => { e.stopPropagation(); scrollTo("monitorizacion"); }}
                   >
                     {t("howItWorks.seeHow")}
