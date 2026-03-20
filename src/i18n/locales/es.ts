@@ -712,7 +712,7 @@ const es = {
         imagePlaceholder: "Imagen: dispositivo Roomonitor V5 instalado en pared",
       },
       {
-        title: "Configuras tus umbrales y recibes alertas al instante",
+        title: "Configuras tus umbrales y monitorizas tus dashboards a tiempo real",
         description: "Defines el nivel de ruido, ocupación y otros parámetros desde el dashboard. Cuando algo supera el umbral, te avisamos al momento.",
         bullets: ["Umbrales personalizados por propiedad", "Alertas por push, email o SMS", "Histórico de datos y patrones", "Vista multi-propiedad en un solo panel"],
         stat: "<2 min",
@@ -720,7 +720,7 @@ const es = {
         imagePlaceholder: "Imagen: dashboard con umbrales y alertas configurados",
       },
       {
-        title: "Gestionas cada situación desde donde estés",
+        title: "Gestionas cada situación desde donde estés, recibiendo alertas automáticas",
         description: "Recibes la alerta con toda la información necesaria para decidir. Puedes actuar tú o activar Alarm Assistant para que nuestro equipo lo gestione.",
         bullets: ["App móvil y panel web", "Historial completo de cada propiedad", "Escalado opcional a nuestro equipo", "Documentación automática"],
         imagePlaceholder: "Imagen: app móvil mostrando alerta activa con opciones",
@@ -738,8 +738,8 @@ const es = {
         imagePlaceholder: "Imagen: documento de protocolos personalizados",
       },
       {
-        title: "Conectamos con tus herramientas",
-        description: "Integramos con tu PMS y smartlocks para operar directamente en tu ecosistema. Sin paneles extra, sin duplicar trabajo.",
+        title: "Nos conectamos con tus herramientas",
+        description: "Nos integramos con tu PMS y smartlocks para operar directamente en tu ecosistema. Sin paneles extra, sin duplicar trabajo.",
         bullets: ["Acceso a reservas en tiempo real", "Apertura remota de cerraduras", "Mensajería directa al huésped", "Registro automático en tu PMS"],
         imagePlaceholder: "Imagen: integraciones con PMS y smartlocks",
       },
