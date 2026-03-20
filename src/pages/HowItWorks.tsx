@@ -120,57 +120,51 @@ export default function HowItWorks() {
           </div>
         </section>
 
-        {/* Selector — Split screen with images */}
+        {/* Selector — Two options with image placeholders */}
         <section className="pb-16 lg:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-border">
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-16">
               {/* Operativa delegada */}
               <AnimatedSection animation="fade-up" delay={200}>
-                <div className="relative group cursor-pointer h-full" onClick={() => scrollTo("operativa")}>
-                  <div className="aspect-[4/3] bg-foreground flex items-center justify-center">
-                    <Headphones className="w-16 h-16 text-background/20" />
+                <div className="group cursor-pointer" onClick={() => scrollTo("operativa")}>
+                  <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center mb-6">
+                    <Headphones className="w-12 h-12 text-muted-foreground/30" />
                   </div>
-                  <div className="p-6 lg:p-8 bg-foreground text-background">
-                    <h3 className="text-xl sm:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                      {t("howItWorks.selectorOpsTitle")}
-                    </h3>
-                    <p className="text-background/60 mb-5 text-sm sm:text-base">
-                      {t("howItWorks.selectorOpsSubtitle")}
-                    </p>
-                    <Button
-                      variant="outline"
-                      className="border-background/30 bg-transparent text-background hover:bg-background hover:text-foreground"
-                      onClick={(e) => { e.stopPropagation(); scrollTo("operativa"); }}
-                    >
-                      {t("howItWorks.seeHow")}
-                      <ArrowDown className="w-4 h-4 ml-1" />
-                    </Button>
-                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {t("howItWorks.selectorOpsTitle")}
+                  </h3>
+                  <p className="text-muted-foreground mb-5 text-sm sm:text-base">
+                    {t("howItWorks.selectorOpsSubtitle")}
+                  </p>
+                  <Button
+                    variant="outline"
+                    onClick={(e) => { e.stopPropagation(); scrollTo("operativa"); }}
+                  >
+                    {t("howItWorks.seeHow")}
+                    <ArrowDown className="w-4 h-4 ml-1" />
+                  </Button>
                 </div>
               </AnimatedSection>
 
               {/* Monitorización */}
               <AnimatedSection animation="fade-up" delay={300}>
-                <div className="relative group cursor-pointer h-full border-l border-border md:border-l" onClick={() => scrollTo("monitorizacion")}>
-                  <div className="aspect-[4/3] bg-muted flex items-center justify-center">
-                    <Wifi className="w-16 h-16 text-muted-foreground/20" />
+                <div className="group cursor-pointer" onClick={() => scrollTo("monitorizacion")}>
+                  <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center mb-6">
+                    <Wifi className="w-12 h-12 text-muted-foreground/30" />
                   </div>
-                  <div className="p-6 lg:p-8 bg-card">
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {t("howItWorks.selectorMonitorTitle")}
-                    </h3>
-                    <p className="text-muted-foreground mb-5 text-sm sm:text-base">
-                      {t("howItWorks.selectorMonitorSubtitle")}
-                    </p>
-                    <Button
-                      variant="outline"
-                      className="border-border hover:bg-foreground hover:text-background hover:border-foreground"
-                      onClick={(e) => { e.stopPropagation(); scrollTo("monitorizacion"); }}
-                    >
-                      {t("howItWorks.seeHow")}
-                      <ArrowDown className="w-4 h-4 ml-1" />
-                    </Button>
-                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {t("howItWorks.selectorMonitorTitle")}
+                  </h3>
+                  <p className="text-muted-foreground mb-5 text-sm sm:text-base">
+                    {t("howItWorks.selectorMonitorSubtitle")}
+                  </p>
+                  <Button
+                    variant="outline"
+                    onClick={(e) => { e.stopPropagation(); scrollTo("monitorizacion"); }}
+                  >
+                    {t("howItWorks.seeHow")}
+                    <ArrowDown className="w-4 h-4 ml-1" />
+                  </Button>
                 </div>
               </AnimatedSection>
             </div>
