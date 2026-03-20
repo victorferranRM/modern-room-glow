@@ -46,15 +46,9 @@ export default function HowItWorks() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero — impactful, full-width */}
-        <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
-          {/* Decorative background elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-20 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-            <div className="absolute bottom-0 -right-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Hero */}
+        <section className="pt-28 pb-12 lg:pt-36 lg:pb-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto text-center space-y-8">
               <AnimatedSection animation="fade-up">
                 <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
@@ -68,19 +62,6 @@ export default function HowItWorks() {
                 <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                   {t("howItWorks.heroDescription")}
                 </p>
-              </AnimatedSection>
-              <AnimatedSection animation="fade-up" delay={240}>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-                  <Button size="lg" className="text-base px-8 h-12" asChild>
-                    <LocalizedLink to="/contact?inquiry=demo">
-                      {t("howItWorks.bookDemo")}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </LocalizedLink>
-                  </Button>
-                  <Button size="lg" variant="outline" className="text-base px-8 h-12" asChild>
-                    <LocalizedLink to="/pricing">{t("about.viewPricing")}</LocalizedLink>
-                  </Button>
-                </div>
               </AnimatedSection>
             </div>
           </div>
@@ -142,6 +123,25 @@ export default function HowItWorks() {
                 </div>
               </AnimatedSection>
             </div>
+          </div>
+        </section>
+
+        {/* CTAs above sections */}
+        <section className="pb-12 lg:pb-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimatedSection animation="fade-up">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-base px-8 h-12" asChild>
+                  <LocalizedLink to="/contact?inquiry=demo">
+                    {t("howItWorks.bookDemo")}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </LocalizedLink>
+                </Button>
+                <Button size="lg" variant="outline" className="text-base px-8 h-12" asChild>
+                  <LocalizedLink to="/pricing">{t("about.viewPricing")}</LocalizedLink>
+                </Button>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
