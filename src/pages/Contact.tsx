@@ -428,19 +428,6 @@ export default function Contact() {
 
               {/* Sidebar */}
               <div className="lg:col-span-2 space-y-6 md:space-y-8 order-2">
-                {/* Benefits Card */}
-                <div className="bg-primary/5 border border-primary/10 rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8">
-                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{t('contact.sidebar.benefitsTitle')}</h3>
-                  <ul className="space-y-2 md:space-y-3">
-                    {benefits.map((benefit) =>
-                    <li key={benefit} className="flex items-start gap-2 md:gap-3">
-                        <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm md:text-base text-muted-foreground">{benefit}</span>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-
                 {/* Contact Info */}
                 <div className="bg-card border rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 space-y-4 md:space-y-6">
                   <h3 className="text-base md:text-lg font-semibold text-foreground">{t('contact.sidebar.directContact')}</h3>
