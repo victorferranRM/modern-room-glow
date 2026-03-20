@@ -738,8 +738,8 @@ const es = {
         imagePlaceholder: "Imagen: documento de protocolos personalizados",
       },
       {
-        title: "Conectamos con tus herramientas",
-        description: "Integramos con tu PMS y smartlocks para operar directamente en tu ecosistema. Sin paneles extra, sin duplicar trabajo.",
+        title: "Nos conectamos con tus herramientas",
+        description: "Nos integramos con tu PMS y smartlocks para operar directamente en tu ecosistema. Sin paneles extra, sin duplicar trabajo.",
         bullets: ["Acceso a reservas en tiempo real", "Apertura remota de cerraduras", "Mensajería directa al huésped", "Registro automático en tu PMS"],
         imagePlaceholder: "Imagen: integraciones con PMS y smartlocks",
       },
