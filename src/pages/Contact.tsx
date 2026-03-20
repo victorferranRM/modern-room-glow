@@ -200,7 +200,7 @@ export default function Contact() {
         </section>
 
         {/* Main Content */}
-        <section className="py-8 md:py-16 lg:py-24">
+        <section className="py-8 md:py-0 lg:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
               {/* Contact Form */}
