@@ -1166,6 +1166,7 @@ const en = {
     title: "When remote resolution",
     titleHighlight: "isn't enough",
     description: "Our field service team provides on-site intervention when situations require physical presence. Available in 8 cities, ready to act on your behalf.",
+    primaryCTA: "See Coverage",
     stats: [
       { value: "8", label: "Cities covered" },
       { value: "<30min", label: "Average arrival" },
