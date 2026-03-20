@@ -418,9 +418,9 @@ const fr = {
       callUs: "Appelez-nous",
     },
     trust: [
-      { title: "+5 000 propriétés", desc: "Protégées dans le monde entier" },
-      { title: "+500 gestionnaires", desc: "Font confiance à Roomonitor" },
-      { title: "Couverture 24/7", desc: "24 heures sur 24" },
+      { title: "+30 000 propriétés", desc: "Surveillées dans le monde entier" },
+      { title: "+10 ans", desc: "D'expérience dans le secteur" },
+      { title: "8 villes", desc: "Avec des agents de terrain actifs" },
     ],
     validation: {
       firstNameRequired: "Le prénom est obligatoire",
