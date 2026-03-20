@@ -49,14 +49,18 @@ export const routePaths: Record<string, Record<SupportedLang, string>> = {
 export function localizeHref(englishPath: string, lang: SupportedLang): string {
   if (!englishPath || englishPath.startsWith('http') || englishPath.startsWith('#')) return englishPath;
 
-  const [rawPath, hash] = englishPath.split('#');
+  // Split off query string and hash
+  const [pathWithoutHash, hash] = englishPath.split('#');
+  const [rawPath, ...queryParts] = pathWithoutHash.split('?');
   const cleanPath = rawPath.startsWith('/') ? rawPath.slice(1) : rawPath;
-  const suffix = hash ? `#${hash}` : '';
+  const querySuffix = queryParts.length ? `?${queryParts.join('?')}` : '';
+  const hashSuffix = hash ? `#${hash}` : '';
+  const suffix = querySuffix + hashSuffix;
 
   // Exact match
   for (const paths of Object.values(routePaths)) {
     if (paths.en === cleanPath) {
-      return `/${lang}/${paths[lang]}${suffix}`.replace(/\/+$/, '') || `/${lang}`;
+      return (`/${lang}/${paths[lang]}${suffix}`).replace(/\/+(?=\?|#|$)/, '') || `/${lang}`;
     }
   }
 
