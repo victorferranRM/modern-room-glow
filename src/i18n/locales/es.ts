@@ -745,7 +745,7 @@ const es = {
       },
       {
         title: "A las 19h empezamos. Tú puedes desconectar.",
-        description: "Desde ese momento gestionamos lo que surja. Una fiesta que empieza a escalar, un huésped sin acceso a las 2am, una queja de vecinos. Lo resolvemos en tu nombre.",
+        description: "Hacemos un pase de turno y gestionamos lo que surja a partir de entonces. Una fiesta que empieza a escalar, un huésped sin acceso a las 2am, una queja de vecinos. solucionado en tu nombre.",
         bullets: ["Centro de Control activo desde las 19h", "Agentes de campo en 8 ciudades", "Atención directa al huésped", "Escalado a servicios de emergencia si es necesario"],
         stat: "19h",
         statLabel: "Empezamos nosotros",
