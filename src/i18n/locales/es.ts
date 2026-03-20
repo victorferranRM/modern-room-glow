@@ -694,7 +694,7 @@ const es = {
   },
   howItWorks: {
     heroEyebrow: "Tecnología + Personas",
-    heroTitle: "¿Cómo trabajamos contigo?",
+    heroTitle: "Protegemos tus propiedades.\nTú defines cómo",
     heroDescription: "Monitorización inteligente y operativa delegada para property managers que quieren dormir tranquilos. Elige tu nivel de control.",
     selectorMonitorTitle: "Quiero monitorizar mis propiedades",
     selectorMonitorSubtitle: "Dispositivo, dashboard a tiempo real y alertas automáticas.",
