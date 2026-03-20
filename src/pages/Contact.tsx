@@ -173,11 +173,11 @@ export default function Contact() {
                 {/* What to expect — moved here */}
                 <div className="pt-2 md:pt-4">
                   <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">{t('contact.sidebar.benefitsTitle')}</h3>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2.5">
                     {benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-2">
-                        <span className="text-primary text-xs mt-0.5 flex-shrink-0">✓</span>
-                        <span className="text-xs text-muted-foreground">{benefit}</span>
+                        <span className="text-primary text-sm mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
                   </ul>
