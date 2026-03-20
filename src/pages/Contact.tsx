@@ -1,3 +1,4 @@
+import contactHeroImg from "@/assets/contact-hero.webp";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
