@@ -1185,6 +1185,7 @@ const pt = {
     ],
     interventionsEyebrow: "Tipos de Intervenção",
     interventionsTitle: "Quando enviamos agentes",
+    interventionsSubtitle: "Os nossos agentes estão preparados para atuar em múltiplos cenários, sempre seguindo os seus protocolos.",
     interventions: [
       { title: "Acesso de emergência", description: "São 2h da manhã e o hóspede não consegue entrar. O nosso agente chega, abre e resolve antes que escale." },
       { title: "Check-in presencial", description: "O código não funciona, a fechadura falha ou o hóspede simplesmente precisa de alguém. Nós aparecemos." },
