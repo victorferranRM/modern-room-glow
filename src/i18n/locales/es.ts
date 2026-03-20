@@ -758,8 +758,8 @@ const es = {
         imagePlaceholder: "Imagen: reporte de incidencia con timeline detallado",
       },
     ],
-    ctaTitle: "¿Listo para empezar?",
-    ctaDescription: "Únete a más de 500 property managers que confían en Roomonitor para proteger sus propiedades y huéspedes.",
+    ctaTitle: "Elige tu nivel de control",
+    ctaDescription: "Monitorización autónoma, operativa delegada o ambas. Háblanos de tu portfolio y diseñamos la solución a medida.",
     bookDemo: "Reservar una Demo",
   },
   pricing: {
