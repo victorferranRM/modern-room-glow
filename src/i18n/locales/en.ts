@@ -693,8 +693,9 @@ const en = {
     testimonialLabel: "Testimonial",
   },
   howItWorks: {
-    heroTitle: "How do we work with you?",
-    heroDescription: "Technology and people combined to keep your properties protected. You choose the level of involvement.",
+    heroEyebrow: "Technology + People",
+    heroTitle: "You manage. We protect.",
+    heroDescription: "Smart monitoring and delegated operations for property managers who want to sleep soundly. Choose your level of control.",
     selectorMonitorTitle: "I want to monitor my properties",
     selectorMonitorSubtitle: "Device + dashboard + alerts",
     selectorOpsTitle: "I want to delegate night operations",
