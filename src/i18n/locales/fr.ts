@@ -758,12 +758,6 @@ const fr = {
         imagePlaceholder: "Image : rapport d'incident avec chronologie détaillée",
       },
     ],
-    commonTitle: "Ce qu'ils ont en commun",
-    commonItems: [
-      { title: "Vos protocoles, toujours", description: "Nous n'improvisons pas. Chaque action est définie à l'avance avec vous. Nous savons quand agir, quand escalader et quand attendre votre confirmation." },
-      { title: "Tout est enregistré", description: "Chaque alerte, chaque appel, chaque intervention. Documenté avec horodatage pour vous, vos voisins, vos propriétaires et vos assurances." },
-      { title: "Vous gardez le contrôle", description: "Vous pouvez intervenir à tout moment. Vous recevez des notifications en temps réel et avez un accès complet à l'historique depuis le panneau." },
-    ],
     ctaTitle: "Prêt à commencer ?",
     ctaDescription: "Rejoignez plus de 500 gestionnaires qui font confiance à Roomonitor pour protéger leurs propriétés.",
     bookDemo: "Réserver une Démo",

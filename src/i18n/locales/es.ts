@@ -758,12 +758,6 @@ const es = {
         imagePlaceholder: "Imagen: reporte de incidencia con timeline detallado",
       },
     ],
-    commonTitle: "Lo que tienen en común",
-    commonItems: [
-      { title: "Tus protocolos, siempre", description: "No improvisamos. Cada acción está definida de antemano contigo. Sabemos cuándo actuar, cuándo escalar y cuándo esperamos tu confirmación." },
-      { title: "Todo queda registrado", description: "Cada alerta, cada llamada, cada intervención. Documentado con marca de tiempo para ti, tus vecinos, tus propietarios y tus seguros." },
-      { title: "Tú siempre al mando", description: "Puedes intervenir en cualquier momento. Recibes notificaciones en tiempo real y tienes acceso completo al historial desde el panel." },
-    ],
     ctaTitle: "¿Listo para empezar?",
     ctaDescription: "Únete a más de 500 property managers que confían en Roomonitor para proteger sus propiedades y huéspedes.",
     bookDemo: "Reservar una Demo",
