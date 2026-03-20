@@ -418,9 +418,9 @@ const en = {
       callUs: "Call us",
     },
     trust: [
-      { title: "+5,000 properties", desc: "Protected worldwide" },
-      { title: "+500 managers", desc: "Trust Roomonitor" },
-      { title: "24/7 coverage", desc: "Around the clock" },
+      { title: "+30,000 properties", desc: "Monitored worldwide" },
+      { title: "+10 years", desc: "Of industry experience" },
+      { title: "8 cities", desc: "With active field agents" },
     ],
     validation: {
       firstNameRequired: "First name is required",
