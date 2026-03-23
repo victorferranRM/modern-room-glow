@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getPostBySlug, blogPosts } from "@/lib/blog-data";
+import { getPostBySlug, blogPosts, translateCategory } from "@/lib/blog-data";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
