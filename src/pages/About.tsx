@@ -297,7 +297,7 @@ export default function About() {
               <div className="lg:sticky lg:top-32">
                 <div className="bg-card border rounded-2xl overflow-hidden shadow-soft">
                   <div className="aspect-video overflow-hidden relative">
-                    <img src={timelineImages[activeTimeline]} alt={timeline[activeTimeline].title} className="w-full h-full object-cover transition-all duration-500" />
+                    <img src={timelineImages[activeTimeline]} alt={timeline[activeTimeline].title} className="w-full h-full object-cover transition-all duration-500" loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-sm font-bold">
