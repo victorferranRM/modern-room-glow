@@ -536,8 +536,8 @@ const en = {
     backHome: "Back to home",
   },
   blog: {
-    heroTitle: "Reads for top property operators",
-    heroSubtitle: "Everything we know about staying ahead of problems, guests and the market.",
+    heroTitle: "Resources for managers who want to stay one step ahead",
+    heroSubtitle: "Regulations, operations and best practices to protect your properties and elevate the guest experience.",
     featured: "Featured",
     readTime: "{min} min read",
     readTimeShort: "{min} min",

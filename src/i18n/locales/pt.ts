@@ -536,8 +536,8 @@ const pt = {
     backHome: "Voltar ao início",
   },
   blog: {
-    heroTitle: "Leituras para grandes operadores de propriedades",
-    heroSubtitle: "Tudo o que sabemos sobre antecipar problemas, hóspedes e o mercado.",
+    heroTitle: "Recursos para gestores que querem estar um passo à frente",
+    heroSubtitle: "Regulamentação, operações e boas práticas para proteger as suas propriedades e melhorar a experiência dos seus hóspedes.",
     featured: "Destaque",
     readTime: "{min} min de leitura",
     readTimeShort: "{min} min",
