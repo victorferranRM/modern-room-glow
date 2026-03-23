@@ -603,7 +603,7 @@ const es = {
     },
     stats: [
       { label: "Gestiones realizadas en 2025" },
-      { label: "Atendidos por nuestro equipo en 2024" },
+      { label: "Atendidos por nuestro equipo en 2025" },
       { label: "AHT · Tiempo medio de gestión" },
       { label: "Apartamentos gestionados" },
       { label: "Con agentes de Field Service activos" },
