@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
-import imgAlerta from "@/assets/monitoring-noise.webp";
+import imgAlerta from "@/assets/night-call-tourist.webp";
 import imgAgente from "@/assets/cover-control-center.webp";
 import imgResolucion from "@/assets/cover-phone-assist.webp";
-import imgEscalacion from "@/assets/cover-protocols.webp";
-import imgField from "@/assets/cover-field-service.webp";
-import imgInforme from "@/assets/intervention-documentation.webp";
+import imgEscalacion from "@/assets/cover-field-service.webp";
+import imgField from "@/assets/intervention-documentation.webp";
+import imgInforme from "@/assets/informe-check-in.webp";
 
 const icons = [Bell, Eye, Phone, ArrowUpCircle, MapPin, FileText];
 const images = [imgAlerta, imgAgente, imgResolucion, imgEscalacion, imgField, imgInforme];
