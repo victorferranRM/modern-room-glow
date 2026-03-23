@@ -82,6 +82,7 @@ const Blog = () => {
                         alt={featuredPost.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
+                    </div>
                     <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-foreground/70 backdrop-blur-sm text-background text-sm font-medium px-3 py-1.5 rounded-full">
                       <Clock className="w-4 h-4" />
                       <span>{t('blog.readTime', { min: String(featuredPost.readTime) })}</span>
