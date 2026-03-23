@@ -132,7 +132,7 @@ const Blog = () => {
             delay={0.1}
             className="flex flex-wrap justify-center gap-3 mb-8"
           >
-            {categories.map((category) => (
+            {localizedCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
