@@ -5249,7 +5249,7 @@ El **1º Congreso Nacional de [ALEP](https://www.alep.pt/)** fue un éxito rotun
     id: "23303",
     slug: "roomonitor-x-icnea-soluciona-problemas-de-ruido-de-manera-mas-eficiente",
     title: "Roomonitor x Icnea: Soluciona problemas de ruido de manera más eficiente",
-    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli",
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline='no' text_larger='no']Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos clientes nos pedían.
 
 Hoy, nos complace anunciar nuestra última integración con [Icnea](https://icnea.es/), un software de administración de propiedades líder en la industria con sede en España. Gracias a esta integración, podrás acceder a todas tus herramientas de administración de propiedades favoritas en un solo lugar. Con Icnea puedes administrar las reservas y registros de manera eficiente y ahora también comunicarte automáticamente con tus huéspedes en caso de incidencia en la monitorización de ruido en tus propiedades para que puedas ahorrar tiempo y concentrarte en hacer crecer tu negocio.
