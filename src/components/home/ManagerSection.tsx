@@ -311,7 +311,7 @@ export function ManagerSection() {
 
           {/* Tab Navigation */}
           <AnimatedSection delay={200} className="mb-8 lg:mb-12">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 lg:gap-3 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 sm:gap-2 lg:gap-3 max-w-4xl mx-auto">
               {tabMeta.map((meta, index) => {
                 const Icon = meta.icon;
                 return (
