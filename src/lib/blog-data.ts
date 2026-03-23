@@ -4127,6 +4127,7 @@ We’re still by your side. Today, just as we were ten years ago.`,
     readTime: 2,
     image: "https://roomonitor.com/wp-content/uploads/2025/12/RM-10-anos-clientes.png",
     lang: "en",
+    featured: true,
   },
   {
     id: "36497",
@@ -5957,6 +5958,7 @@ Pas particulièrement, si ce n’est qu’aujourd’hui nous savons que nos appa
     readTime: 7,
     image: "https://roomonitor.com/wp-content/uploads/2025/07/IMG_4521-1-scaled-e1753370899603.jpg",
     lang: "fr",
+    featured: true,
   },
   {
     id: "35587",
@@ -7022,6 +7024,7 @@ O contexto mudou — e a preparação faz toda a diferença.`,
     readTime: 3,
     image: "https://roomonitor.com/wp-content/uploads/2026/02/Lisbon-air-vision-scaled.jpg",
     lang: "pt",
+    featured: true,
   },
   {
     id: "36587",
