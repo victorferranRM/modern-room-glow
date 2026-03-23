@@ -10059,27 +10059,29 @@ This is just the beginning. Improving profitability with the current services is
   },
 ];
 
-export const getFeaturedPost = (): BlogPost | undefined => {
-  return blogPosts.find((post) => post.featured);
+export const getBlogPostsByLang = (lang: string): BlogPost[] => {
+  return blogPosts.filter(post => post.lang === lang);
 };
 
-export const getPostBySlug = (slug: string): BlogPost | undefined => {
-  return blogPosts.find((post) => post.slug === slug);
+export const getFeaturedPost = (lang: string = 'es'): BlogPost | undefined => {
+  return blogPosts.find(post => post.featured && post.lang === lang);
 };
 
-export const getPostsByCategory = (category: string): BlogPost[] => {
-  if (category === "Todas las categorías") {
-    return blogPosts;
-  }
-  return blogPosts.filter((post) => post.category === category);
+export const getPostBySlug = (slug: string, lang?: string): BlogPost | undefined => {
+  return blogPosts.find(post => post.slug === slug && (!lang || post.lang === lang));
 };
 
-export const searchPosts = (query: string): BlogPost[] => {
+export const getPostsByCategory = (category: string, lang: string = 'es'): BlogPost[] => {
+  const langPosts = getBlogPostsByLang(lang);
+  if (category === 'all') return langPosts;
+  return langPosts.filter(post => post.category === category);
+};
+
+export const searchPosts = (query: string, lang: string = 'es'): BlogPost[] => {
   const lowerQuery = query.toLowerCase();
-  return blogPosts.filter(
-    (post) =>
-      post.title.toLowerCase().includes(lowerQuery) ||
-      post.excerpt.toLowerCase().includes(lowerQuery) ||
-      post.category.toLowerCase().includes(lowerQuery)
+  return getBlogPostsByLang(lang).filter(post =>
+    post.title.toLowerCase().includes(lowerQuery) ||
+    post.excerpt.toLowerCase().includes(lowerQuery) ||
+    post.category.toLowerCase().includes(lowerQuery)
   );
 };
