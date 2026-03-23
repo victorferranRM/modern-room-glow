@@ -6066,6 +6066,7 @@ Implementando estos consejos, teniendo en cuenta las necesidades de tus huésped
     date: "2021-01-08",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/christopher-jolly-GqbU78bdJFM-unsplash.jpg",
+    lang: "es",
   },
   {
     id: "25524",
@@ -6209,6 +6210,7 @@ By implementing these tips, considering the needs of your potential guests, and 
     date: "2021-01-08",
     readTime: 5,
     image: "https://roomonitor.com/wp-content/uploads/2021/01/christopher-jolly-GqbU78bdJFM-unsplash.jpg",
+    lang: "es",
   },
   {
     id: "25525",
@@ -6352,6 +6354,7 @@ En mettant en œuvre ces recommandations, en tenant compte des besoins de vos cl
     date: "2021-01-08",
     readTime: 7,
     image: "https://roomonitor.com/wp-content/uploads/2021/01/christopher-jolly-GqbU78bdJFM-unsplash.jpg",
+    lang: "es",
   },
   {
     id: "11160",
@@ -6692,6 +6695,7 @@ Si prestas atención a los requisitos e incorporas una gran cantidad de personal
     date: "2020-12-16",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/olexandr-ignatov-w72a24brINI-unsplash.jpg",
+    lang: "es",
   },
   {
     id: "25551",
@@ -6781,6 +6785,7 @@ By paying close attention to requirements, and incorporating a lot of personalit
     date: "2020-12-16",
     readTime: 5,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/olexandr-ignatov-w72a24brINI-unsplash-1.jpg",
+    lang: "es",
   },
   {
     id: "25552",
@@ -6868,6 +6873,7 @@ Maintenant, vous aussi vous pouvez créer votre propre maison d’hôtes.`,
     date: "2020-12-16",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/olexandr-ignatov-w72a24brINI-unsplash-1.jpg",
+    lang: "es",
   },
   {
     id: "11026",
@@ -8860,6 +8866,7 @@ propiedades.`,
     date: "2019-10-28",
     readTime: 4,
     image: "https://roomonitor.com/wp-content/uploads/2019/10/nina-strehl-Ds0ZIA5gzc4-unsplash-scaled-1.jpg",
+    lang: "es",
   },
   {
     id: "25696",
@@ -8915,6 +8922,7 @@ Above points are only a few ideas for the responsible hosting. Having them in mi
     date: "2019-10-28",
     readTime: 3,
     image: "https://roomonitor.com/wp-content/uploads/2019/10/nina-strehl-Ds0ZIA5gzc4-unsplash-scaled-1-1.jpg",
+    lang: "es",
   },
   {
     id: "1084",
