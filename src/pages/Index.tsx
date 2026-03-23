@@ -26,6 +26,7 @@ const Index = () => {
         </AnimatedSection>
         {/* Video banner separator */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: '3/1' }}>
+          <div className="block sm:hidden absolute inset-0" style={{ aspectRatio: '2/1' }} />
           <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
             <source src="/videos/monitoring-bg.mp4" type="video/mp4" />
           </video>
