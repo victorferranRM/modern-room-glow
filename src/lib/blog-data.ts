@@ -1,6 +1,7 @@
 export interface BlogPost {
   id: string;
   slug: string;
+  lang: "es",
   title: string;
   excerpt: string;
   content: string;
@@ -26,6 +27,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "37242",
     slug: "reglamento-alojamiento-local-lisboa-2025",
+    lang: "es",
     title: "Cambios en el Reglamento del Alojamiento Local en Lisboa: Áreas de Contención, excepciones y qué implican",
     excerpt: "El 6 de diciembre de 2025 entraron en vigor modificaciones relevantes del Reglamento Municipal del Alojamiento Local (RMAL) de Lisboa. La revisión se enmarca en el nuevo contexto nacional definido por el Decreto-Ley n.º 76/2024 y refuerza los mecanis",
     content: `El 6 de diciembre de 2025 entraron en vigor modificaciones relevantes del Reglamento Municipal del Alojamiento Local (RMAL) de Lisboa.
@@ -169,6 +171,7 @@ El contexto ha cambiado — y la preparación marca la diferencia.`,
   {
     id: "36970",
     slug: "reducir-quejas-vecinales-alquiler-turistico",
+    lang: "es",
     title: "Claves para reducir las quejas vecinales en propiedades turísticas",
     excerpt: "Las quejas vecinales son uno de los mayores riesgos para cualquier propietario o gestor de alquiler turístico. No solo afectan a la convivencia, sino que pueden derivar en sanciones, inspecciones, pérdida de licencias o incluso el cierre de la activi",
     content: `Las quejas vecinales son uno de los mayores riesgos para cualquier propietario o gestor de alquiler turístico. No solo afectan a la convivencia, sino que pueden derivar en sanciones, inspecciones, pérdida de licencias o incluso el cierre de la actividad.
@@ -306,6 +309,7 @@ Porque en el alquiler turístico, **la mejor incidencia es la que nunca llega a 
   {
     id: "36982",
     slug: "reduce-neighbour-complaints-short-term-rentals",
+    lang: "es",
     title: "Key Strategies to Reduce Neighbour Complaints in Tourist Properties",
     excerpt: "Neighbour complaints are one of the biggest risks for any tourist rental owner or property manager. They don’t just affect coexistence — they can lead to fines, inspections, licence suspensions or even the closure of the activity. The good news is th",
     content: `Neighbour complaints are one of the biggest risks for any tourist rental owner or property manager. They don’t just affect coexistence — they can lead to fines, inspections, licence suspensions or even the closure of the activity.
@@ -443,6 +447,7 @@ Because in tourist rentals, **the best incident is the one that never happens**.
   {
     id: "36984",
     slug: "reduire-plaintes-voisinage-location-touristique",
+    lang: "es",
     title: "Clés pour réduire les plaintes de voisinage dans les logements touristiques",
     excerpt: "Les plaintes de voisinage représentent l’un des principaux risques pour tout propriétaire ou gestionnaire de logements touristiques. Elles n’affectent pas seulement la cohabitation, mais peuvent aussi entraîner des sanctions, des contrôles administra",
     content: `Les plaintes de voisinage représentent l’un des principaux risques pour tout propriétaire ou gestionnaire de logements touristiques. Elles n’affectent pas seulement la cohabitation, mais peuvent aussi entraîner des sanctions, des contrôles administratifs, la suspension de licences, voire l’arrêt de l’activité.
@@ -580,6 +585,7 @@ Car en location touristique, **le meilleur incident est celui qui n’arrive jam
   {
     id: "36986",
     slug: "reduzir-reclamacoes-vizinhanca-alojamento-local",
+    lang: "es",
     title: "Principais estratégias para reduzir as reclamações de vizinhança em propriedades turísticas",
     excerpt: "As reclamações de vizinhança são um dos maiores riscos para qualquer proprietário ou gestor de alojamento turístico. Não afetam apenas a convivência, podendo também resultar em multas, inspeções, suspensão de licenças ou até no encerramento da ativid",
     content: `As reclamações de vizinhança são um dos maiores riscos para qualquer proprietário ou gestor de alojamento turístico. Não afetam apenas a convivência, podendo também resultar em multas, inspeções, suspensão de licenças ou até no encerramento da atividade.
@@ -717,6 +723,7 @@ Porque no alojamento turístico, **a melhor incidência é a que nunca chega a a
   {
     id: "36839",
     slug: "10-anos-al-lado-del-sector-alquiler-turistico",
+    lang: "es",
     title: "Roomonitor: 10 años al lado del sector del alquiler turístico",
     excerpt: "Hace diez años, el sector del alquiler turístico no era el mismo que hoy. La profesionalización estaba en una fase temprana, la tecnología aplicada a la operativa era limitada y muchos de los problemas se gestionaban de forma reactiva. En ese context",
     content: `Hace diez años, el sector del alquiler turístico no era el mismo que hoy. La profesionalización estaba en una fase temprana, la tecnología aplicada a la operativa era limitada y muchos de los problemas se gestionaban de forma reactiva.
@@ -756,6 +763,7 @@ Seguimos a vuestro lado. Hoy, como hace diez años.`,
   {
     id: "36556",
     slug: "alojamento-local-portugal-nueva-ley-2025-proteger-licencia",
+    lang: "es",
     title: "Qué cambia en la normativa del Alojamento Local en Portugal tras las últimas reformas",
     excerpt: "El Alojamento Local en Portugal afronta un nuevo escenario regulatorio tras la modificación del régimen jurídico establecido por el Decreto-Lei 128/2014, actualizada mediante el Decreto-Lei 76/2024. Aunque no se trata de una ley completamente nueva, ",
     content: `El Alojamento Local en Portugal afronta un nuevo escenario regulatorio tras la **modificación del régimen jurídico establecido por el Decreto-Lei 128/2014**, actualizada mediante el **Decreto-Lei 76/2024**. Aunque no se trata de una ley completamente nueva, la reforma supone un cambio profundo en el funcionamiento del sector, especialmente en todo lo relacionado con **ruido**, **convivencia** y **relación entre propietarios, huéspedes y condominios**.
@@ -817,6 +825,7 @@ Además, Roomonitor ofrece también un [**servicio de agentes nocturnos**](https
   {
     id: "36486",
     slug: "ley-propiedad-horizontal-alquiler-turistico-2025-espana",
+    lang: "es",
     title: "Qué tienes que hacer en 2025 para alquilar tu vivienda a turistas",
     excerpt: "El alquiler a turistas de viviendas se ha convertido en un foco de conflicto vecinal, presión de vivienda habitual y normativa cambiante. Con la reciente reforma de la Ley de Propiedad Horizontal, los propietarios que desean destinar su vivienda al a",
     content: `El alquiler a turistas de viviendas se ha convertido en un foco de conflicto vecinal, presión de vivienda habitual y normativa cambiante. Con la reciente reforma de la [**Ley de Propiedad Horizontal**](https://www.boe.es/biblioteca_juridica/abrir_pdf.php?id=PUB-PR-2025-142), los propietarios que desean destinar su vivienda al alquiler turístico en régimen de comunidad de propietarios tienen nuevos requisitos que conocer para hacerlo con tranquilidad. Desde Roomonitor te explicamos **qué pasos tienes que dar** para alquilar legalmente tu piso, evitar sanciones y asegurar una buena relación con tu comunidad.
@@ -898,6 +907,7 @@ Como propietario, lo fundamental es actuar con transparencia, cumplir los pasos,
   {
     id: "36426",
     slug: "informe-2025-tendencias-alquiler-vacacional-roomonitor-beyond",
+    lang: "es",
     title: "Informe 2025: Tendencias del alquiler vacacional en España — Datos de ocupación, ADR y comportamiento del viajero",
     excerpt: "En un contexto de creciente regulación y competencia, los gestores de alquiler vacacional se enfrentan al reto de mantener la rentabilidad sin perder eficiencia operativa. En este escenario, la toma de decisiones basada en datos se ha convertido en u",
     content: `En un contexto de creciente regulación y competencia, los gestores de alquiler vacacional se enfrentan al reto de mantener la rentabilidad sin perder eficiencia operativa. En este escenario, **la toma de decisiones basada en datos se ha convertido en una ventaja competitiva esencial**.
@@ -947,6 +957,7 @@ Los gestores que integran información en tiempo real —desde el rendimiento de
   {
     id: "36394",
     slug: "airbnb-pide-una-regulacion-especifica-para-las-zonas-rurales",
+    lang: "es",
     title: "Airbnb pide una regulación específica para las zonas rurales",
     excerpt: "Airbnb ha reclamado una regulación diferenciada del alquiler turístico en las zonas rurales de España, argumentando que el modelo actual no refleja las necesidades reales de territorios donde gran parte del parque de viviendas está deshabitado. Según",
     content: `Airbnb ha reclamado una **regulación diferenciada del alquiler turístico en las zonas rurales de España**, argumentando que el modelo actual no refleja las necesidades reales de territorios donde gran parte del parque de viviendas está deshabitado.
@@ -986,6 +997,7 @@ La tecnología, unida a una gestión profesional, puede ser la herramienta que g
   {
     id: "36285",
     slug: "del-parque-flats-roomonitor-turismo-responsable",
+    lang: "es",
     title: "Del Parque Flats destaca la importancia de Roomonitor para evitar molestias vecinales",
     excerpt: "La empresa malagueña Del Parque Flats marca el camino hacia un turismo responsable gracias a la tecnología Roomonitor: sonómetros, detectores de humo y control operativo profesional. La empresa malagueña Del Parque Flats, reconocida por HomeToGo como",
     content: `### La empresa malagueña Del Parque Flats marca el camino hacia un turismo responsable gracias a la tecnología Roomonitor: sonómetros, detectores de humo y control operativo profesional.
@@ -1031,6 +1043,7 @@ Del Parque Flats es un claro ejemplo de cómo **la tecnología puede ser el mejo
   {
     id: "36219",
     slug: "cambios-politica-cancelacion-airbnb",
+    lang: "es",
     title: "Airbnb actualiza sus políticas de cancelación: nuevas condiciones a partir de octubre de 2025",
     excerpt: "Airbnb ha anunciado una importante actualización de sus políticas de cancelación para estancias cortas. A partir del 1 de octubre de 2025, todas las reservas de 27 noches o menos estarán sujetas a un nuevo marco de cancelaciones más flexible, que sus",
     content: `Airbnb ha anunciado una **[importante actualización](https://www.airbnb.es/help/article/475)** de sus políticas de cancelación para estancias cortas. A partir del **1 de octubre de 2025**, todas las reservas de **27 noches o menos** estarán sujetas a un nuevo marco de cancelaciones más flexible, que sustituirá la antigua política **“Estricta”**.
@@ -1110,6 +1123,7 @@ En conjunto, este cambio marca una evolución hacia un modelo más equilibrado, 
   {
     id: "35865",
     slug: "cantabria-obliga-sensores-ruido-viviendas-turisticas",
+    lang: "es",
     title: "Cantabria exige sensores de ruido en viviendas turísticas: nueva normativa en vigor",
     excerpt: "El Gobierno de Cantabria ha aprobado el Decreto 50/2025, una normativa clave que regula las viviendas de uso turístico (VUT) con el objetivo de ordenar el sector, reforzar la seguridad jurídica y mejorar la convivencia vecinal. Una de las principales",
     content: `El Gobierno de Cantabria ha aprobado el **[Decreto 50/2025](https://new.roomonitor.com/wp-content/uploads/2023/09/BOE-Cantabria-ruido.pdf)**, una normativa clave que **regula las viviendas de uso turístico (VUT)** con el objetivo de ordenar el sector, reforzar la seguridad jurídica y mejorar la convivencia vecinal.
@@ -1177,6 +1191,7 @@ Esta nueva regulación ya está en vigor. Si operas en municipios como **Santand
   {
     id: "35834",
     slug: "registro-estatal-viviendas-turisticas-fevitur-silvia-blasco",
+    lang: "es",
     title: "Silvia Blasco (FEVITUR): 'El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal'",
     excerpt: "Desde el 1 de julio de 2024, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del 45 % de las viviendas turísticas l",
     content: `Desde el **1 de julio de 2024**, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del **45 % de las viviendas turísticas legales** que ya estaban registradas en sus comunidades autónomas, según denuncia **Silvia Blasco**, presidenta de FEVITUR en [Economist&Jurist](https://www.economistjurist.es/zbloque-1/silvia-blasco-presidenta-de-fevitur-un-45-de-las-viviendas-turisticas-legales-quedaron-fuera-del-nuevo-registro-estatal-impuesto-por-el-ministerio-de-vivienda/).
@@ -1220,6 +1235,7 @@ En Roomonitor estamos atentos a estos cambios regulatorios. Creemos imprescindib
   {
     id: "35748",
     slug: "entrevista-jordan-setti-checkmyguest-seguridad-alquiler-vacacional",
+    lang: "es",
     title: "Entrevista con Jordan Setti, COO de CheckMyGuest: 'Saber que de 22:00 a 7:00 alguien toma el relevo, no tiene precio'",
     excerpt: "Hola a todos. Hoy tenemos el placer de estar en las oficinas de Checkmyguest con Jordan Setti. Su director operativo es uno de los actores clave del mercado de alquileres de corta y media estancia en Francia. Estamos aquí para hablar de la evolución ",
     content: `Hola a todos. Hoy tenemos el placer de estar en las oficinas de **[Checkmyguest](https://www.checkmyguest.fr/)** con Jordan Setti.
@@ -1303,6 +1319,7 @@ Nada en particular, salvo que sabemos que nuestros apartamentos están seguros y
   {
     id: "35651",
     slug: "incidencias-nocturnas-alquiler-turistico",
+    lang: "es",
     title: "Problemas e incidencias nocturnas: cómo afrontarlas sin morir en el intento",
     excerpt: "Porque el alquiler turístico no duerme, pero tú sí deberías poder hacerlo. La noche es, sin duda, el momento más crítico en la gestión de una vivienda turística. Durante el día todo parece estar bajo control, pero al caer el sol se multiplican las po",
     content: `Porque el alquiler turístico no duerme, pero tú sí deberías poder hacerlo.
@@ -1346,6 +1363,7 @@ Dormir tranquilo también es parte de una buena gestión.
   {
     id: "35733",
     slug: "night-incidents-holiday-rentals",
+    lang: "es",
     title: "Night-time problems and incidents: How to handle them without burning out",
     excerpt: "Because holiday rentals never sleep – but you should be able to. Night-time is, without a doubt, the most critical moment when managing a holiday rental. During the day everything seems under control, but once the sun goes down, the chances of things",
     content: `Because holiday rentals never sleep – but you should be able to.
@@ -1389,6 +1407,7 @@ Want to know how we can help you manage nights better? Get in touch. We’ll sta
   {
     id: "35735",
     slug: "incidents-nocturnes-location-touristique",
+    lang: "es",
     title: "Problèmes et incidents nocturnes : comment les gérer sans y laisser des plumes",
     excerpt: "Parce que la location touristique ne dort jamais – mais vous, vous devriez pouvoir le faire. La nuit est, sans aucun doute, le moment le plus critique dans la gestion d’un logement touristique. Tout semble sous contrôle pendant la journée, mais une f",
     content: `Parce que la location touristique ne dort jamais – mais vous, vous devriez pouvoir le faire.
@@ -1432,6 +1451,7 @@ Vous voulez savoir comment nous pouvons vous aider à mieux gérer les nuits ? C
   {
     id: "35737",
     slug: "incidentes-noturnos-alojamento-local",
+    lang: "es",
     title: "Problemas e incidentes noturnos: como lidar com eles sem perder a cabeça",
     excerpt: "Porque o alojamento local nunca dorme – mas você deveria poder fazê-lo. A noite é, sem dúvida, o momento mais crítico na gestão de um alojamento turístico. Durante o dia tudo parece estar sob controlo, mas quando anoitece as hipóteses de algo correr ",
     content: `Porque o alojamento local nunca dorme – mas você deveria poder fazê-lo.
@@ -1475,6 +1495,7 @@ Quer saber como o podemos ajudar a gerir melhor as noites? Fale connosco. Estare
   {
     id: "35615",
     slug: "diferencia-vut-vs-at",
+    lang: "es",
     title: "¿Estás alquilando legalmente? Cómo saber si tu piso es VUT o alquiler temporal",
     excerpt: "Si gestionas propiedades destinadas al alquiler vacacional o temporal, entender la diferencia entre una Vivienda de Uso Turístico (VUT) y un Alquiler Temporal (AT) es fundamental. No solo por cuestiones legales, sino también por implicaciones fiscale",
     content: `Si gestionas propiedades destinadas al alquiler vacacional o temporal, entender la diferencia entre una **Vivienda de Uso Turístico (VUT)** y un **Alquiler Temporal (AT)** es fundamental. No solo por cuestiones legales, sino también por implicaciones fiscales, normativas y operativas.
@@ -1522,6 +1543,7 @@ Aunque se utiliza comúnmente para referirse a estancias por días o semanas, es
   {
     id: "35621",
     slug: "are-you-renting-legally-how-to-tell-if-your-property-is-a-short-term-let-or-a-medium-term-rental",
+    lang: "es",
     title: "Are you renting legally? How to tell if your property is a Short-Term Let or a Medium-Term Rental",
     excerpt: "If you manage properties for short-term or temporary rental, understanding the difference between a Short-Term Let (STL) and a Medium-Term Rental (MTR) is essential — not only from a legal perspective, but also in terms of tax, compliance, and day-to",
     content: `If you manage properties for short-term or temporary rental, understanding the difference between a **Short-Term Let (STL)** and a **Medium-Term Rental (MTR)** is essential — not only from a legal perspective, but also in terms of tax, compliance, and day-to-day operations.
@@ -1569,6 +1591,7 @@ This term is often used to describe stays of just a few days or weeks, but it's 
   {
     id: "35623",
     slug: "difference-location-touristique-vs-moyenne-duree",
+    lang: "es",
     title: "Louez-vous légalement ? Comment savoir si votre logement est une location touristique ou une location de moyenne durée",
     excerpt: "Si vous gérez des logements en location saisonnière ou temporaire, il est essentiel de comprendre la différence entre un meublé touristique et une location meublée de moyenne durée. Non seulement pour des raisons légales, mais aussi en termes de fisc",
     content: `Si vous gérez des logements en location saisonnière ou temporaire, il est essentiel de comprendre la différence entre un **meublé touristique** et une **location meublée de moyenne durée**. Non seulement pour des raisons légales, mais aussi en termes de fiscalité, de conformité et de gestion quotidienne.
@@ -1616,6 +1639,7 @@ Souvent utilisé pour désigner des séjours de quelques jours ou semaines, ce t
   {
     id: "35625",
     slug: "diferenca-alojamento-local-vs-arrendamento-temporario",
+    lang: "es",
     title: "Está a arrendar legalmente? Saiba se o seu imóvel é Alojamento Local ou Arrendamento Temporário",
     excerpt: "Se gere imóveis para arrendamento de curta ou média duração, é fundamental compreender a diferença entre um Alojamento Local (AL) e um Arrendamento Temporário. Não só do ponto de vista legal, mas também em termos fiscais, regulamentares e operacionai",
     content: `Se gere imóveis para arrendamento de curta ou média duração, é fundamental compreender a diferença entre um **Alojamento Local (AL)** e um **Arrendamento Temporário**. Não só do ponto de vista legal, mas também em termos fiscais, regulamentares e operacionais.
@@ -1663,6 +1687,7 @@ Na Roomonitor, trabalhamos diariamente com gestores e proprietários em toda a E
   {
     id: "35602",
     slug: "que-es-el-coliving",
+    lang: "es",
     title: "¿Qué es el coliving y por qué está revolucionando la forma de vivir en ciudad?",
     excerpt: "El coliving se ha convertido en una de las opciones más atractivas para quienes buscan una alternativa flexible, cómoda y social a la vivienda tradicional. Especialmente popular entre jóvenes profesionales, nómadas digitales y estudiantes, este model",
     content: `El coliving se ha convertido en una de las opciones más atractivas para quienes buscan una alternativa flexible, cómoda y social a la vivienda tradicional. Especialmente popular entre jóvenes profesionales, nómadas digitales y estudiantes, este modelo combina privacidad, servicios incluidos y una fuerte dimensión comunitaria.
@@ -1716,6 +1741,7 @@ El coliving representa una evolución del concepto de vivienda urbana: más soci
   {
     id: "35608",
     slug: "what-is-coliving",
+    lang: "es",
     title: "What is coliving and why it's changing the way we live in cities",
     excerpt: "Coliving has become one of the most appealing options for people seeking a flexible, comfortable, and community-driven alternative to traditional housing. Especially popular among young professionals, digital nomads, and students, this model combines",
     content: `Coliving has become one of the most appealing options for people seeking a flexible, comfortable, and community-driven alternative to traditional housing. Especially popular among young professionals, digital nomads, and students, this model combines privacy with all-inclusive services and a strong sense of community.
@@ -1769,6 +1795,7 @@ Coliving represents a modern evolution of urban living — more social, more eff
   {
     id: "35610",
     slug: "qu-est-ce-que-le-coliving",
+    lang: "es",
     title: "Qu’est-ce que le coliving et pourquoi il révolutionne notre façon de vivre en ville",
     excerpt: "Le coliving s’impose comme l’une des solutions les plus attractives pour celles et ceux qui recherchent une alternative flexible, confortable et sociale au logement traditionnel. Très apprécié par les jeunes actifs, les nomades digitaux et les étudia",
     content: `Le coliving s’impose comme l’une des solutions les plus attractives pour celles et ceux qui recherchent une alternative flexible, confortable et sociale au logement traditionnel. Très apprécié par les jeunes actifs, les nomades digitaux et les étudiants, ce modèle allie espace privé, services inclus et vie communautaire dynamique.
@@ -1822,6 +1849,7 @@ Le coliving incarne une nouvelle façon de vivre en ville — plus sociale, plus
   {
     id: "35613",
     slug: "o-que-e-coliving",
+    lang: "es",
     title: "O que é coliving e por que está revolucionando o modo de viver nas cidades",
     excerpt: "O coliving se tornou uma das opções mais atrativas para quem busca uma alternativa flexível, confortável e social à moradia tradicional. Muito popular entre jovens profissionais, nômades digitais e estudantes, esse modelo combina privacidade, serviço",
     content: `O coliving se tornou uma das opções mais atrativas para quem busca uma alternativa flexível, confortável e social à moradia tradicional. Muito popular entre jovens profissionais, nômades digitais e estudantes, esse modelo combina privacidade, serviços inclusos e um forte senso de comunidade.
@@ -1875,6 +1903,7 @@ O coliving representa uma evolução no conceito de moradia urbana — mais soci
   {
     id: "35577",
     slug: "airbnb-booking-registro-unico-alquiler-espana",
+    lang: "es",
     title: "El nuevo rol de las OTAs en España a partir del 1 julio",
     excerpt: "A partir del 1 de julio de 2025, plataformas como Airbnb y Booking estarán obligadas a reportar a la Agencia Tributaria información sobre cada reserva, anfitrión e identificación del alojamiento. Te explicamos qué implica este nuevo rol y cómo afecta",
     content: `A partir del 1 de julio de 2025, plataformas como Airbnb y Booking estarán obligadas a reportar a la Agencia Tributaria información sobre cada reserva, anfitrión e identificación del alojamiento. Te explicamos qué implica este nuevo rol y cómo afectará al sector.
@@ -1918,6 +1947,7 @@ Es hora de prepararse. Si aún no has solicitado tu **Número de Registro Único
   {
     id: "35169",
     slug: "claves-operativa-temporada-alta-apartamentos-turisticos",
+    lang: "es",
     title: "Temporada alta: 5 claves para no perder el control de tu operativa",
     excerpt: "Aunque la temporada alta no llega a la vez en todas las zonas turísticas de España, junio suele marcar el punto de partida de un periodo de máxima exigencia operativa para los gestores de viviendas turísticas. Más check-ins, más rotación, más inciden",
     content: `Aunque la temporada alta no llega a la vez en todas las zonas turísticas de España, junio suele marcar el punto de partida de un periodo de máxima exigencia operativa para los gestores de viviendas turísticas. Más check-ins, más rotación, más incidencias… y menos margen de error. 
@@ -1983,6 +2013,7 @@ Externalizar parte de tu operativa (como la atención de incidencias remotas o p
   {
     id: "35204",
     slug: "high-season-operations-holiday-rentals",
+    lang: "es",
     title: "High Season: 5 essentials to keep your operations on track",
     excerpt: "While the high season doesn't start at the same time across all Spanish tourist hotspots, June typically marks the beginning of a period of intense operational activity. More check-ins, more turnover, more incidents… and far less room for error. For ",
     content: `While the high season doesn't start at the same time across all Spanish tourist hotspots, June typically marks the beginning of a period of intense operational activity. More check-ins, more turnover, more incidents… and far less room for error.
@@ -2056,6 +2087,7 @@ You decide how far you want us involved. We’ll handle the rest.`,
   {
     id: "35206",
     slug: "gestion-haute-saison-locations-touristiques",
+    lang: "es",
     title: "Haute saison : 5 clés pour garder le contrôle de votre activité",
     excerpt: "Bien que la haute saison ne débute pas simultanément dans toutes les régions touristiques d’Espagne, le mois de juin marque généralement le coup d’envoi d’une période d’intense activité pour les gestionnaires de locations saisonnières. Davantage d’ar",
     content: `Bien que la haute saison ne débute pas simultanément dans toutes les régions touristiques d’Espagne, le mois de juin marque généralement le coup d’envoi d’une période d’intense activité pour les gestionnaires de locations saisonnières. Davantage d’arrivées et de départs, une rotation accrue, plus d’incidents… et une marge d’erreur réduite.
@@ -2121,6 +2153,7 @@ Externaliser une partie de vos opérations (comme la gestion des incidents à di
   {
     id: "35210",
     slug: "operacao-alta-temporada-alojamento-local",
+    lang: "es",
     title: "Alta temporada: 5 chaves para manter o controlo da sua operação",
     excerpt: "Embora a alta temporada não comece exatamente ao mesmo tempo em todas as regiões turísticas de Espanha, junho costuma marcar o início de um período de exigência máxima para os gestores de alojamento local. Mais check-ins, maior rotatividade, mais inc",
     content: `Embora a alta temporada não comece exatamente ao mesmo tempo em todas as regiões turísticas de Espanha, junho costuma marcar o início de um período de exigência máxima para os gestores de alojamento local. Mais check-ins, maior rotatividade, mais incidências… e muito menos margem para erro.
@@ -2184,6 +2217,7 @@ Delegar parte da operação (como o atendimento de urgência ou apoio técnico) 
   {
     id: "35150",
     slug: "pisos-turisticos-superan-hoteles-2024",
+    lang: "es",
     title: "Los pisos turísticos ya superan a los hoteles en plazas en la mitad de las grandes ciudades",
     excerpt: "En los últimos años, el modelo turístico ha vivido un giro significativo. Los pisos turísticos en España no solo han crecido exponencialmente, sino que ya superan en plazas a los hoteles en muchas ciudades, según el Atlas de Contribución Municipal de",
     content: `En los últimos años, el modelo turístico ha vivido un giro significativo. Los **pisos turísticos en España** no solo han crecido exponencialmente, sino que **ya superan en plazas a los hoteles en muchas ciudades, **según el Atlas de Contribución Municipal del Turismo en España publicado recientemente por Exceltur. Este fenómeno, impulsado por plataformas digitales y un nuevo perfil de viajero, presenta enormes oportunidades, pero también desafíos para la **convivencia vecinal** y la **gestión de los alojamientos**.
@@ -2219,6 +2253,7 @@ Frente al crecimiento inevitable de los pisos turísticos, la **tecnología se v
   {
     id: "35160",
     slug: "short-term-rentals-surpass-hotels-2024",
+    lang: "es",
     title: "The shift in Spain’s tourism model: short term rentals now outnumber hotel beds in many cities",
     excerpt: "In recent years, Spain’s tourism landscape has undergone a profound transformation. Short-term holiday rentals have not only seen exponential growth, but in many urban areas, they now offer more beds than traditional hotels. This shift, driven by dig",
     content: `In recent years, Spain’s tourism landscape has undergone a profound transformation. Short-term holiday rentals have not only seen exponential growth, but in many urban areas, they now offer more beds than traditional hotels. This shift, driven by digital platforms and a new generation of travellers, presents major opportunities—yet also introduces significant challenges in terms of community relations and accommodation management.
@@ -2254,6 +2289,7 @@ As the growth of short-term rentals shows no signs of slowing, technology plays 
   {
     id: "35162",
     slug: "locations-courte-duree-depassent-hotels-2024",
+    lang: "es",
     title: "Les locations de courte durée dépassent déjà les hôtels en capacité dans de nombreuses grandes villes espagnoles",
     excerpt: "Au cours des dernières années, le modèle touristique en Espagne a connu une transformation profonde. Les locations de courte durée ont connu une croissance exponentielle et offrent désormais plus de lits que les hôtels dans de nombreuses villes. Port",
     content: `Au cours des dernières années, le modèle touristique en Espagne a connu une transformation profonde. Les **locations de courte durée** ont connu une croissance exponentielle et **offrent désormais plus de lits que les hôtels** dans de nombreuses villes. Porté par les plateformes numériques et l’évolution du profil des voyageurs, ce phénomène ouvre des perspectives importantes tout en soulevant des défis pour la **cohabitation locale** et la **gestion des hébergements touristiques**.
@@ -2289,6 +2325,7 @@ Face à la montée continue des locations de courte durée, la technologie devie
   {
     id: "35164",
     slug: "alojamento-local-supera-hoteis-2024",
+    lang: "es",
     title: "O alojamento local já supera os hotéis em capacidade em muitas das principais cidades espanholas",
     excerpt: "Nos últimos anos, o modelo turístico em Espanha passou por uma transformação significativa. O alojamento local não só registou um crescimento exponencial, como já oferece mais camas do que os hotéis em várias cidades. Impulsionado pelas plataformas d",
     content: `Nos últimos anos, o modelo turístico em Espanha passou por uma transformação significativa. O **alojamento local** não só registou um crescimento exponencial, como já oferece **mais camas do que os hotéis** em várias cidades. Impulsionado pelas plataformas digitais e por um novo perfil de viajante, este fenómeno representa grandes oportunidades, mas também impõe desafios à **convivência com os residentes** e à **gestão eficiente dos imóveis turísticos**.
@@ -2324,6 +2361,7 @@ Perante o crescimento imparável do alojamento local, a tecnologia torna-se uma 
   {
     id: "30403",
     slug: "como-elegir-mejor-pms-alojamiento-turistico",
+    lang: "es",
     title: "Cómo elegir el sistema PMS ideal: consejos prácticos para tu negocio de alojamiento",
     excerpt: "En el competitivo sector del alojamiento turístico, contar con un sistema de gestión eficiente es clave para optimizar operaciones y mejorar la experiencia del huésped. Aquí es donde entra en juego el PMS (Property Management System), una herramienta",
     content: `En el competitivo sector del alojamiento turístico, contar con un sistema de gestión eficiente es clave para optimizar operaciones y mejorar la experiencia del huésped. Aquí es donde entra en juego el **PMS** (*Property Management System*), una herramienta esencial para cualquier gestor de propiedades. Pero ¿cómo elegir el mejor sistema PMS para tu negocio? En esta guía, te explicamos todo lo que necesitas saber.
@@ -2381,6 +2419,7 @@ En Roomonitor, entendemos la importancia de contar con herramientas tecnológica
   {
     id: "30410",
     slug: "como-escolher-melhor-pms-hospedagem-turistica",
+    lang: "es",
     title: "Como escolher o sistema PMS ideal: dicas práticas para o seu negócio de hospedagem",
     excerpt: "No competitivo setor de hospedagem turística, contar com um sistema de gestão eficiente é essencial para otimizar operações e melhorar a experiência dos hóspedes. É aqui que entra o PMS (Property Management System), uma ferramenta indispensável para ",
     content: `No competitivo setor de hospedagem turística, contar com um sistema de gestão eficiente é essencial para otimizar operações e melhorar a experiência dos hóspedes. É aqui que entra o **PMS** (*Property Management System*), uma ferramenta indispensável para qualquer gestor de propriedades. Mas como escolher o melhor sistema PMS para o seu negócio? Neste guia, explicamos tudo o que você precisa saber.
@@ -2438,6 +2477,7 @@ Você já utiliza um PMS no seu negócio? Quais funcionalidades você considera 
   {
     id: "30412",
     slug: "how-to-choose-best-pms-vacation-rental",
+    lang: "es",
     title: "How to choose the ideal PMS system: practical tips for your hospitality business",
     excerpt: "In the competitive world of vacation rentals, having an efficient management system is key to streamlining operations and enhancing guest experiences. This is where a PMS (Property Management System) becomes an indispensable tool for property manager",
     content: `In the competitive world of vacation rentals, having an efficient management system is key to streamlining operations and enhancing guest experiences. This is where a **PMS** (*Property Management System*) becomes an indispensable tool for property managers. But how do you choose the best PMS for your business? In this guide, we’ll break down everything you need to know.
@@ -2495,6 +2535,7 @@ Do you already use a PMS for your business? What features do you value the most 
   {
     id: "30414",
     slug: "comment-choisir-meilleur-pms-location-touristique",
+    lang: "es",
     title: "Comment choisir le système PMS idéal: conseils pratiques pour votre activité d'hébergement",
     excerpt: "Dans le secteur compétitif des locations touristiques, disposer d’un système de gestion efficace est essentiel pour optimiser vos opérations et améliorer l’expérience client. C’est ici qu’intervient le PMS (Property Management System), un outil indis",
     content: `Dans le secteur compétitif des locations touristiques, disposer d’un système de gestion efficace est essentiel pour optimiser vos opérations et améliorer l’expérience client. C’est ici qu’intervient le **PMS** (*Property Management System*), un outil indispensable pour tout gestionnaire de propriétés. Mais comment choisir le meilleur PMS pour votre activité? Dans ce guide, nous vous expliquons tout ce que vous devez savoir.
@@ -2552,6 +2593,7 @@ Utilisez-vous déjà un PMS pour votre activité? Quelles sont les fonctionnalit
   {
     id: "30253",
     slug: "reduccion-costos-operativos-viviendas-turisticas",
+    lang: "es",
     title: "Consejos para Property Managers: Cómo reducir costos operativos en viviendas turísticas y aumentar la rentabilidad",
     excerpt: "En la gestión de viviendas turísticas, la optimización de costos operativos es un factor clave para maximizar los márgenes de beneficio sin comprometer la calidad del servicio. Hoy en día, gestores de propiedades o Property Managers exitosos recurren",
     content: `En la gestión de viviendas turísticas, la optimización de costos operativos es un factor clave para maximizar los márgenes de beneficio sin comprometer la calidad del servicio. Hoy en día, gestores de propiedades o **Property** **Managers** exitosos recurren a estrategias de eficiencia operativa, tecnología y precios dinámicos para reducir gastos y, al mismo tiempo, incrementar los ingresos. En este artículo, te mostramos cómo implementar estas prácticas, apoyándote en los [**servicios** **de** **Roomonitor**](https://new.roomonitor.com/) para reducir costos en atención al cliente, control de ruido, y optimización de recursos.
@@ -2594,6 +2636,7 @@ Reducir costos operativos y mejorar la rentabilidad de las viviendas turísticas
   {
     id: "30265",
     slug: "reducing-operational-costs-vacation-rentals",
+    lang: "es",
     title: "Tips for property managers: How to reduce operational costs in vacation rentals and increase profitability",
     excerpt: "In the management of vacation rentals, optimizing operational costs is a key factor in maximizing profit margins without compromising service quality. Today, successful property managers rely on operational efficiency strategies, technology, and dyna",
     content: `In the management of vacation rentals, optimizing operational costs is a key factor in maximizing profit margins without compromising service quality. Today, successful property managers rely on operational efficiency strategies, technology, and dynamic pricing to reduce expenses while increasing revenue. In this article, we show you how to implement these practices, supported by [**Roomonitor's** services](https://new.roomonitor.com/) to reduce customer service costs, noise control, and resource optimization.
@@ -2636,6 +2679,7 @@ Reducing operational costs and improving the profitability of vacation rentals r
   {
     id: "30268",
     slug: "reduction-des-couts-operationnels-dans-les-locations-touristiques",
+    lang: "es",
     title: "Conseils pour les Property Managers: comment réduire les coûts opérationnels dans les locations touristiques et augmenter la rentabilité",
     excerpt: "Dans la gestion des logements touristiques, l'optimisation des coûts opérationnels est un facteur clé pour maximiser les marges bénéficiaires sans compromettre la qualité du service. Aujourd'hui, les gestionnaires de propriétés ou Property Managers r",
     content: `Dans la gestion des logements touristiques, l'optimisation des coûts opérationnels est un facteur clé pour maximiser les marges bénéficiaires sans compromettre la qualité du service. Aujourd'hui, les gestionnaires de propriétés ou **Property** **Managers** réussis recourent à des stratégies d'efficacité opérationnelle, à la technologie et à la tarification dynamique pour réduire les dépenses tout en augmentant les revenus. Dans cet article, nous vous montrons comment mettre en œuvre ces pratiques, en vous appuyant sur les [**services** **de** **Roomonitor**](https://new.roomonitor.com/) pour réduire les coûts de service client, de gestion du bruit et d'optimisation des ressources.
@@ -2678,6 +2722,7 @@ Réduire les coûts opérationnels et améliorer la rentabilité des logements t
   {
     id: "30270",
     slug: "reducao-custos-operacionais-imoveis-turisticos",
+    lang: "es",
     title: "Dicas para Property Managers: Como reduzir os custos operacionais em imóveis turísticos e aumentar a rentabilidade",
     excerpt: "Na gestão de imóveis turísticos, a otimização de custos operacionais é um fator chave para maximizar as margens de lucro sem comprometer a qualidade do serviço. Atualmente, os gestores de propriedades ou Property Managers de sucesso recorrem a estrat",
     content: `Na gestão de imóveis turísticos, a otimização de custos operacionais é um fator chave para maximizar as margens de lucro sem comprometer a qualidade do serviço. Atualmente, os gestores de propriedades ou **Property Managers** de sucesso recorrem a estratégias de eficiência operacional, tecnologia e preços dinâmicos para reduzir despesas e, ao mesmo tempo, aumentar a receita. Neste artigo, mostramos como implementar essas práticas, apoiando-se nos [**serviços** **da** **Roomonitor**](https://new.roomonitor.com/) para reduzir custos no atendimento ao cliente, controle de ruído e otimização de recursos.
@@ -2720,6 +2765,7 @@ Reduzir custos operacionais e melhorar a rentabilidade dos imóveis turísticos 
   {
     id: "34474",
     slug: "pisos-turisticos-barcelona-mwc",
+    lang: "es",
     title: "El 84% de los congresistas del MWC ve un problema en la eliminación de los pisos turísticos",
     excerpt: "El futuro de los pisos turísticos en Barcelona es incierto, especialmente tras la promesa del alcalde Jaume Collboni de erradicar esta modalidad de alojamiento para 2028. En este contexto, la Asociación de Apartamentos Turísticos de Barcelona (Apartu",
     content: `El futuro de los pisos turísticos en Barcelona es incierto, especialmente tras la promesa del alcalde Jaume Collboni de erradicar esta modalidad de alojamiento para 2028. En este contexto, la Asociación de Apartamentos Turísticos de Barcelona ([Apartur](https://apartur.com/)) ha realizado una encuesta entre los asistentes al Mobile World Congress ([MWC](https://www.mwcbarcelona.com/)) 2024, revelando que el 84% de los congresistas considera que la eliminación de los pisos turísticos sería un problema.
@@ -2744,6 +2790,7 @@ El futuro del turismo en Barcelona requiere un equilibrio entre regulación y te
   {
     id: "34478",
     slug: "roomonitor-avantio-partnership-25",
+    lang: "es",
     title: "Roomonitor en The Avantio Partnership 25",
     excerpt: "En Roomonitor no nos hemos querido perder The Avantio Partnership 25, un evento de referencia para gestores de propiedades y partners del sector del alquiler vacacional. Con centenares de asistentes, este encuentro se convirtió en el espacio ideal pa",
     content: `En Roomonitor no nos hemos querido perder [The Avantio Partnership 25](https://www.avantio.com/es/event/the-avantio-partnership/), un evento de referencia para gestores de propiedades y partners del sector del alquiler vacacional. Con centenares de asistentes, este encuentro se convirtió en el espacio ideal para el **networking**, la generación de oportunidades de negocio y el descubrimiento de las tendencias que están marcando el futuro de la industria.
@@ -2773,6 +2820,7 @@ La participación de Roomonitor en **The Avantio Partnership 25** reafirma nuest
   {
     id: "34898",
     slug: "roomonitor-avantio-partnership-25",
+    lang: "es",
     title: "Roomonitor at The Avantio Partnership 25",
     excerpt: "At Roomonitor, we couldn't miss The Avantio Partnership 25, a key event for property managers and industry partners in the vacation rental sector. With hundreds of attendees, this gathering became the perfect space for networking, business opportunit",
     content: `At Roomonitor, we couldn't miss [The Avantio Partnership 25](https://www.avantio.com/es/event/the-avantio-partnership/), a key event for property managers and industry partners in the vacation rental sector. With hundreds of attendees, this gathering became the perfect space for **networking**, business opportunities, and discovering the trends shaping the future of the industry.
@@ -2808,6 +2856,7 @@ Roomonitor’s participation in **The Avantio Partnership 25** reaffirms our com
   {
     id: "34904",
     slug: "roomonitor-avantio-partnership-25",
+    lang: "es",
     title: "Roomonitor à The Avantio Partnership 25",
     excerpt: "Chez Roomonitor, nous ne pouvions pas manquer The Avantio Partnership 25, un événement incontournable pour les gestionnaires de biens et les partenaires du secteur de la location de vacances. Avec des centaines de participants, cette rencontre était ",
     content: `Chez Roomonitor, nous ne pouvions pas manquer [The Avantio Partnership 25](https://www.avantio.com/es/event/the-avantio-partnership/), un événement incontournable pour les gestionnaires de biens et les partenaires du secteur de la location de vacances. Avec des centaines de participants, cette rencontre était l'occasion idéale pour le **networking**, le développement d'opportunités commerciales et la découverte des tendances qui façonnent l'avenir de l'industrie.
@@ -2843,6 +2892,7 @@ La participation de Roomonitor à **The Avantio Partnership 25** réaffirme notr
   {
     id: "34906",
     slug: "roomonitor-avantio-partnership-25",
+    lang: "es",
     title: "Roomonitor no The Avantio Partnership 25",
     excerpt: "Na Roomonitor, não podíamos perder The Avantio Partnership 25, um evento de referência para gestores de propriedades e parceiros do setor de aluguel de férias. Com centenas de participantes, este encontro foi o espaço ideal para networking, geração d",
     content: `Na Roomonitor, não podíamos perder [The Avantio Partnership 25](https://www.avantio.com/es/event/the-avantio-partnership/), um evento de referência para gestores de propriedades e parceiros do setor de aluguel de férias. Com centenas de participantes, este encontro foi o espaço ideal para **networking**, geração de oportunidades de negócios e descoberta das tendências que estão moldando o futuro da indústria.
@@ -2878,6 +2928,7 @@ A participação da Roomonitor no **The Avantio Partnership 25** reafirma nosso 
   {
     id: "31588",
     slug: "datos-clave-que-marcaron-el-inicio-de-2025-en-roomonitor",
+    lang: "es",
     title: "Datos clave que marcaron el inicio de 2025 en Roomonitor",
     excerpt: "Cerramos el 2024 con datos muy positivos, pero el 2025 también ha arrancado con mucha actividad en Roomonitor. Nuestro equipo ha estado trabajando sin descanso para garantizar la mejor experiencia a nuestros clientes, y los números hablan por sí solo",
     content: `Cerramos el 2024 con datos muy positivos, pero el 2025 también ha arrancado con mucha actividad en Roomonitor. Nuestro equipo ha estado trabajando sin descanso para garantizar la mejor experiencia a nuestros clientes, y los números hablan por sí solos. Aquí te presentamos un resumen de los principales hitos de enero, con nuestro primer informe del 2025.
@@ -2913,6 +2964,7 @@ Estos datos reflejan el compromiso de Roomonitor con la excelencia y la eficienc
   {
     id: "31599",
     slug: "key-data-that-marked-the-beginning-of-2025-at-roomonitor",
+    lang: "es",
     title: "Key data that marked the beginning of 2025 at Roomonitor",
     excerpt: "We closed 2024 with very positive results, and 2025 has also started with high activity at Roomonitor. Our team has been working tirelessly to ensure the best experience for our clients, and the numbers speak for themselves. Here’s a summary of the k",
     content: `We closed 2024 with very positive results, and 2025 has also started with high activity at Roomonitor. Our team has been working tirelessly to ensure the best experience for our clients, and the numbers speak for themselves. Here’s a summary of the key milestones from January, with our first report of 2025.
@@ -2948,6 +3000,7 @@ Do you want to take your property security to the next level? [Contact us](https
   {
     id: "31605",
     slug: "donnees-cles-qui-ont-marque-le-debut-de-2025-chez-roomonitor",
+    lang: "es",
     title: "Données clés qui ont marqué le début de 2025 chez Roomonitor",
     excerpt: "Nous avons clôturé 2024 avec des résultats très positifs, et 2025 a également commencé avec une forte activité chez Roomonitor. Notre équipe a travaillé sans relâche pour garantir la meilleure expérience à nos clients, et les chiffres parlent d’eux-m",
     content: `Nous avons clôturé 2024 avec des résultats très positifs, et 2025 a également commencé avec une forte activité chez Roomonitor. Notre équipe a travaillé sans relâche pour garantir la meilleure expérience à nos clients, et les chiffres parlent d’eux-mêmes. Voici un résumé des principales réalisations de janvier, avec notre premier rapport de 2025.
@@ -2983,6 +3036,7 @@ Vous souhaitez renforcer la sécurité de vos propriétés ? [Contactez-nous](ht
   {
     id: "31607",
     slug: "dados-chave-que-marcaram-o-inicio-de-2025-na-roomonitor",
+    lang: "es",
     title: "Dados-chave que marcaram o início de 2025 na Roomonitor",
     excerpt: "Encerramos 2024 com dados muito positivos, e 2025 também começou com grande atividade na Roomonitor. Nossa equipe tem trabalhado incansavelmente para garantir a melhor experiência para nossos clientes, e os números falam por si mesmos. Aqui está um r",
     content: `Encerramos 2024 com dados muito positivos, e 2025 também começou com grande atividade na Roomonitor. Nossa equipe tem trabalhado incansavelmente para garantir a melhor experiência para nossos clientes, e os números falam por si mesmos. Aqui está um resumo dos principais marcos de janeiro, com nosso primeiro relatório de 2025.
@@ -3018,6 +3072,7 @@ Quer levar a segurança das suas propriedades para o próximo nível? [Entre em 
   {
     id: "31503",
     slug: "problemas-incidencias-nocturnas",
+    lang: "es",
     title: "Problemas e incidencias nocturnas: Cómo afrontarlas sin morir en el intento",
     excerpt: "La noche puede ser un terreno complicado para cualquier gestor de alojamientos turísticos. Desde ruidos molestos hasta incidencias técnicas o quejas de vecinos, los problemas nocturnos son inevitables. Pero, ¿cómo afrontarlos sin sacrificar el descan",
     content: `La noche puede ser un terreno complicado para cualquier gestor de alojamientos turísticos. Desde ruidos molestos hasta incidencias técnicas o quejas de vecinos, los problemas nocturnos son inevitables. Pero, ¿cómo afrontarlos sin sacrificar el descanso ni la experiencia del huésped? Aquí te damos algunos consejos clave.
@@ -3057,6 +3112,7 @@ Las incidencias nocturnas son parte del negocio, pero con una buena planificaci�
   {
     id: "31536",
     slug: "problemas-incidentes-noturnos",
+    lang: "es",
     title: "Problemas e incidentes noturnos: Como enfrentá-los sem perder o sono",
     excerpt: "A noite pode ser um período desafiador para qualquer gestor de acomodações turísticas. Desde barulho excessivo até problemas técnicos ou reclamações de vizinhos, os incidentes noturnos são inevitáveis. Mas como lidar com eles sem sacrificar seu desca",
     content: `A noite pode ser um período desafiador para qualquer gestor de acomodações turísticas. Desde barulho excessivo até problemas técnicos ou reclamações de vizinhos, os incidentes noturnos são inevitáveis. Mas como lidar com eles sem sacrificar seu descanso ou a experiência do hóspede? Aqui estão algumas dicas essenciais.
@@ -3096,6 +3152,7 @@ Você já aplica alguma dessas estratégias? Compartilhe sua experiência conosc
   {
     id: "31538",
     slug: "nighttime-issues-incidents",
+    lang: "es",
     title: "Nighttime issues and incidents: How to handle them without losing your mind",
     excerpt: "Nighttime can be a challenging period for any vacation rental manager. From noise disturbances to technical issues or neighbor complaints, nighttime problems are inevitable. But how can you handle them without sacrificing your rest or the guest exper",
     content: `Nighttime can be a challenging period for any vacation rental manager. From noise disturbances to technical issues or neighbor complaints, nighttime problems are inevitable. But how can you handle them without sacrificing your rest or the guest experience? Here are some key tips.
@@ -3135,6 +3192,7 @@ Are you already using any of these strategies? Share your experience with us!`,
   {
     id: "31540",
     slug: "problemes-incidents-nocturnes",
+    lang: "es",
     title: "Problèmes et incidents nocturnes : comment les gérer sans y laisser son sommeil",
     excerpt: "La nuit peut être un moment délicat pour tout gestionnaire de locations touristiques. Des nuisances sonores aux problèmes techniques ou aux plaintes des voisins, les incidents nocturnes sont inévitables. Mais comment les gérer sans sacrifier son somm",
     content: `La nuit peut être un moment délicat pour tout gestionnaire de locations touristiques. Des nuisances sonores aux problèmes techniques ou aux plaintes des voisins, les incidents nocturnes sont inévitables. Mais comment les gérer sans sacrifier son sommeil ni l'expérience des invités ? Voici quelques conseils essentiels.
@@ -3172,6 +3230,7 @@ Appliquez-vous déjà ces stratégies ? Partagez votre expérience avec nous !`,
   {
     id: "31304",
     slug: "piloto-acciones-werespect-convivencia-turistica-mallorca",
+    lang: "es",
     title: "Novedades en FITUR 2025: presentamos el piloto de acciones de convivencia turística en Mallorca a través de weRespect",
     excerpt: "Durante FITUR 2025, uno de los principales eventos internacionales de turismo celebrado en IFEMA Madrid, presentamos con weRespect el nuevo piloto de acciones de convivencia turística que llevaremos a cabo en Mallorca. Este innovador proyecto busca f",
     content: `Durante **FITUR 2025**, uno de los principales eventos internacionales de turismo celebrado en IFEMA Madrid, presentamos con [**weRespect**](https://werespect.net/prensa/presentamos-el-piloto-de-acciones-werespect-en-mallorca-durante-fitur-2025) el nuevo **piloto de acciones de convivencia turística que llevaremos a cabo en Mallorca**. Este innovador proyecto busca fomentar la sostenibilidad y la buena convivencia en el sector del alquiler turístico, contando con la colaboración de partners como **Roomonitor**.
@@ -3208,6 +3267,7 @@ Juntos podemos construir un turismo más sostenible y respetuoso.`,
   {
     id: "31252",
     slug: "asier-pereda-fevitur-el-equilibrio-entre-el-bien-comun-y-el-interes-publico-es-clave-para-el-futuro-de-las-vut",
+    lang: "es",
     title: "Asier Pereda (Fevitur): “El equilibrio entre el bien común y el interés público es clave para el futuro de las VUT”",
     excerpt: "En España, el alquiler turístico enfrenta un periodo de cambios significativos debido a nuevas normativas y ajustes fiscales que buscan equilibrar la actividad económica con el acceso a la vivienda. Para entender mejor el impacto de estas medidas, en",
     content: `En España, el alquiler turístico enfrenta un periodo de cambios significativos debido a nuevas normativas y ajustes fiscales que buscan equilibrar la actividad económica con el acceso a la vivienda. Para entender mejor el impacto de estas medidas, entrevistamos a **Asier Pereda**, presidente de [**Aparture**](https://aparture.com/) (Euskadi) y Responsable del área de Asuntos Regulatorios y Relaciones Institucionales en [**Fevitur**](https://www.fevitur.es/), quien nos ofrece su visión sobre los retos y oportunidades que enfrenta el sector de las viviendas de uso turístico (VUT) en este nuevo escenario.
@@ -3264,6 +3324,7 @@ La experiencia nos demuestra que fomentar el rigor normativo, la recaudación fi
   {
     id: "31216",
     slug: "juan-cubo-avva-pro-room-talks-vivienda-malaga",
+    lang: "es",
     title: "Juan Cubo (AVVAPro): “No se puede hacer política social con la propiedad de otro”",
     excerpt: "En una reciente charla con Roomonitor, Juan Cubo, CEO de Cubos Holiday Homes y presidente de la Asociación de Profesionales de Viviendas y Apartamentos Turísticos de Andalucía (AVVAPro), compartió sus reflexiones sobre la nueva normativa que restring",
     content: `En una reciente charla con Roomonitor, Juan Cubo, CEO de Cubos Holiday Homes y presidente de la Asociación de Profesionales de Viviendas y Apartamentos Turísticos de Andalucía (AVVAPro), compartió sus reflexiones sobre [la nueva normativa que restringe el uso de viviendas turísticas en Málaga](https://new.roomonitor.com/es/noticias/zonas-malaga-prohibicion-viviendas-turisticas/). Según Cubo, estas regulaciones, que afectan a 43 áreas de la ciudad, representan un desafío significativo para los gestores de propiedades y los propietarios.
@@ -3285,6 +3346,7 @@ El presidente de AVVAPro concluyó pidiendo calma y análisis antes de implement
   {
     id: "30965",
     slug: "zonas-malaga-prohibicion-viviendas-turisticas",
+    lang: "es",
     title: "Las 43 zonas de Málaga que tienen prohibida la creación de viviendas turísticas",
     excerpt: "El pasado 14 de enero de 2025, entró en vigor una nueva normativa municipal en Málaga que prohíbe la inscripción de nuevas viviendas turísticas en 43 zonas de la ciudad. Esta medida busca regular la oferta turística en áreas donde la alta concentraci",
     content: `El pasado 14 de enero de 2025, entró en vigor una nueva normativa municipal en Málaga que prohíbe la inscripción de nuevas **viviendas turísticas** en 43 zonas de la ciudad. Esta medida busca regular la oferta turística en áreas donde la alta concentración de pisos turísticos supera el **8% del parque residencial**, con el objetivo de garantizar un equilibrio entre la actividad turística y las necesidades de vivienda de los residentes locales.
@@ -3329,6 +3391,7 @@ Si necesitas más información sobre cómo nuestras herramientas pueden ayudarte
   {
     id: "30994",
     slug: "medidas-gobierno-viviendas-turisticas-espana",
+    lang: "es",
     title: "Las 12 nuevas medidas del gobierno español y su impacto en las viviendas turísticas",
     excerpt: "En un intento por aliviar la crisis de la vivienda en España, Pedro Sánchez ha anunciado un paquete de 12 medidas que incluye regulaciones específicas para las viviendas turísticas. Estas propuestas buscan equilibrar la oferta de alquiler turístico c",
     content: `En un intento por aliviar la crisis de la vivienda en España, Pedro Sánchez ha anunciado un paquete de 12 medidas que incluye regulaciones específicas para las **viviendas turísticas**. Estas propuestas buscan equilibrar la oferta de alquiler turístico con la necesidad de garantizar el acceso a la vivienda para los residentes, especialmente en las grandes ciudades donde la presión del mercado inmobiliario es mayor.
@@ -3365,6 +3428,7 @@ Además, nuestra experiencia en la gestión de propiedades permite optimizar la 
   {
     id: "30971",
     slug: "sevilla-pisos-turisticos-aprobacion-vecinal",
+    lang: "es",
     title: "Los pisos turísticos en Sevilla necesitarán el consentimiento de los vecinos",
     excerpt: "El Ayuntamiento de Sevilla ha aprobado una nueva normativa que afecta directamente a la apertura de nuevos pisos turísticos. A partir de ahora, será obligatorio contar con el consentimiento de la comunidad de vecinos para poder registrar y operar est",
     content: `El Ayuntamiento de Sevilla ha aprobado una nueva normativa que afecta directamente a la apertura de **nuevos pisos turísticos**. A partir de ahora, será obligatorio contar con el consentimiento de la comunidad de vecinos para poder registrar y operar este tipo de alojamientos. Esta medida, pionera en Andalucía, busca garantizar un equilibrio entre el desarrollo turístico y la convivencia en los barrios de la ciudad.
@@ -3400,6 +3464,7 @@ Si gestionas propiedades en Sevilla, te invitamos a conocer nuestras herramienta
   {
     id: "30959",
     slug: "grecia-regulacion-pisos-turisticos-crisis-vivienda",
+    lang: "es",
     title: "Grecia endurece las regulaciones para pisos turísticos: ¿qué significa para el sector?",
     excerpt: "El Gobierno griego ha aprobado una nueva legislación que busca reducir drásticamente el número de alojamientos turísticos gestionados por plataformas como Airbnb, en respuesta a una creciente crisis de vivienda. Esta medida, que incluye restricciones",
     content: `El Gobierno griego ha aprobado una nueva legislación que busca reducir drásticamente el número de alojamientos turísticos gestionados por plataformas como Airbnb, en respuesta a una creciente crisis de vivienda. Esta medida, que incluye restricciones más estrictas y multas más severas, ha generado un intenso debate sobre el impacto del alquiler turístico en el mercado inmobiliario y en el sector turístico del país.
@@ -3434,6 +3499,7 @@ Si gestionas propiedades en Grecia o en otros mercados afectados por regulacione
   {
     id: "30981",
     slug: "informe-diciembre-asi-cerramos-el-ultimo-mes-del-2024-en-roomonitor",
+    lang: "es",
     title: "Informe diciembre: así cerramos el último mes del 2024 en Roomonitor",
     excerpt: "En Roomonitor, terminamos el año con un mes de diciembre lleno de actividad y excelentes resultados. Nuestro equipo continuó demostrando un compromiso sólido con la calidad del servicio, asegurando la satisfacción de nuestros clientes y optimizando l",
     content: `En **Roomonitor**, terminamos el año con un mes de diciembre lleno de actividad y excelentes resultados. Nuestro equipo continuó demostrando un compromiso sólido con la calidad del servicio, asegurando la satisfacción de nuestros clientes y optimizando la gestión de propiedades turísticas. A continuación, te compartimos las métricas más relevantes del mes:
@@ -3459,6 +3525,7 @@ Si deseas conocer más sobre cómo nuestras soluciones pueden ayudarte a mejorar
   {
     id: "31018",
     slug: "december-report-how-we-wrapped-up-the-last-month-of-2024-at-roomonitor",
+    lang: "es",
     title: "December report: how we wrapped up the last month of 2024 at Roomonitor",
     excerpt: "At Roomonitor, we closed out the year with a December full of activity and excellent results. Our team remained deeply committed to delivering high-quality service, ensuring customer satisfaction, and optimizing the management of vacation rental prop",
     content: `At **Roomonitor**, we closed out the year with a December full of activity and excellent results. Our team remained deeply committed to delivering high-quality service, ensuring customer satisfaction, and optimizing the management of vacation rental properties. Here are the most relevant metrics from the month:
@@ -3484,6 +3551,7 @@ If you'd like to learn more about how our solutions can help you optimize the ma
   {
     id: "31022",
     slug: "rapport-decembre-comment-roomonitor-a-cloture-le-dernier-mois-2024",
+    lang: "es",
     title: "Rapport de décembre : voici comment Roomonitor a clôturé le dernier mois de 2024",
     excerpt: "Chez Roomonitor, nous avons terminé l'année avec un mois de décembre riche en activité et des résultats remarquables. Notre équipe a continué à faire preuve d’un engagement solide envers la qualité du service, garantissant la satisfaction de nos clie",
     content: `Chez **Roomonitor**, nous avons terminé l'année avec un mois de décembre riche en activité et des résultats remarquables. Notre équipe a continué à faire preuve d’un engagement solide envers la qualité du service, garantissant la satisfaction de nos clients tout en optimisant la gestion des propriétés touristiques. Voici les données les plus marquantes du mois :
@@ -3509,6 +3577,7 @@ Pour en savoir plus sur nos solutions et comment elles peuvent améliorer la ges
   {
     id: "31024",
     slug: "relatorio-dezembro-veja-como-roomonitor-encerrou-ultimo-mes-2024",
+    lang: "es",
     title: "Relatório de dezembro: veja como a Roomonitor encerrou o último mês de 2024",
     excerpt: "Na Roomonitor, encerramos o ano com um mês de dezembro cheio de atividades e resultados impressionantes. Nossa equipe continuou demonstrando um forte compromisso com a qualidade do serviço, garantindo a satisfação dos nossos clientes e otimizando a g",
     content: `Na **Roomonitor**, encerramos o ano com um mês de dezembro cheio de atividades e resultados impressionantes. Nossa equipe continuou demonstrando um forte compromisso com a qualidade do serviço, garantindo a satisfação dos nossos clientes e otimizando a gestão de propriedades turísticas. A seguir, compartilhamos os dados mais relevantes do mês:
@@ -3534,6 +3603,7 @@ Se você deseja saber mais sobre como nossas soluções podem ajudá-lo a melhor
   {
     id: "30611",
     slug: "diferencas-casas-aluguel-ferias-apartamentos-turisticos",
+    lang: "es",
     title: "Casas de aluguel para férias vs. apartamentos turísticos: quais são as principais diferenças?",
     excerpt: "No setor de aluguel de curto prazo, os termos casa de aluguel para férias e apartamento turístico frequentemente causam confusão, especialmente para aqueles que estão começando no mercado. Embora ambos se refiram a acomodações para turistas, suas exi",
     content: `No setor de aluguel de curto prazo, os termos **casa de aluguel para férias** e **apartamento turístico** frequentemente causam confusão, especialmente para aqueles que estão começando no mercado. Embora ambos se refiram a acomodações para turistas, suas exigências legais, operacionais e fiscais diferem significativamente. Este artigo explica as diferenças para ajudá-lo a gerenciá-los de maneira eficiente.
@@ -3589,6 +3659,7 @@ Escolher entre gerenciar uma casa de aluguel para férias ou um apartamento tur�
   {
     id: "30618",
     slug: "differences-holiday-rental-homes-tourist-apartments",
+    lang: "es",
     title: "Holiday rental homes vs. tourist apartments: what are the key differences?",
     excerpt: "In the short-term rental industry, the terms holiday rental home and tourist apartment can often cause confusion, especially for those new to the market. While both refer to accommodations for tourists, they differ significantly in their legal, opera",
     content: `In the short-term rental industry, the terms **holiday rental home** and **tourist apartment** can often cause confusion, especially for those new to the market. While both refer to accommodations for tourists, they differ significantly in their legal, operational, and tax requirements. This article breaks down the differences to help you manage them effectively.
@@ -3644,6 +3715,7 @@ Choosing between managing a holiday rental home or a tourist apartment depends o
   {
     id: "30623",
     slug: "diferencias-vut-at-guia-completa-gestores-propiedades",
+    lang: "es",
     title: "VUT vs. AT: ¿Qué diferencias existen y qué debes saber?",
     excerpt: "En el sector del alquiler turístico, los términos Vivienda de Uso Turístico (VUT) y Apartamento Turístico (AT) suelen generar confusión, especialmente para quienes están empezando en este mercado. Aunque ambos conceptos se refieren a alojamientos des",
     content: `En el sector del alquiler turístico, los términos **Vivienda de Uso Turístico (VUT)** y **Apartamento Turístico (AT)** suelen generar confusión, especialmente para quienes están empezando en este mercado. Aunque ambos conceptos se refieren a alojamientos destinados a turistas, tienen características legales, operativas y fiscales muy distintas. En este artículo, te explicamos de manera detallada qué diferencias hay entre un VUT y un AT, para que puedas gestionarlos adecuadamente.
@@ -3699,6 +3771,7 @@ Elegir entre gestionar una Vivienda de Uso Turístico (VUT) o un Apartamento Tur
   {
     id: "30624",
     slug: "differences-maisons-location-saisonniere-appartements-touristiques",
+    lang: "es",
     title: "Maisons de location saisonnière vs appartements touristiques: quelles différences clés ?",
     excerpt: "Dans le secteur des locations de courte durée, les termes maison de location saisonnière et appartement touristique peuvent prêter à confusion, en particulier pour ceux qui débutent dans ce domaine. Bien que les deux désignent des hébergements destin",
     content: `Dans le secteur des locations de courte durée, les termes **maison de location saisonnière** et **appartement touristique** peuvent prêter à confusion, en particulier pour ceux qui débutent dans ce domaine. Bien que les deux désignent des hébergements destinés aux touristes, leurs exigences légales, opérationnelles et fiscales diffèrent considérablement. Cet article vous aide à mieux comprendre ces distinctions pour une gestion optimale.
@@ -3754,6 +3827,7 @@ Choisir entre la gestion d’une maison de location saisonnière ou d’un appar
   {
     id: "30595",
     slug: "turismo-global-2024-recuperacion-total-onu",
+    lang: "es",
     title: "El turismo global se recupera totalmente en 2024 según el Barómetro de la ONU",
     excerpt: "Según el último Barómetro del Turismo Mundial de ONU Turismo, el turismo internacional ha alcanzado el 98% de los niveles prepandemia durante los primeros nueve meses de 2024, y se espera una recuperación total para finales de año. Este hito refleja ",
     content: `Según el último [**Barómetro del Turismo Mundial de ONU Turismo**](https://www.unwto.org/es/barometro-del-turismo-mundial-de-onu-turismo), el turismo internacional ha alcanzado el **98% de los niveles prepandemia** durante los primeros nueve meses de 2024, y se espera una recuperación total para finales de año. Este hito refleja el papel fundamental del turismo en la economía global, con un crecimiento del gasto turístico que supera al de las llegadas.
@@ -3781,6 +3855,7 @@ Descubre cómo nuestras herramientas pueden ayudarte a maximizar las oportunidad
   {
     id: "30547",
     slug: "airbnb-regulacion-justa-alquileres-corta-duracion",
+    lang: "es",
     title: "Airbnb impulsa una regulación justa basada en datos para los alquileres de corta duración",
     excerpt: "En medio del debate sobre la crisis de vivienda en España, Airbnb ha dado un paso adelante al proponer medidas basadas en datos que buscan regular los alquileres de corta duración sin afectar negativamente el mercado residencial. Este enfoque, respal",
     content: `En medio del debate sobre la crisis de vivienda en España, **Airbnb** ha dado un paso adelante al proponer medidas basadas en datos que buscan regular los **alquileres de corta duración** sin afectar negativamente el mercado residencial. Este enfoque, respaldado por un exhaustivo [**estudio**](https://news.airbnb.com/wp-content/uploads/sites/4/2024/12/Informe-PwC-Impacto-del-alquiler-de-corta-duracion-en-Espana.pdf) encargado a PwC, pone en evidencia que el impacto de los alquileres turísticos en el mercado inmobiliario es mínimo y que la solución pasa por abordar otros factores más estructurales.
@@ -3825,6 +3900,7 @@ Desde **Roomonitor**, apoyamos las propuestas que combinan datos, tecnología y 
   {
     id: "30561",
     slug: "resumen-noviembre-roomonitor",
+    lang: "es",
     title: "Noviembre en números: el informe mensual de Roomonitor",
     excerpt: "En Roomonitor, continuamos demostrando nuestro compromiso con la excelencia en la gestión de propiedades de alquiler turístico. Nuestro informe mensual de noviembre destaca métricas clave que reflejan la calidad y eficiencia de nuestros servicios. A ",
     content: `En **Roomonitor**, continuamos demostrando nuestro compromiso con la excelencia en la gestión de propiedades de alquiler turístico. Nuestro informe mensual de noviembre destaca métricas clave que reflejan la calidad y eficiencia de nuestros servicios. A continuación, compartimos los datos más relevantes de este mes.
@@ -3869,6 +3945,7 @@ Gracias a la tecnología avanzada, analizamos en tiempo real los datos recogidos
   {
     id: "30573",
     slug: "november-summary-roomonitor",
+    lang: "es",
     title: "November in numbers: Roomonitor's monthly report",
     excerpt: "At Roomonitor, we continue to demonstrate our commitment to excellence in managing vacation rental properties. Our November monthly report highlights key metrics that reflect the quality and efficiency of our services. Below, we share the most import",
     content: `At **Roomonitor**, we continue to demonstrate our commitment to excellence in managing vacation rental properties. Our November monthly report highlights key metrics that reflect the quality and efficiency of our services. Below, we share the most important data from this month.
@@ -3913,6 +3990,7 @@ Are you interested in learning how **Roomonitor** can help you manage your prope
   {
     id: "30576",
     slug: "resume-novembre-roomonitor",
+    lang: "es",
     title: "Novembre en chiffres: le rapport mensuel de Roomonitor",
     excerpt: "Chez Roomonitor, nous continuons à prouver notre engagement envers l’excellence dans la gestion des propriétés de location saisonnière. Notre rapport mensuel de novembre met en lumière des indicateurs clés qui reflètent la qualité et l’efficacité de ",
     content: `Chez **Roomonitor**, nous continuons à prouver notre engagement envers l’excellence dans la gestion des propriétés de location saisonnière. Notre rapport mensuel de novembre met en lumière des indicateurs clés qui reflètent la qualité et l’efficacité de nos services. Voici les données les plus significatives de ce mois.
@@ -3957,6 +4035,7 @@ Vous souhaitez découvrir comment **Roomonitor** peut vous aider à mieux gérer
   {
     id: "30578",
     slug: "resumo-novembro-roomonitor",
+    lang: "es",
     title: "Novembro em números: o relatório mensal da Roomonitor",
     excerpt: "Na Roomonitor, seguimos demonstrando nosso compromisso com a excelência na gestão de propriedades de aluguel por temporada. Nosso relatório mensal de novembro destaca métricas importantes que refletem a qualidade e eficiência dos nossos serviços. A s",
     content: `Na **Roomonitor**, seguimos demonstrando nosso compromisso com a excelência na gestão de propriedades de aluguel por temporada. Nosso relatório mensal de novembro destaca métricas importantes que refletem a qualidade e eficiência dos nossos serviços. A seguir, apresentamos os dados mais relevantes do mês.
@@ -3999,6 +4078,7 @@ Com tecnologia avançada, analisamos em tempo real os dados coletados pelos noss
   {
     id: "30470",
     slug: "nueva-normativa-registro-viajeros-2-diciembre",
+    lang: "es",
     title: "Todo lo que debes saber sobre la nueva normativa de registro de viajeros que entra en vigor el 2 de diciembre",
     excerpt: "El próximo 2 de diciembre marca un cambio importante para los gestores de propiedades en España con la entrada en vigor del RD 933/2021. Esta normativa establece nuevas obligaciones para el registro e identificación de los huéspedes en alquileres de ",
     content: `El próximo **2 de diciembre** marca un cambio importante para los **gestores de propiedades** en España con la entrada en vigor del **RD 933/2021**. Esta normativa establece nuevas obligaciones para el registro e identificación de los huéspedes en **alquileres de corta duración**, reforzando la seguridad y el cumplimiento legal en el sector.
@@ -4037,6 +4117,7 @@ En **Roomonitor**, nos especializamos en ofrecer herramientas innovadoras que no
   {
     id: "30438",
     slug: "roomonitor-scale-france-2024",
+    lang: "es",
     title: "Scale France 2024, el evento imprescindible del sector del alquiler de corta duración",
     excerpt: "En Roomonitor, nos enorgullece haber sido uno de los patrocinadores de Scale France 2024, el evento clave para el sector del alquiler de corta duración que reunió a los principales actores de la industria en París. Este encuentro, celebrado los días ",
     content: `En **Roomonitor**, nos enorgullece haber sido uno de los patrocinadores de **Scale France 2024**, el evento clave para el sector del **alquiler de corta duración** que reunió a los principales actores de la industria en París. Este encuentro, celebrado los días 27 y 28 de noviembre, ha sido una oportunidad única para intercambiar conocimientos, establecer conexiones valiosas y explorar las últimas innovaciones en el sector.
@@ -4067,6 +4148,7 @@ Si no pudiste asistir a [**Scale France 2024**](https://france.scalerentals.show
   {
     id: "30446",
     slug: "roomonitor-scale-france-2024",
+    lang: "es",
     title: "Scale France 2024, o evento imprescindível do setor de aluguel de curta duração",
     excerpt: "Na Roomonitor, temos orgulho de ter sido um dos patrocinadores do Scale France 2024, o evento essencial para o setor de aluguel de curta duração, que reuniu os principais atores da indústria em Paris. Este encontro, realizado nos dias 27 e 28 de nove",
     content: `Na **Roomonitor**, temos orgulho de ter sido um dos patrocinadores do **Scale France 2024**, o evento essencial para o setor de **aluguel de curta duração**, que reuniu os principais atores da indústria em Paris. Este encontro, realizado nos dias 27 e 28 de novembro, foi uma oportunidade única para trocar conhecimentos, estabelecer conexões valiosas e explorar as últimas inovações do setor.
@@ -4097,6 +4179,7 @@ Nos vemos no próximo grande evento do setor!`,
   {
     id: "30448",
     slug: "vitur-forum-madrid-futuro-hospedagem-flexivel",
+    lang: "es",
     title: "Vitur Forum Madrid 2024: o evento que molda o futuro da hospedagem flexível",
     excerpt: "O Vitur Forum Madrid, realizado no último dia 27 de novembro, consolidou-se como um dos eventos mais importantes do setor de aluguel de curta duração e alojamento flexível na Espanha. Na Roomonitor, tivemos a honra de participar, compartilhando conhe",
     content: `O **Vitur Forum Madrid**, realizado no último dia 27 de novembro, consolidou-se como um dos eventos mais importantes do setor de **aluguel de curta duração** e **alojamento flexível** na Espanha. Na **Roomonitor**, tivemos a honra de participar, compartilhando conhecimento e apresentando nossa visão sobre como otimizar a experiência do hóspede em um ambiente tão dinâmico.
@@ -4141,6 +4224,7 @@ Nos vemos na próxima edição do **[Vitur Forum](https://vitursummit.com/vitur-
   {
     id: "30450",
     slug: "vitur-forum-madrid-futuro-alojamiento-flexible",
+    lang: "es",
     title: "Vitur Forum Madrid 2024: el evento sobre el futuro del alojamiento flexible",
     excerpt: "El Vitur Forum Madrid, celebrado el pasado 27 de noviembre, se consolidó como uno de los eventos más destacados del sector del alquiler de corta duración y alojamiento flexible en España. En Roomonitor, tuvimos el honor de participar, compartiendo co",
     content: `El **Vitur Forum Madrid**, celebrado el pasado 27 de noviembre, se consolidó como uno de los eventos más destacados del sector del **alquiler de corta duración** y **alojamiento flexible** en España. En **Roomonitor**, tuvimos el honor de participar, compartiendo conocimientos y presentando nuestra visión sobre cómo optimizar la experiencia del huésped en un entorno tan dinámico.
@@ -4185,6 +4269,7 @@ Si no pudiste asistir al evento, te invitamos a conocer más sobre cómo **Roomo
   {
     id: "30376",
     slug: "queja-ehha-regulaciones-alquileres-corta-duracion-cataluna",
+    lang: "es",
     title: "La EHHA presenta una queja formal contra las regulaciones de alquileres en Cataluña",
     excerpt: "La Asociación Europea de Alquileres de Vacaciones (EHHA, por sus siglas en inglés) ha presentado una queja oficial ante la Comisión Europea contra el Decreto sobre el alojamiento catalán (3/2023), argumentando que esta normativa viola la Directiva de",
     content: `La Asociación Europea de Alquileres de Vacaciones (**EHHA**, por sus siglas en inglés) ha presentado una queja oficial ante la **Comisión Europea** contra el Decreto sobre el alojamiento catalán (3/2023), argumentando que esta normativa viola la Directiva de Servicios de la **Unión Europea (UE)**. El principal argumento de la EHHA es que las restricciones impuestas por esta ley son injustificadas, desproporcionadas y no abordan eficazmente los problemas que intentan resolver.
@@ -4208,6 +4293,7 @@ Este caso subraya un desafío más amplio para equilibrar las necesidades de reg
   {
     id: "30382",
     slug: "ehha-complaint-rental-regulations-catalonia",
+    lang: "es",
     title: "EHHA files formal complaint against rental regulations in Catalonia",
     excerpt: "The European Holiday Homes Association (EHHA) has filed a formal complaint with the European Commission against the Catalan Accommodation Decree (3/2023), arguing that the regulations violate the European Union (EU) Services Directive. The EHHA's mai",
     content: `The European Holiday Homes Association (**EHHA**) has filed a formal complaint with the **European Commission** against the Catalan Accommodation Decree (3/2023), arguing that the regulations violate the **European Union (EU)** Services Directive. The EHHA's main argument is that the restrictions imposed by this law are unjustified, disproportionate, and fail to effectively address the problems they aim to solve.
@@ -4231,6 +4317,7 @@ This case highlights a broader challenge in balancing the need for regulation wi
   {
     id: "30384",
     slug: "plainte-ehha-regulations-locations-courte-duree-catalogne",
+    lang: "es",
     title: "L'EHHA dépose une plainte officielle contre les régulations des locations en Catalogne",
     excerpt: "L'Association Européenne des Maisons de Vacances (EHHA) a déposé une plainte officielle auprès de la Commission Européenne contre le décret sur l'hébergement en Catalogne (3/2023), arguant que cette législation viole la Directive Services de l'Union ",
     content: `L'Association Européenne des Maisons de Vacances (**EHHA**) a déposé une plainte officielle auprès de la **Commission Européenne** contre le décret sur l'hébergement en Catalogne (3/2023), arguant que cette législation viole la **Directive Services de l'Union Européenne (UE)**. Le principal argument de l'EHHA est que les restrictions imposées par cette loi sont injustifiées, disproportionnées et ne résolvent pas efficacement les problèmes qu'elles visent à résoudre.
@@ -4254,6 +4341,7 @@ Ce cas souligne un défi plus large pour équilibrer les besoins de régulation 
   {
     id: "30386",
     slug: "queixa-ehha-regulamentacoes-alugueis-curta-duracao-catalunha",
+    lang: "es",
     title: "EHHA apresenta queixa formal contra as regulamentações de alugueis na Catalunha",
     excerpt: "A Associação Europeia de Aluguéis de Férias (EHHA) apresentou uma queixa formal à Comissão Europeia contra o Decreto sobre hospedagem na Catalunha (3/2023), argumentando que esta legislação viola a Diretiva de Serviços da União Europeia (UE). O princ",
     content: `A Associação Europeia de Aluguéis de Férias (**EHHA**) apresentou uma queixa formal à **Comissão Europeia** contra o Decreto sobre hospedagem na Catalunha (3/2023), argumentando que esta legislação viola a **Diretiva de Serviços da União Europeia (UE)**. O principal argumento da EHHA é que as restrições impostas por esta lei são injustificadas, desproporcionais e não resolvem de forma eficaz os problemas que tentam resolver.
@@ -4277,6 +4365,7 @@ Este caso destaca um desafio mais amplo para equilibrar as necessidades de regul
   {
     id: "30361",
     slug: "nuevas-normativas-alquileres-turisticos-francia",
+    lang: "es",
     title: "¿Cómo afecta la nueva ley francesa a los gestores de alojamientos turísticos?",
     excerpt: "En los últimos años, el crecimiento del sector de los alquileres vacacionales ha planteado retos importantes para las comunidades locales. Para abordar estas preocupaciones, Francia ha aprobado una normativa más estricta que afecta tanto a las plataf",
     content: `En los últimos años, el **crecimiento del sector de los alquileres vacacionales** ha planteado retos importantes para las comunidades locales. Para abordar estas preocupaciones, Francia ha aprobado una normativa más estricta que afecta tanto a las plataformas como a los Property Managers.
@@ -4308,6 +4397,7 @@ En definitiva, cumplir con las normativas es más que una obligación: es una op
   {
     id: "30368",
     slug: "french-law-short-term-rentals",
+    lang: "es",
     title: "How does the new French law impact short-term rental managers?",
     excerpt: "In recent years, the growth of the vacation rental industry has raised significant challenges for local communities. To address these concerns, France has introduced stricter regulations impacting both platforms and property managers. The French Parl",
     content: `In recent years, the **growth of the vacation rental industry** has raised significant challenges for local communities. To address these concerns, France has introduced stricter regulations impacting both platforms and property managers.
@@ -4339,6 +4429,7 @@ Ultimately, compliance is more than a requirement—it’s an opportunity to pos
   {
     id: "30370",
     slug: "loi-francaise-locations-touristiques",
+    lang: "es",
     title: "Comment la nouvelle loi française impacte les gestionnaires de locations touristiques?",
     excerpt: "Ces dernières années, la croissance du secteur des locations de vacances a posé des défis importants aux communautés locales. Pour répondre à ces préoccupations, la France a adopté une réglementation plus stricte qui impacte à la fois les plateformes",
     content: `Ces dernières années, la **croissance du secteur des locations de vacances** a posé des défis importants aux communautés locales. Pour répondre à ces préoccupations, la France a adopté une réglementation plus stricte qui impacte à la fois les plateformes et les gestionnaires de propriétés.
@@ -4370,6 +4461,7 @@ En définitive, se conformer aux réglementations n’est pas seulement une obli
   {
     id: "30372",
     slug: "lei-francesa-alojamentos-turisticos",
+    lang: "es",
     title: "Como a nova lei francesa impacta os gestores de alojamentos turísticos?",
     excerpt: "Nos últimos anos, o crescimento do setor de alojamentos de férias trouxe desafios significativos para as comunidades locais. Para responder a essas preocupações, a França aprovou uma regulamentação mais rígida, que afeta tanto as plataformas quanto o",
     content: `Nos últimos anos, o **crescimento do setor de alojamentos de férias** trouxe desafios significativos para as comunidades locais. Para responder a essas preocupações, a França aprovou uma regulamentação mais rígida, que afeta tanto as plataformas quanto os gestores de propriedades.
@@ -4401,6 +4493,7 @@ Em resumo, cumprir as regulamentações não é apenas uma obrigação: é uma o
   {
     id: "30294",
     slug: "real-time-noise-monitoring-short-term-rentals",
+    lang: "es",
     title: "The value of real-time noise monitoring for preventing conflicts with neighbors",
     excerpt: "In the short-term rental industry, property managers face the challenge of maintaining harmony between guests and neighbors. Noise complaints can lead to legal issues and damage a property’s reputation. This is where Roomonitor steps in, offering its",
     content: `In the short-term rental industry, property managers face the challenge of maintaining harmony between guests and neighbors. Noise complaints can lead to legal issues and damage a property’s reputation. This is where **Roomonitor** steps in, offering its [**real-time noise monitoring solution**](https://new.roomonitor.com/es/roomonitor/) that empowers property managers to take control, prevent conflicts, and foster better coexistence.
@@ -4429,6 +4522,7 @@ Roomonitor’s **real-time noise monitoring** enables property managers to effec
   {
     id: "30298",
     slug: "monitorizacion-ruido-tiempo-real-alquiler-turistico",
+    lang: "es",
     title: "El valor de la monitorización de ruido en tiempo real para evitar conflictos con vecinos",
     excerpt: "En el sector de los alquileres turísticos, los gestores de propiedades o Property Managers se enfrentan al reto de mantener la armonía entre huéspedes y vecinos. Las quejas por ruido pueden derivar en problemas legales y afectar la reputación de una ",
     content: `En el sector de los alquileres turísticos, los gestores de propiedades o Property Managers se enfrentan al reto de mantener la armonía entre huéspedes y vecinos. Las quejas por ruido pueden derivar en problemas legales y afectar la reputación de una propiedad. Es aquí donde **Roomonitor**, con su solución de [**monitorización de ruido en tiempo real**](https://new.roomonitor.com/es/roomonitor/), permite a los Property Managers tomar el control, previniendo conflictos y mejorando la convivencia.
@@ -4457,6 +4551,7 @@ La **monitorización de ruido en tiempo real** de Roomonitor permite a los Prope
   {
     id: "30302",
     slug: "surveillance-bruit-temps-reel-locations-touristiques",
+    lang: "es",
     title: "La valeur de la surveillance du bruit en temps réel pour éviter les conflits avec les voisins",
     excerpt: "Dans le secteur des locations touristiques, les gestionnaires de propriétés ou Property Managers doivent relever le défi de maintenir l’harmonie entre les locataires et les voisins. Les plaintes liées au bruit peuvent entraîner des problèmes juridiqu",
     content: `Dans le secteur des locations touristiques, les gestionnaires de propriétés ou Property Managers doivent relever le défi de maintenir l’harmonie entre les locataires et les voisins. Les plaintes liées au bruit peuvent entraîner des problèmes juridiques et nuire à la réputation d’un bien immobilier. C’est ici que **Roomonitor** intervient, avec sa solution de [**surveillance du bruit en temps réel**](https://new.roomonitor.com/es/roomonitor/), permettant aux Property Managers de prendre le contrôle, de prévenir les conflits et d’améliorer la coexistence.
@@ -4485,6 +4580,7 @@ La **surveillance du bruit en temps réel** de Roomonitor permet aux Property Ma
   {
     id: "30304",
     slug: "monitoramento-ruido-tempo-real-aluguel-turistico",
+    lang: "es",
     title: "O valor do monitoramento de ruído em tempo real para evitar conflitos com vizinhos",
     excerpt: "No setor de aluguéis turísticos, os gestores de propriedades ou Property Managers enfrentam o desafio de manter a harmonia entre hóspedes e vizinhos. As reclamações por ruído podem resultar em problemas legais e afetar a reputação de uma propriedade.",
     content: `No setor de aluguéis turísticos, os gestores de propriedades ou Property Managers enfrentam o desafio de manter a harmonia entre hóspedes e vizinhos. As reclamações por ruído podem resultar em problemas legais e afetar a reputação de uma propriedade. É aqui que **Roomonitor**, com sua solução de [**monitoramento de ruído em tempo real**](https://new.roomonitor.com/pt/roomonitor/), permite que os Property Managers assumam o controle, prevenindo conflitos e promovendo uma convivência mais tranquila.
@@ -4513,6 +4609,7 @@ O **monitoramento de ruído em tempo real** do Roomonitor permite que os Propert
   {
     id: "30187",
     slug: "informe-octubre-roomonitor",
+    lang: "es",
     title: "Octubre en números: el informe mensual de Roomonitor",
     excerpt: "En Roomonitor, apostamos firmemente por la tecnología y el análisis de Big Data para ofrecer soluciones innovadoras y efectivas no sólo en el control de ruidos en apartamentos turísticos, sinó también en las gestiones relacionadas con la atención al ",
     content: `En Roomonitor, apostamos firmemente por la tecnología y el **análisis de Big Data** para ofrecer soluciones innovadoras y efectivas no sólo en el control de ruidos en apartamentos turísticos, sinó también en las gestiones relacionadas con la **atención al cliente**. Nuestro enfoque se basa en la recolección y **análisis de datos en tiempo real**, lo que nos permite optimizar nuestros servicios y garantizar una experiencia excepcional tanto para los propietarios como para los huéspedes.
@@ -4561,6 +4658,7 @@ Al mismo tiempo, recopilamos el tiempo de gestión de todos nuestros agentes, ya
   {
     id: "18328",
     slug: "descansa-tranquilo-con-la-proteccion-global-a-todos-tus-alquileres",
+    lang: "es",
     title: "Descansa tranquilo con la protección global a todos tus alquileres",
     excerpt: "Un equipo de expertos de Roomonitor trabajando para ti cada día En Roomonitor, nos dedicamos a brindar tranquilidad a nuestros clientes a diario con nuestro servicio de Alarm Assistant, la primera y única solución global de monitoreo de propiedades. ",
     content: `## Un equipo de expertos de Roomonitor trabajando para ti cada día
@@ -4587,6 +4685,7 @@ Solicita más información sobre **Alarm Assistant** en [**info@roomonitor.com**
   {
     id: "25371",
     slug: "ayez-lesprit-tranquille-grace-a-la-protection-globale-de-vos-locations",
+    lang: "es",
     title: "Ayez l'esprit tranquille grâce à la protection globale de vos locations",
     excerpt: "Une équipe d'experts Roomonitor à votre service chaque jour Chez Roomonitor, nous nous efforçons chaque jour de fournir tranquillité d'esprit à nos clients grâce à notre service exclusif Alarm Assistant, la première solution mondiale de surveillance ",
     content: `## Une équipe d'experts Roomonitor à votre service chaque jour
@@ -4619,6 +4718,7 @@ Pour plus d'informations sur **Alarm Assistant** et les autres services de Roomo
   {
     id: "25384",
     slug: "descansa-tranquilo-con-la-proteccion-global-a-todos-tus-alquileres",
+    lang: "es",
     title: "Descansa tranquilo con la protección global a todos tus alquileres",
     excerpt: "Un equipo de expertos de Roomonitor trabajando para ti cada día En Roomonitor, nos dedicamos a brindar tranquilidad a nuestros clientes a diario con nuestro servicio de Alarm Assistant, la primera y única solución global de monitoreo de propiedades. ",
     content: `## Un equipo de expertos de Roomonitor trabajando para ti cada día
@@ -4653,6 +4753,7 @@ Solicita más información sobre **Alarm Assistant** en [**info@roomonitor.com**
   {
     id: "25493",
     slug: "fique-descansado-protecao-global-suas-rendas",
+    lang: "es",
     title: "Fique descansado com a proteção global para todos os seus alugueres.",
     excerpt: "Uma equipe de especialistas da Roomonitor a trabalhar para si todos os dias Na Roomonitor, esforçamo-nos todos os dias para proporcionar tranquilidade aos nossos clientes com o nosso serviço exclusivo Alarm Assistant, a primeira solução mundial de mo",
     content: `## Uma equipe de especialistas da Roomonitor a trabalhar para si todos os dias
@@ -4685,6 +4786,7 @@ Para mais informações sobre **Alarm Assistant** e outros serviços da Roomonit
   {
     id: "30230",
     slug: "rest-easy-with-global-protection-for-all-your-rentals",
+    lang: "es",
     title: "Rest easy with global protection for all your rentals",
     excerpt: "A team of Roomonitor experts working for you every day At Roomonitor, we strive daily to provide peace of mind to our clients with our exclusive Alarm Assistant service, the first global property monitoring solution. Our team of specialized agents, w",
     content: `## A team of Roomonitor experts working for you every day
@@ -4717,6 +4819,7 @@ For more information about **Alarm Assistant** and other Roomonitor services, fe
   {
     id: "30167",
     slug: "simultaneidad-atencion-al-cliente-roomonitor",
+    lang: "es",
     title: "La importancia de la simultaneidad en la atención al cliente: El valor de Roomonitor para el sector turístico",
     excerpt: "En el sector de la hospitalidad, la atención al cliente es una pieza fundamental para garantizar una experiencia positiva tanto para los huéspedes como para los gestores de propiedades. Uno de los retos más comunes a los que se enfrentan los gestores",
     content: `En el sector de la hospitalidad, la atención al cliente es una pieza fundamental para garantizar una experiencia positiva tanto para los huéspedes como para los gestores de propiedades. Uno de los retos más comunes a los que se enfrentan los gestores es la necesidad de responder a múltiples demandas al mismo tiempo, algo que puede resultar complejo en períodos de alta ocupación. Aquí es donde **Roomonitor** se convierte en un aliado estratégico, gracias a nuestro servicio de atención al cliente, dónde** atendemos al huésped 24/7**, diseñado específicamente para asegurar una respuesta rápida y eficiente ante cualquier situación.
@@ -4740,6 +4843,7 @@ Con [**Roomonitor**](https://new.roomonitor.com/es/), no solo brindamos solucion
   {
     id: "30009",
     slug: "roomonitor-prevenir-alta-ocupacion-sevilla-madrid-puente-todos-los-santos",
+    lang: "es",
     title: "Roomonitor, el aliado para prevenir problemas con la alta ocupación de Sevilla y Madrid durante el Puente de Todos los Santos",
     excerpt: "El Puente de Todos los Santos es una fecha clave en el calendario turístico español, y este año no es la excepción. Según datos de Ebooking, recogidos por Forbes, se espera una ocupación del 85% en toda España, con picos de alta demanda en destinos u",
     content: `El Puente de Todos los Santos es una fecha clave en el calendario turístico español, y este año no es la excepción. Según datos de **Ebooking**, [recogidos por Forbes](https://forbes.es/turismo/520204/ebooking-registra-un-85-de-ocupacion-en-espana-para-el-puente-de-todos-los-santos-con-alzas-de-hasta-15-en-el-precio/), se espera una ocupación del **85% en toda España**, con picos de alta demanda en destinos urbanos como **Sevilla y Madrid**, dos de las ciudades más populares para estas fechas. En pleno otoño, con las calles decoradas para **Halloween**, muchos turistas vienen a disfrutar de las celebraciones y eventos especiales que estas ciudades ofrecen. Sin embargo, este aumento de visitantes también trae consigo el reto de gestionar el impacto que el turismo tiene en las comunidades locales, especialmente en lo que se refiere al ruido y las molestias que puedan causar los turistas en los apartamentos de uso turístico.
@@ -4774,6 +4878,7 @@ Con una ocupación esperada del 85% y con las celebraciones de Halloween en el a
   {
     id: "30024",
     slug: "what-is-social-sustainability",
+    lang: "es",
     title: "What is Social Sustainability? Roomonitor's commitment to harmony between guests and neighbors",
     excerpt: "Social sustainability is a fundamental concept that focuses on harmonious and equitable coexistence within communities, promoting the well-being of all parties involved. In the context of tourism and property management, it refers to how tourism acti",
     content: `**Social sustainability** is a fundamental concept that focuses on **harmonious and equitable coexistence** within communities, promoting the well-being of all parties involved. In the context of tourism and property management, it refers to how tourism activities can develop without harming the quality of life of local residents, respecting neighbors' rights, and ensuring a positive experience for visitors.
@@ -4808,6 +4913,7 @@ Promoting **harmonious living** is more than just a goal; it’s a commitment we
   {
     id: "30031",
     slug: "que-es-la-sostenibilidad-social",
+    lang: "es",
     title: "¿Qué es la sostenibilidad social? El compromiso de Roomonitor con la convivencia entre huéspedes y vecinos",
     excerpt: "La sostenibilidad social es un concepto fundamental que pone el foco en la convivencia armoniosa y equitativa dentro de las comunidades, promoviendo el bienestar de todos los actores involucrados. En el contexto del turismo y la gestión de propiedade",
     content: `La **sostenibilidad social** es un concepto fundamental que pone el foco en la **convivencia armoniosa** y **equitativa** dentro de las comunidades, promoviendo el bienestar de todos los actores involucrados. En el contexto del turismo y la gestión de propiedades, se refiere a cómo las actividades turísticas pueden desarrollarse sin perjudicar la calidad de vida de los residentes locales, respetando los derechos de los vecinos y asegurando una experiencia positiva para los visitantes.
@@ -4842,6 +4948,7 @@ Promover una **convivencia armónica** es más que un objetivo; es un compromiso
   {
     id: "30019",
     slug: "nuevo-programa-de-mediacion-en-valencia-para-mejorar-la-convivencia-en-viviendas-turisticas-a-traves-de-werespect",
+    lang: "es",
     title: "Nuevo programa de mediación en Valencia para mejorar la convivencia en viviendas turísticas a través de weRespect",
     excerpt: "En Roomonitor, estamos comprometidos con la sostenibilidad social y la mejora de la convivencia entre huéspedes y vecinos en las viviendas de uso turístico (VUT). Como parte de este compromiso, nos enorgullece compartir una de las últimas iniciativas",
     content: `En Roomonitor, estamos comprometidos con la sostenibilidad social y la mejora de la convivencia entre huéspedes y vecinos en las viviendas de uso turístico (VUT). Como parte de este compromiso, nos enorgullece compartir una de las últimas iniciativas impulsadas por [**weRespect**](https://www.werespect.net/), que lanzará en Valencia un **programa piloto de mediación** entre residentes y gestores de viviendas turísticas.
@@ -4888,6 +4995,7 @@ Con iniciativas como esta, Roomonitor sigue consolidándose como un **aliado cla
   {
     id: "30070",
     slug: "novo-programa-de-mediacao-em-valencia-para-melhorar-a-convivencia-em-apartamentos-turisticos-atraves-do-werespect",
+    lang: "es",
     title: "Novo programa de mediação em Valência para melhorar a convivência em apartamentos turísticos através do weRespect",
     excerpt: "Na Roomonitor, estamos comprometidos com a sustentabilidade social e a melhoria da relação entre hóspedes e vizinhos em propriedades de aluguer de curta duração (STR). Como parte deste compromisso, estamos entusiasmados em partilhar uma das mais rece",
     content: `Na Roomonitor, estamos comprometidos com a sustentabilidade social e a melhoria da relação entre hóspedes e vizinhos em propriedades de aluguer de curta duração (STR). Como parte deste compromisso, estamos entusiasmados em partilhar uma das mais recentes iniciativas promovidas pela [**WeRespect**](https://www.werespect.net/), que lançará um **programa piloto de mediação em Valência** para abordar quaisquer questões entre residentes e gestores de alugueres de curta duração.
@@ -4930,6 +5038,7 @@ Com iniciativas como esta, a Roomonitor continua a consolidar-se como um **parce
   {
     id: "11482",
     slug: "que-es-la-monitorizacion-de-ruido-y-por-que-la-necesito",
+    lang: "es",
     title: "¿Qué es la monitorización de ruido y por qué la necesito?",
     excerpt: "Por fin has tomado la sabia y económicamente responsable decisión de convertir tu humilde morada en una propiedad para alquilar. (¡Genial!) Ahora, con tu nuevo y recién adquirido espíritu empresarial en mente, te estarás preguntando en cómo proteger ",
     content: `Por fin has tomado la sabia y económicamente responsable decisión de convertir tu humilde morada en una propiedad para alquilar. (¡Genial!) Ahora, con tu nuevo y recién adquirido espíritu empresarial en mente, te estarás preguntando en cómo proteger tu inversión sin parecer un acosador ante tus huéspedes. Por suerte, existe algo llamado monitorización de ruido que contribuye a mantener la tranquilidad de administradores de propiedades de todo el planeta.
@@ -4996,6 +5105,7 @@ Estar tranquilo es más que suficiente razón para probar la monitorización de 
   {
     id: "25496",
     slug: "what-is-noise-monitoring-and-why-do-i-need-it",
+    lang: "es",
     title: "What is noise monitoring and why do I need it?",
     excerpt: "You’ve finally made the wise and financially responsible decision to turn your humble abode into a rental property. (Great!) Now, with your newfound entrepreneurial spirit, you’re probably wondering how to protect your investment without coming acros",
     content: `You’ve finally made the wise and financially responsible decision to turn your humble abode into a rental property. (Great!) Now, with your newfound entrepreneurial spirit, you’re probably wondering how to protect your investment without coming across as intrusive to your guests. Fortunately, there’s something called noise monitoring that helps property managers across the globe stay worry-free.
@@ -5063,6 +5173,7 @@ Noise monitoring is the new way to secure your property without invading your gu
   {
     id: "25497",
     slug: "pourquoi-equiper-votre-logement-dune-alarme-anti-bruit",
+    lang: "es",
     title: "Qu’est-ce que la surveillance du bruit et pourquoi en ai-je besoin ?",
     excerpt: "Vous avez enfin pris la décision sage et financièrement responsable de transformer votre modeste demeure en bien locatif. (Super !) Désormais, avec votre nouvel esprit d’entreprise en tête, vous vous demandez probablement comment protéger votre inves",
     content: `Vous avez enfin pris la décision sage et financièrement responsable de transformer votre modeste demeure en bien locatif. (Super !) Désormais, avec votre nouvel esprit d’entreprise en tête, vous vous demandez probablement comment protéger votre investissement sans paraître intrusif envers vos invités. Heureusement, il existe une solution appelée surveillance du bruit qui aide les gestionnaires immobiliers du monde entier à rester sereins.
@@ -5126,6 +5237,7 @@ La surveillance du bruit est la nouvelle façon de sécuriser votre bien sans em
   {
     id: "30086",
     slug: "o-que-e-a-monitorizacao-de-ruido-e-por-que-preciso-dela",
+    lang: "es",
     title: "O que é a monitorização de ruído e por que preciso dela?",
     excerpt: "Você finalmente tomou a decisão sábia e financeiramente responsável de transformar sua humilde residência em uma propriedade para aluguel. (Incrível!) Agora, com esse novo espírito empreendedor em mente, você provavelmente está se perguntando como pr",
     content: `Você finalmente tomou a decisão sábia e financeiramente responsável de transformar sua humilde residência em uma propriedade para aluguel. (Incrível!) Agora, com esse novo espírito empreendedor em mente, você provavelmente está se perguntando como proteger seu investimento sem parecer intrusivo com seus hóspedes. Felizmente, existe algo chamado monitorização de ruído, que ajuda a tranquilizar gestores de propriedades ao redor do mundo.
@@ -5181,6 +5293,7 @@ Pode ser mais fácil? Nada de fios complicados ou processos de instalação dif�
   {
     id: "29976",
     slug: "cerramos-la-temporada-de-verano-en-mallorca-con-icnea-y-beyond-y-varios-gestores-de-propiedades",
+    lang: "es",
     title: "Cerramos la temporada de verano en Mallorca con Icnea y Beyond y varios gestores de propiedades",
     excerpt: "El pasado 8 de octubre participamos en un evento muy especial en Mallorca junto a compañeros Icnea y Beyond y varios gestores de propiedades. Este encuentro sirvió como un espacio de reflexión sobre la temporada pasada y una oportunidad para preparar",
     content: `El pasado 8 de octubre participamos en un evento muy especial en **Mallorca** junto a compañeros **Icnea** y **Beyond **y varios** gestores de propiedades**. Este encuentro sirvió como un espacio de reflexión sobre la temporada pasada y una oportunidad para prepararnos de cara a la próxima temporada turística.
@@ -5202,6 +5315,7 @@ La experiencia de los huéspedes es vital y para ello los gestores de propiedade
   {
     id: "29925",
     slug: "compromiso-con-el-turismo-sostenible-sevilla-acoge-un-nueva-entrega-de-sellos-werespect",
+    lang: "es",
     title: "Compromiso con el turismo sostenible: Sevilla acoge un nueva entrega de sellos weRespect",
     excerpt: "Este lunes 7 de octubre tuvimos el honor de participar en el evento organizado en Sevilla, en el que se hizo entrega de los sellos weRespect a varios agentes del sector turístico comprometidos con la sostenibilidad y la convivencia vecinal en las viv",
     content: `Este lunes 7 de octubre tuvimos el honor de participar en el evento organizado en Sevilla, en el que se hizo entrega de los sellos [**weRespect**](https://www.werespect.net/) a varios agentes del sector turístico comprometidos con la **sostenibilidad y la convivencia vecinal** en las **viviendas de uso turístico**. Esta iniciativa de Roomonitor es un claro ejemplo de cómo la colaboración entre el sector público y privado puede impulsar un turismo más consciente, respetuoso y en sintonía con las comunidades locales.
@@ -5225,6 +5339,7 @@ Seguimos trabajando por un turismo mejor, porque creemos que es posible y necesa
   {
     id: "29960",
     slug: "asistimos-al-primer-gran-evento-de-alojamiento-local-en-portugal",
+    lang: "es",
     title: "Asistimos al primer gran evento de Alojamiento Local en Portugal",
     excerpt: "Roomonitor tuvo el honor de ser el GOLD Sponsor del 1º Congreso Nacional de ALEP (Asociación de Alojamiento Local en Portugal), celebrado los días 1 y 2 de octubre en Porto. Este congreso marcó un hito para el sector de alojamiento local, reuniendo a",
     content: `Roomonitor tuvo el honor de ser el **GOLD Sponsor** del **1º [Congreso Nacional de ALEP](https://www.alep.pt/CONGRESSONACIONAL#_yxm8l37cx) (Asociación de Alojamiento Local en Portugal)**, celebrado los días 1 y 2 de octubre en Porto. Este congreso marcó un hito para el sector de alojamiento local, reuniendo a actores clave del turismo para debatir los retos y oportunidades que enfrenta esta industria en Portugal.
@@ -5250,6 +5365,7 @@ El **1º Congreso Nacional de [ALEP](https://www.alep.pt/)** fue un éxito rotun
   {
     id: "23303",
     slug: "roomonitor-x-icnea-soluciona-problemas-de-ruido-de-manera-mas-eficiente",
+    lang: "es",
     title: "Roomonitor x Icnea: Soluciona problemas de ruido de manera más eficiente",
     excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline='no' text_larger='no']Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos clientes nos pedían.
@@ -5287,6 +5403,7 @@ Si ya tienes cuentas en Roomonitor e Icnea, ¡puedes comenzar en minutos! Ve a l
   {
     id: "17072",
     slug: "partnering-with-airbnb-to-lisbon",
+    lang: "es",
     title: "We are partnering with Airbnb to launch a noise monitoring pilot program in Lisbon",
     excerpt: "At Roomonior, we are always looking for better ways to serve short-term rental hosts and their communities. That's why we're delighted to share the news about our recent partnership with Airbnb: A noise monitoring pilot program in Lisbon. This pilot ",
     content: `At Roomonior, we are always looking for better ways to serve short-term rental hosts and their communities. That's why we're delighted to share the news about our recent partnership with Airbnb: A noise monitoring pilot program in Lisbon.
@@ -5336,6 +5453,7 @@ Roomonitor is the global solution for noise control. Roomonitor NoiseAlarm monit
   {
     id: "15985",
     slug: "informe-roomonitor-2021",
+    lang: "es",
     title: "Informe Roomonitor - Ultimos 3 meses",
     excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline='no' text_larger='no']Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ruido con Roomonitor Alarm Assistant.
@@ -5385,6 +5503,7 @@ Las tipologias de intervenciones atendidas por las actuaciones de nuestro servic
   {
     id: "15715",
     slug: "roomonitor-y-airbnb-ponen-en-marcha-un-programa-de-mediacion-entre-vecinos-y-anfitriones",
+    lang: "es",
     title: "Roomonitor y Airbnb ponen en marcha un programa de mediación entre vecinos y anfitriones",
     excerpt: "Airbnb y Roomonitor trabajarán en colaboración con EticHabitat, quien ya había desarrollado un programa similar con el Ajuntament de Barcelona. Este programa se ha dado a conocer durante la entrega de las certificaciones weRespect, un evento impulsad",
     content: `- Airbnb y Roomonitor trabajarán en colaboración con EticHabitat, quien ya había desarrollado un programa similar con el Ajuntament de Barcelona.
@@ -5428,6 +5547,7 @@ Somos una empresa tecnológica e innovadora nacida en 2015 en Barcelona, con el 
   {
     id: "11823",
     slug: "comment-se-premunir-des-problemes-lies-a-laccueil-des-mauvais-clients",
+    lang: "es",
     title: "Comment se prémunir des problèmes liés à l’accueil des mauvais clients?",
     excerpt: "Ce que les professionnels de la location redoutent le plus? Un majorité citera sans doute les mauvais clients&nbsp;! Le genre de locataire au comportement plus ou moins irrespectueux, qui risque de nuire à la réputation de votre location de courte du",
     content: `Ce que les professionnels de la location redoutent le plus? Un majorité citera sans doute les mauvais clients ! Le genre de locataire au comportement plus ou moins irrespectueux, qui risque de nuire à la réputation de votre location de courte durée. Les conséquences peuvent être importantes et il existe des moyens simple et efficace pour s’en prémunir.
@@ -5489,6 +5609,7 @@ Oubliez, une fois pour toutes, cette histoire des mauvais clients et devenez un 
   {
     id: "11401",
     slug: "8-formas-de-escribir-descripciones-increibles-de-anuncios-para-propiedades-de-alquiler-a-corto-plazo",
+    lang: "es",
     title: "8 formas de escribir descripciones increíbles de anuncios para propiedades de alquiler a corto plazo",
     excerpt: "Como bien sabrás, la descripción de los anuncios de tus inmuebles en alquiler a corto plazo es, en el fondo, la primera impresión que ofreces. Da igual que tengas una fotografía de tu propiedad de lo más atractiva, la descripción es en realidad el as",
     content: `Como bien sabrás, la descripción de los anuncios de tus inmuebles en alquiler a corto plazo es, en el fondo, la primera impresión que ofreces. Da igual que tengas una fotografía de tu propiedad de lo más atractiva, la descripción es en realidad el aspecto más importante a la hora de atraer a huéspedes potenciales.
@@ -5638,6 +5759,7 @@ Ten en cuenta los siguientes pasos a la hora de escribir la descripción perfect
   {
     id: "25510",
     slug: "8-ways-to-write-amazing-descriptions-in-short-term-rentals",
+    lang: "es",
     title: "8 Ways to Write Amazing Short-Term Rental Property Listing Descriptions",
     excerpt: "As you know, your short-term rental property listing description is ultimately your first impression. While you may have a captivatingly alluring photo showcasing your property, the actual description is the most important aspect of appealing to pote",
     content: `As you know, your short-term rental property listing description is ultimately your first impression. While you may have a captivatingly alluring photo showcasing your property, the actual description is the most important aspect of appealing to potential guests.
@@ -5785,6 +5907,7 @@ Now, go put that pen to good use and increase your bookings with a stellar prope
   {
     id: "25511",
     slug: "8-facons-de-rediger-de-parfaites-descriptions-pour-les-annonces-de-votre-location-de-courte-duree",
+    lang: "es",
     title: "8 façons de rédiger de parfaites descriptions pour les annonces de votre location de courte durée",
     excerpt: "Comme vous le savez certainement, la description de votre annonce est la première impression qu’un client potentiel aura de vous. Vous aurez beau mettre en avant les photos les plus séduisantes de votre propriété, cela ne vous aidera en rien à attire",
     content: `Comme vous le savez certainement, la description de votre annonce est la première impression qu’un client potentiel aura de vous. Vous aurez beau mettre en avant les photos les plus séduisantes de votre propriété, cela ne vous aidera en rien à attirer des clients potentiels si votre annonce n’est pas rédigée dans les règles de l’art !
@@ -5929,6 +6052,7 @@ Maintenant, à votre clavier et bonne rédaction! Vous verrez bientôt vos rése
   {
     id: "11235",
     slug: "7-pasos-para-reabrir-tu-propiedad-alquiler-vacacional",
+    lang: "es",
     title: "7 pasos para reabrir tu propiedad de alquiler vacacional",
     excerpt: "El virus conocido como COVID-19 ha sembrado la incertidumbre entre los propietarios de inmuebles de alquiler turístico alrededor del mundo. Los negocios que abren&nbsp; brevemente para posteriormente verse forzados a cerrar de nuevo y la ausencia de ",
     content: `El virus conocido como COVID-19 ha sembrado la incertidumbre entre los propietarios de inmuebles de alquiler turístico alrededor del mundo. Los negocios que abren  brevemente para posteriormente verse forzados a cerrar de nuevo y la ausencia de claridad en las directrices han dejado en el pasado la forma tradicional de llevar una empresa.
@@ -6066,11 +6190,11 @@ Implementando estos consejos, teniendo en cuenta las necesidades de tus huésped
     date: "2021-01-08",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/christopher-jolly-GqbU78bdJFM-unsplash.jpg",
-    lang: "es",
   },
   {
     id: "25524",
     slug: "7-steps-for-reopening-your-short-term-rental-property",
+    lang: "es",
     title: "7 Steps for Reopening Your Short-Term Rental Property",
     excerpt: "The virus known as COVID-19 has caused uncertainty for rental property owners in every part of the world. From dealing with businesses opening briefly, only to be forced to close yet again, to unclear guidelines, conducting business as usual has beco",
     content: `The virus known as COVID-19 has caused uncertainty for rental property owners in every part of the world. From dealing with businesses opening briefly, only to be forced to close yet again, to unclear guidelines, conducting business as usual has become an ideology of the past.
@@ -6210,11 +6334,11 @@ By implementing these tips, considering the needs of your potential guests, and 
     date: "2021-01-08",
     readTime: 5,
     image: "https://roomonitor.com/wp-content/uploads/2021/01/christopher-jolly-GqbU78bdJFM-unsplash.jpg",
-    lang: "es",
   },
   {
     id: "25525",
     slug: "sept-etapes-a-suivre-pour-une-reouverture-de-vos-logements-en-location-reussie",
+    lang: "es",
     title: "Sept étapes à suivre pour une réouverture de vos logements en location réussie",
     excerpt: "Cette pandémie de la COVID-19 a eu et continue d’avoir un impact très fort et des conséquences incertaines dans le secteur de l’hôtellerie dans le monde entier, notamment pour les propriétaires de locations de courte durée. On a à peine commencé à ro",
     content: `Cette pandémie de la COVID-19 a eu et continue d’avoir un impact très fort et des conséquences incertaines dans le secteur de l’hôtellerie dans le monde entier, notamment pour les propriétaires de locations de courte durée. On a à peine commencé à rouvrir qu’on est obligé de fermer à nouveau.
@@ -6354,11 +6478,11 @@ En mettant en œuvre ces recommandations, en tenant compte des besoins de vos cl
     date: "2021-01-08",
     readTime: 7,
     image: "https://roomonitor.com/wp-content/uploads/2021/01/christopher-jolly-GqbU78bdJFM-unsplash.jpg",
-    lang: "es",
   },
   {
     id: "11160",
     slug: "como-preparar-tu-propiedad-en-alquiler-para-reservas-de-ultima-hora",
+    lang: "es",
     title: "Cómo preparar tu propiedad en alquiler para reservas de última hora",
     excerpt: "-¡Por fin estoy libre!- Te regocijas mientras planeas qué hacer durante el fin de semana. Ha sido una semana absolutamente increíble, y salvo un par de cosas sin importancia, parece que todo ha ido sobre ruedas en tu piso de alquiler a corto plazo.&n",
     content: `*-¡Por fin estoy libre!-*
@@ -6444,6 +6568,7 @@ Manteniendo tu propiedad limpia y acogedora en todo momento, las personas que re
   {
     id: "25536",
     slug: "how-to-prepare-your-short-term-rental-for-last-minute-bookings",
+    lang: "es",
     title: "How to Prepare Your Short-Term Rental for Last Minute Bookings",
     excerpt: "“Finally, my schedule is clear!” You rejoice as you decide to plan your weekend. The week happened to be absolutely amazing, and besides a few trivial matters here and there, it seems as though everything has been working seamlessly at your short-ter",
     content: `*“Finally, my schedule is clear!”*
@@ -6529,6 +6654,7 @@ By keeping your property clean and welcoming at all times, your last minute book
   {
     id: "25537",
     slug: "comment-faire-en-sorte-que-votre-propriete-en-location-de-courte-duree-soit-toujours-prete-pour-accueillir-des-reservations-de-derniere-minute",
+    lang: "es",
     title: "Comment faire en sorte que votre propriété en location de courte durée soit toujours prête pour accueillir des réservations de dernière minute",
     excerpt: "«&nbsp;Enfin, tout y est&nbsp;!&nbsp;» Vous êtes heureux de constater que vous avez bien conclu votre semaine de travail et bien prévu votre week-end. Tout s’est bien passé, et à part quelques petits soucis mineurs par-ci par-là, il semble que tout s",
     content: `*« Enfin, tout y est ! »*
@@ -6612,6 +6738,7 @@ En veillant à la propreté et au bon accueil de votre propriété à longueur d
   {
     id: "11073",
     slug: "como-empezar-un-prospero-bed-and-breakfast",
+    lang: "es",
     title: "Cómo empezar un próspero Bed and Breakfast",
     excerpt: "Una acogida atractiva, servida con un toque personal y encantador, acompañada de una genuina sonrisa... Es probable que, si conoces el término bed and breakfast, te venga a la mente algo parecido a lo que he descrito. Si eres un conversador con una d",
     content: `*Una acogida atractiva**, servida con un toque personal y encantador, acompañada de una genuina sonrisa...*
@@ -6695,11 +6822,11 @@ Si prestas atención a los requisitos e incorporas una gran cantidad de personal
     date: "2020-12-16",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/olexandr-ignatov-w72a24brINI-unsplash.jpg",
-    lang: "es",
   },
   {
     id: "25551",
     slug: "how-to-start-a-successful-bed-and-breakfast",
+    lang: "es",
     title: "How to Start a Successful Bed and Breakfast",
     excerpt: "Heart-warming, engaging hospitality served with a charming, personal touch accompanied by a genuine smile... Chances are, if you are familiar with the term bed and breakfast, a picture similar to the aforementioned one comes to mind. If you are a con",
     content: `*Heart-warming, engaging hospitality served with a charming, personal touch accompanied by a genuine smile...*
@@ -6785,11 +6912,11 @@ By paying close attention to requirements, and incorporating a lot of personalit
     date: "2020-12-16",
     readTime: 5,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/olexandr-ignatov-w72a24brINI-unsplash-1.jpg",
-    lang: "es",
   },
   {
     id: "25552",
     slug: "comment-se-lancer-dans-un-projet-de-chambres-dhotes-avec-succes",
+    lang: "es",
     title: "Comment se lancer dans un projet de chambres d’hôtes avec succès",
     excerpt: "Un accueil chaleureux et plein de bonne humeur, un service attentionné et personnalisé, le tout accompagné d’une sincère cordialité... Si le terme «&nbsp;B&amp;B&nbsp;», ou encore «&nbsp;maison d’hôtes&nbsp;» vous est familier, il est fort probable q",
     content: `*Un accueil chaleureux et plein de bonne humeur, un service attentionné et personnalisé, le tout accompagné d’une sincère cordialité...*
@@ -6873,11 +7000,11 @@ Maintenant, vous aussi vous pouvez créer votre propre maison d’hôtes.`,
     date: "2020-12-16",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2020/12/olexandr-ignatov-w72a24brINI-unsplash-1.jpg",
-    lang: "es",
   },
   {
     id: "11026",
     slug: "5-mejores-revenue-management-systems-para-alquileres-a-corto-plazo",
+    lang: "es",
     title: "Los 5 mejores Revenue Management Systems para hoteles y alquileres a corto plazo",
     excerpt: "¿Qué son exactamente los Revenue Management Systems? En mi anterior publicación del blog sobre Property Management hablé del verdadero significado de tener todos tus apartamentos alquilados con antelación. Contrariamente a la creencia popular, que te",
     content: `## **¿Qué son exactamente los Revenue Management Systems?**
@@ -7209,6 +7336,7 @@ Cuídate mucho.
   {
     id: "25565",
     slug: "5-best-revenue-management-systems-for-hotels-short-term-rentals",
+    lang: "es",
     title: "5 Best Revenue Management Systems for Hotels & Short-Term Rentals",
     excerpt: "What Exactly Are Revenue Management Systems? In my previous Property Management blog post, I talked about what it really means when all of your apartments are rented out in advance. Contrary to popular belief, having units sold out for weeks means po",
     content: `## **What Exactly Are Revenue Management Systems?**
@@ -7538,6 +7666,7 @@ Continue to stay safe out there.
   {
     id: "25566",
     slug: "5-meilleurs-logiciels-de-revenue-management-locations-de-courte-duree",
+    lang: "es",
     title: "5 meilleurs logiciels de Revenue Management pour les hôtels et les locations de courte durée",
     excerpt: "Qu’est-ce qu’un logiciel de Revenue Management&nbsp;? Dans mon dernier article de blog sur la gestion immobilière et locative j’ai parlé de ceux qui ont tendance à louer leurs biens à la hâte. Contrairement aux idées reçues, le fait de louer toutes l",
     content: `## **Qu’est-ce qu’un logiciel de Revenue Management ?**
@@ -7865,6 +7994,7 @@ Portez-vous bien.
   {
     id: "10949",
     slug: "roomonitor-airbnb-partes-interesadas-turismo-local-proteger-y-fortalecer",
+    lang: "es",
     title: "¿Cómo trabajan juntos Roomonitor, Airbnb y las partes interesadas del turismo local para proteger y fortalecer el sector del alquiler a corto plazo en Barcelona?",
     excerpt: "La actividad relacionada con el alquiler de alojamientos de corta duración o alquiler turístico ha sido el centro de atención de muchos medios de comunicación en los últimos años. Las apuestas de las ciudades europeas frente a prácticas vinculadas al",
     content: `La actividad relacionada con el alquiler de alojamientos de corta duración o alquiler turístico ha sido el centro de atención de muchos medios de comunicación en los últimos años. Las apuestas de las ciudades europeas frente a prácticas vinculadas al uso de plataformas como **Airbnb** o los problemas que provoca el turismo de masas siempre han estado vinculadas  a malos indicadores que penalizan a los profesionales del sector y deterioran la convivencia entre los habitantes de las ciudades y los turistas
@@ -7904,6 +8034,7 @@ Además de cumplir con la normativa vigente en Madrid o Barcelona y las condicio
   {
     id: "10414",
     slug: "que-significa-realmente-tener-todos-tus-pisos-ocupados",
+    lang: "es",
     title: "¿Qué significa realmente tener todos tus pisos ocupados?",
     excerpt: "Llevo mucho tiempo trabajando con Prohosts, dueños y administradores de alquiler a corto plazo, y hay una cosa de la que siempre solemos hablar. Hay un montón de noches sin dormir, sobre todo cuando trata de alquilar todos los apartamentos. Hay veces",
     content: `Llevo mucho tiempo trabajando con Prohosts, dueños y administradores de alquiler a corto plazo, y hay una cosa de la que siempre solemos hablar. Hay un montón de noches sin dormir, sobre todo cuando trata de alquilar todos los apartamentos. Hay veces en las que parece que solo se puede estar tranquilo si se han alquilado todos los apartamentos o viviendas vacacionales con días o semanas de antelación.
@@ -7955,6 +8086,7 @@ Nacho Suarez, CEO de Roomonitor`,
   {
     id: "25629",
     slug: "what-does-really-mean-to-have-all-your-apartments-occupied",
+    lang: "es",
     title: "What does it really mean to have all your apartments rented out?",
     excerpt: "I spend a lot of time working with Prohosts and Short Term Rental Managers and owners, and one thing keeps coming up time and time again in our discussions. There are a ton of sleepless nights, especially when you’re struggling to fill their apartmen",
     content: `I spend a lot of time working with Prohosts and Short Term Rental Managers and owners, and one thing keeps coming up time and time again in our discussions. There are a ton of sleepless nights, especially when you’re struggling to fill their apartments. Sometimes it seems like they can only get a good night’s sleep if their apartments and villas are sold out days or weeks in advance.
@@ -8006,6 +8138,7 @@ Meanwhile, stay safe.
   {
     id: "7255",
     slug: "entrevista-carlos-perez-lazac",
+    lang: "es",
     title: "Visión de Carlos Pérez- Lazac de la nueva realidad de las viviendas turísticas",
     excerpt: "Los acontecimientos se han ido sucediendo muy rápidamente tras la pandemia de la Covid19 y se han producido grandes cambios en la industria, tanto para el presente como para un futuro cercano, con cambios en tendencias de comercialización, cambios op",
     content: `Los acontecimientos se han ido sucediendo muy rápidamente tras la pandemia de la Covid19 y se han producido grandes cambios en la industria, tanto para el presente como para un futuro cercano, con cambios en tendencias de comercialización, cambios operacionales y estructurales.
@@ -8055,6 +8188,7 @@ Yo os recomiendo que hagáis seguimiento del club proveedor de **[AVVA](https://
   {
     id: "7118",
     slug: "interview-carlos-villaro",
+    lang: "es",
     title: "Interview with Carlos Villaro Lassen - Secretary General of EHHA European Holiday Home Association",
     excerpt: "The pandemic has caught the industry off guard. Everything has happened so &nbsp;quickly, there have been many huge changes in the industry, and there will be many more to come. The industry is undergoing a major revolution, towards higher standards,",
     content: `The pandemic has caught the industry off guard. Everything has happened so  quickly, there have been many huge changes in the industry, and there will be many more to come.
@@ -8102,6 +8236,7 @@ We will see stronger governments with more restrictions and demands, more consum
   {
     id: "7023",
     slug: "como-afectan-los-malos-huespedes",
+    lang: "es",
     title: "¿Como afectan los malos huéspedes?",
     excerpt: "Todos sabemos que los malos huéspedes son una mala noticia para cualquiera que tenga un alquiler vacacional. Sin embargo, algunas veces el impacto que tienen puede ser más o menos visible y/o complejo. Sea como sea, su comportamiento puede dañar tu n",
     content: `Todos sabemos que los malos huéspedes son una mala noticia para cualquiera que tenga un alquiler vacacional. Sin embargo, algunas veces el impacto que tienen puede ser más o menos visible y/o complejo. Sea como sea, su comportamiento puede dañar tu negocio de STRs. Te dejamos una lista de las diferentes maneras en las que puede perjudicar una situación con un mal huésped
@@ -8190,6 +8325,7 @@ Recuerda asegurar tu negocio contra malos huéspedes con la monitorización de [
   {
     id: "7051",
     slug: "entrevista-adolfo-meras",
+    lang: "es",
     title: "El alquiler turístico en Madrid HOY - Entrevista a Adolfo Merás, presidente de MadridAloja",
     excerpt: "Los acontecimientos se han ido sucediendo muy rápidamente tras la pandemia de la Covid19 y se han producido grandes cambios en la industria, tanto para el presente como para un futuro cercano, con cambios en tendencias de comercialización, cambios op",
     content: `Los acontecimientos se han ido sucediendo muy rápidamente tras la pandemia de la Covid19  y se han producido grandes cambios en la industria, tanto para el presente como para un futuro cercano, con cambios en tendencias de comercialización, cambios operacionales y estructurales .
@@ -8256,6 +8392,7 @@ convivencia no es negociable”.`,
   {
     id: "25645",
     slug: "how-can-bad-guests-impact-your-business",
+    lang: "es",
     title: "How can bad guests impact your business?",
     excerpt: "We all know that bad guests are bad news for anyone with STR’s. However, sometimes the impact they have can be more or less visible and / or complex. Either way, their behaviour can harm your STR business. We leave you a list with possible situations",
     content: `We all know
@@ -8351,6 +8488,7 @@ Remember to insure your business against bad guests with [Roomonitor NoiseAlarm]
   {
     id: "7009",
     slug: "interview-angela-watson-coo-of-friendly-rentals",
+    lang: "es",
     title: "Angela Watson - COO Friendly Rentals: Everything that can be digitalized should be!",
     excerpt: "The pandemic has caught the industry off guard. Events have been happening very quickly and there have been great changes in the industry, and they will keep coming from now on. The industry is having a deeper revolution and towards higher standards,",
     content: `The pandemic has caught the industry off guard. Events have been happening
@@ -8447,6 +8585,7 @@ continue to provide the best and most professional standards possible.`,
   {
     id: "6839",
     slug: "david-lombardia-ceo-de-mun-nos-da-su-opinion-sobre-la-situacion-actual",
+    lang: "es",
     title: "David Lombardia CEO de Mun nos da su opinión sobre la situación actual",
     excerpt: "La industria de STRs esta teniendo una revolución operación, tecnológica y financiera importante debido a los acontecimientos actuales por la COVID19 con importantes cambios en el sector Esta revolución esta creando diferentes tendencias en el sector",
     content: `La industria de STRs esta teniendo una revolución operación,
@@ -8539,6 +8678,7 @@ En el caso de [**MUN**](https://munstays.com/), la tecnología ha formado parte 
   {
     id: "6796",
     slug: "entrevista-a-enrique-alcantara",
+    lang: "es",
     title: "El Futuro del alquiler vacacional, entrevista a Enrique Alcantara, CEO de Stay U-nique",
     excerpt: "La pandemia ha sorprendido a la industria desprevenida. Los acontecimientos se han ido sucediendo muy rápidamente y se han producido grandes cambios en la industria, tanto en el presente como para el futuro. La industria tiende a una definición más p",
     content: `La pandemia ha sorprendido a la industria desprevenida. Los acontecimientos se han ido sucediendo muy rápidamente y se han producido grandes cambios en la industria, tanto en el presente como para el futuro. La industria tiende a una definición más profunda y a unos mayores estándares tanto financieros como tecnológicos. También se han creado cambios en la forma de comercialización de las viviendas. Los alquileres a medio plazo (30-90 días) están registrando un alza en la comercialización. Ante todos estos cambios, buscamos diferentes opiniones de entendidos del sector STRs. En este caso entrevistamos para que nos de su parecer a Enrique Alcántara CEO de Stay-Unique y presidente de Apartur    
@@ -8574,6 +8714,7 @@ PMS como sabes es propio porque me da libertad para poder trabajar e ir incorpor
   {
     id: "5256",
     slug: "diversion-responsable-con-detectores-de-ruido",
+    lang: "es",
     title: "Diversión responsable con detectores de ruido",
     excerpt: "Las fiestas están a la vuelta de la esquina y por tanto se acerca una fecha para disfrutar con familia y amigos. Muchos deciden pasar las fiestas en un lugar nuevo, alquilar un apartamento y esperar el nuevo año lleno de buenas y nuevas energías. ¿Sa",
     content: `Las fiestas están a la vuelta de la esquina y por tanto se acerca una fecha para disfrutar con familia y amigos. 
@@ -8597,6 +8738,7 @@ PMS como sabes es propio porque me da libertad para poder trabajar e ir incorpor
   {
     id: "5270",
     slug: "guia-para-tener-una-mejor-convivencia-vecinal",
+    lang: "es",
     title: "Guía para tener una mejor convivencia vecinal",
     excerpt: "Si su propiedad se encuentra en una zona residencial, lo más probable es que una de nuestras luchas sea garantizar una saludable y vibrante relación entre los turistas y los residentes. Aunque pueda parecer un obstáculo creemos que es posible crear u",
     content: `Si su propiedad se encuentra en una zona residencial, lo más probable es que una de nuestras luchas sea garantizar una saludable y vibrante relación entre los turistas y los residentes. 
@@ -8654,6 +8796,7 @@ Dar a sus huéspedes una experiencia única no es el único requisito del exitos
   {
     id: "25656",
     slug: "guideline-for-a-good-neighbour-coexistence",
+    lang: "es",
     title: "Guideline for a good neighbour coexistence",
     excerpt: "If your property is located in the residential area, most probably one of our struggles might be ensuring the health and vibrant relationship between tourists and residents. Although it might seem like an obstacle we believe that it is possible to cr",
     content: `If your
@@ -8749,6 +8892,7 @@ destinations.`,
   {
     id: "25665",
     slug: "enjoy-responsibly-with-noise-detectors",
+    lang: "es",
     title: "Enjoy responsibly with noise detectors",
     excerpt: "Christmas and New Year are just around the corner and therefore a time to enjoy with family and friends gets closer. Many people decide to spend the holidays in a new place, renting an apartment and wait for the new year to arrive to receive it with ",
     content: `Christmas and New Year are just around the corner and therefore a time to enjoy with family and friends gets closer.
@@ -8782,6 +8926,7 @@ If you do not have your Noise Alarm device yet, you can send us an email to [**i
   {
     id: "1120",
     slug: "haga-del-alquiler-a-corto-plazo-un-lugar-mejor-para-turistas-y-vecinos",
+    lang: "es",
     title: "Haga del Alquiler a corto plazo un lugar mejor para turistas y vecinos.",
     excerpt: "Con los años Barcelona se ha convertido en la capital del turismo. Cada año atrae a millones de turistas, sedientos de experimentar su riqueza histórica y cultural. Esto, sin duda, convirtió a Barcelona en una ciudad multicultural. Sin embargo, el cr",
     content: `Con los años Barcelona se ha convertido en la capital del turismo. Cada año atrae a millones de turistas, sedientos de experimentar su riqueza histórica y cultural. Esto, sin duda, convirtió a Barcelona en una ciudad multicultural.
@@ -8866,11 +9011,11 @@ propiedades.`,
     date: "2019-10-28",
     readTime: 4,
     image: "https://roomonitor.com/wp-content/uploads/2019/10/nina-strehl-Ds0ZIA5gzc4-unsplash-scaled-1.jpg",
-    lang: "es",
   },
   {
     id: "25696",
     slug: "short-term-rentals-a-better-place-for-tourist-and-neighbour-coexistence",
+    lang: "es",
     title: "Make short-term rentals a better place for tourist and neighbour coexistence",
     excerpt: "Over the years Barcelona has become the capital of tourism. Every year it attracts millions of tourists, thirsty to experience its historical and cultural richness. This, without a doubt, converted Barcelona into the multicultural city. However, the ",
     content: `Over the years Barcelona has become the capital of tourism. Every year it attracts millions of tourists, thirsty to experience its historical and cultural richness. This, without a doubt, converted Barcelona into the multicultural city.
@@ -8922,11 +9067,11 @@ Above points are only a few ideas for the responsible hosting. Having them in mi
     date: "2019-10-28",
     readTime: 3,
     image: "https://roomonitor.com/wp-content/uploads/2019/10/nina-strehl-Ds0ZIA5gzc4-unsplash-scaled-1-1.jpg",
-    lang: "es",
   },
   {
     id: "1084",
     slug: "tips-para-gestionar-tu-short-term-rental-como-un-experto",
+    lang: "es",
     title: "Tips para gestionar tu short-term rental como un experto",
     excerpt: "La hostelería es una de las industrias que más rápido ha crecido en el mundo. Y los alquileres a corto plazo se convirtieron en una parte cada vez más importante de ella. Con los patrones de viaje cambiantes aparecieron plataformas que no sólo popula",
     content: `La
@@ -9035,6 +9180,7 @@ estancia de sus huéspedes sea inolvidable.`,
   {
     id: "25678",
     slug: "tips-to-manage-short-term-rentals",
+    lang: "es",
     title: "Tips to manage short-term rentals like an expert",
     excerpt: "Hospitality is one of the fastest-growing industries in the world. And short term rentals became an increasingly important part of it. With changing travel patterns appeared platforms that not only popularized the sharing economy but also changed the",
     content: `Hospitality is one of the fastest-growing industries in the world. And **short term rentals** became an increasingly important part of it. With changing travel patterns appeared platforms that not only popularized the sharing economy but also changed the way people look at travels. Nowadays people search for experiences, they want to be closer to the locals and live like them. 
@@ -9122,6 +9268,7 @@ time to focus on making the stay of your guests unforgettable.`,
   {
     id: "25679",
     slug: "tips-para-gerir-o-seu-alojamento-local-como-um-especialista",
+    lang: "es",
     title: "Tips para gerir o seu Alojamento Local como um especialista",
     excerpt: "A hotelaria é uma das indústrias que mais cresce no mundo. E o Alojamento Local tornou-se uma parte cada vez mais importante dela. Com a transformação dos padrões de viagem surgiram plataformas que não só popularizaram a economia colaborativa, mas ta",
     content: `A hotelaria é uma das indústrias que mais cresce no mundo. E o **Alojamento Local** tornou-se uma parte cada vez mais importante dela. Com a transformação dos padrões de viagem surgiram plataformas que não só popularizaram a economia colaborativa, mas também mudaram a forma como as pessoas escolhem viajar.
@@ -9202,6 +9349,7 @@ tempo para se concentrar em tornar a estadia dos seus hóspedes inesquecível.`,
   {
     id: "1053",
     slug: "evitar-okupas-en-apartamento-turistico",
+    lang: "es",
     title: "Caso real: Cómo evitar okupas en tu apartamento turístico.",
     excerpt: "Según las cifras oficiales (datos del año 2017), se estima que en España hay alrededor de unas 90,000 viviendas ocupadas ilegalmente; de ellas un 23% se encuentra en Barcelona. Uno de los mayores temores al hablar de okupas son las llamadas mafias or",
     content: `Según las cifras
@@ -9254,6 +9402,7 @@ Por lo que nuestras gráficas de medición, sirven para demostrar en qué moment
   {
     id: "25710",
     slug: "real-case-how-to-avoid-squatters-in-your-tourist-apartment",
+    lang: "es",
     title: "Real Case: How to avoid squatters in your short-term rental apartment",
     excerpt: "According to official figures (data from 2017), it is estimated that in Spain there are around 90,000 illegally occupied dwellings; 23% of them are located in Barcelona. One of the biggest fears when talking about squatters are so-called organized ma",
     content: `According to official
@@ -9312,6 +9461,7 @@ If you would like to receive a quote of our **Noise Alarm sonometer**, and **sta
   {
     id: "25711",
     slug: "caso-real-como-evitar-ocupantes-ilegais-no-seu-alojamento-local",
+    lang: "es",
     title: "Caso Real: Como evitar ocupantes ilegais no seu alojamento local",
     excerpt: "De acordo com os dados oficiais (datados de 2017), estima-se que em Espanha existam cerca de 90.000 habitações ocupadas ilegalmente, das quais 23% se encontram em Barcelona. Um dos maiores medos quando se fala de ocupantes ilegais são as chamadas máf",
     content: `De acordo com os dados oficiais (datados de 2017), estima-se que em Espanha existam cerca de 90.000 habitações ocupadas ilegalmente, das quais 23% se encontram em Barcelona.
@@ -9347,6 +9497,7 @@ Se desejares receber uma avaliação do nosso **sonómetro para alojamento local
   {
     id: "1007",
     slug: "short-term-rental-events-tour",
+    lang: "es",
     title: "Short Term Rental events' tour!",
     excerpt: "Este año Roomonitor tuvo sus dos ediciones de #RoomEvents en mayo con más de 300 asistentes. El tema principal fue cómo profesionalizar el sector de alquiler a corto plazo o alquiler vacacional con las nuevas tecnologías.Hemos tenido a los mejores pa",
     content: `Este año Roomonitor tuvo sus dos ediciones de **#RoomEvents** en mayo con más de 300 asistentes. El tema principal fue cómo profesionalizar el sector de alquiler a corto plazo o alquiler vacacional con las nuevas tecnologías.Hemos tenido a los mejores partners y colaboradores, pueden ver más en: *www.roomonitorevents.com* 
@@ -9371,6 +9522,7 @@ Podéis organizar una reunión con nosotros en cualquiera de los eventos a los q
   {
     id: "25726",
     slug: "short-term-rental-events-tour",
+    lang: "es",
     title: "Short Term Rental events' tour!",
     excerpt: "This year Roomonitor had its two editions of #RoomEvents in May, with more than 300 attendees. The main topic was how to professionalize the short-term rental industry with new technologies. We've had the best partners and collaborators, you can see ",
     content: `This year Roomonitor had its two editions of **#RoomEvents** in May, with more than 300 attendees. The main topic was how to professionalize the short-term rental industry with new technologies. We've had the best partners and collaborators, you can see more at **www.roomonitorevents.com**
@@ -9394,6 +9546,7 @@ You can arrange a meeting with us in one of the events we will attend, please wr
   {
     id: "975",
     slug: "politicas-de-vigilancia-de-airbnb",
+    lang: "es",
     title: "Política de dispositivos de vigilancia",
     excerpt: "Vivimos en un mundo donde gracias a la tecnología IoT (internet of things o internet de las cosas) podemos controlar nuestro apartamento desde la distancia 24/7, respetando la privacidad de los huéspedes. Las nuevas políticas de algunos sitios de bús",
     content: `Vivimos en un mundo donde gracias a la tecnología IoT (internet of things o
@@ -9442,6 +9595,7 @@ Si quieres conocer más sobre NoiseAlarm o cualquiera de nuestros productos, dé
   {
     id: "25737",
     slug: "airbnb-surveillance-policies",
+    lang: "es",
     title: "Surveillance Device Policy",
     excerpt: "We live in a world where thanks to IoT (Internet of things)&nbsp; technology we are able to control our apartment from the distance at any time (24/7), respecting the privacy of the guests. The surveillance policies of some accommodation search sites",
     content: `We live in a world where thanks to IoT (Internet of things)  technology we are able to control our apartment from the distance at any time (24/7), respecting the privacy of the guests. 
@@ -9485,6 +9639,7 @@ To learn more about NoiseAlarm or other products, contact us! [Click here](https
   {
     id: "25738",
     slug: "politica-de-vigilancia",
+    lang: "es",
     title: "Política de vigilância",
     excerpt: "Vivemos num mundo onde, graças à tecnologia IoT (Internet of Things ou “internet das coisas”), podemos controlar o nosso apartamento 24h/7, à distância, respeitando a privacidade dos nossos hóspedes. As novas políticas de alguns sites de pesquisa de ",
     content: `Vivemos num mundo onde, graças
@@ -9551,6 +9706,7 @@ Se quiseres saber mais sobre o NoiseAlarm ou qualquer outro dos nossos produtos,
   {
     id: "921",
     slug: "turismo-responsable-y-sostenible",
+    lang: "es",
     title: "Turismo responsable y sostenible",
     excerpt: "Todas las industrias, desde marcas de consumo masivo hasta empresas de gestión de alquiler de apartamentos de corto plazo, tienen en su agenda iniciativas que promueven acciones sociales en pos de mejorar el medio ambiente y las relaciones de convive",
     content: `Todas las
@@ -9579,6 +9735,7 @@ Desde sus inicios, **Roomonitor**, viene trabajando para crear soluciones inteli
   {
     id: "25751",
     slug: "responsible-and-sustainable-tourism",
+    lang: "es",
     title: "Responsible and sustainable tourism",
     excerpt: "All industries, from mass-consumer brands to short-term apartment rental management companies, have on their agenda initiatives that promote social actions in pursuit of improve the environment and cohabitation relationships. Also, new tourists are m",
     content: `All industries,
@@ -9608,6 +9765,7 @@ Since its inception, **Roomonitor** has been working to create smart solutions f
   {
     id: "25759",
     slug: "turismo-responsavel-sustentavel",
+    lang: "es",
     title: "Turismo responsável e sustentável",
     excerpt: "Todas as indústrias, desde marcas de consumo em massa até empresas de gestão de arrendamento de alojamento local, têm na sua agenda iniciativas que promovem ações sociais em prol da melhoria do meio ambiente e das relações de convivência. Para além d",
     content: `Todas as
@@ -9660,6 +9818,7 @@ iniciativa **#WeRespect**.`,
   {
     id: "881",
     slug: "how-roomonitor-help-the-short-term-rentals-management-interview-with-esteban-gast-from-city-stay-aparts",
+    lang: "es",
     title: "How Roomonitor help the Short Term Rentals management. Interview with Esteban Gast from City Stay Aparts",
     excerpt: "Since how long are you involved in the Vacation Rental Industry ? Which is your career path? We been working with City Stay Aparts for 4 years now and my self with more than 8 years experience in the Rental Industry. My main background is Architectur",
     content: `#### Since how long are you involved in the Vacation Rental Industry ? Which is your career path?
@@ -9690,6 +9849,7 @@ Fortunately we only had 2 occasions that we had to call the guest after couple o
   {
     id: "879",
     slug: "roomonitor-vuela-hacia-2019",
+    lang: "es",
     title: "Roomonitor vuela hacia 2019",
     excerpt: "Estamos terminando 2018, el tercer año de Roomonitor, un año con importantes cambios, gran consolidación en el mercado español y la apertura de nuevos mercados europeos. Afrontamos 2019 con grandes perspectivas y por ello queremos compartir con vosot",
     content: `Estamos
@@ -9748,6 +9908,7 @@ puedo adelantar es que serán "impresionantes".`,
   {
     id: "872",
     slug: "entrevista-a-ignacio-garcia-ceo-y-eva-martinez-cofunder-de-youstylish",
+    lang: "es",
     title: "Entrevista a Ignacio Garcia - CEO y Eva Martinez - Cofunder de Youstylish﻿",
     excerpt: "You Stylish Barcelona es una agencia de gestión de apartamentos turísticos de la ciudad de Barcelona. Creada en plena crisis durante el año 2008, Eva y Nacho (sus gestores) vieron la oportunidad de copar un segmento de mercado en lo que ellos denomin",
     content: `You Stylish Barcelona es una agencia de gestión de apartamentos turísticos de la ciudad de Barcelona. Creada en plena crisis durante el año 2008, Eva y Nacho (sus gestores) vieron la oportunidad de copar un segmento de mercado en lo que ellos denominaron como “Stylish Apartments” o lujo accesible. Apartamentos que cumplieran con un proceso previo de selección, especial cuidado en los detalles y localizaciones top para ofrecer una estancia especial en Barcelona.
@@ -9781,6 +9942,7 @@ Como he dicho anteriormente, mediante un proceso de checkin exhaustivo y estrict
   {
     id: "856",
     slug: "la-innovacion-tecnologica-en-los-alojamientos-turisticos",
+    lang: "es",
     title: "La innovación tecnológica en los alojamientos turísticos",
     excerpt: "Los datos son contundentes. En los últimos 20 años se ha conseguido que la ocupación haya aumentado de manera sostenible en número de turistas, pero está llegando el momento de que el crecimiento no se base en el volumen sino en la rentabilidad soste",
     content: `Los datos son contundentes. En los últimos 20 años se ha conseguido que la ocupación haya aumentado de manera sostenible en número de turistas, pero está llegando el momento de que el crecimiento no se base en el volumen sino en la rentabilidad sostenible, y esto implica aumentar el valor de nuestra oferta.
@@ -9818,6 +9980,7 @@ This is just the beginning. Improving profitability with the current services is
   {
     id: "870",
     slug: "el-ruido-principal-problema-de-los-alojamientos-turisticos",
+    lang: "es",
     title: "El ruido, principal problema de los alojamientos turísticos",
     excerpt: "Barcelona es la tercera ciudad más visitada de Europa, por detrás de Londres y París: más de 30 millones de turistas llegaron a la ciudad condal en 2016. El hecho de que para unos sean momentos de ocio mientras que para otros sean épocas de responsab",
     content: `Barcelona es la tercera ciudad más visitada de Europa, por detrás de Londres y París: más de 30 millones de turistas llegaron a la ciudad condal en 2016. El hecho de que para unos sean momentos de ocio mientras que para otros sean épocas de responsabilidad laboral puede llevar a tensiones que dificultan la convivencia.
@@ -9845,6 +10008,7 @@ Sound Alarm es una herramienta que aporta sólo ventajas para aquellos property 
   {
     id: "25779",
     slug: "noise-the-main-problem-of-tourist-accommodations",
+    lang: "es",
     title: "Noise, the main problem of tourist accommodations",
     excerpt: "Barcelona is the third most visited city in Europe, behind London and Paris: more than 30 million tourists came to Barcelona in 2016. The fact that for some, these are moments of leisure while for others they are times of responsibility, can lead to ",
     content: `Barcelona is the third most visited city in Europe, behind London and Paris: more than 30 million tourists came to Barcelona in 2016. The fact that for some, these are moments of leisure while for others they are times of responsibility, can lead to tensions that make coexistence difficult.
@@ -9872,6 +10036,7 @@ Sound Alarm is a tool that provides only advantages for those property managers 
   {
     id: "25790",
     slug: "technological-innovation-in-tourist-accommodations",
+    lang: "es",
     title: "Technological innovation in tourist accommodations",
     excerpt: "The data are overwhelming. In the last 20 years, tourist occupation has increased sustainably way in terms of the number of tourists; however, the time has come for growth to be based not on volume but on sustainable profitability, and this means inc",
     content: `The data are overwhelming. In the last 20 years, tourist occupation has increased sustainably way in terms of the number of tourists; however, the time has come for growth to be based not on volume but on sustainable profitability, and this means increasing the value of our offer.
