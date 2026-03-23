@@ -55,13 +55,13 @@ const BlogPost = () => {
           <AnimatedSection animation="fade-up" className="max-w-4xl mx-auto">
             <LocalizedLink
               to="/blog"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 font-medium"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-4 font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               {t('blogPost.backToBlog')}
             </LocalizedLink>
 
-            <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
+            <span className="block w-fit border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
               {post.category}
             </span>
 
