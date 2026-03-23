@@ -210,7 +210,7 @@ export default function CaseStudies() {
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-primary-foreground mb-6 text-balance">
               {t('caseStudies.readyTitle')}
             </h2>
             <p className="text-lg sm:text-xl text-primary-foreground/80 font-light max-w-2xl mx-auto mb-10">
