@@ -1109,7 +1109,7 @@ const es = {
       { value: "24/7", label: "Cobertura operativa" },
       { value: "<2min", label: "Respuesta media" },
       { value: "100%", label: "Verificación humana" },
-      { value: "30.000+", label: "Propiedades gestionadas" },
+      { value: "45.000+", label: "Propiedades gestionadas" },
     ],
     featuresEyebrow: "Capacidades",
     featuresTitle: "Mucho más que monitorización de ruido",

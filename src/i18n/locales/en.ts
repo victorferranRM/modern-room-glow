@@ -1109,7 +1109,7 @@ const en = {
       { value: "24/7", label: "Operational coverage" },
       { value: "<2min", label: "Average response" },
       { value: "100%", label: "Human verification" },
-      { value: "30,000+", label: "Properties managed" },
+      { value: "45,000+", label: "Properties managed" },
     ],
     featuresEyebrow: "Capabilities",
     featuresTitle: "Far more than noise monitoring",

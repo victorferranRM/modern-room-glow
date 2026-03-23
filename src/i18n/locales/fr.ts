@@ -1109,7 +1109,7 @@ const fr = {
       { value: "24/7", label: "Couverture opérationnelle" },
       { value: "<2min", label: "Réponse moyenne" },
       { value: "100%", label: "Vérification humaine" },
-      { value: "30 000+", label: "Propriétés gérées" },
+      { value: "45 000+", label: "Propriétés gérées" },
     ],
     featuresEyebrow: "Capacités",
     featuresTitle: "Bien plus que la surveillance du bruit",
