@@ -140,6 +140,8 @@ export default function CaseStudies() {
                         src={study.heroImage} 
                         alt={study.company}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       <div className="absolute bottom-4 left-4 w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center p-1.5">

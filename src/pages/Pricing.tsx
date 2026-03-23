@@ -238,7 +238,7 @@ export default function Pricing() {
                 <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
                   <div className="flex flex-col lg:flex-row">
                     <div className="lg:w-2/5 relative">
-                      <img src={serviceControlCenter} alt="Control Center" className="w-full h-56 lg:h-full object-cover" />
+                      <img src={serviceControlCenter} alt="Control Center" className="w-full h-56 lg:h-full object-cover" loading="lazy" decoding="async" />
                       <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/30 to-transparent" />
                     </div>
                     <div className="lg:w-3/5 p-6 lg:p-10 flex flex-col justify-center">
