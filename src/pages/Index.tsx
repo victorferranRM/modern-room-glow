@@ -11,6 +11,7 @@ import { PartnersSection } from "@/components/home/PartnersSection";
 import { WhyRoomonitorSection } from "@/components/home/WhyRoomonitorSection";
 import { CoverSection } from "@/components/home/CoverSection";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { LazyVideo } from "@/components/ui/lazy-video";
 
 const Index = () => {
   return (
@@ -25,11 +26,11 @@ const Index = () => {
           <ControlLevelSection />
         </AnimatedSection>
         {/* Video banner separator */}
-        <div className="relative w-full overflow-hidden aspect-[2/1] sm:aspect-[3/1]">
-          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/videos/monitoring-bg.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <LazyVideo
+          src="/videos/monitoring-bg.mp4"
+          containerClassName="relative w-full overflow-hidden aspect-[2/1] sm:aspect-[3/1]"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <AnimatedSection animation="fade-up">
           <MonitoringSection />
         </AnimatedSection>
