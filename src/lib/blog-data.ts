@@ -27,145 +27,141 @@ export const categories = categoriesByLang['es'];
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "37242",
-    slug: "reglamento-alojamiento-local-lisboa-2025",
-    title: "Cambios en el Reglamento del Alojamiento Local en Lisboa: Áreas de Contención, excepciones y qué implican",
-    excerpt: "El 6 de diciembre de 2025 entraron en vigor modificaciones relevantes del Reglamento Municipal del Alojamiento Local (RMAL) de Lisboa. La revisión se enmarca en el nuevo contexto nacional definido por el Decreto-Ley n.º 76/2024 y refuerza los mecanis",
-    content: `El 6 de diciembre de 2025 entraron en vigor modificaciones relevantes del Reglamento Municipal del Alojamiento Local (RMAL) de Lisboa.
+    id: "36970",
+    slug: "reducir-quejas-vecinales-alquiler-turistico",
+    title: "Claves para reducir las quejas vecinales en propiedades turísticas",
+    excerpt: "Las quejas vecinales son uno de los mayores riesgos para cualquier propietario o gestor de alquiler turístico. No solo afectan a la convivencia, sino que pueden derivar en sanciones, inspecciones, pérdida de licencias o incluso el cierre de la activi",
+    content: `Las quejas vecinales son uno de los mayores riesgos para cualquier propietario o gestor de alquiler turístico. No solo afectan a la convivencia, sino que pueden derivar en sanciones, inspecciones, pérdida de licencias o incluso el cierre de la actividad.
 
-La revisión se enmarca en el nuevo contexto nacional definido por el Decreto-Ley n.º 76/2024 y refuerza los mecanismos de regulación territorial del Alojamiento Local (AL) en la ciudad.
+La buena noticia es que la mayoría de conflictos vecinales **se pueden prevenir** si se trabaja la operativa adecuada y se cuenta con las herramientas correctas.
 
-Si eres propietario, gestor o inversor en Lisboa, estos cambios tienen un impacto directo en tu actividad.
+En este artículo repasamos las claves más importantes para reducir las quejas vecinales en propiedades turísticas, y cómo Roomonitor juega un papel central en esta estrategia.
 
-## Nuevo modelo de contención: ¿cómo funciona ahora?
+## 1. El ruido: el origen de la mayoría de conflictos
 
-Uno de los principales cambios es la redefinición de las escalas territoriales de análisis y supervisión.
+En la gran mayoría de ciudades, el ruido es el principal detonante de las quejas vecinales.
 
-El municipio pasa a trabajar con tres niveles:
+Fiestas, reuniones numerosas, música alta o simplemente un uso intensivo de la vivienda fuera de los horarios permitidos suelen ser suficientes para que un vecino llame a la policía o al ayuntamiento.
 
-- Municipio
+### La clave no es reaccionar, es anticiparse
 
-- Freguesia (parroquia administrativa)
+Muchos propietarios actúan **cuando el problema ya ha ocurrido**. El vecino ya se ha quejado. La policía ya ha pasado. Y el expediente ya está abierto.
 
-- Barrio
+La diferencia está en **detectar el problema antes de que escale**.
 
-La freguesia se convierte en la unidad base de seguimiento, con un análisis complementario a nivel de barrio.
+Aquí es donde el dispositivo con el **[sensor de ruido Roomonitor](https://new.roomonitor.com/es/dispositivo/)** se convierte en una pieza fundamental.
 
-La supervisión es **mensual** y se basa en la ratio entre:
+### El dispositivo Roomonitor
 
-- Número de establecimientos de Alojamiento Local
+El dispositivo de Roomonitor mide el nivel de ruido en tiempo real, sin grabar conversaciones ni vulnerar la privacidad de los huéspedes.
 
-- Número de viviendas de residencia habitual (datos del INE)
+Cuando se superan los umbrales definidos, el sistema:
 
-## ¿Qué son las Áreas de Contención Absoluta?
+- Detecta situaciones de riesgo a partir de varios patrones
 
-Son zonas donde la ratio entre AL y vivienda habitual es **igual o superior al 10%**.
+- Genera alertas automáticas
 
-En estos territorios:
+- Permite actuar de forma inmediata
 
-- Los nuevos registros quedan fuertemente limitados
+Esto permite intervenir **antes de que el ruido se convierta en una queja vecinal**, y demostrar, además, una actitud proactiva ante cualquier inspección o reclamación.
 
-- La autorización pasa a tener carácter excepcional
+## 2. Normas claras desde el primer momento
 
-- El control municipal se vuelve más estricto
+Muchos conflictos se generan porque los huéspedes **no saben exactamente qué se espera de ellos**.
 
-Pueden declararse a nivel de municipio, freguesia o barrio.
+Normas ambiguas, nula información sobre la propiedades o comunicaciones genéricas o mensajes tardíos generan margen para el incumplimiento.
 
-## ¿Qué son las Áreas de Contención Relativa?
+### Qué funciona mejor
 
-Se aplican cuando la ratio es:
+- Normas de convivencia claras y visibles
 
-- Igual o superior al 5%
+- Recordatorios antes y durante la estancia
 
-- Inferior al 10%
+- Mensajes adaptados al momento (check-in, noche, check-out)
 
-En el caso de los barrios, solo si la freguesia correspondiente no está ya en situación de contención.
+Con Roomonitor, estas normas no se quedan solo en un documento:
 
-En estas zonas existen limitaciones, aunque hay mayor margen para autorizaciones excepcionales.
+- Se integran dentro de protocolos operativos
 
-## Excepciones en las Áreas de Contención Absoluta
+- Se activan automáticamente cuando hay situaciones de riesgo
 
-El Ayuntamiento de Lisboa puede autorizar nuevos registros, de forma excepcional, cuando se dé alguno de los siguientes supuestos:
+- Se comunican en el momento adecuado
 
-#### ✔ Rehabilitación de edificios
+## 3. Actuación rápida y coordinada
 
-- Edificios en ruina
+Una queja vecinal no suele producirse por un único incidente aislado, sino por **la sensación de abandono o falta de respuesta**.
 
-- Rehabilitación integral de inmuebles desocupados durante más de 3 años
+Cuando el ruido se mantiene en el tiempo y nadie actúa, el vecino decide escalar el problema.
 
-#### ✔ Proyectos de especial interés para la ciudad
+### La importancia del tiempo de reacción
 
-- Edificios de uso multifuncional
+Reducir las quejas no depende solo de detectar el problema, sino de:
 
-- Proyectos de carácter social o cultural
+- Actuar rápido
 
-- Integración de oferta de vivienda a precios asequibles
+- De forma consistente
 
-## Excepciones en las Áreas de Contención Relativa
+- Con criterios claros
 
-Además de los supuestos anteriores, puede autorizarse la modalidad “habitación” cuando:
+El ecosistema Roomonitor combina:
 
-- Se trate de una vivienda T2 o superior
+- Dispositivo de monitorización
 
-- Sea residencia habitual del propietario desde hace más de 3 años
+- **[Centro de control](https://new.roomonitor.com/es/centro-de-control/) **que atiende al huésped con desvío de llamadas
 
-- Se limite a 1 habitación (T2) o 2 habitaciones (tipologías superiores)
+- Protocolos operativos
 
-## ¿Cuándo NO se autorizan nuevos registros?
+Esto permite una intervención inmediata, docume**quejas vecinales alquiler turístico**ntada y coherente, incluso cuando el gestor no está disponible.
 
-Incluso en áreas de contención relativa o absoluta, no se concederán nuevos registros cuando el inmueble:
+## 4. Protocolos, no improvisación
 
-- Haya tenido un contrato de arrendamiento residencial en los últimos 5 años (salvo excepción del propio arrendatario)
+Improvisar ante cada incidencia genera errores, respuestas incoherentes y frustración tanto en vecinos como en huéspedes.
 
-- Haya sido adquirido en subasta pública municipal
+Los gestores profesionales trabajan con **[protocolos claros](https://youtu.be/A3ffs59MwlI)**:
 
-## ¿Cómo solicitar autorización en áreas de contención?
+- Qué hacer ante un primer aviso
 
-La solicitud debe presentarse ante el Ayuntamiento de Lisboa mediante:
+- Cuándo contactar con el huésped
 
-- Solicitud formal
+- Cuándo escalar la incidencia
 
-- Documentación acreditativa
+Con la plataforma [**Manager**](https://youtu.be/b2LP8OW9M-s) de Roomonitor, estos protocolos se estructuran por:
 
-- Posible solicitud de información previa (conforme al RJUE)
+- Cuenta principal
 
-## Impacto práctico para propietarios e inversores
+- Ciudad o edificio
 
-Estas modificaciones:
+- Vivienda o habitación
 
-- Refuerzan el control territorial
+Esto garantiza que cada equipo actúe siempre de la misma manera, independientemente del activo o del momento.
 
-- Exigen mayor planificación antes de invertir
+## 5. Demostrar diligencia ante administraciones y comunidades
 
-- Limitan el crecimiento espontáneo del AL
+Cada vez más ayuntamientos y comunidades de vecinos exigen pruebas de control y prevención, vea el** [ejemplo en Cantabri](https://new.roomonitor.com/es/cantabria-obliga-sensores-ruido-viviendas-turisticas/)**[**a**](https://new.roomonitor.com/es/cantabria-obliga-sensores-ruido-viviendas-turisticas/).
 
-- Favorecen proyectos más estructurados y profesionalizados
+No basta con decir que “se vigila el ruido”. Hay que poder demostrarlo.
 
-En un mercado más regulado, el cumplimiento normativo y la gestión profesional se vuelven determinantes.
+Roomonitor permite:
 
-## ¿Qué implica esto para el futuro del AL en Lisboa?
+- Acreditar monitorización continua, a tiempo real
 
-Lisboa consolida un modelo de contención activa, con seguimiento mensual y criterios más exigentes.
+- Mostrar registros de actuación
 
-El mercado no desaparece — pero se vuelve más técnico, más regulado y más dependiente de datos y planificación.
+- Probar que existe una estrategia preventiva
 
-Para quienes gestionan múltiples unidades, analizar ratios territoriales y garantizar el cumplimiento normativo pasa a ser estratégico.
+Esto no solo reduce sanciones, sino que **protege la continuidad del negocio**. E incluso tenemos agentes que monitorizan los dispositivos por ti y actúan en consecuencia.
 
-## Información basada en datos de ALEP
+## Conclusión: prevenir es proteger tu licencia
 
-La información presentada en este artículo se basa en las comunicaciones y aclaraciones compartidas por **ALEP – Associação do Alojamento Local em Portugal**, entidad representativa del sector que ha seguido de cerca la revisión del Reglamento Municipal de Lisboa.
+Reducir las quejas vecinales no depende de una sola acción, sino de una estrategia completa con: prevención, tecnología, protocolos y rapidez de respuesta.
 
-Para consultar información oficial y actualizaciones adicionales, recomendamos visitar la web de la [**asociación**](https://www.alep.pt).
+El **dispositivo** **Roomonitor** es el punto de partida de todo el sistema. No como una herramienta reactiva, sino como un elemento clave de prevención y control operativo.
 
-Los cambios en el Reglamento del Alojamiento Local en Lisboa marcan una nueva etapa para el sector.
-
-Si ya operas, conviene revisar la situación de tu inmueble.Si estás pensando en invertir, el análisis territorial es hoy imprescindible.
-
-El contexto ha cambiado — y la preparación marca la diferencia.`,
-    category: "Noticias del sector",
-    date: "2026-02-23",
-    readTime: 3,
-    image: "https://roomonitor.com/wp-content/uploads/2026/02/Lisbon-air-vision-scaled.jpg",
+Porque en el alquiler turístico, **la mejor incidencia es la que nunca llega a ocurrir**.`,
+    category: "Gestión de propiedades",
+    date: "2026-01-12",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2026/01/image00039-baja.jpg",
     lang: "es",
     featured: true,
   },
@@ -640,7 +636,7 @@ Esta nueva regulación ya está en vigor. Si operas en municipios como **Santand
   {
     id: "35834",
     slug: "registro-estatal-viviendas-turisticas-fevitur-silvia-blasco",
-    title: 'Silvia Blasco (FEVITUR): "El 45 % de las viviendas turisticas legales quedaron fuera del nuevo registro estatal"',
+    title: "Silvia Blasco (FEVITUR): \\"El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal\\"",
     excerpt: "Desde el 1 de julio de 2024, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del 45 % de las viviendas turísticas l",
     content: `Desde el **1 de julio de 2024**, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del **45 % de las viviendas turísticas legales** que ya estaban registradas en sus comunidades autónomas, según denuncia **Silvia Blasco**, presidenta de FEVITUR en [Economist&Jurist](https://www.economistjurist.es/zbloque-1/silvia-blasco-presidenta-de-fevitur-un-45-de-las-viviendas-turisticas-legales-quedaron-fuera-del-nuevo-registro-estatal-impuesto-por-el-ministerio-de-vivienda/).
 
@@ -684,7 +680,7 @@ En Roomonitor estamos atentos a estos cambios regulatorios. Creemos imprescindib
   {
     id: "35748",
     slug: "entrevista-jordan-setti-checkmyguest-seguridad-alquiler-vacacional",
-    title: 'Entrevista con Jordan Setti, COO de CheckMyGuest: "Saber que de 22:00 a 7:00 alguien toma el relevo, no tiene precio"',
+    title: "Entrevista con Jordan Setti, COO de CheckMyGuest: \\"Saber que de 22:00 a 7:00 alguien toma el relevo, no tiene precio\\"",
     excerpt: "Hola a todos. Hoy tenemos el placer de estar en las oficinas de Checkmyguest con Jordan Setti. Su director operativo es uno de los actores clave del mercado de alquileres de corta y media estancia en Francia. Estamos aquí para hablar de la evolución ",
     content: `Hola a todos. Hoy tenemos el placer de estar en las oficinas de **[Checkmyguest](https://www.checkmyguest.fr/)** con Jordan Setti.
 
@@ -763,50 +759,6 @@ Nada en particular, salvo que sabemos que nuestros apartamentos están seguros y
     date: "2025-07-21",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2025/07/IMG_4521-1-scaled.jpg",
-    lang: "es",
-  },
-  {
-    id: "35651",
-    slug: "incidencias-nocturnas-alquiler-turistico",
-    title: "Problemas e incidencias nocturnas: cómo afrontarlas sin morir en el intento",
-    excerpt: "Porque el alquiler turístico no duerme, pero tú sí deberías poder hacerlo. La noche es, sin duda, el momento más crítico en la gestión de una vivienda turística. Durante el día todo parece estar bajo control, pero al caer el sol se multiplican las po",
-    content: `Porque el alquiler turístico no duerme, pero tú sí deberías poder hacerlo.
-
-La noche es, sin duda, el momento más crítico en la gestión de una vivienda turística. 
-
-Durante el día todo parece estar bajo control, pero al caer el sol se multiplican las posibilidades de que algo se descontrole: un huésped que decide montar una fiesta sin avisar, un vecino que no puede dormir por el ruido, una cerradura que deja de funcionar, una alarma que se dispara, una fuga de agua que nadie detecta hasta que es demasiado tarde.
-
-## Qué consecuencias puede tener una mala gestión nocturna
-
-Las incidencias nocturnas no solo generan molestias puntuales, sino que pueden comprometer la reputación del alojamiento, tensar la relación con la comunidad y, sobre todo, alterar la tranquilidad y el descanso del gestor o propietario. Y no es poca cosa.
-
-Una reseña negativa en Airbnb por una mala noche puede hacerte perder visibilidad, reservas y, en última instancia, ingresos. Si no hay un protocolo claro o una atención rápida, el problema escala y es más difícil de gestionar al día siguiente. Todo esto se traduce en estrés acumulado, sobrecarga y pérdida de eficiencia.
-
-## Cómo anticiparse a las incidencias nocturnas
-
-¿Entonces, cómo afrontar este tipo de situaciones sin que acaben contigo?
-
-El primer paso es anticiparse. La prevención empieza por contar con tecnología que te ayude a detectar cualquier actividad anómala sin necesidad de estar pendiente 24/7. Sensores de ruido, de humo o de temperatura te permiten recibir alertas en tiempo real y actuar antes de que el vecino lo haga. En Roomonitor, por ejemplo, nuestros dispositivos están diseñados precisamente para eso: darte control sin necesidad de estar presente.
-
-## Protocolos claros, incluso de madrugada
-
-Pero la tecnología por sí sola no es suficiente. Es esencial tener definidos protocolos claros, también para lo que ocurre fuera del horario laboral. Qué hacer si suena una alarma a las tres de la mañana, quién debe intervenir si hay una queja por ruido, cómo comunicarlo al huésped de forma efectiva. Tener una hoja de ruta para cada tipo de incidencia permite reaccionar con rapidez y profesionalidad.
-
-## Externalizar la atención nocturna: una decisión inteligente
-
-Y luego está la clave más importante: no intentar hacerlo todo tú. Externalizar la atención nocturna es una de las decisiones más inteligentes que puede tomar cualquier gestor. En Roomonitor, contamos con un equipo especializado que actúa en tiempo real ante cualquier incidencia a través de nuestro servicio [Alarm Assistant Night Agents](https://new.roomonitor.com/es/asistente-de-alarmas/#night). Esto no solo garantiza una mejor experiencia para el huésped, sino que protege tu reputación, cuida la convivencia en el edificio y, lo más importante, te permite descansar de verdad.
-
-## Dormir tranquilo también es parte de una buena gestión
-
-Porque no se trata de evitar cualquier problema (spoiler: eso no va a pasar), sino de tener la capacidad de detectarlo a tiempo, actuar con criterio y no llevarte el conflicto a la almohada.
-
-Dormir tranquilo también es parte de una buena gestión.
-
-¿Quieres saber cómo podemos ayudarte a gestionar mejor las noches? Escríbenos. Estaremos despiertos por ti.`,
-    category: "Roomonitor",
-    date: "2025-07-16",
-    readTime: 3,
-    image: "https://roomonitor.com/wp-content/uploads/2025/07/problemas-nocturnos.jpg",
     lang: "es",
   },
   {
@@ -905,60 +857,6 @@ Por otro lado, el **coworking** se centra en el entorno laboral compartido. El c
 - **Estilo de vida flexible**: ideal para quienes cambian de ciudad con frecuencia, trabajan en remoto o valoran la posibilidad de moverse sin complicaciones logísticas.
 
 El coliving representa una evolución del concepto de vivienda urbana: más social, más eficiente y más adaptada a las necesidades del presente. Es una alternativa en auge que está redefiniendo cómo, dónde y con quién vivimos.`,
-    category: "Gestión de propiedades",
-    date: "2025-07-03",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2025/06/coliving.png",
-    lang: "es",
-  },
-  {
-    id: "35613",
-    slug: "o-que-e-coliving",
-    title: "O que é coliving e por que está revolucionando o modo de viver nas cidades",
-    excerpt: "O coliving se tornou uma das opções mais atrativas para quem busca uma alternativa flexível, confortável e social à moradia tradicional. Muito popular entre jovens profissionais, nômades digitais e estudantes, esse modelo combina privacidade, serviço",
-    content: `O coliving se tornou uma das opções mais atrativas para quem busca uma alternativa flexível, confortável e social à moradia tradicional. Muito popular entre jovens profissionais, nômades digitais e estudantes, esse modelo combina privacidade, serviços inclusos e um forte senso de comunidade.
-
-## O que é coliving, afinal?
-
-Coliving é um modelo de moradia compartilhada no qual cada residente possui seu próprio espaço privado — geralmente um quarto ou estúdio com banheiro — e compartilha áreas comuns como cozinhas, salas de estar, espaços de trabalho ou áreas de lazer. Tudo é administrado por uma empresa que oferece tanto a infraestrutura quanto serviços como limpeza, manutenção, internet e atividades para promover a convivência.
-
-Mais do que uma solução de moradia, o coliving propõe um estilo de vida baseado em conexão, praticidade e flexibilidade.
-
-## Principais características do coliving
-
-#### Espaços privados
-
-Cada morador tem seu próprio quarto ou estúdio, muitas vezes com banheiro privativo, o que garante conforto e privacidade.
-
-#### Áreas comuns
-
-Os residentes compartilham espaços como cozinha, sala de estar, coworking, academia ou terraços. Esses ambientes são projetados para facilitar o convívio, a troca de experiências e o bem-estar coletivo.
-
-#### Comunidade e networking
-
-Um dos pilares do coliving é a construção de uma comunidade. Muitas estruturas organizam eventos, encontros e atividades para incentivar a convivência social e o networking profissional entre os moradores.
-
-#### Serviços inclusos e flexibilidade
-
-Limpeza, manutenção, contas e internet costumam estar incluídos no valor mensal. Além disso, os contratos são flexíveis, adaptando-se ao estilo de vida dinâmico e urbano.
-
-## Como o coliving se diferencia de outros modelos?
-
-Apesar de ambos priorizarem o senso de comunidade, o **cohousing** é autogerido pelos próprios moradores, que tomam decisões em conjunto a longo prazo. Já o coliving é administrado por uma empresa que oferece uma experiência prática e com serviços inclusos.
-
-O **coworking**, por outro lado, é voltado apenas para o ambiente de trabalho compartilhado. O coliving é um modelo de moradia, mas muitos espaços de coliving incluem áreas de coworking para quem trabalha remotamente.
-
-## Vantagens do coliving
-
-- **Economia financeira**: dividir os custos de moradia e serviços pode sair mais barato do que alugar um apartamento individual, especialmente nas grandes cidades.
-
-- **Conexões sociais**: os ambientes e atividades promovem a criação de amizades, colaborações e oportunidades de networking.
-
-- **Praticidade e gestão centralizada**: com serviços como limpeza e manutenção incluídos, o dia a dia se torna mais simples e organizado.
-
-- **Estilo de vida flexível**: ideal para quem se muda com frequência, trabalha remoto ou prefere evitar contratos longos e burocracias.
-
-O coliving representa uma evolução no conceito de moradia urbana — mais social, mais eficiente e muito mais alinhado com as necessidades atuais. Uma tendência em crescimento que está transformando nossa forma de viver nas cidades.`,
     category: "Gestión de propiedades",
     date: "2025-07-03",
     readTime: 2,
@@ -1072,70 +970,6 @@ Externalizar parte de tu operativa (como la atención de incidencias remotas o p
     category: "Gestión de propiedades",
     date: "2025-06-04",
     readTime: 4,
-    image: "https://roomonitor.com/wp-content/uploads/2025/06/ibiza.jpg",
-    lang: "es",
-  },
-  {
-    id: "35210",
-    slug: "operacao-alta-temporada-alojamento-local",
-    title: "Alta temporada: 5 chaves para manter o controlo da sua operação",
-    excerpt: "Embora a alta temporada não comece exatamente ao mesmo tempo em todas as regiões turísticas de Espanha, junho costuma marcar o início de um período de exigência máxima para os gestores de alojamento local. Mais check-ins, maior rotatividade, mais inc",
-    content: `Embora a alta temporada não comece exatamente ao mesmo tempo em todas as regiões turísticas de Espanha, junho costuma marcar o início de um período de exigência máxima para os gestores de alojamento local. Mais check-ins, maior rotatividade, mais incidências… e muito menos margem para erro.
-
-Para os property managers e operadores de apartamentos turísticos, trata-se de uma fase intensa, onde qualquer falha operacional pode afetar diretamente a experiência do hóspede e, por consequência, a reputação do negócio.
-
-Na Roomonitor, temos trabalhado lado a lado com gestores em toda a Europa. Se há algo que aprendemos, é que uma operação sólida, automatizada e com capacidade de resposta 24/7 é essencial para manter o controlo — e a calma — durante os meses mais exigentes do ano.
-
-Sabemos bem o que é operar durante o verão, por isso queremos partilhar consigo **5 estratégias práticas para garantir uma operação eficiente e sem sobressaltos.**
-
-## 1. **Antecipe-se aos picos de procura**
-
-A diferença entre uma temporada tranquila e uma temporada caótica começa na organização. Planeie com antecedência:
-
-- O número de entradas e saídas diárias;
-
-- Os recursos operacionais disponíveis em cada cidade ou zona;
-
-- As necessidades logísticas adicionais (roupa de cama extra, berços, apoio fora de horas…).
-
-Uma boa previsão evita imprevistos de última hora.
-
-## 2. **Centralize toda a sua informação operacional**
-
-A sua equipa sabe o que fazer se se perder uma chave? Ou se houver uma avaria elétrica a meio da noite?
-
-Durante o verão, o volume de operações multiplica-se — por isso, é fundamental ter um sistema centralizado que permita acompanhar em tempo real o que se passa em cada alojamento. Com o **[Manager](https://youtu.be/iQzstSMJmEw)** da Roomonitor, os gestores podem consultar toda a informação operacional padronizada num único lugar. Cada propriedade pode ter instruções específicas (acessos, Wi-Fi, contactos, pontos de luz...) que a sua equipa ou a Roomonitor podem seguir passo a passo.
-
-Desta forma, evita surpresas desagradáveis e toma decisões informadas, sem perder tempo nem duplicar esforços.
-
-Manager Roomonitor
-
-## 3. **Reaja antes que o problema cresça**
-
-Durante a alta temporada, aumentam os excessos: festas, hóspedes a mais do que o permitido, ou até fumo de tabaco em propriedades onde é expressamente proibido.
-
-Com o dispositivo Roomonitor, pode monitorizar em tempo real o ruído, a ocupação, o fumo, a qualidade do ar e muito mais. Isso permite-lhe agir de imediato — muitas vezes antes que a situação piore. Como? Através de um sistema inteligente de alertas com base em padrões.
-
-Pode gerir isto diretamente com o **[Noise Alarm](https://new.roomonitor.com/pt/monitorizacao-de-ruido/)**, ou deixar nas nossas mãos através do nosso **[Centro de Controlo](https://new.roomonitor.com/pt/centro-de-controle/)**, com serviços como o **[Alarm Assistant](https://new.roomonitor.com/pt/assistente-de-alarmes/)**. Assim, cumpre com a regulamentação, evita multas e garante o bem-estar dos vizinhos e dos hóspedes.
-
-## 4. **Melhore a experiência do hóspede**
-
-Em plena temporada alta, cada minuto conta. E se estiver a gerir vários apartamentos em diferentes cidades, isso torna-se ainda mais crítico.
-
-Na Roomonitor não só identificamos problemas — também os resolvemos. Com serviços como o **[Alarm Assistant](https://new.roomonitor.com/pt/assistente-de-alarmes/)** e o **[Guest & Property Services](https://new.roomonitor.com/pt/servicos-integrales-para-alojamentos/)**, garantimos apoio real 24/7 para os seus hóspedes, desde o momento da reserva até depois do check-out.
-
-Atendemos chamadas, resolvemos incidências, enviamos técnicos ou intervimos remotamente, conforme o [protocolo](https://youtu.be/aYcmc45V4lE) definido para cada propriedade. Dispomos de equipas locais em **Lisboa, Madrid, Barcelona, Valência, Sevilha, Málaga, Granada e Paris** — todas coordenadas em tempo real pela nossa aplicação própria: **[Redkool](https://youtu.be/mDkTbT_8y1M)**, que regista e documenta todas as intervenções em campo.
-
-Field Service Agent
-
-## 5. **Conte com uma estrutura profissional "as a service"**
-
-Sobreviver ao verão ou fazer crescer o seu negócio depende da estrutura que o apoia. Na Roomonitor disponibilizamos toda a nossa infraestrutura: mais de 100 profissionais, equipas multidisciplinares, tecnologia própria, protocolos definidos e cobertura presencial em várias cidades europeias — além de assistência remota em qualquer parte do mundo.
-
-Delegar parte da operação (como o atendimento de urgência ou apoio técnico) não é sinal de fraqueza — é uma escolha estratégica que permite ao seu negócio escalar com solidez e segurança. Decide até onde quer a nossa ajuda. Nós tratamos do resto.`,
-    category: "Gestión de propiedades",
-    date: "2025-06-04",
-    readTime: 3,
     image: "https://roomonitor.com/wp-content/uploads/2025/06/ibiza.jpg",
     lang: "es",
   },
@@ -1332,42 +1166,6 @@ La participación de Roomonitor en **The Avantio Partnership 25** reafirma nuest
     lang: "es",
   },
   {
-    id: "34906",
-    slug: "roomonitor-avantio-partnership-25",
-    title: "Roomonitor no The Avantio Partnership 25",
-    excerpt: "Na Roomonitor, não podíamos perder The Avantio Partnership 25, um evento de referência para gestores de propriedades e parceiros do setor de aluguel de férias. Com centenas de participantes, este encontro foi o espaço ideal para networking, geração d",
-    content: `Na Roomonitor, não podíamos perder [The Avantio Partnership 25](https://www.avantio.com/es/event/the-avantio-partnership/), um evento de referência para gestores de propriedades e parceiros do setor de aluguel de férias. Com centenas de participantes, este encontro foi o espaço ideal para **networking**, geração de oportunidades de negócios e descoberta das tendências que estão moldando o futuro da indústria.
-
-O evento aconteceu no Palácio de Congressos de Valência nos dias 26, 27 e 28 de fevereiro.
-
-### A presença da Roomonitor no TAP25
-
-Nossa equipe comercial esteve presente em Valência para compartilhar com gestores e profissionais do setor as soluções que a Roomonitor oferece para a **gestão eficiente de propriedades de aluguel de curta duração**. Além disso, nosso **Head of Sales, Gabriel Pérez Fernández**, liderou um workshop essencial sobre a **otimização e controle de propriedades de curto e médio prazo**, destacando a importância da tecnologia na redução de problemas operacionais e na melhoria da experiência dos hóspedes.
-
-Gabriel no TAP25
-
-### A importância da Roomonitor na gestão de propriedades
-
-Em um contexto onde os gestores precisam equilibrar a satisfação dos hóspedes com a tranquilidade dos vizinhos, a Roomonitor se consolidou como um parceiro estratégico. Nossa **tecnologia de monitoramento em tempo real** permite:
-
-- Controlar os níveis de ruído e prevenir incidentes sem necessidade de intervenções constantes.
-
-- Otimizar o atendimento aos hóspedes sem aumentar os custos operacionais.
-
-- Garantir uma gestão eficiente por meio de dados essenciais sobre o uso das acomodações.
-
-Com nosso dispositivo e nossa gama de serviços, a Roomonitor ajuda a prevenir conflitos e a **manter uma excelente reputação** dos imóveis de aluguel por temporada.
-
-### Roomonitor, impulsionando o futuro da gestão de aluguel
-
-A participação da Roomonitor no **The Avantio Partnership 25** reafirma nosso compromisso com a inovação e a melhoria contínua na gestão de aluguéis de temporada. Continuamos a desenvolver **soluções tecnológicas** que otimizam a experiência tanto para gestores quanto para hóspedes e comunidades locais. Nos vemos no próximo evento!`,
-    category: "Roomonitor",
-    date: "2025-03-01",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2025/05/AVANTIOD2-C2-742.jpg",
-    lang: "es",
-  },
-  {
     id: "31588",
     slug: "datos-clave-que-marcaron-el-inicio-de-2025-en-roomonitor",
     title: "Datos clave que marcaron el inicio de 2025 en Roomonitor",
@@ -1401,122 +1199,6 @@ Estos datos reflejan el compromiso de Roomonitor con la excelencia y la eficienc
     date: "2025-02-04",
     readTime: 1,
     image: "https://roomonitor.com/wp-content/uploads/2025/02/6.jpg",
-    lang: "es",
-  },
-  {
-    id: "31607",
-    slug: "dados-chave-que-marcaram-o-inicio-de-2025-na-roomonitor",
-    title: "Dados-chave que marcaram o início de 2025 na Roomonitor",
-    excerpt: "Encerramos 2024 com dados muito positivos, e 2025 também começou com grande atividade na Roomonitor. Nossa equipe tem trabalhado incansavelmente para garantir a melhor experiência para nossos clientes, e os números falam por si mesmos. Aqui está um r",
-    content: `Encerramos 2024 com dados muito positivos, e 2025 também começou com grande atividade na Roomonitor. Nossa equipe tem trabalhado incansavelmente para garantir a melhor experiência para nossos clientes, e os números falam por si mesmos. Aqui está um resumo dos principais marcos de janeiro, com nosso primeiro relatório de 2025.
-### Tempo de intervenção e chamadas gerenciadas
-
- 	- **43.599 minutos** dedicados ao gerenciamento de incidentes.
- 	- **11.986 chamadas** atendidas por nossa equipe de suporte.
-
-### Resolução de incidentes
-
- 	- **79,56%** dos incidentes foram resolvidos remotamente.
- 	- **20,44%** dos casos exigiram a presença de nossos agentes em campo.
-
-### Qualidade do serviço
-
- 	- Nosso índice geral de qualidade atingiu um impressionante **97,24%**.
- 	- O serviço em campo recebeu uma avaliação excepcional de **97,49%**.
-
-### Tempo de resolução
-
- 	- O tempo médio para resolver incidentes foi de **01:03:45**.
- 	- Nos casos de alarmes, nosso tempo de resposta continua ágil, com uma média de **00:39:55**.
-
-## Um começo de ano promissor
-Esses dados refletem o compromisso da Roomonitor com a excelência e eficiência. Continuamos inovando para oferecer um serviço impecável aos nossos clientes.
-
-Quer levar a segurança das suas propriedades para o próximo nível? [Entre em contato](https://new.roomonitor.com) e descubra tudo o que a Roomonitor pode fazer por você.`,
-    category: "Roomonitor",
-    date: "2025-02-04",
-    readTime: 1,
-    image: "https://roomonitor.com/wp-content/uploads/2025/02/6.jpg",
-    lang: "es",
-  },
-  {
-    id: "31503",
-    slug: "problemas-incidencias-nocturnas",
-    title: "Problemas e incidencias nocturnas: Cómo afrontarlas sin morir en el intento",
-    excerpt: "La noche puede ser un terreno complicado para cualquier gestor de alojamientos turísticos. Desde ruidos molestos hasta incidencias técnicas o quejas de vecinos, los problemas nocturnos son inevitables. Pero, ¿cómo afrontarlos sin sacrificar el descan",
-    content: `La noche puede ser un terreno complicado para cualquier gestor de alojamientos turísticos. Desde ruidos molestos hasta incidencias técnicas o quejas de vecinos, los problemas nocturnos son inevitables. Pero, ¿cómo afrontarlos sin sacrificar el descanso ni la experiencia del huésped? Aquí te damos algunos consejos clave.
-
-### 1. Anticipación: La clave para minimizar riesgos
-No hay mejor manera de gestionar incidencias que anticipándose a ellas. Asegúrate de que las normas del alojamiento sean claras y estén bien comunicadas desde el principio. Utiliza mensajes automatizados para recordar horarios de silencio y normas de convivencia.
-### 2. Tecnología a tu favor
-Las herramientas de monitorización de ruido, como Roomonitor, permiten detectar alteraciones en tiempo real y actuar antes de que el problema escale. Contar con un sistema de notificaciones automáticas ayuda a resolver situaciones sin intervención directa.
-
-Además, Roomonitor ofrece soluciones como:
-
- 	- **Noise Alarm**: Nuestro dispositivo mide el nivel de ruido en tiempo real y notifica automáticamente cuando se superan los umbrales establecidos.
- 	- **Alarm** **Assistant**: Tenemos un equipo especializado trabajando a diario para analizar las gráficas de ruido de nuestros clientes.
- 	- **Guest & Property Services**: Un servicio de atención 24/7 que contacta con los huéspedes en caso de incidencias sin necesidad de intervención directa del anfitrión.
-
-### 3. Atención 24/7 sin desvelarte
-No siempre puedes estar disponible, pero una buena estrategia es contar con un servicio externo de asistencia nocturna. Desde chatbots hasta empresas de seguridad o conserjería remota, delegar puede ser la mejor opción para garantizar tranquilidad.
-
-Nosotros te ofrecemos esta solución: puedes olvidarte de gestionar los problemas nocturnos por ti mismo, ya que un equipo de profesionales se encargue de contactar con los huéspedes y asegurar el cumplimiento de las normas sin mover ni un dedo. Lo hacemos todo por ti garantizando una experiencia de huésped excelente.
-
-Imagínate este caso: a unos inquilinos se les retrasa el vuelo y llegan a una hora intempestiva. Es hora de hacer el checkin. Tranquilo: allí estaremos nosotros para hacerlo sin necesidad de que ni tu ni nadie de tu equipo esté despierto.
-### 4. Comunicación rápida y efectiva
-Si un huésped reporta un problema, responde con rapidez. Una disculpa empática y una solución inmediata pueden marcar la diferencia entre una mala reseña y un cliente satisfecho. La rapidez en la respuesta genera confianza y demuestra profesionalismo.
-### 5. Protocolo de acción claro
-Establece un protocolo para cada tipo de incidencia: ruido excesivo, problemas técnicos, quejas de vecinos. Contar con una guía clara facilita la toma de decisiones y agiliza la resolución. En Roomonitor tenemos designado un protocolo exclusivo para todos y cada uno de nuestros clientes que nos permite actuar con diligencia en cada caso.
-### 6. La prevención es tu mejor aliada
-Evalúa los puntos débiles de tu alojamiento y trabaja en prevenir incidencias recurrentes. Refuerza el aislamiento acústico, revisa periódicamente las instalaciones y mantén un canal de comunicación abierto con los vecinos para garantizar una buena convivencia.
-### Gestiona los problemas nocturnos sin afectar la experiencia del huésped
-Las incidencias nocturnas son parte del negocio, pero con una buena planificación y las herramientas adecuadas, puedes gestionarlas sin sacrificar tu descanso ni la calidad del servicio. Con Roomonitor, no solo tienes la mejor tecnología a tu disposición, sino también un servicio de asistencia nocturna para garantizar tranquilidad y satisfacción tanto para ti como para tus huéspedes.
-
-¿Ya aplicas alguna de estas estrategias? ¡Cuéntanos tu experiencia!`,
-    category: "Gestión de propiedades",
-    date: "2025-01-30",
-    readTime: 3,
-    image: "https://roomonitor.com/wp-content/uploads/2025/01/3f89a921-b62b-4f65-a572-af8a32ed5aac.webp",
-    lang: "es",
-  },
-  {
-    id: "31536",
-    slug: "problemas-incidentes-noturnos",
-    title: "Problemas e incidentes noturnos: Como enfrentá-los sem perder o sono",
-    excerpt: "A noite pode ser um período desafiador para qualquer gestor de acomodações turísticas. Desde barulho excessivo até problemas técnicos ou reclamações de vizinhos, os incidentes noturnos são inevitáveis. Mas como lidar com eles sem sacrificar seu desca",
-    content: `A noite pode ser um período desafiador para qualquer gestor de acomodações turísticas. Desde barulho excessivo até problemas técnicos ou reclamações de vizinhos, os incidentes noturnos são inevitáveis. Mas como lidar com eles sem sacrificar seu descanso ou a experiência do hóspede? Aqui estão algumas dicas essenciais.
-
-### 1. Antecipação: A chave para minimizar riscos
-Não há melhor maneira de lidar com incidentes do que preveni-los. Certifique-se de que as regras da acomodação sejam claras e bem comunicadas desde o início. Utilize mensagens automáticas para lembrar os hóspedes sobre os horários de silêncio e as normas de convivência.
-### 2. Tecnologia a seu favor
-Ferramentas de monitoramento de ruído, como o Roomonitor, permitem detectar alterações em tempo real e agir antes que o problema se agrave. Ter um sistema de notificações automáticas ajuda a resolver situações sem necessidade de intervenção direta.
-
-Além disso, o Roomonitor oferece soluções como:
-
- 	- **Noise Alarm**: Nosso dispositivo mede o nível de ruído em tempo real e envia notificações automáticas quando os limites estabelecidos são excedidos.
- 	- **Alarm Assistant**: Nossa equipe especializada trabalha diariamente analisando os gráficos de ruído dos nossos clientes.
- 	- **Guest & Property Services**: Um serviço de atendimento 24/7 que entra em contato com os hóspedes em caso de incidentes, sem necessidade de intervenção direta do anfitrião.
-
-### 3. Atendimento 24/7 sem perder o sono
-Você nem sempre pode estar disponível, mas contar com um serviço externo de assistência noturna é uma estratégia inteligente. Desde chatbots até empresas de segurança ou concierge remoto, delegar pode ser a melhor solução para garantir tranquilidade.
-
-Oferecemos essa solução: esqueça a necessidade de gerenciar problemas noturnos por conta própria. Nossa equipe de profissionais entra em contato com os hóspedes e garante o cumprimento das regras sem que você precise fazer nada. Cuidamos de tudo para proporcionar uma excelente experiência ao hóspede.
-
-Imagine esta situação: um grupo de hóspedes tem um voo atrasado e chega em um horário inconveniente. Está na hora do check-in. Não se preocupe, estaremos lá para fazer isso sem que você ou alguém da sua equipe precise ficar acordado.
-### 4. Comunicação rápida e eficaz
-Se um hóspede relatar um problema, responda rapidamente. Um pedido de desculpas empático e uma solução imediata podem fazer a diferença entre uma avaliação negativa e um cliente satisfeito. A rapidez na resposta gera confiança e demonstra profissionalismo.
-### 5. Um protocolo de ação claro
-Estabeleça um protocolo para cada tipo de incidente: barulho excessivo, problemas técnicos, reclamações de vizinhos. Ter um guia claro facilita a tomada de decisões e agiliza a resolução. No Roomonitor, temos um protocolo exclusivo para cada um de nossos clientes, permitindo uma atuação eficiente em qualquer situação.
-### 6. A prevenção é sua melhor aliada
-Avalie os pontos fracos da sua acomodação e trabalhe na prevenção de incidentes recorrentes. Reforce o isolamento acústico, faça revisões periódicas das instalações e mantenha um canal de comunicação aberto com os vizinhos para garantir uma boa convivência.
-### Gerencie problemas noturnos sem comprometer a experiência do hóspede
-Os incidentes noturnos fazem parte do negócio, mas com um bom planejamento e as ferramentas certas, é possível gerenciá-los sem sacrificar seu descanso ou a qualidade do serviço. Com o Roomonitor, você não só tem a melhor tecnologia à disposição, mas também um serviço de assistência noturna para garantir tranquilidade e satisfação para você e seus hóspedes.
-
-Você já aplica alguma dessas estratégias? Compartilhe sua experiência conosco!`,
-    category: "Gestión de propiedades",
-    date: "2025-01-30",
-    readTime: 3,
-    image: "https://roomonitor.com/wp-content/uploads/2025/01/3f89a921-b62b-4f65-a572-af8a32ed5aac.webp",
     lang: "es",
   },
   {
@@ -1611,6 +1293,28 @@ La experiencia nos demuestra que fomentar el rigor normativo, la recaudación fi
     date: "2025-01-21",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2025/01/aparture.jpg",
+    lang: "es",
+  },
+  {
+    id: "31216",
+    slug: "juan-cubo-avva-pro-room-talks-vivienda-malaga",
+    title: "Juan Cubo (AVVAPro): “No se puede hacer política social con la propiedad de otro”",
+    excerpt: "En una reciente charla con Roomonitor, Juan Cubo, CEO de Cubos Holiday Homes y presidente de la Asociación de Profesionales de Viviendas y Apartamentos Turísticos de Andalucía (AVVAPro), compartió sus reflexiones sobre la nueva normativa que restring",
+    content: `En una reciente charla con Roomonitor, Juan Cubo, CEO de Cubos Holiday Homes y presidente de la Asociación de Profesionales de Viviendas y Apartamentos Turísticos de Andalucía (AVVAPro), compartió sus reflexiones sobre [la nueva normativa que restringe el uso de viviendas turísticas en Málaga](https://new.roomonitor.com/es/noticias/zonas-malaga-prohibicion-viviendas-turisticas/). Según Cubo, estas regulaciones, que afectan a 43 áreas de la ciudad, representan un desafío significativo para los gestores de propiedades y los propietarios.
+
+Puedes recuperar la charla entera en el canal de Youtube de Roomonitor. Se trata de la primera [ROOM Talks](https://www.youtube.com/watch?v=XpNPRAeVTyU&t).
+## Impacto de la normativa
+Para Cubo, estas restricciones son un ejemplo de cómo "las administraciones actúan de forma precipitada" al intentar solucionar problemas habitacionales sin realizar análisis profundos. Destacó que el problema de la vivienda radica en la falta de oferta suficiente para satisfacer la demanda y no en la existencia de viviendas turísticas. Además, subrayó que estas medidas generan un impacto negativo tanto en la economía local como en los derechos de los propietarios.
+## El papel de AVVAPro
+Desde AVVAPro, Cubo explicó que se están presentando alegaciones para garantizar que las regulaciones sean justas y basadas en datos reales. Enfatizó el trabajo de la asociación en mantener un diálogo constante con las administraciones y en proporcionar asesoramiento a los propietarios afectados.
+## La importancia del turismo en Málaga
+Cubo recordó cómo el turismo ha revitalizado áreas históricas de Málaga que antes estaban en decadencia. "Hace 20 años, el centro estaba abandonado; ahora es un lugar vibrante gracias a la inversión de muchos propietarios", afirmó. Además, señaló que la población en el centro ha crecido en los últimos años, un cambio que atribuyó en parte a la dinamización económica impulsada por el turismo.
+## Un llamado a la reflexión
+El presidente de AVVAPro concluyó pidiendo calma y análisis antes de implementar regulaciones que puedan tener efectos contraproducentes. "No se puede hacer política social con la propiedad de otro." De hecho, Cubo señala que debido la suma de todas las limitaciones de todas las administraciones "se convierten de facto en una imposibilidad para los propietarios para elegir otra modalidad que no sea la de larga estancia."`,
+    category: "Noticias del sector",
+    date: "2025-01-20",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/Captura-de-pantalla-2025-01-20-a-las-11.01.07.png",
     lang: "es",
   },
   {
@@ -1793,88 +1497,6 @@ Si deseas conocer más sobre cómo nuestras soluciones pueden ayudarte a mejorar
     lang: "es",
   },
   {
-    id: "31024",
-    slug: "relatorio-dezembro-veja-como-roomonitor-encerrou-ultimo-mes-2024",
-    title: "Relatório de dezembro: veja como a Roomonitor encerrou o último mês de 2024",
-    excerpt: "Na Roomonitor, encerramos o ano com um mês de dezembro cheio de atividades e resultados impressionantes. Nossa equipe continuou demonstrando um forte compromisso com a qualidade do serviço, garantindo a satisfação dos nossos clientes e otimizando a g",
-    content: `Na **Roomonitor**, encerramos o ano com um mês de dezembro cheio de atividades e resultados impressionantes. Nossa equipe continuou demonstrando um forte compromisso com a qualidade do serviço, garantindo a satisfação dos nossos clientes e otimizando a gestão de propriedades turísticas. A seguir, compartilhamos os dados mais relevantes do mês:
-## Dados principais de dezembro
-
- 	- **Tempo médio de atendimento (AHT):** 00:04:31. Esse foi o tempo médio que nossos agentes precisaram para concluir cada intervenção.
- 	- **Total de chamadas atendidas:** 12.590. Esse número reflete a confiança depositada em nossa equipe e nossa capacidade de atender às necessidades dos clientes.
- 	- **Resolução remota:** 80,6%. A maioria dos problemas foi resolvida de forma eficiente sem necessidade de intervenções presenciais, graças ao nosso suporte remoto.
- 	- **Intervenções de Field Service:** 19,4%. Essas intervenções garantiram que as situações não resolvidas remotamente fossem atendidas com eficiência.
- 	- **Satisfação do cliente (CSAT):** 97,24%. Este índice reflete o alto nível de aprovação dos nossos serviços por parte dos clientes.
-
-## Otimização contínua para gestores de propriedades
-Em dezembro, reforçamos nosso compromisso com os gestores de propriedades através de ferramentas como a [**monitorização de ruído**](https://new.roomonitor.com/pt/monitoramento-de-ruido/) e o serviço [**Alarm Assistant**](https://new.roomonitor.com/pt/alarm-assistant/). Essas soluções não apenas melhoram a experiência dos hóspedes, mas também garantem uma convivência harmoniosa, um aspecto crucial no setor de aluguel por temporada.
-## Um encerramento de ano com resultados excepcionais
-Este último mês do ano comprova que nosso foco em tecnologia e atendimento ao cliente continua a fazer a diferença no setor de turismo. Na **Roomonitor**, nos dedicamos a oferecer um serviço completo que otimiza a operação dos gestores de propriedades enquanto traz tranquilidade para vizinhos e hóspedes.
-
-Se você deseja saber mais sobre como nossas soluções podem ajudá-lo a melhorar a gestão das suas propriedades turísticas, [**entre em contato conosco**](https://new.roomonitor.com/pt/contato/) e descubra tudo o que podemos fazer por você.`,
-    category: "Roomonitor",
-    date: "2025-01-04",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2025/01/Monthly-Summary_image-blog.jpg",
-    lang: "es",
-  },
-  {
-    id: "30611",
-    slug: "diferencas-casas-aluguel-ferias-apartamentos-turisticos",
-    title: "Casas de aluguel para férias vs. apartamentos turísticos: quais são as principais diferenças?",
-    excerpt: "No setor de aluguel de curto prazo, os termos casa de aluguel para férias e apartamento turístico frequentemente causam confusão, especialmente para aqueles que estão começando no mercado. Embora ambos se refiram a acomodações para turistas, suas exi",
-    content: `No setor de aluguel de curto prazo, os termos **casa de aluguel para férias** e **apartamento turístico** frequentemente causam confusão, especialmente para aqueles que estão começando no mercado. Embora ambos se refiram a acomodações para turistas, suas exigências legais, operacionais e fiscais diferem significativamente. Este artigo explica as diferenças para ajudá-lo a gerenciá-los de maneira eficiente.
-## O que são casas de aluguel para férias e apartamentos turísticos?
-Para entender as distinções, é essencial começar com suas definições:
-
- 	- **Casa de aluguel para férias:** Refere-se a uma propriedade residencial alugada temporariamente para turistas. Os proprietários ou gestores devem cumprir regulamentos específicos e registrar a propriedade junto às autoridades competentes, dependendo da região.
- 	- **Apartamento turístico:** Refere-se a uma propriedade classificada como alojamento turístico regulamentado. Estes apartamentos devem atender a padrões específicos de qualidade e serviço e, frequentemente, são gerenciados como entidades comerciais, geralmente em edifícios dedicados exclusivamente para esse fim.
-
-## Principais diferenças entre casas de aluguel para férias e apartamentos turísticos
-Embora ambos ofereçam hospedagem temporária, as diferenças entre casas de aluguel para férias e apartamentos turísticos são significativas:
-### 1. Uso da propriedade
-
- 	- **Casa de aluguel para férias:** São propriedades residenciais adaptadas para aluguel de curto prazo, frequentemente localizadas em edifícios mistos com residentes permanentes.
- 	- **Apartamento turístico:** Propriedades projetadas exclusivamente para o turismo, com licenças específicas e serviços profissionais, como recepção ou limpeza diária.
-
-### 2. Regulamentação legal
-
- 	- **Casa de aluguel para férias:** A regulamentação varia de acordo com a região. Em muitas áreas, é obrigatório o registro no cadastro de turismo, com exigências mínimas (extintores de incêndio, número de contato de emergência, etc.) e respeito às normas locais.
- 	- **Apartamento turístico:** Está sujeito a regras mais rigorosas, semelhantes às exigências de hotéis, incluindo normas de acessibilidade, serviços obrigatórios e, em alguns casos, classificação por estrelas.
-
-### 3. Tributação
-
- 	- **Casa de aluguel para férias:** Os rendimentos geralmente são declarados como renda pessoal, a menos que sejam oferecidos serviços adicionais (limpeza, café da manhã, por exemplo), o que caracteriza a atividade como comercial.
- 	- **Apartamento turístico:** Funciona como uma empresa, exigindo o pagamento de impostos específicos, como IVA, e, se registrado como pessoa jurídica, o imposto de renda corporativo.
-
-### 4. Gestão e operações
-
- 	- **Casa de aluguel para férias:** Geralmente gerenciada por indivíduos ou pequenas empresas. Embora ofereça maior flexibilidade, os serviços são mais limitados.
- 	- **Apartamento turístico:** Exige gestão profissional com equipe dedicada e serviços adicionais, como recepção 24 horas, limpeza diária ou manutenção.
-
-## Prós e contras de cada modelo
-Ambos os tipos de acomodação têm vantagens e desvantagens, dependendo dos objetivos do proprietário:
-
- 	- **Casa de aluguel para férias:** Oferece mais flexibilidade e exige menor investimento inicial, mas pode enfrentar conflitos com vizinhos e restrições locais mais rígidas.
- 	- **Apartamento turístico:** Proporciona maior estabilidade e potencial de receita a longo prazo, mas exige investimento inicial significativo e gestão profissional.
-
-## Como garantir conformidade com as regulamentações
-Seja gerenciando uma casa de aluguel para férias ou um apartamento turístico, cumprir as regulamentações é essencial. Veja os passos importantes:
-
- 	- Revise a legislação específica da sua região.
- 	- Registre a propriedade junto à autoridade competente.
- 	- Atenda às exigências técnicas e de segurança (extintores de incêndio, sinalização, etc.).
- 	- Adote soluções tecnológicas, como a [**monitorização de ruído**](https://new.roomonitor.com/pt/monitoramento-de-ruido/), para manter um bom relacionamento com os vizinhos.
-
-## Conclusão: casas de aluguel para férias e apartamentos turísticos
-Escolher entre gerenciar uma casa de aluguel para férias ou um apartamento turístico depende dos seus objetivos, recursos e da regulamentação local. Na **Roomonitor**, oferecemos soluções tecnológicas avançadas para ajudá-lo a manter a conformidade legal, otimizar suas operações e proporcionar a melhor experiência para os hóspedes e vizinhos. Para saber mais, [**entre em contato conosco**](https://new.roomonitor.com/pt/contato/).`,
-    category: "Gestión de propiedades",
-    date: "2024-12-12",
-    readTime: 3,
-    image: "https://roomonitor.com/wp-content/uploads/2024/12/pexels-leah-newhouse-50725-6480707-scaled.jpg",
-    lang: "es",
-  },
-  {
     id: "30623",
     slug: "diferencias-vut-at-guia-completa-gestores-propiedades",
     title: "VUT vs. AT: ¿Qué diferencias existen y qué debes saber?",
@@ -2049,49 +1671,6 @@ Gracias a la tecnología avanzada, analizamos en tiempo real los datos recogidos
     lang: "es",
   },
   {
-    id: "30578",
-    slug: "resumo-novembro-roomonitor",
-    title: "Novembro em números: o relatório mensal da Roomonitor",
-    excerpt: "Na Roomonitor, seguimos demonstrando nosso compromisso com a excelência na gestão de propriedades de aluguel por temporada. Nosso relatório mensal de novembro destaca métricas importantes que refletem a qualidade e eficiência dos nossos serviços. A s",
-    content: `Na **Roomonitor**, seguimos demonstrando nosso compromisso com a excelência na gestão de propriedades de aluguel por temporada. Nosso relatório mensal de novembro destaca métricas importantes que refletem a qualidade e eficiência dos nossos serviços. A seguir, apresentamos os dados mais relevantes do mês.
-## Destaques de novembro
-
- 	- **Total de chamadas:** 11.931
-Este é o número total de chamadas atendidas em novembro, evidenciando a confiança dos nossos clientes na nossa equipe de suporte.
- 	- **Tempo médio de atendimento (AHT):** 00:04:34
-Este tempo médio reflete nossa eficiência em lidar com cada interação com rapidez e qualidade.
- 	- **Tempo médio para resolução:** 00:58:12
-O tempo médio que nossos agentes precisaram para resolver qualquer tipo de intervenção.
- 	- **Tempo médio para resolução de alarmes:** 00:20:20
-Nos casos relacionados a alarmes, nosso tempo de resposta permaneceu consistentemente abaixo de 30 minutos.
-
-## Taxa de resolução
-Em novembro, nossa capacidade de resolver problemas permaneceu sólida:
-
- 	- **Resolução remota:** 89,25%
-A maioria dos incidentes foi resolvida por meio do suporte remoto, otimizando recursos e tempo.
- 	- **Intervenções presenciais:** 10,75%
-Nossa equipe de Field Service gerenciou eficientemente os casos que exigiram atendimento presencial.
-
-## Satisfação e qualidade do serviço
-A satisfação dos nossos clientes continua sendo uma prioridade para a Roomonitor:
-
- 	- **Índice CSAT:** 97,23%
-Este índice destaca a confiança e satisfação dos nossos clientes com os serviços prestados.
- 	- **Qualidade do Field Service:** 95,57%
-Uma avaliação excelente que reflete a excelência da nossa equipe em cada intervenção.
-
-## Compromisso de coexistência e Big Data como metodologia
-Na Roomonitor, nossa missão é manter o equilíbrio entre a experiência dos hóspedes e a convivência no bairro. Nossos serviços de [monitoramento de ruído em tempo real](https://new.roomonitor.com/pt/monitoramento-de-ruido/) e [**Alarm Assistant**](https://new.roomonitor.com/pt/alarm-assistant/) têm se mostrado ferramentas essenciais para minimizar conflitos e garantir a paz nas comunidades locais.
-
-Com tecnologia avançada, analisamos em tempo real os dados coletados pelos nossos dispositivos conectados. Essa abordagem nos permite oferecer relatórios`,
-    category: "Roomonitor",
-    date: "2024-12-03",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2024/12/Blog.jpg",
-    lang: "es",
-  },
-  {
     id: "30470",
     slug: "nueva-normativa-registro-viajeros-2-diciembre",
     title: "Todo lo que debes saber sobre la nueva normativa de registro de viajeros que entra en vigor el 2 de diciembre",
@@ -2131,79 +1710,34 @@ En **Roomonitor**, nos especializamos en ofrecer herramientas innovadoras que no
     lang: "es",
   },
   {
-    id: "30446",
+    id: "30438",
     slug: "roomonitor-scale-france-2024",
-    title: "Scale France 2024, o evento imprescindível do setor de aluguel de curta duração",
-    excerpt: "Na Roomonitor, temos orgulho de ter sido um dos patrocinadores do Scale France 2024, o evento essencial para o setor de aluguel de curta duração, que reuniu os principais atores da indústria em Paris. Este encontro, realizado nos dias 27 e 28 de nove",
-    content: `Na **Roomonitor**, temos orgulho de ter sido um dos patrocinadores do **Scale France 2024**, o evento essencial para o setor de **aluguel de curta duração**, que reuniu os principais atores da indústria em Paris. Este encontro, realizado nos dias 27 e 28 de novembro, foi uma oportunidade única para trocar conhecimentos, estabelecer conexões valiosas e explorar as últimas inovações do setor.
-## Um evento para a comunidade de aluguel de curta duração
-**Scale France 2024** conseguiu reunir mais de profissionais do setor, incluindo **gestores de propriedades**, **plataformas de aluguel de temporada** e prestadores de serviços essenciais como a Roomonitor. A programação incluiu palestras de especialistas, painéis de discussão sobre as principais tendências do mercado e espaços dedicados ao networking.
+    title: "Scale France 2024, el evento imprescindible del sector del alquiler de corta duración",
+    excerpt: "En Roomonitor, nos enorgullece haber sido uno de los patrocinadores de Scale France 2024, el evento clave para el sector del alquiler de corta duración que reunió a los principales actores de la industria en París. Este encuentro, celebrado los días ",
+    content: `En **Roomonitor**, nos enorgullece haber sido uno de los patrocinadores de **Scale France 2024**, el evento clave para el sector del **alquiler de corta duración** que reunió a los principales actores de la industria en París. Este encuentro, celebrado los días 27 y 28 de noviembre, ha sido una oportunidad única para intercambiar conocimientos, establecer conexiones valiosas y explorar las últimas innovaciones en el sector.
+## Un evento para la comunidad de alquileres de corta duración
+**Scale France 2024** logró congregar a muchos profesionales del sector, incluyendo **gestores de propiedades**, **plataformas de alquiler vacacional**, y proveedores de servicios clave como Roomonitor. La agenda incluyó ponencias de expertos, paneles de discusión sobre las tendencias más importantes del mercado y espacios dedicados al networking.
 
-Durante nossa participação, nossa equipe teve a oportunidade de apresentar nossas soluções avançadas para [monitoramento de ruído em tempo real](https://new.roomonitor.com/pt/roomonitor/), assim como nossos serviços projetados para melhorar a **convivência entre vizinhos** e a gestão eficiente de propriedades.
+Durante nuestra participación, nuestro equipo tuvo la oportunidad de presentar nuestras soluciones avanzadas para la [monitorización de ruido en tiempo real](https://new.roomonitor.com/es/roomonitor/), así como nuestros servicios diseñados para mejorar la **convivencia vecinal** y la gestión eficiente de propiedades.
 ﻿
 
  
-## Inovação, networking e sustentabilidade
-Um dos pontos altos do **Scale France** foi o enfoque em sustentabilidade e práticas responsáveis no **aluguel de curta duração**. Ficamos orgulhosos de contribuir para esse debate, compartilhando nossa experiência sobre como a tecnologia pode ajudar a reduzir conflitos com vizinhos e garantir uma convivência mais harmônica.
+## Innovación, networking y sostenibilidad
+Uno de los puntos destacados de **Scale France** fue el enfoque en la sostenibilidad y las prácticas responsables en el **alquiler de corta duración**. Nos sentimos orgullosos de haber contribuido a este diálogo, compartiendo nuestra experiencia sobre cómo la tecnología puede ayudar a reducir conflictos con los vecinos y garantizar una convivencia más armónica.
 
-Além disso, o evento nos permitiu fortalecer nossos laços com colaboradores atuais e explorar novas oportunidades de parceria com outros líderes do setor.
+Además, el evento nos permitió fortalecer relaciones con colaboradores existentes y explorar nuevas oportunidades de colaboración con otros líderes del sector.
 
-A Roomonitor também foi patrocinadora da Before Scale Party, que aconteceu na sexta-feira, 26 de novembro, no Favela Chic, com mais de 100 gestores de propriedades de toda a França, além de parceiros como Mag'bnb, Beyond e Avantio, que se uniram a nós em uma noite cheia de troca de conhecimentos e networking.
-## Roomonitor e seu compromisso com o setor de aluguel de curta duração
-Na Roomonitor, continuamos comprometidos em apoiar o crescimento do **aluguel de curta duração** por meio de soluções tecnológicas inovadoras que priorizam tanto a satisfação dos hóspedes quanto a boa convivência com as comunidades locais.
+Roomonitor fue también el patrocinador del Before Scale Party que tuvo lugar el viernes 26 de noviembre en el Favela Chic, con más de 100 gestores de propiedades de toda Francia, junto con socios como Mag'bnb, Beyond y Avantio, que se unieron a nosotros en una velada llena de intercambio de conocimientos y networking.
+## Roomonitor y su compromiso con el sector del alquiler de corta duración
+En Roomonitor, seguimos comprometidos con apoyar el crecimiento del **alquiler de corta duración** mediante soluciones tecnológicas innovadoras que priorizan tanto la satisfacción de los huéspedes como la convivencia con las comunidades locales.
 
-Se você não pôde participar do [**Scale France 2024**](https://france.scalerentals.show/), convidamos você a conhecer nossas soluções [em nosso site](https://new.roomonitor.com/pt/) e descobrir como podemos ajudá-lo a gerenciar suas propriedades de forma mais eficiente e responsável.
+Si no pudiste asistir a [**Scale France 2024**](https://france.scalerentals.show/), te invitamos a explorar nuestras soluciones [en nuestra web](https://new.roomonitor.com/es/) y descubrir cómo podemos ayudarte a gestionar tus propiedades de forma más eficiente y responsable.
 
-Nos vemos no próximo grande evento do setor!`,
+¡Nos vemos en el próximo gran evento del sector!`,
     category: "Eventos",
     date: "2024-11-28",
     readTime: 2,
     image: "https://roomonitor.com/wp-content/uploads/2024/11/scale-3.jpeg",
-    lang: "es",
-  },
-  {
-    id: "30448",
-    slug: "vitur-forum-madrid-futuro-hospedagem-flexivel",
-    title: "Vitur Forum Madrid 2024: o evento que molda o futuro da hospedagem flexível",
-    excerpt: "O Vitur Forum Madrid, realizado no último dia 27 de novembro, consolidou-se como um dos eventos mais importantes do setor de aluguel de curta duração e alojamento flexível na Espanha. Na Roomonitor, tivemos a honra de participar, compartilhando conhe",
-    content: `O **Vitur Forum Madrid**, realizado no último dia 27 de novembro, consolidou-se como um dos eventos mais importantes do setor de **aluguel de curta duração** e **alojamento flexível** na Espanha. Na **Roomonitor**, tivemos a honra de participar, compartilhando conhecimento e apresentando nossa visão sobre como otimizar a experiência do hóspede em um ambiente tão dinâmico.
-## O evento exclusivo que impulsiona o futuro do alojamento flexível
-[**Vitur Forum**](https://vitursummit.com/) estabeleceu-se como a principal plataforma na organização de eventos especializados no setor turístico, reunindo os principais **líderes, administradores e instituições europeias**. Este evento oferece um espaço único para discutir novas tendências e oportunidades no setor de **alojamento flexível**, um mercado que está transformando a forma como as pessoas se hospedam e vivem em ambientes urbanos.
-
-Com apresentações de alto nível, perspectivas inovadoras de negócios e oportunidades valiosas de **networking**, o **Vitur Forum** tornou-se o ponto de encontro das mentes mais inovadoras do setor para impulsionar o futuro do **aluguel turístico** e criar conexões que moldam novas ideias e práticas transformadoras.
-## Tópicos principais que marcaram a agenda do Vitur Forum Madrid 2024
-O **Vitur Forum Madrid** abordou uma série de painéis que exploraram aspectos fundamentais para o presente e o futuro do setor. Entre os destaques:
-
- 	- **O marco regulatório do alojamento flexível**: Tema do painel de abertura, que discutiu o cenário normativo atual na Comunidade de Madrid. Foi destacada a necessidade de maior flexibilidade em um contexto de turismo em constante evolução.
- 	- **A marca como diferencial competitivo**: Este painel abordou como os operadores podem fortalecer suas identidades de marca para se destacarem em um mercado competitivo.
- 	- **Madri como destino de média permanência e hospedagem corporativa**: Explorou-se como a cidade está se posicionando como referência internacional neste segmento, especialmente para viajantes a negócios.
- 	- **Adaptando investimentos à nova demanda**: Este painel discutiu as oportunidades de investimento em setores como Média Permanência, Alojamento Corporativo e Build-to-Rent (BTR).
- 	- **Definindo um modelo de cidade sustentável**: Tema do painel de encerramento, que debateu o impacto da situação política e normativa na evolução do setor.
- 	- Durante a apresentação inaugural, **Carlos Pérez-Lanzac de Lorca**, Fundador do VITUR, compartilhou dados importantes que destacam a liderança da Espanha no alojamento flexível. Entre eles:
-
- 	- **Madri, destacada como destino internacional**, figura entre as 25 principais cidades da Europa em termos de **RevPAR**.
- 	- **Em 2023, a cidade alcançou um recorde histórico com 7,85 milhões de turistas internacionais**.
-
-## Otimização, controle e experiência do cliente no Flex Living
-Na [**Roomonitor**](https://new.roomonitor.com/pt/), tivemos a oportunidade de oferecer uma palestra intitulada "**Otimização, controle e experiência do cliente no Flex Living**", que foi recebida com grande interesse. **Gabriel Pérez**, Head of Sales & Partnerships na Roomonitor e Head of Public Relations na weRespect, compartilhou sua visão sobre como propriedades de aluguel flexível podem equilibrar a operação, a experiência do hóspede e a convivência com vizinhos.
-
-Durante sua apresentação, Gabriel explicou como tecnologias avançadas de monitoramento de ruído e a integração de **recursos humanos** são essenciais para a gestão de propriedades 24/7. Essa abordagem não apenas otimiza a experiência do hóspede, mas também garante controle total sobre os aspectos operacionais e de convivência. Gabriel foi acompanhado por **Eduardo** **Suárez**, COO e cofundador da Roomonitor.
-
-[caption id="attachment_30482" align="alignnone" width="1024"] Gabriel Pérez no Vitur Forum Madrid 2024[/caption]
-## Vitur Forum: Um espaço para colaboração e inovação
-**Vitur Forum** é um evento indispensável para todos os envolvidos no setor de **alojamento flexível**. A plataforma busca promover a inovação e o conhecimento, conectando profissionais e empresas do turismo com o objetivo de construir um ecossistema sólido em torno do **aluguel turístico**. O fórum tem sido fundamental para compartilhar boas práticas, explorar novas tendências e gerar oportunidades que levam o setor a um novo patamar.
-
-Na **Roomonitor**, estamos convencidos de que o sucesso no setor de alojamento flexível está na integração da tecnologia certa e na criação de experiências positivas para os hóspedes, enquanto gerenciamos eficientemente os aspectos operacionais.
-## Roomonitor no Vitur Forum: Colaboração e crescimento do setor
-Eventos como este são essenciais para o crescimento da indústria e para fortalecer o trabalho colaborativo entre os diferentes atores do **alojamento flexível**. Estamos muito felizes por ter participado e contribuído com nossa visão sobre a importância de otimizar a experiência do hóspede sem sacrificar o controle das propriedades e a convivência.
-
-Se você não pôde comparecer ao evento, convidamos você a conhecer mais sobre como a **Roomonitor** pode ajudar a otimizar a gestão das suas propriedades de aluguel turístico. Visite nosso site para descobrir nossas soluções inovadoras para [monitoramento de ruído em tempo real](https://new.roomonitor.com/pt/) e melhoria da convivência em propriedades de aluguel.
-
-Nos vemos na próxima edição do **[Vitur Forum](https://vitursummit.com/vitur-summit-2025/)**!`,
-    category: "Eventos",
-    date: "2024-11-28",
-    readTime: 4,
-    image: "https://roomonitor.com/wp-content/uploads/2024/11/gabriel-vitur-forum.jpeg",
     lang: "es",
   },
   {
@@ -2276,30 +1810,6 @@ Este caso subraya un desafío más amplio para equilibrar las necesidades de reg
     lang: "es",
   },
   {
-    id: "30386",
-    slug: "queixa-ehha-regulamentacoes-alugueis-curta-duracao-catalunha",
-    title: "EHHA apresenta queixa formal contra as regulamentações de alugueis na Catalunha",
-    excerpt: "A Associação Europeia de Aluguéis de Férias (EHHA) apresentou uma queixa formal à Comissão Europeia contra o Decreto sobre hospedagem na Catalunha (3/2023), argumentando que esta legislação viola a Diretiva de Serviços da União Europeia (UE). O princ",
-    content: `A Associação Europeia de Aluguéis de Férias (**EHHA**) apresentou uma queixa formal à **Comissão Europeia** contra o Decreto sobre hospedagem na Catalunha (3/2023), argumentando que esta legislação viola a **Diretiva de Serviços da União Europeia (UE)**. O principal argumento da EHHA é que as restrições impostas por esta lei são injustificadas, desproporcionais e não resolvem de forma eficaz os problemas que tentam resolver.
-## Regulamentações sob análise da UE
-A Diretiva de Serviços da UE estabelece que qualquer norma que limite serviços, como os aluguéis de curta duração, deve ser justificada, proporcional e não discriminatória. No entanto, a EHHA argumenta que as restrições catalãs não cumprem esses princípios. Segundo a associação, essas medidas não afetam apenas os pequenos operadores turísticos, mas também têm um impacto negativo nas famílias e nas economias locais.
-## Impacto nas comunidades e na economia
-A EHHA alerta que culpar os aluguéis de curta duração pelos problemas habitacionais, como a escassez de moradias ou o aumento dos preços, simplifica um debate muito mais complexo. Fatores como o crescimento demográfico urbano, a falta de investimento em novas moradias, as restrições de planejamento urbano e os altos índices de juros também desempenham um papel crucial nessa problemática.
-
-A associação destaca que as restrições impostas podem agravar as dificuldades econômicas das famílias e das comunidades locais, intensificando o impacto do aumento no custo de vida.
-## Revisão e ação urgente
-A EHHA pediu ao governo catalão que revise e elimine as disposições injustas da lei, argumentando que estas não apenas violam a Diretiva de Serviços da UE, mas também carecem de evidências sólidas que conectem os aluguéis de curta duração aos problemas habitacionais.
-
-Além disso, a EHHA espera que a Comissão Europeia inicie um procedimento formal de infração contra a Espanha, visando garantir que as regulamentações locais estejam alinhadas com as regulamentações comunitárias.
-## O desafio do equilíbrio normativo
-Este caso destaca um desafio mais amplo para equilibrar as necessidades de regulamentação com a proteção dos direitos dos prestadores de serviços e o fomento do desenvolvimento econômico local. A EHHA faz um apelo para um diálogo fundamentado e baseado em evidências para abordar as complexidades dos problemas habitacionais sem recorrer a medidas prejudiciais a um setor chave do turismo europeu.`,
-    category: "Gestión de propiedades",
-    date: "2024-11-22",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2024/11/pexels-asphotograpy-101808-scaled.jpg",
-    lang: "es",
-  },
-  {
     id: "30361",
     slug: "nuevas-normativas-alquileres-turisticos-francia",
     title: "¿Cómo afecta la nueva ley francesa a los gestores de alojamientos turísticos?",
@@ -2325,38 +1835,6 @@ A medida que la regulación evoluciona en Europa y en todo el mundo, los gestore
 A través de la flota de servicios que ofrecemos, los gestores de propiedades o property managers pueden ahorrarse costos sustanciales además de garantizar una experiencia excelente para sus huéspedes.
 
 En definitiva, cumplir con las normativas es más que una obligación: es una oportunidad para posicionarse como un actor responsable en un sector en constante transformación.`,
-    category: "Roomonitor",
-    date: "2024-11-18",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2024/11/pexels-diego-f-parra-33199-16923152-scaled.jpg",
-    lang: "es",
-  },
-  {
-    id: "30372",
-    slug: "lei-francesa-alojamentos-turisticos",
-    title: "Como a nova lei francesa impacta os gestores de alojamentos turísticos?",
-    excerpt: "Nos últimos anos, o crescimento do setor de alojamentos de férias trouxe desafios significativos para as comunidades locais. Para responder a essas preocupações, a França aprovou uma regulamentação mais rígida, que afeta tanto as plataformas quanto o",
-    content: `Nos últimos anos, o **crescimento do setor de alojamentos de férias** trouxe desafios significativos para as comunidades locais. Para responder a essas preocupações, a França aprovou uma regulamentação mais rígida, que afeta tanto as plataformas quanto os gestores de propriedades.
-
-O Parlamento francês recentemente aprovou uma nova lei que regula os alojamentos turísticos, reduzindo os benefícios fiscais e reforçando o controlo pelas autoridades municipais. De acordo com a deputada Annaïg Le Meur, esta legislação não visa proibir as operações, mas equilibrar uma atividade essencial em áreas turísticas.
-## O que prevê a nova lei sobre alojamentos turísticos?
-O objetivo desta nova regulamentação é equilibrar o crescimento do turismo com a qualidade de vida dos residentes. Entre as principais medidas, destacam-se:
-
- 	- **Limitação dos dias de aluguer:** Reforço do controlo sobre o número máximo de dias permitidos para o aluguer de residências principais.
- 	- **Maior transparência:** As plataformas, como o Airbnb, serão obrigadas a partilhar dados com as autoridades locais.
- 	- **Sanções mais severas:** Quem não cumprir as regulamentações estará sujeito a multas significativas.
-
-Este regulamento é um passo importante para a profissionalização do setor, exigindo um maior nível de conformidade por parte dos gestores de propriedades.
-## Roomonitor: um aliado para cumprir a regulamentação
-A implementação destas medidas realça a importância de ferramentas tecnológicas que facilitem uma gestão responsável. Na [**Roomonitor**](https://new.roomonitor.com/), oferecemos soluções que não apenas ajudam os **gestores de propriedades** a cumprir as regulamentações, mas também promovem uma melhor convivência com as comunidades locais.
-
-Com produtos como o [**Noise Alarm**](https://new.roomonitor.com/), é possível monitorizar os níveis de ruído em tempo real, prevenir conflitos com vizinhos e garantir o cumprimento das regras relacionadas à tranquilidade dos alojamentos.
-## Inovação e convivência: os pilares do futuro do setor
-À medida que a regulamentação evolui na Europa e em todo o mundo, os gestores de alojamentos turísticos precisam adaptar-se a um ambiente mais regulamentado. A tecnologia da Roomonitor simplifica essa transição, enquanto melhora a experiência dos hóspedes e protege a reputação das propriedades.
-
-Com a ampla gama de serviços que oferecemos, os gestores de propriedades podem economizar custos substanciais e, ao mesmo tempo, garantir uma experiência de excelência para os seus clientes.
-
-Em resumo, cumprir as regulamentações não é apenas uma obrigação: é uma oportunidade para posicionar-se como um ator responsável num setor em constante transformação.`,
     category: "Roomonitor",
     date: "2024-11-18",
     readTime: 2,
@@ -2469,39 +1947,6 @@ Solicita más información sobre **Alarm Assistant** en [**info@roomonitor.com**
     lang: "es",
   },
   {
-    id: "25371",
-    slug: "ayez-lesprit-tranquille-grace-a-la-protection-globale-de-vos-locations",
-    title: "Ayez l'esprit tranquille grâce à la protection globale de vos locations",
-    excerpt: "Une équipe d'experts Roomonitor à votre service chaque jour Chez Roomonitor, nous nous efforçons chaque jour de fournir tranquillité d'esprit à nos clients grâce à notre service exclusif Alarm Assistant, la première solution mondiale de surveillance ",
-    content: `## Une équipe d'experts Roomonitor à votre service chaque jour
-Chez Roomonitor, nous nous efforçons chaque jour de fournir tranquillité d'esprit à nos clients grâce à notre service exclusif **Alarm Assistant**, la première solution mondiale de surveillance de propriétés. Notre équipe d'agents spécialisés, forte d'une vaste expérience dans le secteur, surveille et évalue les alertes Roomonitor en temps réel, gérant la communication avec les invités selon des protocoles précis pour résoudre tout incident lié au bruit et garantir un environnement optimal.
-
-[**Alarm Assistant**](https://new.roomonitor.com/en/alarm-assistant/) va bien au-delà des systèmes d'appel automatisés. Derrière chaque alerte, il y a une équipe humaine formée qui évalue chaque situation et intervient uniquement lorsque cela est nécessaire, en maintenant l'efficacité et la cordialité dans chaque action.
-
-Si le bruit persiste, un agent Roomonitor se rend sur place pour vérifier et résoudre le problème en personne, en veillant toujours à maintenir une bonne relation avec vos invités. Cette approche permet d'assurer un équilibre parfait entre de bonnes relations avec les voisins et le succès de votre activité.
-
-## Comment fonctionne le service Alarm Assistant ?
-Lorsqu'une alerte se déclenche dans vos propriétés, notre équipe reçoit la notification à notre centre, analyse le graphique de bruit et contacte les invités par téléphone ou message WhatsApp. Si le problème persiste, un agent médiateur se rend sur place pour vérifier et résoudre le problème en personne.
-
-- Une alerte est déclenchée dans l'une de vos propriétés.
-- L'équipe reçoit la notification au centre et analyse les enregistrements de bruit.
-- Un de nos agents contacte immédiatement les invités, soit par téléphone, soit par message WhatsApp.
-- Si le bruit persiste, nous envoyons un agent de terrain sur place pour gérer la situation en personne.
-
-## Les principaux avantages d'Alarm Assistant
-
-- **Réponse rapide et efficace :** Alarm Assistant garantit une intervention rapide en cas d'incidents de bruit.
-- **Amélioration des relations de voisinage :** Notre équipe intervient uniquement lorsque cela est nécessaire, en maintenant le respect des invités et en favorisant de bonnes relations avec les voisins.
-- **Économies sur les coûts :** Grâce à une surveillance précise, nous évitons les déplacements inutiles, optimisant ainsi les ressources et réduisant les coûts.
-
-Pour plus d'informations sur **Alarm Assistant** et les autres services de Roomonitor, n'hésitez pas à nous contacter par email à [**info@roomonitor.com**](mailto:info@roomonitor.com).`,
-    category: "Gestión de propiedades",
-    date: "2024-11-01",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2022/03/work-roomonitor.jpg",
-    lang: "es",
-  },
-  {
     id: "25384",
     slug: "descansa-tranquilo-con-la-proteccion-global-a-todos-tus-alquileres",
     title: "Descansa tranquilo con la protección global a todos tus alquileres",
@@ -2533,39 +1978,6 @@ Solicita más información sobre **Alarm Assistant** en [**info@roomonitor.com**
     category: "Roomonitor",
     date: "2024-11-01",
     readTime: 1,
-    image: "https://roomonitor.com/wp-content/uploads/2022/03/work-roomonitor.jpg",
-    lang: "es",
-  },
-  {
-    id: "25493",
-    slug: "fique-descansado-protecao-global-suas-rendas",
-    title: "Fique descansado com a proteção global para todos os seus alugueres.",
-    excerpt: "Uma equipe de especialistas da Roomonitor a trabalhar para si todos os dias Na Roomonitor, esforçamo-nos todos os dias para proporcionar tranquilidade aos nossos clientes com o nosso serviço exclusivo Alarm Assistant, a primeira solução mundial de mo",
-    content: `## Uma equipe de especialistas da Roomonitor a trabalhar para si todos os dias
-Na Roomonitor, esforçamo-nos todos os dias para proporcionar tranquilidade aos nossos clientes com o nosso serviço exclusivo **Alarm Assistant**, a primeira solução mundial de monitoramento de propriedades. A nossa equipa de agentes especializados, com vasta experiência no setor, monitoriza e avalia os alertas da Roomonitor em tempo real, gerindo a comunicação com os hóspedes de acordo com protocolos precisos para resolver qualquer incidente relacionado com o ruído e garantir um ambiente ótimo.
-
-[**Alarm Assistant**](https://new.roomonitor.com/en/alarm-assistant/) vai muito além dos sistemas de chamadas automatizadas. Por trás de cada alerta, existe uma equipe humana treinada que avalia cada situação e intervém apenas quando necessário, mantendo a eficiência e a cordialidade em cada ação.
-
-Se o ruído persistir, um agente da Roomonitor desloca-se até à propriedade para verificar e resolver o problema pessoalmente, mantendo sempre uma boa relação com os seus hóspedes. Esta abordagem assegura um equilíbrio perfeito entre boas relações de vizinhança e o sucesso do seu negócio.
-
-## Como funciona o serviço Alarm Assistant?
-Quando ocorre um alerta nas suas propriedades, a nossa equipe recebe a notificação no nosso centro, analisa o gráfico de ruído e contacta os hóspedes por telefone ou mensagem no WhatsApp. Se o problema persistir, um agente mediador desloca-se até ao local para verificar e resolver o problema pessoalmente.
-
- 	- Um alerta é acionado em uma das suas propriedades.
- 	- A equipa recebe a notificação no centro e analisa os registos de ruído.
- 	- Um dos nossos agentes contacta imediatamente os hóspedes, por telefone ou mensagem no WhatsApp.
- 	- Se o ruído continuar, enviamos um agente de campo até à propriedade para gerir a situação pessoalmente.
-
-## Principais benefícios do Alarm Assistant
-
- 	- **Resposta rápida e eficaz:** Alarm Assistant garante uma intervenção atempada em caso de incidentes de ruído.
- 	- **Melhoria nas relações de vizinhança:** A nossa equipa intervém apenas quando necessário, mantendo o respeito pelos seus hóspedes e promovendo boas relações com os vizinhos.
- 	- **Economia de custos:** Graças à monitorização precisa, evitamos deslocações desnecessárias, otimizando os recursos e reduzindo os custos.
-
-Para mais informações sobre **Alarm Assistant** e outros serviços da Roomonitor, não hesite em contactar-nos por e-mail para [**info@roomonitor.com**](mailto:info@roomonitor.com).`,
-    category: "Gestión de propiedades",
-    date: "2024-11-01",
-    readTime: 2,
     image: "https://roomonitor.com/wp-content/uploads/2022/03/work-roomonitor.jpg",
     lang: "es",
   },
@@ -2711,49 +2123,6 @@ Con iniciativas como esta, Roomonitor sigue consolidándose como un **aliado cla
     lang: "es",
   },
   {
-    id: "30070",
-    slug: "novo-programa-de-mediacao-em-valencia-para-melhorar-a-convivencia-em-apartamentos-turisticos-atraves-do-werespect",
-    title: "Novo programa de mediação em Valência para melhorar a convivência em apartamentos turísticos através do weRespect",
-    excerpt: "Na Roomonitor, estamos comprometidos com a sustentabilidade social e a melhoria da relação entre hóspedes e vizinhos em propriedades de aluguer de curta duração (STR). Como parte deste compromisso, estamos entusiasmados em partilhar uma das mais rece",
-    content: `Na Roomonitor, estamos comprometidos com a sustentabilidade social e a melhoria da relação entre hóspedes e vizinhos em propriedades de aluguer de curta duração (STR). Como parte deste compromisso, estamos entusiasmados em partilhar uma das mais recentes iniciativas promovidas pela [**WeRespect**](https://www.werespect.net/), que lançará um **programa piloto de mediação em Valência** para abordar quaisquer questões entre residentes e gestores de alugueres de curta duração.
-## **Um canal de mediação para resolver conflitos**
-Através deste novo serviço, disponível pelo número **960 990 472**, os residentes de Valência poderão canalizar reclamações e resolver potenciais conflitos relacionados com propriedades de aluguer de curta duração. O objetivo é oferecer uma solução eficaz e rápida para os problemas que possam surgir entre residentes e hóspedes.
-
-Este programa de mediação inclui uma abordagem estruturada para a resolução de conflitos, que envolve:
-
- 	- **Entrevistas iniciais** para identificar as causas fundamentais do conflito.
- 	- Estabelecimento de **planos de ação** com prazos e objetivos claros.
- 	- **Acompanhamento** **contínuo** para garantir que os acordos alcançados estão a ser implementados.
-
-## ****
-## **WeRespect: Um guia para a gestão responsável dos STRs**
-Em paralelo, a WeRespect anunciou a distribuição de um guia prático para os proprietários e gestores de alugueres de curta duração em Valência. Este guia oferece recomendações chave para uma** gestão sustentável e responsável**, cobrindo aspetos como:
-
- 	- Comunicação clara com os hóspedes.
- 	- Manutenção adequada da propriedade.
- 	- Promoção de **turismo sustentável** com uma gestão eficiente dos recursos (água, energia, etc.).
- 	- Estratégias para apoiar a **economia local** e mitigar a sobrecarga turística.
-
-O objetivo é garantir que a experiência turística seja positiva não só para os hóspedes, mas também para os residentes locais e a comunidade.
-## **Roomonitor e WeRespect: Tecnologias para reduzir o impacto do turismo**
-A Roomonitor tem sido um dos principais impulsionadores por trás do [**WeRespect**](https://www.werespect.net/), uma iniciativa lançada em 2018 em colaboração com associações da indústria. Como parte deste projeto, uma das nossas principais contribuições tem sido a instalação de** dispositivos de deteção de ruído** em propriedades de aluguer de curta duração.
-
-Estes dispositivos mostraram-se extremamente eficazes, **resolvendo 57% das reclamações de ruído em menos de 28 minutos em 2023**. Com esta tecnologia, não só ajudamos a melhorar as relações entre vizinhos, mas também contribuímos para a profissionalização do setor.
-## **Um compromisso com o turismo responsável**
-O evento ocorreu na Fundação [ADEIT Universidad-Empresa em Valência](https://www.adeituv.es/). Contámos com a colaboração da Aptur e da Airbnb, com o apoio da Comunidade Valenciana e da Actitud Mediterránea. Entre os presentes, estavam **Israel** **Martínez** **Fernández**, Diretor Geral de [Turismo da Generalitat Valenciana](https://www.turisme.gva.es/opencms/opencms/turisme/es/index.jsp), **Sebastián** **Cucula**, Presidente do [Colégio de Administradores de Propriedades de Valência](https://aaffvalencia.es/), **Sílvia** **Blasco**, Presidente da [ApturCV](https://www.aptur.org/), **Juan** **Cristellys**, Gerente de Políticas Públicas da [Airbnb](https://www.airbnb.es/), e Gabriel Pérez, Head of Public Relations **weRespect**.
-
-WeRespect e Roomonitor estão comprometidos em criar um modelo de turismo mais responsável e sustentável. Além de oferecer soluções tecnológicas para melhorar as relações com a comunidade, esta aliança visa fortalecer a luta contra os **alugueres ilícitos** e a **concorrência desleal** no setor de alugueres de curta duração.
-
-A mediação e o controlo de ruído não só melhoram a qualidade de vida dos residentes, como também protegem o futuro do turismo nas nossas cidades, garantindo que todas as partes interessadas beneficiam de uma gestão eficiente e responsável.
-
-Com iniciativas como esta, a Roomonitor continua a consolidar-se como um **parceiro chave** na criação de uma indústria turística mais equilibrada, sustentável e socialmente responsável.`,
-    category: "Eventos",
-    date: "2024-10-22",
-    readTime: 3,
-    image: "https://roomonitor.com/wp-content/uploads/2024/10/ROOM_22_10_2024-181-scaled.jpg",
-    lang: "es",
-  },
-  {
     id: "11482",
     slug: "que-es-la-monitorizacion-de-ruido-y-por-que-la-necesito",
     title: "¿Qué es la monitorización de ruido y por qué la necesito?",
@@ -2817,62 +2186,6 @@ Estar tranquilo es más que suficiente razón para probar la monitorización de 
     category: "Gestión de propiedades",
     date: "2024-10-18",
     readTime: 7,
-    image: "https://roomonitor.com/wp-content/uploads/2024/10/fiesta-apartamento-scaled.jpg",
-    lang: "es",
-  },
-  {
-    id: "30086",
-    slug: "o-que-e-a-monitorizacao-de-ruido-e-por-que-preciso-dela",
-    title: "O que é a monitorização de ruído e por que preciso dela?",
-    excerpt: "Você finalmente tomou a decisão sábia e financeiramente responsável de transformar sua humilde residência em uma propriedade para aluguel. (Incrível!) Agora, com esse novo espírito empreendedor em mente, você provavelmente está se perguntando como pr",
-    content: `Você finalmente tomou a decisão sábia e financeiramente responsável de transformar sua humilde residência em uma propriedade para aluguel. (Incrível!) Agora, com esse novo espírito empreendedor em mente, você provavelmente está se perguntando como proteger seu investimento sem parecer intrusivo com seus hóspedes. Felizmente, existe algo chamado monitorização de ruído, que ajuda a tranquilizar gestores de propriedades ao redor do mundo.
-
-Cansados das reclamações dos vizinhos e das violações das regras de ruído no seu prédio, as mentes brilhantes de Nacho e Eduardo Suárez se uniram em 2015 para criar o que hoje conhecemos como Roomonitor. Desde então, a empresa evoluiu e eles miraram na indústria de aluguel de temporada e ambientes urbanos, graças ao desenvolvimento da tecnologia de monitorização de ruído.
-
-Você deve estar se perguntando: **“O que é monitorização de ruído? Quero saber mais.”** Agora que captamos sua atenção, vamos dar uma olhada no que exatamente é a monitorização de ruído e por que você precisa dela.
-# **O que é exatamente a monitorização de ruído?**
-Monitorização de ruído, como o próprio nome sugere, é a prática de monitorar o som em uma propriedade. **Com essa tecnologia, os proprietários de imóveis podem ter a tranquilidade de saber que os níveis de ruído estão sob controle**, mesmo quando não estão presentes. Para obter uma leitura precisa do som, os sensores de monitorização de ruído medem os [decibéis](https://www.merriam-webster.com/dictionary/decibel), permitindo o [acompanhamento em tempo real](https://new.roomonitor.com/noise-alarm/). Quanto menor o ruído, menores os decibéis. Um nível alto de ruído resultará numa leitura alta de decibéis.
-# **Como a monitorização de ruído pode me ajudar?**
-## **1. Roomonitor e a sustentabilidade social**
-Na **Roomonitor**, estamos comprometidos com a **sustentabilidade** **social** ao enfrentar um dos principais desafios da gestão de imóveis para aluguel de curta duração: o ruído. Nossa tecnologia de monitorização de ruído em tempo real permite que proprietários e gestores monitorem os níveis sonoros em suas propriedades, garantindo uma convivência harmoniosa entre turistas e vizinhos.
-
-Ao identificar e gerenciar proativamente o ruído, ajudamos a reduzir os transtornos que podem afetar as comunidades locais. Isso não só **melhora a experiência dos hóspedes**, mas também **respeita o bem-estar dos residentes**, promovendo um ambiente mais pacífico e sustentável.
-
-Com nossa solução inovadora, a Roomonitor contribui para um turismo mais responsável, onde a satisfação dos clientes é equilibrada com o respeito pelas comunidades anfitriãs. Juntos, estamos construindo um futuro em que o turismo e a convivência social coexistam em harmonia.
-
-[caption id="attachment_29990" align="alignnone" width="1024"] Dashboard monitorización de ruido de Roomonitor[/caption]
-## **2. Ajuda a prevenir danos na sua propriedade**
-Quando os inquilinos decidem organizar uma festa na sua propriedade, isso pode se transformar rapidamente em uma verdadeira dor de cabeça. Música alta até tarde da noite, pancadas nas paredes, jogos de beer pong e bebidas derramadas que mancham os tapetes, aparelhos quebrados, objetos roubados ou perdidos… Você não só terá que lidar com os reparos, mas também com o pessoal de limpeza e as reclamações dos vizinhos sobre o barulho!
-
-Nossa [tecnologia de casa inteligente](https://new.roomonitor.com/noise-alarm/) permite que os proprietários **recebam mensagens de texto**, **chamadas telefônicas e/ou e-mails** caso o alarme de som seja ativado na propriedade. Dessa forma, você pode monitorar os níveis de som da sua propriedade 24 horas por dia, convenientemente a partir do seu telefone. (Acredite, você vai nos agradecer por isso!)
-## **3. Saber quando há inquilinos na sua casa**
-**Ser gestor de uma propriedade para alugar é uma grande responsabilidade**, e você nem sempre estará lá para supervisionar tudo. Por exemplo, muitas das limpezas e visitas de manutenção ocorrerão sem sua presença. Essas atividades são cruciais para garantir que seus hóspedes cheguem a uma casa limpa e acolhedora.
-
-Por outro lado, alguns visitantes indesejados podem tentar entrar na sua propriedade. Ladrões, por exemplo, costumam observar as rotinas dos proprietários e escolher o momento ideal para roubar sem serem detectados. (Segundo estatísticas, a perda média por roubo é superior a [US$ 2.000 por incidente!](https://www.yourbestdigs.com/burglary-statistics)) Por que deixar sua propriedade vulnerável a perdas e danos quando você pode protegê-la facilmente?
-
-Com o [Roomonitor](https://new.roomonitor.com/noise-alarm/), você receberá alertas instantâneos sempre que alguém entrar na sua propriedade – sejam hóspedes ou intrusos. Nossa tecnologia de monitorização de ruído pode economizar centenas, senão milhares, de euros.
-## **4. Lidar com reclamações falsas com provas concretas**
-Todos nós temos aquele vizinho intrometido. Você sabe, aquele que tenta a todo custo dificultar a convivência. (Sim, aquele mesmo que você está pensando agora!) É provável que, ao permitir que inquilinos de curto prazo fiquem na sua propriedade, esse vizinho faça de tudo para estragar as férias dos seus hóspedes com reclamações exageradas sobre questões triviais. Ou pior, ele pode até fazer falsas acusações com mentiras sobre o que realmente aconteceu na sua casa enquanto você não estava lá.
-
-**Com os sensores de monitorização de ruído**, você saberá exatamente o que está acontecendo na sua propriedade em qualquer momento. Roomonitor também oferece uma ferramenta prática para que você possa acessar o histórico de eventos a qualquer momento desde a instalação do dispositivo. Este é mais um exemplo de como Roomonitor pode te ajudar a economizar, evitando multas e custos desnecessários!
-## **5. Mostrar sua responsabilidade como vizinho**
-Está claro que a confiança e o respeito dos seus vizinhos não se conquistam da noite para o dia. Você não gostaria de estragar essa relação por causa de um único incidente que poderia ter sido facilmente evitado, certo? Com [os sensores de monitorização de ruído](https://new.roomonitor.com/noise-alarm/), você pode mostrar aos seus vizinhos que é um gestor responsável e que se preocupa com suas propriedades. Isso também fortalecerá suas relações com a comunidade, mostrando que você valoriza o bem-estar do bairro.
-
-[caption id="attachment_30078" align="alignnone" width="1024"] Roomonitor device[/caption]
-## **6. Instalação e configuração fáceis**
-Tranquilidade já é razão suficiente para testar a monitorização de ruído na sua propriedade de aluguel de temporada. (E além disso, é muito fácil de usar!) A monitorização de som não é apenas conveniente, mas, com Roomonitor, também é simples de instalar. Os passos para a instalação são extremamente fáceis!
-
- 	- Encontre o melhor local na sua propriedade para instalar o equipamento de monitorização de ruído. (Sugerimos a sala de estar, já que as reuniões normalmente acontecem lá.)
- 	- Conecte o dispositivo de monitorização de ruído ao adaptador fornecido.
- 	- Conecte o Roomonitor ao Wi-Fi.
- 	- Comece a monitorar o ruído a partir do seu laptop, telefone ou tablet! Nosso sistema permite ajustar tudo de acordo com suas preferências pessoais.
-
-Pode ser mais fácil? Nada de fios complicados ou processos de instalação difíceis com [Roomonitor](https://new.roomonitor.com/noise-alarm/).
-
-**A monitorização de ruído é a nova forma de garantir a segurança da sua propriedade sem invadir a privacidade dos seus hóspedes**. Como nossos sensores não gravam áudio, seus hóspedes não precisam se preocupar com qualquer violação da privacidade. Usando a monitorização de ruído, você economizará dinheiro, fortalecerá suas relações com a comunidade e protegerá sua propriedade de aluguel ao mesmo tempo. Seja um gestor responsável e proativo, e previna problemas com [Roomonitor](https://new.roomonitor.com/noise-alarm/) a partir de hoje!`,
-    category: "Gestión de propiedades",
-    date: "2024-10-18",
-    readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2024/10/fiesta-apartamento-scaled.jpg",
     lang: "es",
   },
@@ -2952,7 +2265,7 @@ El **1º Congreso Nacional de [ALEP](https://www.alep.pt/)** fue un éxito rotun
     id: "23303",
     slug: "roomonitor-x-icnea-soluciona-problemas-de-ruido-de-manera-mas-eficiente",
     title: "Roomonitor x Icnea: Soluciona problemas de ruido de manera más eficiente",
-    excerpt: '[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli',
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos clientes nos pedían.
 
 Hoy, nos complace anunciar nuestra última integración con [Icnea](https://icnea.es/), un software de administración de propiedades líder en la industria con sede en España. Gracias a esta integración, podrás acceder a todas tus herramientas de administración de propiedades favoritas en un solo lugar. Con Icnea puedes administrar las reservas y registros de manera eficiente y ahora también comunicarte automáticamente con tus huéspedes en caso de incidencia en la monitorización de ruido en tus propiedades para que puedas ahorrar tiempo y concentrarte en hacer crecer tu negocio.
@@ -2990,7 +2303,7 @@ Si ya tienes cuentas en Roomonitor e Icnea, ¡puedes comenzar en minutos! Ve a l
     id: "15985",
     slug: "informe-roomonitor-2021",
     title: "Informe Roomonitor - Ultimos 3 meses",
-    excerpt: '[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru',
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ruido con Roomonitor Alarm Assistant.
 
 Roomonitor: Monitoriza el ruido en tiempo real. No graba audio, mantenido la privacidad 100%. El dispositivo permite conocer los niveles de ruido dentro los apartamentos turísticos, emitiendo alarmas por sms y llamadas telefónicas al propietario o gestor del apartamento cuando son sobrepasados los niveles estipulados para poder ponerse en contacto con los turísticas y que bajen los niveles, evitando asi cualquier conflicto de convivencia con vecinos.
@@ -4477,196 +3790,6 @@ propiedades.`,
     lang: "es",
   },
   {
-    id: "1084",
-    slug: "tips-para-gestionar-tu-short-term-rental-como-un-experto",
-    title: "Tips para gestionar tu short-term rental como un experto",
-    excerpt: "La hostelería es una de las industrias que más rápido ha crecido en el mundo. Y los alquileres a corto plazo se convirtieron en una parte cada vez más importante de ella. Con los patrones de viaje cambiantes aparecieron plataformas que no sólo popula",
-    content: `La
-hostelería es una de las industrias que más rápido ha crecido en el mundo. Y
-los **alquileres a corto plazo** se convirtieron en una parte cada vez
-más importante de ella. Con los patrones de viaje
-cambiantes aparecieron plataformas que no sólo popularizaron la economía
-colaborativa, sino que también cambiaron la forma en que la gente elige viajar.
-
-Hoy
-en día la gente busca experiencias, quiere estar más cerca de los lugareños y
-vivir como ellos. 
-
-Alquilar
-un apartamento se convirtió en una alternativa para los turistas, ya que ven
-esto como una manera de estar más cerca de la experiencia local, sin perder su
-libertad y privacidad.
-
-Si desea alcanzar el éxito en el alquiler a corto plazo, **como anfitrión, usted necesita siempre mantenerse al tanto de las cosas que están sucediendo en su propiedad.** Varios desafíos vienen con la administración de alquiler a corto plazo, pero todos pueden ser superados con el cuidado y la preparación adecuada.
-
-Con
-nuestros consejos, puede hacer que la administración de alquiler a corto plazo
-sea menos estresante y más gratificante.
-
-- **Inversión en marekting digital**
-
-Imagen: Roomonitor
-
-Asegúrese
-de que su propiedad se puede encontrar y sea reservable. Hoy en día es
-inevitable estar en plataformas de viajes en línea como Booking.com o Airbnb.
-Los viajeros están deseando reservar y tener una respuesta al instante.
-
-Este
-tipo de marketing incluye también la promoción de su propiedad en las redes
-sociales, como Facebook e Instagram. Para los viajeros de hoy en día, estas
-plataformas son el punto de partida para planificar una nueva aventura.
-
-Otra
-gran idea es tener un blog con consejos de viaje, que pueden dirigir a los
-huéspedes potenciales a su propiedad.
-
-La
-falta del tiempo suele ser la mayor excusa para no llevar a cabo la inversión.
-Afortunadamente, hay muchas soluciones en línea disponibles en el mercado, que
-pueden ayudarle a planificar la estrategia de marketing y la gestión de las
-redes sociales con antelación.
-
-Como hoy en día el marketing digital juega un papel vital en la hospitalidad, perderse o simplemente ignorarlo podría ser un gran error si desea que su alquiler a corto plazo tenga éxito y se destaque entre la multitud.
-
-**2. Property Management System (PMS)**
-
-Imagen: Roomonitor
-
-Si
-desea administrar su propiedad sin dolores de cabeza, el PMS es una necesidad.
-Disponer de un sistema todo en uno, desde gestionar todas las reservas,
-disponibilidad y precios (y mucho más) te ganará un tiempo extra que podrás
-dedicar al desarrollo de tu alquiler a corto plazo.
-
-Además,
-la mayoría de los sistemas de administración de propiedades están actualmente
-basados en la nube, lo que significa que puede tener control sobre su propiedad
-en cualquier momento y en cualquier lugar, siempre y cuando tenga el
-dispositivo adecuado, como su teléfono móvil.
-
-**3. Data intelligence**
-
-Imagen: Canvas.com
-
-Hay
-otro aspecto importante a tener en cuenta en un sistema de gestión de la
-propiedad. Éste recopila y analiza datos valiosos, que pueden ayudarle a
-desarrollar su propiedad. Conocer los patrones pasados es una poderosa
-herramienta, basada en la cual puedes construir tu estrategia de ingresos y
-ayudarte a superar la temporada baja.
-
-Estar
-en contacto con sus huéspedes antes y después de la llegada a través de correos
-electrónicos, le permite recopilar otra información valiosa que puede ayudarle
-a mejorar la experiencia de los futuros huéspedes. Encuestas, seguimiento y
-respuesta a las críticas es una parte esencial de cada alojamiento turístico.
-
-**4. Control de la propiedad**
-
-Imagen: Roomonitor
-
-Como
-se mencionó al principio, la gestión del alquiler a corto plazo viene con
-muchos obstáculos. Y el que puede traerte muchos dolores de cabeza es confiar
-tu propiedad en manos de personas desconocidas. Ruido, fiestas y música fuerte
-se convierten en un problema, especialmente, si su alquiler a corto plazo
-coexiste con los apartamentos de la gente local.
-
-Afortunadamente, soluciones como el dispositivo de **[Noise Alarm](https://new.roomonitor.com/es/producto/servicio-noise-alarm/)**, le ayudan a evitar los problemas mencionados anteriormente y obtener un control 24/7 sobre lo que está sucediendo en su propiedad. Junto con un personal nocturno **[Alarm Assistant](https://new.roomonitor.com/es/producto/alarmassistant/)**, que se pondrá en contacto con los huéspedes en caso de que el alto nivel de ruido, se puede olvidar de las noches de insomnio.
-
-Con
-los consejos anteriores, no sólo gestionará su alquiler a corto plazo como un
-profesional, sino que también tendrá más tiempo para centrarse en hacer que la
-estancia de sus huéspedes sea inolvidable.`,
-    category: "Roomonitor",
-    date: "2019-10-17",
-    readTime: 4,
-    image: "https://roomonitor.com/wp-content/uploads/2019/10/fotos-para-blog.png",
-    lang: "es",
-  },
-  {
-    id: "25679",
-    slug: "tips-para-gerir-o-seu-alojamento-local-como-um-especialista",
-    title: "Tips para gerir o seu Alojamento Local como um especialista",
-    excerpt: "A hotelaria é uma das indústrias que mais cresce no mundo. E o Alojamento Local tornou-se uma parte cada vez mais importante dela. Com a transformação dos padrões de viagem surgiram plataformas que não só popularizaram a economia colaborativa, mas ta",
-    content: `A hotelaria é uma das indústrias que mais cresce no mundo. E o **Alojamento Local** tornou-se uma parte cada vez mais importante dela. Com a transformação dos padrões de viagem surgiram plataformas que não só popularizaram a economia colaborativa, mas também mudaram a forma como as pessoas escolhem viajar.
-
-Atualmente, as pessoas procuram
-experiências, querem estar mais próximas dos habitantes locais e viver como
-eles.
-
-Arrendar um apartamento tornou-se
-uma alternativa para os turistas, que veem isso como uma forma de estar mais
-perto da experiência local, sem perder a sua liberdade e a sua privacidade.
-
-Se desejar alcançar o sucesso no arrendamento de curta duração, **como anfitrião, deve manter-se sempre a par daquilo que está a acontecer na sua propriedade**. Surgem vários desafios com a gestão de alojamento local, mas todos podem ser superados com cuidado e preparação adequada.
-
-Com os nossos conselhos, pode fazer com que a gestão de alojamento local seja menos stressante e mais gratificante.
-
-- **Investimento em marketing digital**
-
-imagem: Roomonitor
-
-Certifique-se de que a sua
-propriedade pode ser encontrada e é reservável. Atualmente, é inevitável estar
-em plataformas de viagens online como a Booking.com ou a Airbnb. Os viajantes querem
-reservar e ter uma resposta imediata.
-
-Este tipo de marketing também inclui
-a promoção da sua propriedade em redes sociais como o Facebook e o Instagram.
-Para os viajantes de hoje, essas plataformas são o ponto de partida para o
-planeamento de uma nova aventura.
-
-Outra grande ideia é ter um blog com
-dicas de viagem, que pode encaminhar os potenciais hóspedes para a sua
-propriedade.
-
-A falta de tempo é muitas vezes a
-maior desculpa para não fazer o investimento. Felizmente, existem muitas
-soluções online disponíveis no mercado que podem ajudá-lo a planear a sua
-estratégia de marketing e gestão de redes sociais com antecedência.
-
-Como o marketing digital de hoje desempenha um papel vital na hotelaria, perder-se ou simplesmente ignorá-lo pode ser um grande erro, se deseja que o seu arredamento tenha sucesso e se destaque da multidão.
-
-2. **Property Management System (PMS)**
-
-imagem: Roomonitor
-
-Se pretende gerir a sua propriedade sem dores de cabeça, o PMS é uma necessidade. Ter um sistema tudo-em-um, desde a gestão de todas as reservas, disponibilidade e preços (e muito mais) irá ganhar-lhe tempo extra que poderá dedicar ao desenvolvimento do seu alojamento local.
-
-Para além disso, a maioria dos sistemas de gestão de propriedades assenta atualmente na nuvem, o que significa que pode ter controlo sobre sua propriedade a qualquer hora, em qualquer lugar, desde que tenha o dispositivo adequado, como o seu telemóvel.
-
-**3. *Data inteligence***
-
-imagem: Canvas
-
-Há outro aspeto importante a considerar
-num sistema de gestão de propriedade. Ele recolhe e analisa dados valiosos, que
-podem ajudá-lo a desenvolver sua propriedade. Conhecer os padrões do passado é
-uma ferramenta poderosa, baseada na qual é possível construir a sua estratégia
-de rendimentos e ajudá-lo a superar a temporada baixa.
-
-Estar em contato com seus hóspedes antes e depois da chegada através de e-mails permite-lhe recolher outras informações valiosas que podem ajudá-lo a melhorar a experiência para futuros hóspedes. Os inquéritos, o acompanhamento e a resposta às críticas são uma parte essencial de qualquer alojamento local.
-
-**4. Controlo da propriedade**
-
-imagem: Roomonitor
-
-Como mencionado no início, a administração de alojamento local apresenta muitos obstáculos. E o que lhe pode trazer muitas dores de cabeça é confiar a propriedade nas mãos de estranhos. O ruído, as festas e a música alta tornam-se um problema, especialmente se o seu arrendamento coexistir com apartamentos de habitantes locais.
-
-Felizmente, soluções como o dispositivo de **[Noise Alarm](https://new.roomonitor.com/pt/produto/noise-alarm/)**[ ](https://new.roomonitor.com/pt/produto/noise-alarm/)ajudam-no a evitar os problemas supramencionados e a obter um controlo 24h/7 sobre o que está a acontecer na sua propriedade. Junto com uma equipa noturna **[Alarm Assistant](https://new.roomonitor.com/pt/produto/alarmassistant/)**, que entrará em contato com os hóspedes caso haja níveis alto de ruído, pode esquecer as noites sem dormir.
-
-Com as dicas acima, não só irá gerir
-o seu arrendamento de curta duração como um profissional, mas também terá mais
-tempo para se concentrar em tornar a estadia dos seus hóspedes inesquecível.`,
-    category: "Roomonitor",
-    date: "2019-10-17",
-    readTime: 3,
-    image: "https://roomonitor.com/wp-content/uploads/2019/10/fotos-para-blog-1.png",
-    lang: "es",
-  },
-  {
     id: "1053",
     slug: "evitar-okupas-en-apartamento-turistico",
     title: "Caso real: Cómo evitar okupas en tu apartamento turístico.",
@@ -4720,67 +3843,6 @@ Por lo que nuestras gráficas de medición, sirven para demostrar en qué moment
     lang: "es",
   },
   {
-    id: "25711",
-    slug: "caso-real-como-evitar-ocupantes-ilegais-no-seu-alojamento-local",
-    title: "Caso Real: Como evitar ocupantes ilegais no seu alojamento local",
-    excerpt: "De acordo com os dados oficiais (datados de 2017), estima-se que em Espanha existam cerca de 90.000 habitações ocupadas ilegalmente, das quais 23% se encontram em Barcelona. Um dos maiores medos quando se fala de ocupantes ilegais são as chamadas máf",
-    content: `De acordo com os dados oficiais (datados de 2017), estima-se que em Espanha existam cerca de 90.000 habitações ocupadas ilegalmente, das quais 23% se encontram em Barcelona.
-
-Um dos maiores medos quando se fala de ocupantes ilegais são as chamadas máfias organizadas, que se dedicam exclusivamente a procurar e ocupar habitações para revender a propriedade ou para exigir que os proprietários as abandonem.
-
-A lei estabelece que, se o proprietário avisar a polícia e esta atuar em 48 horas, o despejo pode ser imediato. No entanto, caso isso não aconteça, deve ser apresentada uma queixa civil.
-
-**Como é que o medidor de nível sonoro para alojamento local [NoiseAlarm](https://new.roomonitor.com/pt/produto/noise-alarm/) pode ajudar-te a proteger a tua propriedade?**
-
-Já não estamos só a falar de hóspedes barulhentos, isto pode ajudar-te com outros tipos de delitos.
-
-Uma grande ferramenta de controlo é o nosso painel onde podes ver o gráfico da **pressão sonora do apartamento.**
-
-No **Roomonitor** podes ver em tempo real a pressão sonora do teu alojamento local e detetar se houve movimentos suspeitos em dias e horas em que não houve check-ins.
-
-Este é o caso do nosso cliente Classbedroom, que foi alertado por um vizinho sobre movimentos suspeitos dentro do apartamento.
-
-Marcos Bosch, da Classbedroom, conta-nos: **"O pessoal da guarda foi ao apartamento com um carro patrulha e, graças ao facto de termos conseguido demonstrar que tinham entrado às 2 da manhã com o gráfico do sonómetro, foram expulsos. Se não tivéssemos um sonómetro, teríamos os ocupantes, só tinham passado 2 horas"**.
-
-Isto mostra que o nosso painel é uma ferramenta muito valiosa que permite que reajas rapidamente para proteger a propriedade no momento certo.
-
-Se agires de imediato, a polícia pode remover os ocupantes sem acusação por ser um crime flagrante, ou seja, a ocupação está em ocorrência ou acabou de ocorrer e há testemunhas.
-
-Assim, os nossos gráficos de medição servem para mostrar o momento em que houve movimentos inesperados e também para verificar se se tratou efetivamente de uma violação da propriedade privada.
-
-Se desejares receber uma avaliação do nosso **sonómetro para alojamento local [Noise Alarm](https://new.roomonitor.com/pt/produto/noise-alarm/)** e começar a monitorizar o ruído do teu apartamento turístico, deixa-nos os teus dados **[aqui](https://new.roomonitor.com/pt/contate-nos/).**`,
-    category: "Roomonitor",
-    date: "2019-10-15",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2019/10/Super-Sonic-Summer-3-1.png",
-    lang: "es",
-  },
-  {
-    id: "1007",
-    slug: "short-term-rental-events-tour",
-    title: "Short Term Rental events' tour!",
-    excerpt: "Este año Roomonitor tuvo sus dos ediciones de #RoomEvents en mayo con más de 300 asistentes. El tema principal fue cómo profesionalizar el sector de alquiler a corto plazo o alquiler vacacional con las nuevas tecnologías.Hemos tenido a los mejores pa",
-    content: `Este año Roomonitor tuvo sus dos ediciones de **#RoomEvents** en mayo con más de 300 asistentes. El tema principal fue cómo profesionalizar el sector de alquiler a corto plazo o alquiler vacacional con las nuevas tecnologías.Hemos tenido a los mejores partners y colaboradores, pueden ver más en: *www.roomonitorevents.com* 
-
-Mientras preparamos el nuevo evento en Lisboa, queremos compartir los próximos eventos de 2019 en Europa y alrededores:
-
-Septiembre: 10-11 -> Click by Booking en Amsterdam, Países Bajos. 16-18 -> [Guestyval e](https://www.guestyval.com/)n Tel Aviv, Israel – **Roomonitor asistirá a este evento.** 16 -> Serviced Apartment Summit MEA en Dubai, UAE. 17 -> Short Stay Meet Up en Manchester, Reino Unido.
-
-Octubre: 05-06 -> [Vacation Rental World Summit](https://www.vacationrentalworldsummit.com/) en Lago Como, Italia – **Roomonitor asistirá a este evento.** 17-18 -> [VITUR Summit](https://www.eventbrite.es/e/entradas-vitur-summit-2019-the-european-event-for-holiday-rentals-65409484529) en Málaga, España – **Roomonitor asistirá a este evento.** 31 -> Host en Londres, Reino Unido.
-
-Noviembre: 07 -> [Entrega de Macro SellosWeRespect e](https://www.eventbrite.es/e/registro-entrega-de-macro-sellos-werespect-77985267033)n Barcelona, Spain - **Roomonitor will attend this event. ** 08 ->  
-Short Stay Summit in Barcelona, España – **Roomonitor asistirá a este evento.** 20-22 -> HOST Basic to Business en Roma, Italia - **Roomonitor asistirá a este evento.**
-
-Diciembre: 10-11 -> ASAP Convention en Londres, Reino Unido.
-
-Podéis organizar una reunión con nosotros en cualquiera de los eventos a los que asistiremos, escríbenos a **info@roomonitor.com** o envíanos un mensaje [**aquí**](https://new.roomonitor.com/es/contacto/).`,
-    category: "Roomonitor",
-    date: "2019-09-09",
-    readTime: 1,
-    image: "https://roomonitor.com/wp-content/uploads/2019/09/flyer-horizontal-9.png",
-    lang: "es",
-  },
-  {
     id: "975",
     slug: "politicas-de-vigilancia-de-airbnb",
     title: "Política de dispositivos de vigilancia",
@@ -4827,73 +3889,6 @@ Si quieres conocer más sobre NoiseAlarm o cualquiera de nuestros productos, dé
     date: "2019-08-20",
     readTime: 2,
     image: "https://roomonitor.com/wp-content/uploads/2019/08/Diseno-sin-titulo-20.png",
-    lang: "es",
-  },
-  {
-    id: "25738",
-    slug: "politica-de-vigilancia",
-    title: "Política de vigilância",
-    excerpt: "Vivemos num mundo onde, graças à tecnologia IoT (Internet of Things ou “internet das coisas”), podemos controlar o nosso apartamento 24h/7, à distância, respeitando a privacidade dos nossos hóspedes. As novas políticas de alguns sites de pesquisa de ",
-    content: `Vivemos num mundo onde, graças
-à tecnologia IoT (Internet of Things ou “internet das coisas”), podemos
-controlar o nosso apartamento 24h/7, à distância, respeitando a privacidade dos
-nossos hóspedes.
-
-As novas políticas de alguns sites de pesquisa de alojamento local, como o Airbnb, exigem que se comunique a presença de qualquer dispositivo de vigilância em Normas da Propriedade ou Casa.
-
-Aqui está o texto completo das regras da Airbnb a respeito da presença de câmaras de segurança e outros dispositivos de gravação nos alojamentos:
-
-**O NoiseAlarm é um dispositivo
-de vigilância?**
-
-**Em primeiro lugar, devemos dizer que o Noise Alarm mede a pressão sonora do seu alojamento local em tempo real, não grava vídeos nem conversas e respeita a 100% a privacidade dos hóspedes.**
-
-O **NoiseAlarm** é um
-investimento para manter a tua casa ou apartamento seguro e livre de festas ou ruídos
-perturbadores, oferecendo aos teus hóspedes a máxima privacidade e favorecendo
-a convivência com os vizinhos.
-
-Assim, é um dispositivo de
-vigilância que mede os níveis de ruído e permite a monitorização do som no
-apartamento.
-
-É por isto que recomendamos
-que incluas na publicação do apartamento ou no teu website um texto que faça
-referência aos aparelhos Roomonitor, para evitar sanções e também como
-requisito da Airbnb.
-
-Aqui estão alguns exemplos:
-
-*Português:***
-
-*“Esta
-propriedade utiliza um dispositivo IOT que ajuda a controlar o ruído e evitar
-conflitos com vizinhos e outros hóspedes. O Noise Alarm da Roomonitor é um
-dispositivo 100% seguro para a privacidade dos hóspedes, uma vez que não grava
-áudio nem conversas, mede os níveis de volume de ruído da propriedade e envia
-um alerta quando o limite máximo estabelecido tenha sido ultrapassado. Este
-sistema ajuda a tornar o turismo mais sustentável. Para mais informações, visita
-*[*www.roomonitor.com*](https://new.roomonitor.com)*”*
-
-*Español:*
-
-*“Esta propiedad utiliza un dispositivo IOT que
-ayuda a controlar el ruido evitando conflictos con vecinos u otros inquilinos.
-Noise Alarm de Roomonitor es un dispositivo 100% seguro a la privacidad de los
-huéspedes porque no graba audio ni conversaciones, mide el nivel de volumen de
-ruido en la propiedad y envía una alerta cuando se haya excedido el límite
-máximo establecido. Este sistema colabora para hacer el turismo más sostenible,
-para más información visita *[*www.roomonitor.com*](https://new.roomonitor.com/)*”*
-
-*English:*
-
-*“This property uses an IOT device that helps us to control the noise in the apartment avoiding conflicts with neighbors or other tenants. Roomonitor’s Noise Alarm is 100% secure for guest-privacy because there are no audio recordings or conversations, it measures the volume level of noise and sends an alert when exceeding the maximum limit set. This system collaborates to make tourism more sustainable, for more information visit [www.roomonitor.com](https://new.roomonitor.com)”*
-
-Se quiseres saber mais sobre o NoiseAlarm ou qualquer outro dos nossos produtos, deixa-nos uma mensagem. [Clique aqui](https://new.roomonitor.com/pt/contate-nos/)!`,
-    category: "Roomonitor",
-    date: "2019-08-20",
-    readTime: 2,
-    image: "https://roomonitor.com/wp-content/uploads/2019/08/Diseno-sin-titulo-20-1.png",
     lang: "es",
   },
   {
