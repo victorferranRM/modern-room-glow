@@ -123,7 +123,7 @@ const es = {
     partners: {
       trustUs: "Confían en nosotros",
       stats: [
-        { value: "30.500+", label: "Apartamentos monitorizados" },
+        { value: "45.000+", label: "Apartamentos monitorizados" },
         { value: "97%", label: "Tasa de satisfacción (CSAT)" },
         { value: "<4 min", label: "Tiempo medio de gestión" },
         { value: "8", label: "Ciudades con Field Service" },

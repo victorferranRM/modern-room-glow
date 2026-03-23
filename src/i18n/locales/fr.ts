@@ -123,7 +123,7 @@ const fr = {
     partners: {
       trustUs: "Ils nous font confiance",
       stats: [
-        { value: "30 500+", label: "Appartements surveillés" },
+        { value: "45 000+", label: "Appartements surveillés" },
         { value: "97%", label: "Taux de satisfaction (CSAT)" },
         { value: "<4 min", label: "Temps moyen de traitement" },
         { value: "8", label: "Villes avec Service de Terrain" },

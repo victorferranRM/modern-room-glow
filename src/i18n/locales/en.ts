@@ -123,7 +123,7 @@ const en = {
     partners: {
       trustUs: "Trusted by",
       stats: [
-        { value: "30,500+", label: "Monitored apartments" },
+        { value: "45,000+", label: "Monitored apartments" },
         { value: "97%", label: "Satisfaction rate (CSAT)" },
         { value: "<4 min", label: "Average handling time" },
         { value: "8", label: "Cities with Field Service" },
