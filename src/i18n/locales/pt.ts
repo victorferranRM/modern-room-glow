@@ -123,7 +123,7 @@ const pt = {
     partners: {
       trustUs: "Confiam em nós",
       stats: [
-        { value: "30.500+", label: "Apartamentos monitorados" },
+        { value: "45.000+", label: "Apartamentos monitorados" },
         { value: "97%", label: "Taxa de satisfação (CSAT)" },
         { value: "<4 min", label: "Tempo médio de gestão" },
         { value: "8", label: "Cidades com Serviço de Campo" },
@@ -282,7 +282,7 @@ const pt = {
       ctaSecondary: "Ver planos e preços",
     },
     stats: [
-      { value: "30.000+", label: "Propriedades Protegidas" },
+      { value: "45.000+", label: "Propriedades Protegidas" },
       { value: "150K+", label: "Alertas Gerenciados" },
       { value: "99,9%", label: "Tempo Ativo" },
       { value: "24/7", label: "Suporte Disponível" },
@@ -418,7 +418,7 @@ const pt = {
       callUs: "Ligue-nos",
     },
     trust: [
-      { title: "+30.000 propriedades", desc: "Monitoradas em todo o mundo" },
+      { title: "+45.000 propriedades", desc: "Monitoradas em todo o mundo" },
       { title: "+10 anos", desc: "De experiência no setor" },
       { title: "8 cidades", desc: "Com agentes de campo ativos" },
     ],
@@ -1109,7 +1109,7 @@ const pt = {
       { value: "24/7", label: "Cobertura operacional" },
       { value: "<2min", label: "Resposta média" },
       { value: "100%", label: "Verificação humana" },
-      { value: "30.000+", label: "Propriedades geridas" },
+      { value: "45.000+", label: "Propriedades geridas" },
     ],
     featuresEyebrow: "Capacidades",
     featuresTitle: "Muito mais do que monitorização de ruído",

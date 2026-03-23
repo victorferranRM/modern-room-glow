@@ -123,7 +123,7 @@ const fr = {
     partners: {
       trustUs: "Ils nous font confiance",
       stats: [
-        { value: "30 500+", label: "Appartements surveillés" },
+        { value: "45 000+", label: "Appartements surveillés" },
         { value: "97%", label: "Taux de satisfaction (CSAT)" },
         { value: "<4 min", label: "Temps moyen de traitement" },
         { value: "8", label: "Villes avec Service de Terrain" },
@@ -282,7 +282,7 @@ const fr = {
       ctaSecondary: "Voir les plans et tarifs",
     },
     stats: [
-      { value: "30 000+", label: "Propriétés Protégées" },
+      { value: "45 000+", label: "Propriétés Protégées" },
       { value: "150K+", label: "Alertes Gérées" },
       { value: "99,9%", label: "Disponibilité" },
       { value: "24/7", label: "Support Disponible" },
@@ -418,7 +418,7 @@ const fr = {
       callUs: "Appelez-nous",
     },
     trust: [
-      { title: "+30 000 propriétés", desc: "Surveillées dans le monde entier" },
+      { title: "+45 000 propriétés", desc: "Surveillées dans le monde entier" },
       { title: "+10 ans", desc: "D'expérience dans le secteur" },
       { title: "8 villes", desc: "Avec des agents de terrain actifs" },
     ],
@@ -1109,7 +1109,7 @@ const fr = {
       { value: "24/7", label: "Couverture opérationnelle" },
       { value: "<2min", label: "Réponse moyenne" },
       { value: "100%", label: "Vérification humaine" },
-      { value: "30 000+", label: "Propriétés gérées" },
+      { value: "45 000+", label: "Propriétés gérées" },
     ],
     featuresEyebrow: "Capacités",
     featuresTitle: "Bien plus que la surveillance du bruit",

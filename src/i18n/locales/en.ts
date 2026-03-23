@@ -123,7 +123,7 @@ const en = {
     partners: {
       trustUs: "Trusted by",
       stats: [
-        { value: "30,500+", label: "Monitored apartments" },
+        { value: "45,000+", label: "Monitored apartments" },
         { value: "97%", label: "Satisfaction rate (CSAT)" },
         { value: "<4 min", label: "Average handling time" },
         { value: "8", label: "Cities with Field Service" },
@@ -282,7 +282,7 @@ const en = {
       ctaSecondary: "View plans & pricing",
     },
     stats: [
-      { value: "30,000+", label: "Properties Protected" },
+      { value: "45,000+", label: "Properties Protected" },
       { value: "150K+", label: "Alerts Managed" },
       { value: "99.9%", label: "Uptime" },
       { value: "24/7", label: "Support Available" },
@@ -418,7 +418,7 @@ const en = {
       callUs: "Call us",
     },
     trust: [
-      { title: "+30,000 properties", desc: "Monitored worldwide" },
+      { title: "+45,000 properties", desc: "Monitored worldwide" },
       { title: "+10 years", desc: "Of industry experience" },
       { title: "8 cities", desc: "With active field agents" },
     ],
@@ -1109,7 +1109,7 @@ const en = {
       { value: "24/7", label: "Operational coverage" },
       { value: "<2min", label: "Average response" },
       { value: "100%", label: "Human verification" },
-      { value: "30,000+", label: "Properties managed" },
+      { value: "45,000+", label: "Properties managed" },
     ],
     featuresEyebrow: "Capabilities",
     featuresTitle: "Far more than noise monitoring",
