@@ -177,9 +177,9 @@ export default function PropertyOwners() {
             <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">{t('solutionPropertyOwners.ctaTitle')}</h2>
             <p className="text-base lg:text-lg text-muted-foreground mb-8">{t('solutionPropertyOwners.ctaDescription')}</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild><LocalizedLink to="/checkout?plan=basic&properties=1">{t('solutionPropertyOwners.getDevice')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
-              <Button size="lg" variant="outline" asChild><LocalizedLink to="/contact">{t('solutionPropertyOwners.askQuestion')}</LocalizedLink></Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+              <Button size="lg" className="w-full sm:w-auto" asChild><LocalizedLink to="/checkout?plan=basic&properties=1">{t('solutionPropertyOwners.getDevice')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild><LocalizedLink to="/contact">{t('solutionPropertyOwners.askQuestion')}</LocalizedLink></Button>
             </div>
           </AnimatedSection>
         </div>
