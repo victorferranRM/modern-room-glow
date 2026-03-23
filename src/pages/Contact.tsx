@@ -499,19 +499,19 @@ export default function Contact() {
         </section>
 
         {/* Trust Section */}
-        <section className="py-12 md:py-16 border-t">
+        <section className="py-16 md:py-24 border-t">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-16 max-w-5xl mx-auto text-center">
               {trustItems.map((item, idx) => {
                 const icons = [Building2, Clock, MapPin];
                 const Icon = icons[idx];
                 return (
-                  <div key={idx} className="space-y-2">
-                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
-                      <Icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  <div key={idx} className="space-y-3">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 md:mb-5">
+                      <Icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-sm md:text-base text-foreground">{item.title}</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">{item.desc}</p>
+                    <h3 className="font-bold text-lg md:text-xl lg:text-2xl text-foreground">{item.title}</h3>
+                    <p className="text-sm md:text-base text-muted-foreground">{item.desc}</p>
                   </div>
                 );
               })}
