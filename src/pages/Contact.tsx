@@ -1,4 +1,5 @@
 import contactHeroImg from "@/assets/contact-hero.webp";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
