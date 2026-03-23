@@ -6881,7 +6881,432 @@ Certaines personnes ont soulevé des préoccupations en matière de protection d
     image: "https://roomonitor.com/wp-content/uploads/2020/11/olia-danilevich-5911467.jpg",
     lang: "fr",
   },
-];
+  {
+    id: "37235",
+    slug: "regulamento-alojamento-local-lisboa-2025",
+    title: "Alterações ao Regulamento do Alojamento Local em Lisboa: Áreas de Contenção, Exceções e Impacto Prático",
+    excerpt: "Entraram em vigor, a 6 de dezembro de 2025, alterações relevantes ao Regulamento Municipal do Alojamento Local (RMAL) de Lisboa. A revisão enquadra-se no novo contexto nacional definido pelo DL n.º 76/2024 e reforça os instrumentos de regulação terri",
+    content: `Entraram em vigor, a 6 de dezembro de 2025, alterações relevantes ao Regulamento Municipal do Alojamento Local (RMAL) de Lisboa.
+
+A revisão enquadra-se no novo contexto nacional definido pelo DL n.º 76/2024 e reforça os instrumentos de regulação territorial do Alojamento Local (AL) na cidade.
+
+Se é proprietário, gestor ou investidor em Lisboa, estas mudanças têm impacto direto na sua atividade.
+
+## Novo modelo de contenção: como funciona agora?
+
+Uma das principais alterações é a redefinição das escalas territoriais de análise e monitorização.
+
+O município passa a adotar três níveis:
+
+- Concelho
+
+- Freguesia
+
+- Bairro
+
+A freguesia torna-se a unidade base de monitorização, com análise complementar ao nível do bairro.
+
+A monitorização é **mensal** e baseia-se no rácio entre:
+
+- Número de estabelecimentos de Alojamento Local
+
+- Número de fogos de habitação permanente (dados do INE)
+
+## O que são Áreas de Contenção Absoluta?
+
+São zonas onde o rácio entre AL e habitação permanente é **igual ou superior a 10%**.
+
+Nestes territórios:
+
+- Novos registos ficam fortemente limitados
+
+- A autorização passa a ter caráter excecional
+
+- O controlo municipal torna-se mais rigoroso
+
+Podem ser definidas ao nível do concelho, freguesia ou bairro.
+
+## O que são Áreas de Contenção Relativa?
+
+Aplicam-se quando o rácio é:
+
+- Igual ou superior a 5%
+
+- Inferior a 10%
+
+No caso dos bairros, apenas se a respetiva freguesia não estiver já em contenção.
+
+Aqui existem limitações, mas há maior margem para autorizações excecionais.
+
+## Exceções nas Áreas de Contenção Absoluta
+
+A Câmara Municipal de Lisboa pode autorizar novos registos, a título excecional, quando se verifique:
+
+#### ✔ Reabilitação de edifícios
+
+- Edifícios em ruínas
+
+- Reabilitação integral de imóveis devolutos há mais de 3 anos
+
+#### ✔ Projetos de especial interesse para a cidade
+
+- Edifícios de uso multifuncional
+
+- Projetos de âmbito social ou cultural
+
+- Integração de oferta de habitação a preços acessíveis
+
+## Exceções nas Áreas de Contenção Relativa
+
+Além das situações anteriores, pode ser autorizada a modalidade “quarto”, quando:
+
+- Se trate de fração autónoma T2 ou superior
+
+- Seja residência permanente do proprietário há mais de 3 anos
+
+- Limite máximo de 1 quarto (T2) ou 2 quartos (tipologias superiores)
+
+## Quando NÃO são autorizados novos registos?
+
+Mesmo em áreas de contenção relativa ou absoluta, não são autorizados novos registos quando o imóvel:
+
+- Teve contrato de arrendamento habitacional nos últimos 5 anos (salvo exceção do próprio arrendatário)
+
+- Foi adquirido em hasta pública realizada pelo Município
+
+## Como pedir autorização em áreas de contenção?
+
+O pedido deve ser dirigido à Câmara Municipal de Lisboa através de:
+
+- Requerimento formal
+
+- Entrega de documentação comprovativa
+
+- Possível pedido de informação prévia (nos termos do RJUE)
+
+## Impacto prático para proprietários e investidores
+
+Estas alterações:
+
+- Tornam o controlo territorial mais granular
+
+- Exigem maior planeamento antes de investir
+
+- Reduzem o crescimento espontâneo do AL
+
+- Favorecem projetos estruturados e profissionalizados
+
+Num mercado mais regulado, a conformidade legal e a gestão profissional tornam-se determinantes.
+
+## O que significa isto para o futuro do AL em Lisboa?
+
+Lisboa consolida um modelo de contenção ativa, com monitorização mensal e critérios mais exigentes.
+
+O mercado não desaparece — mas torna-se mais técnico, mais regulado e mais dependente de dados e planeamento.
+
+Para quem opera com múltiplas unidades, acompanhar rácios territoriais e garantir conformidade passa a ser estratégico.
+
+## Informação com base em dados da ALEP
+
+A informação apresentada neste artigo baseia-se nas comunicações e esclarecimentos partilhados pela **ALEP – Associação do Alojamento Local em Portugal**, entidade representativa do setor que tem acompanhado de perto a revisão do Regulamento Municipal de Lisboa.
+
+Para consultar informações oficiais e atualizações adicionais, recomendamos visitar o site da [**associação**](https://www.alep.pt):
+
+As alterações ao Regulamento do Alojamento Local em Lisboa marcam uma nova fase para o setor.
+
+Se já opera, deve rever o enquadramento da sua unidade.Se pretende investir, a análise territorial é hoje obrigatória.
+
+O contexto mudou — e a preparação faz toda a diferença.`,
+    category: "Noticias del sector",
+    date: "2026-02-23",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2026/02/Lisbon-air-vision-scaled.jpg",
+    lang: "pt",
+  },
+  {
+    id: "36587",
+    slug: "como-proteger-o-seu-alojamento-local-com-a-legislacao-em-portugal",
+    title: "Como proteger o seu Alojamento Local em Portugal para 2026",
+    excerpt: "O Alojamento Local em Portugal entra num novo ciclo regulatório após as alterações introduzidas ao Decreto-Lei 128/2014, recentemente atualizadas pelo Decreto-Lei 76/2024. Embora não se trate de uma lei totalmente nova, a reforma tem impacto direto n",
+    content: `O Alojamento Local em Portugal entra num novo ciclo regulatório após as alterações introduzidas ao **Decreto-Lei 128/2014**, recentemente atualizadas pelo **Decreto-Lei 76/2024**. Embora não se trate de uma lei totalmente nova, a reforma tem impacto direto na relação entre **proprietários**, **hóspedes** e **condomínios**, sobretudo em questões de ruído e perturbações que afetam a convivência. Com este novo enquadramento, **assembleias de condomínio** e **municípios** passam a ter mais poder para atuar em situações de perturbações graves e recorrentes, reforçando a necessidade de que os alojamentos operem com **mecanismos preventivos e dados verificáveis**.
+
+A partir de 2025, a capacidade de demonstrar responsabilidade, cumprimento das regras e ações preventivas torna-se essencial para qualquer proprietário ou gestor de Alojamento Local que pretenda proteger o seu registo AL.
+
+## **As três formas de atuação do condomínio perante o Alojamento Local**
+
+A legislação revista mantém três mecanismos através dos quais um condomínio pode reagir à atividade de um Alojamento Local. Os dois primeiros aplicam-se sobretudo a novos registos, mas o terceiro pode afetar diretamente unidades já em funcionamento.
+
+**1) Proibição antes da constituição formal do condomínio****2) Limitação após a constituição do condomínio, aplicável apenas a novos registos****3) Pedido de cancelamento do registo devido a perturbações graves e regulares**
+
+No terceiro caso, a assembleia de condomínio — representando **mais de 50% da permilagem** — pode aprovar uma deliberação solicitando ao município o cancelamento do registo AL. Esta deliberação deve incluir:
+
+- As causas do conflito
+
+- As provas que sustentam o pedido
+
+- A repetição das perturbações (geralmente associadas ao ruído)
+
+O município analisa depois a denúncia e decide se existem fundamentos suficientes para dar início ao processo de cancelamento.
+
+Este mecanismo **permite ao condomínio solicitar o cancelamento do registo** quando exista prática reiterada e comprovada de atos que perturbem o uso normal do edifício. Problemas de ruído são, frequentemente, o principal motivo. Após receber a documentação, cabe ao município determinar se deve continuar com o processo.
+
+## **Mais poder para os municípios: mediação, verificação e novos instrumentos**
+
+Um dos aspetos mais relevantes da reforma é o reforço do papel dos municípios no âmbito do **artigo 9.º**. Antes de decidir o cancelamento, o presidente da câmara pode recorrer a novas formas de mediação e verificação.
+
+O Decreto-Lei 76/2024 permite ainda que os regulamentos municipais prevejam a figura do **“provedor do alojamento local”** — um mediador municipal que pode ajudar a resolver conflitos entre proprietários, vizinhos e condomínio. Esta figura não é obrigatória, mas pode ser criada por cada município.
+
+A legislação introduz também uma alternativa ao cancelamento: o presidente da câmara pode convidar as partes a chegar a um **acordo com compromissos e condições** (art. 9.º, n.º 12). Se este acordo for viável, o processo pode ser encerrado sem cancelamento.
+
+Neste contexto, os municípios podem sugerir ou exigir medidas concretas — como limites de ocupação, regras adicionais de utilização ou a instalação de **sistemas de monitorização de ruído** para confirmar se as perturbações existem e se foram corrigidas.
+
+## **O que este novo enquadramento implica para proprietários e gestores de AL**
+
+A reforma transmite uma mensagem clara: **prevenção, transparência e prova documental** tornam-se fundamentais. As decisões municipais passam a basear-se em dados objetivos, o que exige aos proprietários uma atuação mais preventiva e profissional.
+
+Para proprietários e gestores, isto implica uma gestão mais rigorosa, suportada por tecnologia que permita intervir cedo e demonstrar que foram tomadas medidas responsáveis — ou que incidentes pontuais foram resolvidos rapidamente.
+
+## **Como o Roomonitor ajuda a proteger o seu registo de Alojamento Local**
+
+No novo contexto regulatório, soluções como o [**Roomonitor**](https://roomonitor.com/pt/) alinham-se perfeitamente com as exigências da lei: fornecer dados objetivos, demonstrar boa fé perante o condomínio e facilitar acordos com o município antes que exista risco de cancelamento.
+
+A** [monitorização contínua](https://roomonitor.com/pt/dispositivo/) **permite detetar rapidamente excedentes de ruído e agir de imediato — através de alertas automáticos, chamadas ou intervenções presenciais — evitando que pequenas situações se transformem em **perturbações graves e regulares**.
+
+Num processo de mediação municipal, os relatórios e registos fornecidos pelo Roomonitor constituem **prova objetiva e auditável** da gestão operacional. Estes elementos ajudam a demonstrar que não existem problemas reais de ruído ou que eventuais incidentes foram resolvidos de forma rápida e eficaz.
+
+Os alojamentos equipados com monitorização contínua estão melhor preparados para **evitar conflitos**, proteger o registo AL e manter uma convivência harmoniosa no condomínio.
+
+## **O impacto da reforma na gestão profissional do Alojamento Local**
+
+As alterações introduzidas pelo Decreto-Lei 76/2024 exigem que o setor adote ferramentas de gestão mais precisas e transparentes. A monitorização de ruído oferece uma camada adicional de segurança regulatória e operacional, permitindo a proprietários e gestores demonstrar conformidade num ambiente cada vez mais exigente.
+
+Além disso, o Roomonitor disponibiliza uma [**equipa de agentes noturnos**](https://roomonitor.com/pt/assistente-de-alarmes/#night) dedicada à monitorização contínua dos alertas de ruído, reduzindo custos operacionais e facilitando a externalização da vigilância noturna.`,
+    category: "Noticias del sector",
+    date: "2025-11-28",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2025/11/Dispositivo-Roomonitor-Alojamento-Portugal.jpg",
+    lang: "pt",
+  },
+  {
+    id: "36307",
+    slug: "del-parque-flats-roomonitor-turismo-responsavel",
+    title: "Del Parque Flats destaca a importância da Roomonitor para garantir um turismo responsável",
+    excerpt: "A empresa de Málaga Del Parque Flats lidera o caminho para um turismo responsável com a tecnologia Roomonitor: sonómetros, detetores de fumo e controlo operacional profissional. Del Parque Flats, empresa sediada em Málaga e reconhecida pela HomeToGo ",
+    content: `### A empresa de Málaga Del Parque Flats lidera o caminho para um turismo responsável com a tecnologia Roomonitor: sonómetros, detetores de fumo e controlo operacional profissional.
+
+**[Del Parque Flats](https://delparqueflats.com/)**, empresa sediada em Málaga e reconhecida pela HomeToGo como um dos melhores parceiros do mundo, tornou-se uma verdadeira **referência em turismo responsável** na Andaluzia graças ao seu compromisso firme com a tecnologia e a inovação.
+
+Como destacou o portal [**Suite Información**](https://www.suiteinformacion.es/sociedad/del-parque-flats-exige-la-ultima-tecnologia-en-los-pisos-turisticos-para-evitar-molestias-vecinales-y-garantizar-un-turismo-responsable/), a empresa **exige a instalação de sistemas avançados de monitorização de ruído e segurança em todos os alojamentos que gere** e **utiliza os dispositivos Roomonitor** como parte central da sua operação.
+
+## Tecnologia Roomonitor para uma convivência tranquila
+
+Os **[dispositivos Roomonitor](https://roomonitor.com/pt/dispositivo/)**, visíveis nas imagens que acompanham a notícia, permitem **detetar e prevenir em tempo real situações de risco ou níveis excessivos de ruído**. Também **medem a qualidade do ar e detetam partículas de tabaco**, ajudando a identificar festas ou ocupações acima do permitido.
+
+Esta tecnologia permite que a Del Parque Flats **aja de forma preventiva**, garantindo a tranquilidade dos vizinhos e o cumprimento da legislação local.
+
+*“Queremos reforçar as medidas de controlo e garantir uma boa convivência. Todos os apartamentos que gerimos estão equipados com dispositivos e aplicações que nos ajudam a prevenir incidentes e a melhorar a experiência dos hóspedes”*, explica Fermín Criado, diretor-geral da Del Parque Flats.
+
+### Uma referência na gestão profissional de alojamento local na Andaluzia
+
+Além de integrar a Roomonitor em todos os seus imóveis, a Del Parque Flats conta com **porteiros noturnos** e mantém uma **política rigorosa de legalidade e transparência**, gerindo apenas alojamentos devidamente registados.
+
+Esta abordagem profissional e abrangente levou a empresa a integrar a **AVVA PRO, a FEVITUR e a European Holiday Home Association**, consolidando a sua posição como uma das gestoras mais responsáveis do setor.
+
+### Inovação que define o futuro
+
+O caso da Del Parque Flats mostra que **a inovação tecnológica e a convivência comunitária podem andar de mãos dadas**.
+
+Num contexto em que a regulamentação e a perceção pública do alojamento local são cada vez mais exigentes, **soluções como a Roomonitor permitem aos gestores antecipar problemas e oferecer tranquilidade tanto aos proprietários como aos vizinhos**.
+
+### Rumo a um turismo mais responsável
+
+Cada vez mais empresas profissionais do setor estão a adotar **dispositivos Roomonitor e serviços operacionais 24h/7** para garantir a boa convivência, reduzir incidentes e proteger a reputação dos seus alojamentos.
+
+A Del Parque Flats é um exemplo claro de como **a tecnologia pode ser a melhor aliada de um turismo sustentável e de qualidade**.
+
+**Gostaria de gerir os seus alojamentos com a mesma tranquilidade da Del Parque Flats?** Descubra como a Roomonitor o ajuda a garantir um turismo responsável com tecnologia inteligente e suporte operacional 24h/7. 👉 [**Conheça as nossas soluções**](https://roomonitor.com)`,
+    category: "Noticias del sector",
+    date: "2025-10-23",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/10/del-parque-flats-RM.jpg",
+    lang: "pt",
+  },
+  {
+    id: "35883",
+    slug: "cantabria-sensores-ruido-alojamentos-turisticos",
+    title: "Cantábria exige sensores de ruído em alojamentos turísticos: novo regulamento já em vigor",
+    excerpt: "O Governo da Cantábria aprovou o Decreto 50/2025, uma nova regulamentação essencial que regula os alojamentos de uso turístico (VUT) com o objectivo de estruturar o sector, reforçar a segurança jurídica e melhorar a convivência nos bairros residencia",
+    content: `O Governo da Cantábria aprovou o [**Decreto 50/2025**](https://roomonitor.com/wp-content/uploads/2023/09/BOE-Cantabria-ruido.pdf), uma nova regulamentação essencial que **regula os alojamentos de uso turístico (VUT)** com o objectivo de estruturar o sector, reforçar a segurança jurídica e melhorar a convivência nos bairros residenciais.
+
+Uma das principais novidades do decreto é a **obrigatoriedade de instalar sistemas de monitorização de ruído** em todos os alojamentos turísticos oficialmente registados na região.
+
+Na Roomonitor, oferecemos o primeiro [**dispositivo de monitorização de ruído**](https://roomonitor.com/pt/dispositivo/) do mercado, uma tecnologia utilizada por milhares de propriedades não só em Espanha, mas também em vários países da Europa e do mundo.
+
+### **Porquê esta medida?**
+
+Segundo o Governo da Cantábria, o novo decreto responde à necessidade de:
+
+- Pôr fim à "alegalidade" de muitos alojamentos turísticos.
+
+- Fornecer **clareza legal** a proprietários, gestores e municípios.
+
+- **Garantir o direito ao descanso** dos vizinhos e evitar a degradação dos espaços residenciais.
+
+Com esta medida, **a Cantábria alinha-se com uma tendência crescente em toda a Europa**, onde o arrendamento de curta duração deve ser compatível com a vida urbana e o respeito pela comunidade local.
+
+### **A quem se aplica e o que implica?**
+
+A obrigatoriedade aplica-se a:
+
+- Todos os **alojamentos turísticos registados na Cantábria**.
+
+- Novos VUTs: deverão ter o sistema instalado **antes de iniciar actividade**.
+
+Além disso, o decreto introduz novas exigências como a **diferenciação entre actividade turística profissional e ocasional**, e uma **classificação mais precisa** dos alojamentos.
+
+### **Que tipo de tecnologia é exigida?**
+
+Embora a norma não mencione marcas específicas, os dispositivos devem ser capazes de **medir e registar os níveis de ruído**, prevenindo comportamentos perturbadores ou usos indevidos dos imóveis.
+
+Estes sistemas permitem **detectar eventos em tempo real** e actuar antes que ocorram reclamações ou sanções.
+
+### **Sistema de monitorização Roomonitor**
+
+Na Roomonitor, temos acompanhado gestores e proprietários em cidades com alta pressão regulatória como **Barcelona, Paris ou Lisboa**.
+
+Com os nossos dispositivos, é possível:
+
+- **Detectar** ruídos excessivos, festas ou sobreocupações em tempo real.
+
+- Monitorizar também fumo de tabaco, qualidade do ar, temperatura e humidade.
+
+- **Actuar preventivamente** (de forma automática ou com apoio do nosso [**Centro de Controlo Remoto**](https://roomonitor.com/pt/centro-de-controle/)).
+
+- **Cumprir com as novas exigências legais** sem interromper a operação.
+
+- **Documentar incidentes** com rastreabilidade, relatórios e alertas.
+
+Tudo isto sem afectar a experiência do hóspede, de forma **discreta e automatizada**.
+
+### **Tem propriedades na Cantábria?**
+
+O novo regulamento já está em vigor. Se gere imóveis em cidades como **Santander, Suances, Comillas, Castro Urdiales, Noja** ou outras, **este é o momento ideal para se preparar**.
+
+👉 [**Fale connosco**](https://roomonitor.com/pt/agendar-uma-demonstracao/) e ajudamo-lo a implementar uma solução rápida, legal e eficaz.`,
+    category: "Noticias del sector",
+    date: "2025-08-01",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/08/Sistema-monitorizacion-ruido-scaled.jpeg",
+    lang: "pt",
+  },
+  {
+    id: "30464",
+    slug: "nova-regulamentacao-registro-hospedes-2-dezembro",
+    title: "Tudo o que você precisa saber sobre a nova regulamentação de registro de hóspedes que entra em vigor no dia 2 de dezembro",
+    excerpt: "O próximo dia 2 de dezembro marca uma mudança importante para os gestores de propriedades na Espanha, com a entrada em vigor do RD 933/2021. Esta nova regulamentação estabelece obrigações para o registro e a identificação de hóspedes em alugueis de c",
+    content: `O próximo dia **2 de dezembro** marca uma mudança importante para os **gestores de propriedades** na Espanha, com a entrada em vigor do **RD 933/2021**. Esta nova regulamentação estabelece obrigações para o registro e a identificação de hóspedes em **alugueis de curta duração**, reforçando a segurança e o cumprimento das leis no setor.
+## O que é o RD 933/2021 e por que ele é tão importante?
+O **RD 933/2021** tem como objetivo padronizar o processo de registro de hóspedes, abrangendo tanto a coleta quanto a comunicação dos dados das pessoas que se hospedam em **propriedades turísticas**. A regulamentação visa melhorar a colaboração entre os gestores de propriedades e as autoridades locais, garantindo maior controle sobre os alojamentos.
+
+As principais obrigações introduzidas por essa regulamentação incluem:
+
+ 	- Registrar os dados de identificação de cada hóspede no momento do check-in.
+ 	- Enviar essas informações às autoridades locais (Polícia ou Guardia Civil), conforme aplicável.
+ 	- Manter um registro por um período estipulado para possíveis inspeções.
+
+## Impacto para os gestores de alugueis de curta duração
+Para os **gestores de propriedades**, o RD 933/2021 traz um aumento nas tarefas administrativas. Além de gerenciar reservas e oferecer uma experiência de qualidade aos hóspedes, será necessário implementar sistemas para atender às novas obrigações de registro.
+
+Plataformas como [**Airbnb**](https://www.airbnb.pt/help/article/3376) já desenvolveram ferramentas específicas para ajudar os anfitriões a coletar e enviar os dados dos hóspedes, facilitando o cumprimento das normas. Essas soluções são especialmente úteis para automatizar o processo e evitar erros.
+## Como se adaptar à nova regulamentação?
+Veja os passos essenciais que os gestores de propriedades devem seguir para garantir a conformidade com a nova regulamentação:
+
+ 	- **Atualize o processo de check-in:** Adote sistemas que permitam registrar os dados dos hóspedes de maneira rápida e eficiente.
+ 	- **Invista em tecnologia:** Utilize ferramentas oferecidas pelo Airbnb ou outras plataformas de gestão para automatizar o registro e o envio de informações.
+ 	- **Informe-se sobre a regulamentação:** Entender os detalhes do RD 933/2021 e suas implicações é fundamental para evitar sanções.
+ 	- **Garanta a segurança dos dados:** Certifique-se de que os registros estejam em conformidade com as normas de proteção de dados.
+
+## O que acontece se você não cumprir o RD 933/2021?
+Não cumprir a regulamentação pode resultar em sanções financeiras e legais. Por isso, é essencial estar preparado antes da data de entrada em vigor. Na **Roomonitor**, recomendamos implementar ferramentas que tornem a adaptação simples e eficaz.
+
+O RD 933/2021 representa uma mudança significativa para o setor de **alugueis de curta duração**. Embora essas novas exigências possam parecer desafiadoras, plataformas como o Airbnb e outras soluções de gestão podem simplificar o processo.
+
+Na **Roomonitor**, somos especialistas em oferecer ferramentas inovadoras que não apenas melhoram a experiência dos hóspedes, mas também ajudam os gestores a manter o controle e a cumprir todas as regulamentações legais. [Visite nosso site](https://roomonitor.com/pt/) para saber mais sobre como podemos ajudar você a se adaptar a essas mudanças.`,
+    category: "Noticias del sector",
+    date: "2024-11-29",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/pexels-wildlittlethingsphoto-2017802-scaled.jpg",
+    lang: "pt",
+  },
+  {
+    id: "30103",
+    slug: "roomonitor-prevenir-alta-ocupacao-sevilha-madrid-dia-de-todos-os-santos",
+    title: "Roomonitor: seu aliado chave na gestão de alta ocupação em Sevilha e Madri durante o Dia de Todos os Santos",
+    excerpt: "O Dia de Todos os Santos é uma data chave no calendário turístico espanhol, e este ano não é exceção. Segundo dados da Ebooking, coletados pela Forbes, espera-se uma ocupação de 85% em toda a Espanha, com picos de alta demanda em destinos urbanos com",
+    content: `O Dia de Todos os Santos é uma data chave no calendário turístico espanhol, e este ano não é exceção. Segundo dados da **Ebooking**, [coletados pela Forbes](https://forbes.es/turismo/520204/ebooking-registra-un-85-de-ocupacion-en-espana-para-el-puente-de-todos-los-santos-con-alzas-de-hasta-15-en-el-precio/), espera-se uma ocupação de **85% em toda a Espanha**, com picos de alta demanda em destinos urbanos como **Sevilha e Madri**, duas das cidades mais populares para essas datas. No pleno outono, com as ruas decoradas para o **Halloween**, muitos turistas vêm desfrutar das celebrações e eventos especiais que essas cidades oferecem. No entanto, esse aumento de visitantes também traz o desafio de gerenciar o impacto que o turismo tem nas comunidades locais, especialmente no que diz respeito ao ruído e aos incômodos que os turistas podem causar nos apartamentos de uso turístico.
+
+Na **Roomonitor**, estamos cientes desses desafios e oferecemos soluções tecnológicas que ajudam os gestores de propriedades e os proprietários de imóveis turísticos a manter um equilíbrio entre a satisfação dos hóspedes e a convivência pacífica com os vizinhos. Nosso** sistema de monitoramento de ruído em tempo real** é uma ferramenta chave para prevenir os problemas derivados da alta ocupação em períodos festivos, particularmente em datas tão animadas como o Halloween.
+## Por que o monitoramento de ruído é crucial durante o Dia de Todos os Santos?
+O Dia de Todos os Santos, com seu alto volume de turistas, especialmente em cidades como Sevilha e Madri, tende a ser um período em que aumentam as reclamações sobre ruídos excessivos devido a festas ou reuniões em apartamentos turísticos. Para as comunidades de vizinhos, isso pode gerar tensões e desconforto, afetando também a reputação das propriedades turísticas.
+
+A tecnologia da [**Roomonitor**](https://roomonitor.com/es/roomonitor/) permite que os proprietários e gestores:
+
+ 	- **Monitorizem o ruído em tempo real**, recebendo alertas se os níveis permitidos forem superados, o que é especialmente útil para controlar os excessos em noites como o Halloween.
+ 	- **Atuem imediatamente**, enviando notificações automáticas aos hóspedes para que reduzam o ruído.
+ 	- **Mantêm um ambiente de respeito** tanto para os turistas quanto para os vizinhos, garantindo a convivência.
+
+## Vantagens de prevenir problemas antes que ocorram
+Graças ao [**monitoramento de ruído**](https://roomonitor.com/es/property-management/que-es-la-monitorizacion-de-ruido-y-por-que-la-necesito/), os proprietários e gestores podem tomar medidas proativas para evitar conflitos com os vizinhos, sem necessidade de estar fisicamente presentes. Isso é especialmente importante em momentos de alta demanda turística, como o Dia de Todos os Santos, quando as celebrações podem sair do controle.
+
+Implementar essas soluções ajuda a proteger a reputação do alojamento e garantir que os hóspedes desfrutem de sua estadia sem perturbar a tranquilidade das comunidades vizinhas.
+## Roomonitor: uma solução para um turismo responsável e sustentável
+Com destinos como Sevilha e Madrid entre os mais populares para este feriado, e em um contexto de celebração de Halloween, é mais importante do que nunca que os gestores de propriedades tenham ferramentas que lhes permitam lidar eficazmente com o ruído e os possíveis incômodos que podem surgir durante esse tipo de festividade.
+
+Na **Roomonitor**, estamos comprometidos com a criação de um turismo mais **responsável e sustentável**, onde os hóspedes possam desfrutar sem afetar a qualidade de vida dos residentes locais. Nossa tecnologia não apenas melhora a experiência turística, mas também contribui para **preservar a convivência entre vizinhos** em momentos de alta ocupação.
+
+Com uma ocupação esperada de 85% em destinos-chave como Sevilha e Madri durante o Dia de Todos os Santos, e com as celebrações de Halloween no ar, **a gestão do impacto turístico é um desafio**. Na **Roomonitor**, oferecemos soluções tecnológicas que permitem aos proprietários e gestores de apartamentos turísticos prevenir problemas de ruído e garantir uma estadia tranquila e respeitosa para todos.
+
+**Prepare-se para o Dia de Todos os Santos e Halloween** com Roomonitor e assegure a convivência pacífica entre turistas e vizinhos em seus alojamentos.`,
+    category: "Noticias del sector",
+    date: "2024-10-25",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/pexels-cottonbro-5435551-scaled.jpg",
+    lang: "pt",
+  },
+  {
+    id: "30096",
+    slug: "o-que-e-sustentabilidade-social",
+    title: "O que é sustentabilidade social? O compromisso da Roomonitor com a convivência entre hóspedes e vizinhos",
+    excerpt: "A sustentabilidade social é um conceito fundamental que foca na convivência harmoniosa e equitativa dentro das comunidades, promovendo o bem-estar de todos os envolvidos. No contexto do turismo e da gestão de propriedades, refere-se a como as ativida",
+    content: `A **sustentabilidade social** é um conceito fundamental que foca na **convivência harmoniosa** e **equitativa** dentro das comunidades, promovendo o bem-estar de todos os envolvidos. No contexto do turismo e da gestão de propriedades, refere-se a como as atividades turísticas podem ser desenvolvidas sem prejudicar a qualidade de vida dos residentes locais, respeitando os direitos dos vizinhos e garantindo uma experiência positiva para os visitantes.
+
+Na **Roomonitor**, entendemos a sustentabilidade social como um **pilar essencial** para garantir a convivência entre os hóspedes das casas de uso turístico e os residentes das comunidades. Nosso compromisso com esta causa não é apenas parte de nossa missão, mas também se reflete nos **produtos e serviços** que oferecemos, projetados para prevenir conflitos e promover uma convivência mais equilibrada e respeitosa.
+### **Sustentabilidade social: A chave para a convivência entre hóspedes e vizinhos**
+Um dos maiores desafios na gestão de casas de uso turístico é manter a convivência entre os turistas e os vizinhos locais, particularmente em áreas urbanas com alta densidade de propriedades. As **reclamações relacionadas ao ruído**, especialmente em zonas residenciais, são uma das principais fontes de conflito.
+
+Para **Roomonitor**, a sustentabilidade social não é apenas uma tendência, mas um valor enraizado que orienta nosso trabalho diário. Queremos que os gestores de propriedades e os anfitriões ofereçam um **serviço de alta qualidade** aos seus hóspedes, sem esquecer que o **bem-estar dos vizinhos** também é uma prioridade. Com essa visão, desenvolvemos **tecnologias específicas** para facilitar essa convivência, minimizando ao máximo os incômodos causados por ruídos excessivos e garantindo que as experiências dos turistas sejam positivas, sem afetar a paz e tranquilidade dos residentes.
+### **Como a Roomonitor promove a sustentabilidade social**
+Nosso principal produto é a **monitorização de ruído em tempo real**, uma ferramenta indispensável para gestores de propriedades e anfitriões. Através desta tecnologia, os proprietários podem receber **alertas** quando os níveis de ruído ultrapassam certos limites, permitindo que tomem medidas imediatas antes que os vizinhos sejam afetados. Esta solução não só melhora a convivência entre vizinhos, como também **profissionaliza** a gestão de propriedades turísticas, permitindo uma **resposta rápida e proativa**.
+
+Na **Roomonitor**, trabalhamos com inúmeros casos de sucesso, nos quais a implementação de nossa solução de monitoramento de ruído reduziu significativamente as reclamações dos vizinhos. Desde grandes **cidades turísticas** até pequenas localidades, nosso sistema tem demonstrado ser eficaz para **prevenir conflitos** e garantir que as propriedades possam operar sem gerar tensões na comunidade.
+### ****
+### **weRespect: Um selo de qualidade para o turismo sustentável**
+Como parte de nosso compromisso com a sustentabilidade social, na **Roomonitor**, também promovemos a criação do **selo weRespect**, uma **certificação** que destaca empresas e gestores de propriedades que praticam uma gestão responsável, respeitando os vizinhos e garantindo um **turismo sustentável**.
+
+Este selo reconhece aqueles que, como a **Roomonitor**, se comprometem a fortalecer a convivência social por meio da adoção de **tecnologias** e **práticas** que minimizam o impacto negativo do turismo nas comunidades locais. As empresas que obtêm o selo weRespect demonstram que estão dispostas a ir além, oferecendo experiências turísticas de **alta qualidade**, ao mesmo tempo em que contribuem para o bem-estar social e econômico dos residentes.
+### **Roomonitor: Profissionalizando o setor e facilitando a convivência**
+Na **Roomonitor**, não fornecemos apenas **tecnologia**, mas também trabalhamos para **profissionalizar** o setor turístico. A gestão de propriedades turísticas evoluiu rapidamente, e é crucial que os gestores adotem soluções modernas e responsáveis para garantir que a indústria cresça de maneira sustentável. Através de nossas ferramentas, estamos ajudando os gestores de propriedades a **melhorar seu serviço**, não apenas para os hóspedes, mas também para as comunidades onde atuam.
+A **monitorização de ruído**, combinada com nosso compromisso com a sustentabilidade social e a convivência, faz com que a **Roomonitor** seja um ator chave na profissionalização deste setor. Cada vez mais gestores confiam em nossas soluções para garantir que estão oferecendo um serviço ótimo, **reduzindo os incômodos aos vizinhos** e promovendo um **turismo mais responsável e sustentável**.
+
+Em suma, a sustentabilidade social é um desafio que não podemos ignorar em um mundo onde o turismo continua crescendo. Na **Roomonitor**, estamos comprometidos em ser parte da solução, fornecendo produtos e serviços que promovem uma **convivência pacífica** entre hóspedes e vizinhos. Através de nossa **tecnologia de monitorização de ruído em tempo real** e do selo **weRespect**, estamos contribuindo ativamente para a criação de um modelo turístico mais sustentável e respeitoso com as comunidades locais.
+
+Promover uma **convivência harmônica** é mais do que um objetivo; é um compromisso que na **Roomonitor** levamos a sério, e continuaremos trabalhando para que nossos produtos não apenas melhorem a experiência dos turistas, mas também o bem-estar dos residentes.`,
+    category: "Noticias del sector",
+    date: "2024-10-24",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/pexels-fotios-photos-1471991-scaled.jpg",
+    lang: "pt",
+  },];
 
 export const getBlogPostsByLang = (lang: string): BlogPost[] => {
   return blogPosts.filter(post => post.lang === lang);
