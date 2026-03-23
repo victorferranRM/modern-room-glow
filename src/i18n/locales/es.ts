@@ -121,7 +121,7 @@ const es = {
       ],
     },
     partners: {
-      trustUs: "Clientes que confían en nosotros",
+      trustUs: "Cliente que confían en nosotros",
       stats: [
         { value: "45.000+", label: "Apartamentos monitorizados" },
         { value: "97%", label: "Tasa de satisfacción (CSAT)" },
