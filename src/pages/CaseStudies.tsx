@@ -29,7 +29,7 @@ export default function CaseStudies() {
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               {t('caseStudies.badge')}
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight text-balance">
               {t('caseStudies.heroTitle1')}{" "}
               <span className="text-primary">{t('caseStudies.heroTitle2')}</span>
             </h1>
@@ -167,11 +167,11 @@ export default function CaseStudies() {
                       <p className="text-sm text-muted-foreground font-light mb-4 line-clamp-2">
                         {study.headline}
                       </p>
-                      <div className="flex justify-between border-t border-border pt-4">
+                      <div className="flex justify-between gap-2 border-t border-border pt-4">
                         {study.stats.slice(0, 3).map((stat, i) => (
-                          <div key={i} className="text-center">
-                            <div className="text-lg font-bold text-primary">{stat.value}</div>
-                            <div className="text-xs text-muted-foreground">{stat.label}</div>
+                          <div key={i} className="text-center min-w-0">
+                            <div className="text-base sm:text-lg font-bold text-primary truncate">{stat.value}</div>
+                            <div className="text-[10px] sm:text-xs text-muted-foreground truncate">{stat.label}</div>
                           </div>
                         ))}
                       </div>
@@ -187,7 +187,7 @@ export default function CaseStudies() {
       {/* Stats Bar */}
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
                 <div className="text-center">
@@ -210,7 +210,7 @@ export default function CaseStudies() {
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-primary-foreground mb-6 text-balance">
               {t('caseStudies.readyTitle')}
             </h2>
             <p className="text-lg sm:text-xl text-primary-foreground/80 font-light max-w-2xl mx-auto mb-10">

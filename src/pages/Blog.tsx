@@ -50,7 +50,7 @@ const Blog = () => {
       <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" className="text-center mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 text-balance leading-tight">
               {t('blog.heroTitle')}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">

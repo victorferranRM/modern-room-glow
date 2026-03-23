@@ -33,9 +33,9 @@ export default function PropertyOwners() {
                 <span className="text-primary block">{t('solutionPropertyOwners.heroTitle2')}</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">{t('solutionPropertyOwners.heroDescription')}</p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild><LocalizedLink to="/checkout?plan=basic&properties=1">{t('solutionPropertyOwners.getDevice')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
-                <Button size="lg" variant="outline" asChild><LocalizedLink to="/monitoring">{t('solutionPropertyOwners.learnMore')}</LocalizedLink></Button>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button size="lg" className="w-full sm:w-auto" asChild><LocalizedLink to="/checkout?plan=basic&properties=1">{t('solutionPropertyOwners.getDevice')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild><LocalizedLink to="/monitoring">{t('solutionPropertyOwners.learnMore')}</LocalizedLink></Button>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
@@ -152,7 +152,7 @@ export default function PropertyOwners() {
                     {popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">{t('solutionPropertyOwners.recommendedLabel')}</div>}
                     <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
-                    <div className="mb-4"><span className="text-3xl font-bold">€{plan.price}</span><span className="text-muted-foreground text-sm">{plan.period}</span></div>
+                    <div className="mb-4"><span className="text-2xl sm:text-3xl font-bold">€{plan.price}</span><span className="text-muted-foreground text-sm">{plan.period}</span></div>
                     <p className="text-xs text-muted-foreground mb-6">{t('solutionVacationRentals.device')}: {plan.devicePrice === 'Incluido' || plan.devicePrice === 'Included' ? plan.devicePrice : `€${plan.devicePrice}`}</p>
                     <ul className="space-y-3 mb-8">
                       {plan.features.map((feature, idx) => (
@@ -177,9 +177,9 @@ export default function PropertyOwners() {
             <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 text-balance">{t('solutionPropertyOwners.ctaTitle')}</h2>
             <p className="text-base lg:text-lg text-muted-foreground mb-8">{t('solutionPropertyOwners.ctaDescription')}</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild><LocalizedLink to="/checkout?plan=basic&properties=1">{t('solutionPropertyOwners.getDevice')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
-              <Button size="lg" variant="outline" asChild><LocalizedLink to="/contact">{t('solutionPropertyOwners.askQuestion')}</LocalizedLink></Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+              <Button size="lg" className="w-full sm:w-auto" asChild><LocalizedLink to="/checkout?plan=basic&properties=1">{t('solutionPropertyOwners.getDevice')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild><LocalizedLink to="/contact">{t('solutionPropertyOwners.askQuestion')}</LocalizedLink></Button>
             </div>
           </AnimatedSection>
         </div>
