@@ -536,8 +536,8 @@ const fr = {
     backHome: "Retour à l'accueil",
   },
   blog: {
-    heroTitle: "Lectures pour les grands opérateurs de propriétés",
-    heroSubtitle: "Tout ce que nous savons sur l'anticipation des problèmes, des clients et du marché.",
+    heroTitle: "Ressources pour les gestionnaires qui veulent garder une longueur d'avance",
+    heroSubtitle: "Réglementation, gestion opérationnelle et bonnes pratiques pour protéger vos propriétés et améliorer l'expérience de vos hôtes.",
     featured: "À la une",
     readTime: "{min} min de lecture",
     readTimeShort: "{min} min",
