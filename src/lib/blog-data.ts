@@ -4539,7 +4539,7 @@ At Roomonitor, we’re closely monitoring these regulatory changes. We believe i
   {
     id: "35771",
     slug: "interview-jordan-setti-checkmyguest-security-vacation-rentals",
-    title: "Interview with Jordan Setti, COO of CheckMyGuest: \\"Knowing that from 10 PM to 7 AM someone takes over is priceless\\"",
+    title: "Interview with Jordan Setti, COO of CheckMyGuest: \"Knowing that from 10 PM to 7 AM someone takes over is priceless\"",
     excerpt: "Hello everyone. Today I have the real pleasure of being welcomed at the offices of Checkmyguest by Jordan Setti. He is the COO and one of the key players in the short- and mid-term rental market in France. We’re here to talk about the evolution of th",
     content: `Hello everyone. Today I have the real pleasure of being welcomed at the offices of Checkmyguest by Jordan Setti.
 
