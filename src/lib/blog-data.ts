@@ -7338,3 +7338,16 @@ export const searchPosts = (query: string, lang: string = 'es'): BlogPost[] => {
     post.category.toLowerCase().includes(lowerQuery)
   );
 };
+
+const categoryTranslations: Record<string, Record<string, string>> = {
+  'Roomonitor': { es: 'Roomonitor', en: 'Roomonitor', fr: 'Roomonitor', pt: 'Roomonitor' },
+  'Noticias del sector': { es: 'Noticias del sector', en: 'Industry news', fr: 'Actualités', pt: 'Notícias do setor' },
+  'Gestión de propiedades': { es: 'Gestión de propiedades', en: 'Property management', fr: 'Gestion de propriétés', pt: 'Gestão de propriedades' },
+  'Eventos': { es: 'Eventos', en: 'Events', fr: 'Événements', pt: 'Eventos' },
+  'Alquiler vacacional': { es: 'Alquiler vacacional', en: 'Vacation rental', fr: 'Location saisonnière', pt: 'Aluguel de temporada' },
+  'Hoteles': { es: 'Hoteles', en: 'Hotels', fr: 'Hôtels', pt: 'Hotéis' },
+};
+
+export const translateCategory = (category: string, lang: string): string => {
+  return categoryTranslations[category]?.[lang] ?? category;
+};

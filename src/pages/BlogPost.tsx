@@ -205,7 +205,7 @@ const BlogPost = () => {
                     </LocalizedLink>
 
                     <span className="inline-block border border-primary/50 text-primary text-xs px-3 py-1 rounded-full mb-3 font-medium">
-                      {relatedPost.category}
+                      {translateCategory(relatedPost.category, lang)}
                     </span>
 
                     <h3 className="text-lg font-bold text-foreground mb-2 leading-tight tracking-tight group-hover:text-primary transition-colors line-clamp-2">

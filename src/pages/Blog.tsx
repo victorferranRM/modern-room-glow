@@ -104,7 +104,7 @@ const Blog = () => {
                   </LocalizedLink>
                   <div className="p-8 md:p-10 flex flex-col justify-center">
                     <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-4 w-fit font-medium">
-                      {featuredPost.category}
+                      {translateCategory(featuredPost.category, lang)}
                     </span>
                     <div className="flex items-center gap-6 text-muted-foreground text-sm mb-4">
                       <span className="flex items-center gap-2 font-medium">
