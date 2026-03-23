@@ -298,6 +298,8 @@ export function ManagerSection() {
                   src={managerDevices}
                   alt={t("home.manager.devicesAlt")}
                   className="w-full max-w-md lg:max-w-none lg:w-[110%] h-auto object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <Button size="lg" className="gap-2 group" asChild>
                   <LocalizedLink to="/contact">

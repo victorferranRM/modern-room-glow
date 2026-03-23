@@ -143,7 +143,7 @@ export const WhyRoomonitorSection = () => {
               </div>
               {activeStudy.logo ? (
                 <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
-                  <img src={activeStudy.logo} alt={activeStudy.company} className="h-6 w-auto object-contain" />
+                  <img src={activeStudy.logo} alt={activeStudy.company} className="h-6 w-auto object-contain" loading="lazy" decoding="async" />
                 </div>
               ) : (
                 <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">

@@ -95,6 +95,8 @@ export function HeroSection() {
                     src={card.image}
                     alt={card.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fetchPriority="high"
+                    decoding="async"
                   />
                 </div>
                 <h3 className="text-foreground font-semibold text-lg mb-2">{card.title}</h3>
