@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getPostBySlug, blogPosts } from "@/lib/blog-data";
+import { getPostBySlug, blogPosts, translateCategory } from "@/lib/blog-data";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
@@ -62,7 +62,7 @@ const BlogPost = () => {
             </LocalizedLink>
 
             <span className="block w-fit border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-6 font-medium">
-              {post.category}
+              {translateCategory(post.category, lang)}
             </span>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight tracking-tight">
@@ -205,7 +205,7 @@ const BlogPost = () => {
                     </LocalizedLink>
 
                     <span className="inline-block border border-primary/50 text-primary text-xs px-3 py-1 rounded-full mb-3 font-medium">
-                      {relatedPost.category}
+                      {translateCategory(relatedPost.category, lang)}
                     </span>
 
                     <h3 className="text-lg font-bold text-foreground mb-2 leading-tight tracking-tight group-hover:text-primary transition-colors line-clamp-2">
