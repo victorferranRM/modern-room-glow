@@ -260,11 +260,11 @@ export default function About() {
 
             {/* Progress Bar */}
             <div className="max-w-4xl mx-auto mb-8">
-              <div className="flex gap-2">
+              <div className="flex gap-1.5 sm:gap-2">
                 {timeline.map((_, index) => <button key={index} onClick={() => {
                 setActiveTimeline(index);
                 setIsAutoPlaying(false);
-              }} className="flex-1 h-1.5 rounded-full overflow-hidden bg-muted cursor-pointer">
+              }} className="flex-1 h-2 sm:h-1.5 rounded-full overflow-hidden bg-muted cursor-pointer min-w-0">
                     <div className={`h-full bg-primary transition-all duration-300 ${index < activeTimeline ? "w-full" : index === activeTimeline ? isAutoPlaying ? "animate-progress" : "w-full" : "w-0"}`} style={index === activeTimeline && isAutoPlaying ? {
                   animation: "progress 4s linear"
                 } : {}} />
@@ -376,7 +376,7 @@ export default function About() {
                 <p className="text-background/70 text-lg mb-6 leading-relaxed">{t('about.globalPresence.description')}</p>
                 <p className="text-background/70 mb-8 leading-relaxed">{t('about.globalPresence.expandDescription')}</p>
                 
-                <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
                   {coverageCities.map(city => <div key={city.name} className="flex items-center gap-2">
                       <MapPin className={`w-4 h-4 flex-shrink-0 ${city.isHQ ? "text-primary" : "text-background/50"}`} />
                       <span className={`text-sm ${city.isHQ ? "font-semibold text-primary" : "text-background/70"}`}>
