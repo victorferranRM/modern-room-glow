@@ -5440,6 +5440,1447 @@ Some people have raised privacy concerns, but they were quickly taken back by le
     image: "https://roomonitor.com/wp-content/uploads/2020/12/olia-danilevich-5911467.jpg",
     lang: "en",
   },
+  {
+    id: "36852",
+    slug: "10-ans-aux-cotes-du-secteur-location-touristique",
+    title: "Roomonitor : 10 ans aux côtés du secteur de la location touristique",
+    excerpt: "Il y a dix ans, le secteur de la location touristique était très différent de ce qu’il est aujourd’hui. La professionnalisation en était encore à ses débuts, la technologie appliquée aux opérations était limitée et de nombreux problèmes étaient gérés",
+    content: `Il y a dix ans, le secteur de la location touristique était très différent de ce qu’il est aujourd’hui. La professionnalisation en était encore à ses débuts, la technologie appliquée aux opérations était limitée et de nombreux problèmes étaient gérés de manière réactive.
+
+C’est dans ce contexte que Roomonitor est né. Avec un objectif très clair : **résoudre un problème réel qui affectait à la fois les propriétaires et les riverains : le bruit**. Nous avons été pionniers en lançant le premier dispositif au monde capable de surveiller le bruit dans les logements touristiques. Mais nous avons rapidement compris une chose essentielle : détecter ne suffisait pas. Il fallait accompagner.
+
+## De la technologie à l’accompagnement opérationnel
+
+Au cours de ces dix dernières années, le secteur a profondément évolué. Et nous avons évolué avec lui.
+
+Nous sommes passés d’un simple dispositif à la construction **d’une structure opérationnelle complète**, combinant technologie, automatisation, assistance à distance et équipes sur le terrain. Nous avons intégré des agents 24/7, la gestion des appels avec les voyageurs, des ouvertures à distance et en présentiel, des services de check-in, de conciergerie et de support terrain dans plusieurs villes européennes.
+
+Toujours guidés par une même idée : **être aux côtés du secteur quand il en a le plus besoin**.
+
+## Être présents aussi dans les moments difficiles
+
+S’il y a bien un événement qui a marqué cette décennie, c’est la pandémie. L’une des périodes les plus complexes jamais traversées par le tourisme, et une véritable mise à l’épreuve de la valeur de l’accompagnement opérationnel.
+
+Durant cette période, nous avons aidé les propriétaires à conserver le contrôle et la sécurité de leurs biens, et accompagné les gestionnaires dans la prévention de situations critiques, dans un contexte d’incertitude généralisée. C’est à ce moment-là que nous avons réaffirmé notre engagement : **nous ne sommes pas seulement un outil, nous sommes un partenaire opérationnel**.
+
+## 10 ans d’écoute, d’apprentissage et d’évolution
+
+Nous avons grandi aux côtés du secteur en restant à l’écoute de nos clients, en nous adaptant aux nouvelles réglementations, aux nouveaux modèles économiques et à l’évolution constante des attentes des voyageurs.
+
+Aujourd’hui, Roomonitor, c’est de la technologie, des données, des équipes et des processus. Mais surtout, c’est **dix ans d’expérience opérationnelle concrète sur le terrain**.
+
+Célébrer ces dix ans ne consiste pas seulement à regarder en arrière. C’est aussi renouveler notre engagement envers le secteur de la location touristique et continuer à développer des solutions qui apportent sérénité, efficacité et confiance.
+
+**Merci à tous les professionnels, gestionnaires et propriétaires qui ont fait partie de cette aventure, quel que soit le moment où ils nous ont rejoints.**
+
+Nous restons à vos côtés. Aujourd’hui, comme il y a dix ans.`,
+    category: "Noticias del sector",
+    date: "2025-12-16",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/12/RM-10-anos-clientes.png",
+    lang: "fr",
+  },
+  {
+    id: "36502",
+    slug: "loi-propriete-horizontale-location-touristique-espagne-2025",
+    title: "Ce que vous devez faire en 2025 pour louer légalement votre logement aux touristes en Espagne",
+    excerpt: "En Espagne, la location de courte durée est devenue une source de tensions entre voisins, un facteur de pression sur le logement résidentiel et un domaine en constante évolution réglementaire. Avec la récente réforme de la Loi de Propriété Horizontal",
+    content: `En Espagne, la location de courte durée est devenue une source de tensions entre voisins, un facteur de pression sur le logement résidentiel et un domaine en constante évolution réglementaire. Avec la récente réforme de la **Loi de Propriété Horizontale (Ley de Propiedad Horizontal)**, les propriétaires qui souhaitent proposer leur logement en location touristique au sein d’une communauté de copropriétaires doivent désormais respecter de nouvelles obligations. Roomonitor vous explique **les étapes indispensables** pour louer légalement votre logement en Espagne, éviter les sanctions et préserver une bonne relation avec votre communauté.
+
+## L’autorisation de la communauté est désormais obligatoire pour les locations touristiques en Espagne
+
+La réforme 2025 de la Loi de Propriété Horizontale en Espagne introduit plusieurs changements majeurs qui impactent directement les locations de courte durée dans les immeubles résidentiels. Les points essentiels sont les suivants :
+
+- Tout propriétaire souhaitant louer son logement à des touristes (location meublée à but lucratif et de manière temporaire) doit obtenir **l’autorisation explicite de la communauté de copropriétaires** avant de commencer l’activité.
+
+- La communauté peut, avec une majorité des **3/5** des propriétaires (et des quotas de participation), autoriser, limiter, conditionner ou interdire les locations touristiques dans l’immeuble.
+
+- Ces nouvelles obligations **ne s’appliquent pas rétroactivement** aux logements déjà exploités légalement en location touristique avant l’entrée en vigueur de la réforme.
+
+## Étapes à suivre pour louer légalement votre logement en Espagne
+
+Voici les étapes indispensables pour garantir votre conformité :
+
+#### 1. Vérifiez les statuts de la communauté et les décisions antérieures
+
+Commencez par vérifier si les statuts de l’immeuble interdisent explicitement la location touristique, ou si une décision adoptée lors d’une assemblée antérieure impose des restrictions. Si une interdiction valide existe, **vous ne pourrez pas louer en courte durée** sans une modification formelle de cette décision.
+
+#### 2. Obtenez l’autorisation formelle de la communauté
+
+S’il n’existe aucune interdiction, vous devrez présenter votre projet à la communauté et obtenir une approbation à la majorité des 3/5. Sans cette autorisation, l’activité sera considérée comme illégale selon la réforme.
+
+Le président de la communauté peut vous demander officiellement de cesser l’activité si vous ne disposez pas de cette approbation.
+
+#### 3. Respectez les règles touristiques régionales et municipales en Espagne
+
+La réforme nationale ne remplace pas les réglementations **autonomiques et municipales** en vigueur en Espagne. Selon la région, vous devrez peut-être obtenir un numéro d’enregistrement touristique, une licence spécifique, respecter des normes de sécurité, d’accessibilité ou des limitations de zones.
+
+#### 4. Respectez vos obligations fiscales et déclaratives
+
+La location touristique en Espagne est considérée comme une activité économique. Vous devez déclarer les revenus, et respecter les obligations déclaratives digitales exigées pour les exploitants de locations de courte durée.
+
+#### 5. Formalités supplémentaires et bonnes pratiques
+
+- Même avec l’autorisation, veillez à ce que la décision soit consignée dans le procès-verbal de l’assemblée et, si nécessaire, enregistrée au Registre foncier.
+
+- Les communautés peuvent appliquer jusqu’à **20 % de charges supplémentaires** aux logements exploités en location touristique.
+
+- Maintenez une communication claire avec les voisins : protocoles de check-in/check-out, gestion du nettoyage, contrôle d’accès, prévention du bruit, et [**monitoring sonore**](https://roomonitor.com/fr/pourquoi-equiper-votre-logement-dune-alarme-anti-bruit/) — domaine dans lequel **Roomonitor** est particulièrement efficace.
+
+## **Enregistrement obligatoire via la Ventanilla Única Digital pour publier votre annonce sur les OTAs**
+
+La **Ventanilla Única Digital (VUD)** — la plateforme nationale d’enregistrement des locations de courte durée en Espagne — est désormais pleinement opérationnelle. Depuis le **1er juillet 2025**, tous les logements destinés à la location touristique doivent disposer d’un **numéro d’enregistrement valide** obtenu via ce système afin de pouvoir être **publiés légalement sur Airbnb, Booking ou Vrbo**.
+
+La VUD centralise la vérification des obligations légales, mais **ne remplace pas** les demandes ou licences exigées par les régions ou les municipalités. Le propriétaire doit s’enregistrer via la VUD **et** respecter les règles touristiques de sa Communauté autonome.
+
+## Si votre logement était déjà loué en touristique avant la réforme
+
+Si votre logement en Espagne était exploité légalement en location touristique avant le 3 avril 2025, vous **n’avez pas besoin** d’obtenir une nouvelle approbation de la communauté : votre activité bénéficie d’un régime dérogatoire.
+
+Cependant, il est recommandé de vérifier les décisions de la communauté et de conserver tous les documents à jour.
+
+## Conseils pratiques pour réduire les risques et optimiser votre gestion
+
+- Avant de présenter votre projet, organisez une réunion avec la communauté afin d’exposer un plan clair : contrôle d’accès, protocoles de nettoyage, suivi des réservations, prévention du bruit, assurance et dispositifs de monitoring.
+
+- Obtenez le label [**weRespect**](https://werespect.net/) pour certifier des pratiques responsables et durables dans votre logement.
+
+- Conservez tous les documents : procès-verbaux, notifications, preuves d’accord et de conformité.
+
+- Informez-vous sur les règles locales : certaines villes espagnoles appliquent des limitations supplémentaires (licences spéciales, quotas, zones restreintes…).
+
+- Si la communauté adopte de nouvelles restrictions, consultez un spécialiste pour évaluer la possibilité de contestation.
+
+## **Ce que change réellement la réforme de la Loi de Propriété Horizontale en Espagne**
+
+La réforme représente un tournant majeur : l’absence d’interdiction ne suffit plus. Les locations touristiques dans les immeubles résidentiels nécessitent désormais une **approbation explicite préalable** de la communauté.
+
+Pour les propriétaires, la transparence, la conformité et une bonne gestion sont essentielles pour louer légalement, éviter les conflits et renforcer la confiance avec les voisins comme avec les plateformes.`,
+    category: "Gestión de propiedades",
+    date: "2025-11-21",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2025/11/ley-de-propiedad-horizontal-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "36441",
+    slug: "rapport-2025-location-saisonniere-france-paris-roomonitor-beyond",
+    title: "Rapport 2025 : Tendances du marché de la location saisonnière en France et à Paris — Occupation, tarifs et comportement des voyageurs",
+    excerpt: "Dans un environnement de plus en plus réglementé et concurrentiel, les gestionnaires de locations saisonnières doivent relever le défi de maintenir leur rentabilité sans compromettre leur efficacité opérationnelle. Dans ce contexte, la prise de décis",
+    content: `Dans un environnement de plus en plus réglementé et concurrentiel, les gestionnaires de locations saisonnières doivent relever le défi de maintenir leur rentabilité sans compromettre leur efficacité opérationnelle. Dans ce contexte, **la prise de décision basée sur les données est devenue un avantage compétitif essentiel**.
+
+Analyser le comportement réel du marché — l’évolution du taux d’occupation, des tarifs ou de la durée moyenne des séjours — permet d’anticiper la demande et d’ajuster la stratégie commerciale avec précision.
+
+Grâce à sa technologie de [tarification dynamique](https://www.beyondpricing.com/), **Beyond** s’est associé à **Roomonitor** pour élaborer un rapport qui offre une vision actualisée du secteur, en combinant des données réelles de performance avec les tendances de réservation et de comportement des voyageurs.
+
+L’objectif : aider les propriétaires et gestionnaires à **maximiser leurs revenus, optimiser leurs ressources et améliorer l’expérience des voyageurs** grâce à des décisions fondées sur les données.
+
+## **Un secteur en pleine évolution**
+
+Le marché français de la location saisonnière continue d’évoluer rapidement. La combinaison de **nouvelles réglementations locales**, de la **maturité du voyageur numérique** et de la **pression concurrentielle des grandes plateformes** redéfinit profondément les règles du jeu.
+
+C’est pourquoi des études comme celle-ci — élaborée par **Roomonitor et Beyond** — sont devenues des outils stratégiques indispensables pour les acteurs qui gèrent des biens à **Paris et dans les grandes villes françaises**, où les conditions de marché varient considérablement selon les saisons et les quartiers.
+
+## **Comment évolue le tarif moyen (ADR) à Paris et en France ?**
+
+**Paris** a connu une année de normalisation après l’effet des Jeux olympiques. L’offre a chuté de **–33 %** et la réglementation limite toujours la location à **120 jours par an**. Malgré cela, le taux d’occupation atteint **59 %**, soit une hausse de **+12 % par rapport à 2024**. Le tarif journalier moyen reste stable, avec des pics attendus de **+6 %** d’ici la fin d’année. Airbnb demeure le principal canal (49 % des réservations), avec une fenêtre de réservation qui s’allonge à **23 jours**.
+
+À l’échelle nationale, le marché affiche une **occupation moyenne de 48 %** (+4 % vs 2024), pour un ADR globalement stable (–1 %). La durée moyenne des séjours est de **6,1 jours**, et **Airbnb représente 56 % des réservations**. Ces chiffres témoignent d’un marché solide, où les grandes villes conservent une forte demande tandis que les destinations touristiques exigent des stratégies tarifaires plus fines pour exploiter la saisonnalité.
+
+## **Comment améliorer ses résultats en revenue management ?**
+
+Le rapport 2025 confirme que la réussite dans la location saisonnière ne dépend pas uniquement du taux d’occupation ou des tarifs, mais de la **capacité à interpréter et à agir sur les données**. Il propose également trois bonnes pratiques concrètes pour améliorer ses performances :
+
+- **Adapter la durée minimale des séjours** selon le comportement des voyageurs de votre marché.
+
+- **Ajuster les prix régulièrement**, en fonction de la fenêtre de réservation et de la demande locale.
+
+- **Basculer vers des décisions fondées sur les données** pour anticiper les pics de demande et maximiser le RevPAN.
+
+Les gestionnaires qui s’appuient sur des données en temps réel — qu’il s’agisse du rendement de leurs biens ou des variations de la demande — sont ceux qui parviennent à se développer durablement tout en offrant une expérience optimale à leurs voyageurs.
+
+📊 Téléchargez le rapport complet** [à ce lien](https://event.roomonitor.com/fr/rapport-beyond-roomonitor-location-saisonniere-2025)**.`,
+    category: "Gestión de propiedades",
+    date: "2025-11-11",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/11/Beyond-FR-1200x628-1.png",
+    lang: "fr",
+  },
+  {
+    id: "36402",
+    slug: "airbnb-demande-regulation-locations-touristiques-zones-rurales-espagnoles",
+    title: "Airbnb réclame une réglementation spécifique dans les zones rurales en Espagne",
+    excerpt: "Airbnb a appelé à une régulation différenciée des locations touristiques dans les zones rurales d’Espagne, estimant que le cadre actuel ne reflète pas la réalité de territoires où une grande partie du parc immobilier reste inoccupée. Selon La Razón, ",
+    content: `Airbnb a appelé à une **régulation différenciée des locations touristiques dans les zones rurales d’Espagne**, estimant que le cadre actuel ne reflète pas la réalité de territoires où une grande partie du parc immobilier reste inoccupée.
+
+Selon *[La Razón](https://www.larazon.es/economia/airbnb-reclama-regulacion-diferenciada-alquileres-turisticos-zonas-rurales-donde-45-viviendas-estan-vacias_20251106690c85a45442607f2fec5bdb.html)*, qui reprend les déclarations de Jaime Rodríguez de Santiago, directeur général d'Airbnb pour l'Espagne et le Portugal, **jusqu’à 45 % des logements de certaines communes rurales sont vides**, alors que la location touristique ne représente qu’une part infime du total.
+
+La plateforme propose d’adapter la législation aux spécificités locales : distinguer entre les particuliers qui louent ponctuellement et les professionnels, et appliquer des mesures proportionnées à l’impact réel sur chaque marché.
+
+## Des données qui bousculent certaines idées reçues
+
+Airbnb affirme que l’activité de location touristique a **un effet quasi nul sur le prix des logements**, estimé à seulement **0,3 % de la hausse totale**.
+
+De plus, les logements exclusivement dédiés à la location touristique représentent **moins de 0,5 % du parc immobilier espagnol**, alors qu’il existe **30 fois plus de logements vacants que de locations enregistrées**.
+
+Ces chiffres rejoignent les conclusions de plusieurs études économiques, selon lesquelles les **locations de courte durée contribuent à près de 2 % du PIB espagnol**, génèrent **plus de 30 milliards d’euros par an** et soutiennent **environ 400 000 emplois directs et indirects** dans le pays.
+
+## Le potentiel du tourisme rural : croissance durable et impact local
+
+Le tourisme rural s’impose désormais comme une tendance de fond. En 2023, **13 millions de voyageurs ont choisi un hébergement rural**, générant **5,56 milliards d’euros de dépenses**, dont **3,2 milliards directement injectés dans le commerce local**, selon Analistas Financieros Internacionales (AFI).
+
+La progression se confirme également en termes de nuitées : **33,6 % des séjours touristiques ont eu lieu en milieu rural en 2023**, contre 31 % en 2018, soit une hausse de **17,6 millions de nuitées supplémentaires**.
+
+Ces données démontrent que **la location responsable peut devenir un moteur de revitalisation des zones dépeuplées**, à condition que la réglementation encourage l’activité au lieu de la restreindre.
+
+## Régulation et gestion : les piliers d’un tourisme responsable
+
+La proposition d’Airbnb vise à distinguer **la location professionnelle de la location occasionnelle**, ainsi que **les contextes urbains et ruraux** — une distinction de plus en plus pertinente dans le débat réglementaire actuel.
+
+Dans ce cadre, **les propriétaires et gestionnaires ruraux** doivent adopter une gestion fondée sur la **transparence, la donnée et le contrôle opérationnel**.
+
+Des solutions comme **Roomonitor Manager** permettent de **surveiller l’activité des hébergements**, **prévenir les incidents**, **garantir la conformité réglementaire** et de promouvoir un modèle de **tourisme durable et responsable**, même dans les zones où le contrôle public est plus limité.
+
+La technologie, associée à une gestion professionnelle, constitue un levier essentiel pour concilier **développement économique, coexistence harmonieuse et respect des réglementations**, des éléments clés pour l’avenir de la location touristique en Espagne.`,
+    category: "Noticias del sector",
+    date: "2025-11-07",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/11/potes.jpg",
+    lang: "fr",
+  },
+  {
+    id: "36304",
+    slug: "del-parque-flats-roomonitor-tourisme-responsable",
+    title: "Del Parque Flats met en avant l’importance de Roomonitor pour garantir un tourisme responsable",
+    excerpt: "L’entreprise malaguène Del Parque Flats trace la voie d’un tourisme responsable grâce à la technologie Roomonitor : sonomètres, détecteurs de fumée et contrôle opérationnel professionnel. Del Parque Flats, entreprise basée à Malaga et reconnue par Ho",
+    content: `### L’entreprise malaguène Del Parque Flats trace la voie d’un tourisme responsable grâce à la technologie Roomonitor : sonomètres, détecteurs de fumée et contrôle opérationnel professionnel.
+
+**[Del Parque Flats](https://delparqueflats.com/)**, entreprise basée à Malaga et reconnue par HomeToGo comme l’un des meilleurs partenaires au monde, est devenue une véritable **référence du tourisme responsable** en Andalousie grâce à son engagement résolu en faveur de la technologie et de l’innovation.
+
+Comme l’a rapporté [S**uite Información**](https://www.suiteinformacion.es/sociedad/del-parque-flats-exige-la-ultima-tecnologia-en-los-pisos-turisticos-para-evitar-molestias-vecinales-y-garantizar-un-turismo-responsable/), l’entreprise **exige l’installation de systèmes avancés de surveillance du bruit et de sécurité dans tous les logements qu’elle gère**, et **utilise les dispositifs Roomonitor** comme élément central de son fonctionnement.
+
+## La technologie Roomonitor au service d’une cohabitation sereine
+
+Les **[dispositifs Roomonitor](https://roomonitor.com/fr/dispositif/)**, visibles sur les images qui accompagnent l’article, permettent de **détecter et prévenir en temps réel les situations de risque ou les niveaux sonores excessifs**. Ils **mesurent également la qualité de l’air et la présence de particules de tabac** afin d’identifier d’éventuelles fêtes ou une sur-occupation du logement.
+
+Cette technologie permet à Del Parque Flats d’**agir de manière préventive**, en garantissant la tranquillité des voisins et le respect de la réglementation locale.
+
+*« Nous voulons renforcer les mesures de contrôle et assurer une bonne cohabitation. Tous les appartements que nous gérons sont équipés de dispositifs et d’applications qui nous aident à prévenir les incidents et à améliorer l’expérience des clients »*, explique Fermín Criado, directeur général de Del Parque Flats.
+
+### Une référence de la location saisonnière professionnelle en Andalousie
+
+En plus d’intégrer Roomonitor dans l’ensemble de ses logements, Del Parque Flats dispose de **concierges de nuit** et applique une **politique stricte de légalité et de transparence**, ne gérant que des hébergements dûment enregistrés.
+
+Cette approche globale et professionnelle a conduit l’entreprise à rejoindre **AVVA PRO, FEVITUR et l’European Holiday Home Association**, consolidant ainsi sa position parmi les opérateurs les plus responsables du secteur.
+
+### L’innovation qui montre la voie
+
+Le cas de Del Parque Flats démontre que **l’innovation technologique et la bonne cohabitation peuvent aller de pair**.
+
+Dans un contexte où la réglementation et la perception publique des locations de courte durée sont de plus en plus exigeantes, **des solutions comme Roomonitor permettent aux gestionnaires de biens d’anticiper les problèmes et d’offrir une tranquillité d’esprit aux propriétaires comme aux voisins**.
+
+### Vers un tourisme plus responsable
+
+De plus en plus d’entreprises professionnelles du secteur adoptent les **dispositifs Roomonitor et les services opérationnels 24h/24 et 7j/7** afin d’assurer la bonne cohabitation, de réduire les incidents et de protéger la réputation de leurs hébergements.
+
+Del Parque Flats illustre parfaitement comment **la technologie peut devenir le meilleur allié d’un tourisme durable et de qualité**.
+
+**Souhaitez-vous gérer vos hébergements avec la même sérénité que Del Parque Flats ?** Découvrez comment Roomonitor vous aide à garantir un tourisme responsable grâce à une technologie intelligente et un support opérationnel 24h/24 et 7j/7. 👉 [**Découvrez nos solutions**](https://roomonitor.com)`,
+    category: "Noticias del sector",
+    date: "2025-10-23",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/10/del-parque-flats-RM.jpg",
+    lang: "fr",
+  },
+  {
+    id: "36227",
+    slug: "changements-politique-annulation-airbnb",
+    title: "Airbnb met à jour ses politiques d’annulation : nouvelles conditions à partir d’octobre 2025",
+    excerpt: "Airbnb a annoncé une mise à jour importante de ses politiques d’annulation pour les séjours de courte durée. À partir du 1er octobre 2025, toutes les réservations de 27 nuits ou moins seront soumises à un nouveau cadre d’annulation plus flexible, rem",
+    content: `Airbnb a annoncé une **[mise à jour importante](https://www.airbnb.fr/help/article/475)** de ses politiques d’annulation pour les séjours de courte durée. À partir du **1er octobre 2025**, toutes les réservations de **27 nuits ou moins** seront soumises à un nouveau cadre d’annulation plus flexible, remplaçant l’ancienne politique **« Stricte »**.
+
+## Nouvelle période d’annulation gratuite de 24 heures
+
+À partir du 1er octobre, **toutes les politiques incluront une période d’annulation gratuite de 24 heures**. Cela signifie que les voyageurs pourront **annuler leur réservation et obtenir un remboursement intégral, taxes comprises**, s’ils le font **dans les 24 heures suivant la confirmation** et **au moins 7 jours avant l’arrivée** (selon l’heure locale de l’hébergement).
+
+Certaines catégories d’hôtels sont exclues de cette période d’annulation gratuite de 24 heures.
+
+## Les nouvelles politiques d’annulation d’Airbnb
+
+Airbnb proposera différentes options d’annulation aux hôtes, avec des niveaux de flexibilité variables.Ces politiques s’appliqueront à tous les séjours de courte durée (moins de 28 nuits) :
+
+#### **1. Flexible**
+
+- Annulation jusqu’à 24 heures avant l’arrivée → **remboursement intégral** (taxes comprises).
+
+- Si l’annulation intervient moins de 24 heures avant → l’hôte perçoit le montant des nuits déjà passées, plus une nuit supplémentaire.
+
+#### **2. Modérée**
+
+- Annulation jusqu’à 5 jours avant l’arrivée → **remboursement intégral**.
+
+- Annulation à moins de 5 jours → l’hôte perçoit les nuits déjà passées, plus une nuit supplémentaire et **50 % des nuits restantes**.
+
+#### **3. Limitée** *(disponible pour les réservations confirmées à partir du 1er octobre 2025)*
+
+- Annulation jusqu’à 14 jours avant l’arrivée → **remboursement intégral**.
+
+- Annulation entre 7 et 14 jours avant → **remboursement de 50 %**.
+
+- Annulation à moins de 7 jours → **aucun remboursement** (l’hôte perçoit 100 % du montant).
+
+#### **4. Semi-stricte**
+
+- Annulation jusqu’à 30 jours avant → **remboursement intégral**.
+
+- Annulation entre 7 et 30 jours avant → **remboursement de 50 %**.
+
+- Annulation à moins de 7 jours → **aucun remboursement**.
+
+#### **5. Stricte** *(disponible uniquement pour certains hôtes)*
+
+- Annulation 7 jours ou plus avant l’arrivée → **remboursement de 50 %**.
+
+- Annulation à moins de 7 jours → **aucun remboursement**.
+
+#### **6. Super stricte – 30 jours**
+
+- Annulation 30 jours ou plus avant l’arrivée → **remboursement de 50 %**.
+
+- Annulation à moins de 30 jours → **aucun remboursement**.
+
+#### **7. Super stricte – 60 jours**
+
+- Annulation 60 jours ou plus avant l’arrivée → **remboursement de 50 %**.
+
+- Annulation à moins de 60 jours → **aucun remboursement**.
+
+### Ce que ce changement implique pour les hôtes
+
+Avec ce nouveau modèle, Airbnb cherche à instaurer un équilibre plus équitable entre la flexibilité souhaitée par les voyageurs et la sécurité nécessaire aux hôtes. L’introduction d’une période d’annulation gratuite de 24 heures vise à renforcer la confiance au moment de la réservation, ce qui pourrait se traduire par une hausse des réservations anticipées.
+
+Pour les hôtes, cette mise à jour offre un cadre plus clair et plus prévisible. Les nouvelles politiques apportent davantage de transparence sur les délais et les remboursements, tout en réduisant les zones d’ambiguïté présentes dans l’ancienne politique « Stricte ». Elles permettent aussi d’adapter plus facilement la gestion selon la saison, la durée du séjour ou le type de voyageur, en choisissant le niveau de flexibilité le plus adapté à la stratégie de l’hébergement.
+
+Avec la disparition de la politique « Stricte » comme option par défaut, toutes les formules incluront désormais la période d’annulation gratuite de 24 heures. Airbnb introduit également de nouvelles options, telles que les politiques « Limitée » et « Semi-stricte », qui offrent différents degrés de flexibilité et de protection pour les hôtes.
+
+Les annonces utilisant actuellement des politiques plus anciennes seront automatiquement migrées vers le nouveau système, sans intervention manuelle. Cependant, les hôtels et les tarifs non remboursables resteront exclus de la période d’annulation gratuite de 24 heures et conserveront leurs conditions spécifiques.
+
+Dans l’ensemble, cette évolution marque un pas vers un modèle plus équilibré, où la flexibilité et la clarté des conditions visent à améliorer à la fois l’expérience des voyageurs et la prévisibilité opérationnelle des hôtes.`,
+    category: "Noticias del sector",
+    date: "2025-10-02",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/10/airbnb-guest-guidebook-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "35881",
+    slug: "cantabrie-obligation-capteurs-bruit-logements-touristiques",
+    title: "La Cantabrie impose des capteurs de bruit dans les locations touristiques : une nouvelle réglementation entre en vigueur",
+    excerpt: "Le gouvernement de la Cantabrie a adopté le Décret 50/2025, un texte réglementaire clé qui vise à encadrer les locations de courte durée (VUT), renforcer la sécurité juridique du secteur et favoriser une meilleure cohabitation avec les riverains. Par",
+    content: `Le gouvernement de la Cantabrie a adopté le **[Décret 50/2025](https://roomonitor.com/wp-content/uploads/2023/09/BOE-Cantabria-ruido.pdf)**, un texte réglementaire clé qui vise à encadrer les **locations de courte durée (VUT)**, renforcer la sécurité juridique du secteur et favoriser une meilleure cohabitation avec les riverains.
+
+Parmi les principales nouveautés, le décret rend **obligatoire l’installation de dispositifs de surveillance sonore** dans tous les logements touristiques enregistrés dans la région.
+
+Chez Roomonitor, nous proposons le **[premier dispositif de surveillance du bruit](https://roomonitor.com/fr/dispositif/)** du marché, déjà utilisé par des milliers de propriétés en Espagne et dans plusieurs pays européens.
+
+### Pourquoi cette mesure ?
+
+Selon les autorités régionales, ce décret répond à la nécessité de :
+
+- Mettre fin à la zone grise juridique entourant de nombreuses VUT.
+
+- Apporter **plus de clarté réglementaire** aux propriétaires, gestionnaires et collectivités locales.
+
+- **Garantir la tranquillité des voisins** et préserver le tissu résidentiel.
+
+Avec cette décision, **la Cantabrie rejoint une tendance européenne** visant à concilier location touristique et respect du cadre de vie urbain.
+
+### Qui est concerné et quelles sont les implications ?
+
+L'obligation d'installer un capteur de bruit s’applique :
+
+- À **tous les logements touristiques déjà enregistrés** dans la région.
+
+- Aux nouvelles VUT : elles devront être équipées **avant leur mise en location**.
+
+Le décret introduit également d’autres mesures, comme la **distinction entre activité professionnelle et occasionnelle**, ou encore une **catégorisation plus précise des hébergements**.
+
+### Quelle technologie est requise ?
+
+Même si le texte ne cite pas de marques spécifiques, il stipule que les dispositifs doivent **mesurer et enregistrer les niveaux sonores** afin de prévenir les nuisances et les usages inappropriés.
+
+Ce type de technologie permet de **détecter des événements en temps réel** et d’agir avant que les plaintes ou les amendes ne surviennent.
+
+### Le système de Roomonitor
+
+Chez Roomonitor, nous accompagnons depuis plusieurs années les acteurs de la location saisonnière, notamment dans des villes soumises à une forte pression réglementaire comme **Barcelone, Paris ou Lisbonne**.
+
+Avec notre technologie, vous pouvez :
+
+- **Détecter** en temps réel le bruit, les fêtes ou la sur-occupation.
+
+- Suivre également la fumée de tabac, la qualité de l’air, la température ou l’humidité.
+
+- **Intervenir de manière préventive**, automatiquement ou via notre [**Centre de Contrôle à Distance**](https://roomonitor.com/fr/centre-de-controle/).
+
+- **Respecter les nouvelles obligations légales** sans perturber votre activité.
+
+- **Documenter les incidents** grâce à un système de traçabilité, de rapports et d’alertes.
+
+Tout cela se fait de façon **discrète et automatisée**, sans perturber l’expérience des voyageurs.
+
+### Vous gérez des logements en Cantabrie ?
+
+Cette nouvelle réglementation est déjà en vigueur. Si vous opérez à **Santander, Suances, Comillas, Castro Urdiales, Noja**, ou dans d'autres communes de la région, **c’est le moment de vous équiper**.
+
+👉 [**Contactez notre équipe**](https://roomonitor.com/fr/reservez-une-demonstration/) : nous vous aidons à mettre en place une solution rapide, efficace et conforme à la loi.`,
+    category: "Noticias del sector",
+    date: "2025-08-01",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/08/Sistema-monitorizacion-ruido-scaled.jpeg",
+    lang: "fr",
+  },
+  {
+    id: "35842",
+    slug: "registre-national-logements-touristiques-fevitur-silvia-blasco",
+    title: "Silvia Blasco (FEVITUR) : « 45 % des logements touristiques légaux exclus du nouveau registre national »",
+    excerpt: "Depuis le 1er juillet 2024, le décret royal 1312/2024 oblige à inscrire tous les logements touristiques dans un Registre National géré par les registres fonciers. Toutefois, près de 45 % des logements touristiques légaux déjà enregistrés auprès des c",
+    content: `Depuis le **1er juillet 2024**, le décret royal 1312/2024 oblige à inscrire tous les logements touristiques dans un Registre National géré par les registres fonciers. Toutefois, près de **45 % des logements touristiques légaux** déjà enregistrés auprès des communautés autonomes ont été exclus de ce nouveau système, comme le dénonce **Silvia Blasco**, présidente de FEVITUR, dans une interview accordée à [Economist&Jurist](https://www.economistjurist.es/zbloque-1/silvia-blasco-presidenta-de-fevitur-un-45-de-las-viviendas-turisticas-legales-quedaron-fuera-del-nuevo-registro-estatal-impuesto-por-el-ministerio-de-vivienda/).
+
+Un tel taux d’exclusion génère une **forte insécurité juridique**, car de nombreux logements conformes à la législation régionale ne sont pas reconnus au niveau national. « La validation ne tient pas compte des registres régionaux, des critères arbitraires sont appliqués et remettent en cause une légalité pourtant acquise », explique Blasco.
+
+Lors de son intervention, Blasco a également alerté sur **les conséquences directes sur la commercialisation touristique** : au moins **100 000 logements légaux ne peuvent actuellement pas être loués**, faute d’avoir obtenu le numéro national requis pour figurer sur des plateformes telles qu’Airbnb ou Booking. Comme elle le souligne : « Sans ce code, il est tout simplement illégal de louer. Et nous parlons ici de pertes de revenus considérables en pleine haute saison ».
+
+## « Nous ne sommes pas le problème de l’accès au logement, mais une partie de la solution »
+
+La présidente de FEVITUR défend l’idée selon laquelle les logements de tourisme ne sont pas responsables de la crise du logement. D’après elle, « le taux de pénétration est stable à 0,6 % du parc depuis cinq ans », et elle déplore que le secteur soit trop souvent utilisé comme **bouc émissaire** par les pouvoirs publics.
+
+Elle insiste également sur la nécessité d’adapter la régulation à la diversité des destinations touristiques : « On ne peut pas appliquer la même réglementation à une ville, une station balnéaire ou une région rurale. Ce sont des modèles très différents qui nécessitent des réponses spécifiques ».
+
+## Professionnalisation du secteur depuis la base
+
+Silvia Blasco reconnaît que le registre national peut être un outil de **contrôle, de transparence et de traçabilité** conforme au règlement européen. FEVITUR a toujours soutenu cette initiative, y voyant une étape clé vers la **professionnalisation du secteur et la lutte contre l’économie souterraine**.
+
+Mais elle critique sa mise en œuvre : aucune connexion automatisée avec les registres régionaux existants, pas de canaux de recours formels, ni d’instructions claires pour les logements dont l’enregistrement est refusé. Une exécution problématique, selon elle.
+
+La fédération demande l’ouverture d’un dialogue institutionnel constructif, représentatif de la pluralité des acteurs du secteur : travailleurs indépendants, gestionnaires, sociétés spécialisées, plateformes numériques… Blasco insiste : « FEVITUR doit être la fédération de tous, sans aucune exclusion ».
+
+## Des milliers de logements en attente de numéro national à la veille de la saison estivale
+
+Les mois d’été s’annoncent décisifs. FEVITUR prévient que si **70 % des logements touristiques n’obtiennent pas leur numéro national à temps**, le secteur pourrait perdre jusqu’à **5 milliards d’euros** de chiffre d’affaires cet été. Or, avec plus de 20 000 demandes déposées depuis janvier, les registres sont tout simplement débordés.
+
+## Quelles conséquences pour les propriétaires et gestionnaires ?
+
+Un logement légal au niveau régional, mais non enregistré au niveau national, **n’est pas visible sur les plateformes** : impossible donc de le louer. Cette situation, conjuguée à un manque total de clarté sur les procédures, **met en danger les revenus** de milliers de professionnels. Elle nécessite une réponse coordonnée entre administrations et prestataires technologiques pour assurer la conformité et l’opérabilité du secteur.
+
+Chez Roomonitor, nous suivons de près ces évolutions réglementaires. Nous sommes convaincus de la nécessité de proposer **des solutions technologiques fiables qui garantissent le contrôle, la traçabilité et la visibilité** aux gestionnaires et propriétaires, tout en renforçant la qualité et la professionnalisation du secteur.`,
+    category: "Noticias del sector",
+    date: "2025-07-28",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/07/silvia-blasco.png",
+    lang: "fr",
+  },
+  {
+    id: "35765",
+    slug: "interview-jordan-setti-checkmyguest-securite-location-saisonniere",
+    title: "Interview avec Jordan Setti, COO de CheckMyGuest : \\"Savoir que de 22h à 7h quelqu’un prend le relais, ça n’a pas de prix\\"",
+    excerpt: "Bonjour à tous et à toutes. Aujourd'hui, j'ai vraiment le plaisir d'être accueilli dans les locaux de Checkmyguest par Jordan Setti. Son directeur opérationnel est l'un des acteurs clés du marché de la location courte et moyenne durée en France. On e",
+    content: `Bonjour à tous et à toutes. Aujourd'hui, j'ai vraiment le plaisir d'être accueilli dans les locaux de [**Checkmyguest**](https://www.checkmyguest.fr/) par Jordan Setti.
+
+Son directeur opérationnel est l'un des acteurs clés du marché de la location courte et moyenne durée en France. On est ensemble pour parler de tout ce qui est évolution du secteur, des défis actuels, mais aussi de la collaboration entre Checkmyguest et Roomonitor qui dure maintenant depuis 2021. L'objectif de cet échange, c'est vraiment de mettre en lumière comment notre partenariat contribue à renforcer la sécurité, l'efficacité opérationnelle et la qualité d'expérience client dans un contexte qui est de plus en plus exigeant.
+
+https://youtu.be/JeQMC49GnI0
+
+**Pourriez-vous nous présenter brièvement Checkmyguest et nous expliquer comment l'entreprise a évolué depuis sa création en 2016 ?**
+
+Checkmyguest est une société spécialisée dans la location d'appartements en courte et moyenne durée. Aujourd'hui, on gère environ 3 000 lots un peu partout en France et on a été rachetés récemment par Oyo, un des géants de l'hôtellerie indienne. Depuis 2016, nous avons constamment évolué, grandi, changé notre opérationnel et notre manière de travailler. Cela nous permet aujourd'hui de scaler notre modèle et de gérer 3 000 lots.
+
+**Quel type de biens gérez-vous exactement et dans quelle région de France êtes-vous le plus présents ?**
+
+Nous gérons principalement en Île-de-France, à Paris, où se trouve environ 80 % de notre stock. Le reste est situé dans le sud de la France (région PACA), ainsi que dans le nord — Deauville, Trouville, Honfleur. Nous avons commencé à nous ouvrir davantage : nous avons acquis une société à Lyon où nous gérons une centaine de biens, nous sommes présents à Genève et en Italie. Donc, nous commençons à nous exporter, mais notre cœur de métier reste à Paris.
+
+**Quel est votre regard sur l'état actuel du marché de la location courte et moyenne durée en France ?**
+
+À Paris, c’est de plus en plus compliqué, comme tout le monde le sait. Il y a de nouvelles réglementations visant à réduire le nombre d'appartements en courte durée. C'est pourquoi, dès le départ, nous nous sommes spécialisés dans la transformation de locaux commerciaux en appartements dédiés à la location saisonnière pour les exploiter 365 jours par an. Mais plus le temps passe, plus cela devient compliqué, car les réglementations parisiennes cherchent à réduire cette activité. Nous sommes donc obligés de chercher de la croissance ailleurs, notamment dans d'autres villes et pays.
+
+**Quels sont les principaux défis réglementaires auxquels vous êtes confrontés actuellement et quel impact ces évolutions législatives auront-elles sur votre activité ?**
+
+Aujourd'hui, il y a deux façons d'opérer :
+
+- Soit c'est votre résidence principale, et vous pouvez louer 90 jours par an (si le règlement de copropriété l'autorise).
+
+- Soit vous avez un usage commercial avec un changement de sous-destination en hébergement hôtelier, et dans ce cas, vous pouvez légalement louer 365 jours par an.
+
+Nous nous sommes spécialisés dans cette seconde catégorie, mais cela devient de plus en plus compliqué, car l'obtention de l'usage hôtelier est difficile. C'est le principal enjeu avec les nouvelles réglementations parisiennes, et il est de plus en plus difficile de trouver de nouvelles acquisitions.
+
+Interview avec Jordan Setti, COO de CheckMyGuest
+
+**Quelle importance Checkmyguest accorde-t-elle à la sécurité et à la tranquillité, tant pour vos biens que pour le voisinage ?**
+
+Pour nous, c’est essentiel. Nous voulons une activité durable. Si vous ne respectez pas les voisins et la copropriété, vous risquez de devoir arrêter l’activité de location saisonnière, et nous ne voulons surtout pas cela. Nous voulons rester en bons termes avec les voisins, éviter tout débordement et toute fête, quitte à annuler des réservations ou à refuser des réservations suspectes.
+
+**Qu’est-ce qui vous a convaincu de choisir Roomonitor comme solution de surveillance ?**
+
+En 2021, avec la crise et la pandémie, les touristes ne venaient plus à Paris. Nous avons dû baisser les prix pour attirer des réservations, et comme toutes les sociétés, nous avons dû faire face aux fêtes dans les appartements, les boîtes de nuit et restaurants étant fermés. Nous avons donc eu un problème majeur : comment sécuriser nos appartements ? C'est ainsi que tout a commencé, et nous avons signé un partenariat avec Roomonitor.
+
+**Pourquoi Roomonitor plutôt qu’une autre société proposant le même type de service ?**
+
+Parce que Roomonitor offre aussi un accompagnement sur place, et pour nous c’est essentiel. À partir de minuit, quand nos bureaux ferment, nous voulons pouvoir dormir tranquilles. Roomonitor prend le relais : le dispositif envoie des alertes, ils appellent les guests pour leur demander de baisser le bruit et, si ce n’est pas le cas, ils interviennent sur place en une vingtaine de minutes. Honnêtement, cela n’a pas de prix : je peux dormir tranquille, sans appels de propriétaires ou de voisins en pleine nuit. Le matin, je n’ai plus qu’à lire les rapports.
+
+**Utilisiez-vous auparavant des solutions pour détecter les fêtes, les occupations non autorisées ou les risques de dégradation ?**
+
+Non. Bien sûr, il y a toujours eu des fêtes, mais elles étaient très rares. Avec la pandémie, elles se sont multipliées, c’est même devenu une mode. C’est à ce moment-là que nous nous sommes tournés vers des solutions comme la vôtre, et que nous avons choisi Roomonitor.
+
+**Quels sont, selon vous, les autres points forts de notre service ?**
+
+Les rapports sont essentiels pour nos propriétaires, car tout est documenté et enregistré, ce qui est utile face aux copropriétés. Et surtout, votre **réactivité** est excellente : même quand nous suspectons une fête — réservations de dernière minute dans des grands appartements, guests douteux —, nous vous demandons souvent de faire des rondes de précaution, et vous répondez toujours rapidement.
+
+**Pouvez-vous partager un exemple concret où Roomonitor vous a permis d’éviter un incident majeur ?**
+
+Oui, un cas très concret : une fête type boîte de nuit dans un appartement de grande valeur. La réservation semblait normale : bon profil Airbnb, bons commentaires, voyage en famille, pas de dernière minute. Mais ils ont installé une véritable boîte de nuit. Roomonitor a détecté le bruit, a appelé les guests, a compris tout de suite qu’il s’agissait d’une fête et est intervenu sur place. La situation a pris de l’ampleur ; ils ont appelé la police. En 30 à 45 minutes, tout était réglé : invités dehors, clés récupérées, appartement sécurisé. Aucun problème majeur avec la copropriété grâce à l’intervention rapide.
+
+**Quel avenir voyez-vous pour la location courte et moyenne durée, en termes de durabilité sociale, de relations avec les communautés locales et de recours à des outils de surveillance comme Roomonitor ?**
+
+L’activité se professionnalise complètement. Seuls les acteurs qui connaissent bien ce marché et travaillent correctement resteront. Il faut s’entourer des bonnes personnes, respecter les voisins et travailler avec des prestataires comme vous. À l’avenir, de plus en plus de grands acteurs géreront le marché, accompagnés par des sociétés comme Roomonitor, car vous avez le meilleur produit pour que tout se passe bien.
+
+**Si vous deviez recommander Roomonitor à un autre gestionnaire, que lui diriez-vous ?**
+
+Allez-y, signez. Ne perdez pas de temps, car rien ne vaut de dormir sur ses deux oreilles. C’est une activité 24h/24, 7j/7, et à un moment, il faut se reposer. Savoir que de 22h à 7h du matin quelqu’un prend le relais, peut entrer dans l’appartement avec les clés et intervenir, ça n’a pas de prix.
+
+**Pour terminer, Jordan, y a-t-il autre chose que vous souhaiteriez partager sur votre expérience ou votre vision du marché ?**
+
+Pas particulièrement, si ce n’est qu’aujourd’hui nous savons que nos appartements sont sécurisés, qu’il n’y a pas de problème et que nous avons un partenaire très réactif.
+
+**Merci d’avoir pris le temps de partager votre expérience avec nous, c’est très important. C’est un vrai plaisir de pouvoir compter sur le témoignage d’une personne aussi influente que vous dans ce secteur. Grâce à cette collaboration depuis 2021, nous continuerons à renforcer la sécurité, à optimiser les opérations et à offrir une expérience client toujours meilleure.**`,
+    category: "Noticias del sector",
+    date: "2025-07-21",
+    readTime: 7,
+    image: "https://roomonitor.com/wp-content/uploads/2025/07/IMG_4521-1-scaled-e1753370899603.jpg",
+    lang: "fr",
+  },
+  {
+    id: "35587",
+    slug: "airbnb-booking-registre-unique-location-espagne",
+    title: "Le nouveau rôle des OTAs en Espagne à partir du 1er juillet",
+    excerpt: "À partir du 1er juillet 2025, des plateformes comme Airbnb et Booking seront tenues de transmettre à l’administration fiscale espagnole des informations sur chaque réservation, l’hôte et l’identification du logement. Nous vous expliquons ce que cela ",
+    content: `À partir du 1er juillet 2025, des plateformes comme Airbnb et Booking seront tenues de transmettre à l’administration fiscale espagnole des informations sur chaque réservation, l’hôte et l’identification du logement. Nous vous expliquons ce que cela implique et comment cela affectera le secteur.
+
+# Qu’est-ce que la Ventanilla Única Digital ?
+
+La **[Ventanilla Única Digital](https://roomonitor.com/fr/guichet-unique-numerique-location-touristique/)** est une plateforme technologique qui permettra de centraliser toutes les données relatives à la location touristique de courte durée en Espagne. Elle a été mise en place par le gouvernement dans le cadre d’un nouveau dispositif légal visant à garantir une gestion plus transparente, fiscalisée et structurée du secteur.
+
+Grâce à cet outil, les administrations publiques pourront valider et croiser les informations issues du **Registre Unique des Locations**, garantissant que tous les logements annoncés soient conformes à la réglementation en vigueur et correctement identifiés.
+
+# À qui s’adresse cette réglementation ?
+
+Cette réglementation concerne un large éventail d’acteurs. Elle s’applique directement aux **propriétaires particuliers**, aux **gestionnaires professionnels**, aux **entreprises de gestion d’hébergements touristiques**, ainsi qu’aux **plateformes de réservation en ligne** telles qu’Airbnb, Booking, Vrbo, Holidu, entre autres.
+
+Aucun logement ne pourra être proposé en location touristique en Espagne sans avoir été préalablement enregistré dans le système officiel et sans avoir obtenu un **NRA valide**.
+
+# Quel rôle jouent Airbnb, Booking et les autres OTAs ?
+
+Le changement le plus significatif de cette réglementation est qu’il confère aux plateformes de réservation le statut d’**agents responsables de la conformité**. Elles ne se contenteront plus d’agir comme intermédiaires : elles devront désormais valider, stocker et transmettre des données clés sur chaque logement publié.
+
+Ces données incluent le **NRA**, les informations de l’hôte ou du gestionnaire, le titulaire du logement, les dates de séjour ainsi que le montant de chaque réservation.
+
+Les informations seront collectées et transmises de manière périodique via des intégrations numériques avec la Ventanilla Única Digital, transformant ces plateformes en un canal de vérification préalable avant la mise en ligne des annonces.
+
+# Un tournant pour l’avenir de la location touristique
+
+Bien que cette législation réponde à des besoins spécifiques à l’Espagne, elle s’inscrit dans une dynamique européenne. L’**Union européenne** a déjà proposé un cadre commun pour la location touristique à l’horizon 2030, en prônant plus de transparence, de fiscalisation et de contrôle numérique.
+
+L’Espagne a choisi d’anticiper cette évolution, devenant ainsi le premier pays à adopter une législation nationale de cette envergure. L’objectif est double : **lutter contre l’offre illégale** et **professionnaliser le secteur**, en consolidant une base de données fiable qui permettra une meilleure coordination entre plateformes et administrations.
+
+Ainsi, avec l’entrée en vigueur du **[Registre Unique](https://roomonitor.com/fr/guichet-unique-numerique-location-touristique/)** et de la **Ventanilla Única Digital**, le secteur de la **location touristique en Espagne** entre dans une nouvelle phase : plus de contrôle, plus de transparence et plus de professionnalisme.
+
+Des plateformes comme **Airbnb et Booking** auront désormais la responsabilité de valider et de transmettre les données essentielles. Les propriétaires, de leur côté, devront s’adapter à cette nouvelle réalité s’ils souhaitent continuer à commercialiser leurs hébergements légalement.
+
+Il est temps de vous préparer. Si vous n’avez pas encore demandé votre **Numéro d’Enregistrement Unique**, vous pouvez consulter notre [**guide complet étape par étape ici**](https://serviceguide.roomonitor.com/guia-numero-registro-unico-alquiler-espa%C3%B1a).`,
+    category: "Noticias del sector",
+    date: "2025-06-26",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/06/OTAs.png",
+    lang: "fr",
+  },
+  {
+    id: "35490",
+    slug: "aides-tourisme-dana-espagne",
+    title: "Jusqu’à 200 000 € d’aides pour les entreprises touristiques touchées par les intempéries DANA",
+    excerpt: "Le ministère de l’Industrie et du Tourisme d’Espagne, en collaboration avec l’Institut de Crédit Officiel (ICO), a activé une ligne de financement spécifique destinée aux entreprises touristiques ayant subi des dommages à la suite des tempêtes DANA (",
+    content: `Le ministère de l’Industrie et du Tourisme d’Espagne, en collaboration avec l’Institut de Crédit Officiel (ICO), a activé une ligne de financement spécifique destinée aux entreprises touristiques ayant subi des dommages à la suite des tempêtes DANA (Dépression Isolée en Altitude) survenues ces derniers mois.
+
+Cette aide, canalisée par le Fonds Financier de l’État pour la Compétitivité Touristique (FOCIT), s’adresse aux entreprises ayant subi des préjudices matériels ou économiques liés à cet épisode météorologique extrême. Elle permet d’accéder à des prêts pouvant atteindre **jusqu’à 200 000 €**, assortis de conditions particulièrement avantageuses.
+
+Les aides seront octroyées sous forme de **prêts bonifiés**, incluant des taux à 0 % et des garanties partielles prises en charge par l’État. Les demandes se feront directement auprès des banques partenaires, sans passer par un intermédiaire public. Les dépenses couvertes incluent notamment la **réhabilitation des installations**, la **digitalisation**, les **investissements durables**, l’**amélioration de l’exploitation** ou encore l’**adaptation aux réglementations en vigueur**.
+
+C’est une **opportunité à saisir** pour les propriétaires et gestionnaires d’hébergements touristiques — notamment ceux de courte durée — qui souhaitent **relancer leur activité** ou **moderniser leurs opérations**. Les fonds peuvent également être utilisés pour déployer des technologies de gestion à distance, automatiser les processus de check-in et sécurité, installer des capteurs intelligents ou se préparer à la mise en œuvre du **Registre Unique des Locations de Courte Durée**.
+
+Chez **Roomonitor**, nous encourageons nos clients à s’informer dès maintenant et à planifier leurs investissements. Nos solutions technologiques, conçues pour intervenir à distance, réduire les nuisances et améliorer l’expérience des voyageurs, répondent parfaitement aux critères de ces aides.
+
+Pour en savoir plus sur cette ligne de financement et comment nous pouvons vous accompagner, contactez-nous à l’adresse suivante : [sales@roomonitor.com](mailto:sales@roomonitor.com)`,
+    category: "Noticias del sector",
+    date: "2025-06-23",
+    readTime: 1,
+    image: "https://roomonitor.com/wp-content/uploads/2025/06/ayudas-dana.jpg",
+    lang: "fr",
+  },
+  {
+    id: "35424",
+    slug: "guichet-unique-numerique-location-touristique",
+    title: "Tout ce qu’il faut savoir sur le Guichet Unique Numérique pour les locations de courte durée",
+    excerpt: "Le cadre légal des locations touristiques évolue, et avec lui, de nouvelles obligations apparaissent pour les propriétaires, les gestionnaires et les plateformes. Cet article explique de manière pédagogique ce qu’est le Guichet Unique Numérique, comm",
+    content: `Le cadre légal des locations touristiques évolue, et avec lui, de nouvelles obligations apparaissent pour les propriétaires, les gestionnaires et les plateformes. Cet article explique de manière pédagogique ce qu’est le Guichet Unique Numérique, comment il s’articule avec le nouveau Registre des Propriétés, et les démarches à suivre selon la date de votre autorisation de location.
+
+# Le Registre Unique : première étape incontournable
+
+Depuis le 2 janvier 2025, le **Décret Royal 1312/2024** est entré en vigueur, instaurant un Registre Unique pour tous les hébergements touristiques, y compris les locations de courte durée.
+
+🗓️ **Ce qu’il faut retenir** :
+
+- Le **1er juillet 2025** marque la date à partir de laquelle il sera **obligatoire** d’avoir un **Numéro de Registre de Location (NRA)** pour pouvoir publier une annonce sur des plateformes comme Airbnb, Booking, etc.
+
+- Le numéro devra être obtenu auprès du **Registre de la Propriété** ou du **Registre des Biens Meubles**, via le portail électronique du **Collège des Registres Espagnols**.
+
+# Le Guichet Unique Numérique : qu’est-ce que c’est ?
+
+Le Guichet Unique Numérique (GUN) sera la plateforme digitale par laquelle les plateformes de location transmettront automatiquement à l’administration les données relatives aux biens touristiques (propriétaire, adresse, licence, NRA, etc.).
+
+🔧 Ce système n’est pas encore opérationnel, mais un **formulaire spécifique** est en cours de développement. Dans l’intervalle, **la responsabilité de l’enregistrement reste entre les mains des gestionnaires ou propriétaires**.
+
+# Cas particuliers selon la date d’autorisation
+
+La **réforme du 3 avril 2024** (Loi sur l’Efficacité de la Justice) a modifié la **Loi de la Propriété Horizontale**, introduisant des règles importantes pour la location touristique dans les immeubles collectifs.
+
+🏢 **Autorisation de la communauté de copropriétaires** :
+
+- **Avant le 3 avril 2024** : pas d’autorisation expresse nécessaire.
+
+- **Après cette date** : une autorisation préalable et explicite de la copropriété est requise.
+
+Cela vise à éviter les conflits dans les immeubles à usage mixte et à protéger la tranquillité des résidents permanents.
+
+# Comment demander votre Numéro de Registre de Location (NRA) ?
+
+Voici les étapes :
+
+- Accédez au **site officiel du Collège des Registraires**.
+
+- Connectez-vous en tant qu’utilisateur enregistré ou abonné.
+
+- Remplissez le **formulaire web spécifique**.
+
+**Documents nécessaires** :
+
+- Code CRU (**Code Registre Unique**) de la propriété.
+
+- **Référence cadastrale** du bien.
+
+- Numéro de **licence touristique** accordée par la communauté autonome.
+
+En zone rurale, le processus peut nécessiter des vérifications supplémentaires afin de s'assurer que le bien est bien classé à usage résidentiel.
+
+Le coût estimé de l’inscription est d’environ **33 €**.
+
+Le **numéro NRA est valable un an** : il faut donc renouveler l’enregistrement chaque année.
+
+# À qui s’applique cette réglementation ?
+
+Inclus :
+
+- Locations de vacances (Viviendas de uso turístico)
+
+- Locations saisonnières
+
+- Location de chambres individuelles
+
+Exclus :
+
+- Hôtels
+
+- Campings
+
+- Aires de stationnement pour camping-cars
+
+# Questions fréquentes
+
+- **Combien de temps ai-je pour me mettre en conformité ?** → 60 jours à compter de l’entrée en vigueur.
+
+- **Et si je ne suis pas prêt le 1er juillet ?** → Pas de sanctions immédiates, mais il est fortement recommandé d’avoir son numéro avant cette date.
+
+- **Toutes les régions d’Espagne appliqueront-elles cette loi ?** → Certaines, comme l’Andalousie, ont contesté le décret, invoquant une atteinte à leurs compétences en matière de logement. Cela pourrait impacter la mise en œuvre régionale.
+
+# Conclusion utile pour les gestionnaires touristiques
+
+Même si toutes les modalités ne sont pas encore clairement définies, le **nouveau cadre réglementaire exige anticipation, documentation précise et adaptation rapide**.
+
+Commencer dès maintenant les démarches d’enregistrement vous garantit une transition sereine vers ce nouveau modèle de transparence et de responsabilité pour la location courte durée en Espagne.
+
+Nous vous tiendrons informés des prochaines évolutions.`,
+    category: "Noticias del sector",
+    date: "2025-06-12",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/06/ventanilla-unica-digital-registro-1.jpg",
+    lang: "fr",
+  },
+  {
+    id: "34893",
+    slug: "locations-touristiques-barcelone-mwc",
+    title: "84 % des congressistes du MWC considèrent l’interdiction des locations touristiques comme un problème",
+    excerpt: "L’avenir des locations touristiques à Barcelone est incertain, notamment après la promesse du maire Jaume Collboni d’interdire ce mode d’hébergement d’ici 2028. Dans ce contexte, l’Association des Appartements Touristiques de Barcelone (Apartur) a me",
+    content: `L’avenir des locations touristiques à Barcelone est incertain, notamment après la promesse du maire Jaume Collboni d’interdire ce mode d’hébergement d’ici 2028. Dans ce contexte, l’Association des Appartements Touristiques de Barcelone ([Apartur](https://apartur.com/)) a mené une enquête auprès des participants au Mobile World Congress ([MWC](https://www.mwcbarcelona.com/)) 2024, révélant que 84 % des congressistes estiment que l’interdiction des locations touristiques poserait un problème.
+
+### Impact sur l’offre d’hébergement et les prix
+
+Selon les résultats de l’enquête, la disparition des appartements touristiques pourrait avoir de graves conséquences sur l’offre hôtelière de la ville. Actuellement, ces logements représentent 40 % des lits disponibles chaque jour à Barcelone. Leur suppression pourrait entraîner une augmentation significative des prix des hôtels et une réduction des options abordables et flexibles pour les visiteurs.
+
+De plus, le taux d’occupation des appartements touristiques pendant le MWC dépasse 95 %, avec plus de 30 000 congressistes séjournant dans ces établissements. L’enquête a également révélé que 87 % des répondants préfèrent que Barcelone continue d’offrir des locations touristiques en complément des hôtels.
+
+### Tourisme et économie locale
+
+Le tourisme d’affaires est un moteur économique clé pour Barcelone, et le MWC est l’un des événements ayant le plus grand impact sur la ville. La possibilité que l’interdiction des locations touristiques réduise la capacité de la ville à accueillir des congrès et des événements de grande envergure inquiète aussi bien les participants que les organisateurs.
+
+Selon Apartur, la volonté de la mairie d’éliminer les locations touristiques met en péril l’attractivité de Barcelone en tant que destination pour les congrès et événements internationaux. Les congressistes mettent en avant la possibilité de séjourner en groupe, l’emplacement central et le rapport qualité-prix comme les principales raisons de leur choix de ce type d’hébergement.
+
+### Le rôle dans les événements internationaux
+
+L’un des principaux arguments contre les locations touristiques est leur impact sur la cohabitation avec les riverains, notamment en raison des nuisances sonores et de l’occupation incontrôlée. Cependant, des solutions technologiques comme celles proposées par [Roomonitor](https://roomonitor.com/) permettent de gérer efficacement ces problèmes. La surveillance du bruit en temps réel et la détection de l’occupation aident à garantir que les appartements touristiques fonctionnent de manière responsable et respectueuse envers la communauté locale.
+
+L’avenir du tourisme à Barcelone nécessite un équilibre entre réglementation et technologie afin de garantir à la fois le bien-être des habitants et la compétitivité de la ville en tant que destination touristique et d’affaires.`,
+    category: "Noticias del sector",
+    date: "2025-03-07",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/04/12822944995_0030ea86bb_k.jpg",
+    lang: "fr",
+  },
+  {
+    id: "31326",
+    slug: "projet-pilote-werespect-coexistence-touristique-majorque",
+    title: "Nouveautés à FITUR 2025 : présentation du projet pilote d’actions de coexistence touristique à Majorque avec weRespect",
+    excerpt: "Lors de FITUR 2025, l’un des principaux événements internationaux du tourisme qui se tient à IFEMA Madrid, nous avons présenté avec weRespect le nouveau projet pilote d’actions de coexistence touristique à Majorque. Cette initiative innovante vise à ",
+    content: `Lors de **FITUR 2025**, l’un des principaux événements internationaux du tourisme qui se tient à IFEMA Madrid, nous avons présenté avec [**weRespect**](https://werespect.net/prensa/presentamos-el-piloto-de-acciones-werespect-en-mallorca-durante-fitur-2025) le nouveau **projet pilote d’actions de coexistence touristique à Majorque**. Cette initiative innovante vise à promouvoir la durabilité et à encourager des relations harmonieuses dans le secteur des locations saisonnières, en collaboration avec des partenaires tels que **Roomonitor**.
+## Un projet pour favoriser l’harmonie
+Le projet pilote se concentre sur la mise en œuvre d’outils et de stratégies visant à améliorer les relations entre les voyageurs, les propriétaires de logements touristiques et les habitants locaux. Dirigé par **weRespect**, ce programme cherche à équilibrer les bénéfices économiques du tourisme avec la préservation du bien-être des communautés locales dans des destinations comme Majorque.
+
+La présentation, introduite par **Gabriel Pérez** (Responsable des Relations Publiques chez weRespect), a réuni **Jaume Bauzà**, ministre et directeur général du Tourisme pour le Gouvernement des Îles Baléares, **Sara Rodríguez**, Responsable des Politiques Publiques et des Campagnes chez Airbnb, et **Maria Gibert**, directrice générale de l’Association des Logements et Appartements Touristiques des Baléares (HABTUR).
+
+[caption id="attachment_31310" align="alignnone" width="1024"] Gabriel Pérez présentant le projet pilote weRespect[/caption]
+## Comment fonctionnera le programme ?
+Le processus de médiation comprendra les étapes suivantes :
+
+ 	- **Réception de la demande :** weRespect prendra en charge les demandes relatives aux conflits impliquant des locations saisonnières.
+ 	- **Transmission au service de médiation :** La demande sera transmise à un médiateur professionnel.
+ 	- **Analyse du conflit :** Le médiateur rencontrera les parties concernées – voisins, gestionnaires ou propriétaires – afin de recueillir des informations.
+ 	- **Proposition de solution :** Une résolution commune sera élaborée et formalisée dans un accord signé par les deux parties.
+ 	- **Suivi :** L’accord sera suivi pendant une période de 60 à 90 jours pour garantir son application.
+
+## Roomonitor et weRespect : des technologies pour réduire l’impact du tourisme
+[**WeRespect**](https://www.werespect.net/) est une initiative lancée en 2018 par Roomonitor en collaboration avec des associations du secteur. Dans le cadre de ce projet, l’une de nos principales contributions a été l’installation de **détecteurs de bruit** dans les logements touristiques, ainsi que d’autres initiatives.
+
+Ces dispositifs ont démontré leur grande efficacité, permettant de résoudre **57 % des incidents liés au bruit en moins de 28 minutes** en 2023. Grâce à cette technologie, nous contribuons non seulement à l’amélioration de la coexistence, mais également à la professionnalisation du secteur.
+## Un modèle reproductible pour les destinations touristiques
+Le projet pilote présenté à Majorque a le potentiel d’être reproduit dans d’autres destinations touristiques confrontées à des défis similaires. Son approche, basée sur la collaboration entre gestionnaires, communautés locales et technologies innovantes, en fait un modèle inspirant pour d’autres régions. Chez Roomonitor, nous sommes fiers de soutenir des initiatives qui mettent en avant la coexistence et le développement durable.
+
+Pour plus d’informations sur ce projet pilote et nos initiatives liées au tourisme durable, rendez-vous sur le site [weRespect](https://werespect.net).
+
+Ensemble, construisons un tourisme plus respectueux et durable.`,
+    category: "Noticias del sector",
+    date: "2025-01-24",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-24-at-10.56.29.jpeg",
+    lang: "fr",
+  },
+  {
+    id: "31273",
+    slug: "asier-pereda-fevitur-lequilibre-entre-linteret-general-et-linteret-public-est-essentiel-pour-lavenir-des-vut",
+    title: "Asier Pereda (Fevitur) : “L’équilibre entre l’intérêt général et l’intérêt public est essentiel pour l’avenir des locations touristiques.”",
+    excerpt: "En Espagne, la location touristique traverse une période de transformations majeures en raison de nouvelles réglementations et ajustements fiscaux visant à équilibrer l’activité économique et l’accès au logement. Pour mieux comprendre les implication",
+    content: `En Espagne, la **location touristique** traverse une période de transformations majeures en raison de nouvelles réglementations et ajustements fiscaux visant à équilibrer l’activité économique et l’accès au logement. Pour mieux comprendre les implications de ces mesures, nous avons interviewé **Asier Pereda**, président d’[**Aparture**](https://aparture.com/) (Pays basque) et responsable des Affaires Réglementaires et des Relations Institutionnelles chez [**Fevitur**](https://www.fevitur.es/). Il nous partage sa vision des défis et opportunités auxquels est confronté le secteur des **logements à usage touristique** dans ce nouveau contexte.
+
+ 	- 
+#### **La récente modification de la Loi sur la Propriété Horizontale exige, à partir du 3 avril 2025, que tout propriétaire souhaitant utiliser son logement pour de la location touristique obtienne l’accord explicite de la copropriété. Pensez-vous que cette mesure est juste ?**
+
+L’introduction de l’accord explicite comme condition pour louer un logement à des fins touristiques soulève un débat intéressant sur **la façon de concilier l’intérêt général et l’intérêt public**. Bien que cette mesure puisse prévenir les conflits dans les copropriétés où l’impact de la location touristique est perçu négativement, elle constitue un obstacle supplémentaire pour les propriétaires responsables respectant déjà toutes les réglementations en vigueur.
+
+De mon point de vue, il serait plus équitable que ces décisions reposent sur des critères objectifs et un cadre réglementaire similaire à celui de toute autre activité économique. Cela garantirait la sécurité juridique nécessaire à toutes les parties impliquées. Ce principe de certitude est essentiel dans un état de droit, où les droits et obligations doivent être clairs, stables et prévisibles.
+
+Permettre aux copropriétés de décider de l’implantation d’activités économiques telles que les locations touristiques peut sembler démocratique. Toutefois, cela soulève une question fondamentale : les copropriétés, par nature, ne sont pas habilitées à trancher sur la manière de concilier l’intérêt général (les voisins) avec l’intérêt public (développement économique et urbain).
+
+L’intérêt général est important, mais il ne doit pas être évalué de manière isolée ni être opposé à l’intérêt public. Les locations touristiques représentent un secteur économique qui dépasse les limites d’un immeuble et joue un rôle crucial dans le développement économique, la création d’emplois et la durabilité du tissu urbain.
+
+ 	- 
+#### **Selon vous, quel est le principal problème auquel le secteur des locations touristiques sera confronté avec l’entrée en vigueur de cette modification de la Loi sur la Propriété Horizontale ?**
+
+Le principal problème est l’insécurité juridique. Dans la plupart des cas, les logements à usage touristique (locations touristiques) sont réglementés, en matière d’urbanisme, comme un usage similaire à un logement. À l’exception de quelques municipalités qui ont normalisé cette activité comme une activité économique soumise à une licence, cette situation crée une insécurité juridique pour les administrés, même s’ils respectent les réglementations en vigueur.
+
+Cette problématique est particulièrement visible lors des transactions immobilières : même si le principe de non-rétroactivité est respecté, l’activité peut être compromise si elle n’est pas liée à une licence d’exploitation. Cela freine la professionnalisation et complique le développement durable du secteur.
+
+ 	- 
+#### **Le président du gouvernement, Pedro Sánchez, a annoncé lundi un ensemble de mesures pour alléger la crise du logement en Espagne. Parmi elles, des taxes plus élevées pour ceux qui louent des appartements à court terme afin qu’ils « paient des impôts comme ils le devraient, comme une entreprise ». Selon vous, quel serait l’impact de ces mesures sur les gestionnaires et propriétaires d’appartements touristiques en Espagne ?**
+
+La fiscalité est un levier essentiel pour orienter l’économie vers la création de valeur, et la location de logements n’y échappe pas. Son traitement fiscal joue un rôle clé dans l’équilibre entre l’usage résidentiel et les autres usages autorisés.
+
+Dans le cas des logements destinés à un usage touristique, il est crucial que la politique fiscale favorise des modèles de gestion durables qui préservent la fonction sociale du logement. Cela implique de promouvoir une offre créant de la valeur en termes d’emplois réglementés, d’impact fiscal, de qualité de l’offre et d’intégration dans la chaîne de valeur touristique.
+
+ 	- 
+#### **Quel modèle fiscal vous semble le plus adapté pour relever les défis de la location touristique en Espagne ?**
+
+**La proposition fiscale de FEVITUR** prend en compte les considérations du président du gouvernement, s’appuyant sur des principes généraux visant à articuler des politiques publiques cohérentes avec l’intérêt général.
+
+Un point central de cette proposition est la segmentation fiscale selon qu’une activité économique est exercée de manière professionnelle. Cette approche permet de décourager les dynamiques spéculatives et de promouvoir des modèles professionnels apportant de la valeur en termes d’emplois réglementés et d’intégration dans la chaîne de valeur touristique.
+
+En outre, cette approche fiscale s’aligne sur des objectifs plus larges, tels que la promotion de l’usage résidentiel sans compromettre le développement économique et la création d’emplois. Ce modèle démontre comment la fiscalité peut être un outil efficace pour configurer un secteur plus durable et bénéfique pour tous.
+
+ 	- 
+#### **À l’avenir, quel rôle voyez-vous pour la locations touristique dans l’économie locale et nationale si ces mesures sont pleinement mises en œuvre ? Quels défis ou opportunités pourraient émerger ?**
+
+La solution à ces défis ne réside pas dans l’alimentation de l’insécurité juridique par des décisions improvisées, mais dans l’établissement de régulations claires et stables normalisant les locations touristiques comme toute autre activité économique. Les outils de planification urbaine et la réglementation sectorielle sont essentiels pour harmoniser l’intérêt général avec l’intérêt public, garantissant à la fois le bien-être des résidents et la viabilité des locations touristiques dans un cadre objectif.
+
+Les données officielles montrent que, dans la plupart des cas, l’impact des locations touristiques sur le marché immobilier est moindre que ce que l’on perçoit. Dans de nombreux territoires, ces logements représentent une faible part du total des propriétés, avec une corrélation faible, voire inexistante, entre leur prolifération et l’augmentation des prix des loyers ou des ventes.
+
+Un cadre réglementaire solide permettra à ce secteur économique, responsable et professionnel, de s’établir comme un modèle durable et avantageux pour toutes les parties concernées. Un modèle de gestion des logements touristiques conforme aux standards des secteurs économiques consolidés génère des emplois de qualité, soutient le développement local et assure un impact fiscal.
+
+Comme l’expérience l’a démontré, promouvoir la rigueur réglementaire, la collecte fiscale et la professionnalisation du secteur est la stratégie la plus efficace pour garantir un équilibre juste entre durabilité et activité économique, tout en préservant le tissu résidentiel et la valeur économique de la location touristique.`,
+    category: "Noticias del sector",
+    date: "2025-01-21",
+    readTime: 5,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/aparture.jpg",
+    lang: "fr",
+  },
+  {
+    id: "31231",
+    slug: "juan-cubo-avva-pro-room-talks-locations-touristiques-malaga",
+    title: "Juan Cubo (AVVAPro) : “On ne peut pas faire de politique sociale avec la propriété d’autrui”",
+    excerpt: "Lors d’un échange récent avec Roomonitor, Juan Cubo, PDG de Cubos Holiday Homes et président de l’Association des Professionnels des Locations Touristiques et Appartements d’Andalousie (AVVAPro), a partagé ses réflexions sur la nouvelle réglementatio",
+    content: `Lors d’un échange récent avec Roomonitor, Juan Cubo, PDG de Cubos Holiday Homes et président de l’Association des Professionnels des Locations Touristiques et Appartements d’Andalousie (AVVAPro), a partagé ses réflexions sur [la nouvelle réglementation limitant les locations touristiques à Málaga](https://roomonitor.com/fr/actualites/zones-malaga-interdiction-locations-touristiques/). Selon Cubo, ces mesures, qui touchent 43 zones de la ville, représentent un défi majeur pour les gestionnaires de propriétés et les propriétaires.
+
+Vous pouvez retrouver l’intégralité de l’entretien sur la chaîne YouTube de Roomonitor. Il s’agit du premier épisode de notre série [ROOM Talks](https://www.youtube.com/watch?v=XpNPRAeVTyU&t).
+## Impact de la réglementation
+Pour Cubo, ces restrictions illustrent comment "les autorités agissent souvent de manière précipitée" en tentant de résoudre les problèmes de logement sans analyses approfondies. Il a affirmé que le véritable problème réside dans l’insuffisance de l’offre de logements pour répondre à la demande, et non dans l’existence des locations touristiques. Cubo a également souligné les effets négatifs que ces mesures pourraient avoir sur l’économie locale et les droits des propriétaires.
+## Le rôle de l’AVVAPro
+Cubo a expliqué que l’AVVAPro dépose des recours pour garantir que les réglementations soient équitables et basées sur des données fiables. Il a insisté sur l’engagement de l’association à maintenir un dialogue ouvert avec les autorités et à offrir un soutien aux propriétaires concernés.
+## L’importance du tourisme à Málaga
+Cubo a rappelé comment le tourisme a revitalisé les quartiers historiques de Málaga, qui étaient autrefois en déclin. "Il y a 20 ans, le centre-ville était abandonné ; aujourd’hui, c’est une zone dynamique grâce aux investissements réalisés par de nombreux propriétaires", a-t-il déclaré. Il a également souligné que la population du centre-ville a augmenté ces dernières années, un changement qu’il attribue en partie à la stimulation économique apportée par le tourisme.
+## Un appel à la réflexion
+Le président de l’AVVAPro a conclu en appelant les autorités à adopter une approche plus réfléchie avant de mettre en œuvre des réglementations qui pourraient avoir des effets contre-productifs. "On ne peut pas faire de politique sociale avec la propriété d’autrui", a-t-il affirmé. Cubo a également averti que l’ensemble des restrictions imposées par les différentes administrations "reviennent de facto à éliminer toute autre option pour les propriétaires que la location longue durée".`,
+    category: "Noticias del sector",
+    date: "2025-01-20",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/Captura-de-pantalla-2025-01-20-a-las-11.01.07.png",
+    lang: "fr",
+  },
+  {
+    id: "31066",
+    slug: "zones-malaga-interdiction-logements-touristiques",
+    title: "Les 43 zones de Malaga où les nouveaux logements touristiques sont désormais interdits",
+    excerpt: "Le 14 janvier 2025, une nouvelle réglementation municipale est entrée en vigueur à Malaga, interdisant l'enregistrement de nouveaux logements touristiques dans 43 zones de la ville. Cette mesure vise à réguler l’offre touristique dans les quartiers o",
+    content: `Le 14 janvier 2025, une nouvelle réglementation municipale est entrée en vigueur à Malaga, interdisant l'enregistrement de nouveaux **logements touristiques** dans 43 zones de la ville. Cette mesure vise à réguler l’offre touristique dans les quartiers où la concentration élevée d’appartements touristiques dépasse **8 % du parc résidentiel**, afin de garantir un équilibre entre l’activité touristique et les besoins en logements des résidents locaux.
+## Que prévoit cette nouvelle réglementation ?
+La réglementation divise Malaga en trois zones, en fonction de la densité des logements touristiques :
+
+ 	- **Zone de réduction :** Inclut 43 quartiers où les logements touristiques représentent plus de 8 % du parc résidentiel. Aucun nouvel enregistrement n’est autorisé dans ces zones.
+ 	- **Zone de limitation :** Comprend 32 quartiers où les logements touristiques représentent entre 4,53 % et 8 %. De nouveaux enregistrements sont autorisés jusqu’à atteindre le seuil de 8 %.
+ 	- **Zone de croissance modérée :** Quartiers où les logements touristiques représentent moins de 4,53 %. De nouveaux enregistrements sont permis, mais doivent respecter des conditions spécifiques, comme des entrées séparées et des services indépendants.
+
+La réglementation prévoit également des amendes pouvant atteindre **50 000 euros** pour ceux qui exploitent des logements touristiques sans licence ou en violation des exigences établies.
+## Les quartiers touchés par l’interdiction
+Parmi les quartiers les plus emblématiques de Malaga inclus dans la **zone de réduction**, on trouve :
+
+ 	- Centre historique
+ 	- La Malagueta
+ 	- El Ejido
+ 	- La Merced
+ 	- Pedregalejo Playa
+ 	- La Trinidad
+ 	- Plaza de Toros Vieja
+ 	- Santa Paula-Miramar
+ 	- Pacífico
+ 	- Torres de la Serna
+
+Au total, **43 quartiers** ont été identifiés où il ne sera plus possible de déclarer de nouveaux logements touristiques. Consultez la [liste complète ici](https://www.diariosur.es/turismo/entra-vigor-prohibicion-viviendas-turisticas-zonas-capital-20250113082422-nt.html?ref=https%3A%2F%2Fwww.diariosur.es%2Fturismo%2Fentra-vigor-prohibicion-viviendas-turisticas-zonas-capital-20250113082422-nt.html).
+## Pourquoi cette mesure a-t-elle été mise en place ?
+L’offre de locations touristiques à Malaga a considérablement augmenté ces dernières années. Selon des études récentes, les logements touristiques représentent une part importante du parc résidentiel dans certaines zones, ce qui a créé des tensions entre voisins, propriétaires et gestionnaires de biens.
+
+Avec cette réglementation, la mairie de Malaga cherche à assurer un développement touristique durable qui respecte le droit au logement et évite la gentrification dans les quartiers les plus touchés.
+## Impact pour les gestionnaires de biens
+Pour les gestionnaires de biens à Malaga, cette réglementation implique de s’adapter à un environnement réglementaire plus strict. Ceux qui exploitent déjà des logements touristiques dans les zones concernées doivent s’assurer de respecter toutes les exigences légales pour éviter des sanctions. Par ailleurs, dans les zones de limitation et de croissance modérée, les nouveaux enregistrements devront répondre à des critères supplémentaires, comme garantir des entrées indépendantes pour les visiteurs.
+
+Chez **Roomonitor**, nous comprenons l’importance de respecter les réglementations locales et de gérer les propriétés de manière responsable. Nos solutions de [**surveillance du bruit**](https://roomonitor.com/fr/surveillance-bruit/) et nos services d’[**Alarm Assistant**](https://roomonitor.com/fr/alarm-assistant/) aident les gestionnaires à maintenir une coexistence harmonieuse dans les communautés tout en optimisant leurs opérations.
+
+Si vous souhaitez en savoir plus sur la façon dont nos outils peuvent vous aider à vous adapter à ce nouveau cadre réglementaire à Malaga, [contactez-nous ici](https://roomonitor.com/fr/contactez-nous/).`,
+    category: "Noticias del sector",
+    date: "2025-01-15",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-vlasceanu-29151125-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "31029",
+    slug: "mesures-gouvernement-locations-touristiques-espagne",
+    title: "Les 12 nouvelles mesures du gouvernement espagnol et leur impact sur les locations touristiques",
+    excerpt: "Pour tenter d’apporter une solution à la crise du logement en Espagne, Pedro Sánchez a annoncé un ensemble de 12 mesures incluant des réglementations spécifiques pour les locations touristiques. Ces propositions visent à équilibrer l’offre de locatio",
+    content: `Pour tenter d’apporter une solution à la crise du logement en Espagne, Pedro Sánchez a annoncé un ensemble de 12 mesures incluant des réglementations spécifiques pour les **locations touristiques**. Ces propositions visent à équilibrer l’offre de locations de courte durée tout en garantissant l’accès au logement pour les résidents, notamment dans les grandes villes où la pression immobilière est particulièrement forte.
+
+Parmi ces mesures, une réforme fiscale prévoit de considérer les locations touristiques comme une activité économique ([comme cela a été annoncé il y a quelques mois](https://www.hosteltur.com/167761_ia-innovacion-y-sostenibilidad-protagonistas-de-fiturtechy-2025.html)), avec une augmentation prévue de la **TVA à 21 % sur les locations touristiques**. Par ailleurs, un fonds sera mis en place pour permettre aux autorités régionales et locales de renforcer les contrôles et de lutter contre les locations touristiques illégales.
+## Mesures spécifiques pour les locations touristiques
+Les mesures proposées incluent des réglementations qui concernent directement le secteur des **locations de courte durée**, notamment les propriétés disponibles sur des plateformes comme Airbnb :
+
+ 	- **Enregistrement obligatoire :** Toutes les propriétés destinées à la location touristique devront être inscrites dans un registre national unique, ce qui facilitera le contrôle et la conformité réglementaire.
+ 	- **Limites de durée :** Restrictions sur la durée maximale des locations touristiques dans les zones où la demande de logements est élevée.
+ 	- **Taxation ciblée :** Introduction de nouvelles taxes sur les locations touristiques afin de redistribuer les revenus vers des initiatives de logement public.
+
+## L’impact sur le marché des locations de courte durée
+Ces mesures ont suscité des préoccupations au sein du secteur des **locations de courte durée**. Selon des experts, les exigences strictes, telles que l’enregistrement obligatoire, pourraient réduire considérablement le nombre de locations touristiques disponibles sur des plateformes comme Airbnb, en particulier dans les zones urbaines densément peuplées.
+
+Cependant, ces réglementations pourraient également favoriser la professionnalisation du secteur, en éliminant les opérateurs non conformes et en promouvant un modèle plus durable, respectueux de la coexistence entre voisins et de l’accès au logement pour les résidents locaux.
+## Pourquoi ces mesures sont-elles nécessaires ?
+L’augmentation de l’offre de locations touristiques en Espagne a été identifiée comme l’une des causes de la hausse des prix du logement dans des villes comme Barcelone, Madrid ou Malaga. Lors de son intervention, Pedro Sánchez a déclaré : « Dans une situation d’urgence comme celle que vivent des millions de nos concitoyens, nous n’avons pas besoin de plus d’Airbnbs, mais de plus de logements. »
+
+Il a également ajouté : « Le devoir des administrations publiques est de privilégier l’usage résidentiel des logements et d’empêcher l’expansion incontrôlée de l’usage touristique et spéculatif, qui se fait au détriment des habitants locaux. » Découvrez les détails des mesures [ici](https://www.hosteltur.com/167761_ia-innovacion-y-sostenibilidad-protagonistas-de-fiturtechy-2025.html).
+## Le rôle de Roomonitor dans cette régulation et cette coexistence
+Dans ce contexte, les gestionnaires de propriétés touristiques doivent suivre de près ces changements législatifs afin d’adapter leurs opérations et de garantir leur conformité. Cela inclut l’enregistrement des propriétés dans le système national ainsi que la mise en œuvre de bonnes pratiques pour favoriser la coexistence au sein des communautés locales.
+
+Chez **Roomonitor**, nous comprenons l’importance de s’adapter aux réglementations locales et de promouvoir une gestion responsable des locations touristiques. Nos solutions technologiques, telles que la [**surveillance du bruit**](https://roomonitor.com/es/monitorizacion-de-ruido/) et l’[**Alarm Assistant**](https://roomonitor.com/es/alarm-assistant/), aident les gestionnaires à garantir une coexistence harmonieuse et à respecter les exigences légales.
+
+De plus, notre expertise en gestion immobilière permet d’optimiser les opérations quotidiennes, tout en assurant la satisfaction des invités et le respect des communautés locales.
+
+Vous souhaitez découvrir comment nos outils peuvent vous aider dans ce nouveau contexte ? [Contactez-nous](https://roomonitor.com/es/contacto/) pour en savoir plus.`,
+    category: "Noticias del sector",
+    date: "2025-01-14",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-heyho-7746918-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "31041",
+    slug: "seville-appartements-touristiques-approbation-voisins",
+    title: "Les appartements touristiques à Séville nécessiteront désormais l'approbation des voisins",
+    excerpt: "La mairie de Séville a approuvé une nouvelle réglementation qui affecte directement l'ouverture de nouveaux appartements touristiques. À partir de maintenant, il sera obligatoire d'obtenir le consentement de la communauté des voisins pour pouvoir enr",
+    content: `La mairie de Séville a approuvé une nouvelle réglementation qui affecte directement l'ouverture de **nouveaux appartements touristiques**. À partir de maintenant, il sera obligatoire d'obtenir le consentement de la communauté des voisins pour pouvoir enregistrer et exploiter ces types d'hébergements. Cette mesure, pionnière en Andalousie, vise à trouver un équilibre entre le développement touristique et la coexistence des communautés locales dans les quartiers de la ville.
+## Que signifie cette nouvelle réglementation ?
+Jusqu'à présent, tout propriétaire pouvait enregistrer un bien comme logement touristique sans consulter ni informer ses voisins. Cependant, avec le nouveau changement législatif, les futurs appartements touristiques à Séville devront obtenir une autorisation préalable de la communauté des propriétaires. Cela signifie que :
+
+ 	- La communauté doit discuter et approuver l'utilisation touristique du bien lors d'une réunion de copropriété.
+ 	- Un **quorum favorable** de 60 % des voix sera nécessaire pour accorder l'autorisation.
+ 	- En cas de non-approbation, le propriétaire ne pourra pas enregistrer le bien comme appartement touristique.
+
+Cette mesure n'affecte pas les appartements touristiques déjà enregistrés, mais elle établit un cadre plus restrictif pour les nouvelles inscriptions dans le secteur.
+## Pourquoi cette mesure a-t-elle été mise en place ?
+La popularité des **appartements touristiques** à Séville a considérablement augmenté ces dernières années, en particulier dans des zones centrales comme Santa Cruz, Triana ou le centre historique. Cependant, cette croissance a entraîné des conflits dans les communautés résidentielles, liés à :
+
+ 	- Le bruit et les nuisances causées par une utilisation plus intensive des logements.
+ 	- Un plus grand renouvellement des personnes, ce qui affecte l'harmonie dans les bâtiments.
+ 	- L'augmentation des prix des loyers, rendant l'accès au logement plus difficile pour les résidents locaux.
+
+L'objectif de la mairie est de préserver la coexistence et de garantir que les communautés aient leur mot à dire sur l'inclusion des appartements touristiques dans leurs immeubles. Vous pouvez lire davantage à ce sujet dans [cet article](https://www.diariodesevilla.es/sevilla/cambio-legal-obliga-nuevos-pisos-turisticos-consentimiento-comunidad-vecinos_0_2003121078.html).
+## Impact sur les gestionnaires de propriétés
+Cette réglementation représente un nouveau défi pour les gestionnaires de propriétés à Séville, qui devront obtenir l'approbation des voisins avant de démarrer un projet de location touristique. Ce changement pourrait ralentir le processus d'enregistrement et limiter la disponibilité de nouvelles propriétés sur le marché touristique.
+
+Cependant, cela représente également une opportunité pour renforcer les bonnes pratiques et promouvoir une gestion plus responsable et respectueuse des communautés locales. C'est quelque chose que nous défendons chez Roomonitor et [**weRespect**](https://werespect.net/), où nous priorisons la coexistence entre voisins pour garantir un modèle de tourisme durable.
+
+Nos solutions, telles que la [**surveillance du bruit**](https://roomonitor.com/es/monitorizacion-de-ruido/), aident à prévenir les conflits au sein des communautés en garantissant que les niveaux de bruit respectent les normes. De plus, notre service [**Alarm Assistant**](https://roomonitor.com/es/alarm-assistant/) offre un soutien professionnel pour gérer toute situation en temps réel.
+
+Si vous gérez des propriétés à Séville, nous vous invitons à découvrir nos outils pour optimiser la gestion des appartements touristiques et garantir une coexistence harmonieuse.`,
+    category: "Noticias del sector",
+    date: "2025-01-11",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-javierbalseiro-22191978-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "31035",
+    slug: "grece-regulation-locations-touristiques-crise-logement",
+    title: "La Grèce renforce les régulations des locations touristiques : qu'est-ce que cela signifie pour le secteur ?",
+    excerpt: "Le gouvernement grec a adopté une nouvelle législation visant à réduire drastiquement le nombre d'hébergements touristiques gérés par des plateformes comme Airbnb, en réponse à une crise du logement croissante. Cette mesure, qui comprend des restrict",
+    content: `Le gouvernement grec a adopté une nouvelle législation visant à réduire drastiquement le nombre d'hébergements touristiques gérés par des plateformes comme Airbnb, en réponse à une crise du logement croissante. Cette mesure, qui comprend des restrictions plus strictes et des amendes plus sévères, a suscité un intense débat sur l'impact des locations de courte durée sur le marché immobilier et le secteur touristique du pays.
+## Les nouvelles régulations en détail
+La nouvelle législation interdit aux entreprises et aux personnes morales de gérer plus de deux propriétés sur des plateformes de location de courte durée telles que **Airbnb** ou **Booking.com**. De plus, des exigences plus strictes sont imposées pour l'enregistrement et l'exploitation de ces hébergements, y compris :
+
+ 	- Inscription obligatoire au registre national des hébergements touristiques.
+ 	- Amendes pouvant atteindre 50 000 euros pour ceux qui exercent sans licence ou enfreignent la réglementation.
+ 	- Restrictions spécifiques dans les zones urbaines où la pénurie de logements est la plus aiguë.
+
+Ces mesures visent à alléger la pression sur le marché immobilier dans les zones où l'offre de logements pour les résidents a été affectée.
+## Le logement en Grèce : un contexte complexe
+Ces dernières années, la Grèce fait face à une **crise du logement** croissante, en particulier dans des villes comme Athènes. Les principales causes incluent :
+
+ 	- **Augmentation des prix :** Dans certaines zones, les loyers ont augmenté de 30 % en raison de la demande touristique et de l'offre insuffisante de logements.
+ 	- **Changement d'usage des logements :** De nombreuses propriétés sont passées de résidences permanentes à des locations de courte durée.
+ 	- **Facteurs socio-économiques :** La reprise économique et le retour du tourisme après la pandémie ont intensifié la concurrence pour les espaces habitables [(source)](https://www.preferente.com/noticias-de-hoteles/grecia-la-vivienda-vacacional-acusada-de-la-crisis-habitacional-336499.html).
+
+## Impact sur le secteur des locations touristiques
+Ces restrictions auront un impact significatif sur les gestionnaires de propriétés en Grèce, qui devront adapter leurs opérations aux nouvelles régulations. Selon les estimations, des milliers de locations touristiques pourraient fermer dans les mois à venir, ce qui pourrait bouleverser le paysage touristique du pays. Cependant, ces mesures visent également à équilibrer les besoins des résidents locaux avec les opportunités offertes par le secteur touristique [(source)](https://greekreporter.com/2025/01/09/greece-bans-thousands-airbnb-accommodations/).
+
+La situation en Grèce reflète un défi commun dans de nombreuses villes européennes : comment réguler les locations touristiques pour éviter la gentrification et garantir l'accès au logement. Des pays comme l'Espagne, l'Italie et la France envisagent des mesures similaires, ce qui souligne l'importance de trouver des solutions équilibrées qui bénéficient à la fois aux résidents et aux gestionnaires de propriétés.
+## Le rôle de Roomonitor dans ce nouveau contexte
+Chez [**Roomonitor**](https://roomonitor.com/es/), nous comprenons l'importance de gérer les propriétés de manière durable et conforme aux régulations locales. Nos solutions de [**surveillance du bruit**](https://roomonitor.com/es/monitorizacion-de-ruido/) et de services aux invités 24/7 sont des outils essentiels pour garantir l'harmonie dans les quartiers et optimiser la gestion des propriétés dans un environnement de plus en plus réglementé.
+
+Si vous gérez des propriétés en Grèce ou dans d'autres marchés touchés par des régulations similaires, contactez-nous pour découvrir comment nous pouvons vous aider à vous adapter à ce nouveau paysage.`,
+    category: "Noticias del sector",
+    date: "2025-01-09",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-jimmy-teoh-294331-951539-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "30557",
+    slug: "airbnb-reglementation-equitable-locations-courte-duree",
+    title: "Airbnb prône une réglementation équitable et basée sur les données pour les locations de courte durée",
+    excerpt: "Alors que le débat sur la crise du logement en Espagne fait rage, Airbnb propose des mesures basées sur des données concrètes pour encadrer les locations de courte durée sans nuire au marché résidentiel. Cette approche, appuyée par une étude approfon",
+    content: `Alors que le débat sur la crise du logement en Espagne fait rage, **Airbnb** propose des mesures basées sur des données concrètes pour encadrer les **locations de courte durée** sans nuire au marché résidentiel. Cette approche, appuyée par une [**étude**](https://news.airbnb.com/wp-content/uploads/sites/4/2024/12/Informe-PwC-Impacto-del-alquiler-de-corta-duracion-en-Espana.pdf) approfondie réalisée par PwC, démontre que l’impact des locations touristiques sur le marché immobilier est limité et que des solutions structurelles doivent être mises en place pour répondre à cette crise.
+## Le contexte du marché du logement en Espagne
+La crise du logement en Espagne est un problème complexe, qui dépasse largement l’impact des locations touristiques. Selon les dernières données:
+
+ 	- En 2023, pour chaque nouveau logement construit, trois nouveaux foyers ont vu le jour, générant un déficit de **183 000 unités**.
+ 	- L’Espagne compte près de **4 millions de logements vacants**, soit 14 % du parc immobilier total.
+ 	- Les locations touristiques représentent une part très réduite: elles constituent seulement **1,09%** des logements à Barcelone et **1,05%** à Madrid, les deux villes les plus touristiques du pays.
+ 	- **Les locations de courte durée représentent seulement 1,3% du parc de logements**, avec moins de 130 000 propriétés dédiées au tourisme (soit 0,5 % du parc total).
+
+Malgré les restrictions imposées dans certaines zones, comme à Barcelone, les résultats ne sont pas toujours au rendez-vous. Entre 2020 et 2023, le nombre de **locations de courte durée (LCD)** à Barcelone a diminué de 56 %, tandis que les loyers ont augmenté de 24 % sur la même période, ce qui montre que d’autres facteurs sont responsables de la hausse des prix.
+## Les facteurs influençant la crise du logement
+Au-delà des locations touristiques, des problèmes structurels affectent l’accès au logement en Espagne:
+
+ 	- **Insuffisance de logements abordables:** Les investissements dans le logement social restent insuffisants, limitant l’offre pour les populations les plus vulnérables.
+ 	- **Urbanisation non maîtrisée:** L’absence de planification urbaine dans de nombreuses villes entraîne une augmentation des prix du foncier et freine le développement de nouveaux projets immobiliers.
+ 	- **Taux élevé de logements vacants:** De nombreuses propriétés restent inutilisées en raison de contraintes juridiques, fiscales ou liées à leur entretien.
+ 	- **Évolution démographique et changements sociaux:** L’augmentation des foyers unipersonnels et la migration vers les zones urbaines exercent une pression supplémentaire sur l’offre existante.
+
+## La proposition d’Airbnb: des mesures basées sur les données
+Face à ce contexte, Airbnb a présenté un ensemble de mesures visant à encadrer les **locations de courte durée** de manière équilibrée et efficace. Parmi ces initiatives figurent:
+
+ 	- La création d’un **registre obligatoire** des hôtes pour garantir la transparence et faciliter le contrôle par les autorités.
+ 	- La mise en place de **limites d’utilisation des propriétés** destinées aux locations touristiques afin de préserver la qualité de vie des quartiers résidentiels.
+ 	- Une collaboration avec les gouvernements locaux pour adapter les réglementations aux besoins spécifiques de chaque ville ou région.
+
+Ces propositions répondent aux préoccupations des communautés locales tout en visant à professionnaliser le secteur et à s’assurer que les bénéfices du tourisme soient équitablement répartis.
+## Un impact positif pour les gestionnaires de propriétés
+Pour les gestionnaires de propriétés, ces réglementations représentent une opportunité de se démarquer en adoptant des outils modernes et des pratiques professionnelles. Chez [**Roomonitor**](https://roomonitor.com/fr/), nous proposons des solutions avancées telles que la **surveillance sonore en temps réel** et des services d’assistance aux invités 24/7, permettant de répondre aux exigences de qualité et de coexistence promues par ces réglementations.
+
+Nos outils permettent également d’optimiser l’expérience des invités et de gérer efficacement les propriétés, offrant ainsi aux gestionnaires la flexibilité nécessaire pour s’adapter rapidement aux nouveaux cadres réglementaires.
+## Vers un tourisme plus durable
+L’analyse menée par Airbnb montre clairement que les **locations de courte durée** ne sont pas la principale cause de la crise du logement en Espagne. Au contraire, des facteurs tels que le manque de logements sociaux, les nombreux logements vacants et la croissance démographique constituent des défis plus urgents à relever.
+
+Chez **Roomonitor**, nous soutenons les initiatives qui allient données, technologies et responsabilité sociale pour bâtir un tourisme plus durable et responsable. Si vous souhaitez découvrir comment nos solutions peuvent vous aider à gérer vos propriétés dans ce nouveau contexte réglementaire, [contactez-nous](https://roomonitor.com/fr/).`,
+    category: "Noticias del sector",
+    date: "2024-12-07",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/12/buildings-5003132_1920.jpg",
+    lang: "fr",
+  },
+  {
+    id: "30473",
+    slug: "nouvelle-reglementation-enregistrement-voyageurs-2-decembre",
+    title: "Tout ce qu’il faut savoir sur la nouvelle réglementation d’enregistrement des voyageurs qui entre en vigueur le 2 décembre",
+    excerpt: "Le 2 décembre prochain marque un tournant pour les gestionnaires de propriétés en Espagne avec l’entrée en vigueur du RD 933/2021. Cette nouvelle réglementation impose des obligations pour l’enregistrement et l’identification des voyageurs dans les l",
+    content: `Le **2 décembre** prochain marque un tournant pour les **gestionnaires de propriétés** en Espagne avec l’entrée en vigueur du **RD 933/2021**. Cette nouvelle réglementation impose des obligations pour l’enregistrement et l’identification des voyageurs dans les **locations de courte durée**, renforçant ainsi la sécurité et le respect des normes légales dans le secteur.
+## Qu’est-ce que le RD 933/2021 et pourquoi est-il si important?
+Le **RD 933/2021** vise à normaliser le processus d’enregistrement des voyageurs, couvrant aussi bien la collecte que la transmission des données des personnes séjournant dans des **locations touristiques**. Cette réglementation ambitionne de renforcer la coopération entre les gestionnaires de propriétés et les autorités locales afin d’assurer un meilleur contrôle des hébergements.
+
+Voici les principales obligations introduites par cette nouvelle réglementation:
+
+ 	- Enregistrer les informations d’identité de chaque voyageur lors de l’enregistrement (check-in).
+ 	- Transmettre ces informations aux autorités locales (Police ou Garde civile) selon les exigences.
+ 	- Conserver ces données pendant une durée définie pour d’éventuels contrôles.
+
+## Quel impact pour les gestionnaires de locations de courte durée?
+Pour les **gestionnaires de propriétés**, le RD 933/2021 entraîne une augmentation des tâches administratives. En plus de gérer les réservations et de garantir une expérience optimale aux voyageurs, ils devront désormais mettre en place des systèmes pour répondre aux nouvelles exigences d’enregistrement.
+
+Des plateformes comme [**Airbnb**](https://www.airbnb.fr/help/article/3376) ont déjà développé des outils spécifiques pour aider les hôtes à collecter et transmettre les informations des voyageurs, facilitant ainsi le respect des nouvelles règles. Ces solutions sont particulièrement utiles pour automatiser le processus et limiter les erreurs.
+## Comment se conformer à cette nouvelle réglementation?
+Voici les étapes essentielles à suivre pour respecter ces nouvelles exigences:
+
+ 	- **Mettez à jour vos procédures de check-in:** Adoptez des systèmes permettant d’enregistrer rapidement et efficacement les données des voyageurs.
+ 	- **Utilisez des outils technologiques:** Optez pour des solutions proposées par Airbnb ou d’autres plateformes de gestion pour automatiser l’enregistrement et la transmission des données.
+ 	- **Informez-vous sur la réglementation:** Comprendre les détails du RD 933/2021 et ses implications est essentiel pour éviter les sanctions.
+ 	- **Assurez la sécurité des données:** Veillez à ce que les informations collectées respectent la réglementation sur la protection des données.
+
+## Que risquez-vous en cas de non-conformité?
+Le non-respect de cette réglementation peut entraîner des sanctions financières et juridiques. Il est donc indispensable de se préparer avant son entrée en vigueur. Chez **Roomonitor**, nous vous recommandons de mettre en place les outils nécessaires pour garantir une mise en conformité simple et efficace.
+
+Le RD 933/2021 représente une évolution majeure pour le secteur des **locations de courte durée**. Même si ces nouvelles obligations peuvent sembler complexes, des solutions comme Airbnb et d’autres outils de gestion spécialisés peuvent simplifier ce processus.
+
+Chez **Roomonitor**, nous proposons des outils innovants qui non seulement améliorent l’expérience des voyageurs, mais soutiennent également les gestionnaires de propriétés dans leur mise en conformité avec les obligations légales. [Visitez notre site web](https://roomonitor.com/fr/) pour découvrir comment nous pouvons vous aider à vous adapter à ces changements.`,
+    category: "Noticias del sector",
+    date: "2024-11-29",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/pexels-wildlittlethingsphoto-2017802-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "30444",
+    slug: "roomonitor-scale-france-2024",
+    title: "Scale France 2024, l'événement incontournable du secteur de la location de courte durée",
+    excerpt: "Chez Roomonitor, nous sommes fiers d'avoir été l'un des sponsors de Scale France 2024, l'événement phare du secteur de la location de courte durée qui a réuni les principaux acteurs de l'industrie à Paris. Cette rencontre, qui s'est tenue les 27 et 2",
+    content: `Chez **Roomonitor**, nous sommes fiers d'avoir été l'un des sponsors de **Scale France 2024**, l'événement phare du secteur de la **location de courte durée** qui a réuni les principaux acteurs de l'industrie à Paris. Cette rencontre, qui s'est tenue les 27 et 28 novembre, a été une occasion unique d'échanger des connaissances, de créer des liens précieux et d'explorer les dernières innovations du secteur.
+## Un événement pour la communauté de la location de courte durée
+**Scale France 2024** a rassemblé plus de professionnels du secteur, incluant des **gestionnaires de propriétés**, des **plateformes de location de vacances** et des prestataires de services clés tels que Roomonitor. L'agenda comprenait des conférences d'experts, des tables rondes sur les tendances majeures du marché et des espaces dédiés au networking.
+
+Lors de notre participation, notre équipe a eu l'opportunité de présenter nos solutions avancées pour la [surveillance en temps réel du bruit](https://roomonitor.com/fr/roomonitor/), ainsi que nos services conçus pour améliorer la **convivialité entre voisins** et la gestion efficace des propriétés.
+
+﻿
+
+ 
+## Innovation, networking et durabilité
+Un des points forts de **Scale France** a été l'accent mis sur la durabilité et les pratiques responsables dans la **location de courte durée**. Nous sommes fiers d'avoir contribué à ce dialogue, en partageant notre expérience sur la manière dont la technologie peut aider à réduire les conflits avec les voisins et garantir une coexistence plus harmonieuse.
+
+De plus, cet événement nous a permis de renforcer nos relations avec nos collaborateurs actuels et d'explorer de nouvelles opportunités de partenariats avec d'autres leaders du secteur.
+
+Roomonitor a également été le sponsor de la Before Scale Party qui s'est déroulée le vendredi 26 novembre au Favela Chic, en présence de plus de 100 gestionnaires de propriétés de toute la France, ainsi que des partenaires tels que Mag'bnb, Beyond et Avantio, qui se sont joints à nous pour une soirée d'échanges et de networking.
+## Roomonitor et son engagement envers le secteur de la location de courte durée
+Chez Roomonitor, nous restons déterminés à soutenir la croissance de la **location de courte durée** grâce à des solutions technologiques innovantes qui privilégient à la fois la satisfaction des invités et la bonne entente avec les communautés locales.
+
+Si vous n'avez pas pu assister à [**Scale France 2024**](https://france.scalerentals.show/), nous vous invitons à découvrir nos solutions [sur notre site web](https://roomonitor.com/fr/) et à voir comment nous pouvons vous aider à gérer vos propriétés de manière plus efficace et responsable.
+
+Rendez-vous au prochain grand événement du secteur !`,
+    category: "Eventos",
+    date: "2024-11-28",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/scale-3.jpeg",
+    lang: "fr",
+  },
+  {
+    id: "30458",
+    slug: "vitur-forum-madrid-avenir-hebergement-flexible",
+    title: "Vitur Forum Madrid 2024: l’événement incontournable sur l’avenir de l’hébergement flexible",
+    excerpt: "Le Vitur Forum Madrid, qui s’est tenu le 27 novembre dernier, s’est affirmé comme l’un des événements les plus marquants du secteur de la location de courte durée et de l’hébergement flexible en Espagne. Chez Roomonitor, nous avons eu l’honneur de pa",
+    content: `Le **Vitur Forum Madrid**, qui s’est tenu le 27 novembre dernier, s’est affirmé comme l’un des événements les plus marquants du secteur de la **location de courte durée** et de l’**hébergement flexible** en Espagne. Chez **Roomonitor**, nous avons eu l’honneur de participer, de partager nos connaissances et de présenter notre vision sur l’optimisation de l’expérience des invités dans un environnement aussi dynamique.
+## L’événement exclusif qui façonne l’avenir de l’hébergement flexible
+[**Vitur Forum**](https://vitursummit.com/) s’est imposé comme la plateforme de référence pour l’organisation d’événements spécialisés dans le secteur touristique, réunissant les principaux **leaders, gestionnaires et institutions européennes**. Cet événement offre un espace unique pour débattre des nouvelles tendances et opportunités dans le domaine de l’**hébergement flexible**, un marché qui révolutionne la manière dont les individus séjournent et vivent dans les environnements urbains.
+
+Avec des présentations de haut niveau, des perspectives d’affaires novatrices et des opportunités de **networking** enrichissantes, le **Vitur Forum** se positionne comme le lieu incontournable où les esprits les plus innovants du secteur se réunissent pour façonner l’avenir de la **location touristique** et créer des connexions qui stimulent l’émergence de nouvelles idées et pratiques significatives.
+## Les thématiques clés du Vitur Forum Madrid 2024
+Le **Vitur Forum Madrid** a abordé une série de panels explorant des aspects essentiels pour le présent et l’avenir du secteur. Parmi les sujets mis en avant:
+
+ 	- **Le cadre réglementaire de l’hébergement flexible**: thème du panel d’ouverture, où le cadre normatif actuel de la Communauté de Madrid a été examiné. La nécessité d’une plus grande flexibilité dans un contexte touristique en constante évolution a été soulignée.
+ 	- **La marque comme élément différenciateur**: ce panel a exploré comment les opérateurs peuvent renforcer leur identité de marque pour se démarquer sur un marché compétitif.
+ 	- **Madrid comme destination de moyenne durée et d’hébergement d’affaires**: analyse de la façon dont la ville se positionne comme une référence internationale, notamment pour les voyageurs professionnels.
+ 	- **Adapter les investissements à la nouvelle demande**: discussions sur les opportunités d’investissement dans des secteurs tels que l’Hébergement de Moyenne Durée, le Corporate Housing et le Build-to-Rent (BTR).
+ 	- **Vers un modèle de ville durable**: sujet du panel de clôture, où l’impact de la situation politique et réglementaire sur l’évolution du secteur a été débattu.
+ 	- Lors de la présentation inaugurale, **Carlos Pérez-Lanzac de Lorca**, fondateur de VITUR, a partagé des données clés soulignant le leadership de l’Espagne dans le domaine de l’hébergement flexible.
+
+ 	- **Madrid, reconnue comme une destination internationale de premier plan**, figure parmi les 25 principales villes européennes en termes de **RevPAR**.
+ 	- **En 2023, la ville a atteint un record historique avec 7,85 millions de touristes internationaux**.
+
+## Optimisation, contrôle et expérience client dans le Flex Living
+Chez [**Roomonitor**](https://roomonitor.com/es/), nous avons eu l’opportunité de présenter une conférence intitulée "**Optimisation, contrôle et expérience client dans le Flex Living**", qui a suscité un vif intérêt. **Gabriel Pérez**, Head of Sales & Partnerships chez Roomonitor et Head of Public Relations chez weRespect, a partagé sa vision sur la manière dont les propriétés de location flexible peuvent équilibrer leurs opérations, l’expérience des invités et la cohabitation avec le voisinage.
+
+Lors de son intervention, Gabriel a expliqué comment les technologies avancées de surveillance du bruit et l’intégration de **ressources humaines** jouent un rôle clé dans la gestion 24/7 des propriétés. Cet équilibre optimise non seulement l’expérience des invités, mais garantit également un contrôle total des aspects opérationnels et de cohabitation. Gabriel a été rejoint par **Eduardo** **Suárez**, directeur de l'exploitation et cofondateur de Roomonitor.
+
+[caption id="attachment_30482" align="alignnone" width="1024"] Gabriel Pérez au Vitur Forum Madrid 2024[/caption]
+## Vitur Forum: un espace pour la collaboration et l’innovation
+Le **Vitur Forum** est un événement incontournable pour tous les acteurs du secteur de l’**hébergement flexible**. La plateforme vise à encourager l’innovation et le partage de connaissances, connectant les professionnels et les entreprises du tourisme afin de construire un écosystème solide autour de la **location touristique**. Ce forum joue un rôle clé pour échanger les bonnes pratiques, explorer les nouvelles tendances et générer des opportunités qui propulsent le secteur vers de nouveaux sommets.
+
+Chez **Roomonitor**, nous sommes convaincus que le succès dans le secteur de l’hébergement flexible repose sur l’intégration des technologies adéquates et sur la création d’expériences positives pour les invités, tout en gérant efficacement les aspects opérationnels.
+## Roomonitor au Vitur Forum: collaboration et croissance du secteur
+Ce type d’événements est fondamental pour la croissance de l’industrie et pour renforcer le travail collaboratif entre les différents acteurs de l’**hébergement flexible**. Nous sommes ravis d’avoir participé à cette expérience et d’avoir pu contribuer avec notre vision sur l’importance d’optimiser l’expérience des invités tout en assurant un contrôle rigoureux des propriétés et une bonne cohabitation.
+
+Si vous n’avez pas pu assister à l’événement, nous vous invitons à découvrir comment **Roomonitor** peut vous aider à optimiser la gestion de vos propriétés de location touristique. Visitez notre site web pour en savoir plus sur nos solutions innovantes de [surveillance du bruit en temps réel](https://roomonitor.com/es/) et d’amélioration de la cohabitation dans les propriétés locatives.
+
+Rendez-vous à la prochaine édition du **[Vitur Forum](https://vitursummit.com/vitur-summit-2025/)**!`,
+    category: "Eventos",
+    date: "2024-11-28",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/gabriel-vitur-forum.jpeg",
+    lang: "fr",
+  },
+  {
+    id: "30199",
+    slug: "rapport-octobre-roomonitor",
+    title: "Octobre en chiffres: le rapport mensuel de Roomonitor",
+    excerpt: "Chez Roomonitor, nous misons fermement sur la technologie et l’analyse de Big Data pour offrir des solutions innovantes et efficaces, non seulement dans le contrôle du bruit dans les appartements touristiques, mais aussi dans la gestion du service cl",
+    content: `Chez Roomonitor, nous misons fermement sur la technologie et l’**analyse de Big Data** pour offrir des solutions innovantes et efficaces, non seulement dans le **contrôle du bruit dans les appartements touristiques**, mais aussi dans la gestion du service client. Notre approche repose sur la **collecte et l’analyse de données en temps réel**, ce qui nous permet d’optimiser nos services et de garantir une expérience exceptionnelle, tant pour les propriétaires que pour les invités.
+
+[**Roomonitor**](https://roomonitor.com/fr/) s’impose comme la solution mondiale de référence pour le contrôle du bruit dans les appartements touristiques, offrant un service exceptionnel aux propriétaires et gestionnaires. Grâce à notre technologie avancée, nous ne nous contentons pas de maintenir un environnement harmonieux : nous renforçons également la confiance dans le secteur touristique.
+
+Voici les métriques du mois d'octobre qui illustrent la qualité de notre service.
+### Faits marquants d'octobre
+
+ 	- **Total des appels**: 14.680
+Ce chiffre représente le nombre total d’appels reçus en octobre, soulignant la forte demande pour nos services et la confiance accordée à notre équipe.
+ 	- **Temps moyen de traitement (AHT)**: 00:04:05
+Il s’agit du temps moyen dont nos agents ont besoin pour compléter une transaction, avec **59.936 minutes** d’interaction humaine enregistrées au cours du mois.
+ 	- **Temps moyen de résolution par intervention**: 00:55:15
+Le temps moyen nécessaire à nos agents pour résoudre tout type d'intervention.
+ 	- **Temps moyen de résolution des alarmes**: 00:27:20
+Notre temps de réponse pour les incidents d’alarme reste constamment inférieur à 30 minutes.
+
+### Taux de résolution
+
+ 	- **Résolution à distance**: 89.25 %
+Une grande partie des problèmes a été résolue grâce à notre support à distance, démontrant l’efficacité de notre équipe dans la **résolution de problèmes** sans nécessiter d’intervention physique.
+ 	- **Interventions de [service sur le terrain](https://roomonitor.com/fr/?page_id=26780)**: 10.75 %
+Que ce soit pour les check-ins, les ouvertures aux invités, les remises de clés, les inspections des appartements ou d'autres services de maintenance nécessitant une intervention sur place, toutes les interventions résolues par notre **équipe sur le terrain** garantissent qu'un problème non gérable à distance soit pris en charge efficacement.
+
+### Satisfaction des clients
+
+ 	- **Score CSAT**: 97.56 %
+Cette métrique reflète la satisfaction générale de nos clients, montrant un haut niveau d'approbation pour notre service.
+
+### Engagement pour la tranquillité d’esprit
+Chez Roomonitor, nous comprenons l’importance de maintenir un environnement paisible dans les appartements touristiques. Nos dispositifs surveillent le bruit en temps réel, garantissant le respect de la vie privée en n’enregistrant pas l’audio. Si les niveaux de bruit dépassent les limites établies, des alertes sont envoyées aux propriétaires et gestionnaires, qui peuvent alors agir immédiatement.
+
+Notre [**Alarm Assistant**](https://roomonitor.com/fr/alarm-assistant-2/) est un service professionnel qui gère ces alertes de manière efficace, en soutenant ainsi les [**gestionnaires de propriétés**](https://roomonitor.com/fr/?page_id=27002) dans le service client. Si nous ne parvenons pas à joindre les invités par téléphone, un concierge de nuit se rend sur place pour s'assurer que les niveaux sonores soient corrigés dans un délai maximum de 30 minutes.
+
+Toutes nos opérations sont minutieusement surveillées, nous permettant d'évaluer la qualité de notre service et d'assurer à nos clients que nous leur offrons la meilleure solution professionnelle possible. Ce mois d'octobre, nous avons observé d’excellents indicateurs, confirmant notre engagement à maintenir des normes élevées au-delà de la saison estivale.
+### Méthodologie: Big Data
+Pour cette analyse de données, nous utilisons les informations recueillies par nos dispositifs installés dans les appartements touristiques. Ces dispositifs sont connectés à nos serveurs, analysant en temps réel les niveaux de pression sonore et enregistrant des millions de valeurs, ce qui nous permet de produire des rapports précis sur nos interventions et leur efficacité.
+
+Parallèlement, nous suivons le temps de gestion de tous nos agents, qu’ils soient dans notre équipe mondiale à distance ou parmi nos agents sur le terrain, afin de garantir les plus hauts niveaux d’excellence.`,
+    category: "Noticias del sector",
+    date: "2024-11-04",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/6.jpg",
+    lang: "fr",
+  },
+  {
+    id: "30179",
+    slug: "simultaneite-service-client-roomonitor",
+    title: "L'importance de la simultanéité dans le service client: la valeur de Roomonitor pour le secteur touristique",
+    excerpt: "Dans le secteur de l'hospitalité, l'attention au client est une pièce fondamentale pour garantir une expérience positive tant pour les invités que pour les gestionnaires de propriétés. En effet, l'un des défis les plus courants auxquels font face les",
+    content: `Dans le secteur de l'hospitalité, l'attention au client est une pièce fondamentale pour garantir une expérience positive tant pour les invités que pour les gestionnaires de propriétés. En effet, l'un des défis les plus courants auxquels font face les gestionnaires est la nécessité de répondre à plusieurs demandes en même temps, ce qui peut s'avérer complexe durant les périodes de forte occupation. C'est ici que **Roomonitor** devient un allié stratégique, grâce à notre service d'attention client, où **nous répondons aux invités 24/7**, conçu spécifiquement pour assurer une réponse rapide et efficace à toute situation.
+
+De plus, notre équipe est préparée à gérer simultanément plusieurs appels et demandes d'invités à distance, à tout moment et depuis n'importe quel endroit du monde. En réalité, nous ne sommes pas un centre d'appels ordinaire ; **nous disposons d'une structure opérationnelle robuste et avancée**, optimisée pour offrir une expérience de service intégrale. Ainsi, cette approche nous permet d'opérer en mode distant, sans perdre en efficacité, à travers des solutions comme le service [**Alarm Assistant**](https://roomonitor.com/fr/alarm-assistant/) et [**Guest & Property Services**](https://roomonitor.com/fr/guest-property-services/).
+## Alarm Assistant et Guest & Property Services : le soutien dont ont besoin les gestionnaires de propriétés
+En effet, les services **Alarm Assistant** et **Guest & Property Services** permettent aux gestionnaires de ne pas se soucier des problèmes et des demandes qui surviennent au quotidien, car Roomonitor s'occupe de toutes les incidents qui peuvent surgir, que ce soit dans des situations d'urgence ou lors de l'attention routinière aux invités. Grâce à notre capacité de simultanéité dans la gestion des appels, nous assurons que chaque invité reçoive l'attention nécessaire sans délais.
+
+En outre, notre équipe d'experts en médiation est toujours prête à intervenir amicalement si les invités dépassent le seuil de bruit. Tous nos opérateurs sont formés à la **résolution cordiale de conflits** et trouveront la meilleure solution pour chaque situation, à tout moment de la journée. Ainsi, avec Roomonitor, nous garantissons que chaque séjour dans la propriété soit paisible et agréable.
+
+[caption id="attachment_30168" align="alignnone" width="1024"] Demandes d'invités aléatoires[/caption]
+## Roomonitor professionnalise le secteur touristique grâce au service client
+Enfin, l'accélération de la professionnalisation dans le secteur de la gestion des propriétés est une tendance en hausse, et Roomonitor s'engage à être un partenaire clé pour les gestionnaires de propriétés sur ce chemin. En effet, en faisant confiance à Roomonitor, les gestionnaires peuvent améliorer leur service et offrir une attention de premier niveau, optimisant ainsi la satisfaction des invités et leur propre efficacité opérationnelle. De plus, leurs invités seront pris en charge à toute heure du jour et de la nuit, tous les jours de l'année.
+
+Avec [**Roomonitor**](https://roomonitor.com/fr/), nous ne fournissons pas seulement des solutions technologiques, mais nous sommes également un partenaire stratégique pour faire du tourisme une activité professionnelle, durable et adaptée aux besoins actuels.`,
+    category: "Gestión de propiedades",
+    date: "2024-10-30",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/pexels-mikhail-nilov-7682340-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "30101",
+    slug: "roomonitor-prevenir-occupation-elevee-seville-madrid-toussaint",
+    title: "Roomonitor: votre allié clé pour gérer une forte occupation à Séville et Madrid pendant les jours de la Toussaint",
+    excerpt: "Le pont de la Toussaint est une date clé dans le calendrier touristique espagnol, et cette année ne fait pas exception. Selon des données de Ebooking, recueillies par Forbes, un taux d'occupation de 85 % dans toute l'Espagne est attendu, avec des pic",
+    content: `Le pont de la Toussaint est une date clé dans le calendrier touristique espagnol, et cette année ne fait pas exception. Selon des données de **Ebooking**, [recueillies par Forbes](https://forbes.es/turismo/520204/ebooking-registra-un-85-de-ocupacion-en-espana-para-el-puente-de-todos-los-santos-con-alzas-de-hasta-15-en-el-precio/), un taux d'occupation de **85 % dans toute l'Espagne** est attendu, avec des pics de forte demande dans des destinations urbaines comme **Séville et Madrid**, deux des villes les plus populaires à cette période.
+
+**Avec les rues décorées pour Halloween**, de nombreux touristes viennent profiter des célébrations et des événements spéciaux que ces villes offrent. Cependant, cette augmentation des visiteurs entraîne également le défi de gérer l'impact que le tourisme a sur les communautés locales, en particulier en ce qui concerne le bruit et les désagréments que les touristes peuvent causer dans les appartements de location.
+
+Chez **Roomonitor**, nous sommes conscients de ces défis et proposons des solutions technologiques qui aident les gestionnaires de propriétés et les propriétaires d'appartements touristiques à maintenir un équilibre entre la satisfaction des clients et la coexistence pacifique avec les voisins. Notre système de **surveillance du bruit en temps réel** est un outil clé pour prévenir les problèmes liés à une forte occupation pendant les périodes de fête, **notamment lors de dates animées comme Halloween.**
+## Pourquoi la surveillance du bruit est-elle cruciale pendant le pont de la Toussaint ?
+Le pont de la Toussaint, avec son volume élevé de touristes, en particulier dans des villes comme Séville et Madrid, tend à être une période où les plaintes pour bruits excessifs dues à des fêtes ou à des réunions dans des appartements touristiques augmentent. Pour les communautés de voisins, cela peut engendrer des tensions et du mécontentement, affectant également la réputation des propriétés touristiques. Avec les célébrations d'Halloween qui s'ajoutent à l'afflux de touristes, les fêtes et les rassemblements peuvent causer des tensions et de l'inconfort parmi les voisins, impactant la réputation des propriétés touristiques.
+
+La technologie de [**Roomonitor**](https://roomonitor.com/es/roomonitor/) permet aux propriétaires et aux gestionnaires de:
+
+ 	- **Surveiller le bruit en temps réel**, en recevant des alertes si les niveaux autorisés sont dépassés, ce qui est particulièrement utile pour contrôler les excès de bruit les nuits d'Halloween.
+ 	- **Agir immédiatement**, en envoyant des notifications automatiques aux clients pour leur demander de réduire le bruit.
+ 	- **Maintenir un environnement de respect** tant pour les touristes que pour les voisins, garantissant ainsi la coexistence.
+
+## Avantages de prévenir les problèmes avant qu'ils ne surviennent
+Grâce à la [**surveillance du bruit**](https://roomonitor.com/es/property-management/que-es-la-monitorizacion-de-ruido-y-por-que-la-necesito/), les propriétaires et les gestionnaires peuvent prendre des mesures proactives pour éviter les conflits avec les voisins, sans avoir besoin d'être physiquement présents. Cela est particulièrement important lors de périodes de forte demande touristique, comme le pont de la Toussaint, lorsque les célébrations peuvent dégénérer.
+
+Mettre en œuvre ces solutions aide à protéger la réputation de l'hébergement et à garantir que les clients profitent de leur séjour sans perturber la tranquillité des communautés voisines.
+## Roomonitor: une solution pour un tourisme responsable et durable
+Avec des destinations comme Séville et Madrid parmi les plus populaires pour ce pont, et les périodes festives comme Halloween, lorsque les fêtes peuvent se prolonger jusqu'à tard dans la nuit et devenir bruyantes, il est plus important que jamais que les gestionnaires de propriétés disposent d'outils leur permettant de gérer efficacement le bruit et les éventuels désagréments qui peuvent survenir lors de ces festivités.
+
+Chez **Roomonitor**, nous nous engageons à créer un tourisme plus **responsable et durable**, où les clients peuvent profiter sans nuire à la qualité de vie des résidents locaux. Notre technologie améliore non seulement l'expérience touristique, mais contribue également à **préserver la coexistence entre voisins** en période de forte occupation.
+
+Avec un taux d'occupation attendu de 85 % dans des destinations clés comme Séville et Madrid pendant le pont de la Toussaint, et avec les célébrations d'Halloween dans l'air, la gestion de l'impact touristique est un défi. Chez **Roomonitor**, nous proposons des solutions technologiques qui permettent aux propriétaires et aux gestionnaires d'appartements touristiques de prévenir les problèmes de bruit et d'assurer un séjour calme et respectueux pour tous.
+
+**Préparez-vous pour la Toussaint et Halloween avec Roomonitor **et garantissez une coexistence pacifique entre touristes et voisins dans vos logements.`,
+    category: "Noticias del sector",
+    date: "2024-10-25",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/pexels-cottonbro-5435551-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "30094",
+    slug: "quest-ce-que-la-soutenabilite-sociale",
+    title: "Qu'est-ce que la soutenabilité sociale? L'engagement de Roomonitor pour la cohabitation entre hôtes et voisins",
+    excerpt: "La soutenabilité sociale est un concept fondamental qui met l'accent sur la cohabitation harmonieuse et équitable au sein des communautés, en favorisant le bien-être de tous les acteurs impliqués. Dans le contexte du tourisme et de la gestion immobil",
+    content: `La **soutenabilité sociale** est un concept fondamental qui met l'accent sur la **cohabitation harmonieuse** et **équitable** au sein des communautés, en favorisant le bien-être de tous les acteurs impliqués. Dans le contexte du tourisme et de la gestion immobilière, il s'agit de la manière dont les activités touristiques peuvent se dérouler sans nuire à la qualité de vie des résidents locaux, en respectant les droits des voisins et en garantissant une expérience positive pour les visiteurs.
+
+Chez **Roomonitor**, nous comprenons la soutenabilité sociale comme un **pilier essentiel** pour garantir la cohabitation entre les hôtes des logements touristiques et les résidents des communautés locales. Notre engagement envers cette cause ne fait pas seulement partie de notre mission, il se reflète également dans les **produits et services** que nous proposons, conçus pour prévenir les conflits et promouvoir une cohabitation plus équilibrée et respectueuse.
+### **Soutenabilité sociale : La clé de la cohabitation entre hôtes et voisins**
+L'un des plus grands défis dans la gestion des logements touristiques est de maintenir la cohabitation entre les touristes et les voisins locaux, en particulier dans les zones urbaines à forte densité immobilière. Les **plaintes liées au bruit**, surtout dans les zones résidentielles, sont l'une des principales sources de conflit.
+Pour **Roomonitor**, la soutenabilité sociale n'est pas seulement une tendance, mais une valeur profondément ancrée qui guide notre travail quotidien. Nous souhaitons que les gestionnaires de biens et les hôtes offrent un **service de haute qualité** à leurs invités, tout en n'oubliant pas que le **bien-être des voisins** est également une priorité. C'est dans cette optique que nous avons développé des **technologies spécifiques** pour faciliter cette cohabitation, en minimisant les nuisances sonores et en veillant à ce que les expériences des touristes soient positives, sans compromettre la tranquillité des résidents.
+### **Comment Roomonitor favorise la soutenabilité sociale**
+Notre principal produit est la **surveillance du bruit en temps réel**, un outil indispensable pour les gestionnaires de biens et les hôtes. Grâce à cette technologie, les propriétaires peuvent recevoir des **alertes** lorsque les niveaux de bruit dépassent certains seuils, leur permettant de prendre des mesures immédiates avant que les voisins ne soient affectés. Cette solution améliore non seulement la cohabitation, mais elle **professionnalise** également la gestion des propriétés touristiques en permettant une **réaction rapide et proactive**.
+
+Chez **Roomonitor**, nous avons travaillé sur de nombreux cas de réussite où la mise en œuvre de notre solution de surveillance du bruit a considérablement réduit les plaintes des voisins. Des grandes **villes touristiques** aux petites localités, notre système a prouvé son efficacité pour **prévenir les conflits** et garantir que les propriétés puissent fonctionner sans générer de tensions dans la communauté.
+### ****
+### **weRespect : Un label de qualité pour un tourisme durable**
+Dans le cadre de notre engagement envers la soutenabilité sociale, chez **Roomonitor**, nous avons également promu la création du **label weRespect**, une **certification** qui distingue les entreprises et gestionnaires de biens pratiquant une gestion responsable, en respectant les voisins et en garantissant un **tourisme durable**.
+
+Ce label reconnaît ceux qui, comme **Roomonitor**, s'engagent à renforcer la cohésion sociale en adoptant des **technologies** et des **pratiques** qui minimisent l'impact négatif du tourisme sur les communautés locales. Les entreprises qui obtiennent le label weRespect démontrent qu'elles sont prêtes à aller plus loin, en offrant des expériences touristiques de **haute qualité**, tout en contribuant au bien-être social et économique des résidents.
+### **Roomonitor : Professionnaliser le secteur et faciliter la cohabitation**
+Chez **Roomonitor**, nous ne fournissons pas seulement de la **technologie**, nous travaillons également à **professionnaliser** le secteur touristique. La gestion des biens touristiques a évolué rapidement, et il est crucial que les gestionnaires adoptent des solutions modernes et responsables pour garantir une croissance durable de l'industrie. Grâce à nos outils, nous aidons les gestionnaires de biens à **améliorer leur service**, non seulement pour les hôtes, mais aussi pour les communautés dans lesquelles ils opèrent.
+
+La **surveillance du bruit**, combinée à notre engagement pour la soutenabilité sociale et la cohabitation, fait de **Roomonitor** un acteur clé dans la professionnalisation de ce secteur. De plus en plus de gestionnaires font confiance à nos solutions pour s'assurer qu'ils offrent un service optimal, **réduisant les nuisances pour les voisins** et promouvant un **tourisme plus responsable et durable**.
+
+En définitive, la soutenabilité sociale est un défi que nous ne pouvons ignorer dans un monde où le tourisme continue de croître. Chez **Roomonitor**, nous nous engageons à être partie prenante de la solution, en fournissant des produits et services qui favorisent une **cohabitation pacifique** entre hôtes et voisins. Grâce à notre **technologie de surveillance du bruit en temps réel** et au label **weRespect**, nous contribuons activement à la création d'un modèle touristique plus durable et respectueux des communautés locales.
+
+Promouvoir une **cohabitation harmonieuse** n'est pas seulement un objectif, c'est un engagement que nous prenons au sérieux chez **Roomonitor**, et nous continuerons à œuvrer pour que nos produits améliorent non seulement l'expérience des touristes, mais aussi le bien-être des résidents.`,
+    category: "Noticias del sector",
+    date: "2024-10-24",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/pexels-fotios-photos-1471991-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "30057",
+    slug: "nouveau-programme-de-mediation-a-valence-pour-ameliorer-la-coexistence-dans-les-appartements-touristiques-avec-werespect",
+    title: "Nouveau programme de médiation à Valence pour améliorer la coexistence dans les appartements touristiques avec weRespect",
+    excerpt: "Chez Roomonitor, nous sommes engagés dans la durabilité sociale et l'amélioration des relations entre les locataires et les voisins dans les propriétés de location à court terme (STR). Dans le cadre de cet engagement, nous sommes ravis de partager l'",
+    content: `Chez Roomonitor, nous sommes engagés dans la durabilité sociale et l'amélioration des relations entre les locataires et les voisins dans les propriétés de location à court terme (STR). Dans le cadre de cet engagement, nous sommes ravis de partager l'une des dernières initiatives menées par **[WeRespect](https://www.werespect.net/)**, qui lancera un **programme pilote de médiation** **à Valence** pour traiter les problèmes entre les résidents et les gestionnaires de locations à court terme.
+## **Un canal de médiation pour résoudre les conflits**
+Grâce à ce nouveau service, disponible au **960 990 472**, les résidents de Valence pourront canaliser leurs plaintes et résoudre les conflits potentiels liés aux propriétés de location à court terme. L'objectif est d'offrir une solution efficace et rapide aux problèmes qui pourraient surgir entre les résidents et les invités.
+
+Ce programme de médiation comprend une approche structurée pour la résolution des conflits, qui implique :
+
+ 	- Des** entretiens initiaux** pour identifier les causes profondes du conflit.
+ 	- L'établissement de **plans d'action** avec des délais et des objectifs clairs.
+ 	- Un** suivi continu** pour garantir que les accords conclus sont bien mis en œuvre.
+
+****
+## **WeRespect: Un guide pour une gestion responsable des STR**
+En parallèle, WeRespect a annoncé la distribution d’un guide pratique destiné aux propriétaires et gestionnaires de locations à court terme à Valence. Ce guide propose des recommandations clés pour une** gestion durable et responsable**, couvrant des aspects tels que:
+
+ 	- Une communication claire avec les invités.
+ 	- Un entretien adéquat de la propriété.
+ 	- La promotion d’un **tourisme durable** grâce à une gestion efficace des ressources (eau, énergie, etc.).
+ 	- Des stratégies pour soutenir l'**économie locale** et atténuer la congestion touristique.
+
+L’objectif est de garantir que l’expérience touristique soit positive non seulement pour les invités, mais aussi pour les résidents locaux et la communauté.
+## **Roomonitor et WeRespect: Des technologies pour réduire l'impact du tourisme**
+Roomonitor a été un acteur clé derrière [**WeRespect**](https://www.werespect.net/), une initiative lancée en 2018 en collaboration avec des associations de l'industrie. Dans le cadre de ce projet, l'une de nos principales contributions a été l'installation de dispositifs de **détection de bruit** dans les locations à court terme.
+
+Ces dispositifs se sont avérés extrêmement efficaces,** résolvant 57 % des plaintes pour bruit en moins de 28 minutes en 2023**. Avec cette technologie, nous contribuons non seulement à améliorer les relations de voisinage, mais aussi à la professionnalisation du secteur.
+## **Un engagement pour un tourisme responsable**
+L'événement a eu lieu à la [Fondation ADEIT Universidad-Empresa](https://www.adeituv.es/) à Valence. Nous avons bénéficié de la collaboration d'Aptur et Airbnb, avec le soutien de la Communauté valencienne et d'Actitud Mediterránea. Parmi les participants, on comptait **Israel** **Martínez** **Fernández**, Directeur général du tourisme pour la [Generalitat Valenciana](https://www.turisme.gva.es/opencms/opencms/turisme/es/index.jsp), **Sebastián** **Cucula**, Président du [Collège des gestionnaires de propriétés de Valence](https://aaffvalencia.es/), **Sílvia** **Blasco**, Présidente d'[ApturCV](https://www.aptur.org/), **Juan** **Cristellys**, Responsable des politiques publiques chez Airbnb, et **Gabriel Fernández**, Head of Public Relations de weRespect.
+
+WeRespect et Roomonitor sont engagés à créer un modèle de tourisme plus responsable et durable. En plus d'offrir des solutions technologiques pour améliorer les relations avec la communauté, cette alliance vise à renforcer la lutte contre les **locations illicites** et la **concurrence déloyale** dans le secteur des locations à court terme.
+
+La médiation et le contrôle du bruit améliorent non seulement la qualité de vie des résidents, mais protègent aussi l'avenir du tourisme dans nos villes, en veillant à ce que toutes les parties prenantes bénéficient d'une gestion efficace et responsable.
+
+Avec des initiatives comme celle-ci, Roomonitor continue de s'établir comme un **partenaire clé** dans la création d'une industrie touristique plus équilibrée, durable et socialement responsable.`,
+    category: "Eventos",
+    date: "2024-10-22",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/ROOM_22_10_2024-181-scaled.jpg",
+    lang: "fr",
+  },
+  {
+    id: "25588",
+    slug: "roomonitor-airbnb-les-autorites-locales-sengagent-pour-tourisme-durable",
+    title: "Comment Roomonitor, Airbnb et les acteurs du tourisme local collaborent ensemble pour protéger et fortifier le secteur de la location de courte durée à Barcelone?",
+    excerpt: "Que ce soit en Espagne ou en France, l'activité liée à la location de logements de courte durée a été au centre de l'attention de nombreux médias ces dernières années. L'engagement des villes Européennes contre les pratiques liées à l'utilisation des",
+    content: `*Que ce soit en Espagne ou en France, l'activité liée à la location de logements de courte durée a été au centre de l'attention de nombreux médias ces dernières années. L'engagement des villes Européennes contre les pratiques liées à l'utilisation des plateformes comme Airbnb ou bien les problèmes causés par le tourisme de masse sont autant de mauvais indicateurs qui pénalisent les professionnels du secteur et détériorent la cohabitation entre les habitants des villes et les touristes de passage.*
+
+Barcelone, la capitale catalane de 1,7 million d'habitants, reçoit 12 millions de touristes par an. Face à cet afflux de visiteurs, certains logements résidentiels se transforment en appartements de location destinés aux touristes. L'activité touristique et ses conséquences ont engendré une véritable crise entre les pouvoirs publics, les propriétaires et les habitants du centre-ville.
+
+C'est dans ce contexte là qu'est née en 2019,** **sous l'impulsion de **[Roomonitor](https://roomonitor.com/)** en collaboration avec [APARTUR](https://apartur.com/en/) (association d'appartements et de logements à usage touristique de Barcelone) l'initiative** [weRespect](https://www.werespect.net/): **une **certification** pour les entreprises et les appartements de location à court terme qui respectent les procédures opérationnelles afin de minimiser et/ou d'éliminer l'impact qu'ils peuvent générer dans l'environnement où ils opèrent, faisant du tourisme une entreprise durable avec une coexistence locale et de voisinage.
+
+## ***Des actions concrètes pour valoriser les bonnes pratiques liées à l'accueil des touristes et le respect des règles imposées par la ville.***
+
+**Mardi 1er décembre 2020**, **weRespect,** a effectué pour la seconde année consécutive une remise des prix en valorisant les entreprises et les associations de propriétaires de logements touristiques qui œuvrent pour la promotion et le développement d’un tourisme durable et respectueux des communautés locales. 
+
+Cette remise des prix a été organisée avec le soutien de la **Mairie de Barcelone **en présence des élus Francesc Xavier Marcé et Xavier Suñól, Enrique Alcantara président de **APARTUR**  ainsi que Mónica Casañas, Country Manager** Airbnb **Espagne et Portugal dans le cadre de leur [programme](https://news.airbnb.com/es/el-compromiso-de-airbnb-con-barcelona/) lancé pour aider les hôtes à répondre aux normes de la ville.
+
+## ***Quels sont les critères de certification WeRespect?***
+
+En plus d’être conformes à la réglementation en vigueur à Madrid ou Barcelone et aux conditions d'obtention des licences correspondantes, les logements qui obtiennent le **label weRespect** doivent respecter les critères suivants:
+
+- **Pollution acoustique**: contrôle du bruit pour éviter les plaintes des voisins. Une procédure doit être mise en place pour agir pendant la nuit en cas de situation gênante.
+
+**-Protection de l'environnement: **promotion des gestes eco-responsables du quotidien, comme le tri sélectif des déchets, la réduction de la consommation d'eau et d'énergie dans chaque location et la sensibilisation des locataire aux gestes bonnes pratiques.
+
+**-Coexistence:** respect des espaces communs partagés par la co-propriété et les voisins comme les ascenseurs, l'entrée et l'ouverture des portes.
+
+**En savoir plus:**
+
+- Liste des entreprises ayant la **certification weRespect**: [wRplus](https://www.werespect.net/empresas-wrplus/) [wRbasic](https://www.werespect.net/empresas-wrbasic/)- [Revue de presse ](https://www.werespect.net/prensa/)suite à la **remise des prix** weRespect- Les actions menées par **Airbnb Espagne**: [voir la vidéo](https://www.youtube.com/channel/UCIsi27qQEA9ck5XOBftI71w)- **Barcelone tente la médiation**: [article ici](https://fr.euronews.com/2019/07/23/face-a-l-afflux-de-touristes-barcelone-tente-la-mediation)
+
+*Chiffres du tourisme en Catalogne l’Institut national de la statistique (INE) [article ici](http://19,4 millions de visiteurs)`,
+    category: "Noticias del sector",
+    date: "2020-12-11",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2020/12/1607620063070-1.jpg",
+    lang: "fr",
+  },
+  {
+    id: "10789",
+    slug: "assurez-la-securite-de-votre-location-a-courte-duree-pour-les-prochaines-fetes-de-noel",
+    title: "Assurez la sécurité de votre location à courte durée pour les prochaines fêtes de Noël",
+    excerpt: "Les fêtes de Noël approchent à grands pas et le réveillon du Nouvel An suivra dans la foulée... Pour les propriétaires de biens de location à courte durée tels que vous, c’est une période particulièrement festive. C’est l’occasion pour vous, si vous ",
+    content: `## **Les fêtes de Noël approchent à grands pas et le réveillon du Nouvel An suivra dans la foulée...**
+
+Pour les propriétaires de biens de location à courte durée tels que vous, c’est une période particulièrement festive. C’est l’occasion pour vous, si vous ne l’avez pas déjà fait, de proposer des offres de vacances à des prix avantageux et de faire réserver vos locations plusieurs semaines à l’avance. Vos hôtes pourront profiter de leurs séjours tant attendus, et quant à vous, vous pourrez profiter des avantages de cette saison particulièrement favorable.
+
+Une véritable situation où tout le monde est gagnant, ou presque si l’on considère la mesure dans laquelle vos clients auront respecté toutes vos consignes, notamment l’organisation des fêtes.
+
+#### **La période des fêtes est l’occasion pour tout le monde de rompre avec la routine du quotidien et de passer du bon temps avec ceux que l’on aime, de participer à des évènements passionnants et, surtout, de faire la fête !**
+
+Les moments les plus importants de la période des vacances, ce sont ceux où l’on fait la fête, mais du côté des propriétaires des lieux de location, personne ne peut nier qu’il y a des défis à relever.
+
+Les propriétaires de biens de location de vacances préfèrent plus les familles et les couples qui souhaitent passer un séjour marqué plus par le côté confortable, serin et chaleureux, bien loin de la maison. Cependant, qui dit « famille » dit aussi « jeunes » (et parfois moins jeunes) amoureux de la fête... rien n’est donc très sûr, il peut s’agir de clients idéaux comme il peut s’agir d’une mauvaise expérience difficile à oublier !
+
+Bien sûr, vous ne voulez pas être ce propriétaire agaçant qui suit ses locataires à chaque pas et qui guette leurs moindres faits et gestes. Cependant, vous ne voulez pas non plus que votre location soit saccagée après une fête sauvage.
+
+Que faire alors ?
+
+Comment faire pour éviter à votre bien locatif des fêtes « sauvages », nuisibles et gênantes pour le voisinage ?
+
+Lisez la suite. Vous apprendrez ce que vous pouvez faire pour protéger votre propriété de location *et faire respecter la tranquillité du voisinage *sans pour autant espionner vos invités et envahir leur vie privée.
+
+## **Habituellement, on ne constate les dégâts que lorsqu’ils sont déjà là...**
+
+C’est ce dont se plaignent le plus souvent la plupart des propriétaires de biens de location à court terme. Peu importe à quel point vous tenez à ce que vos locataires soient respectueux des lieux et de l’entourage, certains clients *voient* dans la location de courte durée une occasion pour eux de se défouler, poussés par ce sentiment de liberté et d’insouciance auquel ils sont habitués.
+
+Voici ce que d’autres propriétaires de biens locatifs de courte durée utilisent pour empêcher leurs locataires d’organiser des fêtes dans leurs propriétés de location (*mais n’essayez surtout PAS à faire cela, car de telles pratiques sont au mieux des actes importuns, au pire des actes carrément ILLÉGAUX et punissables par la loi*).
+
+#1: Installation de caméras de surveillance (*généralement des caméras cachées*) :
+
+Une telle pratique est pratiquement interdite par la loi. Néanmoins, il est très fréquent que des clients Airbnb et des locataires de courte durée signalent avoir trouvé des caméras cachées dans leur lieu de séjour. Dans de tels cas, le propriétaire du lieu de séjour est signalé à la plateforme qui propose ses services. Son compte est aussitôt bloqué, et de là, des poursuites judiciaires appropriées sont engagées. En bref, si vous vous livrez à de telles pratiques, vous risquez de perdre vos sources de réservation les plus pertinentes, de payer de lourdes amendes et de nuire à votre réputation de façon irréversible.
+
+#2: Installation d’enregistreurs audios :
+
+Vous pourriez penser que cette pratique est plus acceptable, puisqu’elle ne fait qu’enregistrer des sons, n’est-ce pas ? En effet, cette pratique est tout aussi abusive et illégale. Sans l’approbation de vos locataires, au vu de la loi, vous ne pouvez pas les enregistrer. *Imaginez que vous demandiez à vos locataires s’ils acceptent d’être enregistrés*. C’est tout à fait comme pour les enregistrements vidéos, vous risquez d’être banni des plateformes de réservation en ligne, d’être confronté à des poursuites judiciaires et de porter atteinte à votre réputation. C’est absolument à éviter.
+
+Que faire alors ? Comment protéger votre location et votre voisinage contre les fêtes sauvages ? Avec des appareils de prévention des fêtes bruyantes, bien sûr !
+
+Vous pouvez équiper votre location à court terme ou votre Airbnb d’un dispositif de contrôle du bruit en temps réel. Ces appareils sont dotés de capteurs de son qui ne font que surveiller le niveau sonore et émettre des alertes lorsque le bruit est supérieur à une limite autorisée et prédéfinie. Ils ne font pas des enregistrements, ils sont donc parfaitement légaux et ne causeront aucun souci ni aucune gêne à vos locataires.
+
+## **Airbnb est bien conscient du problème et recommande maintenant l’utilisation de tels dispositifs**
+
+Nous avons tous entendu parler (peut-être même, certains d’entre vous l’ont vécu) de locataires qui louent des propriétés pour organiser des fêtes. La règle « *Pas de fêtes autorisées* » est suffisamment claire pour que tout le monde s’y conforme, mais les quelques personnes qui ne la respectent pas ont forcé la plateforme Airbnb à promouvoir activement l’utilisation d’appareils de contrôle de bruit pour signaler aux propriétaires toute violation à cette règle.
+
+*« Nous voulons vous aider à protéger votre espace et à faire respecter le bien-être du voisinage tout en préservant la vie privée de vos locataires », explique Airbnb sur son site web. « Cela signifie vous aider à détecter ce genre de problèmes en temps réel ».*
+
+Ces dispositifs sont super simples à utiliser. Ils peuvent être facilement installés au plafond ou au mur. La plupart se vendent sous forme d'appareils *« plug & play »* et sont livrés avec un abonnement mensuel vous permettant de surveiller le niveau sonore dans vos locations de courte durée à partir de votre Smartphone ou de votre ordinateur portable.
+
+Airbnb aurait dit qu’elle ne « préconise » pas l’utilisation de ces appareils, mais on peut trouver des témoignages de clients très favorables au produit, l’un d’entre eux affirmant que c’était pour lui un miracle de trouver un système de contrôle du bruit, *« nous avons maintenant l’assurance que nos voisins du quartier ne sont pas dérangés. Merci de nous avoir fait découvrir un système aussi simple et tellement efficace ! »* Ajoute-t-il.
+
+Certaines personnes ont soulevé des préoccupations en matière de protection de la vie privée, mais elles ont rapidement été reprises en apprenant que ces appareils n’enregistrent ni sons ni vidéos. Ils ne font que surveiller les clients bruyants et alerter les propriétaires dès qu’ils détectent des niveaux de bruit trop élevés par rapport aux limites prédéfinies *(reste à considérer que fermer une porte bruyamment n’est tout de même pas une fête bruyante)*.
+
+***Roomonitor figure parmi les 3 meilleures solutions sur le marché, et voici pourquoi :***
+
+*L’alarme anti-bruit Roomonitor vous permet de connaitre le niveau sonore de votre location de courte durée 24 heures sur 24 et 7 jours sur 7, vous évitant ainsi tout problème avec votre voisinage ou d’autres locataires. Ces appareils de surveillance du bruit en temps réel envoient des notifications par SMS et par appel téléphonique vers jusqu’à 3 numéros différents. Vous pouvez désormais agir et mettre fin aux fêtes sauvages avant que les voisins ne s’en aperçoivent !*
+
+*Les capteurs fonctionnent de manière autonome, et sont livrés avec un service clientèle disponible 24 heures sur 24 et 7 jours sur 7.*
+
+*Ces appareils sont livrés avec des applications que vous pourrez installer sur vos appareils mobiles et les utiliser pour recevoir vos alertes selon vos propres exigences. *
+
+*Si vous souhaitez en savoir plus sur les fonctionnalités des alarmes de bruit de Roomonitor, [veuillez cliquer ici.](https://roomonitor.com/fr/noise-alarm/?utm_source=frenchblogpost&utm_medium=email&utm_campaign=christmas_france&utm_content=bloglinktoproduct)*
+
+## ***Protégez vos biens locatifs des fêtes clandestines dès aujourd’hui***
+
+*Éviter les mauvaises surprises (les fêtes sauvages) pendant la période des vacances - maintenant vous savez COMMENT ! Oubliez les méthodes d’espionnage de vos locataires contraires aux principes de l’éthique ou carrément illégales. Protégez votre propriété de location contre les fêtes clandestines et préservez le bien-être de vos voisins, tout en préservant la vie privée de vos clients grâce à des dispositifs intelligents de prévention des fêtes non autorisées. Si vous souhaitez obtenir de l’aide pour choisir le dispositif de contrôle du bruit le mieux adapté à votre propriété, vous pouvez faire appel à nos experts en contrôle du bruit. Contactez-nous dès aujourd’hui !*`,
+    category: "Roomonitor",
+    date: "2020-12-03",
+    readTime: 7,
+    image: "https://roomonitor.com/wp-content/uploads/2020/11/olia-danilevich-5911467.jpg",
+    lang: "fr",
+  },
 ];
 
 export const getBlogPostsByLang = (lang: string): BlogPost[] => {
