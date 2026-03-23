@@ -602,11 +602,11 @@ const en = {
       ctaSecondary: "See how it works",
     },
     stats: [
-      { label: "Operations in 2024" },
-      { label: "CSAT" },
-      { label: "AHT" },
-      { label: "Field Service Interventions" },
-      { label: "Cities" },
+      { label: "Operations completed in 2025" },
+      { label: "Minutes handled by our team in 2024" },
+      { label: "AHT · Average handling time" },
+      { label: "Apartments managed" },
+      { label: "With active Field Service agents" },
     ],
     timeline: {
       badge: "Real case",
