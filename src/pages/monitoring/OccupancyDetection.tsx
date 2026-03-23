@@ -25,7 +25,7 @@ export default function OccupancyDetection() {
 
       <section className="py-12 bg-foreground/5 border-y">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, i) => (
               <AnimatedSection key={i} delay={i * 100} className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.value}</div>
@@ -85,9 +85,9 @@ export default function OccupancyDetection() {
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">{t('monitoringOccupancy.ctaTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-8">{t('monitoringOccupancy.ctaDescription')}</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild><LocalizedLink to="/pricing">{t('shared.viewPricing')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
-              <Button size="lg" variant="outline" asChild><LocalizedLink to="/contact">{t('shared.requestDemo')}</LocalizedLink></Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+              <Button size="lg" className="w-full sm:w-auto" asChild><LocalizedLink to="/pricing">{t('shared.viewPricing')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild><LocalizedLink to="/contact">{t('shared.requestDemo')}</LocalizedLink></Button>
             </div>
           </AnimatedSection>
         </div>

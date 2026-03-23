@@ -63,14 +63,14 @@ export function ServiceHero({
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
               {description}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild className="group transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button size="lg" asChild className="w-full sm:w-auto group transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <LocalizedLink to={resolvedPrimaryCTA.link}>
                   {resolvedPrimaryCTA.text}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </LocalizedLink>
               </Button>
-              <Button size="lg" variant="outline" asChild className="hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300">
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300">
                 <LocalizedLink to={resolvedSecondaryCTA.link}>{resolvedSecondaryCTA.text}</LocalizedLink>
               </Button>
             </div>

@@ -39,16 +39,16 @@ function ControlCenterCard({ card }: { card: CardData }) {
         </div>
         <p className="text-[10px] tracking-widest text-muted-foreground/70 font-medium mb-0">{card.footer}</p>
       </div>
-      <div className="absolute -top-2 -right-3 sm:right-0 bg-card rounded-full border border-border/60 shadow-soft px-3 py-1.5 flex items-center gap-2 animate-fade-in" style={{ animationDelay: "400ms" }}>
-        <Bell className="w-3.5 h-3.5 text-primary" />
+      <div className="absolute -top-2 -right-1 sm:right-0 bg-card rounded-full border border-border/60 shadow-soft px-3 py-1.5 flex items-center gap-2 animate-fade-in" style={{ animationDelay: "400ms" }}>
+        <Bell className="w-3.5 h-3.5 text-primary shrink-0" />
         <span className="text-xs font-medium text-foreground whitespace-nowrap">{card.pills[0]}</span>
       </div>
-      <div className="absolute bottom-24 -right-4 sm:-right-6 bg-card rounded-full border border-border/60 shadow-soft px-3 py-1.5 flex items-center gap-2 animate-fade-in" style={{ animationDelay: "700ms" }}>
-        <CheckCircle2 className="w-3.5 h-3.5 text-success" />
+      <div className="absolute bottom-24 -right-1 sm:-right-6 bg-card rounded-full border border-border/60 shadow-soft px-3 py-1.5 flex items-center gap-2 animate-fade-in" style={{ animationDelay: "700ms" }}>
+        <CheckCircle2 className="w-3.5 h-3.5 text-success shrink-0" />
         <span className="text-xs font-medium text-foreground whitespace-nowrap">{card.pills[1]}</span>
       </div>
-      <div className="absolute -bottom-2 -left-3 sm:-left-4 bg-card rounded-full border border-border/60 shadow-soft px-3 py-1.5 flex items-center gap-2 animate-fade-in" style={{ animationDelay: "1000ms" }}>
-        <CheckCircle2 className="w-3.5 h-3.5 text-success" />
+      <div className="absolute -bottom-2 -left-1 sm:-left-4 bg-card rounded-full border border-border/60 shadow-soft px-3 py-1.5 flex items-center gap-2 animate-fade-in" style={{ animationDelay: "1000ms" }}>
+        <CheckCircle2 className="w-3.5 h-3.5 text-success shrink-0" />
         <span className="text-xs font-medium text-foreground whitespace-nowrap">{card.pills[2]}</span>
       </div>
     </div>
