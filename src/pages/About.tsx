@@ -330,7 +330,7 @@ export default function About() {
                 const type = mediaTypes[idx];
                 return <LocalizedLink key={idx} to="/blog" className="group relative bg-card border rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                       <div className="aspect-[16/10] overflow-hidden relative">
-                        <img src={mediaImages[idx]} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <img src={mediaImages[idx]} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
                         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
                         <div className="absolute top-3 left-3">
                           <span className="inline-flex items-center gap-1.5 bg-background/90 backdrop-blur-sm text-foreground text-xs font-medium uppercase tracking-wider px-2.5 py-1 rounded-full">
