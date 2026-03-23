@@ -7024,6 +7024,7 @@ O contexto mudou — e a preparação faz toda a diferença.`,
     readTime: 3,
     image: "https://roomonitor.com/wp-content/uploads/2026/02/Lisbon-air-vision-scaled.jpg",
     lang: "pt",
+    featured: true,
   },
   {
     id: "36587",
