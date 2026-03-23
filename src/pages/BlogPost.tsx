@@ -9,9 +9,9 @@ import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const BlogPost = () => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getPostBySlug(slug) : undefined;
+  const post = slug ? getPostBySlug(slug, lang) : undefined;
 
   if (!post) {
     return <Navigate to="/blog" replace />;
