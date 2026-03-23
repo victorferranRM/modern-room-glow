@@ -545,6 +545,7 @@ const en = {
     latestArticles: "Latest articles",
     searchPlaceholder: "Search articles...",
     noResults: "No articles found matching your criteria.",
+    loadMore: "Load more",
     relatedArticles: "Related articles",
     readyToProtect: "Ready to protect your properties?",
     startWithRoomonitor: "Get started with Roomonitor and ensure peace of mind for you and your neighbours.",
