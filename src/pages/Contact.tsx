@@ -1,4 +1,5 @@
 import contactHeroImg from "@/assets/contact-hero.webp";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -506,13 +507,13 @@ export default function Contact() {
                 const icons = [Building2, Clock, MapPin];
                 const Icon = icons[idx];
                 return (
-                  <div key={idx} className="space-y-3">
+                  <AnimatedSection key={idx} delay={idx * 150} className="space-y-3">
                     <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 md:mb-5">
                       <Icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
                     </div>
                     <h3 className="font-bold text-lg md:text-xl lg:text-2xl text-foreground">{item.title}</h3>
                     <p className="text-sm md:text-base text-muted-foreground">{item.desc}</p>
-                  </div>
+                  </AnimatedSection>
                 );
               })}
             </div>
