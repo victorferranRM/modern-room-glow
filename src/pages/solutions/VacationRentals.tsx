@@ -32,9 +32,9 @@ export default function VacationRentals() {
                 <span className="text-primary block">{t('solutionVacationRentals.heroTitle2')}</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">{t('solutionVacationRentals.heroDescription')}</p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild><LocalizedLink to="/checkout?plan=pro&properties=1">{t('solutionVacationRentals.getStarted')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
-                <Button size="lg" variant="outline" asChild><LocalizedLink to="/contact">{t('solutionVacationRentals.talkToSales')}</LocalizedLink></Button>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button size="lg" className="w-full sm:w-auto" asChild><LocalizedLink to="/checkout?plan=pro&properties=1">{t('solutionVacationRentals.getStarted')}<ArrowRight className="ml-2 h-4 w-4" /></LocalizedLink></Button>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild><LocalizedLink to="/contact">{t('solutionVacationRentals.talkToSales')}</LocalizedLink></Button>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
