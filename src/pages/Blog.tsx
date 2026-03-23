@@ -73,20 +73,16 @@ const Blog = () => {
           {/* Featured Post */}
           {featuredPost && (
             <AnimatedSection animation="fade-up" delay={0.1}>
-              <div className="relative bg-foreground rounded-2xl overflow-hidden max-w-5xl mx-auto shadow-xl">
-                <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-lg font-medium z-10">
-                  {t('blog.featured')}
-                </div>
+              <div className="relative bg-white rounded-2xl overflow-hidden max-w-5xl mx-auto shadow-lg border border-border/40">
               <div className="grid md:grid-cols-2 gap-0">
                   <LocalizedLink to={`/blog/${featuredPost.slug}`} className="block relative">
-                    <div className="aspect-[4/3] overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden bg-muted h-full">
                       <img
                         src={featuredPost.image}
                         alt={featuredPost.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
-                    </div>
-                    <div className="absolute bottom-4 right-4 flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-3 py-1.5 rounded-full">
+                    <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-foreground/70 backdrop-blur-sm text-background text-sm font-medium px-3 py-1.5 rounded-full">
                       <Clock className="w-4 h-4" />
                       <span>{t('blog.readTime', { min: String(featuredPost.readTime) })}</span>
                     </div>
@@ -95,25 +91,21 @@ const Blog = () => {
                     <span className="inline-block border border-primary text-primary text-sm px-4 py-1.5 rounded-full mb-4 w-fit font-medium">
                       {featuredPost.category}
                     </span>
-                    <div className="flex items-center gap-6 text-white/60 text-sm mb-4">
-                      <span className="flex items-center gap-2">
+                    <div className="flex items-center gap-6 text-muted-foreground text-sm mb-4">
+                      <span className="flex items-center gap-2 font-medium">
                         <Calendar className="w-4 h-4" />
                         {formatDate(featuredPost.date)}
                       </span>
-                      <span className="flex items-center gap-2">
-                        <Clock className="w-4 h-4" />
-                        {t('blog.readTime', { min: String(featuredPost.readTime) })}
-                      </span>
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight tracking-tight">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight tracking-tight">
                       {featuredPost.title}
                     </h2>
-                    <p className="text-white/70 mb-6 line-clamp-3 font-light">
+                    <p className="text-muted-foreground mb-6 line-clamp-3 font-light">
                       {featuredPost.excerpt}
                     </p>
                     <Button
                       asChild
-                      className="w-fit bg-primary hover:bg-primary/90 text-white"
+                      className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground"
                     >
                       <LocalizedLink to={`/blog/${featuredPost.slug}`}>
                         {t('blog.readMore')}
