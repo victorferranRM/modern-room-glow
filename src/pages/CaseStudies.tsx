@@ -29,7 +29,7 @@ export default function CaseStudies() {
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               {t('caseStudies.badge')}
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight text-balance">
               {t('caseStudies.heroTitle1')}{" "}
               <span className="text-primary">{t('caseStudies.heroTitle2')}</span>
             </h1>
