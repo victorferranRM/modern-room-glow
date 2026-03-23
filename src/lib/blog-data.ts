@@ -7325,7 +7325,8 @@ export const getPostBySlug = (slug: string, lang?: string): BlogPost | undefined
 
 export const getPostsByCategory = (category: string, lang: string = 'es'): BlogPost[] => {
   const langPosts = getBlogPostsByLang(lang);
-  if (category === 'all' || category === 'Todas las categorías') return langPosts;
+  const allLabel = getCategoriesForLang(lang)[0];
+  if (category === 'all' || category === allLabel) return langPosts;
   return langPosts.filter(post => post.category === category);
 };
 
