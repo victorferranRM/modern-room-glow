@@ -5883,7 +5883,7 @@ Chez Roomonitor, nous suivons de près ces évolutions réglementaires. Nous som
   {
     id: "35765",
     slug: "interview-jordan-setti-checkmyguest-securite-location-saisonniere",
-    title: "Interview avec Jordan Setti, COO de CheckMyGuest",
+    title: `Interview avec Jordan Setti, COO de CheckMyGuest : "Savoir que de 22h à 7h quelqu'un prend le relais, ça n'a pas de prix"`,
     excerpt: "Bonjour à tous et à toutes. Aujourd'hui, j'ai vraiment le plaisir d'être accueilli dans les locaux de Checkmyguest par Jordan Setti. Son directeur opérationnel est l'un des acteurs clés du marché de la location courte et moyenne durée en France. On e",
     content: `Bonjour à tous et à toutes. Aujourd'hui, j'ai vraiment le plaisir d'être accueilli dans les locaux de [**Checkmyguest**](https://www.checkmyguest.fr/) par Jordan Setti.
 
