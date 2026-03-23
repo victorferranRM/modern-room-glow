@@ -192,6 +192,11 @@ const Blog = () => {
                     </div>
                   </LocalizedLink>
 
+                  <span className="flex items-center gap-2 text-muted-foreground text-xs font-medium mb-2">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {formatDate(post.date)}
+                  </span>
+
                   <h3 className="text-xl font-bold text-foreground mb-3 leading-tight tracking-tight group-hover:text-primary transition-colors">
                     <LocalizedLink to={`/blog/${post.slug}`}>{post.title}</LocalizedLink>
                   </h3>
