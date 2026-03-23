@@ -6,8 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, Calendar, Clock, ArrowRight } from "lucide-react";
 import {
-  blogPosts,
-  categories,
+  getBlogPostsByLang,
   getFeaturedPost,
   getPostsByCategory,
   searchPosts,
@@ -20,19 +19,19 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState(t('blog.allCategories'));
   const [searchQuery, setSearchQuery] = useState("");
 
-  const featuredPost = getFeaturedPost();
+  const featuredPost = getFeaturedPost(lang);
 
   const filteredPosts = useMemo(() => {
-    let posts = getPostsByCategory(selectedCategory);
+    let posts = getPostsByCategory(selectedCategory, lang);
     if (searchQuery.trim()) {
-      posts = searchPosts(searchQuery).filter(
+      posts = searchPosts(searchQuery, lang).filter(
         (post) =>
           selectedCategory === t('blog.allCategories') ||
           post.category === selectedCategory
       );
     }
     return posts.filter((post) => !post.featured);
-  }, [selectedCategory, searchQuery, t]);
+  }, [selectedCategory, searchQuery, t, lang]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString(t('blog.dateLocale'), {
