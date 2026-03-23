@@ -4127,6 +4127,7 @@ We’re still by your side. Today, just as we were ten years ago.`,
     readTime: 2,
     image: "https://roomonitor.com/wp-content/uploads/2025/12/RM-10-anos-clientes.png",
     lang: "en",
+    featured: true,
   },
   {
     id: "36497",
