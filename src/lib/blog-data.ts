@@ -8,6 +8,7 @@ export interface BlogPost {
   date: string;
   readTime: number;
   image: string;
+  lang: 'es' | 'en' | 'fr' | 'pt';
   featured?: boolean;
 }
 
@@ -163,6 +164,7 @@ El contexto ha cambiado — y la preparación marca la diferencia.`,
     readTime: 3,
     image: "https://roomonitor.com/wp-content/uploads/2026/02/Lisbon-air-vision-scaled.jpg",
     featured: true,
+    lang: "es" as const,
   },
   {
     id: "36970",
