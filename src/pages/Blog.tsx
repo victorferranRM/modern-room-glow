@@ -26,6 +26,10 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(localizedCategories[0]);
   const [searchQuery, setSearchQuery] = useState("");
 
+  useEffect(() => {
+    setSelectedCategory(getCategoriesForLang(lang)[0]);
+  }, [lang]);
+
   const featuredPost = getFeaturedPost(lang) ?? getFeaturedPost('es');
 
   const filteredPosts = useMemo(() => {
