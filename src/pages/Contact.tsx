@@ -176,8 +176,8 @@ export default function Contact() {
                   <ul className="space-y-2.5">
                     {benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-2">
-                        <span className="text-primary text-sm mt-0.5 flex-shrink-0">✓</span>
-                        <span className="text-sm text-muted-foreground">{benefit}</span>
+                        <span className="text-primary text-base mt-0.5 flex-shrink-0">✓</span>
+                        <span className="text-base text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
                   </ul>
