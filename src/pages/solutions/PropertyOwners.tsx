@@ -55,7 +55,7 @@ export default function PropertyOwners() {
             <AnimatedSection>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl blur-2xl" />
-                <img src={roomonitorDevice} alt={t('solutionPropertyOwners.deviceEyebrow')} className="relative w-full rounded-2xl shadow-xl max-w-md mx-auto" />
+                <img src={roomonitorDevice} alt={t('solutionPropertyOwners.deviceEyebrow')} className="relative w-full rounded-2xl shadow-xl max-w-md mx-auto" loading="lazy" decoding="async" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
