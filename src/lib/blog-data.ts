@@ -636,7 +636,7 @@ Esta nueva regulación ya está en vigor. Si operas en municipios como **Santand
   {
     id: "35834",
     slug: "registro-estatal-viviendas-turisticas-fevitur-silvia-blasco",
-    title: 'Silvia Blasco (FEVITUR): "El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal"',
+    title: "Silvia Blasco (FEVITUR): \\"El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal\\"",
     excerpt: "Desde el 1 de julio de 2024, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del 45 % de las viviendas turísticas l",
     content: `Desde el **1 de julio de 2024**, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del **45 % de las viviendas turísticas legales** que ya estaban registradas en sus comunidades autónomas, según denuncia **Silvia Blasco**, presidenta de FEVITUR en [Economist&Jurist](https://www.economistjurist.es/zbloque-1/silvia-blasco-presidenta-de-fevitur-un-45-de-las-viviendas-turisticas-legales-quedaron-fuera-del-nuevo-registro-estatal-impuesto-por-el-ministerio-de-vivienda/).
 
@@ -680,7 +680,7 @@ En Roomonitor estamos atentos a estos cambios regulatorios. Creemos imprescindib
   {
     id: "35748",
     slug: "entrevista-jordan-setti-checkmyguest-seguridad-alquiler-vacacional",
-    title: 'Entrevista con Jordan Setti, COO de CheckMyGuest: "Saber que de 22:00 a 7:00 alguien toma el relevo, no tiene precio"',
+    title: "Entrevista con Jordan Setti, COO de CheckMyGuest: \\"Saber que de 22:00 a 7:00 alguien toma el relevo, no tiene precio\\"",
     excerpt: "Hola a todos. Hoy tenemos el placer de estar en las oficinas de Checkmyguest con Jordan Setti. Su director operativo es uno de los actores clave del mercado de alquileres de corta y media estancia en Francia. Estamos aquí para hablar de la evolución ",
     content: `Hola a todos. Hoy tenemos el placer de estar en las oficinas de **[Checkmyguest](https://www.checkmyguest.fr/)** con Jordan Setti.
 
@@ -759,6 +759,50 @@ Nada en particular, salvo que sabemos que nuestros apartamentos están seguros y
     date: "2025-07-21",
     readTime: 6,
     image: "https://roomonitor.com/wp-content/uploads/2025/07/IMG_4521-1-scaled.jpg",
+    lang: "es",
+  },
+  {
+    id: "35651",
+    slug: "incidencias-nocturnas-alquiler-turistico",
+    title: "Problemas e incidencias nocturnas: cómo afrontarlas sin morir en el intento",
+    excerpt: "Porque el alquiler turístico no duerme, pero tú sí deberías poder hacerlo. La noche es, sin duda, el momento más crítico en la gestión de una vivienda turística. Durante el día todo parece estar bajo control, pero al caer el sol se multiplican las po",
+    content: `Porque el alquiler turístico no duerme, pero tú sí deberías poder hacerlo.
+
+La noche es, sin duda, el momento más crítico en la gestión de una vivienda turística. 
+
+Durante el día todo parece estar bajo control, pero al caer el sol se multiplican las posibilidades de que algo se descontrole: un huésped que decide montar una fiesta sin avisar, un vecino que no puede dormir por el ruido, una cerradura que deja de funcionar, una alarma que se dispara, una fuga de agua que nadie detecta hasta que es demasiado tarde.
+
+## Qué consecuencias puede tener una mala gestión nocturna
+
+Las incidencias nocturnas no solo generan molestias puntuales, sino que pueden comprometer la reputación del alojamiento, tensar la relación con la comunidad y, sobre todo, alterar la tranquilidad y el descanso del gestor o propietario. Y no es poca cosa.
+
+Una reseña negativa en Airbnb por una mala noche puede hacerte perder visibilidad, reservas y, en última instancia, ingresos. Si no hay un protocolo claro o una atención rápida, el problema escala y es más difícil de gestionar al día siguiente. Todo esto se traduce en estrés acumulado, sobrecarga y pérdida de eficiencia.
+
+## Cómo anticiparse a las incidencias nocturnas
+
+¿Entonces, cómo afrontar este tipo de situaciones sin que acaben contigo?
+
+El primer paso es anticiparse. La prevención empieza por contar con tecnología que te ayude a detectar cualquier actividad anómala sin necesidad de estar pendiente 24/7. Sensores de ruido, de humo o de temperatura te permiten recibir alertas en tiempo real y actuar antes de que el vecino lo haga. En Roomonitor, por ejemplo, nuestros dispositivos están diseñados precisamente para eso: darte control sin necesidad de estar presente.
+
+## Protocolos claros, incluso de madrugada
+
+Pero la tecnología por sí sola no es suficiente. Es esencial tener definidos protocolos claros, también para lo que ocurre fuera del horario laboral. Qué hacer si suena una alarma a las tres de la mañana, quién debe intervenir si hay una queja por ruido, cómo comunicarlo al huésped de forma efectiva. Tener una hoja de ruta para cada tipo de incidencia permite reaccionar con rapidez y profesionalidad.
+
+## Externalizar la atención nocturna: una decisión inteligente
+
+Y luego está la clave más importante: no intentar hacerlo todo tú. Externalizar la atención nocturna es una de las decisiones más inteligentes que puede tomar cualquier gestor. En Roomonitor, contamos con un equipo especializado que actúa en tiempo real ante cualquier incidencia a través de nuestro servicio [Alarm Assistant Night Agents](https://new.roomonitor.com/es/asistente-de-alarmas/#night). Esto no solo garantiza una mejor experiencia para el huésped, sino que protege tu reputación, cuida la convivencia en el edificio y, lo más importante, te permite descansar de verdad.
+
+## Dormir tranquilo también es parte de una buena gestión
+
+Porque no se trata de evitar cualquier problema (spoiler: eso no va a pasar), sino de tener la capacidad de detectarlo a tiempo, actuar con criterio y no llevarte el conflicto a la almohada.
+
+Dormir tranquilo también es parte de una buena gestión.
+
+¿Quieres saber cómo podemos ayudarte a gestionar mejor las noches? Escríbenos. Estaremos despiertos por ti.`,
+    category: "Roomonitor",
+    date: "2025-07-16",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/07/problemas-nocturnos.jpg",
     lang: "es",
   },
   {
@@ -1947,41 +1991,6 @@ Solicita más información sobre **Alarm Assistant** en [**info@roomonitor.com**
     lang: "es",
   },
   {
-    id: "25384",
-    slug: "descansa-tranquilo-con-la-proteccion-global-a-todos-tus-alquileres",
-    title: "Descansa tranquilo con la protección global a todos tus alquileres",
-    excerpt: "Un equipo de expertos de Roomonitor trabajando para ti cada día En Roomonitor, nos dedicamos a brindar tranquilidad a nuestros clientes a diario con nuestro servicio de Alarm Assistant, la primera y única solución global de monitoreo de propiedades. ",
-    content: `## Un equipo de expertos de Roomonitor trabajando para ti cada día
-En Roomonitor, nos dedicamos a brindar tranquilidad a nuestros clientes a diario con nuestro servicio de **Alarm Assistant**, la primera y única solución global de monitoreo de propiedades. Nuestro equipo de agentes, expertos y capacitados en el sector, monitoriza y evalúa en tiempo real las alertas de Roomonitor, encargándose de la comunicación con los huéspedes bajo protocolos establecidos para resolver cualquier incidencia de ruido.
-
-[**Alarm Assistant**](https://new.roomonitor.com/en/alarm-assistant/) no se limita a sistemas de llamadas automáticas. Detrás de cada intervención, hay un equipo humano que garantiza que cada gestión sea necesaria y oportuna. 
-
-&#13;
-Si el ruido persiste, un agente de Roomonitor se desplaza a la propiedad para verificar y solucionar la incidencia. Todo nuestro equipo está entrenado para cuidar al máximo la relación con tus huéspedes, logrando así un equilibrio perfecto entre la convivencia con los vecinos y el éxito de tu negocio.
-
-&#13;
-
-&#13;
-## ¿Cómo funciona el servicio de Alarm Assistant?&#13;
-Cuando se detecta una alarma en tus propiedades, nuestro equipo recibe la notificación en nuestra central, analiza el gráfico de ruido y se comunica con los huéspedes mediante llamada telefónica o WhatsApp. Si el ruido persiste, enviamos un agente mediador a la propiedad para verificar y resolver la situación.
-
-&#13;
-&#13;
-- Salta la alarma en alguna de tus propiedades.&#13;
-- Recibimos la alarma en nuestra central y analizamos los registros de ruido.&#13;
-- Un equipo humano contacta con los huéspedes en el momento por llamada o mensaje de WhatsApp.&#13;
-- Si el ruido continua, enviamos un agente de campo a la propiedad para controlar la incidencia personalmente.&#13;
-&#13;
-
-&#13;
-Solicita más información sobre **Alarm Assistant** en [**info@roomonitor.com**](mailto:info@roomonitor.com)`,
-    category: "Roomonitor",
-    date: "2024-11-01",
-    readTime: 1,
-    image: "https://roomonitor.com/wp-content/uploads/2022/03/work-roomonitor.jpg",
-    lang: "es",
-  },
-  {
     id: "30167",
     slug: "simultaneidad-atencion-al-cliente-roomonitor",
     title: "La importancia de la simultaneidad en la atención al cliente: El valor de Roomonitor para el sector turístico",
@@ -2265,7 +2274,7 @@ El **1º Congreso Nacional de [ALEP](https://www.alep.pt/)** fue un éxito rotun
     id: "23303",
     slug: "roomonitor-x-icnea-soluciona-problemas-de-ruido-de-manera-mas-eficiente",
     title: "Roomonitor x Icnea: Soluciona problemas de ruido de manera más eficiente",
-    excerpt: '[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli',
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos clientes nos pedían.
 
 Hoy, nos complace anunciar nuestra última integración con [Icnea](https://icnea.es/), un software de administración de propiedades líder en la industria con sede en España. Gracias a esta integración, podrás acceder a todas tus herramientas de administración de propiedades favoritas en un solo lugar. Con Icnea puedes administrar las reservas y registros de manera eficiente y ahora también comunicarte automáticamente con tus huéspedes en caso de incidencia en la monitorización de ruido en tus propiedades para que puedas ahorrar tiempo y concentrarte en hacer crecer tu negocio.
@@ -2303,7 +2312,7 @@ Si ya tienes cuentas en Roomonitor e Icnea, ¡puedes comenzar en minutos! Ve a l
     id: "15985",
     slug: "informe-roomonitor-2021",
     title: "Informe Roomonitor - Ultimos 3 meses",
-    excerpt: '[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru',
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ruido con Roomonitor Alarm Assistant.
 
 Roomonitor: Monitoriza el ruido en tiempo real. No graba audio, mantenido la privacidad 100%. El dispositivo permite conocer los niveles de ruido dentro los apartamentos turísticos, emitiendo alarmas por sms y llamadas telefónicas al propietario o gestor del apartamento cuando son sobrepasados los niveles estipulados para poder ponerse en contacto con los turísticas y que bajen los niveles, evitando asi cualquier conflicto de convivencia con vecinos.
