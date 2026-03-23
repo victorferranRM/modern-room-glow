@@ -133,14 +133,14 @@ export default function HowItWorks() {
         <section className="pb-12 lg:pb-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection animation="fade-up">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-base px-8 h-12" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <Button size="lg" className="text-base px-8 h-12 w-full sm:w-auto" asChild>
                   <LocalizedLink to="/contact?inquiry=demo">
                     {t("howItWorks.bookDemo")}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </LocalizedLink>
                 </Button>
-                <Button size="lg" variant="outline" className="text-base px-8 h-12" asChild>
+                <Button size="lg" variant="outline" className="text-base px-8 h-12 w-full sm:w-auto" asChild>
                   <LocalizedLink to="/pricing">{t("about.viewPricing")}</LocalizedLink>
                 </Button>
               </div>
