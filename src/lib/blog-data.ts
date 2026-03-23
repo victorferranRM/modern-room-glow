@@ -22,6 +22,17 @@ export const categories = [
   "Roomonitor",
 ];
 
+export const categoriesByLang: Record<string, string[]> = {
+  es: ["Todas las categorías", "Alquiler vacacional", "Eventos", "Noticias del sector", "Gestión de propiedades", "Hoteles", "Roomonitor"],
+  en: ["All categories", "Vacation rental", "Events", "Industry news", "Property management", "Hotels", "Roomonitor"],
+  fr: ["Toutes les catégories", "Location saisonnière", "Événements", "Actualités", "Gestion de propriétés", "Hôtels", "Roomonitor"],
+  pt: ["Todas as categorias", "Aluguel de temporada", "Eventos", "Notícias do setor", "Gestão de propriedades", "Hotéis", "Roomonitor"],
+};
+
+export const getCategoriesForLang = (lang: string): string[] => {
+  return categoriesByLang[lang] || categoriesByLang['es'];
+};
+
 export const blogPosts: BlogPost[] = [
   {
     id: "37242",

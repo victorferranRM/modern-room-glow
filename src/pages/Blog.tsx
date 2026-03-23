@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, Calendar, Clock, ArrowRight } from "lucide-react";
 import {
-  categories,
+  getCategoriesForLang,
   getBlogPostsByLang,
   getFeaturedPost,
   getPostsByCategory,
@@ -17,22 +17,26 @@ import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const Blog = () => {
   const { t, lang } = useTranslation();
-  const [selectedCategory, setSelectedCategory] = useState(t('blog.allCategories'));
+  const localizedCategories = getCategoriesForLang(lang);
+  const [selectedCategory, setSelectedCategory] = useState(localizedCategories[0]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const featuredPost = getFeaturedPost(lang);
 
   const filteredPosts = useMemo(() => {
-    let posts = getPostsByCategory(selectedCategory, lang);
+    const allCategoriesLabel = localizedCategories[0];
+    let posts = selectedCategory === allCategoriesLabel
+      ? getBlogPostsByLang(lang)
+      : getPostsByCategory(selectedCategory, lang);
     if (searchQuery.trim()) {
       posts = searchPosts(searchQuery, lang).filter(
         (post) =>
-          selectedCategory === t('blog.allCategories') ||
+          selectedCategory === allCategoriesLabel ||
           post.category === selectedCategory
       );
     }
     return posts.filter((post) => !post.featured);
-  }, [selectedCategory, searchQuery, t, lang]);
+  }, [selectedCategory, searchQuery, lang, localizedCategories]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString(t('blog.dateLocale'), {
@@ -131,7 +135,7 @@ const Blog = () => {
             delay={0.1}
             className="flex flex-wrap justify-center gap-3 mb-8"
           >
-            {categories.map((category) => (
+            {localizedCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
