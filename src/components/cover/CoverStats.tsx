@@ -37,7 +37,7 @@ const statConfigs = [
   { target: 500000, prefix: "+", suffix: "", fmtNum: true, delay: 0 },
   { target: 1500000, prefix: "+", suffix: "", suffixSmall: "min", fmtNum: true, delay: 100 },
   { target: 4, prefix: "<", suffix: "", suffixSmall: "min", fmtNum: false, delay: 200 },
-  { target: 50000, prefix: "+", suffix: "", fmtNum: true, delay: 300 },
+  { target: 45000, prefix: "+", suffix: "", fmtNum: true, delay: 300 },
   { target: 8, prefix: "", suffix: "", suffixSmall: "ciudades", fmtNum: false, delay: 400 },
 ];
 
