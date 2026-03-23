@@ -694,7 +694,7 @@ const en = {
   },
   howItWorks: {
     heroEyebrow: "Technology + People",
-    heroTitle: "You manage. We protect.",
+    heroTitle: "You manage.<br class='hidden lg:block' /> We protect.",
     heroDescription: "Smart monitoring and delegated operations for property managers who want to sleep soundly. Choose your level of control.",
     selectorMonitorTitle: "I want to monitor my properties",
     selectorMonitorSubtitle: "Device + dashboard + alerts",
