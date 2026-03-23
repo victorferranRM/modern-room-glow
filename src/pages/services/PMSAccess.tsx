@@ -132,15 +132,15 @@ export default function PMSAccess() {
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-8">
               {t('servicePMSAccess.ctaDescription')}
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-11 px-8 bg-primary text-primary-foreground hover:bg-primary/90 group transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+              <a href="/contact" className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-11 px-8 bg-primary text-primary-foreground hover:bg-primary/90 group transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto">
                 {t('servicePMSAccess.ctaPrimary')}
               </a>
               <a
                 href="https://api.roomonitor.com/docs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-11 px-8 border border-input bg-background hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-11 px-8 border border-input bg-background hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 w-full sm:w-auto"
               >
                 {t('servicePMSAccess.ctaSecondary')}
               </a>
