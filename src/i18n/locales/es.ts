@@ -282,7 +282,7 @@ const es = {
       ctaSecondary: "Ver planes y precios",
     },
     stats: [
-      { value: "30.000+", label: "Propiedades Protegidas" },
+      { value: "45.000+", label: "Propiedades Protegidas" },
       { value: "150K+", label: "Alertas Gestionadas" },
       { value: "99,9%", label: "Tiempo Activo" },
       { value: "24/7", label: "Soporte Disponible" },
