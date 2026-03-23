@@ -59,7 +59,7 @@ export default function Monitoring() {
             <AnimatedSection delay={200} className="relative">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-3xl" />
-                <img src={roomonitorDevice} alt={t('monitoring.hero.eyebrow')} className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl" />
+                <img src={roomonitorDevice} alt={t('monitoring.hero.eyebrow')} className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl" decoding="async" />
               </div>
             </AnimatedSection>
           </div>

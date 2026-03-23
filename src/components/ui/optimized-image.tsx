@@ -41,7 +41,7 @@ export function OptimizedImage({
         }
       },
       {
-        rootMargin: "50px 0px", // Start loading 50px before entering viewport
+        rootMargin: "200px 0px", // Start loading 200px before entering viewport for smoother experience
         threshold: 0.01,
       }
     );

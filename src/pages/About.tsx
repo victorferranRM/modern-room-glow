@@ -161,7 +161,7 @@ export default function About() {
                 return (
                   <div key={idx} className="group relative overflow-hidden rounded-2xl bg-card border shadow-soft hover:shadow-lg transition-all duration-300">
                     <div className="aspect-[4/3] overflow-hidden">
-                      <img src={valueImages[idx]} alt={value.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <img src={valueImages[idx]} alt={value.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
                     </div>
                     <div className="p-6">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
@@ -297,7 +297,7 @@ export default function About() {
               <div className="lg:sticky lg:top-32">
                 <div className="bg-card border rounded-2xl overflow-hidden shadow-soft">
                   <div className="aspect-video overflow-hidden relative">
-                    <img src={timelineImages[activeTimeline]} alt={timeline[activeTimeline].title} className="w-full h-full object-cover transition-all duration-500" />
+                    <img src={timelineImages[activeTimeline]} alt={timeline[activeTimeline].title} className="w-full h-full object-cover transition-all duration-500" loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-sm font-bold">
@@ -330,7 +330,7 @@ export default function About() {
                 const type = mediaTypes[idx];
                 return <LocalizedLink key={idx} to="/blog" className="group relative bg-card border rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                       <div className="aspect-[16/10] overflow-hidden relative">
-                        <img src={mediaImages[idx]} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <img src={mediaImages[idx]} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
                         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
                         <div className="absolute top-3 left-3">
                           <span className="inline-flex items-center gap-1.5 bg-background/90 backdrop-blur-sm text-foreground text-xs font-medium uppercase tracking-wider px-2.5 py-1 rounded-full">
@@ -398,7 +398,7 @@ export default function About() {
         <AnimatedSection className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden">
-              <img src={aboutJoinTeam} alt={t('about.joinTeam.title')} className="absolute inset-0 w-full h-full object-cover" />
+              <img src={aboutJoinTeam} alt={t('about.joinTeam.title')} className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-foreground/70" />
               <div className="relative z-10 py-20 px-8 md:py-28 md:px-16 text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-4">{t('about.joinTeam.title')}</h2>
