@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, Calendar, Clock, ArrowRight } from "lucide-react";
 import {
+  categories,
   getBlogPostsByLang,
   getFeaturedPost,
   getPostsByCategory,
