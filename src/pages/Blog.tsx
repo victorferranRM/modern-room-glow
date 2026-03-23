@@ -17,19 +17,27 @@ import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const Blog = () => {
   const { t, lang } = useTranslation();
-  const localizedCategories = getCategoriesForLang(lang);
+
+  const localizedCategories = getCategoriesForLang(lang).length > 0
+    ? getCategoriesForLang(lang)
+    : getCategoriesForLang('es');
+
   const [selectedCategory, setSelectedCategory] = useState(localizedCategories[0]);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const featuredPost = getFeaturedPost(lang);
+  const featuredPost = getFeaturedPost(lang) ?? getFeaturedPost('es');
 
   const filteredPosts = useMemo(() => {
     const allCategoriesLabel = localizedCategories[0];
+
+    const currentLangPosts = getBlogPostsByLang(lang);
+    const effectiveLang = currentLangPosts.length > 0 ? lang : 'es';
+
     let posts = selectedCategory === allCategoriesLabel
-      ? getBlogPostsByLang(lang)
-      : getPostsByCategory(selectedCategory, lang);
+      ? (currentLangPosts.length > 0 ? currentLangPosts : getBlogPostsByLang('es'))
+      : getPostsByCategory(selectedCategory, effectiveLang);
     if (searchQuery.trim()) {
-      posts = searchPosts(searchQuery, lang).filter(
+      posts = searchPosts(searchQuery, effectiveLang).filter(
         (post) =>
           selectedCategory === allCategoriesLabel ||
           post.category === selectedCategory
