@@ -133,6 +133,7 @@ const BlogPost = () => {
                     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
                     .replace(/^- (.+)$/gm, '<li class="ml-6 list-disc font-light">$1</li>')
                     .replace(/^(\d+)\. (.+)$/gm, '<li class="ml-6 list-decimal font-light">$2</li>')
+                    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:opacity-80">$1</a>')
                     .replace(/\n\n/g, '</p><p class="mb-6 leading-relaxed font-light">')
                     .replace(/\|(.+)\|/g, (match) => {
                       const cells = match.split('|').filter(Boolean);
