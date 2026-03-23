@@ -297,7 +297,7 @@ export function ManagerSection() {
                 <img
                   src={managerDevices}
                   alt={t("home.manager.devicesAlt")}
-                  className="max-w-[110%] w-[110%] h-auto object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
+                  className="w-full max-w-md lg:max-w-none lg:w-[110%] h-auto object-contain drop-shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700"
                 />
                 <Button size="lg" className="gap-2 group" asChild>
                   <LocalizedLink to="/contact">

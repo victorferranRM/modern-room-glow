@@ -62,7 +62,7 @@ export function ComparisonTable({ properties }: ComparisonTableProps) {
         <div className="lg:hidden space-y-6">
           <div className="bg-card border rounded-2xl p-4 shadow-soft">
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3">{t('pricing.comparison.selectPlan')}</p>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="flex flex-col sm:grid sm:grid-cols-3 gap-2">
               {PLANS.map((plan) => (
                 <button key={plan.key} onClick={() => setSelectedPlan(plan.key)}
                   className={`relative p-3 rounded-xl border-2 transition-all ${selectedPlan === plan.key ? "border-primary bg-primary/5" : "border-border hover:border-muted-foreground/30"}`}>

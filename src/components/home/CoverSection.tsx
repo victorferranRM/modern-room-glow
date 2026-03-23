@@ -35,8 +35,8 @@ export function CoverSection() {
             <span className="text-sm font-semibold tracking-widest text-primary uppercase">
               {t("home.cover.eyebrow")}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-5">
-              {t("home.cover.title")}<br />{t("home.cover.titleLine2")}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-5 text-balance">
+              {t("home.cover.title")} {t("home.cover.titleLine2")}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
               {t("home.cover.description")}
