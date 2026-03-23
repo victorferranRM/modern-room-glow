@@ -167,11 +167,11 @@ export default function CaseStudies() {
                       <p className="text-sm text-muted-foreground font-light mb-4 line-clamp-2">
                         {study.headline}
                       </p>
-                      <div className="flex justify-between border-t border-border pt-4">
+                      <div className="flex justify-between gap-2 border-t border-border pt-4">
                         {study.stats.slice(0, 3).map((stat, i) => (
-                          <div key={i} className="text-center">
-                            <div className="text-lg font-bold text-primary">{stat.value}</div>
-                            <div className="text-xs text-muted-foreground">{stat.label}</div>
+                          <div key={i} className="text-center min-w-0">
+                            <div className="text-base sm:text-lg font-bold text-primary truncate">{stat.value}</div>
+                            <div className="text-[10px] sm:text-xs text-muted-foreground truncate">{stat.label}</div>
                           </div>
                         ))}
                       </div>
