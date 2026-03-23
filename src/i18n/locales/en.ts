@@ -282,7 +282,7 @@ const en = {
       ctaSecondary: "View plans & pricing",
     },
     stats: [
-      { value: "30,000+", label: "Properties Protected" },
+      { value: "45,000+", label: "Properties Protected" },
       { value: "150K+", label: "Alerts Managed" },
       { value: "99.9%", label: "Uptime" },
       { value: "24/7", label: "Support Available" },
