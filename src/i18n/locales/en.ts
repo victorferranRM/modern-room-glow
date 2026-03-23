@@ -418,7 +418,7 @@ const en = {
       callUs: "Call us",
     },
     trust: [
-      { title: "+30,000 properties", desc: "Monitored worldwide" },
+      { title: "+45,000 properties", desc: "Monitored worldwide" },
       { title: "+10 years", desc: "Of industry experience" },
       { title: "8 cities", desc: "With active field agents" },
     ],

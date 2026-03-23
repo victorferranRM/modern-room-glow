@@ -418,7 +418,7 @@ const fr = {
       callUs: "Appelez-nous",
     },
     trust: [
-      { title: "+30 000 propriétés", desc: "Surveillées dans le monde entier" },
+      { title: "+45 000 propriétés", desc: "Surveillées dans le monde entier" },
       { title: "+10 ans", desc: "D'expérience dans le secteur" },
       { title: "8 villes", desc: "Avec des agents de terrain actifs" },
     ],

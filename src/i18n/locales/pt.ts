@@ -418,7 +418,7 @@ const pt = {
       callUs: "Ligue-nos",
     },
     trust: [
-      { title: "+30.000 propriedades", desc: "Monitoradas em todo o mundo" },
+      { title: "+45.000 propriedades", desc: "Monitoradas em todo o mundo" },
       { title: "+10 anos", desc: "De experiência no setor" },
       { title: "8 cidades", desc: "Com agentes de campo ativos" },
     ],
