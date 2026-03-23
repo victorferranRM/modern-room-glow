@@ -376,7 +376,7 @@ export default function About() {
                 <p className="text-background/70 text-lg mb-6 leading-relaxed">{t('about.globalPresence.description')}</p>
                 <p className="text-background/70 mb-8 leading-relaxed">{t('about.globalPresence.expandDescription')}</p>
                 
-                <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
                   {coverageCities.map(city => <div key={city.name} className="flex items-center gap-2">
                       <MapPin className={`w-4 h-4 flex-shrink-0 ${city.isHQ ? "text-primary" : "text-background/50"}`} />
                       <span className={`text-sm ${city.isHQ ? "font-semibold text-primary" : "text-background/70"}`}>
