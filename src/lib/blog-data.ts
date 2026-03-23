@@ -5335,7 +5335,7 @@ Roomonitor is the global solution for noise control. Roomonitor NoiseAlarm monit
     id: "15985",
     slug: "informe-roomonitor-2021",
     title: "Informe Roomonitor - Ultimos 3 meses",
-    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru",
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline='no' text_larger='no']Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ruido con Roomonitor Alarm Assistant.
 
 Roomonitor: Monitoriza el ruido en tiempo real. No graba audio, mantenido la privacidad 100%. El dispositivo permite conocer los niveles de ruido dentro los apartamentos turísticos, emitiendo alarmas por sms y llamadas telefónicas al propietario o gestor del apartamento cuando son sobrepasados los niveles estipulados para poder ponerse en contacto con los turísticas y que bajen los niveles, evitando asi cualquier conflicto de convivencia con vecinos.
