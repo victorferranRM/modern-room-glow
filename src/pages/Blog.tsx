@@ -76,7 +76,7 @@ const Blog = () => {
               <div className="relative bg-white rounded-2xl overflow-hidden max-w-5xl mx-auto shadow-lg border border-border/40">
               <div className="grid md:grid-cols-2 gap-0">
                   <LocalizedLink to={`/blog/${featuredPost.slug}`} className="block relative">
-                    <div className="aspect-[4/3] overflow-hidden bg-muted h-full">
+                    <div className="aspect-[3/2] md:aspect-auto overflow-hidden bg-muted h-full">
                       <img
                         src={featuredPost.image}
                         alt={featuredPost.title}
@@ -192,7 +192,7 @@ const Blog = () => {
                     </div>
                   </LocalizedLink>
 
-                  <span className="flex items-center gap-2 text-muted-foreground text-xs font-medium mb-2">
+                  <span className="flex items-center gap-2 text-muted-foreground text-sm font-medium mb-3">
                     <Calendar className="w-3.5 h-3.5" />
                     {formatDate(post.date)}
                   </span>
