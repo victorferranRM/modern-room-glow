@@ -11,6 +11,7 @@ import {
   getFeaturedPost,
   getPostsByCategory,
   searchPosts,
+  translateCategory,
 } from "@/lib/blog-data";
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
