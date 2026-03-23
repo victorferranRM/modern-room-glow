@@ -1175,7 +1175,7 @@ Esta nueva regulación ya está en vigor. Si operas en municipios como **Santand
   {
     id: "35834",
     slug: "registro-estatal-viviendas-turisticas-fevitur-silvia-blasco",
-    title: `Silvia Blasco (FEVITUR): "El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal"`,
+    title: "Silvia Blasco (FEVITUR): 'El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal'",
     excerpt: "Desde el 1 de julio de 2024, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del 45 % de las viviendas turísticas l",
     content: `Desde el **1 de julio de 2024**, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del **45 % de las viviendas turísticas legales** que ya estaban registradas en sus comunidades autónomas, según denuncia **Silvia Blasco**, presidenta de FEVITUR en [Economist&Jurist](https://www.economistjurist.es/zbloque-1/silvia-blasco-presidenta-de-fevitur-un-45-de-las-viviendas-turisticas-legales-quedaron-fuera-del-nuevo-registro-estatal-impuesto-por-el-ministerio-de-vivienda/).
 
