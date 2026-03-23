@@ -54,8 +54,9 @@ export default function HowItWorks() {
                 <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
                   {t("howItWorks.heroEyebrow")}
                 </p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-foreground leading-[1.05]">
-                  {t("howItWorks.heroTitle")}
+                <h1
+                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-foreground leading-[1.05]"
+                  dangerouslySetInnerHTML={{ __html: t("howItWorks.heroTitle") }}
                 </h1>
               </AnimatedSection>
               <AnimatedSection animation="fade-up" delay={120}>
