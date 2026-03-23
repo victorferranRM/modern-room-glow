@@ -31,9 +31,9 @@ export default function Hotels() {
                 <span className="text-primary block">{t('solutionHotels.heroTitle2')}</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">{t('solutionHotels.heroDescription')}</p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild><LocalizedLink to="/resources/savings-calculator"><Calculator className="mr-2 h-4 w-4" />{t('solutionHotels.calculateSavings')}</LocalizedLink></Button>
-                <Button size="lg" variant="outline" asChild><LocalizedLink to="/contact">{t('solutionHotels.talkToSales')}</LocalizedLink></Button>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button size="lg" className="w-full sm:w-auto" asChild><LocalizedLink to="/resources/savings-calculator"><Calculator className="mr-2 h-4 w-4" />{t('solutionHotels.calculateSavings')}</LocalizedLink></Button>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild><LocalizedLink to="/contact">{t('solutionHotels.talkToSales')}</LocalizedLink></Button>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
