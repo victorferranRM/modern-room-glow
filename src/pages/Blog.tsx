@@ -15,6 +15,8 @@ import {
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
+const POSTS_PER_PAGE = 12;
+
 const Blog = () => {
   const { t, lang: rawLang } = useTranslation();
   const lang = rawLang || 'es';
@@ -25,10 +27,16 @@ const Blog = () => {
 
   const [selectedCategory, setSelectedCategory] = useState<string>(localizedCategories[0]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
 
   useEffect(() => {
     setSelectedCategory(getCategoriesForLang(lang)[0]);
+    setVisibleCount(POSTS_PER_PAGE);
   }, [lang]);
+
+  useEffect(() => {
+    setVisibleCount(POSTS_PER_PAGE);
+  }, [selectedCategory, searchQuery]);
 
   const featuredPost = getFeaturedPost(lang) ?? getFeaturedPost('es');
 
@@ -175,51 +183,73 @@ const Blog = () => {
           </AnimatedSection>
 
           {/* Blog Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post, index) => (
-              <AnimatedSection
-                key={post.id}
-                animation="fade-up"
-                delay={0.1 * (index % 3)}
-              >
-                <article className="group">
-                  <LocalizedLink to={`/blog/${post.slug}`} className="block mb-5">
-                    <div className="aspect-[16/10] rounded-xl overflow-hidden bg-muted relative">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-foreground/80 backdrop-blur-sm text-background text-xs font-medium px-2.5 py-1.5 rounded-full">
-                        <Clock className="w-3.5 h-3.5" />
-                        <span>{t('blog.readTimeShort', { min: String(post.readTime) })}</span>
-                      </div>
-                    </div>
-                  </LocalizedLink>
+          {(() => {
+            const visiblePosts = filteredPosts.slice(0, visibleCount);
+            const hasMore = visibleCount < filteredPosts.length;
+            return (
+              <>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {visiblePosts.map((post, index) => (
+                    <AnimatedSection
+                      key={post.id}
+                      animation="fade-up"
+                      delay={0.1 * (index % 3)}
+                    >
+                      <article className="group">
+                        <LocalizedLink to={`/blog/${post.slug}`} className="block mb-5">
+                          <div className="aspect-[16/10] rounded-xl overflow-hidden bg-muted relative">
+                            <img
+                              src={post.image}
+                              alt={post.title}
+                              loading="lazy"
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-foreground/80 backdrop-blur-sm text-background text-xs font-medium px-2.5 py-1.5 rounded-full">
+                              <Clock className="w-3.5 h-3.5" />
+                              <span>{t('blog.readTimeShort', { min: String(post.readTime) })}</span>
+                            </div>
+                          </div>
+                        </LocalizedLink>
 
-                  <span className="flex items-center gap-2 text-muted-foreground text-sm font-medium mb-3">
-                    <Calendar className="w-3.5 h-3.5" />
-                    {formatDate(post.date)}
-                  </span>
+                        <span className="flex items-center gap-2 text-muted-foreground text-sm font-medium mb-3">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {formatDate(post.date)}
+                        </span>
 
-                  <h3 className="text-xl font-bold text-foreground mb-3 leading-tight tracking-tight group-hover:text-primary transition-colors">
-                    <LocalizedLink to={`/blog/${post.slug}`}>{post.title}</LocalizedLink>
-                  </h3>
+                        <h3 className="text-xl font-bold text-foreground mb-3 leading-tight tracking-tight group-hover:text-primary transition-colors">
+                          <LocalizedLink to={`/blog/${post.slug}`}>{post.title}</LocalizedLink>
+                        </h3>
 
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3 font-light leading-relaxed">
-                    {post.excerpt}
-                  </p>
+                        <p className="text-muted-foreground text-sm mb-4 line-clamp-3 font-light leading-relaxed">
+                          {post.excerpt}
+                        </p>
 
-                  <LocalizedLink
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-primary font-medium text-sm hover:underline"
-                  >
-                    {t('blog.readMore')}
-                  </LocalizedLink>
-                </article>
-              </AnimatedSection>
-            ))}
-          </div>
+                        <LocalizedLink
+                          to={`/blog/${post.slug}`}
+                          className="inline-flex items-center text-primary font-medium text-sm hover:underline"
+                        >
+                          {t('blog.readMore')}
+                        </LocalizedLink>
+                      </article>
+                    </AnimatedSection>
+                  ))}
+                </div>
+
+                {hasMore && (
+                  <div className="flex justify-center mt-12">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      onClick={() => setVisibleCount((prev) => prev + POSTS_PER_PAGE)}
+                      className="rounded-full px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {t('blog.loadMore')}
+                    </Button>
+                  </div>
+                )}
+              </>
+            );
+          })()}
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-16">

@@ -545,6 +545,7 @@ const fr = {
     latestArticles: "Derniers articles",
     searchPlaceholder: "Rechercher des articles...",
     noResults: "Aucun article trouvé correspondant à vos critères.",
+    loadMore: "Charger plus",
     relatedArticles: "Articles connexes",
     readyToProtect: "Prêt à protéger vos propriétés ?",
     startWithRoomonitor: "Commencez avec Roomonitor et garantissez la tranquillité pour vous et vos voisins.",
