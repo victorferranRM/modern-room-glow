@@ -24,16 +24,19 @@ const Blog = () => {
   const featuredPost = getFeaturedPost(lang);
 
   const filteredPosts = useMemo(() => {
-    let posts = getPostsByCategory(selectedCategory, lang);
+    const allCategoriesLabel = localizedCategories[0];
+    let posts = selectedCategory === allCategoriesLabel
+      ? getBlogPostsByLang(lang)
+      : getPostsByCategory(selectedCategory, lang);
     if (searchQuery.trim()) {
       posts = searchPosts(searchQuery, lang).filter(
         (post) =>
-          selectedCategory === t('blog.allCategories') ||
+          selectedCategory === allCategoriesLabel ||
           post.category === selectedCategory
       );
     }
     return posts.filter((post) => !post.featured);
-  }, [selectedCategory, searchQuery, t, lang]);
+  }, [selectedCategory, searchQuery, lang, localizedCategories]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString(t('blog.dateLocale'), {
