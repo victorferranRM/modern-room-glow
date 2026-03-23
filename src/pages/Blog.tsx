@@ -15,6 +15,8 @@ import {
 import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
+const POSTS_PER_PAGE = 12;
+
 const Blog = () => {
   const { t, lang: rawLang } = useTranslation();
   const lang = rawLang || 'es';
@@ -25,10 +27,16 @@ const Blog = () => {
 
   const [selectedCategory, setSelectedCategory] = useState<string>(localizedCategories[0]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
 
   useEffect(() => {
     setSelectedCategory(getCategoriesForLang(lang)[0]);
+    setVisibleCount(POSTS_PER_PAGE);
   }, [lang]);
+
+  useEffect(() => {
+    setVisibleCount(POSTS_PER_PAGE);
+  }, [selectedCategory, searchQuery]);
 
   const featuredPost = getFeaturedPost(lang) ?? getFeaturedPost('es');
 
