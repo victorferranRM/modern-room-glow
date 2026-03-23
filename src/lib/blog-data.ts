@@ -4088,6 +4088,1358 @@ Sound Alarm es una herramienta que aporta sólo ventajas para aquellos property 
     image: "https://roomonitor.com/wp-content/uploads/2019/07/ruido-alojamientos-turisticos-opt.jpg",
     lang: "es",
   },
+    {
+    id: "36850",
+    slug: "10-years-supporting-the-short-term-rental-industry",
+    title: "Roomonitor: 10 Years Supporting the Short-Term Rental Industry",
+    excerpt: "Ten years ago, the short-term rental industry was very different from what it is today. Professionalization was still at an early stage, operational technology was limited, and many challenges were handled reactively. That’s the context in which Room",
+    content: `Ten years ago, the short-term rental industry was very different from what it is today. Professionalization was still at an early stage, operational technology was limited, and many challenges were handled reactively.
+
+That’s the context in which Roomonitor was born. We started with a very clear goal: **to solve a real problem affecting both property owners and neighbors — noise**. We were pioneers in launching the world’s first noise-monitoring device for short-term rental apartments, but we quickly learned an essential lesson: detection alone was not enough. Support mattered.
+
+## From Technology to Operational Support
+
+Over the past ten years, the industry has evolved significantly — and we’ve evolved with it.
+
+We moved from offering a single device to building **a complete operational structure**, combining technology, automation, remote assistance, and on-site teams. We introduced 24/7 agents, guest call management, remote and in-person access services, check-ins, concierge services, and field support across multiple European cities.
+
+All driven by one constant idea: **being there for the industry when it needs us most**.
+
+## Supporting the Industry Through Challenging Times
+
+If one event defined this decade, it was the pandemic — one of the most challenging moments the tourism industry has ever faced, and a true test of the value of operational support.
+
+During that period, we helped property owners maintain control and security over their assets, while supporting managers in preventing critical situations amid widespread uncertainty. It was then that we reaffirmed our commitment: **we are not just a tool — we are an operational partner**.
+
+## 10 Years of Listening, Learning, and Evolving
+
+We’ve grown alongside the industry by listening closely to our clients, adapting to new regulations, evolving business models, and ever-changing guest expectations.
+
+Today, Roomonitor is technology, data, people, and processes. But above all, it represents **a decade of real, hands-on operational experience**.
+
+Celebrating ten years is not just about looking back. It’s about renewing our commitment to the short-term rental industry and continuing to build solutions that deliver peace of mind, efficiency, and trust.
+
+**Thank you to all the professionals, managers, and property owners who have been part of this journey — no matter when you joined us.**
+
+We’re still by your side. Today, just as we were ten years ago.`,
+    category: "Noticias del sector",
+    date: "2025-12-16",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/12/RM-10-anos-clientes.png",
+    lang: "en",
+  },
+  {
+    id: "36497",
+    slug: "horizontal-property-act-short-term-rental-rules-spain-2025",
+    title: "What you need to do in 2025 to legally rent out your home to tourists in Spain",
+    excerpt: "Short-term rentals in Spain have become a source of neighbour disputes, pressure on residential housing, and constant regulatory changes. Following the recent reform of Spain’s Horizontal Property Act (Ley de Propiedad Horizontal), homeowners who wan",
+    content: `Short-term rentals in Spain have become a source of neighbour disputes, pressure on residential housing, and constant regulatory changes. Following the recent reform of Spain’s **Horizontal Property Act (Ley de Propiedad Horizontal)**, homeowners who want to list their property as a holiday rental within a community of owners now face new obligations. At Roomonitor, we explain **the essential steps you must follow** to legally rent out your home in Spain, avoid fines, and maintain a good relationship with your building’s homeowners’ association.
+
+## Community approval now required for holiday rentals in Spain
+
+Spain’s 2025 reform of the Horizontal Property Act introduces a series of changes that directly affect short-term rentals in residential buildings. The most important are:
+
+- Any homeowner wishing to rent out their property to tourists (defined as the temporary commercial letting of a fully furnished home) must obtain **explicit approval from the homeowners’ association** before starting activity.
+
+- The association can now, with a 3/5 majority vote (representing 3/5 of ownership shares), authorise, restrict, condition or fully prohibit short-term rentals within the building.
+
+- These new requirements **do not apply retroactively** to properties that were already operating legally as short-term rentals before the reform came into effect.
+
+## Steps every homeowner in Spain must follow
+
+Here are the key steps to ensure full compliance with Spanish regulations:
+
+#### 1. Review your building’s statutes and previous community decisions
+
+Start by checking whether your building’s internal rules explicitly prohibit holiday rentals, or whether a prior owners’ meeting adopted a valid decision limiting or conditioning them. If such a rule exists, **you cannot legally operate** your property as a holiday rental unless the decision is formally amended.
+
+#### 2. Obtain approval from the homeowners’ association
+
+If no prohibition is in place, you must present your proposal to the homeowners’ association and secure approval by a 3/5 majority. Without this approval, operating as a tourist rental is no longer legal under the updated Act.
+
+The association’s president may formally require you to cease activity if you operate without the necessary approval.
+
+#### 3. Comply with regional and municipal tourism regulations in Spain
+
+The national reform does not replace **Spain’s regional or municipal tourism laws**. Depending on the location of your property, you may still need to obtain a tourist licence, register the property in the regional tourism registry, comply with safety standards, meet accessibility requirements, or respect zoning limits.
+
+#### 4. Meet tax and reporting obligations
+
+Running a holiday rental in Spain is considered an economic activity. You must declare income and fulfil all applicable reporting obligations, including digital information submissions required for short-term rental operators.
+
+#### 5. Additional formalities and best practices
+
+- Even when approved, ensure that the community’s decision is formally recorded in the meeting minutes and, when applicable, registered with the Land Registry.
+
+- Homeowners’ associations may apply an additional fee or surcharge of up to 20% of shared community expenses for properties used as holiday rentals.
+
+- Maintain open communication with neighbours. Establish clear protocols for check-in/out, cleaning, access control, noise prevention, and [**noise monitoring**](https://roomonitor.com/en/what-is-noise-monitoring-and-why-do-i-need-it/)—where a solution like **Roomonitor** is especially effective.
+
+## **Mandatory Digital Single Window registration to list your property on OTAs in Spain**
+
+Spain’s **Digital Single Window for Short-Term Rentals (VUD – Ventanilla Única Digital)** is now fully operational and is a key national requirement. As of **1 July 2025**, all properties used for tourist rentals in Spain must obtain a **valid registration number** through this system in order to be **legally listed on Airbnb, Booking.com or Vrbo**.
+
+The VUD centralises verification of legal compliance, but it **does not replace** regional or municipal rules. Homeowners must register through the Digital Single Window **and** comply with all regional tourism obligations in their area.
+
+## What if your property in Spain was already operating as a holiday rental?
+
+If your property in Spain was legally operating as a holiday rental before 3 April 2025, you do **not** need to obtain new community approval. Your activity is grandfathered under the previous regime.
+
+Even so, reviewing community decisions and keeping all documentation updated is strongly recommended.
+
+## Practical tips to minimise risks and improve management
+
+- Before presenting your proposal, meet with the homeowners’ association and share a clear operating plan: access control, cleaning processes, booked guest tracking, noise protocols, insurance and monitoring devices.
+
+- Apply for the [**weRespect**](https://werespect.net/) certification to demonstrate sustainable and responsible tourism practices.
+
+- Keep every document: meeting minutes, agreements, notifications and proof of compliance.
+
+- Check additional regional or municipal requirements: some Spanish cities impose stricter limits, special licences or zoning caps.
+
+- If the community introduces new restrictions in the future, consult a legal expert to assess whether the decision can be challenged.
+
+## **What the reform of Spain’s Horizontal Property Act changes**
+
+The reform significantly reshapes how holiday rentals work in Spain: the absence of a prohibition is no longer enough. Short-term rentals in residential buildings now require a **prior, explicit green light** from the homeowners’ association.
+
+For homeowners, transparency and compliance are essential to operate legally, reduce conflicts and build trust with neighbours, guests and platforms alike.`,
+    category: "Gestión de propiedades",
+    date: "2025-11-21",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2025/11/ley-de-propiedad-horizontal-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "36640",
+    slug: "scotland-2025-short-term-rental-trends-roomonitor-beyond",
+    title: "Scotland 2025 Report: Key Trends in the Short-Term Rental Market — Occupancy, ADR and Guest Behaviour",
+    excerpt: "In an increasingly regulated and competitive landscape, short-term rental operators face the challenge of maintaining profitability without losing operational efficiency. In this context, data-driven decision-making has become a key competitive advan",
+    content: `In an increasingly regulated and competitive landscape, short-term rental operators face the challenge of maintaining profitability without losing operational efficiency. In this context, **data-driven decision-making has become a key competitive advantage**.
+
+Understanding real market behaviour — how occupancy, pricing, and length of stay evolve — allows property managers to anticipate demand and fine-tune their commercial strategy with precision.
+
+Through its [dynamic pricing technology](https://www.beyondpricing.com/), **Beyond** has partnered with **Roomonitor** to create a new report offering an up-to-date view of Scotland’s short-term rental sector. The report combines real performance data with insights into traveller behaviour and booking trends across the country.
+
+The goal: to help property managers and hosts **maximise revenue, optimise resources, and enhance the guest experience** through informed decision-making.
+
+## **A Market in Transition**
+
+Scotland’s short-term rental market is showing strong signs of recovery and stabilisation, even as new local regulations reshape the sector. The combination of **shorter booking windows**, **changing guest patterns**, and **new seasonal behaviours** makes adaptability the new rule of the game.
+
+Reports like this one — produced by **Roomonitor and Beyond** — have become a strategic tool for property managers operating in markets such as **Edinburgh, Glasgow, and Aberdeen**, where demand curves, pricing behaviour, and booking pace vary significantly from season to season.
+
+## **How is ADR performing across Scotland?**
+
+**Scotland overall** shows a healthy recovery with an average **occupancy rate of 55%** — up **+2% vs. 2024** — and a strong **ADR of £178**, marking a **+19% increase** compared to last year. The average length of stay sits at **5.9 days** with a booking window of **26 days**, meaning proactive pricing is key to capturing last-minute demand.
+
+In **Edinburgh**, occupancy remains stable at **60%**, while ADR reaches **£229** (–5% YoY). Although pacing is slightly behind compared to last year, ADR for early 2026 is trending **+15%** higher — indicating potential for revenue growth during major events such as *Scotland vs England* and *Six Nations*.
+
+**Glasgow** shows an upward trend with **+2% in occupancy** and ADR holding steady at **£131**. Events like the *Spring Half-Term Holidays* and *Country Festival* are key demand drivers. Pricing strategies should remain flexible to capitalise on these booking spikes.
+
+Meanwhile, **Aberdeen** continues to consolidate, with **occupancy up by +4%** and ADR slightly down (–2%). However, ADR pacing is **+24% ahead year-on-year**, suggesting strong forward-looking revenue potential. Longer booking windows (42 days) highlight the need to balance early pricing with late-demand opportunities.
+
+## **How to Improve Your Revenue Management Results**
+
+The 2025 report confirms that success in the short-term rental industry doesn’t just rely on occupancy or ADR — it depends on the **ability to interpret and act on data**. The study highlights three key practices to improve revenue performance:
+
+- **Adjust minimum stay rules** based on guest behaviour to avoid blocking high-value bookings.
+
+- **Update your prices frequently**, adapting them to your market’s booking window and event calendar.
+
+- **Base your decisions on local data** to anticipate demand peaks and maximise RevPAN.
+
+Property managers who leverage real-time insights — from property performance to evolving market demand — are those who grow sustainably and deliver a superior guest experience.
+
+📊 **Download the full report [here](https://event.roomonitor.com/what-to-expect-from-scotlands-short-term-rental-market-in-early-2026)**.`,
+    category: "Gestión de propiedades",
+    date: "2025-11-11",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/12/Beyond-SCO-1200x628-1.png",
+    lang: "en",
+  },
+  {
+    id: "36400",
+    slug: "airbnb-specific-regulation-rural-areas-spain",
+    title: "Airbnb calls for specific regulation in rural areas in Spain",
+    excerpt: "Airbnb has called for differentiated regulation of short-term rentals across Spain’s rural regions, arguing that the current framework fails to reflect the reality of areas where a significant share of housing stock lies empty. According to La Razón,",
+    content: `Airbnb has called for **differentiated regulation of short-term rentals across Spain’s rural regions**, arguing that the current framework fails to reflect the reality of areas where a significant share of housing stock lies empty.
+
+According to ***[La Razón](https://www.larazon.es/economia/airbnb-reclama-regulacion-diferenciada-alquileres-turisticos-zonas-rurales-donde-45-viviendas-estan-vacias_20251106690c85a45442607f2fec5bdb.html)***, that includes statements from Jaime Rodríguez de Santiago, Managing Director for Spain and Portugal at Airbnb, **as many as 45% of homes in some rural municipalities remain unoccupied**, while tourist rentals represent only a very small proportion of the total.
+
+The platform proposes adapting legislation to local circumstances — distinguishing between those who rent occasionally and those operating professionally — and applying proportionate measures based on each market’s actual impact.
+
+## Data that challenge common myths about short-term rentals
+
+Airbnb maintains that the short-term rental market has **a negligible effect on housing prices**, accounting for just **0.3% of total increases**.
+
+Furthermore, homes used exclusively for tourist purposes make up **less than 0.5% of Spain’s total housing stock**, while there are **30 times more empty properties than registered tourist lets**.
+
+These figures align with various economic studies showing that **holiday rentals contribute nearly 2% to Spain’s GDP**, generating **over €30 billion annually** and supporting **around 400,000 direct and indirect jobs** nationwide.
+
+## Rural tourism on the rise: sustainable growth and local impact
+
+Rural tourism is now a well-established trend. In 2023, **13 million travellers chose rural accommodation**, generating **€5.56 billion in spending**, of which **€3.2 billion went directly to local businesses**, according to Analistas Financieros Internacionales (AFI).
+
+Growth is also evident in overnight stays: **33.6% of all tourist nights were spent in rural areas in 2023**, up from 31% in 2018 — an increase of **17.6 million additional nights**.
+
+These data reinforce the idea that **responsible short-term rentals can help revitalise depopulated areas**, provided that regulation encourages sustainable activity instead of limiting it indiscriminately.
+
+## Regulation and management: key to responsible tourism
+
+Airbnb’s proposal aims to distinguish between **professional and occasional hosting**, and between **urban and rural settings** — a distinction that makes increasing sense as regulation evolves.
+
+In this scenario, **rural property owners and managers** need to operate with transparency, data and full operational control.
+
+Tools such as **Roomonitor Manager** make it possible to **monitor guest activity**, **prevent incidents**, ensure **regulatory compliance**, and maintain a model of **sustainable and responsible tourism**, even in areas where local oversight is more limited.
+
+Technology, combined with professional management, can help strike the balance between **economic growth, neighbourhood harmony and legal compliance** — all essential pillars for the future of short-term rentals in Spain.`,
+    category: "Noticias del sector",
+    date: "2025-11-07",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/11/potes.jpg",
+    lang: "en",
+  },
+  {
+    id: "36295",
+    slug: "del-parque-flats-roomonitor-responsible-tourism",
+    title: "Del Parque Flats highlights the importance of Roomonitor in promoting responsible tourism",
+    excerpt: "The Málaga-based company Del Parque Flats is leading the way in responsible tourism through Roomonitor technology: noise monitors, smoke detectors, and professional operational control. Del Parque Flats, a Málaga-based company recognised by HomeToGo ",
+    content: `### The Málaga-based company Del Parque Flats is leading the way in responsible tourism through Roomonitor technology: noise monitors, smoke detectors, and professional operational control.
+
+**[Del Parque Flats](https://delparqueflats.com/)**, a Málaga-based company recognised by HomeToGo as one of the world’s top partners, has become a true **benchmark for responsible tourism** in Andalusia thanks to its firm commitment to innovation and technology.
+
+As reported by [**Suite Información**](https://www.suiteinformacion.es/sociedad/del-parque-flats-exige-la-ultima-tecnologia-en-los-pisos-turisticos-para-evitar-molestias-vecinales-y-garantizar-un-turismo-responsable/), the company **requires the installation of advanced noise and safety monitoring systems in every property it manages**, and **uses Roomonitor devices** as a core part of its operations.
+
+## Roomonitor technology for peaceful coexistence
+
+The **[Roomonitor devices](https://roomonitor.com/en/device/)**, visible in the images accompanying the article, make it possible to **detect and prevent excessive noise or risk situations in real time**. They also **measure air quality and detect tobacco particles** to identify gatherings or over-occupancy.
+
+This technology enables Del Parque Flats to **act proactively**, ensuring peace of mind for neighbours and full compliance with local regulations.
+
+*“We want to strengthen our control measures and ensure good relations with neighbours. Every apartment we manage is equipped with devices and applications that help us prevent incidents and enhance the guest experience”*, explains Fermín Criado, CEO of Del Parque Flats.
+
+## A benchmark for professional holiday rentals in Andalusia
+
+In addition to integrating Roomonitor across all its properties, Del Parque Flats employs **night concierges** and maintains a **strict policy of legality and transparency**, managing only duly registered holiday homes.
+
+This comprehensive professional approach has led the company to join **AVVA PRO, FEVITUR and the European Holiday Home Association**, consolidating its position as one of the most responsible operators in the sector.
+
+## Innovation that sets the standard
+
+The case of Del Parque Flats shows that **technological innovation and community harmony can go hand in hand**.
+
+In a context where regulation and public perception of short-term rentals are becoming increasingly demanding, **solutions like Roomonitor allow property managers to stay one step ahead of potential issues, offering peace of mind to both owners and neighbours**.
+
+## Towards more responsible tourism
+
+More and more professional property managers are adopting **Roomonitor devices and 24/7 operational support services** to ensure neighbourly harmony, reduce incidents and protect the reputation of their rentals.
+
+Del Parque Flats is a clear example of how **technology can be the best ally for sustainable, high-quality tourism**.
+
+**Would you like to manage your properties with the same peace of mind as Del Parque Flats?** Discover how Roomonitor helps you promote responsible tourism through smart technology and 24/7 operational support. 👉 [**Find out more**](https://roomonitor.com)`,
+    category: "Noticias del sector",
+    date: "2025-10-23",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/10/del-parque-flats-RM.jpg",
+    lang: "en",
+  },
+  {
+    id: "36225",
+    slug: "airbnb-cancellation-policy-changes",
+    title: "Airbnb updates its cancellation policies: new conditions from October 2025",
+    excerpt: "Airbnb has announced an important update to its cancellation policies for short stays. From 1 October 2025, all bookings of 27 nights or fewer will be subject to a new, more flexible cancellation framework, replacing the former “Strict” policy. New 2",
+    content: `Airbnb has announced an **[important update](https://www.airbnb.co.uk/help/article/475)** to its cancellation policies for short stays. From **1 October 2025**, all bookings of **27 nights or fewer** will be subject to a new, more flexible cancellation framework, replacing the former **“Strict”** policy.
+
+## New 24-hour free cancellation period
+
+From 1 October, **all policies will include a 24-hour free cancellation period**. This means that guests will be able to **cancel their booking and receive a full refund, including taxes**, provided they do so **within 24 hours of confirmation** and **at least 7 days before check-in** (based on the property’s local time).
+
+Certain hotels are exempt from this 24-hour free cancellation period.
+
+## Airbnb’s new cancellation policies
+
+Airbnb will offer a range of cancellation options for hosts, with varying levels of flexibility.These will apply to all short stays (less than 28 nights):
+
+#### **1. Flexible**
+
+- Cancellations up to 24 hours before arrival → **full refund** (including taxes).
+
+- If cancelled less than 24 hours before → the host receives payment for the nights stayed plus one additional night.
+
+#### **2. Moderate**
+
+- Cancellations up to 5 days before arrival → **full refund**.
+
+- If cancelled less than 5 days before → the host receives payment for the nights stayed, plus one additional night and **50% of the remaining nights**.
+
+#### **3. Limited** *(available for bookings confirmed from 1 October 2025)*
+
+- Cancellations up to 14 days before check-in → **full refund**.
+
+- Cancellations between 7 and 14 days before → **50% refund**.
+
+- Cancellations made less than 7 days before → **no refund** (the host receives 100%).
+
+#### **4. Semi-Strict**
+
+- Cancellations up to 30 days before → **full refund**.
+
+- Cancellations between 7 and 30 days before → **50% refund**.
+
+- Cancellations less than 7 days before → **no refund**.
+
+#### **5. Strict** *(only available for certain hosts)*
+
+- Cancellations 7 days or more before → **50% refund**.
+
+- Cancellations less than 7 days before → **no refund**.
+
+#### **6. Super Strict 30 Days**
+
+- Cancellations 30 days or more before → **50% refund**.
+
+- Cancellations less than 30 days before → **no refund**.
+
+#### **7. Super Strict 60 Days**
+
+- Cancellations 60 days or more before → **50% refund**.
+
+- Cancellations less than 60 days before → **no refund**.
+
+### What this change means for hosts
+
+With this new model, Airbnb aims to strike a fairer balance between the flexibility guests are looking for and the security hosts need. The introduction of the 24-hour free cancellation period is designed to boost guest confidence when booking, which could in turn lead to an increase in early reservations.
+
+For hosts, this update brings a clearer and more predictable framework. The new policies provide greater transparency regarding timelines and refunds, reducing the ambiguities that previously existed under the “Strict” policy. They also offer hosts more room to adapt their management strategy depending on the season, length of stay or guest profile, allowing for greater control over flexibility levels.
+
+With the “Strict” policy no longer set as the default, all cancellation options will now include the 24-hour free cancellation period. Airbnb is also introducing new categories such as “Limited” and “Semi-Strict”, offering varying degrees of flexibility and protection for hosts.
+
+Listings currently using older policies will be automatically migrated to the new system, requiring no manual action. However, hotels and non-refundable rate plans will remain exempt from the 24-hour free cancellation window and will continue to follow their own specific terms.
+
+Overall, this update represents a move towards a more balanced approach in which flexibility and clarity are designed to improve both the guest experience and the host’s operational predictability.`,
+    category: "Noticias del sector",
+    date: "2025-10-02",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/10/airbnb-guest-guidebook-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "35878",
+    slug: "cantabria-requires-noise-sensors-in-holiday-rentals-new-regulation-now-in-effect",
+    title: "Cantabria requires noise sensors in holiday rentals: new regulation now in effect",
+    excerpt: "The Government of Cantabria has officially approved Decree 50/2025—a pivotal piece of legislation aimed at regulating short-term rental properties, enhancing legal certainty, and improving neighbourhood coexistence. One of the most notable aspects of",
+    content: `The Government of Cantabria has officially approved **[Decree 50/2025](https://roomonitor.com/wp-content/uploads/2023/09/BOE-Cantabria-ruido.pdf)**—a pivotal piece of legislation aimed at regulating short-term rental properties, enhancing legal certainty, and improving neighbourhood coexistence.
+
+One of the most notable aspects of this new decree is the **mandatory installation of noise monitoring systems** in all tourist accommodations registered in the region.
+
+At Roomonitor, we offer the market’s first **[noise monitoring device](https://roomonitor.com/en/device/)**—a trusted technology already used in thousands of properties, not only across Spain but in several countries worldwide.
+
+### Why this regulation?
+
+According to the Cantabrian government, this measure responds to the need to:
+
+- End the legal grey area surrounding many holiday rentals.
+
+- Provide **regulatory clarity** for owners, managers, and municipalities.
+
+- **Safeguard residents’ right to rest** and prevent disruption in residential areas.
+
+With this initiative, **Cantabria joins a growing European movement** to ensure holiday rentals operate in harmony with urban life and community wellbeing.
+
+### Who is affected, and what does it mean?
+
+The requirement to install noise monitoring devices applies to:
+
+- All **registered short-term rental properties** in Cantabria.
+
+- Any new holiday lets: they must be equipped **before beginning operations**.
+
+Beyond noise monitoring, the decree also introduces other obligations, such as distinguishing between **professional and occasional rental activity**, and applying **more precise categorisation** of accommodation types.
+
+### What kind of technology is required?
+
+While the regulation does not mention specific brands, it clearly states that devices must be able to **measure and record noise levels** to prevent disruptive behaviour and misuse.
+
+This type of technology enables operators to **detect issues in real time** and take action before complaints or fines arise.
+
+### Roomonitor’s noise monitoring system
+
+At Roomonitor, we’ve been working with short-term rental operators and property managers for years, particularly in high-regulation urban environments like **Barcelona, Paris, and Lisbon**.
+
+With our device and technology, you can:
+
+- **Detect** noise, parties, or overcrowding in real time.
+
+- Monitor tobacco smoke, air quality, temperature, and humidity.
+
+- **Intervene preventively**, either automatically or via our [**Remote Control Centre**](https://roomonitor.com/en/control-center/).
+
+- **Stay compliant** with new legal requirements—without disrupting your daily operations.
+
+- **Log incidents with traceability**, including reports and alert histories.
+
+All of this is done **discreetly and automatically**, with zero impact on the guest experience.
+
+### Do you manage properties in Cantabria?
+
+This regulation is already in effect. If you operate in places like **Santander, Suances, Comillas, Castro Urdiales, Noja**, or elsewhere in the region, **now is the time to act**.
+
+👉 [**Get in touch with our team**](https://roomonitor.com/en/book-a-demo/) and let us help you implement a quick, legal, and effective solution.`,
+    category: "Noticias del sector",
+    date: "2025-08-01",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/08/Sistema-monitorizacion-ruido-scaled.jpeg",
+    lang: "en",
+  },
+  {
+    id: "35840",
+    slug: "national-register-holiday-rentals-fevitur-silvia-blasco",
+    title: "Silvia Blasco (FEVITUR): “45% of legally registered holiday rentals left out of new national register”",
+    excerpt: "Since 1 July 2024, Royal Decree 1312/2024 has required all short-term holiday rentals to be listed in a national register, managed by the Spanish Land Registry. However, according to Silvia Blasco, president of FEVITUR, the system has effectively exc",
+    content: `Since **1 July 2024**, Royal Decree 1312/2024 has required all short-term holiday rentals to be listed in a national register, managed by the Spanish Land Registry. However, according to **Silvia Blasco**, president of FEVITUR, the system has effectively excluded around **45% of legally registered holiday homes** already recognised by regional authorities, as she explained in an interview with [Economist & Jurist](https://www.economistjurist.es/zbloque-1/silvia-blasco-presidenta-de-fevitur-un-45-de-las-viviendas-turisticas-legales-quedaron-fuera-del-nuevo-registro-estatal-impuesto-por-el-ministerio-de-vivienda/).
+
+This high exclusion rate is creating significant **legal uncertainty**, as many properties that meet all regional requirements are not being recognised at the national level. “The validation process does not respect regional registries. Arbitrary criteria are being applied that override existing legal status,” Blasco explains.
+
+Blasco also warned of the **direct consequences for the holiday rental market**: at least **100,000 fully legal homes are unable to operate** simply because they haven’t been granted a national registration number, which is now essential for listing on platforms like Airbnb or Booking. In her words: “Without that code, you literally can’t rent legally. And we’re talking about a massive financial loss at the peak of the summer season.”
+
+## “We’re not the problem in housing access — we’re part of the solution”
+
+FEVITUR’s president firmly rejects the idea that short-term rentals are responsible for Spain’s housing crisis. According to her, “holiday rentals make up just 0.6% of the overall housing stock — a figure that’s remained stable for five years”. She argues the sector is being made a scapegoat for broader policy failings.
+
+She also stresses the need for regulations tailored to each destination: “You can’t apply the same rules to a city, a coastal town and a rural area. These are fundamentally different models that require differentiated responses.”
+
+## A push for professionalisation from within the sector
+
+Blasco supports the idea of a national register in principle — as a tool for control, traceability and transparency, in line with EU directives. FEVITUR has long championed this step as a means of **professionalising the sector and tackling the black market**.
+
+However, she is critical of how the rollout is being handled: with no automated connection to existing regional databases and no formal appeals process, many operators are left with no clear guidance after being refused a national registration number.
+
+She also calls for ongoing institutional dialogue that reflects the sector’s diversity: from sole traders and individual hosts to property managers, health travel companies and platforms. As she puts it, “FEVITUR must be a federation for everyone — no one should be left out.”
+
+## **Thousands of homes still without a registration code as summer begins**
+
+With the high season underway, the stakes are high. FEVITUR warns that if **70% of properties fail to secure their registration number in time**, the sector could lose as much as **€5 billion** in revenue over the summer. Since January, more than 20,000 applications have been submitted — but registry offices are overwhelmed and struggling to process them.
+
+## What does this mean for property managers and owners?
+
+- Any regional-legal property without a national registration code will lack visibility on booking platforms — it simply cannot operate.
+
+- The absence of clear rules or accessible procedures increases the risk of penalties and lost revenue.
+
+- This demands coordinated efforts between government authorities and tech providers to deliver compliance tools and operational support.
+
+At Roomonitor, we’re closely monitoring these regulatory changes. We believe it’s crucial to provide **technology that empowers managers and owners** with greater control, visibility and traceability — without compromising on professional standards or the quality of guest experience.`,
+    category: "Noticias del sector",
+    date: "2025-07-28",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2025/07/silvia-blasco.png",
+    lang: "en",
+  },
+  {
+    id: "35771",
+    slug: "interview-jordan-setti-checkmyguest-security-vacation-rentals",
+    title: "Interview with Jordan Setti, COO of CheckMyGuest: \\"Knowing that from 10 PM to 7 AM someone takes over is priceless\\"",
+    excerpt: "Hello everyone. Today I have the real pleasure of being welcomed at the offices of Checkmyguest by Jordan Setti. He is the COO and one of the key players in the short- and mid-term rental market in France. We’re here to talk about the evolution of th",
+    content: `Hello everyone. Today I have the real pleasure of being welcomed at the offices of Checkmyguest by Jordan Setti.
+
+He is the COO and one of the key players in the short- and mid-term rental market in France. We’re here to talk about the evolution of the sector, the current challenges, and also the collaboration between Checkmyguest and Roomonitor, which has been ongoing since 2021. The goal of this conversation is to highlight how our partnership helps strengthen **security**, **operational efficiency**, and the **guest experience** in an increasingly demanding market.
+
+https://youtu.be/JeQMC49GnI0
+
+**Could you briefly introduce Checkmyguest and explain how the company has evolved since its creation in 2016?**
+
+Checkmyguest is a company specialized in short- and mid-term apartment rentals. Today, we manage around 3,000 units across France, and we were recently acquired by Oyo, one of the hospitality giants in India. Since 2016, we’ve grown steadily; we had to change our operations and the way we work. That’s how we’ve been able to scale the model to 3,000 units.
+
+**And what type of properties do you manage exactly, and in which regions of France are you most present?**
+
+We mainly operate in Île-de-France, in Paris, where we have about 80% of our inventory. The rest is in southern France (PACA region) and in the north—Deauville, Trouville, Honfleur. We’re expanding more and more: we acquired a company in Lyon, where we manage about a hundred properties; we’re also present in Geneva and in Italy. So we’re starting to expand internationally, but our core business is still in Paris.
+
+**As a major player in the market, what’s your view on the current state of the short- and mid-term rental market in France?**
+
+In Paris, it’s becoming increasingly complicated, as everyone knows. New regulations aim to reduce the number of short-term rentals. That’s why, from the very beginning, we specialized in converting commercial spaces into apartments dedicated to seasonal rentals, allowing us to operate them 365 days a year. But over time it’s getting harder, as Parisian regulations are trying to reduce this activity. That’s why we need to look for growth in other cities and other countries.
+
+**Speaking of regulations, what are the main regulatory challenges you face right now, and what impact do you expect these legislative changes to have on your business?**
+
+Currently, you can operate in two ways:
+
+- Either it’s your primary residence, in which case you can rent it for 90 days a year (if the co-ownership rules allow it).
+
+- Or you have a commercial designation, with a change of use to “hotel accommodation,” which allows you to legally rent 365 days a year.
+
+We specialized in the latter, but it’s becoming increasingly difficult because obtaining hotel accommodation status is harder and harder. That’s the main challenge with all the new regulations in Paris. Acquiring new properties under these conditions is becoming very difficult.
+
+Interview with Jordan Setti, COO of CheckMyGuest
+
+**How important are security and neighborhood peace of mind for Checkmyguest, both for your properties and for local residents?**
+
+For us, that’s crucial. We want a business that lasts over time. If you don’t respect the neighbors and the co-ownership, you risk being forced to stop operating short-term rentals. We absolutely don’t want that. So our goal is to maintain good relationships with neighbors, avoid disturbances, avoid parties— even if that means canceling reservations or refusing suspicious ones. We don’t want any issues with our neighbors; the long-term sustainability of our business depends on it.
+
+**As mentioned in the introduction, we’ve been working together since 2021. What convinced you to choose Roomonitor as your monitoring solution?**
+
+In 2021, during the pandemic, tourists stopped coming to Paris. We had to lower prices to attract bookings, and like every company in the industry, we faced parties in apartments because clubs and restaurants were closed. We had a big challenge: how to secure our apartments. That’s how it all started, and we partnered with Roomonitor.
+
+**Why Roomonitor and not another company offering a similar service?**
+
+Because Roomonitor also provides on-site intervention, and for us, that’s essential. From midnight onwards, when our offices are closed, we want to sleep peacefully. Roomonitor takes over: the device sends alerts, they call the guests to calm them down, and if they don’t answer or quiet down, Roomonitor intervenes in around 20 minutes. Honestly, that’s priceless. Today, I can sleep without being woken by owners or neighbors complaining about a party. In the morning, I simply read the reports—everything is handled perfectly.
+
+**Did you previously use any solutions to detect parties, unauthorized occupancy, or potential damage risks?**
+
+No. Of course, parties have always existed in this business, but they were rare. With the pandemic, they multiplied; it even became a trend to rent apartments for parties, which often led to problems with co-ownership rules. That’s when we turned to solutions like yours, and we chose Roomonitor.
+
+**Aside from the alerts handled by our night agents based in Paris, what do you consider other key strengths of our service?**
+
+First, the reports: they’re essential for our owners because they can use them with their co-ownership associations—everything is documented, so no one can argue. But also, your **reactivity**. Even when we suspect a potential party—last-minute bookings in large apartments, guests we’re not comfortable with—we often ask your team to do precautionary rounds, and you always respond quickly. That reactivity is something we value a lot at Checkmyguest.
+
+**Could you share a concrete example where Roomonitor helped you prevent a major incident?**
+
+Yes, one clear case: a full-on nightclub-style party in a high-value apartment. The booking looked normal—good guest reviews, established Airbnb profile, family trip, no last-minute booking. But they installed a real nightclub setup. Roomonitor detected the noise, called the guests, quickly understood it was a party, and went on-site. The situation escalated; they even called the police. Within 30 to 45 minutes, everything was solved: guests removed, keys recovered, apartment secured. No major issue with the co-ownership because the problem was stopped fast. For me, that’s the most concrete example of Roomonitor’s effectiveness.
+
+**What future do you see for the short- and mid-term rental market, in terms of social sustainability, relationships with local communities, and the use of monitoring tools like Roomonitor?**
+
+The market is becoming fully professionalized. Only operators who truly know this business and work properly will remain. You need the right partners, you need to respect neighbors, and you need to work with providers like you. I think more and more large operators will manage this market, supported by companies like Roomonitor, because you offer the best solution to ensure everything runs smoothly. This business isn’t always welcomed by neighbors, which is understandable, but if it’s done properly, everything goes well.
+
+**If you had to recommend Roomonitor to another property manager, what would you say?**
+
+Go for it, sign. Don’t wait, because nothing beats peace of mind. This is a 24/7 business, and at some point, you need to rest—especially at night. Knowing that from 10 PM to 7 AM someone takes over, can access the apartment with the keys, and intervene on-site is invaluable.
+
+**And finally, Jordan, is there anything else you’d like to share about your experience or your vision of the market?**
+
+Not particularly, except that today we know our apartments are secure, there are no issues, and we have a partner who reacts very quickly.
+
+Thanks for taking the time to share your experience with us. It’s really important, and it’s a real pleasure to have the testimony of someone as influential as you in this industry. We’re convinced that, thanks to this collaboration since 2021, we’ll continue strengthening security, optimizing operations, and delivering an even better guest experience.`,
+    category: "Noticias del sector",
+    date: "2025-07-21",
+    readTime: 6,
+    image: "https://roomonitor.com/wp-content/uploads/2025/07/IMG_4521-1-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "35585",
+    slug: "airbnb-booking-unique-rental-register-spain",
+    title: "The new role of OTAs in Spain from July 1st",
+    excerpt: "From July 1st 2025, platforms such as Airbnb and Booking will be required to report information on each booking, host, and property ID to the Spanish Tax Agency. Here's what this new responsibility means and how it will impact the sector. What is the",
+    content: `From July 1st 2025, platforms such as Airbnb and Booking will be required to report information on each booking, host, and property ID to the Spanish Tax Agency. Here's what this new responsibility means and how it will impact the sector.
+
+# What is the Digital One-Stop Shop?
+
+The **[Digital One-Stop Shop](https://roomonitor.com/en/digital-single-window-short-term-rentals-spain/)** is a centralised digital platform introduced by the Spanish Government to consolidate all data related to short-term holiday rentals in Spain. It forms part of a new legal framework aimed at promoting greater transparency, regulatory control, and organisation within the sector.
+
+Through this tool, public authorities will be able to validate and cross-reference information from the **Unique Rental Register**, ensuring all advertised holiday lets comply with current regulations and are properly identified.
+
+# Who does this regulation affect?
+
+This regulation has a broad scope. It directly affects **individual property owners**, **professional managers**, **property management companies**, and of course, **online booking platforms** such as Airbnb, Booking, Vrbo, Holidu, and others.
+
+No one will be permitted to advertise a short-term rental property in Spain unless it has been registered in the official system and assigned a valid **Unique Rental ID (NRA)**.
+
+# What role do Airbnb, Booking, and other OTAs play?
+
+The most disruptive aspect of this regulation is that it turns booking platforms into **key agents of legal compliance**. They will no longer act solely as intermediaries: they will now be required to verify, store, and report key information for every listed property.
+
+This includes the **NRA**, host or manager details, property ownership, booking dates, and the financial value of each reservation.
+
+The information will be collected and submitted regularly through digital integrations with the Digital One-Stop Shop, positioning these platforms as a first layer of compliance before an advert goes live.
+
+# A shift that will define the future of holiday rentals
+
+Although this legislation responds to national needs, it cannot be fully understood without the wider European context. The **European Union has already proposed a common framework** for the holiday rental sector, with an eye towards 2030. It aims to boost transparency, tax control, and digital regulation across member states.
+
+Spain has decided to take the lead, becoming the first country to pass national legislation of this scope. The aim is twofold: to **clamp down on illegal listings** and **professionalise the sector**, building a shared database that enables closer cooperation between platforms and public authorities.
+
+With the implementation of the **[Unique Rental Register](https://roomonitor.com/en/digital-single-window-short-term-rentals-spain/)** and the **Digital One-Stop Shop**, the **holiday rental market in Spain** is entering a new era: more control, more transparency, and greater professional standards.
+
+Platforms like **Airbnb and Booking** will now be responsible for validating and reporting essential data. Property owners, in turn, must adapt to this new environment if they wish to continue legally marketing their properties.
+
+Now is the time to act. If you haven’t yet applied for your **Unique Rental ID**, you can check out our [**step-by-step guide here**](https://serviceguide.roomonitor.com/guia-numero-registro-unico-alquiler-espa%C3%B1a).`,
+    category: "Noticias del sector",
+    date: "2025-06-26",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/06/OTAs.png",
+    lang: "en",
+  },
+  {
+    id: "35488",
+    slug: "aid-tourism-dana-spain",
+    title: "Up to €200,000 in Aid for Tourism Businesses Affected by Recent DANA Storms",
+    excerpt: "The Spanish Ministry of Industry and Tourism, in collaboration with the Official Credit Institute (ICO), has launched a special line of financing to support tourism businesses impacted by recent DANA (Isolated High-Level Depression) storms. This supp",
+    content: `The Spanish Ministry of Industry and Tourism, in collaboration with the Official Credit Institute (ICO), has launched a special line of financing to support tourism businesses impacted by recent DANA (Isolated High-Level Depression) storms.
+
+This support, channelled through the State Financial Fund for Tourism Competitiveness (FOCIT), is aimed at tourism businesses that have suffered material or economic damage due to these extreme weather events. The goal is to drive recovery with loans of up to €200,000 on highly favourable terms.
+
+The aid will be offered as subsidised loans, featuring 0% interest segments and partial state-backed guarantees. Applications can be submitted directly through participating financial institutions — no need to go through public intermediaries. Eligible expenses include investments in facility repairs, digitalisation, sustainability, operational improvements, or compliance with updated regulations.
+
+This initiative presents a key opportunity for property managers and owners of short-term rentals — particularly holiday rentals — who need to rebuild operations or modernise their businesses. The funds can also be used to implement remote management tools, automate check-in and security processes, install monitoring sensors and smart dashboards, or prepare for compliance with Spain’s upcoming Unified Rental Register.
+
+At Roomonitor, we encourage clients to stay informed and act early to benefit from this support. Our technology — designed to operate remotely, reduce disturbances and enhance guest experience — aligns perfectly with the aims of this aid.
+
+For guidance on how to apply and tailor a project aligned with the regulations and your operational needs, reach out to us at [sales@roomonitor.com](mailto:sales@roomonitor.com).`,
+    category: "Noticias del sector",
+    date: "2025-06-23",
+    readTime: 1,
+    image: "https://roomonitor.com/wp-content/uploads/2025/06/ayudas-dana.jpg",
+    lang: "en",
+  },
+  {
+    id: "34891",
+    slug: "short-term-rentals-barcelona-mwc",
+    title: "84% of MWC attendees see a problem in the ban on short-term rentals",
+    excerpt: "The future of short-term rentals in Barcelona is uncertain, especially after Mayor Jaume Collboni's pledge to phase out this type of accommodation by 2028. In this context, the Barcelona Tourist Apartment Association (Apartur) conducted a survey amon",
+    content: `The future of short-term rentals in Barcelona is uncertain, especially after Mayor Jaume Collboni's pledge to phase out this type of accommodation by 2028. In this context, the Barcelona Tourist Apartment Association ([Apartur](https://apartur.com/)) conducted a survey among attendees of the 2024 Mobile World Congress ([MWC](https://www.mwcbarcelona.com/)), revealing that 84% of respondents believe that banning short-term rentals would be a problem.
+
+### Impact on Accommodation Availability and Pricing
+
+According to the survey results, eliminating tourist apartments could have severe consequences for the city’s hospitality sector. Currently, these rentals account for 40% of the available beds in Barcelona each day. Their removal could lead to a significant increase in hotel prices and a reduction in affordable and flexible lodging options for visitors.
+
+Additionally, short-term rental occupancy during MWC exceeds 95%, with more than 30,000 attendees staying in these properties. The survey also found that 87% of respondents prefer that Barcelona continues to offer tourist apartments as a complement to hotels.
+
+### Tourism and the Local Economy
+
+Business tourism is a key economic driver for Barcelona, and MWC is one of the most impactful events for the city. Concerns are growing among attendees and organizers that banning short-term rentals could affect Barcelona’s ability to host large-scale conferences and events.
+
+According to Apartur, the City Council’s intention to eliminate tourist apartments puts Barcelona’s appeal as an international event destination at risk. Attendees highlight group accommodation, prime locations, and value for money as the main reasons they choose this type of lodging.
+
+### The Role in International Events
+
+One of the main arguments against short-term rentals is their impact on neighborhood life, particularly regarding noise disturbances and uncontrolled occupancy. However, technological solutions like those offered by [Roomonitor](https://roomonitor.com/) can efficiently manage these issues. Real-time noise monitoring and occupancy detection help ensure that tourist apartments operate responsibly and respectfully within the local community.
+
+The future of tourism in Barcelona requires a balance between regulation and technology to safeguard both residents’ well-being and the city’s competitiveness as a global business and tourism hub.`,
+    category: "Noticias del sector",
+    date: "2025-03-07",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/04/12822944995_0030ea86bb_k.jpg",
+    lang: "en",
+  },
+  {
+    id: "31324",
+    slug: "werespect-pilot-tourist-coexistence-mallorca",
+    title: "Updates at FITUR 2025: unveiling the pilot project for tourist coexistence in Mallorca through weRespect",
+    excerpt: "During FITUR 2025, one of the leading international tourism events held at IFEMA Madrid, we proudly unveiled with weRespect the new pilot project for tourist coexistence in Mallorca. This innovative initiative aims to promote sustainability and foste",
+    content: `During **FITUR 2025**, one of the leading international tourism events held at IFEMA Madrid, we proudly unveiled with [**weRespect**](https://werespect.net/prensa/presentamos-el-piloto-de-acciones-werespect-en-mallorca-durante-fitur-2025) the new **pilot project for tourist coexistence in Mallorca**. This innovative initiative aims to promote sustainability and foster harmonious relationships in the vacation rental sector, in collaboration with key partners such as **Roomonitor**.
+## A project to promote harmony
+The pilot project focuses on implementing tools and strategies to improve relationships between guests, vacation rental owners, and local residents. Led by **weRespect**, this program seeks to strike a balance between the economic benefits of tourism and the preservation of community well-being in destinations like Mallorca.
+
+The presentation, introduced by **Gabriel Pérez** (Head of Public Relations at weRespect), featured **Jaume Bauzà**, Minister and Director General of Tourism for the Government of the Balearic Islands, **Sara Rodríguez**, Head of Public Policy & Campaigns at Airbnb, and **Maria Gibert**, Manager of the Association of Tourist Homes and Apartments of the Balearic Islands (HABTUR).
+
+[caption id="attachment_31310" align="alignnone" width="1024"] Gabriel Pérez presenting the weRespect pilot[/caption]
+## How will the program work?
+The mediation process will include the following steps:
+
+ 	- **Receiving the request:** weRespect will handle requests related to conflicts involving vacation rentals.
+ 	- **Referral to the mediation service:** The request will be assigned to a professional mediator.
+ 	- **Conflict analysis:** The mediator will meet with the involved parties—both neighbors and property managers/owners—to gather information.
+ 	- **Proposing a solution:** A joint resolution will be developed and formalized in an agreement signed by both parties.
+ 	- **Follow-up:** The agreement will be monitored for 60 to 90 days to ensure compliance.
+
+## Roomonitor and weRespect: leveraging technology to reduce tourism’s impact
+[**WeRespect**](https://www.werespect.net/) is an initiative launched in 2018 by Roomonitor in collaboration with industry associations. As part of this project, one of our key contributions has been the installation of **noise monitoring devices** in vacation rentals, alongside other initiatives.
+
+These devices have proven highly effective, resolving **57% of noise-related incidents in under 28 minutes** in 2023. With this technology, we not only enhance community harmony but also contribute to the professionalization of the sector.
+## A scalable model for tourism destinations
+The pilot in Mallorca has the potential to be replicated in other tourism destinations facing similar challenges. Its emphasis on collaboration between property managers, local communities, and innovative technologies makes it a model that can inspire other regions. At Roomonitor, we are proud to support initiatives that prioritize coexistence and sustainable development.
+
+For more information about this pilot and our sustainable tourism initiatives, visit the [weRespect](https://werespect.net) website.
+
+Together, we can build a more sustainable and respectful approach to tourism.`,
+    category: "Noticias del sector",
+    date: "2025-01-24",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-24-at-10.56.29.jpeg",
+    lang: "en",
+  },
+  {
+    id: "31271",
+    slug: "asier-pereda-fevitur-balance-common-good-public-interest-future-short-term-rentals",
+    title: "Asier Pereda (Fevitur): “Striking a balance between the common good and public interest is key to the future of short-term rentals”",
+    excerpt: "In Spain, the short-term rental market is undergoing significant changes due to new regulations and tax reforms designed to balance economic activity with housing accessibility. To gain deeper insight into these developments, we spoke with Asier Pere",
+    content: `In Spain, the short-term rental market is undergoing significant changes due to new regulations and tax reforms designed to balance economic activity with housing accessibility. To gain deeper insight into these developments, we spoke with **Asier Pereda**, President of [**Aparture**](https://aparture.com/) (Basque Country) and Head of Regulatory Affairs and Institutional Relations at [**Fevitur**](https://www.fevitur.es/). He shares his perspective on the challenges and opportunities facing the short-term rental sector in this evolving landscape.
+
+ 	- 
+#### **The recent amendment to the Horizontal Property Law mandates, as of April 3, 2025, that property owners must obtain explicit consent from their homeowners’ association before renting their property for short-term stays. Do you think this is fair?**
+
+The introduction of explicit consent as a requirement for short-term rentals sparks an important debate about **how to balance the common good and public interest**. While it may prevent conflicts in communities negatively affected by short-term rentals, it also creates additional hurdles for responsible property owners who comply with existing regulations.
+
+In my view, decisions like these should be grounded in objective criteria and framed within a regulatory context similar to that of any other economic activity. This ensures the legal certainty required by all stakeholders. Legal clarity and predictability are essential in a society governed by the rule of law.
+
+Allowing homeowners’ associations to determine whether economic activities such as short-term rentals can operate may seem democratic, but it raises a fundamental issue: associations are not inherently equipped to balance the common good (residents’ interests) with the public interest (economic and urban development).
+
+While the common good is important, it should not be assessed in isolation or pitted against the public interest. Short-term rentals represent an economic sector that extends beyond a single building, contributing to job creation, economic growth, and urban sustainability.
+
+ 	- 
+#### **What do you think is the primary challenge the short-term rental sector will face when the Horizontal Property Law amendment takes effect?**
+
+Legal uncertainty. In most cases, short-term rentals are classified under urban planning as a use equivalent to residential property. Unless local governments have specifically categorized them as an economic activity requiring a license, this creates legal ambiguity for operators, even those who comply with urban and sector-specific regulations.
+
+The issue is particularly pronounced in property transactions, where—despite adherence to the principle of non-retroactivity—activities can still be jeopardized if not tied to an activity license. This discourages professionalization and hampers sustainable growth in the sector.
+
+ 	- 
+#### **On Monday, Prime Minister Pedro Sánchez announced a housing crisis relief package, including higher taxes on short-term rental operators, so they “pay taxes properly, as a business.” How might this and other measures impact property managers and owners in Spain?**
+
+Fiscal policy is a crucial tool for guiding economic activities toward value creation, and housing rentals are no exception. Tax treatment plays a pivotal role in balancing the preferential residential use of housing with alternative uses like short-term rentals.
+
+For tourist rentals, tax policies must promote sustainable management models that preserve the social function of housing. This means steering the market toward practices that generate value in regulated employment, fiscal contributions, quality offerings, integration within the broader tourism value chain, and economic and social sustainability.
+
+ 	- 
+#### **What tax model do you believe is most suitable for addressing the challenges of the short-term rental market in Spain?**
+
+**FEVITUR’s fiscal proposal** aligns with the Prime Minister’s remarks, advocating general principles that support public policies in line with the common good.
+
+A key aspect of this proposal is differentiated tax treatment based on whether the activity is conducted professionally. This approach discourages speculative practices and incentivizes professional management models that create regulated jobs, ensure fiscal compliance, and integrate effectively into the tourism value chain.
+
+FEVITUR’s proposal also aligns fiscal policies with broader objectives, such as prioritizing residential use without compromising economic growth or job creation. This model demonstrates how taxation can be an effective tool for fostering a more sustainable sector aligned with the public interest.
+
+ 	- 
+#### **Looking ahead, what role do you see short-term rentals playing in the local and national economy if these measures are fully implemented? What challenges or opportunities might arise?**
+
+The solution to these challenges lies not in fostering legal uncertainty with ad-hoc decisions but in establishing clear and stable regulations that normalize short-term rentals as an economic activity. Urban planning tools and sector-specific regulations are essential for harmonizing the common good with public interest, ensuring the well-being of residents while enabling short-term rentals to operate within objective parameters.
+
+Official data shows that the impact of short-term rentals on housing markets is generally smaller than often perceived. In many areas, these properties account for a small percentage of the total housing stock, with a weak or nonexistent correlation between short-term rentals and rising housing prices.
+
+Only a robust regulatory framework will allow this economic sector, when operated responsibly and professionally, to thrive as a sustainable model benefiting all stakeholders. A well-managed short-term rental sector can create quality jobs, contribute to local development, and generate fiscal returns.
+
+Experience shows that fostering regulatory rigor, tax compliance, and professionalization is the most effective strategy for achieving a fair balance between economic activity and sustainability, preserving residential communities while maximizing the economic value of short-term rentals.`,
+    category: "Noticias del sector",
+    date: "2025-01-21",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/aparture.jpg",
+    lang: "en",
+  },
+  {
+    id: "31228",
+    slug: "juan-cubo-avva-pro-room-talks-holiday-rentals-malag",
+    title: "Juan Cubo (AVVAPro): “You can't enforce social policies using someone else's property”",
+    excerpt: "In a recent conversation with Roomonitor, Juan Cubo, CEO of Cubos Holiday Homes and president of the Andalusian Association of Holiday Rentals and Apartments Professionals (AVVAPro), shared his insights on the new regulations restricting holiday rent",
+    content: `In a recent conversation with Roomonitor, Juan Cubo, CEO of Cubos Holiday Homes and president of the Andalusian Association of Holiday Rentals and Apartments Professionals (AVVAPro), shared his insights on [the new regulations restricting holiday rentals in Málaga](https://roomonitor.com/en/news/malaga-bans-new-holiday-rentals/). According to Cubo, these measures, affecting 43 areas of the city, pose a significant challenge for property managers and homeowners alike.
+
+You can watch the full discussion on Roomonitor’s YouTube channel. This was the first episode of our [ROOM Talks](https://www.youtube.com/watch?v=XpNPRAeVTyU&t) series.
+## The impact of the new regulations
+For Cubo, these restrictions demonstrate how "authorities often act hastily" when trying to address housing issues without conducting thorough analyses. He argued that the real issue lies in the insufficient housing supply to meet demand, rather than the presence of holiday rentals. Cubo also highlighted the negative effects these measures could have on both the local economy and property owners' rights.
+## The role of AVVAPro
+Cubo explained that AVVAPro is submitting appeals to ensure that the regulations are fair and based on accurate data. He emphasized the association's commitment to maintaining an open dialogue with authorities and offering support to affected property owners.
+## The importance of tourism in Málaga
+Cubo reflected on how tourism has revitalized Málaga’s historic areas, which were once in decline. "Twenty years ago, the city center was abandoned; now it’s a vibrant area thanks to investments made by property owners," he noted. He also pointed out that the population in the city center has increased in recent years, a change partly driven by the economic boost from tourism.
+## A call for reflection
+AVVAPro's president concluded by urging authorities to adopt a more measured approach before implementing regulations that could backfire. "You can’t enforce social policies using someone else’s property," he stated. Cubo also warned that the combined restrictions imposed by various authorities are "effectively eliminating any alternative for property owners other than offering long-term rentals."`,
+    category: "Noticias del sector",
+    date: "2025-01-20",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/Captura-de-pantalla-2025-01-20-a-las-11.01.07.png",
+    lang: "en",
+  },
+  {
+    id: "31064",
+    slug: "malaga-areas-ban-tourist-accommodations",
+    title: "The 43 areas in Málaga where new tourist accommodations are now banned",
+    excerpt: "On January 14, 2025, a new municipal regulation came into effect in Málaga, prohibiting the registration of new tourist accommodations in 43 areas of the city. This measure aims to regulate the tourism supply in neighborhoods where the high concentra",
+    content: `On January 14, 2025, a new municipal regulation came into effect in Málaga, prohibiting the registration of new **tourist accommodations** in 43 areas of the city. This measure aims to regulate the tourism supply in neighborhoods where the high concentration of holiday rentals exceeds **8% of the housing stock**, ensuring a balance between tourism activity and the housing needs of local residents.
+## What does this new regulation entail?
+The regulation divides Málaga into three zones based on the density of tourist accommodations:
+
+ 	- **Reduction zone:** Includes 43 neighborhoods where tourist accommodations account for more than 8% of the housing stock. No new registrations are allowed here.
+ 	- **Containment zone:** Covers 32 neighborhoods where tourist accommodations represent between 4.53% and 8%. New registrations are permitted up to the 8% limit.
+ 	- **Moderate growth zone:** Neighborhoods with less than 4.53% of tourist accommodations. New registrations are allowed but must meet specific requirements, such as separate entrances and independent services.
+
+The regulation also establishes fines of up to **€50,000** for those operating tourist accommodations without a license or failing to meet the set requirements.
+## Neighborhoods affected by the ban
+Some of Málaga’s most iconic neighborhoods included in the **reduction zone** are:
+
+ 	- Historic Center
+ 	- La Malagueta
+ 	- El Ejido
+ 	- La Merced
+ 	- Pedregalejo Playa
+ 	- La Trinidad
+ 	- Plaza de Toros Vieja
+ 	- Santa Paula-Miramar
+ 	- Pacífico
+ 	- Torres de la Serna
+
+In total, **43 neighborhoods** have been identified where no new tourist accommodations can be registered. Check out the [full list here](https://www.diariosur.es/turismo/entra-vigor-prohibicion-viviendas-turisticas-zonas-capital-20250113082422-nt.html?ref=https%3A%2F%2Fwww.diariosur.es%2Fturismo%2Fentra-vigor-prohibicion-viviendas-turisticas-zonas-capital-20250113082422-nt.html).
+## Why has this measure been implemented?
+The supply of holiday rentals in Málaga has significantly increased in recent years. According to recent studies, tourist rentals represent a substantial portion of the housing stock in certain areas, leading to tensions among neighbors, property owners, and property managers.
+
+With this regulation, Málaga’s city council aims to ensure sustainable tourism development while safeguarding residents’ right to housing and preventing gentrification in the most affected neighborhoods.
+## Impact on property managers
+For property managers in Málaga, this regulation means adapting to a stricter regulatory environment. Those already operating tourist accommodations in affected areas must ensure full compliance with the legal requirements to avoid penalties. In containment and moderate growth zones, new registrations must also meet additional criteria, such as providing independent entrances for guests.
+
+At **Roomonitor**, we understand the importance of complying with local regulations and managing properties responsibly. Our [**noise monitoring solutions**](https://roomonitor.com/en/noise-monitoring/) and [**Alarm Assistant services**](https://roomonitor.com/en/alarm-assistant/) help property managers maintain harmonious coexistence in communities while optimizing operations.
+
+If you’d like to learn more about how our tools can help you adapt to this new regulatory framework in Málaga, [get in touch with us here](https://roomonitor.com/en/contact/).`,
+    category: "Noticias del sector",
+    date: "2025-01-15",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-vlasceanu-29151125-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "31027",
+    slug: "government-measures-holiday-rentals-spain",
+    title: "The Spanish government’s 12 new measures and their impact on holiday rentals",
+    excerpt: "In a bid to address Spain's housing crisis, Pedro Sánchez has unveiled a package of 12 measures, including specific regulations for holiday rentals. These proposals aim to strike a balance between the availability of short-term rentals and ensuring a",
+    content: `In a bid to address Spain's housing crisis, Pedro Sánchez has unveiled a package of 12 measures, including specific regulations for **holiday rentals**. These proposals aim to strike a balance between the availability of short-term rentals and ensuring access to housing for residents, particularly in major cities where real estate pressure is at its peak.
+
+Among the key measures is a fiscal reform designed to classify holiday rentals as an economic activity ([as previously announced](https://www.hosteltur.com/167761_ia-innovacion-y-sostenibilidad-protagonistas-de-fiturtechy-2025.html)), with plans to **raise VAT on holiday rentals to 21%**. Additionally, funds will be allocated to regional and local authorities to bolster inspections and combat illegal short-term rentals.
+## Specific measures for holiday rentals
+The proposed measures include new regulations directly affecting the **short-term rental sector**, particularly for properties listed on platforms like Airbnb:
+
+ 	- **Mandatory registration:** All properties used for holiday rentals must be registered in a national database, facilitating regulatory compliance and oversight.
+ 	- **Rental duration limits:** Caps on the maximum duration of short-term rentals in high-demand housing areas.
+ 	- **Targeted taxes:** New taxes for holiday rentals aimed at redistributing revenue towards public housing initiatives.
+
+## The impact on the short-term rental market
+The government’s proposed measures have sparked concern within the **short-term rental sector**. Experts warn that strict regulations, including mandatory registration, could significantly reduce the number of holiday rentals available on platforms like Airbnb, particularly in densely populated urban areas.
+
+However, these measures also present an opportunity to professionalize the sector, weeding out non-compliant operators and promoting a more sustainable model that prioritizes neighborly coexistence and access to housing for local residents.
+## Why are these measures being introduced?
+The surge in holiday rentals across Spain has been identified as a contributing factor to rising housing costs in cities such as Barcelona, Madrid, and Málaga. During his announcement, Pedro Sánchez stated, “In a housing emergency like the one millions of our compatriots are facing, we don’t need more Airbnbs — we need more homes.”
+
+He further emphasized, “It is the responsibility of public administrations to prioritize residential use of properties and curb the unchecked expansion of tourism-focused and speculative housing, which comes at the expense of local communities.” Read more about the measures in detail [here](https://www.hosteltur.com/167761_ia-innovacion-y-sostenibilidad-protagonistas-de-fiturtechy-2025.html).
+## Roomonitor’s role in regulation and community harmony
+In light of these changes, property managers in the holiday rental sector must stay informed and adapt their operations to comply with the new regulations. This includes registering properties in the national system and adopting best practices to promote harmonious living in local communities.
+
+At **Roomonitor**, we understand the importance of adapting to local regulations and promoting responsible short-term rentals. Our technological solutions, such as [**noise monitoring**](https://roomonitor.com/es/monitorizacion-de-ruido/) and [**Alarm Assistant**](https://roomonitor.com/es/alarm-assistant/), enable property managers to ensure community harmony and meet legal requirements.
+
+Moreover, our expertise in property management helps optimize daily operations, ensuring guest satisfaction while respecting local communities.
+
+Want to learn how our tools can support you in this evolving landscape? [Contact us](https://roomonitor.com/es/contacto/) for more information.`,
+    category: "Noticias del sector",
+    date: "2025-01-14",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-heyho-7746918-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "31039",
+    slug: "seville-tourist-apartments-neighbours-approval",
+    title: "Tourist apartments in Seville will now require neighbours' approval",
+    excerpt: "The Seville City Council has approved a new regulation that directly affects the opening of new tourist apartments. From now on, it will be mandatory to obtain the consent of the community of neighbours in order to register and operate these types of",
+    content: `The Seville City Council has approved a new regulation that directly affects the opening of **new tourist apartments**. From now on, it will be mandatory to obtain the consent of the community of neighbours in order to register and operate these types of accommodations. This pioneering measure in Andalusia aims to strike a balance between tourism development and the coexistence of local communities in the city's neighbourhoods.
+## What does this new regulation mean?
+Until now, any property owner could register a home as a tourist accommodation without consulting or informing their neighbours. However, under the new law, future tourist apartments in Seville will require prior authorisation from the property community. This means that:
+
+ 	- The community must discuss and approve the use of the property as a tourist accommodation in a homeowners' meeting.
+ 	- A **favourable quorum** of 60% of the votes will be required to grant the permit.
+ 	- If approval is not obtained, the owner will not be able to register the property as a tourist apartment.
+
+This measure does not affect existing tourist apartments, but it sets a more restrictive framework for new properties entering the sector.
+## Why has this measure been implemented?
+The popularity of **tourist apartments** in Seville has grown exponentially in recent years, especially in central areas such as Santa Cruz, Triana, or the Old Town. However, this growth has led to conflicts in residential communities, related to:
+
+ 	- Noise and disturbances caused by more intensive use of the properties.
+ 	- Higher turnover of people, affecting the harmony within the building.
+ 	- Increased rental prices, making it harder for local residents to access housing.
+
+The City Council's goal is to preserve peaceful coexistence and ensure that communities have a say in whether tourist apartments are included in their buildings. You can read more about this in [this article](https://www.diariodesevilla.es/sevilla/cambio-legal-obliga-nuevos-pisos-turisticos-consentimiento-comunidad-vecinos_0_2003121078.html).
+## Impact on property managers
+This regulation presents a new challenge for property managers in Seville, who will need to obtain neighbours' approval before starting a tourist rental project. This change could slow down the registration process and limit the availability of new properties in the tourist market.
+
+However, it also presents an opportunity to strengthen best practices and promote a more responsible management approach that respects local communities. This is something we champion at Roomonitor and [**weRespect**](https://werespect.net/), where we prioritise neighbourly coexistence to ensure a sustainable tourism model.
+
+Our solutions, such as [**noise monitoring**](https://roomonitor.com/es/monitorizacion-de-ruido/), help prevent conflicts within communities by ensuring that noise levels are respected. In addition, our [**Alarm Assistant**](https://roomonitor.com/es/alarm-assistant/) service offers professional support to manage any incidents in real time.
+
+If you manage properties in Seville, we invite you to explore our tools to optimise the management of tourist apartments and ensure a harmonious coexistence.`,
+    category: "Noticias del sector",
+    date: "2025-01-11",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-javierbalseiro-22191978-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "31033",
+    slug: "greece-regulation-tourist-rentals-housing-crisis",
+    title: "Greece tightens regulations on tourist rentals: what does it mean for the sector?",
+    excerpt: "The Greek government has passed new legislation aimed at drastically reducing the number of tourist accommodations managed by platforms such as Airbnb, in response to an escalating housing crisis. This measure, which includes stricter restrictions an",
+    content: `The Greek government has passed new legislation aimed at drastically reducing the number of tourist accommodations managed by platforms such as Airbnb, in response to an escalating housing crisis. This measure, which includes stricter restrictions and heavier fines, has sparked an intense debate on the impact of short-term rentals on the housing market and the tourism sector in the country.
+## The new legislation in detail
+The new regulations prohibit companies and legal entities from managing more than two properties on short-term rental platforms such as **Airbnb** or **Booking.com**. Furthermore, stricter requirements have been set for the registration and operation of these accommodations, including:
+
+ 	- Mandatory registration in the national tourist accommodation registry.
+ 	- Fines of up to €50,000 for those operating without a license or violating the regulations.
+ 	- Specific restrictions in urban areas where the housing shortage is most pressing.
+
+These measures are aimed at easing the pressure on the real estate market in areas where the availability of housing for residents has been affected.
+## Housing in Greece: A complex context
+In recent years, Greece has been facing a growing **housing crisis**, particularly in cities like Athens. The main causes include:
+
+ 	- **Rising prices:** In some areas, rents have increased by 30% due to tourist demand and a lack of housing supply.
+ 	- **Shift in residential use:** Many properties have transitioned from permanent residences to short-term rentals.
+ 	- **Socioeconomic factors:** Economic recovery and the return of tourism after the pandemic have intensified competition for habitable spaces [(source)](https://www.preferente.com/noticias-de-hoteles/grecia-la-vivienda-vacacional-acusada-de-la-crisis-habitacional-336499.html).
+
+## Impact on the short-term rental sector
+These restrictions will significantly impact property managers in Greece, who will need to adapt their operations to the new regulations. Estimates suggest that thousands of tourist rentals could shut down in the coming months, potentially altering the tourism landscape in the country. However, these measures are also aimed at balancing the needs of local residents with the opportunities offered by the tourism sector [(source)](https://greekreporter.com/2025/01/09/greece-bans-thousands-airbnb-accommodations/).
+
+The situation in Greece mirrors a common challenge in many European cities: how to regulate short-term rentals to prevent gentrification and ensure access to housing. Countries like Spain, Italy, and France are considering similar measures, underscoring the importance of finding balanced solutions that benefit both residents and property managers.
+## The role of Roomonitor in this new context
+At [**Roomonitor**](https://roomonitor.com/es/), we understand the importance of managing properties sustainably and in compliance with local regulations. Our [**noise monitoring**](https://roomonitor.com/es/monitorizacion-de-ruido/) and 24/7 guest services solutions are essential tools to ensure neighborhood harmony and optimize property management in an increasingly regulated environment.
+
+If you manage properties in Greece or other markets affected by similar regulations, get in touch to discover how we can help you adapt to this new landscape.`,
+    category: "Noticias del sector",
+    date: "2025-01-09",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2025/01/pexels-jimmy-teoh-294331-951539-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "30603",
+    slug: "global-tourism-2024-full-recovery-un",
+    title: "Global tourism fully recovers in 2024, says UN Barometer",
+    excerpt: "According to the latestc UNWTO World Tourism Barometer , international tourism has reached 98% of pre-pandemic levels in the first nine months of 2024, with full recovery expected by year’s end. This milestone underscores the vital role of tourism in",
+    content: `According to the latestc UNWTO World Tourism Barometer , international tourism has reached **98% of pre-pandemic levels** in the first nine months of 2024, with full recovery expected by year’s end. This milestone underscores the vital role of tourism in the global economy, as tourism expenditure grows at a faster pace than arrivals.
+## Key figures for global tourism in 2024
+Between January and September 2024, **1.1 billion international tourists** traveled globally, with significant growth in key regions like Europe, the Middle East, and Asia-Pacific. Some standout highlights include:
+
+ 	- **Europe:** Reached 94% of 2019 levels, driven by intra-regional travel and major outbound markets such as the United States.
+ 	- **Middle East:** Achieved 29% growth compared to 2019, cementing its position as the most recovered region.
+ 	- **Asia-Pacific:** Recovered 85% of pre-pandemic levels, showing steady growth following the reopening of markets.
+
+Additionally, tourism expenditure in many destinations has surged with double-digit growth compared to 2019. Leading this increase are countries like Spain (+36%), Italy (+26%), and Japan (+59%) [(UN Barometer)](https://www.europapress.es/turismo/international-news/).
+## The impact on short-term rentals
+For property managers, the full recovery of tourism presents a unique opportunity to strengthen their operations. With higher spending per visitor, tourists are seeking more comprehensive experiences, benefiting the [**short-term rental sector**](https://roomonitor.com/). Implementing technology-driven solutions such as [**noise monitoring**](https://roomonitor.com/noise-monitoring/) and 24/7 guest services is essential to meet these heightened expectations.
+## Opportunities and challenges for global tourism
+As global tourism reaches historic levels, challenges like sustainability and evolving traveler preferences come to the forefront. Trends such as longer stays, bleisure travel (a blend of business and leisure), and the emphasis on community harmony are key considerations for property managers to remain competitive.
+## Building a stronger, more sustainable tourism industry
+The full recovery of tourism in 2024 reflects the industry’s resilience. At **Roomonitor**, we are committed to supporting property managers with solutions that integrate technology and social responsibility to deliver a sustainable guest experience.
+
+Discover how our tools can help you seize new opportunities in this thriving era of global tourism. [Contact us](https://roomonitor.com/) for more information.`,
+    category: "Noticias del sector",
+    date: "2024-12-10",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/12/pexels-vlada-karpovich-7368269-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "30555",
+    slug: "airbnb-fair-regulation-short-term-rentals",
+    title: "Airbnb promotes fair, data-driven regulation for short-term rentals",
+    excerpt: "Amid the ongoing debate about Spain's housing crisis, Airbnb has taken a proactive stance by proposing data-driven measures to regulate short-term rentals without negatively impacting the residential market. This approach, backed by a comprehensive s",
+    content: `Amid the ongoing debate about Spain's housing crisis, **Airbnb** has taken a proactive stance by proposing data-driven measures to regulate **short-term rentals** without negatively impacting the residential market. This approach, backed by a comprehensive [**study**](https://news.airbnb.com/wp-content/uploads/sites/4/2024/12/Informe-PwC-Impacto-del-alquiler-de-corta-duracion-en-Espana.pdf) conducted by PwC, reveals that the impact of tourist rentals on the housing market is minimal and that addressing broader structural issues is key to resolving the crisis.
+## The housing market context in Spain
+Spain's housing challenges are multifaceted and extend far beyond the influence of tourist rentals. According to recent data:
+
+ 	- In 2023, for every new home built, three new households were formed, creating a deficit of **183,000 units**.
+ 	- Spain has approximately **4 million vacant homes**, accounting for 14% of the total housing stock.
+ 	- Tourist rentals have a minimal footprint: they make up only **1.09%** of homes in Barcelona and **1.05%** in Madrid, the two cities with the highest tourist activity.
+ 	- **Short-term rentals account for just 1.3% of the total housing stock**, with only 37% of these properties being used for tourist purposes—fewer than 130,000 homes or 0.5% of the total housing supply.
+
+Despite restrictions in certain areas, such as Barcelona, the results have not always met expectations. Between 2020 and 2023, the number of **short-term rentals (STRs)** in Barcelona decreased by 56%, yet rental prices increased by 24% during the same period, highlighting that other factors are driving rising housing costs.
+## Key factors driving the housing crisis
+Beyond tourist rentals, there are deeper structural issues affecting housing accessibility in Spain:
+
+ 	- **Limited affordable housing development:** Insufficient investment in social housing restricts options for vulnerable populations.
+ 	- **Uncontrolled urbanization:** Poor urban planning in many cities drives up land prices, hindering new housing developments.
+ 	- **High vacancy rates:** Many properties remain off the market due to legal, tax, or maintenance barriers.
+ 	- **Demographic growth and social changes:** An increase in single-person households and urban migration add pressure to the existing housing supply.
+
+## Airbnb’s proposal: data-driven measures
+In response to these challenges, Airbnb has proposed a set of balanced and effective measures to regulate **short-term rentals**. Key initiatives include:
+
+ 	- Introducing a **mandatory host registry** to ensure transparency and facilitate government oversight.
+ 	- Setting **limits on property use** for tourist rentals to maintain neighborhood harmony.
+ 	- Collaborating with local governments to tailor regulations to the specific needs of each city or region.
+
+These proposals address community concerns while aiming to professionalize the sector and ensure the benefits of tourism are distributed fairly.
+## A positive impact for property managers
+For property managers, these regulations present an opportunity to stand out through professionalization and the adoption of advanced tools. At [**Roomonitor**](https://roomonitor.com/en/), we offer cutting-edge solutions like **real-time noise monitoring** and 24/7 guest support services, helping you meet the quality and coexistence standards promoted by these regulations.
+
+Our tools also enhance the guest experience and streamline property management, enabling managers to adapt quickly to new regulatory requirements.
+## Towards more sustainable tourism
+Airbnb’s analysis clearly shows that **short-term rentals** are not the primary cause of Spain's housing crisis. Instead, factors like insufficient social housing construction, high vacancy rates, and demographic growth pose more urgent challenges.
+
+At **Roomonitor**, we support initiatives that combine data, technology, and social responsibility to build a more sustainable and responsible tourism industry. If you’d like to learn how our solutions can help you navigate this new regulatory landscape, [get in touch with us](https://roomonitor.com/en/).`,
+    category: "Noticias del sector",
+    date: "2024-12-07",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/12/buildings-5003132_1920.jpg",
+    lang: "en",
+  },
+  {
+    id: "30471",
+    slug: "new-guest-registration-regulations-december-2",
+    title: "Everything you need to know about the new guest registration regulations coming into effect on December 2nd",
+    excerpt: "The upcoming December 2 marks a significant shift for property managers in Spain with the introduction of RD 933/2021. This regulation establishes new requirements for registering and identifying short-term rental guests, enhancing security and legal",
+    content: `The upcoming **December 2** marks a significant shift for **property managers** in Spain with the introduction of **RD 933/2021**. This regulation establishes new requirements for registering and identifying **short-term rental guests**, enhancing security and legal compliance across the sector.
+## What is RD 933/2021, and why does it matter?
+The **RD 933/2021** aims to standardize the registration process for guests, covering both the collection and reporting of information for those staying in **tourist properties**. This regulation seeks to improve collaboration between property managers and local authorities, ensuring more efficient oversight of accommodations.
+
+The main requirements introduced by this regulation include:
+
+ 	- Recording the identity details of each guest at check-in.
+ 	- Submitting this information to local authorities (Police or Civil Guard) as required.
+ 	- Maintaining a record for a specified period for potential inspections.
+
+## Impact on short-term rental managers
+For **property managers**, RD 933/2021 means additional administrative responsibilities. Beyond managing bookings and providing exceptional guest experiences, they must now implement systems to meet these new registration requirements.
+
+Platforms like [**Airbnb**](https://www.airbnb.com/help/article/3376) have already introduced specific tools to help hosts collect and report guest information, making compliance more manageable. These tools are particularly helpful for automating the process and reducing the risk of errors.
+## How to adapt to the new regulations
+Here are the essential steps property managers should take to comply with the new requirements:
+
+ 	- **Update your check-in process:** Use systems that allow for quick and efficient guest data collection.
+ 	- **Embrace technology:** Leverage tools provided by Airbnb or other property management platforms to automate data registration and reporting.
+ 	- **Get familiar with the regulations:** Understanding RD 933/2021 and its implications is key to avoiding fines.
+ 	- **Ensure secure data storage:** Make sure guest records comply with data protection regulations.
+
+## What happens if you fail to comply with RD 933/2021?
+Non-compliance can result in financial and legal penalties. It’s crucial to be prepared before the regulation takes effect. At **Roomonitor**, we recommend implementing the necessary tools to ensure a straightforward and effective compliance process.
+
+RD 933/2021 represents a major change for the **short-term rental sector**. While these new requirements may seem challenging, platforms like Airbnb and specialized management solutions can help simplify the process.
+
+At **Roomonitor**, we specialize in providing innovative tools that not only enhance the guest experience but also support property managers in maintaining control and staying compliant with legal requirements. [Visit our website](https://roomonitor.com/en/) to learn more about how we can help you adapt to these changes.`,
+    category: "Noticias del sector",
+    date: "2024-11-29",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/pexels-wildlittlethingsphoto-2017802-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "30440",
+    slug: "roomonitor-scale-france-2024",
+    title: "Scale France 2024: the must-attend event for the short-term rental industry",
+    excerpt: "At Roomonitor, we are proud to have been one of the sponsors of Scale France 2024, the key event for the short-term rental sector, bringing together the industry's major players in Paris. Held on November 27th and 28, this was a unique opportunity to",
+    content: `At **Roomonitor**, we are proud to have been one of the sponsors of **Scale France 2024**, the key event for the **short-term rental** sector, bringing together the industry's major players in Paris. Held on November 27th and 28, this was a unique opportunity to exchange insights, establish valuable connections, and explore the latest innovations in the field.
+## An event for the short-term rental community
+**Scale France 2024** attracted over professionals from the industry, including **property managers**, **vacation rental platforms**, and key service providers like Roomonitor. The agenda featured expert talks, panel discussions on the latest market trends, and dedicated networking opportunities.
+
+During our participation, our team had the chance to present our advanced [real-time noise monitoring](https://roomonitor.com/en/roomonitor/) solutions, as well as our services designed to improve **neighbourly relations** and the efficient management of properties.
+﻿
+
+ 
+## Innovation, networking, and sustainability
+One of the highlights of **Scale France 2024** was the focus on sustainability and responsible practices in **short-term rental**. We were proud to contribute to this conversation, sharing our experience on how technology can help reduce conflicts with neighbours and ensure a more harmonious coexistence.
+
+Additionally, the event allowed us to strengthen relationships with existing collaborators and explore new opportunities for partnerships with other industry leaders.
+
+Roomonitor was also the sponsor of the Before Scale Party that took place on Friday 26th November at the Favela Chic, with over 100 property managers from all over France, along with partners such as Mag'bnb, Beyond and Avantio, joining us for an evening full of knowledge sharing and networking.
+## Roomonitor’s commitment to the sector
+At Roomonitor, we remain committed to supporting the growth of **short-term rental** through innovative technological solutions that prioritize both guest satisfaction and harmonious coexistence with local communities.
+
+If you couldn’t attend **[Scale France 2024](https://france.scalerentals.show/)**, we invite you to explore our [solutions on our website](https://roomonitor.com/en/) and discover how we can help you manage your properties more efficiently and responsibly.
+
+We look forward to seeing you at the next big event in the sector!`,
+    category: "Eventos",
+    date: "2024-11-28",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/scale-3.jpeg",
+    lang: "en",
+  },
+  {
+    id: "30451",
+    slug: "vitur-forum-madrid-future-flexible-accommodation",
+    title: "Vitur Forum Madrid 2024: the event shaping the future of flexible accommodation",
+    excerpt: "The Vitur Forum Madrid, held on November 27th, solidified its position as one of the most prominent events for the short-term rental and flexible living sectors in Spain. At Roomonitor, we were honored to participate, sharing our expertise and presen",
+    content: `The **Vitur Forum Madrid**, held on November 27th, solidified its position as one of the most prominent events for the **short-term rental** and **flexible living** sectors in Spain. At **Roomonitor**, we were honored to participate, sharing our expertise and presenting our vision on optimizing guest experiences in such a dynamic environment.
+## The exclusive event shaping the future of flexible living
+[**Vitur Forum**](https://vitursummit.com/) has established itself as the leading platform for specialized events in the tourism sector, bringing together top **leaders, property managers, and European institutions**. This event provides a unique space to discuss new trends and opportunities in the **flexible living** market, which is reshaping how people live and stay in urban environments.
+
+With high-level presentations, innovative business insights, and valuable **networking** opportunities, **Vitur Forum** serves as the meeting point for the brightest minds in the sector to drive the future of **vacation rentals**. It's also a space to forge connections that spark fresh ideas and impactful practices.
+## Key topics shaping the Vitur Forum Madrid 2024 agenda
+The **Vitur Forum Madrid** featured a range of panels exploring fundamental aspects of the sector's present and future. Highlights included:
+
+ 	- **The regulatory framework for flexible living:** The opening panel addressed the current regulatory landscape in the Madrid region, emphasizing the need for greater flexibility in a constantly evolving tourism market.
+ 	- **Branding as a competitive edge:** This session explored how operators can strengthen their brand identity to stand out in a competitive market.
+ 	- **Madrid as a hub for medium-term stays and corporate housing:** Discussions focused on how the city positions itself as a global benchmark for corporate travelers.
+ 	- **Adapting investments to new demand:** This panel examined opportunities in sectors like Medium-Term Stays, Corporate Housing, and Build-to-Rent (BTR).
+ 	- **Defining a sustainable city model:** The closing session delved into how political and regulatory developments are shaping the sector's evolution.
+ 	- During the inaugural presentation, **Carlos Pérez-Lanzac de Lorca**, Founder of VITUR, shared key industry data underscoring Spain's leadership in flexible living. Notable insights included:
+
+ 	- **Madrid is ranked among the top 25 European cities by RevPAR,** highlighting its appeal as an international destination.
+ 	- **In 2023, the city achieved a historic milestone, welcoming 7.85 million international tourists.**
+
+## Optimization, control, and guest experience in Flex Living
+At [**Roomonitor**](https://roomonitor.com/en/), we had the opportunity to deliver a presentation titled "**Optimization, control, and guest experience in Flex Living**," which was met with great interest. **Gabriel Pérez**, our Head of Sales & Partnerships and Head of Public Relations at weRespect, shared his insights on how flexible rental properties can strike a balance between operations, guest satisfaction, and neighborhood harmony.
+
+During his talk, Gabriel highlighted how advanced noise-monitoring technologies and the integration of **human resources** are key to managing properties 24/7. This approach not only enhances the guest experience but also ensures full control over operational and community aspects. Gabriel was joined by **Eduardo** **Suárez**, COO and co-founder of Roomonitor.
+
+[caption id="attachment_30482" align="alignnone" width="1024"] Gabriel Pérez during his presentation at Vitur Forum Madrid 2024[/caption]
+## Vitur Forum: A hub for collaboration and innovation
+**Vitur Forum** is a must-attend event for all stakeholders in the **flexible living** sector. The platform aims to foster innovation and knowledge-sharing, connecting tourism professionals and businesses to build a robust ecosystem around **vacation rentals**. The forum has been instrumental in sharing best practices, exploring new trends, and generating opportunities that propel the industry forward.
+
+At **Roomonitor**, we firmly believe that success in the flexible living sector lies in integrating the right technology and creating positive guest experiences, all while efficiently managing operational aspects.
+## Roomonitor at Vitur Forum: Collaboration driving industry growth
+Events like this are crucial for the growth of the industry and for strengthening collaborative efforts among different players in the **flexible living** space. We are thrilled to have been part of this experience, contributing our vision on the importance of optimizing the guest experience while maintaining control over properties and neighborhood harmony.
+
+If you couldn’t attend the event, we invite you to learn more about how **Roomonitor** can help you streamline your vacation rental management. Visit our website to discover our innovative solutions for [real-time noise monitoring](https://roomonitor.com/en/) and enhancing harmony in rental properties.
+
+We look forward to seeing you at the next edition of **[Vitur Forum](https://vitursummit.com/vitur-summit-2025/)**!`,
+    category: "Eventos",
+    date: "2024-11-28",
+    readTime: 4,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/gabriel-vitur-forum.jpeg",
+    lang: "en",
+  },
+  {
+    id: "30197",
+    slug: "october-report-roomonitor",
+    title: "October in numbers: Roomonitor’s monthly report",
+    excerpt: "At Roomonitor, we’re fully committed to technology and Big Data analytics to deliver innovative and effective solutions not only for noise control in tourist apartments but also in customer service management. Our approach is centered on real-time da",
+    content: `At Roomonitor, we’re fully committed to technology and **Big Data analytics** to deliver innovative and effective solutions not only for **noise control in tourist apartments** but also in customer service management. Our approach is centered on real-time **data collection and analysis**, enabling us to optimize our services and provide an exceptional experience for both property owners and guests.
+
+[**Roomonitor**](https://roomonitor.com/en/) stands as the leading global solution for noise control in tourist apartments, offering outstanding service to property owners and managers. Through our advanced technology, we don’t just maintain a harmonious environment; we also reinforce trust within the tourism sector.
+
+Below, we present October’s metrics that reflect our commitment to service quality.
+### October highlights
+
+ 	- **Total calls**: 14.680
+This represents the total number of calls received in October, highlighting the high demand for our services and the trust placed in our team.
+ 	- **Average Handling Time (AHT)**: 00:04:05
+This is the average time our agents take to complete a transaction, with **59.936 minutes** of human interaction logged throughout the month.
+ 	- **Average resolution time per service**: 00:55:15
+The average time needed by our agents to resolve any type of intervention.
+ 	- **Average alarm resolution time**: 00:27:20
+Our response time for alarm-related incidents is consistently under 30 minutes.
+
+### Resolution rate
+
+ 	- **Remote resolution**: 89,25%
+A significant portion of issues were resolved through our remote support, demonstrating our team’s effectiveness in **problem-solving** without requiring physical intervention.
+ 	- **[Field Service](https://roomonitor.com/en/guest-property-services/) interventions**: 10,75%
+From check-ins, guest entries, and key deliveries to apartment inspections and other maintenance services requiring on-site intervention, all issues resolved by our **field agents** ensure that any problem not manageable remotely is efficiently addressed.
+
+### Customer satisfaction
+
+ 	- **CSAT Score**: 97,56%
+This metric reflects our clients' overall satisfaction, showcasing a high level of approval for our service.
+
+### Commitment to harmonious living
+At Roomonitor, we recognize the importance of maintaining a peaceful environment in tourist apartments. Our devices monitor noise in real time while ensuring privacy by not recording audio. If noise levels exceed set limits, alerts are sent to property owners and managers, who can then act immediately.
+
+Our [**Alarm Assistant**](https://roomonitor.com/en/alarm-assistant-2/) is a professional service that manages these alarms efficiently, providing support to [**property managers**](https://roomonitor.com/en/?page_id=27001) in delivering effective customer service. If we are unable to reach guests by phone, a night concierge is dispatched to the apartment to ensure noise levels are corrected within 30 minutes.
+
+All our operations are meticulously monitored, allowing us to assess service quality and give our clients confidence that we deliver the best possible professional solution. This October, we have observed excellent metrics, reinforcing our commitment to high standards as we move into the post-summer season.
+### Methodology: Big Data
+For this data analysis, we rely on information gathered by our devices installed in tourist apartments. These devices connect to our servers, analyzing sound pressure levels in real time and recording millions of data points, allowing us to produce accurate reports on our interventions and their effectiveness.
+Simultaneously, we track the handling time of all our agents, whether remotely on our global team or among our field agents, to ensure we maintain the highest levels of excellence.`,
+    category: "Noticias del sector",
+    date: "2024-11-04",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/11/6.jpg",
+    lang: "en",
+  },
+  {
+    id: "30177",
+    slug: "simultaneity-customer-service-roomonitor",
+    title: "The importance of simultaneity in customer service: the value of Roomonitor for the tourism sector",
+    excerpt: "In the hospitality sector, customer service is a fundamental piece in ensuring a positive experience for both guests and property managers. One of the most common challenges faced by managers is the need to respond to multiple demands simultaneously.",
+    content: `In the hospitality sector, customer service is a fundamental piece in ensuring a positive experience for both guests and property managers. One of the most common challenges faced by managers is the need to respond to multiple demands simultaneously. This can indeed become complex during periods of high occupancy. Here is where **Roomonitor** becomes a strategic ally, thanks to our **24/7 customer service**, specifically designed to ensure a quick and efficient response to any situation.
+
+Moreover, our team is prepared to manage multiple calls and guest inquiries remotely, at any time and from anywhere in the world. We are not just a conventional call center; **we have a robust and advanced operational structure** optimized to provide a comprehensive service experience. This approach allows us to operate remotely without losing effectiveness, through solutions such as the [**Alarm Assistant**](https://roomonitor.com/es/alarm-assistant/) and [**Guest & Property Services**](https://roomonitor.com/es/guest-property-services/).
+## Alarm assistant and guest & property services: The support property managers need
+Furthermore, the services provided by **Alarm Assistant** and **Guest & Property Services** enable managers to be worry-free regarding the problems and demands that arise daily. Roomonitor takes care of all incidents, whether in emergency situations or in routine guest services. Thanks to our capability for simultaneous call management, we ensure that each guest receives the necessary attention without delays.
+
+Additionally, our team of mediation experts is always alert to intervene amicably if guests exceed noise limits. All our operators are trained in **amicable conflict resolution** and will find the best solution for each situation, at any time of the day. With Roomonitor, we ensure that every stay at the property is peaceful and enjoyable.
+Random guest requests
+## Roomonitor professionalizes the tourism sector through customer service
+The acceleration of professionalization in the property management sector is a growing trend, and Roomonitor is committed to being a key partner for property managers on this journey. By trusting Roomonitor, managers can enhance their service and provide top-notch attention, thereby optimizing guest satisfaction and their own operational efficiency. Moreover, their guests will be attended to every hour of every day of the year.
+
+With [**Roomonitor**](https://roomonitor.com/es/), we not only provide technological solutions but also act as a strategic partner to make tourism a professional, sustainable activity tailored to current needs.`,
+    category: "Gestión de propiedades",
+    date: "2024-10-30",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/pexels-mikhail-nilov-7682340-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "30015",
+    slug: "roomonitor-preventing-high-occupancy-seville-madrid-all-saints-day",
+    title: "Roomonitor: your key ally in managing high occupancy in Seville and Madrid during the All Saints days",
+    excerpt: "All Saints' Day is a key date on the Spanish tourism calendar, and this year is no exception. According to data from Ebooking, collected by Forbes, an 85% occupancy rate is expected across Spain, with peaks of high demand in urban destinations like S",
+    content: `All Saints' Day is a key date on the Spanish tourism calendar, and this year is no exception. According to data from **Ebooking**, [collected by Forbes](https://forbes.es/turismo/520204/ebooking-registra-un-85-de-ocupacion-en-espana-para-el-puente-de-todos-los-santos-con-alzas-de-hasta-15-en-el-precio/), an **85% occupancy rate is expected across Spain**, with peaks of high demand in urban destinations like **Seville and Madrid**, two of the most popular cities for this occasion. With the streets decked out for **Halloween**, many tourists come to enjoy the unique celebrations and special events these cities offer. However, this increase in visitors also brings the challenge of managing the impact that tourism has on local communities, particularly regarding noise and disturbances caused by tourists in short-term rental apartments.
+
+At **Roomonitor**, we are aware of these challenges and offer technological solutions that help property managers and owners of tourist accommodations maintain a balance between guest satisfaction and peaceful coexistence with neighbors. Our **real-time noise monitoring** system is a key tool for preventing issues arising from high occupancy during holiday periods. **Especially on lively dates like Halloween.**
+## Why is Noise Monitoring Crucial During All Saints' Day?
+All Saints' Day, with its high volume of tourists—especially in cities like Seville and Madrid—tends to be a period when complaints about excessive noise due to parties or gatherings in tourist apartments increase. For residential communities, this can create tensions and discomfort, also affecting the reputation of tourist properties. With Halloween celebrations adding to the influx of tourists, parties and gatherings can cause tensions and discomfort among neighbors, impacting the reputation of tourist properties.
+
+The technology from [**Roomonitor**](https://roomonitor.com/es/roomonitor/) allows property owners and managers to:
+
+ 	- **Monitor noise in real time**, receiving alerts if noise levels exceed permitted thresholds, it’s especially helpful for controlling excess noise on Halloween nights.
+ 	- **Act immediately**, sending automated notifications to guests to reduce noise.
+ 	- **Maintain a respectful environment** for both tourists and neighbors, ensuring coexistence.
+
+## Benefits of Preventing Issues Before They Occur
+Thanks to [**noise monitoring**](https://roomonitor.com/es/property-management/que-es-la-monitorizacion-de-ruido-y-por-que-la-necesito/), owners and managers can take proactive measures to avoid conflicts with neighbors, without needing to be physically present. This is especially important during periods of high tourist demand, such as All Saints' Day, when celebrations can get out of control.
+
+Implementing these solutions helps protect the accommodation's reputation and ensures that guests enjoy their stay without disturbing the tranquility of the surrounding communities.
+## Roomonitor: A Solution for Responsible and Sustainable Tourism
+With destinations like Seville and Madrid among the most popular for this holiday, and festive dates like Halloween,** when parties can stretch late into the night and get loud **it is more important than ever for property managers to have tools that allow them to effectively manage noise and potential disturbances that may arise during such festivities.
+
+At **Roomonitor**, we are committed to creating a more **responsible and sustainable** tourism environment, where guests can enjoy their stay without affecting the quality of life of local residents. Our technology not only enhances the tourist experience but also contributes to **preserving neighborhood coexistence** during peak occupancy times.
+
+With an expected occupancy rate of 85% in key destinations like Seville and Madrid during All Saints' Day, and with Halloween celebrations in the air, managing the impact of tourism is a challenge. At **Roomonitor**, we provide technological solutions that allow property owners and managers to prevent noise issues and ensure a peaceful and respectful stay for everyone.
+
+**Get ready for All Saints' Day and Halloween with Roomonitor** and ensure peaceful coexistence between tourists and neighbors in your accommodations.`,
+    category: "Noticias del sector",
+    date: "2024-10-25",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/pexels-cottonbro-5435551-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "30033",
+    slug: "new-mediation-program-in-valencia-to-improve-relations-in-tourist-apartments",
+    title: "New mediation program in Valencia to enhance coexistence in tourist apartments through weRespect",
+    excerpt: "At Roomonitor, we are committed to social sustainability and improving the relationship between guests and neighbors in short-term rental properties (STRs). As part of this commitment, we are excited to share one of the latest initiatives driven by W",
+    content: `At Roomonitor, we are committed to social sustainability and improving the relationship between guests and neighbors in short-term rental properties (STRs). As part of this commitment, we are excited to share one of the latest initiatives driven by [**WeRespect**](https://www.werespect.net/), which will launch a **pilot mediation program** in Valencia to address any issues between residents and short-term rental managers.
+## A Mediation Channel to Resolve Conflicts
+Through the new service, available at **960 990 472**, Valencia residents will be able to channel complaints and resolve potential conflicts related to short-term rental properties. The aim is to offer an effective and swift solution for problems that may arise between residents and guests.
+
+This mediation program includes a structured approach to conflict resolution, which involves:
+
+ 	- **Initial interviews** to identify the root causes of the conflict.
+ 	- Establishing **action plans** with clear timelines and objectives.
+ 	- **Ongoing follow-up** to ensure that the agreements reached are being implemented.
+
+## 
+## WeRespect: A Guide for Responsible Management of STRs
+In parallel, WeRespect has announced the distribution of a practical guide for property owners and managers of short-term rentals in Valencia. This guide offers key recommendations for **sustainable and responsible management**, covering aspects such as:
+
+ 	- Clear communication with guests.
+ 	- Proper property maintenance.
+ 	- Promoting **sustainable tourism** with efficient resource management (water, energy, etc.).
+ 	- Strategies to support the **local economy** and mitigate tourist congestion.
+
+The goal is to ensure that the tourism experience is positive not only for the guests but also for local residents and the community.
+## Roomonitor and WeRespect: Technologies to Reduce the Impact of Tourism
+Roomonitor has been a key driver behind **WeRespect**, an initiative launched in 2018 in collaboration with industry associations. As part of this project, one of our main contributions has been the installation of **noise detection devices** in short-term rental properties.
+
+These devices have proven to be extremely effective, resolving **57% of noise complaints in under 28 minutes** in 2023. With this technology, we not only help improve neighbor relations but also contribute to the professionalization of the sector.
+## A Commitment to Responsible Tourism
+The event took place at ADEIT Fundación Universidad-Empresa in Valencia. We had the collaboration of Aptur and Airbnb, along with the support of the Valencian Community and Actitud Mediterránea. In attendance were **Israel** **Martínez** **Fernández**, Director General of [Tourism for the Generalitat Valenciana](https://www.comunitatvalenciana.com/es/inicio), **Sebastián** **Cucula**, President of the College of Property Managers of Valencia, **Sílvia** **Blasco**, President of [ApturCV](https://www.aptur.org/), **Juan** **Cristellys**, Public Policy Manager at [Airbnb](https://www.airbnb.es/), and **Gabriel Pérez**, Head of Public Relations of weRespect.
+
+WeRespect and Roomonitor are committed to creating a more **responsible and sustainable tourism model**. In addition to offering technological solutions to improve community relations, this alliance aims to strengthen the fight against **illicit rentals** and **unfair competition** in the short-term rental sector.
+
+Mediation and noise control not only improve the quality of life for residents but also protect the future of tourism in our cities, ensuring that all stakeholders benefit from efficient and responsible management.
+
+With initiatives like this, Roomonitor continues to establish itself as a key **partner in creating a more balanced, sustainable, and socially responsible tourism industry**.`,
+    category: "Eventos",
+    date: "2024-10-22",
+    readTime: 3,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/ROOM_22_10_2024-181-scaled.jpg",
+    lang: "en",
+  },
+  {
+    id: "29972",
+    slug: "commitment-to-sustainable-tourism-sevilla-hosts-a-new-delivery-of-werespect-seals",
+    title: "Commitment to Sustainable Tourism: Sevilla hosts a new delivery of weRespect seals",
+    excerpt: "On Monday, October 7th, we had the honor of participating in an event held in Sevilla, where we presented weRespect seals to various stakeholders in the tourism sector committed to sustainability and harmonious coexistence in short-term rental proper",
+    content: `On Monday, October 7th, we had the honor of participating in an event held in Sevilla, where we presented** [weRespect](https://www.werespect.net/) **seals to various stakeholders in the tourism sector committed to sustainability and harmonious coexistence in short-term rental properties. This initiative by Roomonitor exemplifies how collaboration between the public and private sectors can foster more conscious, respectful tourism that aligns with local communities.
+#### Sustainable and Responsible Tourism: A Shared Commitment
+This event was not only a celebration of the achievements so far but also a significant step towards a future of tourism that respects local communities and protects the environment in which it operates. The **[weRespect seal](https://www.werespect.net/como-obtener-el-sello/)** stands out as a certification for those in the tourism sector who adopt responsible practices that promote better coexistence between tourists and residents.
+
+At Roomonitor, our mission is to be part of this change by providing technological tools that help manage the impact of tourism in cities. Real-time noise monitoring and data analysis on behavior in short-term rental properties are examples of how we contribute to reducing disturbances and enhancing the quality of life for both residents and tourists.
+
+[caption id="attachment_29933" align="alignnone" width="1024"] Ángela María Moreno Ramón, the Deputy Mayor and Delegate for Tourism and Culture of the City Council of Sevilla, expressed her appreciation for the efforts made in the sector.[/caption]
+#### Public-Private Collaboration with the City of Sevilla
+We would like to extend our special thanks to the collaboration and participation of **[Turismo de Sevilla](https://visitasevilla.es/)**, represented by **Ángela María Moreno Ramón**, the Deputy Mayor and Delegate for Tourism and Culture of the City Council of Sevilla. We also appreciate **Juan Ignacio Chaves Posadillo**, Vice President of [**AVVAPRO**](https://avva.es/) (Association of Professionals of Tourist Apartments and Homes of Andalusia), **Ángela Torres Pérez-Solero** representing Airbnb, **Eduardo Suárez**, President of weRespect, and **Ignacio Suárez**, CEO of Roomonitor. Their involvement and commitment to sustainability in the sector were crucial to the event's success.
+
+At Roomonitor, we firmly believe that by working together, we can continue to advance in the adoption of certified measures that ensure more respectful and conscious tourism. This event in Sevilla is just the beginning of a long journey toward a future where sustainability and community coexistence go hand in hand with tourism development in Andalusia.
+
+We remain committed to fostering better tourism because we believe it is both possible and necessary for the cities and the people who inhabit them.`,
+    category: "Eventos",
+    date: "2024-10-08",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/SML5993.jpg",
+    lang: "en",
+  },
+  {
+    id: "29970",
+    slug: "we-attended-the-first-major-local-accommodation-event-in-portugal",
+    title: "We attended the first major local accommodation event in Portugal",
+    excerpt: "Roomonitor proudly served as the GOLD Sponsor at the 1st National Congress of ALEP (Portuguese Association of Local Accommodation), which took place on October 1st and 2nd in Porto. This groundbreaking event brought together key stakeholders from the",
+    content: `Roomonitor proudly served as the **GOLD Sponsor** at the [**1st National Congress of ALEP**](https://www.alep.pt/CONGRESSONACIONAL) (Portuguese Association of Local Accommodation), which took place on October 1st and 2nd in Porto. This groundbreaking event brought together key stakeholders from the tourism industry to discuss both the challenges and future opportunities in Portugal's growing local accommodation sector.
+
+As primary sponsors, we reaffirmed our dedication to delivering cutting-edge technological solutions, such as our **real-time noise monitoring system** and comprehensive property management services, which enhance the operation of short-term rentals.
+
+[caption id="attachment_29966" align="alignnone" width="1024"] ALEP's website screenshot[/caption]
+#### Technological Innovation in Local Accommodation
+During the congress, Roomonitor had the opportunity to present its solutions in the exhibition area. We demonstrated how our tools help property managers and hosts maintain control over noise levels, ensuring harmonious interactions between guests and neighbors. Additionally, we underscored the significance of having a **24/7 support and assistance team**, a service that enhances the guest experience while reducing operational stress for property managers.
+
+This event also provided a platform to engage with key figures in the industry, including **Miguel Pinto Luz**, Minister of Infrastructure and Housing, **Pedro Machado**, Secretary of State for Tourism, **Carlos Abad**, President of Turismo de Portugal, and **Eduardo Miranda**, President of ALEP. These discussions highlighted the growing need for innovative technological solutions to address the industry's evolving challenges.
+#### The Future and Challenges of Local Accommodation
+The second day of the congress focused on equipping property managers and local accommodation owners with practical tools for optimizing their operations. Topics such as **price optimization**, **artificial intelligence in operational management**, and new sector-specific legislation were discussed. This practical approach enabled participants to explore actionable solutions that can significantly improve day-to-day operations and elevate the guest experience.
+
+Roomonitor’s role as a sponsor not only solidified our leadership in **noise and property management technology** but also showcased our ongoing commitment to fostering responsible and sustainable tourism in Portugal.
+
+The **1st National Congress of [ALEP](https://www.alep.pt/)** was a tremendous success, and we are proud to have been part of this historic event, which sparked important dialogue about the future of local accommodation across Europe.`,
+    category: "Eventos",
+    date: "2024-10-03",
+    readTime: 2,
+    image: "https://roomonitor.com/wp-content/uploads/2024/10/1728298000309.jpg",
+    lang: "en",
+  },
+  {
+    id: "25606",
+    slug: "secure-your-short-term-rental-for-the-upcoming-christmas-parties",
+    title: "Secure Your Short-Term Rental for the Upcoming Christmas Parties",
+    excerpt: "Christmas is just around the corner and New Year’s Eve is following closely behind... For short-term rental business owners like yourself, this is an especially festive season. You can charge premium holiday pricing and have your rentals fully booked",
+    content: `## **Christmas is just around the corner and New Year’s Eve is following closely behind...**
+
+For short-term rental business owners like yourself, this is an especially festive season. You can charge premium holiday pricing and have your rentals fully booked weeks in advance. Your guests get to enjoy their special moments in your cozy stays, and you get to enjoy the perks of the most in-demand season.
+
+A true win-win. But it comes with a potential downside . . . on your end.
+
+**The holiday season is the time when everyone forgets about the *****daily monotony*****, spends time with their loved ones, visits exciting events, and, most importantly, parties!**
+
+Celebrating is a major part of the holiday season, but as a host, you know that  it comes with certain challenges if it happens at your rental property.
+
+Hosts love families and couples who want to have a cozy, intimate stay out-of-home. This also entails young *(and sometimes not so young) *party-lovers... These can be your favorite guests or a potential nightmare!
+
+Of course, you don’t want to be that unpleasant host that follows every step of his guests. But you also don’t want to see your rental damaged after a wild party*.*
+
+What to do?
+
+How can you keep your place protected from unwanted, destructive, neighbor-disturbing parties? Read on. You will learn what you can do to protect your rental property *(and neighbor holiday experience*) without spying on your guests and invading their personal time.
+
+## **Usually, you find out about the damages… when they’re already done**
+
+ 
+
+That’s just the nature of running a short-term rental business. No matter how diligent you are and how well established your rules are, some guests *think *of a short-term rental as an opportunity to act out since they have no supervision, and as a result, they behave more carelessly than they would in their own home, or family’s and friends’ homes.
+
+Here is what other short-term rental owners have tried to do to prevent guests from organizing parties in their rental properties *(but you should NOT attempt any of these as they are invasive at best, or downright ILLEGAL at worst).*
+
+#1: Installing video cameras *(usually, hidden):*
+
+There are almost no places where this is legal. Short-term rental and Airbnb guests, however, still report finding hidden cameras in their places of stay. Afterwards, the host is reported to the platform where the guests booked their stay. Their account gets blocked, and from there, appropriate legal instances follow up the situation. In short, you can lose your most in-demand sources of bookings, pay hefty fines and permanently leave a mark on your reputation.
+
+#2: Installing sound recorders:
+
+It might seem like a *safer bet*. You’re *just recording the sound*, after all. Right? In reality, this is just as invasive and commonly illegal. Without guest approval, you can’t legally record them. *Can you imagine asking your guests if they’re okay with being recorded?* Similar to video recording, as a consequence you may be blocked from online booking platforms, face legal consequences, and have a nasty *invasive *mark imprinted on your reputation. A no-go. 
+
+What to do then? How should you  protect your rental and your neighbors from the loud party-ers? With a Party Prevention Device of sorts, of course!
+
+By using a real-time noise control device for short term rentals and Airbnb’s, you can take the initial step towards protecting your property. The sound sensors  only monitor the sound level and they also alert you and the guests when noise levels are  heightened above the permitted level. It does not record, therefore it is perfectly legal and doesn’t cause any concern for guests.
+
+## **Airbnb has recognized the issue and now recommends these devices as a solution**
+
+We have all heard stories about, and potentially, some of you even experienced, guests who rent properties to organize parties. The “*No Parties Allowed” *rule is clear enough for most people to follow, but the few who don’t have forced the Airbnb platform to actively promote sound sensors in hopes of  informing hosts about the activities in their properties.
+
+*“We want to help you protect your space, maintain the privacy of your guests, and preserve your relationship with neighbors,” said Airbnb on its website. “This means helping you detect issues in real time.”*
+
+These devices are super simple. They can be easily fitted to ceilings or wall-mounted. They’re essentially *plug & play* and come with a monthly subscription, which allows you to monitor the activity in your short-term rental from your smartphone or laptop.
+
+Airbnb reportedly said it does not “endorse” the devices, but strong customer endorsements for the product can be found, one lister explaining that *“finding noise monitoring was a miracle for us—we now have peace of mind that our neighbors have a peaceful neighborhood. Thank you for introducing us to such a simple system!”*
+
+Some people have raised privacy concerns, but they were quickly taken back by learning the fact that these devices do not record sounds or videos. They only monitor noisy guests and alert property owners when the levels are consistently too high. (*Shutting the doors loudly once won’t classify as loud partying).*
+
+### ***Roomonitor is among the 3 best solutions in the market, and here is why***
+
+*Roomonitor Noise Alarm allows you to be aware of the noise levels in your short-term rental all day, every day, thus avoiding any problems with neighbors or other tenants. Real-time noise monitoring sends notifications by SMS and by way of phone call, allowing you to register 3 different numbers. Now, you can take action and cut the partying before the neighbors do!*
+
+*The sensors work autonomously, and you have 24//7 customer service available whenever you need.*
+
+*Access a powerful dashboard from your smartphone or laptop, receive daily reports, and customize the system to fit your necessities. *
+
+*If you would like to learn more about Roomonitor Noise Alarm’s features, please *[*click here.*](https://roomonitor.com/noise-alarm/)
+
+## ***Keep your space party-free starting from today***
+
+*Avoid unpleasant surprises in the holiday season – now you know HOW! Forget about spying on your guests with ethically shady, or downright illegal, methods. Keep your property safe and your neighbors peace uninterrupted with smart party prevention devices. If you would like to receive assistance in choosing the best-suited noise monitoring device for your property, you’re welcome to reach out to our noise control experts. *[*Contact us today!*](https://roomonitor.com/contact/)`,
+    category: "Roomonitor",
+    date: "2020-12-03",
+    readTime: 5,
+    image: "https://roomonitor.com/wp-content/uploads/2020/12/olia-danilevich-5911467.jpg",
+    lang: "en",
+  },
 ];
 
 export const getBlogPostsByLang = (lang: string): BlogPost[] => {
