@@ -139,7 +139,7 @@ export const WhyRoomonitorSection = () => {
           <div className="relative flex flex-col">
             <div className="relative rounded-2xl overflow-hidden flex-1 min-h-[450px]">
               <div className={`absolute inset-0 transition-all duration-300 ease-in-out ${isTransitioning ? "opacity-0 scale-105" : "opacity-100 scale-100"}`}>
-                <img src={activeStudy.image} alt={activeStudy.company} className="w-full h-full object-cover" />
+                <img src={activeStudy.image} alt={activeStudy.company} className="w-full h-full object-cover" loading="lazy" decoding="async" />
               </div>
               {activeStudy.logo ? (
                 <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
