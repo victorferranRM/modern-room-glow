@@ -611,7 +611,7 @@ const es = {
     timeline: {
       badge: "Caso real",
       title: "Check-in de emergencia.",
-      titleHighlight: "2:00 AM.",
+      titleHighlight: "A las 2:00 AM.",
       steps: [
         { title: "Llamada entrante a las 2am", desc: "El huésped llama porque no puede acceder al alojamiento. Nadie le esperaba.", role: "Sistema / Huésped" },
         { title: "Verificación de identidad", desc: "El agente verifica la identidad con los datos de la reserva y confirma la incidencia.", role: "Agente CC", linkText: "Ver Centro de Control →" },

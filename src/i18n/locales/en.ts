@@ -611,7 +611,7 @@ const en = {
     timeline: {
       badge: "Real case",
       title: "Emergency check-in.",
-      titleHighlight: "2:00 AM.",
+      titleHighlight: "At 2:00 AM.",
       steps: [
         { title: "Incoming call at 2am", desc: "The guest calls because they can't access the property. No one was expecting them.", role: "System / Guest" },
         { title: "Identity verification", desc: "The agent verifies the guest's identity against booking data and confirms the incident.", role: "CC Agent", linkText: "See Control Center →" },
