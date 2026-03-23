@@ -102,7 +102,7 @@ export default function VacationRentals() {
                     {popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">{t('solutionVacationRentals.mostPopular')}</div>}
                     <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
-                    <div className="mb-4"><span className="text-3xl font-bold">€{plan.price}</span><span className="text-muted-foreground text-sm">{plan.period}</span></div>
+                    <div className="mb-4"><span className="text-2xl sm:text-3xl font-bold">€{plan.price}</span><span className="text-muted-foreground text-sm">{plan.period}</span></div>
                     <p className="text-xs text-muted-foreground mb-6">{t('solutionVacationRentals.device')}: {plan.devicePrice === 'Incluido' || plan.devicePrice === 'Included' ? plan.devicePrice : `€${plan.devicePrice}`}</p>
                     <ul className="space-y-3 mb-8">
                       {plan.features.map((feature, idx) => (
