@@ -161,7 +161,7 @@ export default function About() {
                 return (
                   <div key={idx} className="group relative overflow-hidden rounded-2xl bg-card border shadow-soft hover:shadow-lg transition-all duration-300">
                     <div className="aspect-[4/3] overflow-hidden">
-                      <img src={valueImages[idx]} alt={value.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <img src={valueImages[idx]} alt={value.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
                     </div>
                     <div className="p-6">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
