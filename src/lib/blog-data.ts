@@ -636,7 +636,7 @@ Esta nueva regulación ya está en vigor. Si operas en municipios como **Santand
   {
     id: "35834",
     slug: "registro-estatal-viviendas-turisticas-fevitur-silvia-blasco",
-    title: "Silvia Blasco (FEVITUR): \\"El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal\\"",
+    title: "Silvia Blasco (FEVITUR): \"El 45 % de las viviendas turísticas legales quedaron fuera del nuevo registro estatal\"",
     excerpt: "Desde el 1 de julio de 2024, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del 45 % de las viviendas turísticas l",
     content: `Desde el **1 de julio de 2024**, el Real Decreto 1312/2024 obliga a inscribir todas las viviendas turísticas en un Registro Estatal gestionado por registradores de la propiedad. Sin embargo, ha dejado excluido cerca del **45 % de las viviendas turísticas legales** que ya estaban registradas en sus comunidades autónomas, según denuncia **Silvia Blasco**, presidenta de FEVITUR en [Economist&Jurist](https://www.economistjurist.es/zbloque-1/silvia-blasco-presidenta-de-fevitur-un-45-de-las-viviendas-turisticas-legales-quedaron-fuera-del-nuevo-registro-estatal-impuesto-por-el-ministerio-de-vivienda/).
 
@@ -680,7 +680,7 @@ En Roomonitor estamos atentos a estos cambios regulatorios. Creemos imprescindib
   {
     id: "35748",
     slug: "entrevista-jordan-setti-checkmyguest-seguridad-alquiler-vacacional",
-    title: "Entrevista con Jordan Setti, COO de CheckMyGuest: \\"Saber que de 22:00 a 7:00 alguien toma el relevo, no tiene precio\\"",
+    title: "Entrevista con Jordan Setti, COO de CheckMyGuest: \"Saber que de 22:00 a 7:00 alguien toma el relevo, no tiene precio\"",
     excerpt: "Hola a todos. Hoy tenemos el placer de estar en las oficinas de Checkmyguest con Jordan Setti. Su director operativo es uno de los actores clave del mercado de alquileres de corta y media estancia en Francia. Estamos aquí para hablar de la evolución ",
     content: `Hola a todos. Hoy tenemos el placer de estar en las oficinas de **[Checkmyguest](https://www.checkmyguest.fr/)** con Jordan Setti.
 
@@ -2274,7 +2274,7 @@ El **1º Congreso Nacional de [ALEP](https://www.alep.pt/)** fue un éxito rotun
     id: "23303",
     slug: "roomonitor-x-icnea-soluciona-problemas-de-ruido-de-manera-mas-eficiente",
     title: "Roomonitor x Icnea: Soluciona problemas de ruido de manera más eficiente",
-    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli",
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\"no\" text_larger=\"no\"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos cli",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Estamos encantados de anunciar que acabamos de integrarnos con Icnea, un software de administración de propiedades líder en la industria con sede en España y algo que muchos clientes nos pedían.
 
 Hoy, nos complace anunciar nuestra última integración con [Icnea](https://icnea.es/), un software de administración de propiedades líder en la industria con sede en España. Gracias a esta integración, podrás acceder a todas tus herramientas de administración de propiedades favoritas en un solo lugar. Con Icnea puedes administrar las reservas y registros de manera eficiente y ahora también comunicarte automáticamente con tus huéspedes en caso de incidencia en la monitorización de ruido en tus propiedades para que puedas ahorrar tiempo y concentrarte en hacer crecer tu negocio.
@@ -2312,7 +2312,7 @@ Si ya tienes cuentas en Roomonitor e Icnea, ¡puedes comenzar en minutos! Ve a l
     id: "15985",
     slug: "informe-roomonitor-2021",
     title: "Informe Roomonitor - Ultimos 3 meses",
-    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\\"no\\" text_larger=\\"no\\"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru",
+    excerpt: "[vc_row][vc_column][vc_column_text woodmart_inline=\"no\" text_larger=\"no\"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ru",
     content: `[vc_row][vc_column][vc_column_text woodmart_inline="no" text_larger="no"]Roomonitor es la primera solución global al control de ruidos en apartamentos turísticos. Con la instalación en los apartamentos de Roomonitor y el control de las alarmas por ruido con Roomonitor Alarm Assistant.
 
 Roomonitor: Monitoriza el ruido en tiempo real. No graba audio, mantenido la privacidad 100%. El dispositivo permite conocer los niveles de ruido dentro los apartamentos turísticos, emitiendo alarmas por sms y llamadas telefónicas al propietario o gestor del apartamento cuando son sobrepasados los niveles estipulados para poder ponerse en contacto con los turísticas y que bajen los niveles, evitando asi cualquier conflicto de convivencia con vecinos.
