@@ -694,7 +694,7 @@ const pt = {
   },
   howItWorks: {
     heroEyebrow: "Tecnologia + Pessoas",
-    heroTitle: "Você gere. Nós protegemos.",
+    heroTitle: "Você gere.<br class='hidden lg:block' /> Nós protegemos.",
     heroDescription: "Monitorização inteligente e operações delegadas para gestores que querem dormir tranquilos. Escolha o seu nível de controlo.",
     selectorMonitorTitle: "Quero monitorizar as minhas propriedades",
     selectorMonitorSubtitle: "Dispositivo + dashboard + alertas",
