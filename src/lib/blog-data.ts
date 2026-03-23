@@ -5958,6 +5958,7 @@ Pas particulièrement, si ce n’est qu’aujourd’hui nous savons que nos appa
     readTime: 7,
     image: "https://roomonitor.com/wp-content/uploads/2025/07/IMG_4521-1-scaled-e1753370899603.jpg",
     lang: "fr",
+    featured: true,
   },
   {
     id: "35587",
