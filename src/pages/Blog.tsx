@@ -16,13 +16,14 @@ import { useTranslation } from "@/i18n/useTranslation";
 import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const Blog = () => {
-  const { t, lang } = useTranslation();
+  const { t, lang: rawLang } = useTranslation();
+  const lang = rawLang || 'es';
 
   const localizedCategories = getCategoriesForLang(lang).length > 0
     ? getCategoriesForLang(lang)
     : getCategoriesForLang('es');
 
-  const [selectedCategory, setSelectedCategory] = useState(localizedCategories[0]);
+  const [selectedCategory, setSelectedCategory] = useState<string>(localizedCategories[0]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const featuredPost = getFeaturedPost(lang) ?? getFeaturedPost('es');
