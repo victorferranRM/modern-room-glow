@@ -613,7 +613,7 @@ const en = {
       title: "Emergency check-in.",
       titleHighlight: "At 2:00 AM.",
       steps: [
-        { title: "Incoming call at 2am", desc: "The guest calls because they can't access the property. No one was expecting them.", role: "System / Guest" },
+        { title: "Incoming call at 2am", desc: "Guest calls because they can't access the property. Arriving late due to a flight delay.", role: "System / Guest" },
         { title: "Identity verification", desc: "The agent verifies the guest's identity against booking data and confirms the incident.", role: "CC Agent", linkText: "See Control Center →" },
         { title: "Emergency check-in activated", desc: "The protocol defined by the manager for this type of situation is applied. No improvisation, no unilateral decisions.", role: "Protocol", linkText: "See Protocols →" },
         { title: "ETA confirmed: 30 minutes", desc: "The nearest field agent is located and the guest is notified. We keep them informed during the wait.", role: "CC Agent" },

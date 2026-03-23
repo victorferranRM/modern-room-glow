@@ -613,7 +613,7 @@ const fr = {
       title: "Check-in d'urgence.",
       titleHighlight: "2h00 du matin.",
       steps: [
-        { title: "Appel entrant à 2h du matin", desc: "Le client appelle car il ne peut pas accéder au logement. Personne ne l'attendait.", role: "Système / Client" },
+        { title: "Appel entrant à 2h du matin", desc: "Le client appelle car il ne peut pas accéder au logement. Il arrive en retard à cause d'un retard de vol.", role: "Système / Client" },
         { title: "Vérification d'identité", desc: "L'agent vérifie l'identité avec les données de réservation et confirme l'incident.", role: "Agent CC", linkText: "Voir Centre de Contrôle →" },
         { title: "Check-in d'urgence activé", desc: "Le protocole défini par le gestionnaire pour ce type de situation est appliqué. Pas d'improvisation, pas de décisions unilatérales.", role: "Protocole", linkText: "Voir Protocoles →" },
         { title: "ETA confirmé : 30 minutes", desc: "L'agent de terrain le plus proche est localisé et le client est notifié. Nous le tenons informé pendant l'attente.", role: "Agent CC" },

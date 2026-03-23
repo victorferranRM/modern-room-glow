@@ -613,7 +613,7 @@ const pt = {
       title: "Check-in de emergência.",
       titleHighlight: "2:00 da manhã.",
       steps: [
-        { title: "Chamada recebida às 2h", desc: "O hóspede liga porque não consegue acessar o alojamento. Ninguém o esperava.", role: "Sistema / Hóspede" },
+        { title: "Chamada recebida às 2h", desc: "Hóspede liga porque não consegue acessar o alojamento. Chega atrasado por um atraso no voo.", role: "Sistema / Hóspede" },
         { title: "Verificação de identidade", desc: "O agente verifica a identidade com os dados da reserva e confirma o incidente.", role: "Agente CC", linkText: "Ver Centro de Controle →" },
         { title: "Check-in de urgência ativado", desc: "O protocolo definido pelo gestor para este tipo de situação é aplicado. Sem improvisação, sem decisões unilaterais.", role: "Protocolo", linkText: "Ver Protocolos →" },
         { title: "ETA confirmado: 30 minutos", desc: "O agente de campo mais próximo é localizado e o hóspede é notificado. Mantemos ele informado durante a espera.", role: "Agente CC" },
