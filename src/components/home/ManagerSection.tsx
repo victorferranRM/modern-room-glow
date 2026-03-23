@@ -319,7 +319,7 @@ export function ManagerSection() {
                     key={meta.id}
                     onClick={() => handleTabChange(meta.id)}
                     className={cn(
-                      "flex items-center gap-2 px-4 py-3 lg:px-5 lg:py-3.5 text-sm font-medium transition-all duration-300 rounded-xl border",
+                      "flex items-center gap-1.5 sm:gap-2 px-3 py-2.5 sm:px-4 sm:py-3 lg:px-5 lg:py-3.5 text-xs sm:text-sm font-medium transition-all duration-300 rounded-xl border",
                       activeTab === meta.id
                         ? "bg-card border-primary/30 text-foreground shadow-sm"
                         : "bg-secondary border-transparent text-muted-foreground hover:text-foreground hover:border-border"

@@ -192,14 +192,14 @@ export default function HowItWorks() {
                 <p className="text-base sm:text-lg text-background/70 mb-6 sm:mb-8 max-w-2xl mx-auto">
                   {t("howItWorks.ctaDescription")}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto" asChild>
                     <LocalizedLink to="/contact?inquiry=demo">
                       {t("howItWorks.bookDemo")}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </LocalizedLink>
                   </Button>
-                  <Button size="lg" variant="outline" className="border-background/20 bg-transparent text-background hover:bg-background/10" asChild>
+                  <Button size="lg" variant="outline" className="border-background/20 bg-transparent text-background hover:bg-background/10 w-full sm:w-auto" asChild>
                     <LocalizedLink to="/pricing">{t("about.viewPricing")}</LocalizedLink>
                   </Button>
                 </div>

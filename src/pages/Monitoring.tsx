@@ -183,14 +183,14 @@ export default function Monitoring() {
           </AnimatedSection>
           <AnimatedSection delay={200}>
             <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border bg-card">
-              <div className="grid grid-cols-3 bg-secondary/50 p-4 border-b">
-                <div className="font-semibold">{t('monitoring.comparison.feature')}</div>
-                <div className="text-center font-semibold text-primary">{t('monitoring.comparison.roomonitor')}</div>
-                <div className="text-center font-semibold text-muted-foreground">{t('monitoring.comparison.others')}</div>
+              <div className="grid grid-cols-[1fr_auto_auto] sm:grid-cols-3 gap-2 sm:gap-0 bg-secondary/50 p-3 sm:p-4 border-b">
+                <div className="font-semibold text-sm sm:text-base">{t('monitoring.comparison.feature')}</div>
+                <div className="text-center font-semibold text-primary text-sm sm:text-base min-w-[60px]">{t('monitoring.comparison.roomonitor')}</div>
+                <div className="text-center font-semibold text-muted-foreground text-sm sm:text-base min-w-[60px]">{t('monitoring.comparison.others')}</div>
               </div>
               {comparisonFeatureTexts.map((feature, index) => (
-                <div key={index} className={`grid grid-cols-3 p-4 items-center ${index !== comparisonFeatureTexts.length - 1 ? 'border-b' : ''}`}>
-                  <div className="text-sm">{feature}</div>
+                <div key={index} className={`grid grid-cols-[1fr_auto_auto] sm:grid-cols-3 gap-2 sm:gap-0 p-3 sm:p-4 items-center ${index !== comparisonFeatureTexts.length - 1 ? 'border-b' : ''}`}>
+                  <div className="text-xs sm:text-sm">{feature}</div>
                   <div className="flex justify-center">
                     {comparisonRoomonitor[index] ? (
                       <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center"><Check className="w-4 h-4 text-success" /></div>
