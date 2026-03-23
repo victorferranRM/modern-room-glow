@@ -17,7 +17,8 @@ import { LocalizedLink } from "@/i18n/LocalizedLink";
 
 const Blog = () => {
   const { t, lang } = useTranslation();
-  const [selectedCategory, setSelectedCategory] = useState(t('blog.allCategories'));
+  const localizedCategories = getCategoriesForLang(lang);
+  const [selectedCategory, setSelectedCategory] = useState(localizedCategories[0]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const featuredPost = getFeaturedPost(lang);
