@@ -90,7 +90,7 @@ export default function HowItWorks() {
                   </p>
                   <Button
                     variant="outline"
-                    className="bg-white text-foreground hover:bg-foreground hover:text-background hover:border-foreground"
+                    className="bg-background text-foreground hover:bg-foreground hover:text-background hover:border-foreground w-full sm:w-auto"
                     onClick={(e) => { e.stopPropagation(); scrollTo("operativa"); }}
                   >
                     {t("howItWorks.seeHow")}
