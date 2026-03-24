@@ -163,6 +163,72 @@ async function associateDealToContact(
   }
 }
 
+// Map Stripe price IDs to HubSpot product IDs
+const STRIPE_TO_HUBSPOT_PRODUCT: Record<string, string> = {
+  "price_1T9hcaHW6UdvG7qBZ1zXg1J2": "328727462076",   // Dispositivo
+  "price_1T9hfwHW6UdvG7qBya8cSTWF": "328937826529",   // Noise Alarm Service
+  "price_1T9hhMHW6UdvG7qBjd0TLTJn": "329024188649",   // Alarm Assistant Remoto
+};
+
+async function createHubSpotLineItems(
+  accessToken: string,
+  dealId: string,
+  stripeLineItems: Array<{ priceId: string; quantity: number; unitAmount: number }>
+): Promise<void> {
+  for (const item of stripeLineItems) {
+    const hsProductId = STRIPE_TO_HUBSPOT_PRODUCT[item.priceId];
+    if (!hsProductId) {
+      console.log("HubSpot: Skipping line item with no product mapping, priceId:", item.priceId);
+      continue;
+    }
+
+    // Create line item
+    const createRes = await fetch("https://api.hubapi.com/crm/v3/objects/line_items", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        properties: {
+          hs_product_id: hsProductId,
+          quantity: String(item.quantity),
+          price: String(item.unitAmount),
+        },
+      }),
+    });
+
+    if (!createRes.ok) {
+      const errBody = await createRes.text();
+      console.error(`HubSpot: Line item creation failed [${createRes.status}]:`, errBody);
+      continue;
+    }
+
+    const lineItemData = await createRes.json();
+    const lineItemId = lineItemData.id;
+    console.log("HubSpot: Line item created:", lineItemId, "product:", hsProductId);
+
+    // Associate line item to deal (association type 20 = line_item_to_deal)
+    const assocRes = await fetch(
+      `https://api.hubapi.com/crm/v3/objects/deals/${dealId}/associations/line_items/${lineItemId}/20`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!assocRes.ok) {
+      const errBody = await assocRes.text();
+      console.error(`HubSpot: Line item association failed [${assocRes.status}]:`, errBody);
+    } else {
+      console.log("HubSpot: Line item", lineItemId, "associated to deal", dealId);
+    }
+  }
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -323,6 +389,7 @@ Deno.serve(async (req) => {
 
           let oneTimeAmount = 0;
           let recurringAmount = 0;
+          const stripeItems: Array<{ priceId: string; quantity: number; unitAmount: number }> = [];
 
           if (session.subscription) {
             const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
@@ -339,6 +406,13 @@ Deno.serve(async (req) => {
               } else if (price.type === "recurring") {
                 recurringAmount += unitAmount * qty;
               }
+
+              // Collect for HubSpot line items
+              stripeItems.push({
+                priceId: price.id,
+                quantity: qty,
+                unitAmount,
+              });
             }
           }
 
@@ -401,6 +475,13 @@ Deno.serve(async (req) => {
 
           await associateDealToContact(hubspotAccessToken, dealId, contactId);
           console.log("HubSpot: Deal associated to contact");
+
+          // Create line items from Stripe products and associate to deal
+          if (stripeItems.length > 0) {
+            console.log("HubSpot: Creating", stripeItems.length, "line items for deal", dealId);
+            await createHubSpotLineItems(hubspotAccessToken, dealId, stripeItems);
+            console.log("HubSpot: Line items processing complete");
+          }
         } catch (hubspotError: any) {
           console.error("HubSpot integration error:", hubspotError.message);
         }
