@@ -107,6 +107,7 @@ async function createHubSpotDeal(
     dealtype: "New Business",
     amount: String(oneTimeAmount),
     hubspot_owner_id: "71977733",
+    contract_start_date: new Date().toISOString(),
   };
 
   let res = await fetch("https://api.hubapi.com/crm/v3/objects/deals", {
