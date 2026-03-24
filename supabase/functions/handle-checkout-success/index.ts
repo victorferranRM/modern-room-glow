@@ -168,6 +168,7 @@ const STRIPE_TO_HUBSPOT_PRODUCT: Record<string, string> = {
   "price_1T9hcaHW6UdvG7qBZ1zXg1J2": "328727462076",   // Dispositivo
   "price_1T9hfwHW6UdvG7qBya8cSTWF": "328937826529",   // Noise Alarm Service
   "price_1T9hhMHW6UdvG7qBjd0TLTJn": "329024188649",   // Alarm Assistant Remoto
+  "price_1T91ymHW6UdvG7qBhGXsJTit": "328791818468",   // Gastos de envío
 };
 
 async function createHubSpotLineItems(
