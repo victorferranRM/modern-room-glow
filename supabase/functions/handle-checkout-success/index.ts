@@ -389,6 +389,7 @@ Deno.serve(async (req) => {
 
           let oneTimeAmount = 0;
           let recurringAmount = 0;
+          const stripeItems: Array<{ priceId: string; quantity: number; unitAmount: number }> = [];
 
           if (session.subscription) {
             const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
@@ -405,6 +406,13 @@ Deno.serve(async (req) => {
               } else if (price.type === "recurring") {
                 recurringAmount += unitAmount * qty;
               }
+
+              // Collect for HubSpot line items
+              stripeItems.push({
+                priceId: price.id,
+                quantity: qty,
+                unitAmount,
+              });
             }
           }
 
@@ -467,6 +475,13 @@ Deno.serve(async (req) => {
 
           await associateDealToContact(hubspotAccessToken, dealId, contactId);
           console.log("HubSpot: Deal associated to contact");
+
+          // Create line items from Stripe products and associate to deal
+          if (stripeItems.length > 0) {
+            console.log("HubSpot: Creating", stripeItems.length, "line items for deal", dealId);
+            await createHubSpotLineItems(hubspotAccessToken, dealId, stripeItems);
+            console.log("HubSpot: Line items processing complete");
+          }
         } catch (hubspotError: any) {
           console.error("HubSpot integration error:", hubspotError.message);
         }
